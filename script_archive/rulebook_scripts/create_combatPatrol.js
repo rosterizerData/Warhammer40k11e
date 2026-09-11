@@ -66,7 +66,7 @@ async function processFiles() {
             slug: '123456',
             name: '40k 11e',
             game: 'Warhammer 40k',
-            source: 'https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k11e/main/Warhammer_40k_11e.rulebook'
+            source: 'https://raw.githubusercontent.com/RosterizerData/Warhammer40k11e/main/Warhammer_40k_11e.rulebook'
           }
         ],
         rulebook: {

@@ -60,7 +60,7 @@ fileList.forEach(file => {
           slug: '123456',
           name: file.replace(/[_]/g,' '),
           game: 'Warhammer 40k',
-          source: `https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k10e/main/${file}.rulebook`
+          source: `https://raw.githubusercontent.com/RosterizerData/Warhammer40k10e/main/${file}.rulebook`
         }
       ],
       rulebook: {

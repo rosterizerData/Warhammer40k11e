@@ -12,13 +12,13 @@
       "slug": "3Y73N4",
       "name": "Astra Militarum 11e",
       "game": "Warhammer 40k",
-      "source": "https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k11e/main/Astra_Militarum.rulebook"
+      "source": "https://raw.githubusercontent.com/RosterizerData/Warhammer40k11e/main/Astra_Militarum.rulebook"
     },
     {
       "slug": "",
       "name": "Tyranids 11e",
       "game": "Warhammer 40k",
-      "source": "https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k11e/main/Tyranids.rulebook"
+      "source": "https://raw.githubusercontent.com/RosterizerData/Warhammer40k11e/main/Tyranids.rulebook"
     }
   ],
   "rulebook": {
