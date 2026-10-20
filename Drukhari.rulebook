@@ -1,6 +1,6 @@
 {
   "name": "Drukhari 11e",
-  "revision": "11.1.1",
+  "revision": "11.1.15",
   "game": "Warhammer 40k",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -10,9 +10,9 @@
   "dependencies": [
     {
       "slug": "",
-      "name": "Harlequins 11e",
-      "game": "Warhammer 40k",
-      "source": "https://raw.githubusercontent.com/RosterizerData/Warhammer40k11e/main/Harlequins.rulebook"
+      "name": "Harlequins",
+      "game": "Warhammer 40k 11e",
+      "source": "https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k11e/main/Harlequins.rulebook"
     }
   ],
   "rulebook": {
@@ -593,7 +593,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "\n\nThis model can be attached to the following units:\n\n* Hand of the Archon\n\n* Incubi\n\n* Kabalite Warriors"
+              "text": "This model can be attached to the following units:\n\n* Hand of the Archon\n\n* Incubi\n\n* Kabalite Warriors"
             },
             "Ability§Power From Pain",
             {
@@ -729,14 +729,6 @@
         "assets": {
           "included": [],
           "traits": [
-            {
-              "item": "Ability§Scouts",
-              "stats": {
-                "x": {
-                  "value": "9″"
-                }
-              }
-            },
             "Ability§Power From Pain",
             "Ability§Beastmaster",
             {
@@ -757,7 +749,15 @@
               "item": "Model§Razorwing Flock",
               "quantity": 3
             },
-            "Ability§Goaded Savagery (Pain)"
+            "Ability§Goaded Savagery (Pain)",
+            {
+              "item": "Ability§Scouts",
+              "stats": {
+                "x": {
+                  "value": "9\""
+                }
+              }
+            }
           ]
         },
         "keywords": {
@@ -808,7 +808,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Incubi"
+              "text": "This model can be attached to the following units:\n\n* Incubi"
             },
             "Ability§Power From Pain",
             {
@@ -872,16 +872,16 @@
         "assets": {
           "traits": [
             {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Wracks"
+            },
+            {
               "item": "Ability§Feel No Pain",
               "stats": {
                 "x": {
                   "value": "5+"
                 }
               }
-            },
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Wracks"
             },
             "Ability§Power From Pain",
             {
@@ -946,7 +946,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "\nThis model can be attached to the following units:\n\n* Hand of the Archon\n* Incubi\n* Kabalite Warriors"
+              "text": "This model can be attached to the following units:\n\n* Hand of the Archon\n\n* Incubi\n\n* Kabalite Warriors"
             },
             {
               "item": "Ability§Feel No Pain",
@@ -1022,11 +1022,11 @@
         },
         "assets": {
           "traits": [
-            "Ability§Fights First",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Wyches"
+              "text": "This model can be attached to the following units:\n\n* Wyches"
             },
+            "Ability§Fights First",
             "Ability§Power From Pain",
             {
               "item": "Ability§Invulnerable",
@@ -1091,7 +1091,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Wyches"
+              "text": "This model can be attached to the following units:\n\n* Wyches"
             },
             "Ability§Power From Pain",
             {
@@ -1157,16 +1157,16 @@
         "assets": {
           "traits": [
             {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Wracks"
+            },
+            {
               "item": "Ability§Feel No Pain",
               "stats": {
                 "x": {
                   "value": "4+"
                 }
               }
-            },
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Wracks"
             },
             "Ability§Power From Pain",
             "Ability§Father of Pain",
@@ -1234,12 +1234,26 @@
             "Covenite Coterie"
           ],
           "Role": [
-            "Purge The Foe"
+            "Take And Hold"
           ]
         },
         "rules": {
           "assignStratagems": {
             "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Connoisseurs of Pain"
+              },
               {
                 "actionType": "add",
                 "iterations": 1,
@@ -1280,35 +1294,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Poisoners Art"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Distillers of Fear"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Connoisseurs of Pain"
+                "value": "Stratagem§Poisoner’s Art"
               },
               {
                 "actionType": "add",
@@ -1323,11 +1309,46 @@
                   ]
                 ],
                 "value": "Stratagem§Enfolding Nightmare"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Distillers of Fear"
               }
             ],
             "evals": [],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Tools Of Torment"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
           }
         },
         "stats": {
@@ -1335,9 +1356,94 @@
             "value": 2
           }
         },
-        "text": "## STITCHFLESH ABOMINATIONS\nEach time an attack targets a HAEMONCULUS COVENS unit from your army, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll."
+        "text": "**STITCHFLESH ABOMINATIONS**\n\nEach time an attack targets a **HAEMONCULUS COVENS** unit from your army, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll."
       },
       "Detachment§Exhibition Of Slaughter": {
+        "keywords": {
+          "Role": [
+            "Reconnaissance"
+          ]
+        },
+        "stats": {
+          "Detachment Points": {
+            "value": 1
+          }
+        },
+        "text": "**EXACTING CRUELTY**\n\nFriendly **WYCH CULT** units' melee attacks have **[LETHAL HITS:** **non-****MONSTER/VEHICLE]**.\nThis **detachment** has the **WYCH CULT** tag and cannot be taken with another **WYCH CULT** **detachment**.",
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Spectacle of Spite"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          },
+          "assignStratagems": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Planned Strikes"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Acrobatic Display"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Sculpting the Stage"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Detachment§Kabalite Agonysts": {
         "keywords": {
           "Role": [
             "Disruption"
@@ -1348,20 +1454,79 @@
             "value": 1
           }
         },
-        "text": "WARNING: this detachment was not in 10e and needs importing.\n\n**Exacting Cruelty**\nFriendly **Wych Cult** units' melee attacks have **[Lethal Hits:** **non-****Monster/Vehicle]**.\nThis **detachment** has the **Wych Cult** tag and cannot be taken with another **Wych Cult** **detachment**."
-      },
-      "Detachment§Kabalite Agonysts": {
-        "keywords": {
-          "Role": [
-            "Purge The Foe"
-          ]
-        },
-        "stats": {
-          "Detachment Points": {
-            "value": 1
+        "text": "**CONTRACTED HARVEST**\n\nFriendly **BLADES FOR HIRE/KABAL** units’ ranged attacks have **[SUSTAINED HITS 1:** **non-****MONSTER/VEHICLE]**.\nThis **detachment** has the **KABAL** tag and cannot be taken with another **KABAL** **detachment**.",
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Kabalite Cartel"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          },
+          "assignStratagems": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Shadows’ Reach"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Prioritised Victim"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Killers from the Dark Spires"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
           }
-        },
-        "text": "WARNING: this detachment was not in 10e and needs importing.\n\n**Contracted Harvest**\nFriendly **Blades for Hire/Kabal** units’ ranged attacks have **[SUSTAINED HITS 1:** **non‑****Monster/Vehicle]**.\nThis **detachment** has the **Kabal** tag and cannot be taken with another **Kabal** **detachment**."
+        }
       },
       "Detachment§Kabalite Cartel": {
         "keywords": {
@@ -1387,7 +1552,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Double Cross"
+                "value": "Stratagem§Taken Alive"
               },
               {
                 "actionType": "add",
@@ -1401,7 +1566,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Taken Alive"
+                "value": "Stratagem§Making a Point"
               },
               {
                 "actionType": "add",
@@ -1443,7 +1608,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Making a Point"
+                "value": "Stratagem§Double-cross"
               },
               {
                 "actionType": "add",
@@ -1463,6 +1628,27 @@
             "evals": [],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Kabalite Agonysts"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
           }
         },
         "stats": {
@@ -1470,7 +1656,7 @@
             "value": 2
           }
         },
-        "text": "# MURDEROUS AGENDA\nAt the start of the first battle round, select one of the Contracts below, then select one unit from your opponent's army that matches the 'Contract' description. Until that Contract is completed, that unit is your Contract unit, and KABAL and BLADES FOR HIRE units from your army have the ability stated in that Contract. At the start of your Command phase, if your Contract unit is destroyed, that Contract is completed and you gain 3 Pain tokens.\n\n## Trophy Hunters:\n\n**Contract**: One CHARACTER unit.\n\n**Ability**: Each time a KABAL or BLADES FOR HIRE model in this unit makes an attack that targets the Contract unit, that attack has the [PRECISION] ability.\n\n## Sow Fear and Terror:\n\n**Contract**: One INFANTRY or MOUNTED unit (excluding units containing only CHARACTER models). At the start of your Command phase, this Contract is completed if all non-CHARACTER models in that unit are destroyed.\n\n**Ability**: Each time a KABAL or BLADES FOR HIRE model in this unit makes an attack that targets an INFANTRY or MOUNTED unit, that attack has the [SUSTAINED HITS 1] ability.\n\n## Show of Strength:\n\n**Contract**: One MONSTER or VEHICLE unit.\n\n**Ability**: Each time a KABAL or BLADES FOR HIRE model in this unit makes an attack that targets a MONSTER or VEHICLE unit, that attack has the [LETHAL HITS] ability."
+        "text": "**MURDEROUS AGENDA**\n\nAt the start of the first battle round, select one of the Contracts below, then select one unit from your opponent’s army that matches the ‘Contract’ description in that Contract. Until that Contract is completed, that unit is your Contract unit and **KABAL** and **BLADES FOR HIRE** units from your army have the ability stated in that Contract. At the start of your Command phase, if your Contract unit is destroyed, that Contract is completed and you gain 3 Pain tokens.\n\nTrophy Hunters\n\nSow Fear and Terror\n\nShow of Strength"
       },
       "Detachment§Realspace Raiders": {
         "keywords": {
@@ -1484,34 +1670,6 @@
         "rules": {
           "assignStratagems": {
             "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Insensible to Pain"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Strike and Fade"
-              },
               {
                 "actionType": "add",
                 "iterations": 1,
@@ -1552,7 +1710,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Raid and Fade"
+                "value": "Stratagem§Eager for the Kill"
               },
               {
                 "actionType": "add",
@@ -1566,7 +1724,35 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Eager for the Kill"
+                "value": "Stratagem§Insensible to Pain"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Dark Harvest"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Raid and Fade"
               }
             ],
             "evals": [],
@@ -1579,12 +1765,16 @@
             "value": 2
           }
         },
-        "text": "##  ALLIANCE OF AGONY\n\n\nAt the start of the battle, you gain 2 Pain tokens for each of the following combinations your army contains (these do not need to be in the same attached unit):\n\n- One or more ARCHON models and one or more KABALITE WARRIORS units.\n\n- One or more SUCCUBUS models and one or more WYCH units.\n\n- One or more HAEMONCULUS models and one or more WRACKS units.\n\nDesigner's Note: These are all cumulative, so if your army contains at least one of all of the combinations listed above, you start the battle with 6 Pain tokens."
+        "text": "**ALLIANCE OF AGONY**\n\nAt the start of the battle, you gain 2 Pain tokens for each of the following combinations your army contains (these do not need to be in the same Attached unit):\n\n■ One or more **ARCHON** models and one or more **KABALITE WARRIORS** units.\n■ One or more **SUCCUBUS** models and one or more **WYCHES** units.\n■ One or more **HAEMONCULUS** models and one or more **WRACKS** units.\n\n**Designer’s Note:** *These are all cumulative, so if your army contains at least one of all of the combinations listed above, you start the battle with 6 Pain tokens.*"
       },
       "Detachment§Reaper's Wager": {
         "keywords": {
           "Keywords": [
             "Reaper's Wager"
+          ],
+          "Role": [
+            "Priority Assets",
+            "Purge The Foe"
           ]
         },
         "rules": {
@@ -1616,7 +1806,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Shorten the Odds"
+                "value": "Stratagem§Murderer's Circus"
               },
               {
                 "actionType": "add",
@@ -1630,7 +1820,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Fateful Role"
+                "value": "Stratagem§Shorten the Odds"
               },
               {
                 "actionType": "add",
@@ -1658,7 +1848,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Murderer's Circus"
+                "value": "Stratagem§Fateful Role"
               },
               {
                 "actionType": "add",
@@ -1680,20 +1870,12 @@
             "failState": "pass"
           }
         },
-        "text": "CALLOUS COMPETITION\n\nAt the start of the battle, **Drukhari** units\nfrom your army are winning the wager.\n\nEach time a **Drukhari** unit from your\narmy destroys an enemy unit, **Drukhari**\nunits from your army are winning\nthe wager.\n\nEach time a **Harlequins** unit from your\narmy destroys an enemy unit, **Harlequin**\nunits from your army are winning\nthe wager.\n\nWhile **Drukhari** units from your army\nare winning the wager, **Harlequin** units\nfrom your army are losing the wager, and\nvice versa.\n\nEach time a **Drukhari** or **Harlequins**\nmodel from your army makes an attack,\nif that model’s unit is winning the wager, re‑roll a Hit roll of 1. If that model’s unit is losing the wager, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1 instead.\n\n**HARLEQUINS**\n\nYou can include **Harlequins** units in your\narmy (see *Index: Aeldari*). The combined\npoints cost of such units depends on your\nbattle size:\n\n■ Incursion: Up to 500 pts\n\n■ Strike Force: Up to 1000 pts\n\n■ Onslaught: Up to 1500 pts\n\nNo **Harlequins** models from your army\ncan be your Warlord."
-      },
-      "Detachment§Reaper’s Wager": {
-        "keywords": {
-          "Role": [
-            "Purge The Foe"
-          ]
-        },
+        "text": "**CALLOUS COMPETITION**\n\nAt the start of the battle, **DRUKHARI** units from your army are winning the wager.\n\nEach time a **DRUKHARI** unit from your army destroys an enemy unit, **DRUKHARI** units from your army are winning the wager.\n\nEach time a **HARLEQUINS** unit from your army destroys an enemy unit, **HARLEQUIN** units from your army are winning the wager.\n\nWhile **DRUKHARI** units from your army are winning the wager, **HARLEQUIN** units from your army are losing the wager, and vice versa.\n\nEach time a **DRUKHARI** or **HARLEQUINS** model from your army makes an attack, if that model’s unit is winning the wager, re‐roll a Hit roll of 1. If that model’s unit is losing the wager, re‐roll a Hit roll of 1 and re‐roll a Wound roll of 1 instead.",
         "stats": {
           "Detachment Points": {
             "value": 3
           }
-        },
-        "text": "WARNING: this detachment was not in 10e and needs importing.\n\n**Callous Competition**\nAt the start of the battle, **DRUKHARI** units from your army are winning the wager.\n\nEach time a **DRUKHARI** unit from your army destroys an enemy unit, **DRUKHARI** units from your army are winning the wager.\n\nEach time a **HARLEQUINS** unit from your army destroys an enemy unit, **HARLEQUIN** units from your army are winning the wager.\n\nWhile **DRUKHARI** units from your army are winning the wager, **HARLEQUIN** units from your army are losing the wager, and vice versa.\n\nEach time a **DRUKHARI** or **HARLEQUINS** model from your army makes an attack, if that model’s unit is winning the wager, re‐roll a Hit roll of 1. If that model’s unit is losing the wager, re‐roll a Hit roll of 1 and re‐roll a Wound roll of 1 instead."
+        }
       },
       "Detachment§Skysplinter Assault": {
         "keywords": {
@@ -1707,6 +1889,20 @@
         "rules": {
           "assignStratagems": {
             "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Skyborne Annihilation"
+              },
               {
                 "actionType": "add",
                 "iterations": 1,
@@ -1761,20 +1957,6 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Skyborne Annihilation"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
                 "value": "Stratagem§Swooping Mockery"
               },
               {
@@ -1802,7 +1984,7 @@
             "value": 2
           }
         },
-        "text": "## RAIN OF CRUELTY\nEach time a DRUKHARI unit from your army disembarks from a TRANSPORT, until the end of the turn:\n\n- Ranged weapons equipped by models in that disembarking unit have the [IGNORES COVER] ability.\n\n- Melee weapons equipped by models in that disembarking unit have the [LANCE] ability."
+        "text": "**RAIN OF CRUELTY**\n\nEach time a **DRUKHARI** unit from your army disembarks from a **TRANSPORT**, until the end of the turn:\n\n■ Ranged weapons equipped by models in that disembarking unit have the **[IGNORES COVER]** ability.\n■ Melee weapons equipped by models in that disembarking unit have the **[LANCE]** ability."
       },
       "Detachment§Spectacle of Spite": {
         "keywords": {
@@ -1828,7 +2010,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Berserk Fugue"
+                "value": "Stratagem§Deadly Debut"
               },
               {
                 "actionType": "add",
@@ -1842,7 +2024,21 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Deadly Debut"
+                "value": "Stratagem§Acrobatic Display"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§A Challenge Met"
               },
               {
                 "actionType": "add",
@@ -1884,7 +2080,91 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§A Challenge Met"
+                "value": "Stratagem§Berserk Fugue"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Exhibition Of Slaughter"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        },
+        "stats": {
+          "Detachment Points": {
+            "value": 2
+          }
+        },
+        "text": "**COMBAT DRUGS**\n\nAt the start of your Command phase, select which Combat Drugs will be active for your army until the start of your next Command phase. To do so, either select one from the list below (you cannot select the same Combat Drug more than once per battle), or randomly select two by rolling two D6. When doing so randomly, Combat Drugs you have previously selected can become active again, but if you randomly select one that is already active for your army, it has no additional effect.\n\n1. Adrenalight\n\nAdd 1 to the Attacks characteristic of melee weapons equipped by **WYCH CULT** models from your army.\n\n2. Hypex\n\nAdd 2\" to the Move characteristic of **WYCH CULT** models from your army.\n\n3. Serpentin\n\nImprove the Weapon Skill characteristic of melee weapons equipped by **WYCH CULT** models from your army by 1.\n\n4. Painbringer\n\nAdd 1 to the Toughness characteristic of **WYCH CULT** models from your army.\n\n5. Grave Lotus\n\nAdd 1 to the Strength characteristic of melee weapons equipped by **WYCH CULT** models from your army.\n\n6. Splintermind\n\nImprove the Leadership characteristic of **WYCH CULT** models from your army by 1, and improve the Ballistic Skill characteristic of ranged weapons equipped by **WYCH CULT** models from your army by 1."
+      },
+      "Detachment§Tools Of Torment": {
+        "keywords": {
+          "Role": [
+            "Take And Hold"
+          ]
+        },
+        "stats": {
+          "Detachment Points": {
+            "value": 1
+          }
+        },
+        "text": "**DARKEST ARTIFICE**\n\nAttacks that target friendly **CRONOS/TALOS** units with a **S** greater than that unit’s **T** have -1 to **wound rolls**.\nThis **detachment** has the **COVENS** tag and cannot be taken with another **COVENS** **detachment**.",
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Covenite Coterie"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          },
+          "assignStratagems": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Urgent Metamorphosis"
               },
               {
                 "actionType": "add",
@@ -1898,38 +2178,33 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Acrobatic Display"
+                "value": "Stratagem§Salting the Wound"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Dividends of Agony"
               }
             ],
             "evals": [],
             "evaluate": "AND",
             "failState": "pass"
           }
-        },
-        "stats": {
-          "Detachment Points": {
-            "value": 2
-          }
-        },
-        "text": "## COMBAT DRUGS\n\nAt the start of your Command phase, select which Combat Drugs will be active for your army until the start of your next Command phase. To do so, either select one from the list below (you cannot select the same Combat Drug more than once per battle), or randomly select two by rolling two D6. When doing so randomly, Combat Drugs you have previously selected can become active again, but if you randomly select one that is already active for your army, it has no additional effect.\n\n-1 Adrenalight: Add 1 to the Attacks characteristic of melee weapons equipped by WYCH CULT models from your army.\n\n-2 Hypex: Add 2\" to the Move characteristic of WYCH CULT models from your army.\n\n-3 Serpentin: Improve the Weapon Skill characteristic of melee weapons equipped by WYCH CULT models from your army by 1.\n\n-4 Painbringer: Add 1 to the Toughness characteristic of WYCH CULT models from your army.\n\n-5 Grave Lotus: Add 1 to the Strength characteristic of melee weapons equipped by WYCH CULT models from your army.\n\n-6 Splintermind: Improve the Leadership characteristic of WYCH CULT models from your army by 1, and improve the Ballistic Skill characteristic of ranged weapons equipped by WYCH CULT models from your army by 1."
-      },
-      "Detachment§Tools Of Torment": {
-        "keywords": {
-          "Role": [
-            "Take And Hold"
-          ]
-        },
-        "stats": {
-          "Detachment Points": {
-            "value": 1
-          }
-        },
-        "text": "WARNING: this detachment was not in 10e and needs importing.\n\n**Darkest Artifice**\nAttacks that target friendly **Cronos/Talos** units with a **S** greater than that unit’s **T** have -1 to **wound rolls**.\nThis **detachment** has the **Covens** tag and cannot be taken with another **Covens** **detachment**."
+        }
       },
       "Enhancement§Archraider": {
         "keywords": {
           "Keywords": [
-            "Reaper’S Wager"
+            "Reaper's Wager"
           ]
         },
         "rules": {
@@ -1973,12 +2248,12 @@
             "value": 15
           }
         },
-        "text": "**Harlequins** or **Drukhari** model only. In the Declare\nBattle Formations step, if the bearer starts the battle\nembarked within a **Dedicated Transport**, that\n**Dedicated Transport** has the Scouts 9\" ability."
+        "text": "**HARLEQUINS** or **DRUKHARI** model only. In the Declare Battle Formations step, if the bearer starts the battle embarked within a **DEDICATED TRANSPORT**, that **DEDICATED TRANSPORT** has the Scouts 9\" ability."
       },
       "Enhancement§Chronoshard": {
         "keywords": {
           "Keywords": [
-            "Spectacle Of Spite"
+            "Spectacle of Spite"
           ]
         },
         "rules": {
@@ -2008,12 +2283,12 @@
             "value": 15
           }
         },
-        "text": "Succubus model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Fights First ability."
+        "text": "**SUCCUBUS** model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability."
       },
       "Enhancement§Conductor of Torment": {
         "keywords": {
           "Keywords": [
-            "Reaper’S Wager"
+            "Reaper's Wager"
           ]
         },
         "rules": {
@@ -2043,7 +2318,7 @@
             "value": 20
           }
         },
-        "text": "**Drukhari** model only. In your Command phase, you\ncan do one of the following:\n\n■ If your **Drukhari** units are currently losing the\nwager, you can gain 1 Pain token. If you do,\n**Drukhari** units from your army are now winning\nthe wager.\n\n■ If your **Drukhari** units are currently winning the\nwager, you can discard 1 Pain token. If you do,\n**Harlequins** units from your army are now winning\nthe wager."
+        "text": "**DRUKHARI** model only. In your Command phase, you can do one of the following:\n\n■ If your **DRUKHARI** units are currently losing the wager, you can gain 1 Pain token. If you do, **DRUKHARI** units from your army are now winning the wager.\n■ If your **DRUKHARI** units are currently winning the wager, you can discard 1 Pain token. If you do, **HARLEQUINS** units from your army are now winning the wager."
       },
       "Enhancement§Contempt for Rivals": {
         "keywords": {
@@ -2056,7 +2331,29 @@
             "value": 20
           }
         },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Archon** model only. This unit’s attacks have **[Precision]**."
+        "text": "**ARCHON** model only. This unit’s attacks have **[PRECISION]**.",
+        "rules": {
+          "ARCHON model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Archon"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Crucible of Malediction": {
         "keywords": {
@@ -2089,7 +2386,7 @@
             "value": 15
           }
         },
-        "text": "Haemonculus model only. Once per battle, in your Shooting phase, the bearer can use this Enhancement. If it does, you can spend 1 Pain token. Each enemy unit within 12\" of the bearer must take a Battle-shock test, subtracting 1 from that test if you spent 1 Pain token. Each time a PSYKER unit fails that test, it suffers 3 mortal wounds."
+        "text": "**HAEMONCULUS** model only. Once per battle, in your Shooting phase, the bearer can use this Enhancement. If it does, you can spend 1 Pain token. Then, each enemy unit within 12\" of the bearer must take a Battle-shock test, subtracting 1 from that test if you spent 1 Pain token. Each time a **PSYKER** unit fails that test, it suffers 3 mortal wounds."
       },
       "Enhancement§Dark Vitality": {
         "keywords": {
@@ -2124,12 +2421,15 @@
             "value": 20
           }
         },
-        "text": "Drukhari model only. The bearer’s unit is always Empowered – you do not need to spend any Pain tokens to activate that unit’s Pain abilities."
+        "text": "**DRUKHARI** model only. The bearer’s unit is always Empowered – you do not need to spend any Pain tokens to activate that unit’s Pain abilities."
       },
       "Enhancement§Elixir of the Corpse Courts (Upgrade)": {
         "keywords": {
           "Keywords": [
             "Tools Of Torment"
+          ],
+          "Tags": [
+            "Upgrade"
           ]
         },
         "stats": {
@@ -2137,7 +2437,75 @@
             "value": 15
           }
         },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**CRONOS/TALOS** unit only. This unit has 5+ **InSv**."
+        "text": "**CRONOS/TALOS** unit only. This unit has 5+ **InSv**.",
+        "removed": {
+          "keywords": {
+            "Tags": [
+              "Character Only"
+            ]
+          }
+        },
+        "aspects": {
+          "Unique": false
+        },
+        "rules": {
+          "CRONOS/TALOS unit only.": {
+            "evals": [
+              {
+                "actionable": false,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Cronos"
+              },
+              {
+                "actionable": false,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Talos"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "OR",
+                "value": true,
+                "paths": [
+                  [
+                    "{this}",
+                    "evals",
+                    "0",
+                    "result",
+                    "truthy"
+                  ],
+                  [
+                    "{this}",
+                    "evals",
+                    "1",
+                    "result",
+                    "truthy"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Eye of Spite": {
         "keywords": {
@@ -2230,7 +2598,7 @@
             "visibility": "normal"
           }
         },
-        "text": "Succubus model only. Improve the Attacks and Armour Penetration characteristics of the bearer’s melee weapons by 1. While the bearer is Empowered, Improve the Attacks and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead."
+        "text": "**SUCCUBUS** model only. Improve the Attacks and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer’s unit is selected to fight, you can spend 1 Pain token; if you do, until the end of the phase, improve the Attacks and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead."
       },
       "Enhancement§Gnarlskin Experimentor": {
         "keywords": {
@@ -2243,7 +2611,29 @@
             "value": 20
           }
         },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Haemonculus** model only. Attacks that target this unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**."
+        "text": "**HAEMONCULUS** model only. Attacks that target this unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.",
+        "rules": {
+          "HAEMONCULUS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Haemonculus"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Hyperstimm Trafficker": {
         "keywords": {
@@ -2256,7 +2646,29 @@
             "value": 20
           }
         },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Succubus** model only. This unit has +1 **T**."
+        "text": "**SUCCUBUS** model only. This unit has +1 **T**.",
+        "rules": {
+          "SUCCUBUS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Succubus"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Informant Network": {
         "keywords": {
@@ -2289,7 +2701,7 @@
             "value": 30
           }
         },
-        "text": "Archon model only. At the start of the Declare Battle Formations step, select up to three KABALITE WARRIORS and/or one of the HAND OF THE ARCHON units from your army; those units gain the Infiltrators ability."
+        "text": "**ARCHON** model only. At the start of the Declare Battle Formations step, select up to three **KABALITE WARRIORS** and/or **HAND OF THE ARCHON** units from your army; those units gain the Infiltrators ability."
       },
       "Enhancement§Labyrinthine Cunning": {
         "keywords": {
@@ -2322,7 +2734,7 @@
             "value": 25
           }
         },
-        "text": "Archon model only. At the start of your Command phase, if the bearer is on the battlefield, you can do one of the following:\n\n-  Spend 1 Pain token and gain 1CP\n-  Roll one D6: on a 4+, you gain 1CP."
+        "text": "**ARCHON** model only. At the start of your Command phase, if the bearer is on the battlefield, you can do one of the following:\n\n■ Spend 1 Pain token and gain 1CP.\n■ Roll one D6: on a 4+, you gain 1CP."
       },
       "Enhancement§Leechbite Plate": {
         "keywords": {
@@ -2376,7 +2788,7 @@
             "value": 5
           }
         },
-        "text": "Archon model only. The bearer has a Save characteristic of 3+. At the start of the other player's Command phase, you can spend 1 Pain token: if you do, the bearer regains all of its lost wounds."
+        "text": "**ARCHON** model only. The bearer has a Save characteristic of 3+. At the start of either player’s Command phase, you can spend 1 Pain token: if you do, the bearer regains all of its lost wounds."
       },
       "Enhancement§Master Artisan": {
         "keywords": {
@@ -2447,7 +2859,7 @@
             "value": 20
           }
         },
-        "text": "Haemonculus model only. Add 1 to the bearer's Wounds characteristic and add 1 to the Toughness characteristic of models in the bearer's unit."
+        "text": "**HAEMONCULUS** model only. Add 1 to the bearer’s Wounds characteristic and add 1 to the Toughness characteristic of models in the bearer’s unit."
       },
       "Enhancement§Master Nemesine": {
         "keywords": {
@@ -2590,7 +3002,7 @@
             "value": 5
           }
         },
-        "text": "Haemonculus model only. The bearer's weapons have the [ANTI-BEAST 2+] and [ANTI-MONSTER 4+] abilities."
+        "text": "**HAEMONCULUS** model only. The bearer’s weapons have the **[ANTI-BEAST 2+]** and **[ANTI-MONSTER 4+]** abilities."
       },
       "Enhancement§Master Regenesist": {
         "keywords": {
@@ -2623,9 +3035,9 @@
             "value": 25
           }
         },
-        "text": "Haemonculus model only. Each time the bearer uses its Fleshcraft ability, you can return up to D3+3 destroyed Bodyguard models to the bearer's unit instead of D3+1."
+        "text": "**HAEMONCULUS** model only. Each time the bearer uses its Fleshcraft ability, you can return up to D3+3 destroyed Bodyguard models to the bearer’s unit instead of D3+1."
       },
-      "Enhancement§Master Repugnomancer": {
+      "Enhancement§Master Repugnomancer (Aura)": {
         "keywords": {
           "Keywords": [
             "Covenite Coterie"
@@ -2656,7 +3068,7 @@
             "value": 15
           }
         },
-        "text": "Haemonculus model only. Add 3\" to the range of the bearer's Fear Incarnate ability, and each time a friendly DRUKHARI unit within 9\" of the bearer fails a Battle-shock test or is destroyed, roll one D6: on a 4+, you gain 1 Pain token."
+        "text": "**HAEMONCULUS** model only. Add 3\" to the range of the bearer’s Fear Incarnate ability, and each time a friendly **DRUKHARI** unit within 9\" of the bearer fails a Battle-shock test or is destroyed, roll one D6: on a 4+, you gain 1 Pain token."
       },
       "Enhancement§Morghenna's Curse": {
         "keywords": {
@@ -2738,7 +3150,7 @@
       "Enhancement§Morghenna’s Curse": {
         "keywords": {
           "Keywords": [
-            "Spectacle Of Spite"
+            "Spectacle of Spite"
           ]
         },
         "stats": {
@@ -2746,7 +3158,29 @@
             "value": 20
           }
         },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**SUCCUBUS** model only. Improve the Armour Penetration and Damage characteristics of the bearer’s melee weapons by 1."
+        "text": "**SUCCUBUS** model only. Improve the Armour Penetration and Damage characteristics of the bearer’s melee weapons by 1.",
+        "rules": {
+          "SUCCUBUS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Succubus"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Nightmare Shroud": {
         "keywords": {
@@ -2781,12 +3215,13 @@
             "value": 20
           }
         },
-        "text": "Drukhari model only. Each time the bearer’s unit disembarks from a Transport, until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit."
+        "text": "**DRUKHARI** model only. Each time the bearer’s unit disembarks from a **TRANSPORT**, until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit."
       },
       "Enhancement§Periapt of Torments": {
         "keywords": {
           "Keywords": [
-            "Spectacle Of Spite"
+            "Exhibition Of Slaughter",
+            "Spectacle of Spite"
           ]
         },
         "rules": {
@@ -2814,9 +3249,15 @@
         "stats": {
           "Points": {
             "value": 25
+          },
+          "Points Mod": {
+            "value": -5
+          },
+          "Detachment Trigger": {
+            "value": "Exhibition Of Slaughter"
           }
         },
-        "text": "Succubus model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer's unit."
+        "text": "**SUCCUBUS** model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit."
       },
       "Enhancement§Phantasmal Smoke": {
         "keywords": {
@@ -2851,12 +3292,12 @@
             "value": 15
           }
         },
-        "text": "Drukhari model only. While the bearer’s unit is wholly within 6” of a friendly Drukhari Transport:\n\n* Models in the bearer’s unit have the Stealth ability.\n\n* Each time a ranged attack targets the bearer's unit, models in that unit have the Benefit of Cover against that attack."
+        "text": "**DRUKHARI** model only. While the bearer’s unit is wholly within 6\" of a friendly **DRUKHARI TRANSPORT**:\n\n■ Models in the bearer’s unit have the Stealth ability.\n■ Each time a ranged attack targets the bearer’s unit, models in that unit have the Benefit of Cover against that attack."
       },
       "Enhancement§Pharmacophex": {
         "keywords": {
           "Keywords": [
-            "Spectacle Of Spite"
+            "Spectacle of Spite"
           ]
         },
         "rules": {
@@ -2886,7 +3327,7 @@
             "value": 15
           }
         },
-        "text": "Succubus model only. At the start of your Command phase, after selecting which Combat Drugs will be active for your army, roll one D6 and consult the Combat Drugs list. The result applies to the bearer's unit until the start of your next Command phase in addition to any other Combat Drugs active."
+        "text": "**SUCCUBUS** model only. At the start of your Command phase, after selecting which Combat Drugs will be active for your army, roll one D6 and consult the Combat Drugs list (see Detachment Rule). The result rolled applies to the bearer’s unit until the start of your next Command phase in addition to any other Combat Drugs that are active for your army. If you randomly select one that is already active for your army, it has no additional effect."
       },
       "Enhancement§Reaper's Cowl": {
         "keywords": {
@@ -2966,7 +3407,7 @@
       "Enhancement§Reaper’s Cowl": {
         "keywords": {
           "Keywords": [
-            "Reaper’S Wager"
+            "Reaper's Wager"
           ]
         },
         "stats": {
@@ -2974,7 +3415,29 @@
             "value": 25
           }
         },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**HARLEQUINS** model only. Models in the bearer’s unit have the Stealth and Infiltrators abilities."
+        "text": "**HARLEQUINS** model only. Models in the bearer’s unit have the Stealth and Infiltrators abilities.",
+        "rules": {
+          "HARLEQUINS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Harlequins"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Sadistic Fulcrum": {
         "keywords": {
@@ -3009,7 +3472,7 @@
             "value": 15
           }
         },
-        "text": "Drukhari model only. Each time you spend 1 Pain token to Empower the bearer's unit in the Shooting phase, select one friendly Drukhari Transport within 6\" of the bearer's unit; until the end of the phase, each time that Transport makes an attack, you can re-roll the Hit roll."
+        "text": "**DRUKHARI** model only. Each time you spend 1 Pain token to Empower the bearer’s unit in the Shooting phase, select one friendly **DRUKHARI TRANSPORT** within 6\" of the bearer’s unit; until the end of the phase, each time that **TRANSPORT** makes an attack, you can re-roll the Hit roll."
       },
       "Enhancement§Spiteful Raider": {
         "keywords": {
@@ -3044,11 +3507,12 @@
             "value": 10
           }
         },
-        "text": "Drukhari model only. Each time the bearer's unit destroys an enemy unit in the Fight phase, if that enemy unit was within range of one or more objective markers when the bearer's unit was selected to fight, you gain 1 additional Pain token."
+        "text": "**DRUKHARI** model only. Each time the bearer’s unit destroys an enemy unit in the Fight phase, if that enemy unit was within range of one or more objective markers when the bearer’s unit was selected to fight, you gain 1 additional Pain token."
       },
       "Enhancement§Towering Arrogance": {
         "keywords": {
           "Keywords": [
+            "Kabalite Agonysts",
             "Kabalite Cartel"
           ]
         },
@@ -3075,9 +3539,15 @@
         "stats": {
           "Points": {
             "value": 20
+          },
+          "Points Mod": {
+            "value": -5
+          },
+          "Detachment Trigger": {
+            "value": "Kabalite Agonysts"
           }
         },
-        "text": "Archon model only. While the bearer is leading a unit, improve the Leadership and Objective Control characteristics of models in that unit by 1."
+        "text": "**ARCHON** model only. While the bearer is leading a unit, improve the Leadership and Objective Control characteristics of models in that unit by 1."
       },
       "Enhancement§Webway Awl": {
         "keywords": {
@@ -3110,12 +3580,12 @@
             "value": 25
           }
         },
-        "text": "Archon model only. Models in the bearer's unit have the Deep Strike ability, and you can target the bearer's unit with the Rapid Ingress Stratagem for 0CP."
+        "text": "**ARCHON** model only. Models in the bearer’s unit have the Deep Strike ability, and you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP."
       },
       "Enhancement§Webway Walker": {
         "keywords": {
           "Keywords": [
-            "Reaper’S Wager"
+            "Reaper's Wager"
           ]
         },
         "rules": {
@@ -3183,7 +3653,7 @@
             "value": 15
           }
         },
-        "text": "**Harlequins** or **Drukhari** model only. Models in the\nbearer’s unit have the Deep Strike ability. Each time\nthe bearer’s unit is set up on the battlefield using the\nDeep Strike ability, if that unit is currently losing\nthe wager, until the end of the turn, you can re‑roll\nCharge rolls made for that unit."
+        "text": "**HARLEQUINS** or **DRUKHARI** model only. Models in the bearer’s unit have the Deep Strike ability. Each time the bearer’s unit is set up on the battlefield using the Deep Strike ability, if that unit is currently losing the wager, until the end of the turn, you can re-roll Charge rolls made for that unit."
       },
       "Melee Weapon§Archon—Agoniser": {
         "aspects": {
@@ -3261,9 +3731,7 @@
         "aspects": {
           "Label": "Master-crafted power weapon"
         },
-        "assets": {
-          "traits": []
-        },
+        "assets": {},
         "stats": {
           "A": {
             "value": 5
@@ -3310,7 +3778,7 @@
             "value": 3
           },
           "AP": {
-            "value": -1
+            "value": -2
           },
           "D": {
             "value": 1
@@ -3341,7 +3809,7 @@
             "value": 5
           },
           "AP": {
-            "value": -1
+            "value": -2
           },
           "D": {
             "value": 2
@@ -3372,7 +3840,7 @@
             "value": 4
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "D": {
             "value": 1
@@ -3740,6 +4208,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Precision",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -3750,8 +4219,7 @@
                   "value": "2+"
                 }
               }
-            },
-            "Ability§Precision"
+            }
           ]
         },
         "stats": {
@@ -3762,8 +4230,8 @@
             "value": -1
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "Range": {
             "statType": "term",
@@ -3809,6 +4277,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Twin-linked",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -3819,8 +4288,7 @@
                   "value": "4+"
                 }
               }
-            },
-            "Ability§Twin-linked"
+            }
           ]
         },
         "stats": {
@@ -3890,9 +4358,7 @@
         "aspects": {
           "Label": "Razorflail"
         },
-        "assets": {
-          "traits": []
-        },
+        "assets": {},
         "stats": {
           "A": {
             "value": 4
@@ -3921,7 +4387,6 @@
         },
         "assets": {
           "traits": [
-            "Ability§Lance",
             {
               "item": "Ability§Sustained Hits",
               "stats": {
@@ -3929,7 +4394,8 @@
                   "value": "1"
                 }
               }
-            }
+            },
+            "Ability§Lance"
           ]
         },
         "stats": {
@@ -3961,6 +4427,15 @@
         "assets": {
           "traits": [
             {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Lance",
+            {
               "item": "Ability§Anti-",
               "stats": {
                 "keyword": {
@@ -3968,15 +4443,6 @@
                 },
                 "x": {
                   "value": "3+"
-                }
-              }
-            },
-            "Ability§Lance",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
                 }
               }
             }
@@ -4010,9 +4476,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Devastating Wounds",
+            "Ability§Precision",
             "Ability§Lance",
-            "Ability§Precision"
+            "Ability§Devastating Wounds"
           ]
         },
         "stats": {
@@ -4057,11 +4523,7 @@
         "aspects": {
           "Label": "Dual blades"
         },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked"
-          ]
-        },
+        "assets": {},
         "stats": {
           "A": {
             "value": 6
@@ -4209,8 +4671,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Devastating Wounds",
-            "Ability§Hazardous"
+            "Ability§Hazardous",
+            "Ability§Devastating Wounds"
           ]
         },
         "stats": {
@@ -4273,6 +4735,15 @@
         "assets": {
           "traits": [
             {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            "Ability§Precision",
+            {
               "item": "Ability§Anti-",
               "stats": {
                 "keyword": {
@@ -4280,15 +4751,6 @@
                 },
                 "x": {
                   "value": "2+"
-                }
-              }
-            },
-            "Ability§Precision",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "2"
                 }
               }
             }
@@ -4409,7 +4871,7 @@
             "value": 3
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "D": {
             "value": 1
@@ -4461,7 +4923,7 @@
             "value": 3
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "D": {
             "value": 1
@@ -4663,6 +5125,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Precision",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -4673,8 +5136,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Precision"
+            }
           ]
         },
         "stats": {
@@ -4815,7 +5277,7 @@
         },
         "stats": {
           "A": {
-            "value": 6
+            "value": 9
           },
           "AP": {
             "value": -1
@@ -4833,6 +5295,11 @@
           "WS": {
             "value": 4
           }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Devastating Wounds"
+          ]
         }
       },
       "Melee Weapon§Urien Rakarth—Haemonculus tools and scissorhands": {
@@ -4863,8 +5330,8 @@
             "value": -1
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "Range": {
             "statType": "term",
@@ -5018,6 +5485,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Twin-linked",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -5028,8 +5496,7 @@
                   "value": "4+"
                 }
               }
-            },
-            "Ability§Twin-linked"
+            }
           ]
         },
         "stats": {
@@ -5058,9 +5525,7 @@
         "aspects": {
           "Label": "Gladiatorial weapons"
         },
-        "assets": {
-          "traits": []
-        },
+        "assets": {},
         "stats": {
           "A": {
             "value": 5
@@ -5264,7 +5729,7 @@
         },
         "stats": {
           "Ld": {
-            "value": 6
+            "value": 7
           },
           "Loadout Options": {
             "dynamic": true,
@@ -5397,7 +5862,7 @@
         },
         "stats": {
           "Ld": {
-            "value": 6
+            "value": 7
           },
           "M": {
             "value": 16
@@ -5495,7 +5960,15 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Beastmaster—Splinter pods",
-            "Melee Weapon§Beastmaster—Agoniser"
+            "Melee Weapon§Beastmaster—Agoniser",
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "6+"
+                }
+              }
+            }
           ]
         },
         "keywords": {
@@ -5511,7 +5984,7 @@
         },
         "stats": {
           "Ld": {
-            "value": 6
+            "value": 7
           },
           "M": {
             "value": 12
@@ -5533,7 +6006,15 @@
       "Model§Clawed Fiend": {
         "assets": {
           "traits": [
-            "Melee Weapon§Beastmaster—Clawed Fiend fists"
+            "Melee Weapon§Beastmaster—Clawed Fiend fists",
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "6+"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -5561,7 +6042,15 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Cronos—Spirit syphon",
-            "Melee Weapon§Cronos—Spirit-leech tentacles"
+            "Melee Weapon§Cronos—Spirit-leech tentacles",
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "6+"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -5666,7 +6155,7 @@
         },
         "stats": {
           "Ld": {
-            "value": 6
+            "value": 7
           },
           "M": {
             "value": 8
@@ -5878,7 +6367,7 @@
             "visibility": "normal"
           },
           "Ld": {
-            "value": 6
+            "value": 7
           },
           "Loadout Options": {
             "dynamic": true,
@@ -5987,7 +6476,15 @@
       "Model§Incubi": {
         "assets": {
           "traits": [
-            "Melee Weapon§Incubi—Klaive"
+            "Melee Weapon§Incubi—Klaive",
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "5+"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -6396,7 +6893,15 @@
       "Model§Khymerae": {
         "assets": {
           "traits": [
-            "Melee Weapon§Beastmaster—Khymerae talons"
+            "Melee Weapon§Beastmaster—Khymerae talons",
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "6+"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -6466,6 +6971,18 @@
           "W": {
             "value": 2
           }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "5+"
+                }
+              }
+            }
+          ]
         }
       },
       "Model§Lhamaean": {
@@ -6479,7 +6996,7 @@
             "value": 7
           },
           "M": {
-            "value": 8
+            "value": 7
           },
           "OC": {
             "value": 1
@@ -6535,7 +7052,7 @@
             "value": 7
           },
           "M": {
-            "value": 8
+            "value": 7
           },
           "OC": {
             "value": 1
@@ -6560,7 +7077,7 @@
         },
         "stats": {
           "Ld": {
-            "value": 6
+            "value": 7
           },
           "M": {
             "value": 8
@@ -6582,7 +7099,15 @@
       "Model§Razorwing Flock": {
         "assets": {
           "traits": [
-            "Melee Weapon§Beastmaster—Razorwing feathers"
+            "Melee Weapon§Beastmaster—Razorwing feathers",
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "6+"
+                }
+              }
+            }
           ]
         },
         "keywords": {
@@ -6721,7 +7246,7 @@
         },
         "assets": {
           "traits": [
-            "Melee Weapon§Scourges—Close combat weapon"
+            "Melee Weapon§Scourges with Heavy Weapons—Close combat weapon"
           ]
         },
         "stats": {
@@ -6744,7 +7269,7 @@
                 "tracking": {},
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Splinter cannon"
+                    "trait": "Ranged Weapon§Scourges with Heavy Weapons—Splinter cannon"
                   }
                 ]
               },
@@ -6753,7 +7278,7 @@
                 "tracking": {},
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Blaster"
+                    "trait": "Ranged Weapon§Scourges with Heavy Weapons—Blaster"
                   }
                 ]
               },
@@ -6762,7 +7287,7 @@
                 "tracking": {},
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Dark lance"
+                    "trait": "Ranged Weapon§Scourges with Heavy Weapons—Dark lance"
                   }
                 ]
               },
@@ -6771,7 +7296,7 @@
                 "tracking": {},
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Drukhari haywire blaster"
+                    "trait": "Ranged Weapon§Scourges with Heavy Weapons—Drukhari haywire blaster"
                   }
                 ]
               },
@@ -6780,7 +7305,7 @@
                 "tracking": {},
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Heat lance"
+                    "trait": "Ranged Weapon§Scourges with Heavy Weapons—Heat lance"
                   }
                 ]
               },
@@ -6789,7 +7314,7 @@
                 "tracking": {},
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Shredder"
+                    "trait": "Ranged Weapon§Scourges with Heavy Weapons—Shredder"
                   }
                 ]
               }
@@ -6815,7 +7340,7 @@
         },
         "assets": {
           "traits": [
-            "Melee Weapon§Scourges—Close combat weapon"
+            "Melee Weapon§Scourges with Shardcarbines—Close combat weapon"
           ]
         },
         "stats": {
@@ -6837,7 +7362,7 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Shardcarbine"
+                    "trait": "Ranged Weapon§Scourges with Shardcarbines—Shardcarbine"
                   }
                 ]
               },
@@ -6848,7 +7373,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Blaster"
+                    "trait": "Ranged Weapon§Scourges with Shardcarbines—Blaster"
                   }
                 ]
               },
@@ -6859,7 +7384,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Shredder"
+                    "trait": "Ranged Weapon§Scourges with Shardcarbines—Shredder"
                   }
                 ]
               }
@@ -6885,7 +7410,7 @@
         },
         "assets": {
           "traits": [
-            "Melee Weapon§Scourges—Close combat weapon"
+            "Melee Weapon§Scourges with Heavy Weapons—Close combat weapon"
           ]
         },
         "stats": {
@@ -6907,7 +7432,7 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Shardcarbine"
+                    "trait": "Ranged Weapon§Scourges with Heavy Weapons—Shardcarbine"
                   }
                 ]
               },
@@ -6915,10 +7440,10 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Blast pistol"
+                    "trait": "Ranged Weapon§Scourges with Heavy Weapons—Blast pistol"
                   },
                   {
-                    "trait": "Melee Weapon§Scourges—Power weapon"
+                    "trait": "Melee Weapon§Scourges with Heavy Weapons—Power weapon"
                   }
                 ]
               },
@@ -6926,10 +7451,10 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Splinter pistol"
+                    "trait": "Ranged Weapon§Scourges with Heavy Weapons—Splinter pistol"
                   },
                   {
-                    "trait": "Melee Weapon§Scourges—Power weapon"
+                    "trait": "Melee Weapon§Scourges with Heavy Weapons—Power weapon"
                   }
                 ]
               }
@@ -6966,7 +7491,7 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Shardcarbine"
+                    "trait": "Ranged Weapon§Scourges with Shardcarbines—Shardcarbine"
                   }
                 ]
               },
@@ -6974,10 +7499,10 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Blast pistol"
+                    "trait": "Ranged Weapon§Scourges with Shardcarbines—Blast pistol"
                   },
                   {
-                    "trait": "Melee Weapon§Scourges—Power weapon"
+                    "trait": "Melee Weapon§Scourges with Shardcarbines—Power weapon"
                   }
                 ]
               },
@@ -6985,10 +7510,10 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges—Splinter pistol"
+                    "trait": "Ranged Weapon§Scourges with Shardcarbines—Splinter pistol"
                   },
                   {
-                    "trait": "Melee Weapon§Scourges—Power weapon"
+                    "trait": "Melee Weapon§Scourges with Shardcarbines—Power weapon"
                   }
                 ]
               }
@@ -7027,7 +7552,7 @@
             "value": 7
           },
           "M": {
-            "value": 8
+            "value": 7
           },
           "OC": {
             "value": 1
@@ -7157,7 +7682,7 @@
       "Model§Talos": {
         "stats": {
           "Ld": {
-            "value": 6
+            "value": 7
           },
           "M": {
             "value": 7
@@ -7284,6 +7809,18 @@
           "W": {
             "value": 7
           }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "6+"
+                }
+              }
+            }
+          ]
         }
       },
       "Model§Ur-ghul": {
@@ -7297,7 +7834,7 @@
             "value": 7
           },
           "M": {
-            "value": 8
+            "value": 7
           },
           "OC": {
             "value": 1
@@ -7319,7 +7856,7 @@
         },
         "stats": {
           "Ld": {
-            "value": 6
+            "value": 7
           },
           "Loadout Options": {
             "dynamic": true,
@@ -7487,8 +8024,8 @@
             "value": 2
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "Range": {
             "value": 6
@@ -7504,6 +8041,8 @@
         },
         "assets": {
           "traits": [
+            "Ability§Pistol",
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -7514,9 +8053,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Assault",
-            "Ability§Pistol"
+            }
           ]
         },
         "stats": {
@@ -7557,7 +8094,8 @@
                 }
               }
             },
-            "Ability§Assault"
+            "Ability§Assault",
+            "Ability§Twin-linked"
           ]
         },
         "stats": {
@@ -7704,8 +8242,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
+            "Ability§Torrent",
+            "Ability§Ignores Cover"
           ]
         },
         "stats": {
@@ -7738,8 +8276,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast",
-            "Ability§Ignores Cover"
+            "Ability§Ignores Cover",
+            "Ability§Blast"
           ]
         },
         "stats": {
@@ -7814,6 +8352,8 @@
         },
         "assets": {
           "traits": [
+            "Ability§Precision",
+            "Ability§Pistol",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -7824,9 +8364,7 @@
                   "value": "2+"
                 }
               }
-            },
-            "Ability§Pistol",
-            "Ability§Precision"
+            }
           ]
         },
         "stats": {
@@ -7840,8 +8378,8 @@
             "value": 2
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "Range": {
             "value": 12
@@ -7871,8 +8409,8 @@
             "value": 3
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "Range": {
             "value": 6
@@ -7950,6 +8488,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -7960,8 +8499,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Assault"
+            }
           ]
         },
         "stats": {
@@ -7991,8 +8529,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
-            "Ability§Torrent"
+            "Ability§Torrent",
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -8026,6 +8564,15 @@
         "assets": {
           "traits": [
             {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Heavy",
+            {
               "item": "Ability§Anti-",
               "stats": {
                 "keyword": {
@@ -8033,15 +8580,6 @@
                 },
                 "x": {
                   "value": "3+"
-                }
-              }
-            },
-            "Ability§Heavy",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
                 }
               }
             }
@@ -8074,6 +8612,8 @@
         },
         "assets": {
           "traits": [
+            "Ability§Pistol",
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -8084,9 +8624,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Assault",
-            "Ability§Pistol"
+            }
           ]
         },
         "stats": {
@@ -8116,6 +8654,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -8126,8 +8665,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Assault"
+            }
           ]
         },
         "stats": {
@@ -8157,6 +8695,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Pistol",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -8167,8 +8706,7 @@
                   "value": "2+"
                 }
               }
-            },
-            "Ability§Pistol"
+            }
           ]
         },
         "stats": {
@@ -8198,6 +8736,8 @@
         },
         "assets": {
           "traits": [
+            "Ability§Pistol",
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -8208,9 +8748,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Assault",
-            "Ability§Pistol"
+            }
           ]
         },
         "stats": {
@@ -8240,6 +8778,8 @@
         },
         "assets": {
           "traits": [
+            "Ability§Twin-linked",
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -8250,9 +8790,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Assault",
-            "Ability§Twin-linked"
+            }
           ]
         },
         "stats": {
@@ -8296,8 +8834,8 @@
             "value": 3
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "Range": {
             "value": 6
@@ -8375,8 +8913,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
-            "Ability§Torrent"
+            "Ability§Torrent",
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -8410,6 +8948,15 @@
         "assets": {
           "traits": [
             {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Heavy",
+            {
               "item": "Ability§Anti-",
               "stats": {
                 "keyword": {
@@ -8417,15 +8964,6 @@
                 },
                 "x": {
                   "value": "3+"
-                }
-              }
-            },
-            "Ability§Heavy",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
                 }
               }
             }
@@ -8458,6 +8996,8 @@
         },
         "assets": {
           "traits": [
+            "Ability§Pistol",
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -8468,9 +9008,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Assault",
-            "Ability§Pistol"
+            }
           ]
         },
         "stats": {
@@ -8500,6 +9038,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -8510,8 +9049,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Assault"
+            }
           ]
         },
         "stats": {
@@ -8541,9 +9079,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
+            "Ability§Ignores Cover",
             "Ability§Devastating Wounds",
-            "Ability§Ignores Cover"
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -8641,6 +9179,9 @@
           },
           "S": {
             "value": 12
+          },
+          "Points": {
+            "value": 5
           }
         }
       },
@@ -8733,7 +9274,7 @@
             "value": 3
           },
           "D": {
-            "value": 1
+            "value": 2
           },
           "Range": {
             "value": 36
@@ -8801,7 +9342,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Razorwing Jetfighter—Razorwing missiles – monoscythe missiles",
-            "Ranged Weapon§Razorwing Jetfighter—Razorwing missiles – nuerotoxin missiles",
+            "Ranged Weapon§Razorwing Jetfighter—Razorwing missiles – neurotoxin missiles",
             "Ranged Weapon§Razorwing Jetfighter—Razorwing missiles – shatterfield missiles"
           ]
         },
@@ -8922,6 +9463,14 @@
         "assets": {
           "traits": [
             {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            {
               "item": "Ability§Anti-",
               "stats": {
                 "keyword": {
@@ -8929,14 +9478,6 @@
                 },
                 "x": {
                   "value": "3+"
-                }
-              }
-            },
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
                 }
               }
             }
@@ -8969,16 +9510,16 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
             "Ability§Twin-linked",
             {
               "item": "Ability§Rapid Fire",
               "stats": {
                 "x": {
-                  "value": "1"
+                  "value": "2"
                 }
               }
             },
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -8994,7 +9535,7 @@
         },
         "stats": {
           "A": {
-            "value": 1
+            "value": 2
           },
           "AP": {
             "value": 0
@@ -9070,13 +9611,13 @@
             "value": 3
           },
           "AP": {
-            "value": -1
+            "value": -2
           },
           "BS": {
             "value": 3
           },
           "D": {
-            "value": 1
+            "value": 2
           },
           "Range": {
             "value": 24
@@ -9123,7 +9664,6 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
             {
               "item": "Ability§Melta",
               "stats": {
@@ -9131,7 +9671,8 @@
                   "value": "3"
                 }
               }
-            }
+            },
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -9162,6 +9703,8 @@
         },
         "assets": {
           "traits": [
+            "Ability§Pistol",
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -9172,9 +9715,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Assault",
-            "Ability§Pistol"
+            }
           ]
         },
         "stats": {
@@ -9204,6 +9745,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -9214,8 +9756,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Assault"
+            }
           ]
         },
         "stats": {
@@ -9259,8 +9800,8 @@
             "value": 3
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "Range": {
             "value": 6
@@ -9380,8 +9921,6 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
-            "Ability§Heavy",
             {
               "item": "Ability§Melta",
               "stats": {
@@ -9389,7 +9928,9 @@
                   "value": "3"
                 }
               }
-            }
+            },
+            "Ability§Heavy",
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -9420,6 +9961,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -9430,8 +9972,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Assault"
+            }
           ]
         },
         "stats": {
@@ -9461,8 +10002,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
-            "Ability§Torrent"
+            "Ability§Torrent",
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -9496,6 +10037,15 @@
         "assets": {
           "traits": [
             {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Heavy",
+            {
               "item": "Ability§Anti-",
               "stats": {
                 "keyword": {
@@ -9503,15 +10053,6 @@
                 },
                 "x": {
                   "value": "3+"
-                }
-              }
-            },
-            "Ability§Heavy",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
                 }
               }
             }
@@ -9544,6 +10085,8 @@
         },
         "assets": {
           "traits": [
+            "Ability§Pistol",
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -9554,9 +10097,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Assault",
-            "Ability§Pistol"
+            }
           ]
         },
         "stats": {
@@ -9727,7 +10268,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
+            "Ability§Twin-linked",
             {
               "item": "Ability§Melta",
               "stats": {
@@ -9736,7 +10277,7 @@
                 }
               }
             },
-            "Ability§Twin-linked"
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -9767,8 +10308,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Torrent",
             "Ability§Twin-linked",
+            "Ability§Torrent",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -9812,6 +10353,15 @@
         },
         "assets": {
           "traits": [
+            "Ability§Twin-linked",
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -9822,16 +10372,7 @@
                   "value": "3+"
                 }
               }
-            },
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            },
-            "Ability§Twin-linked"
+            }
           ]
         },
         "stats": {
@@ -9927,6 +10468,14 @@
         "assets": {
           "traits": [
             {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            {
               "item": "Ability§Anti-",
               "stats": {
                 "keyword": {
@@ -9934,14 +10483,6 @@
                 },
                 "x": {
                   "value": "3+"
-                }
-              }
-            },
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
                 }
               }
             }
@@ -9974,6 +10515,16 @@
         },
         "assets": {
           "traits": [
+            "Ability§Twin-linked",
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -9984,17 +10535,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Assault",
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            },
-            "Ability§Twin-linked"
+            }
           ]
         },
         "stats": {
@@ -10096,8 +10637,8 @@
         },
         "stats": {
           "A": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "AP": {
             "value": -2
@@ -10131,7 +10672,7 @@
             "value": 0
           },
           "AP": {
-            "value": -2
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -10153,8 +10694,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Heavy",
-            "Ability§Precision"
+            "Ability§Precision",
+            "Ability§Heavy"
           ]
         },
         "stats": {
@@ -10184,6 +10725,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Torrent",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -10194,8 +10736,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Torrent"
+            }
           ]
         },
         "stats": {
@@ -10228,6 +10769,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Devastating Wounds",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -10238,8 +10780,7 @@
                   "value": "4+"
                 }
               }
-            },
-            "Ability§Devastating Wounds"
+            }
           ]
         },
         "stats": {
@@ -10269,6 +10810,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Pistol",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -10279,8 +10821,7 @@
                   "value": "2+"
                 }
               }
-            },
-            "Ability§Pistol"
+            }
           ]
         },
         "stats": {
@@ -10324,8 +10865,8 @@
             "value": 3
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "Range": {
             "value": 6
@@ -10341,6 +10882,8 @@
         },
         "assets": {
           "traits": [
+            "Ability§Pistol",
+            "Ability§Assault",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -10351,9 +10894,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Assault",
-            "Ability§Pistol"
+            }
           ]
         },
         "stats": {
@@ -10434,7 +10975,8 @@
                     "value"
                   ]
                 ],
-                "value": "Reaper's Wager"
+                "value": "Reaper's Wager",
+                "contains": true
               }
             ],
             "evaluate": "AND",
@@ -10474,7 +11016,8 @@
                     "value"
                   ]
                 ],
-                "value": "Reaper's Wager"
+                "value": "Reaper's Wager",
+                "contains": true
               }
             ],
             "evaluate": "AND",
@@ -10513,7 +11056,8 @@
                     "value"
                   ]
                 ],
-                "value": "Reaper's Wager"
+                "value": "Reaper's Wager",
+                "contains": true
               }
             ],
             "evaluate": "AND",
@@ -10540,7 +11084,9 @@
                   "MaxHarlequinPoints": 250,
                   "maxPoints": 1000,
                   "MaxReaperHarlequinPoints": 500,
-                  "maxDP": 3
+                  "maxDP": 2,
+                  "maxUnits": 2,
+                  "maxEnhancements": 2
                 }
               },
               "Strike Force": {
@@ -10549,7 +11095,9 @@
                   "MaxHarlequinPoints": 500,
                   "maxPoints": 2000,
                   "MaxReaperHarlequinPoints": 1000,
-                  "maxDP": 4
+                  "maxDP": 3,
+                  "maxUnits": 3,
+                  "maxEnhancements": 4
                 }
               }
             }
@@ -10620,14 +11168,6 @@
                   }
                 ]
               },
-              "Reaper’s Wager": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Detachment§Reaper’s Wager"
-                  }
-                ]
-              },
               "Tools Of Torment": {
                 "order": 10,
                 "traits": [
@@ -10667,7 +11207,7 @@
             "Battle Tactic"
           ],
           "Turn": [
-            "Opponent's"
+            "Opponent’s"
           ]
         },
         "stats": {
@@ -10675,13 +11215,13 @@
             "value": 2
           }
         },
-        "text": "**WHEN**: End of your opponent's Movement phase.\n\n**TARGET**: One WYCH CULT unit from your army that would be able to declare a charge if it were your Charge phase.\n\n**EFFECT**: Select one enemy unit within 9\" of your unit that was set up on the battlefield this phase or that ended a Normal or Advance move this phase. Your unit now declares a charge that targets only that enemy unit, and you resolve that charge.\n\n**RESTRICTIONS**: Even if that charge is successful, your unit does not receive any Charge bonus this turn."
+        "text": "**WHEN:** Your opponent’s Movement phase, when an enemy unit ends a **fall-back move**.\n\n**TARGET:** One friendly unengaged **WYCH CULT** unit that is within 6\" of that enemy unit.\n\n**EFFECT:** Declare a charge with your unit. When selecting **charge targets**, you can only select enemy units that made a **fall-back move** this phase and are within the **maximum distance**."
       },
       "Stratagem§Acrobatic Display": {
         "keywords": {
           "Keywords": [
             "Drukhari",
-            "Spectacle of Spite"
+            "Exhibition Of Slaughter"
           ],
           "Phase": [
             "Shooting"
@@ -10690,15 +11230,10 @@
             "Battle Tactic"
           ],
           "Turn": [
-            "Opponent's"
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your opponent's Shooting phase, just after an enemy unit has selected its targets.\n\n**TARGET**: One WYCH CULT unit from your army that was selected as the target of one or more of the attacking unit's attacks.\n\n**EFFECT**: Until the end of the phase, models in your unit have a 5+ invulnerable save."
+        "text": "**WHEN:** Your opponent’s Shooting phase, when an enemy unit targets a friendly **WYCH CULT** unit.\n\n**TARGET:** That **WYCH CULT** unit.\n\n**EFFECT:** Your unit has 5+ **InSv**."
       },
       "Stratagem§Berserk Fugue": {
         "keywords": {
@@ -10713,7 +11248,8 @@
             "Strategic Ploy"
           ],
           "Turn": [
-            "Opponent's"
+            "Yours",
+            "Opponent’s"
           ]
         },
         "stats": {
@@ -10721,7 +11257,7 @@
             "value": 2
           }
         },
-        "text": "**WHEN**: Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET**: One WYCH CULT unit from your army that was selected as the target of one or more of the attacking unit's attacks.\n\n**EFFECT**: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+        "text": "**WHEN:** Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **WYCH CULT** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
       },
       "Stratagem§Connoisseurs of Pain": {
         "keywords": {
@@ -10730,26 +11266,23 @@
             "Covenite Coterie"
           ],
           "Phase": [
-            "Shooting",
-            "Fight"
+            "Fight",
+            "Shooting"
           ],
           "Category": [
             "Battle Tactic"
           ],
           "Turn": [
-            "Opponent's"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET**: One DRUKHARI unit from your army that was selected as the target of one or more of the attacking unit's attacks.\n\n**EFFECT**: Spend 1 Pain token. Until the end of the phase, each time an attack is allocated to a model in your unit, worsen the Armour Penetration characteristic of that attack by 1. At the end of the phase, if your unit is still on the battlefield and it is a HAEMONCULUS COVENS unit, you gain 1 Pain token."
+        "text": "**WHEN:** Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **DRUKHARI** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Spend 1 Pain Token. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1. At the end of the phase, if your unit is still on the battlefield and it is a **HAEMONCULUS COVENS** unit, you gain 1 Pain Token."
       },
       "Stratagem§Dance Macabre": {
         "keywords": {
           "Keywords": [
+            "Drukhari",
             "Reaper's Wager"
           ],
           "Category": [
@@ -10767,7 +11300,7 @@
             "value": 2
           }
         },
-        "text": "**WHEN:** Your opponent’s Movement phase, just\nafter an enemy unit ends a Normal, Advance or Fall\nBack move.\n\n**TARGET:** One **Drukhari Infantry** or **Harlequins\nInfantry** unit from your army that is within 9\" of that\nenemy unit.\n\nEFFECT: Your unit can make a Normal move of up to\nD6\". If your unit is currently losing the wager, it can\nmake a Normal move of up to 6\" instead."
+        "text": "**WHEN:** Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.\n\n**TARGET:** One **DRUKHARI INFANTRY** or **HARLEQUINS INFANTRY** unit from your army that is within 8\" of that enemy unit.\n\n**EFFECT:** Your unit can make a Normal move of up to D6\". If your unit is currently losing the wager, it can make a Normal move of up to 6\" instead."
       },
       "Stratagem§Dark Harvest": {
         "keywords": {
@@ -10782,15 +11315,11 @@
             "Strategic Ploy"
           ],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Start of the Fight phase.\n\n**TARGET**: Up to two WRACKS units from your army, or one other DRUKHARI unit from your army.\n\n**EFFECT**: Until the end of the phase, melee weapons equipped by models in each of those units have the [LETHAL HITS] ability."
+        "text": "**WHEN:** Start of the Fight phase.\n\n**TARGET:** Up to two **WRACKS** units from your army, or one other **DRUKHARI** unit from your army.\n\n**EFFECT:** Until the end of the phase, melee weapons equipped by models in each of those units have the **[LETHAL HITS]** ability."
       },
       "Stratagem§Deadly Debut": {
         "keywords": {
@@ -10805,15 +11334,11 @@
             "Battle Tactic"
           ],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase.\n\n**TARGET**: One DRUKHARI unit from your army that made a Charge move this turn and has not been selected to fight this phase.\n\n**EFFECT**: Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a WYCHES unit, until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1 as well."
+        "text": "**WHEN:** Fight phase.\n\n**TARGET:** One **DRUKHARI** unit from your army that made a Charge move this turn and has not been selected to fight this phase.\n\n**EFFECT:** Until the end of the phase, melee weapons equipped by models in your unit have the **[LETHAL HITS]** ability. If your unit is a **WYCHES** unit, until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1 as well."
       },
       "Stratagem§Deadly Deceivers": {
         "keywords": {
@@ -10828,15 +11353,10 @@
             "Strategic Ploy"
           ],
           "Turn": [
-            "Opponent's"
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your opponent's Shooting phase, just after an enemy unit has selected its targets.\n\n**TARGET**: One KABAL or BLADES FOR HIRE unit from your army that was selected as the target of one or more of the attacking unit's attacks.\n\n**EFFECT**: Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
+        "text": "**WHEN:** Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **KABAL** or **BLADES FOR HIRE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
       },
       "Stratagem§Distillers of Fear": {
         "keywords": {
@@ -10851,7 +11371,8 @@
             "Strategic Ploy"
           ],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
         "stats": {
@@ -10859,9 +11380,9 @@
             "value": 2
           }
         },
-        "text": "**WHEN**: Fight phase.\n\n**TARGET**: One HAEMONCULUS COVENS unit from your army that has not been selected to fight this phase.\n\n**EFFECT**: Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit that is Battle-shocked, that attack has the [DEVASTATING WOUNDS] ability."
+        "text": "**WHEN:** Fight phase.\n\n**TARGET:** One **HAEMONCULUS COVENS** unit from your army that has not been selected to fight this phase.\n\n**EFFECT:** Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit that is Battle-shocked, that attack has the **[DEVASTATING WOUNDS]** ability."
       },
-      "Stratagem§Double Cross": {
+      "Stratagem§Double-cross": {
         "keywords": {
           "Keywords": [
             "Drukhari",
@@ -10874,15 +11395,11 @@
             "Strategic Ploy"
           ],
           "Turn": [
-            "Opponent's"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET**: One KABAL or BLADES FOR HIRE unit from your army that was selected as the target of one or more of the attacking unit's attacks, and one friendly DRUKHARI unit (excluding VEHICLES).\n\n**EFFECT**: Until the end of the phase, each time you would allocate an attack to a model in your KABAL or BLADES FOR HIRE unit, if your DRUKHARI unit is within Engagement Range of the attacking model, you can choose for it to be the target of that attack instead. If you do, your DRUKHARI unit suffers a number of mortal wounds equal to the Damage characteristic of that attack."
+        "text": "**WHEN:** Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **KABAL** or **BLADES FOR HIRE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks, and one friendly **DRUKHARI** unit (excluding **VEHICLES**).\n\n**EFFECT:** Until the end of the phase, each time you would allocate an attack to a model in your **KABAL** or **BLADES FOR HIRE** unit, if your **DRUKHARI** unit is within Engagement Range of the attacking model, no saving throw is made for that attack; instead, your **DRUKHARI** unit suffers a number of mortal wounds equal to the Damage characteristic of that attack."
       },
       "Stratagem§Eager for the Kill": {
         "keywords": {
@@ -10900,12 +11417,7 @@
             "Yours"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Start of your Movement phase.\n\n**TARGET**: Up to two WYCHES units from your army, or one other DRUKHARI unit from your army, that have not been selected to move this phase.\n\n**EFFECT**: Until the end of the phase, each time one of those units Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit (this is not cumulative with the REAVERS' Matchless Swiftness ability)."
+        "text": "**WHEN:** Start of your Movement phase.\n\n**TARGET:** Up to two **WYCHES** units from your army, or one other **DRUKHARI** unit from your army, that have not been selected to move this phase.\n\n**EFFECT:** Until the end of the phase, each time one of those units Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit (this is not cumulative with the **REAVERS**’ Matchless Swiftness ability)."
       },
       "Stratagem§Enemies Without Number": {
         "keywords": {
@@ -10923,12 +11435,7 @@
             "Yours"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your Command phase, just after you complete a Contract (see opposite).\n\n**TARGET**: One ARCHON WARLORD from your army.\n\n**EFFECT**: Select one new Contract from those listed opposite (this can be one you have already completed), then select one unit from your opponent's army that is on the battlefield and matches the 'Contract' description for that Contract. Until that Contract is completed, that unit is your Contract unit and the Murderous Agenda Detachment rule applies as normal."
+        "text": "**WHEN:** Your Command phase, just after you complete a Contract (see Murderous Agenda Detachment rule).\n\n**TARGET:** One **ARCHON WARLORD** from your army.\n\n**EFFECT:** Select one new Contract from those listed in the Murderous Agenda Detachment rule (this can be one you have already completed), then select one unit from your opponent’s army that is on the battlefield and matches the ‘Contract’ description in that Contract. Until that Contract is completed, that unit is your Contract unit and the Murderous Agenda Detachment rule applies as normal."
       },
       "Stratagem§Enfolding Nightmare": {
         "keywords": {
@@ -10943,32 +11450,29 @@
             "Strategic Ploy"
           ],
           "Turn": [
-            "Opponent's"
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your opponent's Shooting phase, just after an enemy unit has shot.\n\n**TARGET**: One HAEMONCULUS COVENS unit from your army that was selected as the target of one or more of the attacking unit's attacks.\n\n**EFFECT**: Roll one D6: your unit can be moved a number of inches up to the result, but it must end that move as close as possible to the closest enemy unit (excluding AIRCRAFT) that it can. In doing so, those models can be moved within Engagement Range of that enemy unit."
+        "text": "**WHEN:** Your opponent’s Shooting phase, just after an enemy unit has shot.\n\n**TARGET:** One **HAEMONCULUS COVENS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Your unit can make a **surge move** of up to D6\"."
       },
       "Stratagem§Fateful Role": {
         "keywords": {
           "Keywords": [
+            "Drukhari",
             "Reaper's Wager"
           ],
           "Category": [
             "Strategic Ploy"
           ],
           "Turn": [
+            "Yours",
             "Opponent’s"
           ],
           "Phase": [
             "Fight"
           ]
         },
-        "text": "**WHEN:** Fight phase, just after an enemy unit has\nselected its targets.\n\n**TARGET:** One **Drukhari** or **Harlequins** unit from\nyour army that was selected as the target of one or\nmore of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, each time a\nmodel in your unit is destroyed, if that model has not\nfought this phase, roll one D6, adding 1 to the result\nif that unit is losing the wager: on a 4+, do not remove\nit from play. That destroyed model can fight after\nthe attacking model’s unit has finished making its\nattacks, and is then removed from play."
+        "text": "**WHEN:** Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **DRUKHARI** or **HARLEQUINS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if that unit is losing the wager: on a 4+, do not remove it from play. That destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
       },
       "Stratagem§Feigned Weakness": {
         "keywords": {
@@ -10986,12 +11490,7 @@
             "Yours"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your Movement phase, just after a DRUKHARI unit from your army Falls Back.\n\n**TARGET**: That DRUKHARI unit.\n\n**EFFECT**: Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+        "text": "**WHEN:** Your Movement phase, just after a **DRUKHARI** unit from your army Falls Back.\n\n**TARGET:** That **DRUKHARI** unit.\n\n**EFFECT:** Until the end of the turn, your unit is eligible to shoot and declare a charge in turn in which it Fell Back."
       },
       "Stratagem§Fighting Shadows": {
         "keywords": {
@@ -11000,22 +11499,18 @@
             "Realspace Raiders"
           ],
           "Phase": [
-            "Shooting",
-            "Fight"
+            "Fight",
+            "Shooting"
           ],
           "Category": [
             "Battle Tactic"
           ],
           "Turn": [
-            "Opponent's"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET**: One DRUKHARI unit from your army (excluding HAEMONCULUS COVENS units) that was selected as the target of one or more of the attacking unit's attacks.\n\n**EFFECT**: Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll."
+        "text": "**WHEN:** Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **DRUKHARI** unit from your army (excluding **HAEMONCULUS COVENS** units) that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll."
       },
       "Stratagem§Insensible to Pain": {
         "keywords": {
@@ -11024,14 +11519,15 @@
             "Realspace Raiders"
           ],
           "Phase": [
-            "Shooting",
-            "Fight"
+            "Fight",
+            "Shooting"
           ],
           "Category": [
             "Battle Tactic"
           ],
           "Turn": [
-            "Opponent's"
+            "Yours",
+            "Opponent’s"
           ]
         },
         "stats": {
@@ -11039,7 +11535,7 @@
             "value": 2
           }
         },
-        "text": "**WHEN**: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET**: One HAEMONCULUS COVENS unit from your army that was selected as the target of one or more of the attacking unit's attacks.\n\n**EFFECT**: Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack."
+        "text": "**WHEN:** Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **HAEMONCULUS COVENS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack."
       },
       "Stratagem§Instinctive Spite": {
         "keywords": {
@@ -11048,22 +11544,18 @@
             "Realspace Raiders"
           ],
           "Phase": [
-            "Shooting",
-            "Fight"
+            "Fight",
+            "Shooting"
           ],
           "Category": [
             "Battle Tactic"
           ],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Start of your Shooting phase or the start of the Fight phase.\n\n**TARGET**: Up to two DRUKHARI BATTLELINE units from your army, or one other DRUKHARI unit from your army.\n\n**EFFECT**: You can spend 1 Pain token. Until the end of the phase, each time a model in each of those units makes an attack that targets an enemy unit that is Below Half-strength, add 1 to the Hit roll. If you spent 1 Pain token, add 1 to the Wound roll as well."
+        "text": "**WHEN:** Start of your Shooting phase or the start of the Fight phase.\n\n**TARGET:** Up to two **DRUKHARI BATTLELINE** units from your army, or one other **DRUKHARI** unit from your army.\n\n**EFFECT:** You can spend 1 Pain token. Until the end of the phase, each time a model in each of those units makes an attack that targets an enemy unit that is Below Half-strength, add 1 to the Hit roll. If you spent 1 Pain token, add 1 to the Wound roll as well."
       },
       "Stratagem§Making a Point": {
         "keywords": {
@@ -11081,47 +11573,46 @@
             "Yours"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your Shooting phase.\n\n**TARGET**: One KABALITE WARRIORS or HAND OF THE ARCHON unit from your army that has not been selected to shoot this phase.\n\n**EFFECT**: Until the end of the phase, improve the Ballistic Skill and Armour Penetration characteristics of ranged weapons equipped by models in your unit by 1."
+        "text": "**WHEN:** Your Shooting phase.\n\n**TARGET:** One **KABALITE WARRIORS** or **HAND OF THE ARCHON** unit from your army that has not been selected to shoot this phase.\n\n**EFFECT:** Until the end of the phase, improve the Ballistic Skill and Armour Penetration characteristics of ranged weapons equipped by models in your unit by 1."
       },
       "Stratagem§Malicious Frenzy": {
         "keywords": {
           "Keywords": [
+            "Drukhari",
             "Reaper's Wager"
           ],
           "Category": [
             "Battle Tactic"
           ],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ],
           "Phase": [
             "Fight",
             "Shooting"
           ]
         },
-        "text": "**WHEN:** Your Shooting phase or the Fight phase.\n\n**TARGET:** One **Drukhari** or **Harlequins** unit from\nyour army that has not been selected to shoot or\nfight this phase.\n\n**EFFECT:** Select **[LETHAL HITS]** or **[SUSTAINED HITS 1]**.\nUntil the end of the phase, weapons equipped by\nmodels in your unit have the selected ability."
+        "text": "**WHEN:** Your Shooting phase or the Fight phase.\n\n**TARGET:** One **DRUKHARI** or **HARLEQUINS** unit from your army that has not been selected to shoot or fight this phase.\n\n**EFFECT:** Select **[LETHAL HITS]** or **[SUSTAINED HITS 1]**. Until the end of the phase, weapons equipped by models in your unit have the selected ability."
       },
       "Stratagem§Murderer's Circus": {
         "keywords": {
           "Keywords": [
+            "Drukhari",
             "Reaper's Wager"
           ],
           "Category": [
             "Battle Tactic"
           ],
           "Turn": [
+            "Yours",
             "Opponent’s"
           ],
           "Phase": [
             "Fight"
           ]
         },
-        "text": "**WHEN:** Fight phase, just after an enemy unit has\nselected its targets.\n\n**TARGET:** One **Drukhari** or **Harlequins** unit from\nyour army that was selected as the target of one or\nmore of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, each time an\nattack targets your unit, subtract 1 from the Hit roll."
+        "text": "**WHEN:** Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **DRUKHARI** or **HARLEQUINS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll."
       },
       "Stratagem§Night Shield": {
         "keywords": {
@@ -11136,17 +11627,12 @@
             "Wargear"
           ],
           "Turn": [
-            "Opponent's"
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your opponent's Shooting phase, just after an enemy unit has selected its targets.\n\n**TARGET**: One DRUKHARI VEHICLE unit from your army that was selected as the target of one or more of the attacking unit's attacks.\n\n**EFFECT**: Until the end of the phase, models in your unit have a 4+ invulnerable save."
+        "text": "**WHEN:** Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **DRUKHARI VEHICLE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, models in your unit have a 4+ invulnerable save."
       },
-      "Stratagem§Poisoners Art": {
+      "Stratagem§Poisoner’s Art": {
         "keywords": {
           "Keywords": [
             "Drukhari",
@@ -11159,15 +11645,11 @@
             "Epic Deed"
           ],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase, just after a HAEMONCULUS COVENS unit from your army has fought.\n\n**TARGET**: That HAEMONCULUS COVENS unit.\n\n**EFFECT**: Select one enemy unit (excluding VEHICLES) hit by one or more of your unit's attacks this phase. Until the end of the battle, that enemy unit is poisoned. At the start of each Command phase, roll one D6 for each poisoned unit on the battlefield; on a 4+, that unit suffers D3 mortal wounds."
+        "text": "**WHEN:** Fight phase, just after a **HAEMONCULUS COVENS** unit from your army has fought.\n\n**TARGET:** That **HAEMONCULUS COVENS** unit.\n\n**EFFECT:** Select one enemy unit (excluding **VEHICLES**) hit by one or more of your unit’s attacks this phase. Until the end of the battle, that enemy unit is poisoned. At the start of each Command phase, roll one D6 for each poisoned unit on the battlefield: on a 4+, that unit suffers D3 mortal wounds."
       },
       "Stratagem§Postmortality": {
         "keywords": {
@@ -11183,15 +11665,10 @@
           ],
           "Turn": [
             "Yours",
-            "Opponent's"
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Any phase.\n\n**TARGET**: One HAEMONCULUS model from your army that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.\n\n**EFFECT**: Spend 1-3 Pain tokens. At the end of the phase, set the destroyed model back up on the battlefield, as close as possible to where it was destroyed but not within Engagement Range of any enemy units, with a number of wounds remaining equal to the number of Pain tokens you just spent.\n\n**RESTRICTIONS**: You cannot use this Stratagem if you have 0 Pain tokens, and you cannot target the same HAEMONCULUS model with this Stratagem more than once per battle."
+        "text": "**WHEN:** Any phase.\n\n**TARGET:** One **HAEMONCULUS** model from your army that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.\n\n**EFFECT:** Spend 1-3 Pain tokens. At the end of the phase, set up the **destroyed** model on the battlefield, **unengaged** and as close as possible to where it was **destroyed**. That model is not part of an **attached** unit and its unit has a **starting strength** of 1. That model has a number of wounds remaining equal to the number of Pain tokens you just spent.\n\n**RESTRICTIONS:** You cannot use this Stratagem if you have 0 Pain tokens, and you cannot target the same **HAEMONCULUS** model with this Stratagem more than once per battle."
       },
       "Stratagem§Pounce on the Prey": {
         "keywords": {
@@ -11209,12 +11686,7 @@
             "Yours"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your Movement phase, just after a DRUKHARI INFANTRY unit from your army disembarks from a TRANSPORT that made a Normal move this phase.\n\n**TARGET**: That INFANTRY unit.\n\n**EFFECT**: Until the end of the turn, your unit is eligible to declare a charge."
+        "text": "**WHEN:** Your Movement phase, just after a **DRUKHARI INFANTRY** unit from your army disembarks from a **TRANSPORT** that made a Normal move this phase.\n\n**TARGET:** That **INFANTRY** unit.\n\n**EFFECT:** Until the end of the turn, your unit is eligible to declare a charge."
       },
       "Stratagem§Preternatural Agility": {
         "keywords": {
@@ -11223,8 +11695,8 @@
             "Spectacle of Spite"
           ],
           "Phase": [
-            "Movement",
-            "Charge"
+            "Charge",
+            "Movement"
           ],
           "Category": [
             "Strategic Ploy"
@@ -11233,12 +11705,7 @@
             "Yours"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Start of your Movement or Charge phase.\n\n**TARGET**: One WYCH CULT unit from your army.\n\n**EFFECT**: Until the end of the phase, each time your unit makes a Normal, Advance or Charge move, you can ignore any or all modifiers to its Move characteristic, Advance roll or Charge roll. Instead, until the end of the phase, each time a model in your unit makes such a move, it can move horizontally through models (when doing so, such a model can move within Engagement Range of other models but cannot end a Normal or Advance move within Engagement Range of them)."
+        "text": "**WHEN:** Start of your Movement or Charge phase.\n\n**TARGET:** One **WYCH CULT** unit from your army.\n\n**EFFECT:** Until the end of the phase, each time your unit makes a Normal, Advance or Charge move, you can ignore any or all modifiers to its Move characteristic and to Advance and Charge rolls made for it and, until the end of the turn, each time a model in your unit makes such a move, it can move horizontally through models (when doing so, such a model can move within Engagement Range of such models but cannot end a Normal or Advance move within Engagement Range of them)."
       },
       "Stratagem§Raid and Fade": {
         "keywords": {
@@ -11261,11 +11728,12 @@
             "value": 2
           }
         },
-        "text": "**WHEN**: End of your Shooting phase.\n\n**TARGET**: Up to two KABALITE WARRIORS units from your army, or one other DRUKHARI unit from your army (excluding SCOURGES and AIRCRAFT).\n\n**EFFECT**: Each of those units can make a Normal move of up to 6\".\n\n**RESTRICTIONS**: You cannot select units that are within Engagement Range of one or more enemy units. Until the end of the turn, those units are not eligible to declare a charge."
+        "text": "**WHEN:** End of your Shooting phase.\n\n**TARGET:** Up to two **KABALITE WARRIORS** units from your army, or one other **DRUKHARI** unit from your army (excluding **SCOURGES** and **AIRCRAFT**).\n\n**EFFECT:** Each of those units can make a Normal move of up to 6\".\n\n**RESTRICTIONS:** You cannot select units that are within Engagement Range of one or more enemy units. Until the end of the turn, those units are not eligible to declare a charge."
       },
       "Stratagem§Scintillating Tempo": {
         "keywords": {
           "Keywords": [
+            "Drukhari",
             "Reaper's Wager"
           ],
           "Category": [
@@ -11279,11 +11747,12 @@
             "Movement"
           ]
         },
-        "text": "**WHEN:** Your Movement phase or your Charge phase,\njust after a **Drukhari** or **Harlequins** unit from your\narmy is selected to make a Normal, Advance or Fall\nBack move, is set up on the battlefield, or declares\na charge.\n\n**TARGET:** That unit.\n\n**EFFECT:** Until the end of the turn, enemy units\ncannot use the Fire Overwatch Stratagem to shoot\nat your unit."
+        "text": "**WHEN:** Your Movement phase or your Charge phase, just after a **DRUKHARI** or **HARLEQUINS** unit from your army is selected to make a Normal, Advance or Fall Back move, is set up on the battlefield, or declares a charge.\n\n**TARGET:** That unit.\n\n**EFFECT:** Until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at your unit."
       },
       "Stratagem§Shorten the Odds": {
         "keywords": {
           "Keywords": [
+            "Drukhari",
             "Reaper's Wager"
           ],
           "Category": [
@@ -11296,7 +11765,7 @@
             "Movement"
           ]
         },
-        "text": "**WHEN:** Your Movement phase, just after a **Drukhari**\nor **Harlequins** unit from your army has Advanced.\n\n**TARGET:** That unit.\n\n**EFFECT:** Until the end of the turn, your unit is eligible\nto shoot and declare a charge in a turn in which\nit Advanced."
+        "text": "**WHEN:** Your Movement phase, just after a **DRUKHARI** or **HARLEQUINS** unit from your army has Advanced.\n\n**TARGET:** That unit.\n\n**EFFECT:** Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced."
       },
       "Stratagem§Skyborne Annihilation": {
         "keywords": {
@@ -11314,12 +11783,7 @@
             "Yours"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your Shooting phase.\n\n**TARGET**: One DRUKHARI unit from your army that has not been selected to shoot this phase and that disembarked from a TRANSPORT this turn.\n\n**EFFECT**: Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability, or the [SUSTAINED HITS 2] ability if your unit is a KABALITE WARRIORS or HAND OF THE ARCHON unit."
+        "text": "**WHEN:** Your Shooting phase.\n\n**TARGET:** One **DRUKHARI** unit from your army that has not been selected to shoot this phase and that disembarked from a **TRANSPORT** this turn.\n\n**EFFECT:** Until the end of the phase, ranged weapons equipped by models in your unit have the **[SUSTAINED HITS 1]** ability, or the **[SUSTAINED HITS 2]** ability if your unit is a **KABALITE WARRIORS** or **HAND OF THE ARCHON** unit."
       },
       "Stratagem§Swooping Mockery": {
         "keywords": {
@@ -11334,15 +11798,10 @@
             "Strategic Ploy"
           ],
           "Turn": [
-            "Opponent's"
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your opponent's Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.\n\n**TARGET**: One DRUKHARI TRANSPORT from your army that is within 9\" of that enemy unit.\n\n**EFFECT**: Your TRANSPORT can make a Normal move of up to 6\"."
+        "text": "**WHEN:** Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.\n\n**TARGET:** One **DRUKHARI TRANSPORT** from your army that is within 8\" of that enemy unit.\n\n**EFFECT:** Your **TRANSPORT** can make a Normal move of up to 6\"."
       },
       "Stratagem§Symphony of Suffering": {
         "keywords": {
@@ -11357,15 +11816,11 @@
             "Epic Deed"
           ],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase, just after a DRUKHARI unit from your army destroys an enemy unit.\n\n**TARGET**: That DRUKHARI unit.\n\n**EFFECT**: Each enemy unit within 9\" of and visible to your unit must take a Battle-shock test, subtracting 1 from that test if your unit is a HAEMONCULUS COVENS unit."
+        "text": "**WHEN:** Fight phase, just after a **DRUKHARI** unit from your army destroys an enemy unit.\n\n**TARGET:** That **DRUKHARI** unit.\n\n**EFFECT:** Each enemy unit within 9\" of and visible to your unit must take a Battle-shock test, subtracting 1 from that test if your unit is a **HAEMONCULUS COVENS** unit."
       },
       "Stratagem§Tailored Toxins": {
         "keywords": {
@@ -11374,22 +11829,18 @@
             "Kabalite Cartel"
           ],
           "Phase": [
-            "Shooting",
-            "Fight"
+            "Fight",
+            "Shooting"
           ],
           "Category": [
             "Epic Deed"
           ],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your Shooting phase or the Fight phase.\n\n**TARGET**: One KABAL or BLADES FOR HIRE unit from your army that has not been selected to shoot or fight this phase.\n\n**EFFECT**: Until the end of the phase, each time a model in your unit makes an attack that targets your Contract unit, an unmodified Hit roll of 5+ scores a Critical Hit."
+        "text": "**WHEN:** Your Shooting phase or the Fight phase.\n\n**TARGET:** One **KABAL** or **BLADES FOR HIRE** unit from your army that has not been selected to shoot or fight this phase.\n\n**EFFECT:** Until the end of the phase, each time a model in your unit makes an attack that targets your Contract unit, an unmodified Hit roll of 5+ scores a Critical Hit."
       },
       "Stratagem§Taken Alive": {
         "keywords": {
@@ -11404,15 +11855,11 @@
             "Battle Tactic"
           ],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase.\n\n**TARGET**: One DRUKHARI unit from your army that has not been selected to fight this phase.\n\n**EFFECT**: Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Hit roll. If your Contract unit is destroyed as a result of those attacks, every unit in your opponent's army must take a Battle-shock test. You cannot gain more than 3 Pain tokens as a result of failed Battle-shock tests caused by this Stratagem."
+        "text": "**WHEN:** Fight phase.\n\n**TARGET:** One **DRUKHARI** unit from your army that has not been selected to fight this phase.\n\n**EFFECT:** Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Hit roll. If your Contract unit is destroyed as a result of those attacks, every unit in your opponent’s army must take a Battle-shock test. You cannot gain more than 3 Pain tokens as a result of failed Battle-shock tests caused by this Stratagem."
       },
       "Stratagem§Vicious Blades": {
         "keywords": {
@@ -11428,15 +11875,10 @@
           ],
           "Turn": [
             "Yours",
-            "Opponent's"
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase, just after a DRUKHARI Transport from your army has selected its targets.\n\n**TARGET**: That Transport.\n\n**EFFECT**: After your Transport has fought, select one enemy unit that was the target of one or more of those attacks and roll one D6 for each model embarked within your TRANSPORT, adding 1 to the result if that embarked model is a WRACKS model: for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)."
+        "text": "**WHEN:** Fight phase, just after a **DRUKHARI TRANSPORT** from your army has selected its targets.\n\n**TARGET:** That **TRANSPORT**.\n\n**EFFECT:** After your **TRANSPORT** has fought, select one enemy unit that was the target of one or more of those attacks and roll one D6 for each model embarked within your **TRANSPORT**, adding 1 to the result if that embarked model is a **WRACKS** model: for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)."
       },
       "Stratagem§Wraithlike Retreat": {
         "keywords": {
@@ -11452,15 +11894,10 @@
           ],
           "Turn": [
             "Yours",
-            "Opponent's"
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: End of the Fight phase.\n\n**TARGET**: One DRUKHARI Infantry unit from your army that fought this phase.\n\n**EFFECT**: Your unit can make a Normal or Fall Back move, but unless it is a WYCHES unit, it must end that move wholly within 3\" horizontally and 5\" vertically of a friendly DRUKHARI TRANSPORT and must embark within that TRANSPORT at the end of that move (otherwise, it cannot make that move)."
+        "text": "**WHEN:** End of the Fight phase.\n\n**TARGET:** One **DRUKHARI INFANTRY** unit from your army that fought this phase.\n\n**EFFECT:** Your unit can make a Normal or Fall Back move, but unless it is a **WYCHES** unit, it must end that move wholly within 3\" horizontally and 5\" vertically of a friendly **DRUKHARI TRANSPORT** and must embark within that **TRANSPORT** at the end of that move (otherwise, it cannot make that move). Your unit can embark within that **TRANSPORT** in a turn it disembarked from that **TRANSPORT**."
       },
       "Unit§Court of the Archon": {
         "allowed": {
@@ -11720,21 +12157,20 @@
                 }
               }
             },
-            {
-              "item": "Ability§Scouts",
-              "stats": {
-                "x": {
-                  "value": "7″"
-                }
-              }
-            },
             "Ability§Assassins’ Poisons (Pain)",
             "Ability§Archon's Will",
-            "Ability§Archon's Retinue",
             "Model§Kabalite Archsybarite",
             {
               "item": "Model§Kabalite Agent",
               "quantity": 9
+            },
+            {
+              "item": "Ability§Scouts",
+              "stats": {
+                "x": {
+                  "value": "7\""
+                }
+              }
             }
           ]
         },
@@ -12365,7 +12801,11 @@
             },
             "Melee Weapon§Raider—Bladevanes",
             "Ability§Splinter Racks (Pain)",
-            "Ability§Vanguard of the Dark City"
+            "Ability§Vanguard of the Dark City",
+            "Ability§Masters of the Shadowed Sky",
+            "Ability§Speed of the Kill",
+            "Ability§Visions of Butchery",
+            "Ability§Aethersails (Raider)"
           ]
         },
         "keywords": {
@@ -12381,7 +12821,8 @@
             "Dedicated Transport",
             "Fly",
             "Aeldari",
-            "Raider"
+            "Raider",
+            "Frame"
           ],
           "Category": [
             "Vehicle—Dedicated Transport"
@@ -12434,6 +12875,12 @@
           },
           "W": {
             "value": 10
+          },
+          "unitDiscount": {
+            "value": 10
+          },
+          "unitDiscountThreshold": {
+            "value": 4
           }
         }
       },
@@ -12486,7 +12933,8 @@
             "Kabal",
             "Fly",
             "Aeldari",
-            "Ravager"
+            "Ravager",
+            "Frame"
           ],
           "Category": [
             "Vehicle"
@@ -12578,10 +13026,10 @@
             "value": 9
           },
           "unitDiscount": {
-            "value": 10
+            "value": 0
           },
           "unitDiscountThreshold": {
-            "value": 3
+            "value": 0
           },
           "W": {
             "value": 11
@@ -12643,8 +13091,7 @@
             "value": 7
           },
           "M": {
-            "statType": "term",
-            "value": "20+"
+            "value": 20
           },
           "OC": {
             "value": 0
@@ -12773,7 +13220,7 @@
           },
           "M": {
             "statType": "term",
-            "value": "20+"
+            "value": "-"
           },
           "OC": {
             "value": 0
@@ -13291,7 +13738,7 @@
             "value": 1
           },
           "model2ndCost": {
-            "value": 160
+            "value": 150
           },
           "model2ndTally": {
             "value": 2
@@ -13309,7 +13756,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 85
+            "value": 80
           },
           "Talos": {
             "max": 2,
@@ -13485,7 +13932,8 @@
             "Fly",
             "Transport",
             "Vehicle",
-            "Venom"
+            "Venom",
+            "Frame"
           ],
           "Category": [
             "Vehicle—Dedicated Transport"
@@ -13528,7 +13976,7 @@
             "value": 1
           },
           "Points": {
-            "value": 70
+            "value": 75
           },
           "Sv": {
             "value": 4
@@ -13538,6 +13986,12 @@
           },
           "W": {
             "value": 6
+          },
+          "unitDiscount": {
+            "value": 10
+          },
+          "unitDiscountThreshold": {
+            "value": 4
           }
         }
       },
@@ -13602,7 +14056,7 @@
           },
           "M": {
             "statType": "term",
-            "value": "20+"
+            "value": "-"
           },
           "OC": {
             "value": 0
@@ -13685,7 +14139,6 @@
         "assets": {
           "traits": [
             "Ability§Power From Pain",
-            "Ability§The Torturer’s Craft",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -13699,7 +14152,8 @@
               "item": "Model§Wrack",
               "quantity": 4
             },
-            "Ability§Experimental Enhancements (Pain)"
+            "Ability§Experimental Enhancements (Pain)",
+            "Ability§Torturer’s Craft"
           ]
         },
         "keywords": {
@@ -13825,13 +14279,13 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 100
+            "value": 90
           },
           "model2ndTally": {
             "value": 8
           },
           "model3rdCost": {
-            "value": 120
+            "value": 110
           },
           "model3rdTally": {
             "value": 10
@@ -13849,7 +14303,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 60
+            "value": 55
           },
           "Wrack": {
             "max": 9,
@@ -14010,6 +14464,1521 @@
       },
       "Wargear§Stimm-needler": {
         "text": "Once per turn, the first time a saving throw is failed for a model in the bearer’s unit, change the Damage characteristic of that attack to 0."
+      },
+      "Stratagem§Shadows’ Reach": {
+        "text": "**WHEN:** Your Shooting phase, when a friendly **BLADES FOR HIRE/KABAL** unit has shot.\n\n**TARGET:** That **BLADES FOR HIRE/KABAL** unit.\n\n**EFFECT:** Those attacks do not prevent your unit from being **hidden**.",
+        "keywords": {
+          "Keywords": [
+            "Drukhari",
+            "Kabalite Agonysts"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Phase": [
+            "Shooting"
+          ]
+        }
+      },
+      "Stratagem§Prioritised Victim": {
+        "text": "**WHEN:** Your Shooting phase or the Fight phase, when a friendly **BLADES FOR HIRE/KABAL** unit targets a **CHARACTER** unit.\n\n**TARGET:** That **BLADES FOR HIRE/KABAL** unit.\n\n**EFFECT:** Your unit’s attacks that target a **CHARACTER** unit can:\n\n- Re-roll **hit rolls** of 1.\n\n- Re-roll **wound rolls** of 1.",
+        "keywords": {
+          "Keywords": [
+            "Drukhari",
+            "Kabalite Agonysts"
+          ],
+          "Turn": [
+            "Yours",
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Fight",
+            "Shooting"
+          ]
+        }
+      },
+      "Stratagem§Killers from the Dark Spires": {
+        "text": "**WHEN:** Your Shooting phase, when a friendly **KABALITE WARRIORS** unit is **selected to shoot**.\n\n**TARGET:** That **KABALITE WARRIORS** unit.\n\n**EFFECT:** Your unit’s ranged attacks have **[IGNORES COVER]**.",
+        "keywords": {
+          "Keywords": [
+            "Drukhari",
+            "Kabalite Agonysts"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Phase": [
+            "Shooting"
+          ]
+        }
+      },
+      "Stratagem§Urgent Metamorphosis": {
+        "text": "**WHEN:** Your Movement phase, when a friendly **HAEMONCULUS COVENS** unit is selected to make a **fall-back move**.\n\n**TARGET:** That **HAEMONCULUS COVENS** unit.\n\n**EFFECT:** That move does not prevent your unit from being **eligible to declare a charge**.",
+        "keywords": {
+          "Keywords": [
+            "Drukhari",
+            "Tools Of Torment"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Phase": [
+            "Movement"
+          ]
+        }
+      },
+      "Stratagem§Salting the Wound": {
+        "text": "**WHEN:** Fight phase, when a friendly **CRONOS/TALOS** unit is **selected to fight**.\n\n**TARGET:** That **CRONOS/TALOS** unit.\n\n**EFFECT:** Your unit’s attacks that target a **battle-shocked** unit have **[DEVASTATING WOUNDS]**.",
+        "keywords": {
+          "Keywords": [
+            "Drukhari",
+            "Tools Of Torment"
+          ],
+          "Turn": [
+            "Yours",
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Fight"
+          ]
+        }
+      },
+      "Stratagem§Dividends of Agony": {
+        "text": "**WHEN:** Fight phase, when a friendly **HAEMONCULUS COVENS** unit **destroys** an enemy unit.\n\n**TARGET:** That **HAEMONCULUS COVENS** unit.\n\n**EFFECT:** Select one **visible** enemy unit within 12\" of your unit. That enemy unit makes a **battle-shock** roll, with -1 to that **battle-shock roll**.",
+        "keywords": {
+          "Keywords": [
+            "Drukhari",
+            "Tools Of Torment"
+          ],
+          "Turn": [
+            "Yours",
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Fight"
+          ]
+        }
+      },
+      "Stratagem§Planned Strikes": {
+        "text": "**WHEN:** Fight phase, when a friendly **WYCH CULT** unit is **selected to fight**.\n\n**TARGET:** That **WYCH CULT** unit.\n\n**EFFECT:** Your unit’s melee attacks have **[LETHAL HITS]**.",
+        "keywords": {
+          "Keywords": [
+            "Drukhari",
+            "Exhibition Of Slaughter"
+          ],
+          "Turn": [
+            "Yours",
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Fight"
+          ]
+        }
+      },
+      "Stratagem§Sculpting the Stage": {
+        "text": "**WHEN:** Your Movement phase, when a friendly **WYCH CULT** unit is selected to make an **advance/fall-back move**.\n\n**TARGET:** That **WYCH CULT** unit.\n\n**EFFECT:** That move does not prevent your unit from being **eligible to start an action**.",
+        "keywords": {
+          "Keywords": [
+            "Drukhari",
+            "Exhibition Of Slaughter"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Phase": [
+            "Movement"
+          ]
+        }
+      },
+      "Melee Weapon§Drazhar—Executioner’s demiklaives – single blade": {
+        "aspects": {
+          "Label": "Executioner’s demiklaives – Single blade"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 6
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 6
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 3
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Devastating Wounds"
+          ]
+        }
+      },
+      "Melee Weapon§Drazhar—Executioner’s demiklaives – dual blade": {
+        "aspects": {
+          "Label": "Executioner’s demiklaives – Dual blade"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 8
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Devastating Wounds"
+          ]
+        }
+      },
+      "Melee Weapon§Drazhar—Executioner’s demiklaives": {
+        "aspects": {
+          "Label": "Executioner’s demiklaives"
+        },
+        "assets": {
+          "traits": [
+            "Melee Weapon§Drazhar—Executioner’s demiklaives – single blade",
+            "Melee Weapon§Drazhar—Executioner’s demiklaives – dual blades"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
+        }
+      },
+      "Melee Weapon§Raider—Bladevanes and chainsnares": {
+        "aspects": {
+          "Label": "Bladevanes and chainsnares"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "format": "D3",
+            "value": 3
+          },
+          "WS": {
+            "value": 4
+          },
+          "S": {
+            "value": 6
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Ranged Weapon§Razorwing Jetfighter—Razorwing missiles – necrotoxin missiles": {
+        "aspects": {
+          "Label": "Razorwing missiles – Necrotoxin missiles"
+        },
+        "stats": {
+          "Range": {
+            "value": 48
+          },
+          "A": {
+            "format": "D6",
+            "value": 3
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 2
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Blast",
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "infantry"
+                },
+                "x": {
+                  "value": "2+"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Razorwing Jetfighter—Disintegrator cannon": {
+        "aspects": {
+          "Label": "Disintegrator cannon"
+        },
+        "stats": {
+          "Range": {
+            "value": 36
+          },
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 6
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 2
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Heavy Weapons—Haywire blaster": {
+        "aspects": {
+          "Label": "Haywire blaster"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 4
+          },
+          "S": {
+            "value": 3
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 3
+          },
+          "Points": {
+            "value": 5
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Heavy",
+            "Ability§Devastating Wounds",
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "vehicle"
+                },
+                "x": {
+                  "value": "4+"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Talos—Twin haywire blaster": {
+        "aspects": {
+          "Label": "Twin haywire blaster"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 3
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 3
+          },
+          "Points": {
+            "value": 5
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Twin-linked",
+            "Ability§Devastating Wounds",
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "vehicle"
+                },
+                "x": {
+                  "value": "4+"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Melee Weapon§Talos—Maco-scalpel": {
+        "aspects": {
+          "Label": "Maco-scalpel"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 5
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 7
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          }
+        }
+      },
+      "Melee Weapon§Scourges with Heavy Weapons—Close combat weapon": {
+        "aspects": {
+          "Label": "Close combat weapon"
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "S": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Heavy Weapons—Blaster": {
+        "aspects": {
+          "Label": "Blaster"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -4
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "format": "D6",
+            "value": 1
+          },
+          "Range": {
+            "value": 18
+          },
+          "S": {
+            "value": 8
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Heavy Weapons—Dark lance": {
+        "aspects": {
+          "Label": "Dark lance"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Heavy"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -3
+          },
+          "BS": {
+            "value": 4
+          },
+          "D": {
+            "format": "D6",
+            "value": 2
+          },
+          "Range": {
+            "value": 36
+          },
+          "S": {
+            "value": 12
+          },
+          "Points": {
+            "value": 5
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Heavy Weapons—Drukhari haywire blaster": {
+        "aspects": {
+          "Label": "Drukhari haywire blaster"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "vehicle"
+                },
+                "x": {
+                  "value": "4+"
+                }
+              }
+            },
+            "Ability§Devastating Wounds",
+            "Ability§Heavy"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 4
+          },
+          "D": {
+            "value": 3
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 3
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Heavy Weapons—Heat lance": {
+        "aspects": {
+          "Label": "Heat lance"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            },
+            "Ability§Heavy",
+            "Ability§Assault"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -4
+          },
+          "BS": {
+            "value": 4
+          },
+          "D": {
+            "format": "D6",
+            "value": 0
+          },
+          "Range": {
+            "value": 18
+          },
+          "S": {
+            "value": 14
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Heavy Weapons—Shredder": {
+        "aspects": {
+          "Label": "Shredder"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Torrent",
+            "Ability§Assault"
+          ]
+        },
+        "stats": {
+          "A": {
+            "format": "D6",
+            "value": 0
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "format": "{t}",
+            "statType": "term",
+            "value": "N/A"
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 18
+          },
+          "S": {
+            "value": 6
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Heavy Weapons—Splinter cannon": {
+        "aspects": {
+          "Label": "Splinter cannon"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Heavy",
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "infantry"
+                },
+                "x": {
+                  "value": "3+"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 4
+          },
+          "D": {
+            "value": 2
+          },
+          "Range": {
+            "value": 36
+          },
+          "S": {
+            "value": 3
+          }
+        }
+      },
+      "Melee Weapon§Scourges with Heavy Weapons—Power weapon": {
+        "aspects": {
+          "Label": "Power weapon"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "infantry"
+                },
+                "x": {
+                  "value": "3+"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "S": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Heavy Weapons—Blast pistol": {
+        "aspects": {
+          "Label": "Blast pistol"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Pistol"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -3
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "format": "D3",
+            "value": 0
+          },
+          "Range": {
+            "value": 6
+          },
+          "S": {
+            "value": 8
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Heavy Weapons—Shardcarbine": {
+        "aspects": {
+          "Label": "Shardcarbine"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Assault",
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "infantry"
+                },
+                "x": {
+                  "value": "3+"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 18
+          },
+          "S": {
+            "value": 2
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Heavy Weapons—Splinter pistol": {
+        "aspects": {
+          "Label": "Splinter pistol"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Pistol",
+            "Ability§Assault",
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "infantry"
+                },
+                "x": {
+                  "value": "3+"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 2
+          }
+        }
+      },
+      "Melee Weapon§Scourges with Shardcarbines—Close combat weapon": {
+        "aspects": {
+          "Label": "Close combat weapon"
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "S": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Shardcarbines—Blaster": {
+        "aspects": {
+          "Label": "Blaster"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -4
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "format": "D6",
+            "value": 1
+          },
+          "Range": {
+            "value": 18
+          },
+          "S": {
+            "value": 8
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Shardcarbines—Shardcarbine": {
+        "aspects": {
+          "Label": "Shardcarbine"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Assault",
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "infantry"
+                },
+                "x": {
+                  "value": "3+"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 18
+          },
+          "S": {
+            "value": 2
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Shardcarbines—Shredder": {
+        "aspects": {
+          "Label": "Shredder"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Torrent",
+            "Ability§Assault"
+          ]
+        },
+        "stats": {
+          "A": {
+            "format": "D6",
+            "value": 0
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "format": "{t}",
+            "statType": "term",
+            "value": "N/A"
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 18
+          },
+          "S": {
+            "value": 6
+          }
+        }
+      },
+      "Melee Weapon§Scourges with Shardcarbines—Power weapon": {
+        "aspects": {
+          "Label": "Power weapon"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "infantry"
+                },
+                "x": {
+                  "value": "3+"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "S": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Shardcarbines—Blast pistol": {
+        "aspects": {
+          "Label": "Blast pistol"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Pistol"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -3
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "format": "D3",
+            "value": 0
+          },
+          "Range": {
+            "value": 6
+          },
+          "S": {
+            "value": 8
+          }
+        }
+      },
+      "Ranged Weapon§Scourges with Shardcarbines—Splinter pistol": {
+        "aspects": {
+          "Label": "Splinter pistol"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Pistol",
+            "Ability§Assault",
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "infantry"
+                },
+                "x": {
+                  "value": "3+"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 2
+          }
+        }
+      },
+      "Melee Weapon§Drazhar—Executioner’s demiklaives – dual blades": {
+        "aspects": {
+          "Label": "Executioner’s demiklaives – dual blades"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 8
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Devastating Wounds"
+          ]
+        }
+      },
+      "Melee Weapon§Wracks—Torturer’s tools": {
+        "aspects": {
+          "Label": "Torturer’s tools"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 2
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "infantry"
+                },
+                "x": {
+                  "value": "4+"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Razorwing Jetfighter—Razorwing missiles – neurotoxin missiles": {
+        "aspects": {
+          "Label": "Razorwing missiles – neurotoxin missiles"
+        },
+        "stats": {
+          "Range": {
+            "value": 48
+          },
+          "A": {
+            "format": "D6",
+            "value": 3
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 2
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "infantry"
+                },
+                "x": {
+                  "value": "2+"
+                }
+              }
+            },
+            "Ability§Blast"
+          ]
+        }
+      },
+      "Ability§Torturer’s Craft": {
+        "text": "In your Shooting phase and the Fight phase, after this unit has shot or fought, select one enemy unit (excluding **VEHICLES**) hit by one or more of those attacks. That unit must take a Battle-shock test."
+      },
+      "Ability§Masters of the Shadowed Sky": {
+        "text": "At the end of your Command phase, if this model is within range of an objective marker you control, and if one or more Kabalite Warriors units are embarked within it, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+      },
+      "Ability§Speed of the Kill": {
+        "text": "Each time a Wyches unit disembarks from this model (excluding Emergency Disembarkations), models in that **WYCHES** unit must be set up wholly within 6\" of this model."
+      },
+      "Ability§Visions of Butchery": {
+        "text": "While one or more Wracks units are embarked within this model, for each **WRACKS** model embarked within this model, add 1 to the Attacks characteristic of this model’s bladevanes and chainsnares."
+      },
+      "Ability§Aethersails (Raider)": {
+        "text": "While one or more Drukhari units are embarked within this model, you can re-roll Advance and Charge rolls made for this model."
+      },
+      "Ability§Battle Focus": {
+        "text": "If your Army Faction is Asuryani, at the start of the battle round, you receive a number of Battle Focus tokens based on the battle size, as shown in the table below.\n\n**BATTLE SIZE****BATTLE FOCUS TOKENS**Incursion**2**Strike Force**4**Onslaught**6**\n\nEach time one of the triggers shown in the Agile Manoeuvres section below occurs, you can spend one Battle Focus token to enable the relevant eligible unit to perform that Agile Manoeuvre. A unit is eligible to perform an Agile Manoeuvre if it has this ability and has not already performed an Agile Manoeuvre in the same phase. Unless otherwise stated, you cannot trigger the same Agile Manoeuvre more than once per phase. At the end of the battle round, all unspent Battle Focus tokens are lost.\n\nAGILE MANOEUVRES\nSWIFT AS THE WIND\n\nTRIGGER: When an eligible unit from your army is selected to make a **Normal**, **Advance** or **Fall Back move**. You can trigger this Agile Manoeuvre more than once per phase (provided a different unit performs it each time).\n\nEFFECT: Until the end of the phase, add 2\" to the Move characteristic of models in that unit.\n\nFLITTING SHADOWS\n\nTRIGGER: When an eligible unit from your army is selected to make a **Normal**, **Advance** or **Fall Back move**, is set up on the battlefield, or **declares a charge**.\n\nEFFECT: Until the end of the turn, enemy units cannot use the **Fire Overwatch** Stratagem to shoot at that unit.\n\nSTAR ENGINES\n\nTRIGGER: When an eligible **VEHICLE** unit from your army is selected to make an **Advance move**.\n\nEFFECT: Until the end of the turn, Ranged weapons equipped by this unit have the **[ASSAULT]** ability.\n\nSUDDEN STRIKE\n\nTRIGGER: When an eligible unit from your army ends a charge move.\n\nEFFECT: Until the end of the turn, each time a model in that unit makes a Pile-in or **Consolidation move**, it can move up to 6\" instead of up to 3\".\n\nOPPORTUNITY SEIZED\n\nTRIGGER: When an enemy unit ends a **Fall Back move**.\n\nEFFECT: One eligible unit from your army (excluding **TITANIC** units) that started the phase within **Engagement Range** of that enemy unit can make a **Normal move** of up to D6+1\".\n\nFADE BACK\n\nTRIGGER: In your opponent’s Shooting phase, just after an enemy unit has shot.\n\nEFFECT: One eligible unit from your army (excluding **TITANIC** units) that was hit by one or more of those attacks can make a **Normal move** of up to D6+1\"."
+      },
+      "Ability§Disparate Paths": {
+        "text": "When mustering your army, you can include Harlequins units in your army, even though they do not have the Asuryani Faction keyword. Unless otherwise stated, you cannot select **HARLEQUINS** or Ynnari as your Army Faction."
+      },
+      "Ability§Reavers of the Void": {
+        "text": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of that attack is within range of an objective marker, you can re-roll the Hit roll instead."
+      },
+      "Unit§Corsair Voidreavers": {
+        "aspects": {
+          "Type": "game piece"
+        },
+        "keywords": {
+          "Source": [
+            "Legends"
+          ],
+          "Category": [
+            "Infantry"
+          ],
+          "Faction": [
+            "Drukhari"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Corsair Voidreavers—Shuriken pistol",
+            "Melee Weapon§Corsair Voidreavers—Power sword",
+            "Melee Weapon§Corsair Voidreavers—Close combat weapon"
+          ]
+        },
+        "stats": {
+          "M": {
+            "value": 7
+          },
+          "T": {
+            "value": 3
+          },
+          "Sv": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 7
+          },
+          "OC": {
+            "value": 2
+          }
+        }
+      },
+      "Ability§Piratical Raiders": {
+        "text": "At the start of the battle, select one unit from your opponent’s army. Weapons equipped by models in this unit have the [LETHAL HITS] and [PRECISION] abilities while targeting that unit."
+      },
+      "Unit§Corsair Voidscarred": {
+        "aspects": {
+          "Type": "game piece"
+        },
+        "keywords": {
+          "Source": [
+            "Legends"
+          ],
+          "Faction": [
+            "Drukhari"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Corsair Voidscarred—Shuriken pistol",
+            "Melee Weapon§Corsair Voidscarred—Power sword",
+            "Melee Weapon§Corsair Voidscarred—Close combat weapon"
+          ]
+        },
+        "stats": {
+          "M": {
+            "value": 7
+          },
+          "T": {
+            "value": 3
+          },
+          "Sv": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 7
+          },
+          "OC": {
+            "value": 1
+          }
+        }
+      },
+      "Ability§Reckless Abandon": {
+        "text": "You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that **stratagem** this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that **stratagem** on other units this phase."
+      },
+      "Unit§Corsair Cloud Dancer Band": {
+        "keywords": {
+          "Faction": [
+            "Drukhari"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Corsair Cloud Dancer Band—Brace of pistols",
+            "Ranged Weapon§Corsair Cloud Dancer Band—Twin shuriken catapult",
+            "Melee Weapon§Corsair Cloud Dancer Band—Close combat weapon"
+          ]
+        },
+        "aspects": {
+          "Type": "game piece"
+        },
+        "stats": {
+          "M": {
+            "value": 14
+          },
+          "T": {
+            "value": 4
+          },
+          "Sv": {
+            "value": 3
+          },
+          "W": {
+            "value": 2
+          },
+          "Ld": {
+            "value": 6
+          },
+          "OC": {
+            "value": 2
+          }
+        }
+      },
+      "Ability§Reaver Band": {
+        "text": "In your opponent's Movement phase, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D6\"."
+      },
+      "Unit§Corsair Reaver Band": {
+        "keywords": {
+          "Faction": [
+            "Drukhari"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Corsair Reaver Band—Brace of pistols",
+            "Ranged Weapon§Corsair Reaver Band—Corsair firearm",
+            "Melee Weapon§Corsair Reaver Band—Close combat weapon"
+          ]
+        },
+        "aspects": {
+          "Type": "game piece"
+        },
+        "stats": {
+          "M": {
+            "value": 7
+          },
+          "T": {
+            "value": 3
+          },
+          "Sv": {
+            "value": 5
+          },
+          "W": {
+            "value": 3
+          },
+          "Ld": {
+            "value": 6
+          },
+          "OC": {
+            "value": 2
+          }
+        }
+      },
+      "Ranged Weapon§Corsair Reaver Band—Aeldari missile launcher – sunburst": {
+        "aspects": {
+          "Label": "Aeldari missile launcher – sunburst"
+        }
+      },
+      "Ranged Weapon§Corsair Reaver Band—Aeldari missile launcher": {
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Corsair Reaver Band—Aeldari missile launcher – starshot "
+          ]
+        }
+      },
+      "Ability§Fury of the Void (Psychic)": {
+        "text": "In your Shooting phase, after this model’s unit has shot, select one enemy unit hit by one or more attacks made with this model’s Dread of the Deep Void. Until the end of the turn, that unit is riven. Each time an AELDARI model from your army makes an attack that targets a riven unit, add 1 to the Strength characteristic of that attack."
+      },
+      "Character§Kharseth": {
+        "keywords": {
+          "Source": [
+            "Legends"
+          ],
+          "Faction": [
+            "Drukhari"
+          ]
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Corsair Voidreavers\n\n* Corsair Voidscarred"
+            }
+          ]
+        }
+      },
+      "Ability§Piratical Hero": {
+        "text": "While this model is leading a unit, each time a model in that unit makes an attack, that attack has the [SUSTAINED HITS 1] ability and add 1 to the Hit roll."
+      },
+      "Ability§Prince of Corsairs": {
+        "text": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it is embarked within is on the battlefield), select up to three AELDARI units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+      },
+      "Character§Prince Yriel": {
+        "keywords": {
+          "Source": [
+            "Legends"
+          ],
+          "Faction": [
+            "Drukhari"
+          ]
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Corsair Voidreavers\n\n* Corsair Voidscarred"
+            },
+            "Ranged Weapon§Prince Yriel—Eye of Wrath",
+            "Melee Weapon§Prince Yriel—Spear of Twilight"
+          ]
+        }
+      },
+      "Ability§Raid and Run": {
+        "text": "At the end of the Fight phase, if this unit was eligible to fight this phase, and is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D3+3\". Otherwise, if this unit was eligible to fight this phase, this unit can make a Fall Back move of up to D3+3\"."
+      },
+      "Unit§Corsair Skyreavers": {
+        "keywords": {
+          "Source": [
+            "Legends"
+          ],
+          "Faction": [
+            "Drukhari"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Corsair Skyreavers—Shuriken pistol",
+            "Melee Weapon§Corsair Skyreavers—Corsair blade"
+          ]
+        },
+        "aspects": {
+          "Type": "game piece"
+        },
+        "stats": {
+          "M": {
+            "value": 12
+          },
+          "T": {
+            "value": 3
+          },
+          "Sv": {
+            "value": 5
+          },
+          "W": {
+            "value": 1
+          },
+          "Ld": {
+            "value": 7
+          },
+          "OC": {
+            "value": 1
+          }
+        }
+      },
+      "Unit§Starfangs": {
+        "keywords": {
+          "Source": [
+            "Legends"
+          ],
+          "Faction": [
+            "Drukhari"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Starfangs—Disintegrator cannon",
+            "Ranged Weapon§Starfangs—Starfang grenade launcher",
+            "Melee Weapon§Starfangs—Wraithbone hull"
+          ]
+        },
+        "aspects": {
+          "Type": "game piece"
+        },
+        "stats": {
+          "M": {
+            "value": 14
+          },
+          "T": {
+            "value": 6
+          },
+          "Sv": {
+            "value": 3
+          },
+          "W": {
+            "value": 6
+          },
+          "Ld": {
+            "value": 7
+          },
+          "OC": {
+            "value": 2
+          }
+        }
       }
     },
     "gameModes": {},

@@ -1,6 +1,6 @@
 {
   "name": "Tyranids 11e",
-  "revision": "11.0.4",
+  "revision": "11.1.15",
   "game": "Warhammer 40k",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -10,9 +10,9 @@
   "dependencies": [
     {
       "slug": "DGST2Y",
-      "name": "40k 11e",
-      "game": "Warhammer 40k",
-      "source": "https://raw.githubusercontent.com/RosterizerData/Warhammer40k11e/main/Warhammer_40k_11e.rulebook"
+      "name": "40k",
+      "game": "Warhammer 40k 11e",
+      "source": "https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k11e/main/Warhammer_40k_11e.rulebook"
     }
   ],
   "rulebook": {
@@ -683,7 +683,8 @@
                     "value"
                   ]
                 ],
-                "value": "Subterranean Assault"
+                "value": "Subterranean Assault",
+                "contains": true
               }
             ],
             "evaluate": "AND",
@@ -871,7 +872,8 @@
                     "value"
                   ]
                 ],
-                "value": "Subterranean Assault"
+                "value": "Subterranean Assault",
+                "contains": true
               }
             ],
             "evaluate": "OR",
@@ -2142,15 +2144,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Genestealers"
-            },
-            {
-              "item": "Ability§Scouts",
-              "stats": {
-                "x": {
-                  "value": "8″"
-                }
-              }
+              "text": "This model can be attached to the following units:\n\n* Genestealers"
             },
             "Ability§Synapse",
             "Ability§Vicious Insight",
@@ -2164,7 +2158,15 @@
               }
             },
             "Melee Weapon§Broodlord—Broodlord claws and talons",
-            "Ability§Shadow in the Warp"
+            "Ability§Shadow in the Warp",
+            {
+              "item": "Ability§Scouts",
+              "stats": {
+                "x": {
+                  "value": "8\""
+                }
+              }
+            }
           ]
         },
         "keywords": {
@@ -2224,7 +2226,6 @@
             "Ability§Synapse",
             "Ability§Feeder Tendrils",
             "Ability§Fear of the Unseen (Aura)",
-            "Ability§Hunter Organism",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -2283,16 +2284,16 @@
         "assets": {
           "traits": [
             {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Tyrant Guard"
+            },
+            {
               "item": "Ability§Deadly Demise",
               "stats": {
                 "x": {
                   "value": "D3"
                 }
               }
-            },
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Tyrant Guard"
             },
             "Ability§Shadow in the Warp",
             "Ability§Synapse",
@@ -2551,11 +2552,11 @@
         },
         "assets": {
           "traits": [
-            "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "\n\nThis unit can be attached to the following units:\n\n- Raveners"
+              "text": "This model can be attached to the following units:\n\n* Raveners"
             },
+            "Ability§Deep Strike",
             {
               "item": "Ability§Shadow in the Warp",
               "stats": {
@@ -2690,15 +2691,15 @@
       "Character§Malanthrope": {
         "assets": {
           "traits": [
+            {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Venomthropes"
+            },
             "Ability§Stealth",
             "Ability§Shadow in the Warp",
             "Ability§Synapse",
             "Ability§Enhanced Toxic Miasma",
             "Ability§Prey Adaptation",
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Venomthropes"
-            },
             "Melee Weapon§Malanthrope—Grasping tail"
           ]
         },
@@ -2800,7 +2801,7 @@
             "value": 3
           },
           "Points": {
-            "value": 115
+            "value": 120
           },
           "Sv": {
             "value": 4
@@ -2820,16 +2821,16 @@
         "assets": {
           "traits": [
             {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Carnifexes"
+            },
+            {
               "item": "Ability§Feel No Pain",
               "stats": {
                 "x": {
                   "value": "5+"
                 }
               }
-            },
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Carnifexes"
             },
             "Ability§Synapse",
             "Ability§Alpha Leader",
@@ -2866,7 +2867,7 @@
             "value": 3
           },
           "Points": {
-            "value": 140
+            "value": 130
           },
           "Sv": {
             "value": 2
@@ -2924,7 +2925,7 @@
             "value": 1
           },
           "Points": {
-            "value": 70
+            "value": 65
           },
           "Sv": {
             "value": 4
@@ -3019,7 +3020,7 @@
             "value": 5
           },
           "Points": {
-            "value": 160
+            "value": 150
           },
           "Sv": {
             "value": 2
@@ -3039,7 +3040,6 @@
             "Ability§Synapse",
             "Ability§Swallow Whole",
             "Ability§Subterranean Hunter",
-            "Ability§Serpentine Fiend",
             "Melee Weapon§The Red Terror—Gaping maw",
             "Melee Weapon§The Red Terror—Scything talons"
           ]
@@ -3052,7 +3052,8 @@
             "Great Devourer",
             "Monster",
             "The Red Terror",
-            "Vanguard Invader"
+            "Vanguard Invader",
+            "Mobile"
           ],
           "Category": [
             "Epic Hero"
@@ -3075,7 +3076,7 @@
             "value": 3
           },
           "Points": {
-            "value": 130
+            "value": 120
           },
           "Sv": {
             "value": 3
@@ -3095,16 +3096,16 @@
         "assets": {
           "traits": [
             {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Tyrant Guard"
+            },
+            {
               "item": "Ability§Deadly Demise",
               "stats": {
                 "x": {
                   "value": "D3"
                 }
               }
-            },
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Tyrant Guard"
             },
             "Ability§Shadow in the Warp",
             "Ability§Synapse",
@@ -3173,7 +3174,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "\n\nThis model can be attached to the following units:\n- Hormagaunts\n- Termagants\n- Tyranid Warriors with Melee Bio‑weapons\n- Tyranid Warriors with Ranged Bio‑weapons."
+              "text": "This model can be attached to the following units:\n\n* Hormagaunts\n\n* Termagants\n\n* Tyranid Warriors With Melee Bio-weapons\n\n* Tyranid Warriors With Ranged Bio-weapons"
             },
             "Ability§Shadow in the Warp",
             "Ability§Synapse",
@@ -3344,11 +3345,11 @@
       "Character§Winged Tyranid Prime": {
         "assets": {
           "traits": [
-            "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Gargoyles\n\n* Tyranid Warriors with melee Bio-weapons\n\n* Tyranid Warriors with Ranged Bio-weapons"
+              "text": "This model can be attached to the following units:\n\n* Gargoyles\n\n* Tyranid Warriors With Melee Bio-weapons\n\n* Tyranid Warriors With Ranged Bio-weapons"
             },
+            "Ability§Deep Strike",
             "Ability§Shadow in the Warp",
             "Ability§Synapse",
             "Ability§Alpha Warrior",
@@ -3369,7 +3370,8 @@
             "Great Devourer",
             "Infantry",
             "Synapse",
-            "Vanguard Invader"
+            "Vanguard Invader",
+            "Winged Tyranid Prime"
           ],
           "Category": [
             "Character"
@@ -3574,7 +3576,58 @@
             "value": 1
           }
         },
-        "text": "WARNING: this detachment was not in 10e and needs importing.\n\n**Mindhunger**\n- Friendly **Deathleaper/Lictor/Neurolictor** units have **Deep Strike**.\n\n- Friendly **LICTOR/NEUROLICTOR** units’ attacks that target a **CHARACTER** unit can re‑roll **hit rolls** of 1."
+        "text": "**MINDHUNGER**\n\n- Friendly **DEATHLEAPER/LICTOR/NEUROLICTOR** units have **Deep Strike**.\n\n- Friendly **LICTOR/NEUROLICTOR** units’ attacks that target a **CHARACTER** unit can re-roll **hit rolls** of 1.",
+        "rules": {
+          "assignStratagems": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Counterpredation"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Scanner Gheist"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Hypersensory Adaptations"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
       },
       "Detachment§Assimilation Swarm": {
         "keywords": {
@@ -3585,6 +3638,20 @@
         "rules": {
           "assignStratagems": {
             "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Rapacious Hunger"
+              },
               {
                 "actionType": "add",
                 "iterations": 1,
@@ -3639,20 +3706,6 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Secure Biomass"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
                 "value": "Stratagem§Tyrannoformed"
               },
               {
@@ -3667,7 +3720,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Rapacious Hunger"
+                "value": "Stratagem§Secure Biomass"
               }
             ],
             "evals": [],
@@ -3680,7 +3733,7 @@
             "value": 2
           }
         },
-        "text": "## Feed the Swarm \n\nIn your Command phase, each **Harvester** unit from your army can Regenerate one friendly **Tyranids** unit within 6″ of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following:\n\n- One model in that unit regains up to D3+1 lost wounds.\n- One destroyed **Infantry** model (excluding **Characters**) is returned in that unit with its full wounds remaining. If that unit is an **Endless Multitude** unit, up to 3 destroyed models are returned instead."
+        "text": "**FEED THE SWARM**\n\nIn your Command phase, each **HARVESTER** unit from your army can Regenerate one friendly **TYRANIDS** unit that is within 6\" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following:\n\n■ One model in that unit regains up to D3+1 lost wounds.\n■ One destroyed **INFANTRY** model (excluding **CHARACTERS**) is returned to that unit with its full wounds remaining. If that unit is an **ENDLESS MULTITUDE** unit, up to 3 destroyed models are returned instead."
       },
       "Detachment§Crusher Stampede": {
         "keywords": {
@@ -3703,21 +3756,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Corrosive Viscera"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Untrammelled Ferocity"
+                "value": "Stratagem§Swarm-guided Salvoes"
               },
               {
                 "actionType": "add",
@@ -3732,20 +3771,6 @@
                   ]
                 ],
                 "value": "Stratagem§Rampaging Monstrosities"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Swarm-guided Salvoes"
               },
               {
                 "actionType": "add",
@@ -3774,6 +3799,34 @@
                   ]
                 ],
                 "value": "Stratagem§Massive Impact"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Untrammelled Ferocity"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Corrosive Viscera"
               }
             ],
             "evals": [],
@@ -3786,12 +3839,13 @@
             "value": 2
           }
         },
-        "text": "## Enraged Behemoths \n\nEach time a **Tyranids Monster** model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Belong Half-strength. In addition, while a **Tyranids Monster** unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit."
+        "text": "**ENRAGED BEHEMOTHS**\n\nEach time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a **TYRANIDS MONSTER** unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit."
       },
       "Detachment§Invasion Fleet": {
         "keywords": {
           "Role": [
-            "Take And Hold"
+            "Take And Hold",
+            "Priority Assets"
           ]
         },
         "rules": {
@@ -3810,6 +3864,20 @@
                   ]
                 ],
                 "value": "Stratagem§Rapid Regeneration"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Adrenal Surge"
               },
               {
                 "actionType": "add",
@@ -3866,20 +3934,6 @@
                   ]
                 ],
                 "value": "Stratagem§Endless Swarm"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Adrenal Surge"
               }
             ],
             "evals": [],
@@ -3892,12 +3946,13 @@
             "value": 3
           }
         },
-        "text": "## HYPER-ADAPTATIONS\nAt the start of the first battle round, select one of the following Hyper-adaptations to be active for **Tyranids** units from your army until the end of the battle:\n\n### SWARMING INSTINCTS\nEach time a **Tyranids** model with this Hyper-adaptation makes an attack that targets an enemy **Infantry** or **Swarm** unit, that attack has the **[SUSTAINED HITS 1]** ability.\n\n### HYPER-AGGRESSION\nEach time a **Tyranids** model with this Hyper-adaptation makes an attack that targets an enemy **Monster** or **Vehicle** unit, that attack has the **[LETHAL HITS]** ability.\n\n### HIVE PREDATORS\nEach time a **Tyranids** model with this Hyper-adaptation makes an attack that targets an enemy **Character** unit, if a Critical Hit is scored, that attack has the **[PRECISION]** ability."
+        "text": "**HYPER-ADAPTATIONS**\n\nAt the start of the first battle round, select one of the following Hyper-adaptations to be active for **TYRANIDS** units from your army until the end of the battle.\n\nSwarming Instincts\n\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets an **INFANTRY** or **SWARM** unit, that attack has the **[SUSTAINED HITS 1]** ability.\n\nHyper-aggression\n\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **MONSTER** or **VEHICLE** unit, that attack has the **[LETHAL HITS]** ability.\n\nHive Predators\n\nEach time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **CHARACTER** unit, on a Critical Hit, that attack has the **[PRECISION]** ability."
       },
       "Detachment§Subterranean Assault": {
         "keywords": {
           "Role": [
-            "Disruption"
+            "Disruption",
+            "Reconnaissance"
           ]
         },
         "rules": {
@@ -3941,21 +3996,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Retreat Below"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Swarming Assault"
+                "value": "Stratagem§Enfilading Emergence"
               },
               {
                 "actionType": "add",
@@ -3983,7 +4024,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Enfilading Emergence"
+                "value": "Stratagem§Swarming Assault"
               },
               {
                 "actionType": "add",
@@ -3997,7 +4038,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Replenishing Swarms"
+                "value": "Stratagem§Retreat Below"
               },
               {
                 "actionType": "add",
@@ -4012,6 +4053,20 @@
                   ]
                 ],
                 "value": "Stratagem§Adaptive Optimisation"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Replenishing Swarms"
               }
             ],
             "evals": [],
@@ -4024,7 +4079,7 @@
             "value": 3
           }
         },
-        "text": "## SURPRISE ASSAULT\n\nEach time a Tyranids model from your\narmy makes an attack, re-roll a Hit roll\nof 1.\n\nEach time a Burrower unit from your\narmy is set up on the battlefield from\nReserves, place a circular 40mm Tunnel\nMarker anywhere on the battlefield\nwithin 1\" of that unit and more than 3\"\nhorizontally away from all enemy units.\n\nIn the Reinforcements step of your\nMovement phase, when you set up a unit\non the battlefield from Reserves, you can\nset that unit up wholly within 9\" of one of\nyour Tunnel Markers and more than 6\"\nhorizontally away from any enemy units.\n\nIf an enemy model (excluding Aircraft)\nends any kind of move within 3\" of one of\nyour Tunnel Markers, that Tunnel Marker\nis removed from the battlefield.\n\n## KEYWORDS\n\nMawloc and Trygon units from your army\nhave the Burrower keyword.\n\nIn the Muster Armies step, you can\nselect up to 2 Trygon models from\nyour army. The selected units gain the\nCharacter keyword."
+        "text": "**SURPRISE ASSAULT**\n\nEach time a **TYRANIDS** model from your army makes an attack, re-roll a Hit roll of 1.\n\nEach time a **BURROWER** unit from your army is set up on the battlefield from Reserves, place a 40mm circular Tunnel Marker anywhere on the battlefield within 1\" of that unit and more than 3\" horizontally away from all enemy units.\n\nIn the Reinforcements step of your Movement phase, when you set up a unit on the battlefield from Reserves, you can set that unit up wholly within 9\" of one of your Tunnel Markers and more than 6\" horizontally away from any enemy units.\n\nIf an enemy model (excluding **AIRCRAFT**) ends any kind of move within 3\" of one of your Tunnel Markers, that Tunnel Marker is removed from the battlefield."
       },
       "Detachment§Synaptic Nexus": {
         "keywords": {
@@ -4033,7 +4088,7 @@
           ]
         },
         "rules": {
-          "assignStartagems": {
+          "assignStratagems": {
             "actions": [
               {
                 "actionType": "add",
@@ -4047,7 +4102,21 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§The Smothering Shadow"
+                "value": "Stratagem§Synaptic Channelling"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Irresistible Will"
               },
               {
                 "actionType": "add",
@@ -4075,7 +4144,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Synaptic Challenge"
+                "value": "Stratagem§The Smothering Shadow"
               },
               {
                 "actionType": "add",
@@ -4103,20 +4172,6 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Irresistable Will"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
                 "value": "Stratagem§Override Instincts"
               }
             ],
@@ -4130,7 +4185,7 @@
             "value": 2
           }
         },
-        "text": "## SYNAPTIC IMPERATIVES\nAt the start of the battle round, you can select one of the Synapse Imperatives shown below. Until the end of the battle round, that Synapse Imperative is active in your army while a **Tyranids** unit from your army is within Synapse Range of your army, it will benefit from it. Each Synapse Imperative can only be selected once per battle.\n\n### SYNAPTIC AUGMENTATION\nWhile this unit is within Synapse Range of your army, models in this unit have 5+ invulnerable save.\n\n### SURGING VITALITY\nWhile this unit is within Synapse Range of your army, add 1 to Advance and Charge rolls made for this unit.\n\n### GOADED TO SLAUGHTER\nWhile this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the Hit roll."
+        "text": "**SYNAPTIC IMPERATIVES**\n\nAt the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army and while a **TYRANIDS** unit from your army is within Synapse Range of your army, it will benefit from it. Each Synaptic Imperative can only be selected once per battle.\n\n■ **Synaptic Augmentation**: While this unit is within Synapse Range of your army, models in this unit have a 5+ invulnerable save.\n■ **Surging Vitality**: While this unit is within Synapse Range of your army, add 1 to Advance and Charge rolls made for this unit.\n■ **Goaded to Slaughter**: While this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the Hit roll."
       },
       "Detachment§Talons Of The Norn Queen": {
         "keywords": {
@@ -4143,7 +4198,58 @@
             "value": 1
           }
         },
-        "text": "WARNING: this detachment was not in 10e and needs importing.\n\n**Higher Imperatives**\nFriendly **Norn Emissary/Norn Assimilator** units have the following ability:\n\n**Protean Purpose:** (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection)."
+        "text": "**HIGHER IMPERATIVES**\n\nFriendly **NORN EMISSARY/NORN ASSIMILATOR** units have the following ability:\n\n**Protean Purpose:** (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).",
+        "rules": {
+          "assignStratagems": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Lesser Prey"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Catalytic Biofortification"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Tanglestrike Rounds"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
       },
       "Detachment§Unending Swarm": {
         "keywords": {
@@ -4166,7 +4272,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Synaptic Goading"
+                "value": "Stratagem§Teeming Masses"
               },
               {
                 "actionType": "add",
@@ -4194,20 +4300,6 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Unending Waves"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
                 "value": "Stratagem§Bounding Advance"
               },
               {
@@ -4222,7 +4314,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Teeming Masses"
+                "value": "Stratagem§Synaptic Goading"
               },
               {
                 "actionType": "add",
@@ -4237,6 +4329,20 @@
                   ]
                 ],
                 "value": "Stratagem§Preservation Imperative"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Unending Waves"
               }
             ],
             "evals": [],
@@ -4249,7 +4355,7 @@
             "value": 2
           }
         },
-        "text": "## Insurmountable Odds \n\nEach time an enemy unit is selected to shoot, after that unit has finished making its attacks, if one or more **Endless Multitude** units from your army were destroyed as a result of those attacks, each such unit can make a Surge move. To do so, roll one D6: that unit can be moved a distance in inches up to the result, but that unit must end that move as close as possible to the closest enemy unit (excluding **Aircraft**). When doing so, those models can be moved within Engagement Range of enemy units. A unit cannot make a Surge move while it is Battle-shocked."
+        "text": "**INSURMOUNTABLE ODDS**\n\nIn your opponent’s Shooting phase, when an enemy unit has shot, if a model from a friendly **ENDLESS MULTITUDE** unit was **destroyed** as a result of those attacks, that friendly unit can make a **surge move** of up to D6”."
       },
       "Detachment§Vanguard Onslaught": {
         "keywords": {
@@ -4286,35 +4392,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Hypersensory Scillia"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
                 "value": "Stratagem§Assassin Beasts"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Unseen Lurkers"
               },
               {
                 "actionType": "add",
@@ -4342,7 +4420,35 @@
                     "traits"
                   ]
                 ],
+                "value": "Stratagem§Unseen Lurkers"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
                 "value": "Stratagem§Invisible Hunter"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Hypersensory Scillia"
               }
             ],
             "evals": [],
@@ -4355,7 +4461,7 @@
             "value": 2
           }
         },
-        "text": "## Questing Tendrils & Vanguard Prime\n\n### Questing Tendrils\n**Tyranids** units with this ability are eligible to charge in a turn which they Fell Back. **Vanguard Invader** units with this ability are eligible to charge in a turn which they Advanced.\n\n### Vanguard Prime\n**Deathleaper** loses the Hunter Organism rule and can be your **Warlord**."
+        "text": "**QUESTING TENDRILS**\n\n**TYRANIDS** units with this ability are eligible to charge in a turn in which they Fell Back. **VANGUARD INVADER** units with this ability are eligible to charge in a turn in which they Advanced.\n\n**VANGUARD PRIME**\n\n**DEATHLEAPER** loses the Hunter Organism rule and can be your **WARLORD**."
       },
       "Detachment§Warrior Bioform Onslaught": {
         "keywords": {
@@ -4378,49 +4484,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Synaptic Amplification"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Spontaneous Hypercorrosion"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Restorative Impulse"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Synaptic Micronodes"
+                "value": "Stratagem§Alien Physiology"
               },
               {
                 "actionType": "add",
@@ -4448,12 +4512,56 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Synaptic Shield"
+                "value": "Stratagem§Synaptic Micronodes"
               }
             ],
             "evals": [],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "assignBattleline": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "assets",
+                    "item",
+                    [
+                      "Unit§Tyranid Warriors with Melee Bio-weapons",
+                      "Unit§Tyranid Warriors with Ranged Bio-weapons"
+                    ],
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battleline"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "assets",
+                    "item",
+                    [
+                      "Unit§Tyranid Warriors with Melee Bio-weapons",
+                      "Unit§Tyranid Warriors with Ranged Bio-weapons"
+                    ],
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Tyranid Warriors"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3
           }
         },
         "stats": {
@@ -4461,7 +4569,7 @@
             "value": 1
           }
         },
-        "text": "### LEADER‑BEASTS\n\n**Tyranid Warriors** (see below) and **Winged Tyranid Prime** units from your army have a 5+ invulnerable save.\n\n### KEYWORDS\n\n**Tyranid Warriors with Ranged Bio‑weapons** and **Tyranid Warriors with Melee Bio‑weapons** units from your army gain the **Tyranid Warriors** and **Battleline** keywords, and while such a unit is not Battle‑shocked, **Tyranid Warriors** models in that unit have an Objective Control characteristic of 3."
+        "text": "**LEADER-BEASTS**\n\n- Friendly **TYRANID WARRIORS WITH RANGED BIO-WEAPONS/TYRANID WARRIORS WITH MELEE BIO-WEAPONS** units have:\n\n- **TYRANID WARRIORS**.\n\n- **BATTLELINE**.\n\n- **TYRANID WARRIORS/TYRANID PRIME WITH LASH WHIP/WINGED TYRANID PRIME** models from your army have 5+ **InSv**."
       },
       "Devour Stage§Consumption": {
         "rules": {
@@ -4554,6 +4662,26 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 50
+          },
+          "TYRANIDS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Tyranids"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
@@ -4561,7 +4689,7 @@
             "value": 25
           }
         },
-        "text": "**Tyranids** model only. The bearer has the Feel No Pain 5+ ability. At the start of any turn, if the bearer has fewer than its starting number of wounds remaining, until the end of the battle, it has the Feel No Pain 4+ ability instead."
+        "text": "**TYRANIDS** model only. The bearer has the Feel No Pain 5+ ability. At the start of any turn, if the bearer has fewer than its starting number of wounds remaining, until the end of the battle, it has the Feel No Pain 4+ ability instead."
       },
       "Enhancement§Adrenalised Onslaught": {
         "keywords": {
@@ -4574,7 +4702,29 @@
             "value": 15
           }
         },
-        "text": "**Tyranids** model only. Each time the bearer’s unit Piles In or Consolidates, models in this unit can move an additional 3″."
+        "text": "**TYRANIDS** model only. Each time the bearer’s unit Piles In or Consolidates, models in this unit can move an additional 3\".",
+        "rules": {
+          "TYRANIDS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Tyranids"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Alien Cunning": {
         "keywords": {
@@ -4587,9 +4737,31 @@
             "value": 30
           }
         },
-        "text": "**Tyranids** model only. After both players have deployed their armies, select up to three **Tyranids** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+        "text": "**TYRANIDS** model only. After both players have deployed their armies, select up to three **TYRANIDS** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+        "rules": {
+          "TYRANIDS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Tyranids"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
-      "Enhancement§Biophagic Flow": {
+      "Enhancement§Biophagic Flow (Aura)": {
         "keywords": {
           "Keywords": [
             "Assimilation Swarm"
@@ -4600,7 +4772,29 @@
             "value": 10
           }
         },
-        "text": "**Tyranids** model only. While a friendly **Harvester** model is within 12″ of the bearer, when using the Feed the Swarm ability, that **Harvester** model can Regenerate one friendly **Tyranids** unit that is within 9″ of it, instead of one within 6″."
+        "text": "**TYRANIDS** model only. While a friendly **HARVESTER** model is within 12\" of the bearer, when using the Feed the Swarm ability, that **HARVESTER** model can Regenerate one friendly **TYRANIDS** unit that is within 9\" of it, instead of one within 6\".",
+        "rules": {
+          "TYRANIDS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Tyranids"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Chameleonic": {
         "keywords": {
@@ -4654,12 +4848,15 @@
             "value": 15
           }
         },
-        "text": "**Vanguard Invader** model only. The bearer has the Stealth ability and each time a ranged attack targets the bearer’s unit, models in that unit have the Benefit of Cover against that attack."
+        "text": "**VANGUARD INVADER** model only. This unit has **Stealth**."
       },
       "Enhancement§Cryptophotaic Camouflage (Upgrade)": {
         "keywords": {
           "Keywords": [
             "Ambush Predators"
+          ],
+          "Tags": [
+            "Upgrade"
           ]
         },
         "stats": {
@@ -4667,12 +4864,47 @@
             "value": 15
           }
         },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Von Ryan’s Leapers** unit only. This unit has ‑3\" **detection range**."
+        "text": "**VON RYAN’S LEAPERS** unit only. This unit has -3\" **detection range**.",
+        "removed": {
+          "keywords": {
+            "Tags": [
+              "Character Only"
+            ]
+          }
+        },
+        "aspects": {
+          "Unique": false
+        },
+        "rules": {
+          "VON RYAN’S LEAPERS unit only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Von Ryan’s Leapers"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Destabilising Predation (Upgrade)": {
         "keywords": {
           "Keywords": [
             "Talons Of The Norn Queen"
+          ],
+          "Tags": [
+            "Upgrade"
           ]
         },
         "stats": {
@@ -4680,7 +4912,39 @@
             "value": 20
           }
         },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Norn Emissary** unit only. This unit’s ranged attacks have **[Anti‑Character 2+]**."
+        "text": "**NORN EMISSARY** unit only. This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**.",
+        "removed": {
+          "keywords": {
+            "Tags": [
+              "Character Only"
+            ]
+          }
+        },
+        "aspects": {
+          "Unique": false
+        },
+        "rules": {
+          "NORN EMISSARY unit only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Norn Emissary"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Elevated Might": {
         "keywords": {
@@ -4693,12 +4957,73 @@
             "value": 30
           }
         },
-        "text": "**Tyranids** model only. The bearer’s unit is eligible to declare a charge in a turn in which it Advanced."
+        "text": "**WINGED TYRANID PRIME**/**TYRANID PRIME WITH LASH WHIP** model only. This model’s melee attacks:\n\n- Can re-roll **wound rolls**.\n\n- Have +1 **AP**.",
+        "rules": {
+          "Winged Tyranid Prime/Tyranid Prime with Lash Whip model only.": {
+            "evals": [
+              {
+                "actionable": false,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Winged Tyranid Prime"
+              },
+              {
+                "actionable": false,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Tyranid Prime with Lash Whip"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "OR",
+                "value": true,
+                "paths": [
+                  [
+                    "{this}",
+                    "evals",
+                    "0",
+                    "result",
+                    "truthy"
+                  ],
+                  [
+                    "{this}",
+                    "evals",
+                    "1",
+                    "result",
+                    "truthy"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Encircling Horrors (Upgrade)": {
         "keywords": {
           "Keywords": [
             "Ambush Predators"
+          ],
+          "Tags": [
+            "Upgrade"
           ]
         },
         "stats": {
@@ -4706,7 +5031,96 @@
             "value": 20
           }
         },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**NEUROLICTOR/LICTOR/VON RYAN’S LEAPERS** unit only. In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, this unit can make a **normal move** of up to D3+3\"."
+        "text": "**NEUROLICTOR/LICTOR/VON RYAN’S LEAPERS** unit only. In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, this unit can make a **normal move** of up to D3+3\".",
+        "removed": {
+          "keywords": {
+            "Tags": [
+              "Character Only"
+            ]
+          }
+        },
+        "aspects": {
+          "Unique": false
+        },
+        "rules": {
+          "NEUROLICTOR/LICTOR/VON RYAN’S LEAPERS unit only.": {
+            "evals": [
+              {
+                "actionable": false,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Neurolictor"
+              },
+              {
+                "actionable": false,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Lictor"
+              },
+              {
+                "actionable": false,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Von Ryan’s Leapers"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "OR",
+                "value": true,
+                "paths": [
+                  [
+                    "{this}",
+                    "evals",
+                    "0",
+                    "result",
+                    "truthy"
+                  ],
+                  [
+                    "{this}",
+                    "evals",
+                    "1",
+                    "result",
+                    "truthy"
+                  ],
+                  [
+                    "{this}",
+                    "evals",
+                    "2",
+                    "result",
+                    "truthy"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Enraged Reserves": {
         "keywords": {
@@ -4760,7 +5174,7 @@
             "value": 20
           }
         },
-        "text": "**Tyranids Monster** model only. If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 3+, do not remove it from play. It can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+        "text": "**TYRANIDS MONSTER** model only. If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 3+, do not remove it from play. It can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
       },
       "Enhancement§Hunting Grounds": {
         "keywords": {
@@ -4770,10 +5184,32 @@
         },
         "stats": {
           "Points": {
-            "value": 20
+            "value": 30
           }
         },
-        "text": "**Tyranids** model only. While the bearer is on the battlefield, each time your opponent sets up a Reserves unit on the battlefield, roll one D6: on a 2+, that unit must take a Battle-shock test."
+        "text": "**TYRANIDS** model only. While the bearer is on the battlefield, each time your opponent sets up a Reserves unit on the battlefield, roll one D6: on a 2+, that unit must take a Battle-shock test.",
+        "rules": {
+          "TYRANIDS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Tyranids"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Instinctive Defence": {
         "keywords": {
@@ -4786,7 +5222,29 @@
             "value": 15
           }
         },
-        "text": "**Tyranids** model only. While the bearer is within 6″ of one or more friendly **Harvester** units, you can target the bearer’s unit with Heroic Intervention Stratagem for 0CP. In addition, while the bearer is within 6″ of one or more friendly **Harvester** units, models in the bearer’s unit have the Fights First ability."
+        "text": "**TYRANIDS** model only. While the bearer is within 6\" of one or more friendly **HARVESTER** units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6\" of one or more friendly **HARVESTER** units, models in the bearer’s unit have the Fights First ability.",
+        "rules": {
+          "TYRANIDS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Tyranids"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Monstrous Nemesis": {
         "keywords": {
@@ -4840,7 +5298,7 @@
             "value": 25
           }
         },
-        "text": "**Tyranids Monster** model only. Each time the bearer makes a melee attack that targets a **Monster** or **Vehicle** unit, add 1 to the Wound roll."
+        "text": "**TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the Wound roll."
       },
       "Enhancement§Naturalised Camouflage": {
         "keywords": {
@@ -4853,7 +5311,29 @@
             "value": 30
           }
         },
-        "text": "**Tyranids** model only. At the start of the first battle round, select up to three friendly **Endless Multitude** units within 9″ of the bearer. Until the end of the battle round, each time a ranged attack targets one of those units, models in that unit have the Benefit of Cover against the attack."
+        "text": "**TYRANIDS** model only. At the start of the first battle round, select up to three friendly **ENDLESS MULTITUDE** units within 9\" of the bearer. Until the end of the battle round, each time a ranged attack targets one of those units, models in that unit have the Benefit of Cover against that attack.",
+        "rules": {
+          "TYRANIDS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Tyranids"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Neuronode": {
         "keywords": {
@@ -4866,7 +5346,29 @@
             "value": 20
           }
         },
-        "text": "**Tyranids** model only. After both players have deployed their armies, you can select up to three **Vanguard Invader** units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        "text": "**TYRANIDS** model only. After both players have deployed their armies, you can select up to three **VANGUARD INVADER** units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+        "rules": {
+          "TYRANIDS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Tyranids"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Null Nodules": {
         "keywords": {
@@ -4920,7 +5422,7 @@
             "value": 10
           }
         },
-        "text": "**Tyranids Monster** model only. Once per battle, when a Psychic Attack is allocated to the bearer, it can use this ability. If it does, until the end of the phase, the bearer has the Feel No Pain 5+ ability against Psychic Attacks."
+        "text": "**TYRANIDS MONSTER** model only. Once per battle, when a Psychic Attack is allocated to the bearer, it can use this ability. If it does, until the end of the phase, the bearer has the Feel No Pain 5+ ability against Psychic Attacks."
       },
       "Enhancement§Ocular Adaptation": {
         "keywords": {
@@ -4973,7 +5475,7 @@
             "value": 20
           }
         },
-        "text": "**Winged Tyranid Prime** model only. Each time a model in the bearer’s unit makes an attack, add 1 to the Hit roll."
+        "text": "**WINGED TYRANID PRIME**/**TYRANID PRIME WITH LASH WHIP** model only. This unit’s melee attacks have +1 to **hit rolls**."
       },
       "Enhancement§Ominous Presence": {
         "keywords": {
@@ -5047,7 +5549,7 @@
             "value": 15
           }
         },
-        "text": "**Tyranids Monster** model only. Add 3 to the bearer’s Objective Control characteristic."
+        "text": "**TYRANIDS MONSTER** model only. Add 3 to the bearer’s Objective Control characteristic."
       },
       "Enhancement§Parasitic Biomorphology": {
         "keywords": {
@@ -5120,6 +5622,26 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 90
+          },
+          "TYRANIDS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Tyranids"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
@@ -5127,7 +5649,7 @@
             "value": 25
           }
         },
-        "text": "**Tyranids** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6″ of one or more friendly **Harvester** units, until the end of the battle, add 1 to the Attack characteristic of melee weapons equipped by models in the bearer’s unit."
+        "text": "**TYRANIDS** model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly **HARVESTER** units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit."
       },
       "Enhancement§Perfectly Adapted": {
         "keywords": {
@@ -5140,7 +5662,29 @@
             "value": 15
           }
         },
-        "text": "**Tyranids** model only. Once per turn, you can re-roll one Hit roll, one Wound roll, one Damage roll, one Advance roll, one Charge roll or one saving throw made for the bearer."
+        "text": "**TYRANIDS** model only. Once per turn, you can re-roll one Hit roll, one Wound roll, one Damage roll, one Advance roll, one Charge roll or one saving throw made for the bearer.",
+        "rules": {
+          "TYRANIDS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Tyranids"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Piercing Talons": {
         "keywords": {
@@ -5153,7 +5697,29 @@
             "value": 25
           }
         },
-        "text": "**Tyranids** model only. Each time a model in the bearer’s unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+        "text": "**TYRANIDS** model only. Each time a model in the bearer’s unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1.",
+        "rules": {
+          "TYRANIDS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Tyranids"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Power of the Hive Mind": {
         "keywords": {
@@ -5207,7 +5773,7 @@
             "value": 10
           }
         },
-        "text": "**Tyranids Psyker** model only. Improve the Strength and Armour Penetration characteristic of psychic weapons equipped by the bearer by 1."
+        "text": "**TYRANIDS PSYKER** model only. Improve the Strength and Armour Penetration characteristics of psychic weapons equipped by the bearer by 1."
       },
       "Enhancement§Psychostatic Disruption": {
         "keywords": {
@@ -5261,7 +5827,7 @@
             "value": 30
           }
         },
-        "text": "**Tyranids Synapse** model only. Enemy units that arrive on the battlefield from Reserves cannot be set up within 12″ of the bearer. In addition, once per battle, during the first or second battle round, when your opponent declares that a unit will arrive on the battlefield from Strategic Reserves, the bearer can use this Enhancement. If it does, roll one D6, on a 4+, that enemy unit cannot arrive on the battlefield this turn."
+        "text": "**TYRANIDS SYNAPSE** model only. Enemy units that arrive on the battlefield from Reserves cannot be set up within 12\" of the bearer. In addition, once per battle, during the first or second battle round, when your opponent declares that a unit will arrive on the battlefield from Strategic Reserves, the bearer can use this Enhancement. If it does, roll one D6: on a 4+, that enemy unit cannot arrive on the battlefield this turn."
       },
       "Enhancement§Regenerating Monstrosity": {
         "keywords": {
@@ -5315,7 +5881,7 @@
             "value": 20
           }
         },
-        "text": "**Tyranids** model only (excluding **Monster** models). The bearer’s unit can be regenerated up to twice per phase, instead of once."
+        "text": "**TYRANIDS** model only (excluding **MONSTERS** models). The bearer’s unit can be regenerated up to twice per phase, instead of once."
       },
       "Enhancement§Relentless Hunger": {
         "keywords": {
@@ -5354,18 +5920,8 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 90
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "**Tyranids** model only. Add 2″ to the Move characteristic of models in the bearer’s unit."
-      },
-      "Enhancement§Sensory Assimilation": {
-        "rules": {
-          "Winged Tyranid Prime or Tyranid Prime with Lash Whip model only.": {
+          },
+          "TYRANIDS model only.": {
             "evals": [
               {
                 "actionable": true,
@@ -5376,27 +5932,13 @@
                   [
                     "{parent}",
                     "keywords",
-                    "Keywords"
+                    "Faction"
                   ]
                 ],
-                "value": "Winged Tyranid Prime"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Tyranid Prime with Lash Whip"
+                "value": "Tyranids"
               }
             ],
-            "evaluate": "OR",
+            "evaluate": "AND",
             "failState": "error"
           }
         },
@@ -5405,7 +5947,7 @@
             "value": 20
           }
         },
-        "text": "**Winged Tyranid Prime** model only. Each time an attack targets the bearer’s unit, subtract 1 from the Hit roll."
+        "text": "**TYRANIDS** model only. Add 2\" to the Move characteristic of models in the bearer’s unit."
       },
       "Enhancement§Stalker": {
         "keywords": {
@@ -5459,7 +6001,7 @@
             "value": 10
           }
         },
-        "text": "**Vanguard Invader** model only. At the start of the battle, select one enemy unit. Each time the bearer makes an attack that targets than enemy unit, add 1 to the Hit roll and add 1 to the Wound roll."
+        "text": "**VANGUARD INVADER** model only. At the start of the battle, select one enemy unit. Each time the bearer makes an attack that targets that enemy unit, add 1 to the Hit roll and add 1 to the Wound roll."
       },
       "Enhancement§Synaptic Control": {
         "keywords": {
@@ -5511,7 +6053,7 @@
             "value": 20
           }
         },
-        "text": "**Tyranids Synapse** model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack."
+        "text": "**TYRANIDS SYNAPSE** model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack."
       },
       "Enhancement§Synaptic Linchpin": {
         "keywords": {
@@ -5524,7 +6066,29 @@
             "value": 20
           }
         },
-        "text": "**Tyranids** model only. While a friendly **Tyranids** unit is within 9″ of the bearer, that unit is within Synapse Range of your army."
+        "text": "**TYRANIDS** model only. While a friendly **TYRANIDS** unit is within 9\" of the bearer, that unit is within Synapse Range of your army.",
+        "rules": {
+          "TYRANIDS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Tyranids"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Synaptic Strategy": {
         "keywords": {
@@ -5537,11 +6101,57 @@
             "value": 15
           }
         },
-        "text": "Tyranids model only. Once per battle, you can target the bearer’s unit with the Rapid Ingress stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
-      },
-      "Enhancement§Synaptic Tyrant": {
+        "text": "**TYRANIDS** model only. Once per battle, you can target the bearer’s unit with the Rapid Ingress stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
         "rules": {
-          "Neurotyrant model only.": {
+          "TYRANIDS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Tyranids"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Enhancement§Synaptoprescience (Upgrade)": {
+        "keywords": {
+          "Keywords": [
+            "Talons Of The Norn Queen"
+          ],
+          "Tags": [
+            "Upgrade"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 30
+          }
+        },
+        "text": "**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.",
+        "removed": {
+          "keywords": {
+            "Tags": [
+              "Character Only"
+            ]
+          }
+        },
+        "aspects": {
+          "Unique": false
+        },
+        "rules": {
+          "NORN ASSIMILATOR unit only.": {
             "evals": [
               {
                 "actionable": true,
@@ -5555,34 +6165,15 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Neurotyrant"
+                "value": "Norn Assimilator"
               }
             ],
             "evaluate": "AND",
             "failState": "error"
           }
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "**Neurotyrant** model only. During the Declare Battle Formations step, the bearer can be attached to a **Tyranid Warriors** unit"
+        }
       },
-      "Enhancement§Synaptoprescience (Upgrade)": {
-        "keywords": {
-          "Keywords": [
-            "Talons Of The Norn Queen"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Norn Assimilator** unit only. This unit has 4+ **InSv**."
-      },
-      "Enhancement§The Dirgeheart of Kharis": {
+      "Enhancement§The Dirgeheart of Kharis (Aura)": {
         "keywords": {
           "Keywords": [
             "Synaptic Nexus"
@@ -5632,7 +6223,7 @@
             "value": 15
           }
         },
-        "text": "**Tyranids Synapse** model only. While an enemy unit is within 9″ of the bearer, worsen that unit’s Leadership characteristic by 1."
+        "text": "**TYRANIDS SYNAPSE** model only. While an enemy unit is within 9\" of the bearer, worsen that unit’s Leadership characteristic by 1."
       },
       "Enhancement§Tremor Senses": {
         "keywords": {
@@ -5645,7 +6236,29 @@
             "value": 20
           }
         },
-        "text": "Tyranids model only. After both players have deployed their armies, select up to three friendly Tyranids units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        "text": "**TYRANIDS** model only. After both players have deployed their armies, select up to three friendly **TYRANIDS** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+        "rules": {
+          "TYRANIDS model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Tyranids"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Trygon Prime": {
         "keywords": {
@@ -5756,7 +6369,7 @@
             "value": 20
           }
         },
-        "text": "Trygon model only. The bearer gains the Synapse keyword. Improve the Strength and Weapon Skill characteristics of melee weapons equipped by the bearer by 1."
+        "text": "**TRYGON** model only. The bearer gains the **SYNAPSE** keyword. Improve the Strength and Weapon Skill characteristics of melee weapons equipped by the bearer by 1."
       },
       "Enhancement§Vanguard Intellect": {
         "keywords": {
@@ -5769,7 +6382,7 @@
             "value": 15
           }
         },
-        "text": "Tyranids model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules."
+        "text": "**TYRANIDS** model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules."
       },
       "Melee Weapon§Barbed Hierodule—Hierodule scything talons": {
         "aspects": {
@@ -5783,8 +6396,8 @@
             "value": -2
           },
           "D": {
-            "statType": "term",
-            "value": "D3+3"
+            "format": "D3",
+            "value": 3
           },
           "Range": {
             "statType": "term",
@@ -5856,8 +6469,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Devastating Wounds",
-            "Ability§Twin-linked"
+            "Ability§Twin-linked",
+            "Ability§Devastating Wounds"
           ]
         },
         "stats": {
@@ -6333,6 +6946,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Extra Attacks",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -6343,8 +6957,7 @@
                   "value": "2+"
                 }
               }
-            },
-            "Ability§Extra Attacks"
+            }
           ]
         },
         "stats": {
@@ -6495,7 +7108,7 @@
               "item": "Ability§Anti-",
               "stats": {
                 "keyword": {
-                  "value": "monster"
+                  "value": "vehicle"
                 },
                 "x": {
                   "value": "5+"
@@ -6506,7 +7119,7 @@
               "item": "Ability§Anti-",
               "stats": {
                 "keyword": {
-                  "value": "vehicle"
+                  "value": "monster"
                 },
                 "x": {
                   "value": "5+"
@@ -6548,7 +7161,7 @@
               "item": "Ability§Anti-",
               "stats": {
                 "keyword": {
-                  "value": "monster"
+                  "value": "vehicle"
                 },
                 "x": {
                   "value": "5+"
@@ -6559,7 +7172,7 @@
               "item": "Ability§Anti-",
               "stats": {
                 "keyword": {
-                  "value": "vehicle"
+                  "value": "monster"
                 },
                 "x": {
                   "value": "5+"
@@ -6722,6 +7335,8 @@
         },
         "assets": {
           "traits": [
+            "Ability§Extra Attacks",
+            "Ability§Devastating Wounds",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -6732,9 +7347,7 @@
                   "value": "4+"
                 }
               }
-            },
-            "Ability§Devastating Wounds",
-            "Ability§Extra Attacks"
+            }
           ]
         },
         "stats": {
@@ -6835,6 +7448,10 @@
           },
           "WS": {
             "value": 2
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
           }
         }
       },
@@ -6938,6 +7555,10 @@
           },
           "WS": {
             "value": 2
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
           }
         }
       },
@@ -6960,6 +7581,10 @@
           },
           "WS": {
             "value": 2
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
           }
         }
       },
@@ -7038,6 +7663,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Extra Attacks",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -7048,8 +7674,7 @@
                   "value": "3+"
                 }
               }
-            },
-            "Ability§Extra Attacks"
+            }
           ]
         },
         "stats": {
@@ -7106,6 +7731,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Devastating Wounds",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -7113,11 +7739,10 @@
                   "value": "psyker"
                 },
                 "x": {
-                  "value": "2+"
+                  "value": "4+"
                 }
               }
-            },
-            "Ability§Devastating Wounds"
+            }
           ]
         },
         "stats": {
@@ -7275,8 +7900,8 @@
             "value": -2
           },
           "D": {
-            "statType": "term",
-            "value": "D3+3"
+            "format": "D3",
+            "value": 3
           },
           "Range": {
             "statType": "term",
@@ -7340,7 +7965,7 @@
             "value": -1
           },
           "D": {
-            "value": 1
+            "value": 2
           },
           "Range": {
             "statType": "term",
@@ -7482,9 +8107,9 @@
         },
         "assets": {
           "traits": [
+            "Ability§Precision",
             "Ability§Devastating Wounds",
-            "Ability§Extra Attacks",
-            "Ability§Precision"
+            "Ability§Extra Attacks"
           ]
         },
         "stats": {
@@ -7658,6 +8283,10 @@
           },
           "WS": {
             "value": 2
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
           }
         }
       },
@@ -7665,9 +8294,7 @@
         "aspects": {
           "Label": "Rending claw"
         },
-        "assets": {
-          "traits": []
-        },
+        "assets": {},
         "stats": {
           "A": {
             "value": 4
@@ -7683,6 +8310,10 @@
           },
           "WS": {
             "value": 2
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
           }
         }
       },
@@ -7690,9 +8321,7 @@
         "aspects": {
           "Label": "Scything talons"
         },
-        "assets": {
-          "traits": []
-        },
+        "assets": {},
         "stats": {
           "A": {
             "value": 6
@@ -7708,6 +8337,10 @@
           },
           "WS": {
             "value": 2
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
           }
         }
       },
@@ -9383,8 +10016,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast",
-            "Ability§Heavy"
+            "Ability§Heavy",
+            "Ability§Blast"
           ]
         },
         "stats": {
@@ -9415,16 +10048,16 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast",
-            "Ability§Devastating Wounds",
+            "Ability§Indirect Fire",
             "Ability§Heavy",
-            "Ability§Indirect Fire"
+            "Ability§Devastating Wounds",
+            "Ability§Blast"
           ]
         },
         "stats": {
           "A": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "AP": {
             "value": -1
@@ -9449,14 +10082,14 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
-            "Ability§Blast"
+            "Ability§Blast",
+            "Ability§Assault"
           ]
         },
         "stats": {
           "A": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "AP": {
             "value": -2
@@ -9536,8 +10169,8 @@
         },
         "stats": {
           "A": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "AP": {
             "value": -2
@@ -9623,8 +10256,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast",
-            "Ability§Heavy"
+            "Ability§Heavy",
+            "Ability§Blast"
           ]
         },
         "stats": {
@@ -9710,14 +10343,14 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast",
-            "Ability§Twin-linked"
+            "Ability§Twin-linked",
+            "Ability§Blast"
           ]
         },
         "stats": {
           "A": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "AP": {
             "value": -2
@@ -9742,8 +10375,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast",
-            "Ability§Twin-linked"
+            "Ability§Twin-linked",
+            "Ability§Blast"
           ]
         },
         "stats": {
@@ -9836,8 +10469,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
-            "Ability§Torrent"
+            "Ability§Torrent",
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -9959,6 +10592,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Devastating Wounds",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -9969,8 +10603,7 @@
                   "value": "4+"
                 }
               }
-            },
-            "Ability§Devastating Wounds"
+            }
           ]
         },
         "stats": {
@@ -10000,8 +10633,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Heavy",
-            "Ability§Indirect Fire"
+            "Ability§Indirect Fire",
+            "Ability§Heavy"
           ]
         },
         "stats": {
@@ -10076,8 +10709,8 @@
         },
         "stats": {
           "A": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "AP": {
             "value": -2
@@ -10133,9 +10766,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
+            "Ability§Torrent",
             "Ability§Ignores Cover",
-            "Ability§Torrent"
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -10164,8 +10797,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast",
-            "Ability§Psychic"
+            "Ability§Psychic",
+            "Ability§Blast"
           ]
         },
         "stats": {
@@ -10196,9 +10829,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Ignores Cover",
+            "Ability§Torrent",
             "Ability§Psychic",
-            "Ability§Torrent"
+            "Ability§Ignores Cover"
           ]
         },
         "stats": {
@@ -10365,9 +10998,9 @@
         },
         "assets": {
           "traits": [
-            "Ranged Weapon§Norn Emissary—Neuroparasite",
-            "Ranged Weapon§Norn Emissary—Neuroblast",
-            "Ranged Weapon§Norn Emissary—Neurolance"
+            "Ranged Weapon§Norn Emissary—Psychic tendril – neuroparasite",
+            "Ranged Weapon§Norn Emissary—Psychic tendril – neuroblast",
+            "Ranged Weapon§Norn Emissary—Psychic tendril – neurolance"
           ]
         },
         "keywords": {
@@ -10382,8 +11015,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
+            "Ability§Torrent",
+            "Ability§Ignores Cover"
           ]
         },
         "stats": {
@@ -10416,9 +11049,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Ignores Cover",
+            "Ability§Twin-linked",
             "Ability§Torrent",
-            "Ability§Twin-linked"
+            "Ability§Ignores Cover"
           ]
         },
         "stats": {
@@ -10506,8 +11139,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
-            "Ability§Blast"
+            "Ability§Blast",
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -10656,14 +11289,14 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast",
-            "Ability§Heavy"
+            "Ability§Heavy",
+            "Ability§Blast"
           ]
         },
         "stats": {
           "A": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "AP": {
             "value": 0
@@ -10718,9 +11351,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
+            "Ability§Torrent",
             "Ability§Devastating Wounds",
-            "Ability§Torrent"
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -10773,9 +11406,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
+            "Ability§Twin-linked",
             "Ability§Pistol",
-            "Ability§Twin-linked"
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -10830,8 +11463,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Psychic",
-            "Ability§Torrent"
+            "Ability§Torrent",
+            "Ability§Psychic"
           ]
         },
         "stats": {
@@ -11023,9 +11656,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
+            "Ability§Twin-linked",
             "Ability§Pistol",
-            "Ability§Twin-linked"
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -11135,6 +11768,9 @@
           },
           "S": {
             "value": 6
+          },
+          "Points": {
+            "value": 10
           }
         }
       },
@@ -11144,7 +11780,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Heavy",
+            "Ability§Twin-linked",
             {
               "item": "Ability§Sustained Hits",
               "stats": {
@@ -11153,7 +11789,7 @@
                 }
               }
             },
-            "Ability§Twin-linked"
+            "Ability§Heavy"
           ]
         },
         "stats": {
@@ -11205,6 +11841,9 @@
           },
           "S": {
             "value": 18
+          },
+          "Points": {
+            "value": 20
           }
         }
       },
@@ -11244,8 +11883,8 @@
         },
         "stats": {
           "A": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "AP": {
             "value": -2
@@ -11317,8 +11956,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Lethal Hits",
-            "Ability§Psychic"
+            "Ability§Psychic",
+            "Ability§Lethal Hits"
           ]
         },
         "stats": {
@@ -11349,14 +11988,14 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast",
-            "Ability§Psychic"
+            "Ability§Psychic",
+            "Ability§Blast"
           ]
         },
         "stats": {
           "A": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "AP": {
             "value": -2
@@ -11365,8 +12004,8 @@
             "value": 3
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 0
           },
           "Range": {
             "value": 24
@@ -11741,6 +12380,7 @@
             "Epic Deed"
           ],
           "Turn": [
+            "Yours",
             "Opponent’s"
           ],
           "Phase": [
@@ -11748,8 +12388,8 @@
             "Shooting"
           ],
           "Keywords": [
-            "Assimilation Swarm",
-            "Tyranids"
+            "Tyranids",
+            "Assimilation Swarm"
           ]
         },
         "stats": {
@@ -11757,11 +12397,12 @@
             "value": 2
           }
         },
-        "text": "**WHEN:** Your opponent’s Shooting phase or Fight phase, just after an enemy unit has selected its targets.\n\n---\n**TARGET:** One **Harvester** unit from your army that is selected as the target of one or more of the attacking units attacks.\n\n---\n**EFFECT:** Until the end of the phase, models in your unit have the Feel No Pain 5+ ability. If your unit is within range of an objective marker you control, until the end of the phase, models in your unit have the Feel No Pain 4+ ability instead."
+        "text": "**WHEN:** Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **HARVESTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, models in your unit have the Feel No Pain 5+ ability. If your unit is within range of an objective marker you control, until the end of the phase models in your unit have the Feel No Pain 4+ ability instead."
       },
       "Stratagem§Adaptive Optimisation": {
         "keywords": {
           "Keywords": [
+            "Tyranids",
             "Subterranean Assault"
           ],
           "Category": [
@@ -11771,21 +12412,17 @@
             "Command"
           ],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Command phase.\n\n**TARGET**: One Mawloc or Trygon unit from your army.\n\n**EFFECT**: Until the start of your next Command phase, your unit has the Synapse keyword."
+        "text": "**WHEN:** Command phase.\n\n**TARGET:** One **MAWLOC** or **TRYGON** unit from your army.\n\n**EFFECT:** Until the start of your next Command phase, your unit has the **SYNAPSE** keyword."
       },
       "Stratagem§Adrenal Surge": {
         "keywords": {
           "Keywords": [
-            "Invasion Fleet",
-            "Tyranids"
+            "Tyranids",
+            "Invasion Fleet"
           ],
           "Phase": [
             "Fight"
@@ -11794,8 +12431,8 @@
             "Battle Tactic"
           ],
           "Turn": [
-            "Opponent’s",
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
         "stats": {
@@ -11803,7 +12440,7 @@
             "value": 2
           }
         },
-        "text": "**WHEN:** Fight phase.\n\n---\n**TARGET:** Up to two **Tyranids** units from your army that are within Synapse Range of your army and are eligible to fight, or one other **Tyranids** unit from your army that is eligible to fight.\n\n---\n**EFFECT:** Until the end of the phase, each time a model in one of those selected units makes an attack, a successful unmodified Hit roll of 5+ scores a Critical Hit."
+        "text": "**WHEN:** Fight phase.\n\n**TARGET:** Up to two **TYRANIDS** units from your army that are within Synapse Range of your army and are eligible to fight, or one other **TYRANIDS** unit from your army that is eligible to fight.\n\n**EFFECT:** Until the end of the phase, each time a model in any of those selected units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit."
       },
       "Stratagem§Assassin Beasts": {
         "keywords": {
@@ -11815,14 +12452,14 @@
             "Battle Tactic"
           ],
           "Turn": [
-            "Opponent’s",
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ],
           "Phase": [
             "Fight"
           ]
         },
-        "text": "**WHEN:** Fight phase.\n\n---\n**TARGET:** One **Vanguard Invader Infantry** unit from your army that has not been selected to fight this phase.\n\n---\n**EFFECT:** Until the end of the phase, melee weapons equipped by models in your unit have the **[PRECISION]** ability."
+        "text": "**WHEN:** Fight phase.\n\n**TARGET:** One **VANGUARD INVADER INFANTRY** unit from your army that has not been selected to fight this phase.\n\n**EFFECT:** Until the end of the phase, melee weapons equipped by models in your unit have the **[PRECISION]** ability."
       },
       "Stratagem§Bounding Advance": {
         "keywords": {
@@ -11840,7 +12477,7 @@
             "Yours"
           ]
         },
-        "text": "**WHEN:** Your Movement phase.\n\n---\n**TARGET:** One **Endless Multitude** unit from your army.\n\n---\n**EFFECT:** Until the end of the phase, each time your unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6″ to the Move characteristic of models in your unit."
+        "text": "**WHEN:** Your Movement phase.\n\n**TARGET:** One **ENDLESS MULTITUDE** unit from your army.\n\n**EFFECT:** Until the end of the phase, each time your unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit."
       },
       "Stratagem§Broodguard Impulse": {
         "keywords": {
@@ -11848,22 +12485,23 @@
             "Epic Deed"
           ],
           "Turn": [
-            "Opponent’s",
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ],
           "Phase": [
             "Any"
           ],
           "Keywords": [
-            "Assimilation Swarm",
-            "Tyranids"
+            "Tyranids",
+            "Assimilation Swarm"
           ]
         },
-        "text": "**WHEN:** Any phase.\n\n---\n**TARGET:** One **Harvester** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.\n\n---\n**EFFECT:** Until the end of the battle, each time a friendly **Tyranids** model makes an attack that targets the enemy unit that just destroyed your **Harvester** unit, add 1 to the Wound roll."
+        "text": "**WHEN:** Any phase.\n\n**TARGET:** One **HARVESTER** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.\n\n**EFFECT:** Until the end of the battle, each time a friendly **TYRANIDS** model makes an attack that targets the enemy unit that just destroyed your **HARVESTER** unit, add 1 to the Wound roll."
       },
       "Stratagem§Corrosive Viscera": {
         "keywords": {
           "Turn": [
+            "Yours",
             "Opponent’s"
           ],
           "Category": [
@@ -11874,17 +12512,17 @@
             "Shooting"
           ],
           "Keywords": [
-            "Crusher Stampede",
-            "Tyranids"
+            "Tyranids",
+            "Crusher Stampede"
           ]
         },
-        "text": "**WHEN:** Your opponent’s Shooting phase or Fight phase, just after a **Tyranids Monster** model from your army with Deadly Demise ability that cannot **Fly** is destroyed.\n\n---\n**TARGET:** That **Tyranids Monster** model. You can use this Stratagem on that model even though it was just destroyed.\n\n---\n**EFFECT:** Do not roll oone D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
+        "text": "**WHEN:** Your opponent’s Shooting phase or the Fight phase, just after a **TYRANIDS MONSTER** model from your army with the Deadly Demise ability that cannot Fly is destroyed.\n\n**TARGET:** That **TYRANIDS MONSTER** model. You can use this Stratagem on that model even though it was just destroyed.\n\n**EFFECT:** Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
       },
       "Stratagem§Death Frenzy": {
         "keywords": {
           "Keywords": [
-            "Invasion Fleet",
-            "Tyranids"
+            "Tyranids",
+            "Invasion Fleet"
           ],
           "Phase": [
             "Fight"
@@ -11893,11 +12531,11 @@
             "Strategic Ploy"
           ],
           "Turn": [
-            "Opponent’s",
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Fight phase, just after an enemy unit has selected its targets.\n\n---\n**TARGET:** One **Tyranids** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n---\n**EFFECT:** Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making attacks, and is then removed from play."
+        "text": "**WHEN:** Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **TYRANIDS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
       },
       "Stratagem§Endless Swarm": {
         "keywords": {
@@ -11911,15 +12549,16 @@
             "Command"
           ],
           "Keywords": [
-            "Invasion Fleet",
-            "Tyranids"
+            "Tyranids",
+            "Invasion Fleet"
           ]
         },
-        "text": "**WHEN:** Your Command phase.\n\n---\n**TARGET:** Up to two **Endless Multitude** units from your army that are within Synapse Range of your army, or one other **Endless Multitude** unit from your army.\n\n---\n**EFFECT:** Up to D3+3 destroyed models are returned to each of the selected units."
+        "text": "**WHEN:** Your Command phase.\n\n**TARGET:** Up to two **ENDLESS MULTITUDE** units from your army that are within Synapse Range of your army, or one other **ENDLESS MULTITUDE** unit from your army.\n\n**EFFECT:** You can return up to D3+3 destroyed models to each of those selected units."
       },
       "Stratagem§Enfilading Emergence": {
         "keywords": {
           "Keywords": [
+            "Tyranids",
             "Subterranean Assault"
           ],
           "Category": [
@@ -11932,12 +12571,7 @@
             "Yours"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: End of your Movement phase.\n\n**TARGET**: One Tyranids unit from your army that was set up as Reinforcements this turn.\n\n**EFFECT**: Until the end of your next Fight phase, weapons equipped by models in your unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities."
+        "text": "**WHEN:** End of your Movement phase.\n\n**TARGET:** One **TYRANIDS** unit from your army that was set up as Reinforcements this turn.\n\n**EFFECT:** Until the end of your next Fight phase, weapons equipped by models in your unit have the **[SUSTAINED HITS 1]** and **[IGNORES COVER]** abilities."
       },
       "Stratagem§Hypersensory Scillia": {
         "keywords": {
@@ -11960,13 +12594,13 @@
             "value": 2
           }
         },
-        "text": "**WHEN:** Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.\n\n---\n**TARGET:** Up to two **Vanguard Invader** units from your army that are within 9″ of that enemy unit, or one other **Tyranids Infantry** unit from your army within 9″ of that enemy unit.\n\n---\n**EFFECT:** Those selected units can each make a Normal move of up to 6″. Restrictions: You cannot target units that are within Engagement Range of one or more enemy units."
+        "text": "**WHEN:** Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.\n\n**TARGET:** Up to two **VANGUARD INVADER** units from your army that are within 8\" of that enemy unit, or one other **TYRANIDS INFANTRY** unit from your army that is within 8\" of that enemy unit.\n\n**EFFECT:** Those selected units can each make a Normal move of up to 6\".\n\n**RESTRICTIONS:** You cannot target units that are within Engagement Range of one or more enemy units."
       },
       "Stratagem§Imperative Dominance": {
         "keywords": {
           "Keywords": [
-            "Synaptic Nexus",
-            "Tyranids"
+            "Tyranids",
+            "Synaptic Nexus"
           ],
           "Phase": [
             "Command"
@@ -11978,7 +12612,7 @@
             "Yours"
           ]
         },
-        "text": "**WHEN:** Your command phase.\n\n---\n**TARGET:** One **Tyranids** unit from your army that is within Synapse Range of your unit.\n\n---\n**EFFECT:** Select one Synaptic Imperative, even if you have already selected that imperative this battle. Until the start of your next Command phase, that Synaptic Imperative that is active for your army."
+        "text": "**WHEN:** Your Command phase.\n\n**TARGET:** One **TYRANIDS** unit from your army that is within Synapse Range of your army.\n\n**EFFECT:** Select one Synaptic Imperative, even if you have already selected that imperative this battle. Until the start of your next Command phase, that Synaptic Imperative is active for your unit instead of any other Synaptic Imperative that is active for your army."
       },
       "Stratagem§Invisible Hunter": {
         "keywords": {
@@ -11996,13 +12630,13 @@
             "Fight"
           ]
         },
-        "text": "**WHEN:** End of your opponent’s Fight phase.\n\n---\n**TARGET:** Up to two **Vanguard Invader** units from your army, or one **Tyranids Infantry** unit from your army.\n\n---\n**EFFECT:** Remove the targeted units from the battlefield and place them into Strategic Reserve.\n\n---\n**RESTRICTIONS:** The targeted units must be more than 6\" horizontally away from all enemy units."
+        "text": "**WHEN:** End of your opponent’s Fight phase.\n\n**TARGET:** Up to two **VANGUARD INVADER** units from your army, or one **TYRANIDS INFANTRY** unit from your army.\n\n**EFFECT:** Remove the targeted units from the battlefield and place them into Strategic Reserves.\n\n**RESTRICTIONS:** The targeted units must be more than 3\" away from all enemy units."
       },
-      "Stratagem§Irresistable Will": {
+      "Stratagem§Irresistible Will": {
         "keywords": {
           "Keywords": [
-            "Synaptic Nexus",
-            "Tyranids"
+            "Tyranids",
+            "Synaptic Nexus"
           ],
           "Phase": [
             "Fight",
@@ -12012,17 +12646,17 @@
             "Battle Tactic"
           ],
           "Turn": [
-            "Opponent’s",
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Your Shooting phase or the Fight phase.\n\n---\n**TARGET:** One **Synapse** unit from your army that has not been selected to shoot or fight this phase, and one enemy unit within 24″ of and visible to the Synapse unit.\n\n---\n**EFFECT:** Until the end of the phase, each time a friendly **Tyranids** model makes an attack that targets that enemy unit, if that attacking model’s unit is within 6″ of your **Synapse** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+        "text": "**WHEN:** Your Shooting phase or the Fight phase.\n\n**TARGET:** One **SYNAPSE** unit from your army that has not been selected to shoot or fight this phase, and one enemy unit within 24\" of and visible to the **SYNAPSE** unit.\n\n**EFFECT:** Until the end of the phase, each time a friendly **TYRANIDS** model makes an attack that targets that enemy unit, if the attacking model’s unit is within 6\" of your **SYNAPSE** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
       },
       "Stratagem§Massive Impact": {
         "keywords": {
           "Keywords": [
-            "Crusher Stampede",
-            "Tyranids"
+            "Tyranids",
+            "Crusher Stampede"
           ],
           "Category": [
             "Epic Deed"
@@ -12034,13 +12668,13 @@
             "Yours"
           ]
         },
-        "text": "**WHEN:** Your Charge phase, just after a **Tyranids Monster** model from you army ends a Charge move.\n\n---\n**TARGET:** That **Tyranids Monster** model.\n\n---\n**EFFECT:** Select one enemy unit within Engagement Range of your model and roll six D6; for each 4+, that model unit suffers 1 mortal wound."
+        "text": "**WHEN:** Your Charge phase, just after a **TYRANIDS MONSTER** model from your army ends a Charge move.\n\n**TARGET:** That **TYRANIDS MONSTER** model.\n\n**EFFECT:** Select one enemy unit within Engagement Range of your model and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound."
       },
       "Stratagem§Override Instincts": {
         "keywords": {
           "Keywords": [
-            "Synaptic Nexus",
-            "Tyranids"
+            "Tyranids",
+            "Synaptic Nexus"
           ],
           "Phase": [
             "Movement"
@@ -12052,7 +12686,7 @@
             "Yours"
           ]
         },
-        "text": "**WHEN:** Your Movement phase.\n\n---\n**TARGET:** One **Tyranids** unit from your army that is within Synapse Range of your army and made a Fall Back move this phase.\n\n---\n**EFFECT:** Your unit is eligible to shoot and declare a charge this turn."
+        "text": "**WHEN:** Your Movement phase.\n\n**TARGET:** One **TYRANIDS** unit from your army that is within Synapse Range of your army and made a Fall Back move this phase.\n\n**EFFECT:** Your unit is eligible to shoot and declare a charge this turn."
       },
       "Stratagem§Overrun": {
         "keywords": {
@@ -12060,18 +12694,18 @@
             "Strategic Ploy"
           ],
           "Turn": [
-            "Opponent’s",
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ],
           "Phase": [
             "Fight"
           ],
           "Keywords": [
-            "Invasion Fleet",
-            "Tyranids"
+            "Tyranids",
+            "Invasion Fleet"
           ]
         },
-        "text": "**WHEN:** Fight phase, just before a **Tyranids** unit from your army Consolidates.\n\n---\n**TARGET:** That **Tyranids** unit.\n\n---\n**EFFECT:** Until the end of the phase, each time a model in your unit makes a Consolidation move, it can move up to 6″ instead of up to 3″, provided your unit can end its Consolidation move in Unit Coherency and within Engagement Range of one or more enemy units. If your unit is within Synapse Range of your army and not within Engagement Range of any enemy units, instead of making that Consolidation move, it can instead make a Normal move of up to 6″."
+        "text": "**WHEN:** Fight phase, just before a **TYRANIDS** unit from your army Consolidates.\n\n**TARGET:** That **TYRANIDS** unit.\n\n**EFFECT:** Until the end of the phase, each time your unit Consolidates, models in it can move an additional 3\" as long as your unit can end that move within Engagement Range of one or more enemy units. If your unit is within Synapse Range of your army and not within Engagement Range of any enemy units, instead of making that Consolidation move, it can make a Normal move of up to 6\"."
       },
       "Stratagem§Parasitic Payload": {
         "keywords": {
@@ -12089,7 +12723,7 @@
             "Shooting"
           ]
         },
-        "text": "**WHEN**: Your Shooting phase.\n\n---\n**TARGET**: One **Tyranid Warriors with Ranged Bio‑weapons** unit from your army that has not been selected to shoot this phase.\n\n---\n**EFFECT**: Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability. After your unit has resolved its shooting attacks this phase, select one enemy unit hit by one or more of those attacks. Until the end of the turn, models in that unit cannot have the Benefit of Cover."
+        "text": "**WHEN:** Your Shooting phase, when a friendly **TYRANID WARRIORS** unit is **selected to shoot**.\n\n**TARGET:** That **TYRANID WARRIORS** unit.\n\n**EFFECT:** Your unit’s ranged attacks have **[IGNORE COVER]**."
       },
       "Stratagem§Predatory Imperative": {
         "keywords": {
@@ -12103,11 +12737,11 @@
             "Command"
           ],
           "Keywords": [
-            "Invasion Fleet",
-            "Tyranids"
+            "Tyranids",
+            "Invasion Fleet"
           ]
         },
-        "text": "**WHEN:** Your Command phase.\n\n---\n**TARGET:** Up to two **Tyranids** units from your army that are within Synapse Range of your army, or one other **Tyranids** unit from your army.\n\n---\n**EFFECT:** Select one Hyper-adaptation. Until the end of the battle round, that hyper-adaptation is active for those selected units in addition to any other that may be active for your army.\n\n---\n**RESTRICTIONS:** You cannot select the same hyper-adaptation you selected at the start of the first battle round."
+        "text": "**WHEN:** Your Command phase.\n\n**TARGET:** Up to two **TYRANIDS** units from your army that are within Synapse Range of your army, or one other **TYRANIDS** unit from your army.\n\n**EFFECT:** Select one Hyper-adaptation. Until the start of your next Command phase, that Hyper-adaptation is active for those selected units in addition to any other that may be active for your army.\n\n**RESTRICTIONS:** You cannot select the same Hyper-adaptation you selected at the start of the first battle round."
       },
       "Stratagem§Preservation Imperative": {
         "keywords": {
@@ -12125,13 +12759,13 @@
             "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\n\n---\n**TARGET:** One **Endless Multitude** unit from your army that was selected as the target of one or more of the attacking unit’s attack.\n\n---\n**EFFECT:** Until the end of the phase, your unit is treated as contained fewer than five models for the purpose of the **[BLAST]** ability."
+        "text": "**WHEN:** Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **ENDLESS MULTITUDE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, your unit is treated as containing fewer than five models for the purpose of the **[BLAST]** ability."
       },
       "Stratagem§Rampaging Monstrosities": {
         "keywords": {
           "Keywords": [
-            "Crusher Stampede",
-            "Tyranids"
+            "Tyranids",
+            "Crusher Stampede"
           ],
           "Category": [
             "Battle Tactic"
@@ -12140,16 +12774,17 @@
             "Fight"
           ],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Fight phase.\n\n---\n**TARGET:** One **Tyranids Monster** unit from your army that has not been selected to fight this phase.\n\n---\n**EFFECT:** Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll."
+        "text": "**WHEN:** Fight phase.\n\n**TARGET:** One **TYRANIDS MONSTER** unit from your army that has not been selected to fight this phase.\n\n**EFFECT:** Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll."
       },
       "Stratagem§Rapacious Hunger": {
         "keywords": {
           "Keywords": [
-            "Assimilation Swarm",
-            "Tyranids"
+            "Tyranids",
+            "Assimilation Swarm"
           ],
           "Phase": [
             "Fight"
@@ -12161,11 +12796,12 @@
             "Battle Tactic"
           ]
         },
-        "text": "**WHEN:** Your Fight phase.\n\n---\n**TARGET:** One **Tyranids** unit from your army that just destroyed an enemy unit.\n\n---\n**EFFECT:** Your unit immediately Regenerates [See Feed the Swarm]. When doing so, if your unit is a **Harvester** unit and you choose for one model to regain up to D3 lost wounds, gain 3 wounds instead."
+        "text": "**WHEN:** Your Fight phase.\n\n**TARGET:** One **TYRANIDS** unit from your army that just destroyed an enemy unit.\n\n**EFFECT:** Your unit immediately Regenerates (See Feed the Swarm). When doing so, if your unit is a **HARVESTER** unit and you choose for one model to regain up to D3 lost wounds, that model regains up to 3 lost wounds instead."
       },
       "Stratagem§Rapid Regeneration": {
         "keywords": {
           "Turn": [
+            "Yours",
             "Opponent’s"
           ],
           "Category": [
@@ -12176,17 +12812,17 @@
             "Shooting"
           ],
           "Keywords": [
-            "Invasion Fleet",
-            "Tyranids"
+            "Tyranids",
+            "Invasion Fleet"
           ]
         },
-        "text": "**WHEN:** Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\n---\n**TARGET:** One **Tyranids** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n---\n**EFFECT:** Until the end of the phase, models in your unit have the Feel No Pain 6+ ability. If your unit is within Synapse Range of your army, until the end of the phase, models in your unit have the Feel No Pain 5+ ability instead."
+        "text": "**WHEN:** Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **TYRANIDS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, models in your unit have the Feel No Pain 6+ ability. If your unit is within Synapse Range of your army, models in your unit have the Feel No Pain 5+ ability instead."
       },
       "Stratagem§Reclaim Biomass": {
         "keywords": {
           "Keywords": [
-            "Assimilation Swarm",
-            "Tyranids"
+            "Tyranids",
+            "Assimilation Swarm"
           ],
           "Category": [
             "Strategic Ploy"
@@ -12195,16 +12831,17 @@
             "Any"
           ],
           "Turn": [
+            "Yours",
             "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Any phase, when a **Tyranids** unit from your army is destroyed, before the last model in it is removed from play.\n\n---\n**TARGET:** One **Harvester** unit from your army that is within 6″ of that destroyed unit.\n\n---\n**EFFECT:** Regenerate one friendly **Tyranids** unit within 6″ of your **Harvester** unit [See Feed the Swarm]."
+        "text": "**WHEN:** Any phase, when a **TYRANIDS** unit from your army is destroyed, before the last model in it is removed from play.\n\n**TARGET:** One **HARVESTER** unit from your army that is within 6\" of that destroyed unit.\n\n**EFFECT:** Regenerate one friendly **TYRANIDS** unit within 6\" of your **HARVESTER** unit (See Feed the Swarm)."
       },
       "Stratagem§Reinforced Hive Node": {
         "keywords": {
           "Keywords": [
-            "Synaptic Nexus",
-            "Tyranids"
+            "Tyranids",
+            "Synaptic Nexus"
           ],
           "Phase": [
             "Fight",
@@ -12214,15 +12851,16 @@
             "Battle Tactic"
           ],
           "Turn": [
-            "Opponent’s",
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\n---\n**TARGET:** One **Synapse** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n---\n**EFFECT:** Until the attacking unit has finished making its attacks, each \ntime an attack targets your unit, worsen the Armour \nPenetration characteristic of that attack by 1."
+        "text": "**WHEN:** Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **SYNAPSE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
       },
       "Stratagem§Replenishing Swarms": {
         "keywords": {
           "Keywords": [
+            "Tyranids",
             "Subterranean Assault"
           ],
           "Category": [
@@ -12235,34 +12873,12 @@
             "Yours"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your Movement phase.\n\n**TARGET**: One Tyranids unit from your army, wholly within 9\" of one or more Tunnel Markers you placed.\n\n**EFFECT**: One model in your unit regains up to D3+1 lost wounds, or you can return up to D3+1 destroyed models with a Wounds characteristic of 1 to your unit, with their full wounds remaining, instead."
-      },
-      "Stratagem§Restorative Impulse": {
-        "keywords": {
-          "Category": [
-            "Strategic Ploy"
-          ],
-          "Keywords": [
-            "Tyranids",
-            "Warrior Bioform Onslaught"
-          ],
-          "Turn": [
-            "Yours"
-          ],
-          "Phase": [
-            "Command"
-          ]
-        },
-        "text": "**WHEN**: Your Command phase.\n\n---\n**TARGET**: One **Tyranid Warriors** unit from your army that is below its Starting Strength.\n\n---\n**EFFECT**: Return 1 destroyed model (excluding **Character** models) to your unit."
+        "text": "**WHEN:** Your Movement phase.\n\n**TARGET:** One **TYRANIDS** unit from your army, wholly within 9\" of one or more Tunnel Markers you placed.\n\n**EFFECT:** One model in your unit regains up to D3+1 lost wounds, or you can return up to D3+1 destroyed models with a Wounds characteristic of 1 to your unit, with their full wounds remaining, instead."
       },
       "Stratagem§Retreat Below": {
         "keywords": {
           "Keywords": [
+            "Tyranids",
             "Subterranean Assault"
           ],
           "Category": [
@@ -12275,18 +12891,13 @@
             "Opponent’s"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: End of your opponent’s Fight phase.\n\n**TARGET**: One Tyranids unit or up to two Burrower units from your army that are not within Engagement Range of one or more enemy units.\n\n**EFFECT**: Remove your unit from the battlefield and place it into Strategic Reserves."
+        "text": "**WHEN:** End of your opponent’s Fight phase.\n\n**TARGET:** One **TYRANIDS** unit or up to two **BURROWER** units from your army that are not within Engagement Range of one or more enemy units.\n\n**EFFECT:** Remove your unit from the battlefield and place it into Strategic Reserves."
       },
       "Stratagem§Savage Roar": {
         "keywords": {
           "Keywords": [
-            "Crusher Stampede",
-            "Tyranids"
+            "Tyranids",
+            "Crusher Stampede"
           ],
           "Phase": [
             "Fight"
@@ -12295,16 +12906,17 @@
             "Battle Tactic"
           ],
           "Turn": [
+            "Yours",
             "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Fight phase, just after an enemy unit has selected its targets.\n\n---\n**TARGET:** One **Tyranids Monster** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n---\n**EFFECT:** That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test failed, subtract 1 from the Wound roll as well."
+        "text": "**WHEN:** Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **TYRANIDS MONSTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test was failed, subtract 1 from the Wound roll as well."
       },
       "Stratagem§Secure Biomass": {
         "keywords": {
           "Keywords": [
-            "Assimilation Swarm",
-            "Tyranids"
+            "Tyranids",
+            "Assimilation Swarm"
           ],
           "Category": [
             "Strategic Ploy"
@@ -12313,10 +12925,11 @@
             "Fight"
           ],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Fight phase.\n\n---\n**TARGET:** One **Tyranids** unit from your army that has not been selected to fight this phase.\n\n---\n**EFFECT:** Until the end of the phase, melee weapons equipped by models in your unit have the **[LETHAL HITS]** ability. If your unit is a **Harvester** unit, each time a model in that unit makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit as well."
+        "text": "**WHEN:** Fight phase.\n\n**TARGET:** One **TYRANIDS** unit from your army that has not been selected to fight this phase.\n\n**EFFECT:** Until the end of the phase, melee weapons equipped by models in your unit have the **[LETHAL HITS]** ability. If your unit is a **HARVESTER** unit, each time a model in that unit makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit as well."
       },
       "Stratagem§Seeded Broods": {
         "keywords": {
@@ -12334,27 +12947,7 @@
             "Movement"
           ]
         },
-        "text": "**WHEN:** Your Movement phase.\n\n---\n**TARGET:** One **Tyranids** unit from your army that is in Reserves, or up to two **Vanguard Invader** units from your army that are in Reserves.\n\n---\n**EFFECT:** Until the end of the phase, for the purposes of setting up those selected units on the battlefield, treat the current battle round number as being one higher than it actually is."
-      },
-      "Stratagem§Spontaneous Hypercorrosion": {
-        "keywords": {
-          "Keywords": [
-            "Tyranids",
-            "Warrior Bioform Onslaught"
-          ],
-          "Category": [
-            "Wargear"
-          ],
-          "Turn": [
-            "Opponent’s",
-            "Yours"
-          ],
-          "Phase": [
-            "Fight",
-            "Shooting"
-          ]
-        },
-        "text": "**WHEN**: Your Shooting phase or the Fight phase.\n\n---\n**TARGET**: One **Tyranids** unit from your army that has not been selected to shoot or fight this phase.\n\n---\n**EFFECT**: Until the end of the phase, add 2 to the Strength characteristic of ranged weapons equipped by models in your unit and add 1 to the Strength characteristic of melee weapons equipped by **Tyranid Warriors** and **Winged Tyranid Prime** models in your unit."
+        "text": "**WHEN:** Your Movement phase.\n\n**TARGET:** One **TYRANIDS** unit from your army that is in Reserves, or up to two **VANGUARD INVADER** units from your army that are in Reserves.\n\n**EFFECT:** Until the end of the phase, for the purposes of setting up those selected units on the battlefield, treat the current battle round number as being one higher than it actually is."
       },
       "Stratagem§Surprise Assault": {
         "keywords": {
@@ -12363,8 +12956,8 @@
             "Vanguard Onslaught"
           ],
           "Turn": [
-            "Opponent’s",
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ],
           "Phase": [
             "Fight",
@@ -12374,13 +12967,13 @@
             "Battle Tactic"
           ]
         },
-        "text": "**WHEN:** Your Shooting phase or the Fight phase, just after a **Vanguard Invader** unit from your army has selected its targets.\n\n---\n**TARGET:** That **Vanguard Invader** unit.\n\n---\n**EFFECT:** Select one enemy unit that was selected as the target of one or more of your unit’s attacks. That enemy unit must take a Battle-shock test. Until the end of the phase, each time a model in your unit makes an attack that targets that enemy unit, add 1 to the Hit roll. If the Battle-shock test was failed, add 1 to the Wound roll as well."
+        "text": "**WHEN:** Your Shooting phase or the Fight phase, just after a **VANGUARD INVADER** unit from your army has selected its targets.\n\n**TARGET:** That **VANGUARD INVADER** unit.\n\n**EFFECT:** Select one enemy unit that was selected as the target of one or more of your unit’s attacks. That enemy unit must take a Battle-shock test. Until the end of the phase, each time a model in your unit makes an attack that targets that enemy unit, add 1 to the Hit roll. If the Battle-shock test was failed, add 1 to the Wound roll as well."
       },
       "Stratagem§Swarm-guided Salvoes": {
         "keywords": {
           "Keywords": [
-            "Crusher Stampede",
-            "Tyranids"
+            "Tyranids",
+            "Crusher Stampede"
           ],
           "Category": [
             "Battle Tactic"
@@ -12392,11 +12985,12 @@
             "Shooting"
           ]
         },
-        "text": "**WHEN:** Your Shooting phase.\n\n---\n**TARGET:** One **Tyranids Monster** unit from your army that has not been selected to shoot this phase.\n\n---\n**EFFECT:** Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability, and until the end of the phase, each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the Hit roll."
+        "text": "**WHEN:** Your Shooting phase.\n\n**TARGET:** One **TYRANIDS MONSTER** unit from your army that has not been selected to shoot this phase.\n\n**EFFECT:** Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the Hit roll."
       },
       "Stratagem§Swarming Assault": {
         "keywords": {
           "Keywords": [
+            "Tyranids",
             "Subterranean Assault"
           ],
           "Category": [
@@ -12409,12 +13003,7 @@
             "Yours"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your Charge phase.\n\n**TARGET**: One Tyranids Monster unit from your army that was set up as Reinforcements this turn.\n\n**EFFECT**: Until the end of the phase, friendly Tyranids units within 6\" of your unit can re-roll Charge rolls."
+        "text": "**WHEN:** Your Charge phase.\n\n**TARGET:** One **TYRANIDS MONSTER** unit from your army that was set up as Reinforcements this turn.\n\n**EFFECT:** Until the end of the phase, friendly **TYRANIDS** units within 6\" of your unit can re-roll Charge rolls."
       },
       "Stratagem§Swarming Masses": {
         "keywords": {
@@ -12430,36 +13019,17 @@
             "Battle Tactic"
           ],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Your Shooting phase or the Fight phase.\n\n---\n**TARGET:** One **Endless Multitude** unit from your army that has not been selected to shoot or fight this phase.\n\n---\n**EFFECT:** Until the end of the phase, weapons equipped by models in your unit have the **[SUSTAINED HITS 1]** ability, and if your unit contains 15 or more models, each time a model in your unit makes an attack, an unmodified Hit roll of 5+ scores a Critical hit."
-      },
-      "Stratagem§Synaptic Amplification": {
-        "keywords": {
-          "Keywords": [
-            "Tyranids",
-            "Warrior Bioform Onslaught"
-          ],
-          "Category": [
-            "Strategic Ploy"
-          ],
-          "Turn": [
-            "Opponent’s",
-            "Yours"
-          ],
-          "Phase": [
-            "Fight",
-            "Shooting"
-          ]
-        },
-        "text": "**WHEN**: Your Shooting phase or the Fight phase.\n\n---\n**TARGET**: One **Tyranids** unit from your army that has not been selected to shoot or fight this phase.\n\n---\n**EFFECT**: If that unit is a **Tyranid Warriors** unit, select up to one **Endless Multitude** unit from your army, that is not Battle‑shocked, within 6\" of it. Until the end of the phase, each time a model in those units makes an attack, re‑roll a Wound roll of 1, and, if it is a **Tyranid Warriors** unit, re‑roll a Hit roll of 1 as well."
+        "text": "**WHEN:** Your Shooting phase or the Fight phase.\n\n**TARGET:** One **ENDLESS MULTITUDE** unit from your army that has not been selected to shoot or fight this phase.\n\n**EFFECT:** Until the end of the phase, weapons equipped by models in your unit have the **[SUSTAINED HITS 1]** ability, and If your unit contains 15 or more models, each time a model in your unit makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit."
       },
       "Stratagem§Synaptic Channelling": {
         "keywords": {
           "Keywords": [
-            "Synaptic Nexus",
-            "Tyranids"
+            "Tyranids",
+            "Synaptic Nexus"
           ],
           "Phase": [
             "Command"
@@ -12468,11 +13038,11 @@
             "Battle Tactic"
           ],
           "Turn": [
-            "Opponent’s",
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Command phase.\n\n---\n**TARGET:** One **Synapse** unit from your army.\n\n---\n**EFFECT:** Until the end of the turn, while a friendly **Tyranids** unit is within 9″ of the selected unit, that unit is within Synapse Range of your army."
+        "text": "**WHEN:** Command phase.\n\n**TARGET:** One **SYNAPSE** unit from your army.\n\n**EFFECT:** Until the end of the turn, while a friendly **TYRANIDS** unit is within 9\" of the selected unit, that unit is within Synapse Range of your army."
       },
       "Stratagem§Synaptic Goading": {
         "keywords": {
@@ -12487,11 +13057,11 @@
             "Strategic Ploy"
           ],
           "Turn": [
-            "Opponent’s",
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Any phase, just before an **Endless Multitude** unit from your army makes a Surge move.\n\n---\n**TARGET:** That **Endless Multitude** unit.\n\n---\n**EFFECT:** When making that Surge move, you can re-roll the D6 to determine how far your unit moves, and your unit can end that move as close as possible to the closest objective marker (instead of as close as possible to the closest enemy unit). All other rules for making Surge moves still apply."
+        "text": "**WHEN:** Any phase, just before an **ENDLESS MULTITUDE** unit from your army that is within Synapse Range of your army makes a **Surge move**.\n\n**TARGET:** That **ENDLESS MULTITUDE** unit\n\n**EFFECT:** When making that **Surge move**, you can re-roll the D6 to determine how far your unit moves, and your unit can end that move as close as possible to the closest objective marker (instead of as close as possible to the closest enemy unit). All other rules for making **Surge moves** still apply."
       },
       "Stratagem§Synaptic Micronodes": {
         "keywords": {
@@ -12509,25 +13079,7 @@
             "Movement"
           ]
         },
-        "text": "**WHEN**: Your Movement phase.\n\n---\n**TARGET**: One **Tyranid Warriors** unit from your army.\n\n---\n**EFFECT**: Select one objective marker you control that your unit is within range of. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
-      },
-      "Stratagem§Synaptic Shield": {
-        "keywords": {
-          "Keywords": [
-            "Tyranids",
-            "Warrior Bioform Onslaught"
-          ],
-          "Category": [
-            "Strategic Ploy"
-          ],
-          "Turn": [
-            "Opponent’s"
-          ],
-          "Phase": [
-            "Shooting"
-          ]
-        },
-        "text": "**WHEN**: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\n\n---\n**TARGET**: One **Tyranid Warriors** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n---\n**EFFECT**: If that unit is a **Tyranid Warriors** unit, select up to one **Endless Multitude** unit from your army, that is not Battle‑shocked, within 6\" of it. Until the end of the phase, each time a ranged attack targets one of those units, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll."
+        "text": "**WHEN:** End of your Movement phase.\n\n**TARGET:** One friendly **TYRANID WARRIORS** unit.\n\n**EFFECT:** Select one **objective** your unit is controlling. That **objective** is **secured**."
       },
       "Stratagem§Teeming Masses": {
         "keywords": {
@@ -12543,16 +13095,17 @@
             "Battle Tactic"
           ],
           "Turn": [
+            "Yours",
             "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Your opponent’s Shooting phase, or the Fight phase, just after an enemy unit has selected its targets.\n\n---\n**TARGET:** One **Endless Multitude** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n---\n**EFFECT:** Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll."
+        "text": "**WHEN:** Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **ENDLESS MULTITUDE** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll."
       },
       "Stratagem§The Smothering Shadow": {
         "keywords": {
           "Keywords": [
-            "Synaptic Nexus",
-            "Tyranids"
+            "Tyranids",
+            "Synaptic Nexus"
           ],
           "Phase": [
             "Any"
@@ -12561,15 +13114,16 @@
             "Strategic Ploy"
           ],
           "Turn": [
-            "Opponent’s",
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Any phase, just after an enemy unit fails a Battle-shock test.\n\n---\n**TARGET:** One **Synapse** unit from your army within 12″ of the enemy unit.\n\n---\n**EFFECT:** Roll six D6, for each 3+, that enemy unit suffers 1 mortal wound."
+        "text": "**WHEN:** Any phase, just after an enemy unit fails a Battle-shock test.\n\n**TARGET:** One **SYNAPSE** unit from your army within 12\" of that enemy unit.\n\n**EFFECT:** Roll six D6: for each 3+, that enemy unit suffers 1 mortal wound."
       },
       "Stratagem§Tunnel Network": {
         "keywords": {
           "Keywords": [
+            "Tyranids",
             "Subterranean Assault"
           ],
           "Category": [
@@ -12582,18 +13136,13 @@
             "Yours"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: End of your Movement phase.\n\n**TARGET**: One Tyranids unit from your army that is wholly within 9\" of one or more of your Tunnel Markers and not within Engagement Range\nof one or more enemy units\n\n**EFFECT**: Remove your unit from the battlefield and set it up again, wholly within 9\" of another Tunnel Marker you placed, and more than 6\" horizontally away from all enemy units."
+        "text": "**WHEN:** End of your Movement phase.\n\n**TARGET:** One **TYRANIDS** unit from your army that is wholly within 9\" of one or more of your Tunnel Markers and not within Engagement Range of one or more enemy units.\n\n**EFFECT:** Remove your unit from the battlefield and set it up again, wholly within 9\" of another Tunnel Marker you placed, and more than 6\" horizontally away from all enemy units."
       },
       "Stratagem§Tyrannoformed": {
         "keywords": {
           "Keywords": [
-            "Assimilation Swarm",
-            "Tyranids"
+            "Tyranids",
+            "Assimilation Swarm"
           ],
           "Category": [
             "Strategic Ploy"
@@ -12602,10 +13151,11 @@
             "Command"
           ],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Command phase.\n\n---\n**TARGET:** One **Harvester** unit from your army that is within range of an objective marker you control.\n\n---\n**EFFECT:** The objective remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+        "text": "**WHEN:** Command phase.\n\n**TARGET:** One **HARVESTER** unit from your army that is within range of an objective marker you control.\n\n**EFFECT:** That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
       },
       "Stratagem§Unending Waves": {
         "keywords": {
@@ -12620,8 +13170,8 @@
             "Strategic Ploy"
           ],
           "Turn": [
-            "Opponent’s",
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
         "stats": {
@@ -12629,7 +13179,7 @@
             "value": 2
           }
         },
-        "text": "**WHEN:** Any phase.\n\n---\n**TARGET:** One **Endless Multitude** unit from your army that was just destroyed. You can use that Stratagem on that unit even though it was just destroyed.\n\n---\n**EFFECT:** Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its starting Strength.\n\n---\n**RESTRICTIONS:** Any destroyed **Character** units that were attached to your unit are not returned."
+        "text": "**WHEN:** Any phase.\n\n**TARGET:** One **ENDLESS MULTITUDE** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.\n\n**EFFECT:** Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength.\n\n**RESTRICTIONS:** Any destroyed **CHARACTER** units that were attached to your unit are not returned. You can only use this Stratagem once per battle."
       },
       "Stratagem§Unseen Lurkers": {
         "keywords": {
@@ -12647,13 +13197,13 @@
             "Shooting"
           ]
         },
-        "text": "**WHEN:** Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\n\n---\n**TARGET:** One **Vanguard Invader** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n---\n**EFFECT:** Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 12″ or, if your unit has the Lone Operative ability, if the attacking model is within 6″. Your opponent can select new targets for the attacking units attacks."
+        "text": "**WHEN:** Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\n\n**TARGET:** One **VANGUARD INVADER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\" or, if your unit has the Lone Operative ability, if the attacking model is within 6\". Your opponent can select new targets for the attacking unit’s attacks."
       },
       "Stratagem§Untrammelled Ferocity": {
         "keywords": {
           "Keywords": [
-            "Crusher Stampede",
-            "Tyranids"
+            "Tyranids",
+            "Crusher Stampede"
           ],
           "Phase": [
             "Movement"
@@ -12665,7 +13215,7 @@
             "Yours"
           ]
         },
-        "text": "**WHEN:** Your Movement phase.\n\n---\n**TARGET:** One **Tyranids Monster** unit from your army that has not been selected to move this phase.\n\n---\n**EFFECT:** Until the end of the phase, , each time a model in your unit makes a Normal, Advance or Fall Back move, it can move through models (excluding **Titanic** models) and sections of terrain features that are 4\" or less in height. When doing so:\n\n* It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.\n\n* It can also move through sections of terrain features that are more than 4\" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is Battle-shocked."
+        "text": "**WHEN:** Your Movement phase.\n\n**TARGET:** One **TYRANIDS MONSTER** unit from your army that has not been selected to move this phase.\n\n**EFFECT:** Until the end of the phase, each time a model in your unit makes a Normal, Advance or Fall Back move, it can move through models (excluding **TITANIC** models) and sections of terrain features that are 4\" or less in height. When doing so:\n■ It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.\n■ It can also move through sections of terrain features that are more than 4\" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is Battle-shocked."
       },
       "Unit§Barbed Hierodule": {
         "aspects": {
@@ -12706,7 +13256,8 @@
           "Keywords": [
             "Monster",
             "Great Devourer",
-            "Barbed Hierodule"
+            "Barbed Hierodule",
+            "Frame"
           ],
           "Category": [
             "Monster"
@@ -12781,7 +13332,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 110
+            "value": 100
           },
           "model2ndTally": {
             "value": 10
@@ -12799,7 +13350,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 55
+            "value": 50
           }
         }
       },
@@ -13002,7 +13553,8 @@
           "Keywords": [
             "Monster",
             "Great Devourer",
-            "Dimachaeron"
+            "Dimachaeron",
+            "Frame"
           ],
           "Category": [
             "Monster"
@@ -13087,7 +13639,7 @@
             "value": 4
           },
           "Points": {
-            "value": 150
+            "value": 145
           },
           "Sv": {
             "value": 3
@@ -13157,7 +13709,7 @@
             "value": 10
           },
           "model2ndCost": {
-            "value": 155
+            "value": 150
           },
           "model2ndTally": {
             "value": 20
@@ -13175,7 +13727,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 80
+            "value": 75
           }
         }
       },
@@ -13188,14 +13740,6 @@
         },
         "assets": {
           "traits": [
-            {
-              "item": "Ability§Scouts",
-              "stats": {
-                "x": {
-                  "value": "8″"
-                }
-              }
-            },
             "Ability§Synapse",
             "Ability§Vanguard Predator",
             {
@@ -13209,6 +13753,14 @@
             {
               "item": "Model§Genestealer",
               "quantity": 5
+            },
+            {
+              "item": "Ability§Scouts",
+              "stats": {
+                "x": {
+                  "value": "8\""
+                }
+              }
             }
           ]
         },
@@ -13284,7 +13836,6 @@
                 }
               }
             },
-            "Ability§Hover",
             "Ability§Synapse",
             "Ability§Spore Mine Cysts",
             {
@@ -13350,7 +13901,7 @@
           },
           "M": {
             "statType": "term",
-            "value": "20+"
+            "value": "-"
           },
           "OC": {
             "value": 0
@@ -13428,8 +13979,7 @@
             "value": 8
           },
           "M": {
-            "statType": "term",
-            "value": "20+"
+            "value": 14
           },
           "OC": {
             "value": 0
@@ -13553,7 +14103,8 @@
                 "x": {
                   "value": "1-10 wounds remaining"
                 }
-              }
+              },
+              "text": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
             },
             {
               "item": "Ability§Invulnerable",
@@ -13587,7 +14138,8 @@
             "Towering",
             "Transport",
             "Great Devourer",
-            "Hierophant"
+            "Hierophant",
+            "Frame"
           ],
           "Category": [
             "Monster"
@@ -13637,7 +14189,6 @@
                 }
               }
             },
-            "Ability§Hover",
             "Ability§Synapse",
             "Ability§Airborne Predator",
             {
@@ -13680,7 +14231,7 @@
           },
           "M": {
             "statType": "term",
-            "value": "20+"
+            "value": "-"
           },
           "OC": {
             "value": 0
@@ -14016,7 +14567,8 @@
             "Great Devourer",
             "Mawloc",
             "Monster",
-            "Vanguard Invader"
+            "Vanguard Invader",
+            "Burrower"
           ],
           "Category": [
             "Monster"
@@ -14033,7 +14585,7 @@
             "value": 4
           },
           "Points": {
-            "value": 135
+            "value": 130
           },
           "Sv": {
             "value": 3
@@ -14711,7 +15263,7 @@
               "item": "Ability§Invulnerable",
               "stats": {
                 "x": {
-                  "value": "4"
+                  "value": "4+"
                 }
               }
             },
@@ -14786,7 +15338,7 @@
               "item": "Ability§Damaged:",
               "stats": {
                 "x": {
-                  "value": "1-5"
+                  "value": "1-5 wounds remaining"
                 }
               }
             },
@@ -14872,15 +15424,15 @@
               "item": "Ability§Damaged:",
               "stats": {
                 "x": {
-                  "value": "1-5"
+                  "value": "1-5 wounds remaining"
                 }
               }
             },
             "Ability§Singular Purpose",
-            "Ability§Supernatural Resistance",
             "Melee Weapon§Norn Emissary—Monstrous scything talons",
             "Melee Weapon§Norn Emissary—Monstrous rending claws",
-            "Ranged Weapon§Norn Emissary—Psychic tendril"
+            "Ranged Weapon§Norn Emissary—Psychic tendril",
+            "Ability§Unnatural Resilience"
           ]
         },
         "keywords": {
@@ -15048,13 +15600,13 @@
             "value": 1
           },
           "model2ndCost": {
-            "value": 75
+            "value": 80
           },
           "model2ndTally": {
             "value": 2
           },
           "model3rdCost": {
-            "value": 105
+            "value": 110
           },
           "model3rdTally": {
             "value": 3
@@ -15072,7 +15624,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 55
+            "value": 50
           },
           "Pyrovore": {
             "max": 3,
@@ -15397,7 +15949,8 @@
           "Keywords": [
             "Monster",
             "Great Devourer",
-            "Scythed Hierodule"
+            "Scythed Hierodule",
+            "Frame"
           ],
           "Category": [
             "Monster"
@@ -15832,7 +16385,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 60
+            "value": 55
           },
           "Termagant": {
             "max": 20,
@@ -15882,7 +16435,8 @@
           "Keywords": [
             "Monster",
             "Great Devourer",
-            "Toxicrene"
+            "Toxicrene",
+            "Frame"
           ],
           "Category": [
             "Monster"
@@ -15899,7 +16453,7 @@
             "value": 4
           },
           "Points": {
-            "value": 135
+            "value": 120
           },
           "Sv": {
             "value": 3
@@ -15944,7 +16498,8 @@
             "Great Devourer",
             "Monster",
             "Trygon",
-            "Vanguard Invader"
+            "Vanguard Invader",
+            "Burrower"
           ],
           "Category": [
             "Monster"
@@ -15961,7 +16516,7 @@
             "value": 4
           },
           "Points": {
-            "value": 140
+            "value": 135
           },
           "Sv": {
             "value": 3
@@ -16118,7 +16673,8 @@
                     "value"
                   ]
                 ],
-                "value": "Warrior Bioform Onslaught"
+                "value": "Warrior Bioform Onslaught",
+                "contains": true
               }
             ],
             "evaluate": "AND",
@@ -16153,7 +16709,8 @@
                     "value"
                   ]
                 ],
-                "value": "Warrior Bioform Onslaught"
+                "value": "Warrior Bioform Onslaught",
+                "contains": true
               }
             ],
             "evaluate": "AND",
@@ -16188,7 +16745,8 @@
                     "value"
                   ]
                 ],
-                "value": "Warrior Bioform Onslaught"
+                "value": "Warrior Bioform Onslaught",
+                "contains": true
               },
               {
                 "actionable": true,
@@ -16399,7 +16957,8 @@
                     "value"
                   ]
                 ],
-                "value": "Warrior Bioform Onslaught"
+                "value": "Warrior Bioform Onslaught",
+                "contains": true
               },
               {
                 "actionable": true,
@@ -16540,7 +17099,8 @@
                     "value"
                   ]
                 ],
-                "value": "Warrior Bioform Onslaught"
+                "value": "Warrior Bioform Onslaught",
+                "contains": true
               }
             ],
             "evaluate": "AND",
@@ -16575,7 +17135,8 @@
                     "value"
                   ]
                 ],
-                "value": "Warrior Bioform Onslaught"
+                "value": "Warrior Bioform Onslaught",
+                "contains": true
               }
             ],
             "evaluate": "AND",
@@ -16677,7 +17238,8 @@
             "Monster",
             "Transport",
             "Tyrannocyte",
-            "Vanguard Invader"
+            "Vanguard Invader",
+            "Frame"
           ],
           "Category": [
             "Vehicle—Dedicated Transport"
@@ -16704,6 +17266,12 @@
           },
           "W": {
             "value": 10
+          },
+          "unitDiscount": {
+            "value": 10
+          },
+          "unitDiscountThreshold": {
+            "value": 4
           }
         }
       },
@@ -16745,7 +17313,8 @@
           "Keywords": [
             "Monster",
             "Great Devourer",
-            "Tyrannofex"
+            "Tyrannofex",
+            "Frame"
           ],
           "Category": [
             "Monster"
@@ -16796,7 +17365,7 @@
             "value": 5
           },
           "Points": {
-            "value": 190
+            "value": 180
           },
           "Sv": {
             "value": 2
@@ -16855,7 +17424,7 @@
             "value": 3
           },
           "model2ndCost": {
-            "value": 160
+            "value": 170
           },
           "model2ndTally": {
             "value": 6
@@ -17004,7 +17573,7 @@
             "value": 3
           },
           "model2ndCost": {
-            "value": 120
+            "value": 105
           },
           "model2ndTally": {
             "value": 6
@@ -17022,7 +17591,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 60
+            "value": 55
           },
           "Von Ryan’s Leaper": {
             "max": 6,
@@ -17086,7 +17655,7 @@
             "value": 3
           },
           "model2ndCost": {
-            "value": 200
+            "value": 190
           },
           "model2ndTally": {
             "value": 6
@@ -17104,7 +17673,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 100
+            "value": 90
           },
           "Zoanthrope": {
             "max": 5,
@@ -17161,7 +17730,530 @@
       },
       "World§Hive": {},
       "World§Industrial": {},
-      "World§Rural": {}
+      "World§Rural": {},
+      "Stratagem§Counterpredation": {
+        "text": "**WHEN:** Fight phase, when a friendly **DEATHLEAPER/LICTOR/NEUROLICTOR/VON RYAN’S LEAPERS** unit is **selected to fight**.\n\n**TARGET:** That **DEATHLEAPER/LICTOR/NEUROLICTOR/VON RYAN’S LEAPERS** unit.\n\n**EFFECT:** Your unit’s attacks that target a **hidden** unit have +1 **S** and **AP**.",
+        "keywords": {
+          "Keywords": [
+            "Tyranids",
+            "Ambush Predators"
+          ],
+          "Turn": [
+            "Yours",
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Fight"
+          ]
+        }
+      },
+      "Stratagem§Scanner Gheist": {
+        "text": "**WHEN:** End of your opponent’s Fight phase.\n\n**TARGET:** One friendly **unengaged** **DEATHLEAPER/LICTOR/NEUROLICTOR** unit.\n\n**EFFECT:** Place your unit in **strategic reserves**.",
+        "keywords": {
+          "Keywords": [
+            "Tyranids",
+            "Ambush Predators"
+          ],
+          "Turn": [
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Fight"
+          ]
+        }
+      },
+      "Stratagem§Hypersensory Adaptations": {
+        "text": "**WHEN:** Start of your Shooting phase.\n\n**TARGET:** One friendly **DEATHLEAPER/LICTOR/NEUROLICTOR/VON RYAN’S LEAPERS** unit.\n\n**EFFECT:** Select one **visible** enemy unit within 12\" of your unit. That enemy unit has +6\" **detection range**.",
+        "keywords": {
+          "Keywords": [
+            "Tyranids",
+            "Ambush Predators"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Phase": [
+            "Shooting"
+          ]
+        }
+      },
+      "Stratagem§Lesser Prey": {
+        "text": "**WHEN:** Fight phase, when a friendly **NORN ASSIMILATOR/NORN EMISSARY** unit is **selected to fight**.\n\n**TARGET:** That **NORN ASSIMILATOR/NORN EMISSARY** unit.\n\n**EFFECT:** Your unit’s melee attacks have +2 **S**.",
+        "keywords": {
+          "Keywords": [
+            "Tyranids",
+            "Talons Of The Norn Queen"
+          ],
+          "Turn": [
+            "Yours",
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Fight"
+          ]
+        }
+      },
+      "Stratagem§Catalytic Biofortification": {
+        "text": "**WHEN:** Any phase, when a friendly **NORN ASSIMILATOR** unit suffers a mortal wound.\n\n**TARGET:** That **NORN ASSIMILATOR** unit.\n\n**EFFECT:** Your unit has **Feel No Pain 4+** against **mortal wounds**.",
+        "keywords": {
+          "Keywords": [
+            "Tyranids",
+            "Talons Of The Norn Queen"
+          ],
+          "Turn": [
+            "Yours",
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Any"
+          ]
+        }
+      },
+      "Stratagem§Tanglestrike Rounds": {
+        "text": "**WHEN:** Your Shooting phase, when a friendly **NORN ASSIMILATOR** unit has shot.\n\n**TARGET:** That **NORN ASSIMILATOR** unit.\n\n**EFFECT:** Select one enemy unit hit by those attacks. That enemy unit is **tethered** until the start of your next Command phase:\n\n- While a unit is **tethered**, that unit has -2\" **M**.",
+        "keywords": {
+          "Keywords": [
+            "Tyranids",
+            "Talons Of The Norn Queen"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Phase": [
+            "Shooting"
+          ]
+        }
+      },
+      "Stratagem§Alien Physiology": {
+        "text": "**WHEN:** Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **TYRANID WARRIORS** unit.\n\n**TARGET:** That **TYRANID WARRIORS** unit.\n\n**EFFECT:** Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.",
+        "keywords": {
+          "Keywords": [
+            "Tyranids",
+            "Warrior Bioform Onslaught"
+          ],
+          "Turn": [
+            "Yours",
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Fight",
+            "Shooting"
+          ]
+        }
+      },
+      "Melee Weapon§Genestealers—Genestealers claws and talons": {
+        "aspects": {
+          "Label": "Genestealers claws and talons"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 4
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Ranged Weapon§Norn Assimilator—Toxinjector Harpoon": {
+        "aspects": {
+          "Label": "Toxinjector Harpoon"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 12
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D6",
+            "value": 1
+          }
+        }
+      },
+      "Melee Weapon§Norn Assimilator—Monstrous scything talons": {
+        "aspects": {
+          "Label": "Monstrous scything talons"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 6
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 9
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 3
+          }
+        }
+      },
+      "Melee Weapon§Norn Assimilator—Toxinjector Harpoon – Toxinjector harpoon": {
+        "aspects": {
+          "Label": "Toxinjector Harpoon – Toxinjector harpoon"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 4
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 12
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D6",
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Extra Attacks"
+          ]
+        }
+      },
+      "Ranged Weapon§Norn Emissary—Psychic tendril – neuroparasite": {
+        "aspects": {
+          "Label": "Psychic Tendril – Neuroparasite"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 8
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "format": "D3",
+            "value": 0
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Psychic",
+            "Ability§Precision"
+          ]
+        }
+      },
+      "Ranged Weapon§Norn Emissary—Psychic tendril – neuroblast": {
+        "aspects": {
+          "Label": "Psychic Tendril – Neuroblast"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "format": "2D6",
+            "value": 0
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 6
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Psychic",
+            "Ability§Blast"
+          ]
+        }
+      },
+      "Ranged Weapon§Norn Emissary—Psychic tendril – neurolance": {
+        "aspects": {
+          "Label": "Psychic Tendril – Neurolance"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 12
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D6",
+            "value": 0
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Psychic",
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Melee Weapon§Screamer-killer—Scream-Killer talons": {
+        "aspects": {
+          "Label": "Scream-Killer talons"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 10
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 10
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 3
+          }
+        }
+      },
+      "Ranged Weapon§Toxicrene—Massive toxic lashes – Ranged": {
+        "aspects": {
+          "Label": "Massive toxic lashes – Ranged"
+        },
+        "stats": {
+          "Range": {
+            "value": 9
+          },
+          "A": {
+            "format": "2D6",
+            "value": 0
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 6
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "infantry"
+                },
+                "x": {
+                  "value": "2+"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Melee Weapon§Toxicrene—Massive toxic lashes – Melee": {
+        "aspects": {
+          "Label": "Massive toxic lashes – Melee"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 12
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 6
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "infantry"
+                },
+                "x": {
+                  "value": "2+"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Melee Weapon§Tyranid Warriors with Melee Bio-weapons—Tyranid Warrior claws and talons": {
+        "aspects": {
+          "Label": "Tyranid Warrior claws and talons"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 6
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Twin-linked"
+          ]
+        }
+      },
+      "Melee Weapon§Tyranid Warriors with Ranged Bio-weapons—Tyranid Warrior claws and talons": {
+        "aspects": {
+          "Label": "Tyranid Warrior claws and talons"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 5
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Melee Weapon§Norn Assimilator—Toxinjector harpoon": {
+        "aspects": {
+          "Label": "Toxinjector harpoon"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 4
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 12
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D6",
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Extra Attacks"
+          ]
+        }
+      },
+      "Ability§Unnatural Resilience": {
+        "text": "This model has the Feel No Pain 4+ ability against mortal wounds."
+      }
     },
     "gameModes": {},
     "theme": {}

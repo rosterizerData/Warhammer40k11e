@@ -1,6 +1,6 @@
 {
   "name": "Deathwatch 11e",
-  "revision": "11.0.1",
+  "revision": "11.1.11",
   "game": "Warhammer 40k",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -10,9 +10,9 @@
   "dependencies": [
     {
       "slug": "",
-      "name": "Space Marines 11e",
-      "game": "Warhammer 40k",
-      "source": "https://raw.githubusercontent.com/RosterizerData/Warhammer40k11e/main/Space_Marines.rulebook"
+      "name": "Space Marines",
+      "game": "Warhammer 40k 11e",
+      "source": "https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k11e/main/Space_Marines.rulebook"
     }
   ],
   "rulebook": {
@@ -379,6 +379,10 @@
         "assets": {
           "traits": [
             {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Deathwatch Veterans\n\n* Decimus Kill Team\n\n* Fortis Kill Team"
+            },
+            {
               "item": "Ability§Feel No Pain",
               "stats": {
                 "x": {
@@ -386,11 +390,8 @@
                 }
               }
             },
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* **Deathwatch Veterans**\n\n* **Fortis Kill Team**"
-            },
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
+            "Ability§Transhuman Strategist",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -420,7 +421,9 @@
             "Grenades",
             "Imperium",
             "Captain",
-            "Watch Captain Artemis"
+            "Watch Captain Artemis",
+            "Kill Team",
+            "Explosives"
           ],
           "Category": [
             "Epic Hero"
@@ -437,13 +440,13 @@
             "value": 1
           },
           "Points": {
-            "value": 65
+            "value": 75
           },
           "Sv": {
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 4
@@ -455,9 +458,10 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* **Deathwatch Veterans**\n\n* **Fortis Kill Team**"
+              "text": "This model can be attached to the following units:\n\n* Deathwatch Veterans\n\n* Decimus Kill Team\n\n* Fortis Kill Team"
             },
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
+            "Ability§Transhuman Strategist",
             "Ability§Strategic Knowledge",
             {
               "item": "Ability§Invulnerable",
@@ -468,7 +472,8 @@
               }
             },
             "Weapon§Watch Master—Vigil spear",
-            "Ability§Watch Master"
+            "Ability§Watch Master",
+            "Ability§Purgatus Quarry"
           ]
         },
         "keywords": {
@@ -485,7 +490,9 @@
             "Grenades",
             "Imperium",
             "Captain",
-            "Watch Master"
+            "Watch Master",
+            "Kill Team",
+            "Explosives"
           ],
           "Category": [
             "Character"
@@ -502,13 +509,13 @@
             "value": 1
           },
           "Points": {
-            "value": 95
+            "value": 105
           },
           "Sv": {
             "value": 2
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 5
@@ -518,7 +525,8 @@
       "Detachment§Black Spear Task Force": {
         "keywords": {
           "Role": [
-            "Priority Assets"
+            "Priority Assets",
+            "Purge The Foe"
           ]
         },
         "rules": {
@@ -536,7 +544,35 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Armour of Contempt"
+                "value": "Stratagem§Kraken Rounds"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Hellfire Rounds"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Dragonfire Rounds"
               },
               {
                 "actionType": "add",
@@ -578,35 +614,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Dragonfire Rounds"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Hellfire Rounds"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Kraken Rounds"
+                "value": "Stratagem§Armour of Contempt"
               }
             ],
             "evals": [],
@@ -786,7 +794,7 @@
             "value": 3
           }
         },
-        "text": "**MISSION TACTICS**\n\nAt the start of your Command phase, you can select one of the Mission Tactics listed below. Until the start of your next Command phase, that Mission Tactic is active and its effects apply to all units from your army with this ability. Each Mission Tactic can only be selected once per battle.\n\n**FUROR TACTICS**\n \nWhile this Mission Tactic is active, weapons equipped by Adeptus Astartes units from your army have the **[SUSTAINED HITS 1]** ability.\n\n**MALLEUS TACTICS**\n\n While this Mission Tactic is active, weapons equipped by Adeptus Astartes units from your army have the **[LETHAL HITS]** ability.\n\n**PURGATUS TACTICS**\n\nWhile this Mission Tactic is active, each time an Adeptus Astartes unit from your army makes an attack, if a Critical Hit is scored, that attack has the **[PRECISION]** ability.\n\nIf your Army Faction is Adeptus Astartes, you can \nuse this Black Spear Task Force Detachment rule.\n\nRESTRICTIONS\n\n* Your army can include **Adeptus Astartes Deathwatch** units, but it cannot include any **Adeptus Astartes** units drawn from any \nother Chapter.\n\n* With the exception of **Kill Team Cassius** (see Legends: Agents of the Imperium), your army cannot include any **Agents of the Imperium Deathwatch** units.\n\n* Your army cannot include any of the following units: **Assault Squad; Assault Squad with Jump Packs; Attack Bike Squad; Devastator Squad; Land Speeder Storm; Relic Terminator Squad; Scout Bike Squad; Scout Squad; Scout Sniper Squad; Tactical Squad; Terminator Assault Squad; Terminator Squad**."
+        "text": "**MISSION TACTICS**\n\nFriendly **KILL TEAM** units with this ability have the following abilities:\n\n**Furor Tactics**: If the **devastator doctrine** is active for your unit, your unit’s attacks have **[SUSTAINED HITS 1]**.\n**Malleus Tactics**: If the **tactical doctrine** is active for your unit, your unit’s attacks have **[LETHAL HITS]**.\n**Purgatus Tactics**: If the **assault doctrine** is active for your unit, your unit’s attacks that target an enemy unit within 9\" of this unit have **[PRECISION].\n\nRESTRICTIONS: YOUR ARMY CAN INCLUDE ADEPTUS ASTARTES DEATHWATCH** units, but it cannot include any **ADEPTUS ASTARTES** units drawn from any other Chapter.\nWith the exception of **KILL TEAM CASSIUS** (see _Legends: Agents of the Imperium_), your army cannot include any **AGENTS OF THE IMPERIUM DEATHWATCH** units."
       },
       "Enhancement§Beacon Angelis": {
         "keywords": {
@@ -812,6 +820,26 @@
             "evals": [],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "ADEPTUS ASTARTES model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Adeptus Astartes"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
@@ -822,7 +850,7 @@
             "visibility": "normal"
           }
         },
-        "text": "**Adeptus Astartes** model only. Models in the bearer’s unit have the Deep Strike ability. In addition, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP."
+        "text": "**ADEPTUS ASTARTES** model only. If this unit is a **KILL TEAM** unit, this unit has: \n- **Deep Strike**.\n- When you target this unit with the **Rapid Ingress Stratagem**, that use is -1CP."
       },
       "Enhancement§Osseus Key": {
         "keywords": {
@@ -870,7 +898,7 @@
           "Points": {
             "group": "Cost",
             "statType": "numeric",
-            "value": 15,
+            "value": 20,
             "visibility": "normal"
           }
         },
@@ -922,11 +950,11 @@
           "Points": {
             "group": "Cost",
             "statType": "numeric",
-            "value": 30,
+            "value": 15,
             "visibility": "normal"
           }
         },
-        "text": "**Watch Master** or **Captain** model only. Once per battle, after you have selected your Oath of Moment target, the bearer can use this Enhancement. If it does, select a second enemy unit to be an Oath of Moment target."
+        "text": "**WATCH MASTER/CAPTAIN** model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, the **assault doctrine**, **devastator doctrine** and **tactical doctrine** are active for this unit until the start of your next Command phase."
       },
       "Enhancement§Thief of Secrets": {
         "keywords": {
@@ -1043,7 +1071,7 @@
         "assets": {
           "traits": [
             "Ability§Deep Strike",
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Terminatus Assault",
             "Ability§Teleport Homer",
             {
@@ -1058,12 +1086,7 @@
             {
               "item": "Model§Deathwatch Terminator",
               "quantity": 4
-            },
-            {
-              "item": "Ability§Attached Unit",
-              "text": " If a **Character** from your army with the Leader ability can be attached to a **Terminator Squad**, it can be attached to this unit instead."
-            },
-            "Ability§Kill Team"
+            }
           ]
         },
         "keywords": {
@@ -1119,7 +1142,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 330
+            "value": 420
           },
           "model2ndTally": {
             "value": 10
@@ -1137,7 +1160,13 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 180
+            "value": 230
+          },
+          "unitDiscount": {
+            "value": 40
+          },
+          "unitDiscountThreshold": {
+            "value": 3
           }
         }
       },
@@ -1158,18 +1187,13 @@
         },
         "assets": {
           "traits": [
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Death To the Alien",
-            {
-              "item": "Ability§Attached Unit",
-              "text": "If a **Character** unit from your army with the Leader ability can be attached to a **Sternguard Veteran Squad**, it can be attached to this unit instead."
-            },
             "Model§Watch Sergeant",
             {
               "item": "Model§Deathwatch Veteran",
               "quantity": 4
-            },
-            "Ability§Kill Team"
+            }
           ]
         },
         "keywords": {
@@ -1186,7 +1210,8 @@
             "Kill Team",
             "Grenades",
             "Imperium",
-            "Deathwatch Veterans"
+            "Deathwatch Veterans",
+            "Explosives"
           ],
           "Category": [
             "Battleline"
@@ -1388,7 +1413,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 190
+            "value": 220
           },
           "model2ndTally": {
             "value": 10
@@ -1406,7 +1431,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 100
+            "value": 115
           }
         }
       },
@@ -1432,7 +1457,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Death To the Alien"
           ]
         },
@@ -1443,7 +1468,10 @@
             "Grenades",
             "Imperium",
             "Infantry",
-            "Kill Team"
+            "Kill Team",
+            "Explosives",
+            "Tacticus",
+            "Gravis"
           ],
           "Category": [
             "Battleline"
@@ -1461,7 +1489,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 190
+            "value": 210
           },
           "model2ndTally": {
             "value": 10
@@ -1475,7 +1503,7 @@
             "value": 5
           },
           "Points": {
-            "value": 100
+            "value": 110
           },
           "Unit Composition": {
             "dynamic": true,
@@ -1574,13 +1602,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Fortis Doctrines",
-            {
-              "item": "Ability§Attached Unit",
-              "text": "If a **Character** from your army with the Leader ability can be attached to an **Intercessor Squad**, it can be attached to this unit instead."
-            },
-            "Ability§Kill Team",
             "Model§Kill Team Sergeant"
           ]
         },
@@ -1598,7 +1621,8 @@
             "Grenades",
             "Imperium",
             "Tacticus",
-            "Fortis Kill Team"
+            "Fortis Kill Team",
+            "Explosives"
           ],
           "Category": [
             "Infantry"
@@ -2872,7 +2896,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 210
+            "value": 225
           },
           "unitDiscount": {
             "value": 15
@@ -2954,13 +2978,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Kill Team",
-            "Ability§Oath of Moment",
-            "Ability§Indomitor Doctrines",
-            {
-              "item": "Ability§Attached Unit",
-              "text": "If a **Character** unit from your army can be attached to a **Heavy Intercessor Squad**, it can be attached to this unit instead."
-            }
+            "Ability§Combat Doctrines",
+            "Ability§Indomitor Doctrines"
           ]
         },
         "keywords": {
@@ -2977,7 +2996,8 @@
             "Grenades",
             "Imperium",
             "Gravis",
-            "Indomitor Kill Team"
+            "Indomitor Kill Team",
+            "Explosives"
           ],
           "Category": [
             "Infantry"
@@ -4007,10 +4027,10 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 290
+            "value": 300
           },
           "unitDiscount": {
-            "value": 15
+            "value": 20
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -4060,21 +4080,17 @@
         "assets": {
           "traits": [
             "Ability§Infiltrators",
+            "Ability§Combat Doctrines",
+            "Ability§Spectrus Doctrines",
             {
               "item": "Ability§Scouts",
               "stats": {
                 "x": {
-                  "value": "6″"
+                  "value": "6\""
                 }
               }
             },
-            "Ability§Kill Team",
-            "Ability§Oath of Moment",
-            "Ability§Spectrus Doctrines",
-            {
-              "item": "Ability§Attached Unit",
-              "text": "If a **Character** from your army with the Leader ability can be attached to an **Infiltrator Squad**, it can be attached to this unit instead.\n\nIf this unit has a Leader unit attached to it during the Declare Battle Formations step, that Leader unit gains the **Infiltrators** and **Scouts 6\"** abilities.\n"
-            }
+            "Ability§Helix Gauntlet"
           ]
         },
         "keywords": {
@@ -4092,7 +4108,8 @@
             "Kill Team",
             "Phobos",
             "Smoke",
-            "Spectrus Kill Team"
+            "Spectrus Kill Team",
+            "Explosives"
           ],
           "Category": [
             "Infantry"
@@ -5184,7 +5201,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 180
+            "value": 195
           },
           "unitDiscount": {
             "value": 10
@@ -5247,14 +5264,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Kill Team",
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Deep Strike",
             "Ability§Talonstrike Doctrines",
-            {
-              "item": "Ability§Attached Unit",
-              "text": "If a **Character** unit from your army with the Leader ability can be attached to an **Assault Intercessors with Jump Packs** unit, it can be attached to this unit instead."
-            },
             "Model§Kill Team Sergeant with Jump Pack"
           ]
         },
@@ -5273,7 +5285,10 @@
             "Infantry",
             "Jump Pack",
             "Kill Team",
-            "Talonstrike Kill Team"
+            "Talonstrike Kill Team",
+            "Explosives",
+            "Gravis",
+            "Tacticus"
           ],
           "Category": [
             "Infantry"
@@ -5864,10 +5879,10 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 280
+            "value": 300
           },
           "unitDiscount": {
-            "value": 15
+            "value": 20
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -5906,39 +5921,14 @@
         },
         "assets": {
           "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "vehicle"
-                },
-                "x": {
-                  "value": "3+"
-                }
-              }
-            }
+            "Melee Weapon§Deathwatch Terminator Squad—Chainfist – hunter",
+            "Melee Weapon§Deathwatch Terminator Squad—Chainfist – standard"
           ]
         },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
-          },
-          "WS": {
-            "value": 4
-          }
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
         }
       },
       "Melee Weapon§Deathwatch Terminator Squad—Power fist": {
@@ -5973,7 +5963,7 @@
         },
         "stats": {
           "A": {
-            "value": 4
+            "value": 5
           },
           "AP": {
             "value": -2
@@ -6010,7 +6000,7 @@
             "value": -2
           },
           "D": {
-            "value": 2
+            "value": 3
           },
           "Range": {
             "statType": "term",
@@ -6020,7 +6010,7 @@
             "value": 8
           },
           "WS": {
-            "value": 4
+            "value": 3
           }
         }
       },
@@ -6035,7 +6025,7 @@
         },
         "stats": {
           "A": {
-            "value": 5
+            "value": 6
           },
           "AP": {
             "value": -2
@@ -6320,7 +6310,14 @@
         },
         "assets": {
           "traits": [
-            "Ability§Sustained Hits"
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -6331,7 +6328,7 @@
             "value": -2
           },
           "D": {
-            "value": 2
+            "value": 1
           },
           "Range": {
             "statType": "term",
@@ -6523,7 +6520,7 @@
             "value": -2
           },
           "D": {
-            "value": 2
+            "value": 3
           },
           "Range": {
             "statType": "term",
@@ -6597,168 +6594,31 @@
       "Melee Weapon§Kill Team Cassius—Artificer crozius": {
         "aspects": {
           "Label": "Artificer crozius"
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 2
-          }
         }
       },
       "Melee Weapon§Kill Team Cassius—Close combat weapon": {
         "aspects": {
           "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 3
-          }
         }
       },
       "Melee Weapon§Kill Team Cassius—Force weapon": {
         "aspects": {
           "Label": "Force weapon"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Psychic"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -3
-          },
-          "D": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 2
-          }
         }
       },
       "Melee Weapon§Kill Team Cassius—Long Vigil melee weapon": {
         "aspects": {
           "Label": "Long Vigil melee weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 3
-          }
         }
       },
       "Melee Weapon§Kill Team Cassius—Power fist": {
         "aspects": {
           "Label": "Power fist"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
-          },
-          "WS": {
-            "value": 3
-          }
         }
       },
       "Melee Weapon§Kill Team Cassius—Twin lightning claws": {
         "aspects": {
           "Label": "Twin lightning claws"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 3
-          }
         }
       },
       "Melee Weapon§Proteus Kill Team—Chainfist": {
@@ -7049,7 +6909,7 @@
             "value": "Melee"
           },
           "S": {
-            "value": 4
+            "value": 5
           },
           "WS": {
             "value": 3
@@ -7087,7 +6947,7 @@
             "value": "Melee"
           },
           "S": {
-            "value": 4
+            "value": 5
           },
           "WS": {
             "value": 3
@@ -7300,7 +7160,7 @@
             "value": "Melee"
           },
           "S": {
-            "value": 5
+            "value": 6
           },
           "WS": {
             "value": 2
@@ -7324,8 +7184,7 @@
             "value": -2
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "value": 2
           },
           "Range": {
             "statType": "term",
@@ -7391,26 +7250,6 @@
           "Category": [
             "Epic Hero"
           ]
-        },
-        "stats": {
-          "Ld": {
-            "value": 5
-          },
-          "M": {
-            "value": 6
-          },
-          "OC": {
-            "value": 2
-          },
-          "Sv": {
-            "value": 3
-          },
-          "T": {
-            "value": 4
-          },
-          "W": {
-            "value": 4
-          }
         }
       },
       "Model§Deathwatch Terminator": {
@@ -7507,7 +7346,7 @@
                     "trait": "Melee Weapon§Deathwatch Terminator Squad—Power fist"
                   },
                   {
-                    "trait": "Ranged Weapon§Deathwatch Terminator Squad (Agents)—Plasma cannon"
+                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Plasma cannon"
                   }
                 ]
               },
@@ -7588,11 +7427,23 @@
             "value": 2
           },
           "T": {
-            "value": 5
+            "value": 6
           },
           "W": {
             "value": 3
           }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "4+"
+                }
+              }
+            }
+          ]
         }
       },
       "Model§Deathwatch Terminator Sergeant": {
@@ -7610,7 +7461,7 @@
             "value": 2
           },
           "T": {
-            "value": 5
+            "value": 6
           },
           "Unique Loadouts": {
             "dynamic": true,
@@ -7682,6 +7533,18 @@
           "W": {
             "value": 3
           }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "4+"
+                }
+              }
+            }
+          ]
         }
       },
       "Model§Deathwatch Veteran": {
@@ -7796,7 +7659,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Deathwatch Veterans (Agents)—Infernus heavy bolter"
+                    "trait": "Ranged Weapon§Deathwatch Veterans—Infernus heavy bolter"
                   },
                   {
                     "trait": "Melee Weapon§Deathwatch Veterans—Close combat weapon"
@@ -7829,7 +7692,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 2
@@ -8379,7 +8242,7 @@
         "assets": {
           "traits": [
             "Melee Weapon§Indomitor Kill Team—Close combat weapon",
-            "Ranged Weapon§Indomitor Kill Team—Bolt pistol"
+            "Ranged Weapon§Deathwatch Armoury (Agents)—Bolt pistol"
           ]
         },
         "removed": {
@@ -8452,7 +8315,7 @@
             "value": 6
           },
           "M": {
-            "value": "10"
+            "value": 10
           },
           "OC": {
             "value": 1
@@ -8466,7 +8329,7 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Indomitor Kill Team—Assault bolters"
+                    "trait": "Ranged Weapon§Talonstrike Kill Team—Assault bolters"
                   }
                 ]
               },
@@ -8474,7 +8337,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Indomitor Kill Team—Plasma exterminators"
+                    "trait": "Ranged Weapon§Talonstrike Kill Team—Plasma exterminators"
                   }
                 ]
               }
@@ -8505,7 +8368,7 @@
             "value": 6
           },
           "M": {
-            "value": 12
+            "value": 10
           },
           "OC": {
             "value": 1
@@ -8552,7 +8415,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Deathwatch Armoury—Bolt pistol",
-            "Melee Weapon§Deathwatch Veterans—Close combat weapon"
+            "Melee Weapon§Indomitor Kill Team—Close combat weapon"
           ]
         },
         "stats": {
@@ -8674,7 +8537,7 @@
             "value": 6
           },
           "M": {
-            "value": 6
+            "value": 8
           },
           "OC": {
             "value": 1
@@ -8737,7 +8600,7 @@
             "value": 6
           },
           "M": {
-            "value": 6
+            "value": 8
           },
           "OC": {
             "value": 1
@@ -8828,7 +8691,7 @@
             "visibility": "normal"
           },
           "M": {
-            "value": 6
+            "value": 8
           },
           "OC": {
             "value": 1
@@ -8887,7 +8750,7 @@
             "value": 6
           },
           "M": {
-            "value": 6
+            "value": 8
           },
           "OC": {
             "value": 1
@@ -8961,7 +8824,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 2
@@ -8989,7 +8852,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 2
@@ -9045,7 +8908,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 2
@@ -9131,7 +8994,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 2
@@ -9244,10 +9107,10 @@
             "value": 6
           },
           "M": {
-            "value": 12
+            "value": 6
           },
           "OC": {
-            "value": 1
+            "value": 2
           },
           "Primary": {
             "dynamic": true,
@@ -9376,7 +9239,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 2
@@ -9412,7 +9275,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 2
@@ -9511,7 +9374,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 2
@@ -10219,7 +10082,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Deathwatch Veterans (Agents)—Infernus heavy bolter"
+                    "trait": "Ranged Weapon§Deathwatch Veterans—Infernus heavy bolter"
                   },
                   {
                     "trait": "Melee Weapon§Deathwatch Veterans—Close combat weapon"
@@ -10288,7 +10151,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 2
@@ -10329,13 +10192,19 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast"
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
           ]
         },
         "stats": {
           "A": {
-            "format": "D6",
-            "value": 1
+            "value": 4
           },
           "AP": {
             "value": 0
@@ -10360,6 +10229,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Twin-linked",
             {
               "item": "Ability§Rapid Fire",
               "stats": {
@@ -10367,8 +10237,7 @@
                   "value": "6"
                 }
               }
-            },
-            "Ability§Twin-linked"
+            }
           ]
         },
         "stats": {
@@ -10376,7 +10245,7 @@
             "value": 6
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -10388,7 +10257,7 @@
             "value": 24
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -10423,8 +10292,15 @@
         },
         "assets": {
           "traits": [
-            "Ability§Devastating Wounds",
-            "Ability§Twin-linked"
+            "Ability§Twin-linked",
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -10432,7 +10308,7 @@
             "value": 6
           },
           "AP": {
-            "value": 0
+            "value": -2
           },
           "BS": {
             "value": 3
@@ -10468,8 +10344,8 @@
             "value": 3
           },
           "D": {
-            "format": "D6",
-            "value": 1
+            "format": "D3",
+            "value": 3
           },
           "Range": {
             "value": 48
@@ -10515,7 +10391,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -10523,7 +10399,7 @@
             "value": 1
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -10535,7 +10411,7 @@
             "value": 12
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -10797,7 +10673,14 @@
         },
         "assets": {
           "traits": [
-            "Ability§Devastating Wounds"
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -10805,7 +10688,7 @@
             "value": 6
           },
           "AP": {
-            "value": 0
+            "value": -2
           },
           "BS": {
             "value": 3
@@ -10835,6 +10718,11 @@
           "Tags": [
             "Multi-weapon"
           ]
+        },
+        "stats": {
+          "Points": {
+            "value": 10
+          }
         }
       },
       "Ranged Weapon§Deathwatch Terminator Squad—Cyclone missile launcher – frag": {
@@ -10843,16 +10731,22 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast"
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
           ]
         },
         "stats": {
           "A": {
-            "format": "2D6",
-            "value": 0
+            "value": 8
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -10883,14 +10777,14 @@
             "value": 3
           },
           "D": {
-            "format": "D6",
-            "value": 0
+            "format": "D3",
+            "value": 3
           },
           "Range": {
             "value": 36
           },
           "S": {
-            "value": 9
+            "value": 10
           }
         }
       },
@@ -10900,14 +10794,20 @@
         },
         "assets": {
           "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
+            "Ability§Torrent",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
           ]
         },
         "stats": {
           "A": {
-            "format": "D6",
-            "value": 0
+            "value": 3
           },
           "AP": {
             "value": -1
@@ -10950,48 +10850,22 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast"
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
           ]
         },
         "stats": {
           "A": {
-            "statType": "term",
-            "value": "D3"
+            "value": 3
           },
           "AP": {
             "value": -2
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 7
-          }
-        }
-      },
-      "Ranged Weapon§Deathwatch Terminator Squad—Plasma cannon – supercharge": {
-        "aspects": {
-          "Label": "Supercharge"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast",
-            "Ability§Hazardous"
-          ]
-        },
-        "stats": {
-          "A": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "AP": {
-            "value": -3
           },
           "BS": {
             "value": 3
@@ -11003,7 +10877,45 @@
             "value": 36
           },
           "S": {
-            "value": 8
+            "value": 9
+          }
+        }
+      },
+      "Ranged Weapon§Deathwatch Terminator Squad—Plasma cannon – supercharge": {
+        "aspects": {
+          "Label": "Supercharge"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Hazardous",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -3
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 3
+          },
+          "Range": {
+            "value": 36
+          },
+          "S": {
+            "value": 10
           }
         }
       },
@@ -11028,7 +10940,7 @@
             "value": 2
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -11040,7 +10952,7 @@
             "value": 24
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -11050,10 +10962,10 @@
         },
         "stats": {
           "A": {
-            "value": 2
+            "value": 1
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -11065,28 +10977,11 @@
             "value": 24
           },
           "S": {
-            "value": 4
+            "value": 5
           }
-        }
-      },
-      "Ranged Weapon§Deathwatch Veterans—Combi-weapon": {
-        "aspects": {
-          "Label": "Combi-weapon"
         },
         "assets": {
           "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "infantry"
-                },
-                "x": {
-                  "value": "4+"
-                }
-              }
-            },
-            "Ability§Devastating Wounds",
             {
               "item": "Ability§Rapid Fire",
               "stats": {
@@ -11096,26 +10991,23 @@
               }
             }
           ]
+        }
+      },
+      "Ranged Weapon§Deathwatch Veterans—Combi-weapon": {
+        "aspects": {
+          "Label": "Combi-weapon"
         },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Deathwatch Veterans—Combi-weapon – damnatus",
+            "Ranged Weapon§Deathwatch Veterans—Combi-weapon – infernus",
+            "Ranged Weapon§Deathwatch Veterans—Combi-weapon – purgatus"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
         }
       },
       "Ranged Weapon§Deathwatch Veterans—Deathwatch shotgun": {
@@ -11132,7 +11024,7 @@
             "value": 2
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -11141,7 +11033,7 @@
             "value": 2
           },
           "Range": {
-            "value": 24
+            "value": 18
           },
           "S": {
             "value": 4
@@ -11154,13 +11046,21 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast",
-            "Ability§Heavy",
             {
               "item": "Ability§Rapid Fire",
               "stats": {
                 "x": {
-                  "value": "D3"
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Lethal Hits",
+            "Ability§Heavy",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
                 }
               }
             }
@@ -11168,14 +11068,13 @@
         },
         "stats": {
           "A": {
-            "statType": "term",
-            "value": "D3"
+            "value": 2
           },
           "AP": {
-            "value": -1
+            "value": -2
           },
           "BS": {
-            "value": 4
+            "value": 3
           },
           "D": {
             "value": 2
@@ -11194,8 +11093,8 @@
         },
         "assets": {
           "traits": [
-            "Ranged Weapon§Deathwatch Veterans—Infernus heavy bolter – heavy bolter",
-            "Ranged Weapon§Deathwatch Veterans—Infernus heavy bolter – heavy flamer"
+            "Ranged Weapon§Deathwatch Veterans—Infernus heavy bolter – bolt",
+            "Ranged Weapon§Deathwatch Veterans—Infernus heavy bolter – infernus"
           ]
         },
         "keywords": {
@@ -11409,28 +11308,28 @@
         },
         "assets": {
           "traits": [
-            "Ability§Heavy",
-            "Ability§Precision"
+            "Ability§Precision",
+            "Ability§Heavy"
           ]
         },
         "stats": {
           "A": {
-            "value": 2
+            "value": 1
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
           },
           "D": {
-            "value": 1
+            "value": 2
           },
           "Range": {
             "value": 24
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -11513,8 +11412,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol",
-            "Ability§Lethal Hits"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -11522,7 +11420,7 @@
             "value": 1
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -11534,7 +11432,7 @@
             "value": 12
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -11544,8 +11442,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Heavy",
-            "Ability§Lethal Hits"
+            "Ability§Lethal Hits",
+            "Ability§Heavy"
           ]
         },
         "stats": {
@@ -11575,23 +11473,29 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast",
-            "Ability§Heavy",
             {
               "item": "Ability§Rapid Fire",
               "stats": {
                 "x": {
-                  "value": "D3"
+                  "value": "1"
                 }
               }
             },
-            "Ability§Lethal Hits"
+            "Ability§Lethal Hits",
+            "Ability§Heavy",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
           ]
         },
         "stats": {
           "A": {
-            "statType": "term",
-            "value": "D3"
+            "value": 2
           },
           "AP": {
             "value": -2
@@ -11616,8 +11520,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Heavy",
             "Ability§Lethal Hits",
+            "Ability§Heavy",
             "Ability§Assault"
           ]
         },
@@ -11648,8 +11552,8 @@
         },
         "assets": {
           "traits": [
-            "Ranged Weapon§Decimus Kill Team—Infernus heavy bolter – heavy bolter",
-            "Ranged Weapon§Decimus Kill Team—Infernus heavy bolter – heavy flamer"
+            "Ranged Weapon§Decimus Kill Team—Infernus heavy bolter – bolt",
+            "Ranged Weapon§Decimus Kill Team—Infernus heavy bolter – infernus"
           ]
         },
         "keywords": {
@@ -11751,8 +11655,15 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
-            "Ability§Heavy"
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -11766,7 +11677,7 @@
             "value": 3
           },
           "D": {
-            "value": 1
+            "value": 2
           },
           "Range": {
             "value": 24
@@ -11782,9 +11693,16 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
             "Ability§Hazardous",
-            "Ability§Heavy"
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -11830,7 +11748,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -11861,7 +11779,7 @@
         "assets": {
           "traits": [
             "Ability§Hazardous",
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -11891,9 +11809,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol",
             "Ability§Precision",
-            "Ability§Lethal Hits"
+            "Ability§Lethal Hits",
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -11910,10 +11828,10 @@
             "value": 1
           },
           "Range": {
-            "value": 12
+            "value": 18
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -11923,9 +11841,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Heavy",
             "Ability§Precision",
-            "Ability§Lethal Hits"
+            "Ability§Lethal Hits",
+            "Ability§Heavy"
           ]
         },
         "stats": {
@@ -12028,7 +11946,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -12036,7 +11954,7 @@
             "value": 1
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -12048,7 +11966,7 @@
             "value": 12
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -12090,17 +12008,15 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast",
-            "Ability§Indirect Fire"
+            "Ability§Heavy"
           ]
         },
         "stats": {
           "A": {
-            "statType": "term",
-            "value": "D3"
+            "value": 2
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -12109,10 +12025,10 @@
             "value": 1
           },
           "Range": {
-            "value": 36
+            "value": 24
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -12122,15 +12038,13 @@
         },
         "assets": {
           "traits": [
-            "Ability§Ignores Cover",
             "Ability§Torrent",
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
           "A": {
-            "format": "D6",
-            "value": 0
+            "value": 3
           },
           "AP": {
             "value": 0
@@ -12144,10 +12058,10 @@
             "value": 1
           },
           "Range": {
-            "value": 12
+            "value": 9
           },
           "S": {
-            "value": 3
+            "value": 4
           }
         }
       },
@@ -12157,7 +12071,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -12177,7 +12091,7 @@
             "value": 18
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -12252,8 +12166,15 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
-            "Ability§Heavy"
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -12267,7 +12188,7 @@
             "value": 3
           },
           "D": {
-            "value": 1
+            "value": 2
           },
           "Range": {
             "value": 24
@@ -12283,9 +12204,16 @@
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
             "Ability§Hazardous",
-            "Ability§Heavy"
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -12331,7 +12259,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -12362,7 +12290,7 @@
         "assets": {
           "traits": [
             "Ability§Hazardous",
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -12392,17 +12320,23 @@
         },
         "assets": {
           "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
+            "Ability§Torrent",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
           ]
         },
         "stats": {
           "A": {
-            "format": "D6",
-            "value": 0
+            "value": 3
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {},
           "D": {
@@ -12460,23 +12394,28 @@
         "assets": {
           "traits": [
             "Ability§Heavy",
-            "Ability§Blast"
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
           ]
         },
         "stats": {
           "A": {
-            "format": "D6",
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
             "value": 4
           },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 3
+          },
           "D": {
-            "statType": "term",
-            "value": "1"
+            "value": 1
           },
           "Range": {
             "value": 48
@@ -12497,18 +12436,17 @@
         },
         "stats": {
           "A": {
-            "statType": "term",
-            "value": "1"
+            "value": 1
           },
           "AP": {
             "value": -2
           },
           "BS": {
-            "value": 4
+            "value": 3
           },
           "D": {
-            "format": "D6",
-            "value": 1
+            "format": "D3",
+            "value": 3
           },
           "Range": {
             "value": 48
@@ -12554,20 +12492,27 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast",
-            "Ability§Indirect Fire"
+            "Ability§Indirect Fire",
+            "Ability§Heavy",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
           ]
         },
         "stats": {
           "A": {
-            "format": "D6",
-            "value": 0
+            "value": 4
           },
           "AP": {
             "value": -1
           },
           "BS": {
-            "value": 2
+            "value": 3
           },
           "D": {
             "value": 2
@@ -12626,7 +12571,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Twin-linked"
+            "Ability§Twin-linked",
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -12634,7 +12580,7 @@
             "value": 3
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -12646,7 +12592,7 @@
             "value": 18
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -12656,7 +12602,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -12664,7 +12610,7 @@
             "value": 1
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -12676,7 +12622,7 @@
             "value": 12
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -12686,33 +12632,14 @@
         },
         "assets": {
           "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent",
-            "Ability§Twin-linked"
+            "Ranged Weapon§Indomitor Kill Team—Flamestorm gauntlets – standard",
+            "Ranged Weapon§Indomitor Kill Team—Flamestorm gauntlets – close quarters"
           ]
         },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "format": "{t}",
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
-          }
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
         }
       },
       "Ranged Weapon§Indomitor Kill Team—Fragstorm grenade launcher": {
@@ -12721,16 +12648,22 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blast"
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
           ]
         },
         "stats": {
           "A": {
-            "format": "D6",
-            "value": 0
+            "value": 3
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -12831,15 +12764,8 @@
         },
         "assets": {
           "traits": [
-            {
-              "item": "Ability§Melta",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            },
-            "Ability§Heavy"
+            "Ranged Weapon§Indomitor Kill Team—Melta rifle – standard",
+            "Ranged Weapon§Indomitor Kill Team—Melta rifle – hunter"
           ]
         },
         "removed": {
@@ -12849,26 +12775,10 @@
             ]
           }
         },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -4
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "format": "D6",
-            "value": 0
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 9
-          }
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
         }
       },
       "Ranged Weapon§Indomitor Kill Team—Multi-melta": {
@@ -12877,15 +12787,8 @@
         },
         "assets": {
           "traits": [
-            {
-              "item": "Ability§Melta",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            },
-            "Ability§Heavy"
+            "Ranged Weapon§Indomitor Kill Team—Multi-melta – standard",
+            "Ranged Weapon§Indomitor Kill Team—Multi-melta – hunter"
           ]
         },
         "removed": {
@@ -12895,26 +12798,10 @@
             ]
           }
         },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -4
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "format": "D6",
-            "value": 0
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 9
-          }
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
         }
       },
       "Ranged Weapon§Indomitor Kill Team—Plasma exterminators": {
@@ -13001,236 +12888,43 @@
       "Ranged Weapon§Kill Team Cassius—Bolt pistol": {
         "aspects": {
           "Label": "Bolt pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
-          }
         }
       },
       "Ranged Weapon§Kill Team Cassius—Boltgun": {
         "aspects": {
           "Label": "Boltgun"
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
         }
       },
       "Ranged Weapon§Kill Team Cassius—Deathwatch twin boltgun": {
         "aspects": {
           "Label": "Deathwatch twin boltgun"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
         }
       },
       "Ranged Weapon§Kill Team Cassius—Frag cannon": {
         "aspects": {
           "Label": "Frag cannon"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast",
-            "Ability§Heavy",
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "D3"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 7
-          }
         }
       },
       "Ranged Weapon§Kill Team Cassius—Heavy flamer": {
         "aspects": {
           "Label": "Heavy flamer"
         },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
-          ]
-        },
         "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": -1
-          },
           "BS": {
             "format": "{t}",
             "statType": "term",
             "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 5
           }
         }
       },
       "Ranged Weapon§Kill Team Cassius—Long Vigil ranged weapon": {
         "aspects": {
           "Label": "Long Vigil ranged weapon"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "infantry"
-                },
-                "x": {
-                  "value": "4+"
-                }
-              }
-            },
-            "Ability§Devastating Wounds",
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
         }
       },
       "Ranged Weapon§Kill Team Cassius—Psychic Cleanse": {
         "aspects": {
           "Label": "Psychic Cleanse"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Psychic"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 5
-          }
         }
       },
       "Ranged Weapon§Proteus Kill Team—Boltgun": {
@@ -13432,7 +13126,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -13440,7 +13134,7 @@
             "value": 1
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -13452,7 +13146,7 @@
             "value": 12
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -13462,8 +13156,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Heavy",
-            "Ability§Precision"
+            "Ability§Precision",
+            "Ability§Heavy"
           ]
         },
         "stats": {
@@ -13483,7 +13177,7 @@
             "value": 36
           },
           "S": {
-            "value": 5
+            "value": 6
           }
         }
       },
@@ -13494,18 +13188,34 @@
         "assets": {
           "traits": [
             "Wargear§Instigator bolt carbine",
-            "Ability§Heavy"
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            "Ability§Precision",
+            {
+              "item": "Ability§Lethal Hits",
+              "stats": {
+                "x": {
+                  "value": "(non-MONSTER/VEHICLE)"
+                }
+              }
+            }
           ]
         },
         "stats": {
           "A": {
-            "value": 1
+            "value": 2
           },
           "AP": {
             "value": -2
           },
           "BS": {
-            "value": 3
+            "value": 2
           },
           "D": {
             "value": 2
@@ -13514,7 +13224,7 @@
             "value": 24
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -13538,14 +13248,14 @@
             "value": 3
           },
           "D": {
-            "format": "D6",
-            "value": 0
+            "format": "D3",
+            "value": 3
           },
           "Range": {
             "value": 36
           },
           "S": {
-            "value": 9
+            "value": 10
           }
         }
       },
@@ -13618,8 +13328,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol",
-            "Ability§Precision"
+            "Ability§Precision",
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -13639,7 +13349,7 @@
             "value": 12
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -13649,7 +13359,6 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol",
             "Ability§Assault",
             "Ability§Twin-linked",
             {
@@ -13659,7 +13368,8 @@
                   "value": "2"
                 }
               }
-            }
+            },
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -13689,28 +13399,28 @@
         },
         "assets": {
           "traits": [
-            "Ability§Ignores Cover",
             "Ability§Torrent",
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
           "A": {
-            "format": "D6",
-            "value": 0
+            "value": 3
           },
           "AP": {
             "value": 0
           },
-          "BS": {},
+          "BS": {
+            "value": 7
+          },
           "D": {
             "value": 1
           },
           "Range": {
-            "value": 12
+            "value": 9
           },
           "S": {
-            "value": 3
+            "value": 4
           }
         }
       },
@@ -13720,7 +13430,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -13740,7 +13450,7 @@
             "value": 18
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -13750,8 +13460,8 @@
         },
         "assets": {
           "traits": [
-            "Ranged Weapon§Talonstrike kill team—Plasma exterminators– standard",
-            "Ranged Weapon§Talonstrike kill team—Plasma exterminators– supercharge"
+            "Ranged Weapon§Talonstrike Kill Team—Plasma exterminators – standard",
+            "Ranged Weapon§Talonstrike Kill Team—Plasma exterminators – supercharge"
           ]
         },
         "keywords": {
@@ -13833,8 +13543,8 @@
         },
         "assets": {
           "traits": [
-            "Ranged Weapon§Talonstrike kill team—Plasma pistol– standard",
-            "Ranged Weapon§Talonstrike kill team—Plasma pistol– supercharge"
+            "Ranged Weapon§Talonstrike Kill Team—Plasma pistol – standard",
+            "Ranged Weapon§Talonstrike Kill Team—Plasma pistol – supercharge"
           ]
         },
         "keywords": {
@@ -14021,6 +13731,9 @@
         },
         "assets": {
           "traits": [
+            "Ability§Torrent",
+            "Ability§Ignores Cover",
+            "Ability§Devastating Wounds",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -14031,16 +13744,12 @@
                   "value": "4+"
                 }
               }
-            },
-            "Ability§Devastating Wounds",
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
+            }
           ]
         },
         "stats": {
           "A": {
-            "format": "D6",
-            "value": 0
+            "value": 3
           },
           "AP": {
             "value": -1
@@ -14082,7 +13791,7 @@
             "value": 24
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -14197,6 +13906,7 @@
       "Stratagem§Adaptive Tactics": {
         "keywords": {
           "Keywords": [
+            "Adeptus Astartes",
             "Black Spear Task Force"
           ],
           "Phase": [
@@ -14209,11 +13919,12 @@
             "Yours"
           ]
         },
-        "text": "**WHEN:** Your Command phase.\n\n**TARGET:** Up to two **Kill Team** units from your army, or one other **Adeptus Astartes** unit from your army.\n\n**EFFECT:** For each unit targeted, select Furor Tactics, Malleus Tactics or Purgatus Tactics. Until the start of your next Command phase, that Mission Tactic is active for that unit instead of any Mission Tactic that is active for your army."
+        "text": "**WHEN:** Your Command phase.\n\n**TARGET:** One friendly **ADEPTUS ASTARTES** unit.\n\n**EFFECT:** Select one **combat doctrine**. That **combat doctrine** is active for your unit until the start of your next Command phase."
       },
       "Stratagem§Armour of Contempt": {
         "keywords": {
           "Keywords": [
+            "Adeptus Astartes",
             "Black Spear Task Force"
           ],
           "Phase": [
@@ -14224,15 +13935,16 @@
             "Battle Tactic"
           ],
           "Turn": [
-            "Opponent’s",
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "text": ""
+        "text": "**WHEN:** Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS ASTARTES** unit.\n\n**TARGET:** That **ADEPTUS ASTARTES** unit.\n\n**EFFECT:** Attacks that target your unit have -1 **AP** until that enemy unit has attacked."
       },
       "Stratagem§Dragonfire Rounds": {
         "keywords": {
           "Keywords": [
+            "Adeptus Astartes",
             "Black Spear Task Force"
           ],
           "Phase": [
@@ -14245,11 +13957,12 @@
             "Yours"
           ]
         },
-        "text": "**WHEN:** Your Shooting phase.\n\n**TARGET:** One **Kill Team** unit from your army that has not been selected to shoot this phase.\n\n**EFFECT:** Until the end of the phase, ranged weapons equipped by models in your unit have the **[ASSAULT]** and **[IGNORES COVER]** abilities.\n\n**RESTRICTIONS:** You cannot select any units that have already been targeted with either the Kraken Rounds or Hellfire Rounds Stratagems this phase."
+        "text": "**WHEN:** Your Shooting phase when a **KILL TEAM** unit is selected to shoot.\n\n**TARGET:** That **KILL TEAM** unit.\n\n**EFFECT:** Your unit’s ranged attacks: \n- Can re-roll **wound rolls** of 1.\n- Have **[IGNORES COVER]**."
       },
       "Stratagem§Hellfire Rounds": {
         "keywords": {
           "Keywords": [
+            "Adeptus Astartes",
             "Black Spear Task Force"
           ],
           "Phase": [
@@ -14262,11 +13975,12 @@
             "Yours"
           ]
         },
-        "text": "**WHEN:** Your Shooting phase.\n\n**TARGET:** One **Kill Team** unit from your army that has not been selected to shoot this phase.\n\n**EFFECT:** Until the end of the phase, ranged weapons (excluding **Devastating Wounds** weapons) equipped by models in your unit have the **[ANTI-INFANTRY 2+]** and **[ANTI-MONSTER 5+]** abilities.\n\n**RESTRICTIONS:** You cannot select any units that have already been targeted with either the Kraken Rounds or Dragonfire Rounds Stratagems this phase."
+        "text": "**WHEN:** Your Shooting phase when a **KILL TEAM** unit is selected to shoot.\n\n**TARGET:** That **KILL TEAM** unit.\n\n**EFFECT:** Your unit’s ranged attacks (excluding **[DEVASTATING WOUNDS]** attacks) have **[ANTI-****non-****VEHICLE 4+]**."
       },
       "Stratagem§Kraken Rounds": {
         "keywords": {
           "Keywords": [
+            "Adeptus Astartes",
             "Black Spear Task Force"
           ],
           "Phase": [
@@ -14279,11 +13993,12 @@
             "Yours"
           ]
         },
-        "text": "**WHEN:** Your Shooting phase.\n\n**TARGET:** One **Kill Team** unit from your army that has not been selected to shoot this phase.\n\n**EFFECT:** Until the end of the phase, improve the Armour Penetration characteristic of ranged weapons equipped by models in your unit by 1 and improve the Range characteristic of those weapons by 6\".\n\n**RESTRICTIONS:** You cannot select any units that have already been targeted with either the Dragonfire Rounds or Hellfire Rounds Stratagems this phase."
+        "text": "**WHEN:** Your Shooting phase when a **KILL TEAM** unit is selected to shoot.\n\n**TARGET:** That **KILL TEAM** unit.\n\n**EFFECT:** Your unit’s ranged attacks: \n- Have +6” **R**.\n- Have +1 **S**."
       },
       "Stratagem§Site-To-Site Teleportation": {
         "keywords": {
           "Keywords": [
+            "Adeptus Astartes",
             "Black Spear Task Force"
           ],
           "Phase": [
@@ -14296,7 +14011,7 @@
             "Opponent’s"
           ]
         },
-        "text": "**WHEN:** End of your opponent’s Fight phase.\n\n**TARGET:** Up to two **Kill Team** units from your army, or one other **Adeptus Astartes** Infantry unit from your army, if those units are not within Engagement Range of one or more enemy units.\n\n**EFFECT:** Remove those units from the battlefield and place them into Strategic Reserves. Until the end of your next Movement phase, models in those units that do not have the Deep Strike ability have the Deep Strike ability."
+        "text": "**WHEN:** End of your opponent’s Fight phase.\n\n**TARGET:** One friendly **unengaged** **ADEPTUS ASTARTES INFANTRY** unit.\n\n**EFFECT:** - Place your unit in **strategic reserves**.\n\n- If your unit has **KILL TEAM**, your unit has **DEEP STRIKE** until the end of your next Movement phase."
       },
       "Vehicle§Corvus Blackstar": {
         "assets": {
@@ -14311,7 +14026,7 @@
             },
             "Ability§Hover",
             "Ability§Stealth",
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Blackstar Cluster Launcher",
             {
               "item": "Ability§Damaged:",
@@ -14342,7 +14057,8 @@
             "Fly",
             "Imperium",
             "Transport",
-            "Corvus Blackstar"
+            "Corvus Blackstar",
+            "Smoke"
           ],
           "Category": [
             "Vehicle"
@@ -14400,8 +14116,7 @@
             "value": 6
           },
           "M": {
-            "statType": "term",
-            "value": "20+"
+            "value": 14
           },
           "OC": {
             "value": 0
@@ -14550,6 +14265,1798 @@
           "traits": [
             "Melee Weapon§Watch Master—Vigil spear",
             "Ranged Weapon§Watch Master—Vigil spear"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
+        }
+      },
+      "Detachment§Assault Brethren": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Devastator Brethren"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Tactical Brethren"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Devastator Brethren": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Assault Brethren"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Tactical Brethren"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Tactical Brethren": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Assault Brethren"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Devastator Brethren"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Gravis Linebreaker Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Gravis Siege Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Gravis Siege Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Gravis Linebreaker Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Phobos Shadow Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Phobos Shock Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Phobos Shock Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Phobos Shadow Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Tacticus Attack Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Tacticus Firestorm Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Tacticus Firestorm Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Tacticus Attack Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Enhancement§The Thief of Secrets": {
+        "text": "**WATCH MASTER/CAPTAIN** model only. This model has the following weapon:",
+        "keywords": {
+          "Keywords": [
+            "Black Spear Task Force"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 10
+          }
+        },
+        "rules": {
+          "WATCH MASTER/CAPTAIN model only.": {
+            "evals": [
+              {
+                "actionable": false,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Watch Master"
+              },
+              {
+                "actionable": false,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Captain"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "OR",
+                "value": true,
+                "paths": [
+                  [
+                    "{this}",
+                    "evals",
+                    "0",
+                    "result",
+                    "truthy"
+                  ],
+                  [
+                    "{this}",
+                    "evals",
+                    "1",
+                    "result",
+                    "truthy"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Enhancement§Osseus Key (Aura)": {
+        "text": "**WATCH MASTER/TECHMARINE** model only. While an enemy **VEHICLE** unit is within 6” of this model, that enemy unit’s attacks have -1 **A**.",
+        "keywords": {
+          "Keywords": [
+            "Black Spear Task Force"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 20
+          }
+        },
+        "rules": {
+          "WATCH MASTER/TECHMARINE model only.": {
+            "evals": [
+              {
+                "actionable": false,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Watch Master"
+              },
+              {
+                "actionable": false,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Techmarine"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "OR",
+                "value": true,
+                "paths": [
+                  [
+                    "{this}",
+                    "evals",
+                    "0",
+                    "result",
+                    "truthy"
+                  ],
+                  [
+                    "{this}",
+                    "evals",
+                    "1",
+                    "result",
+                    "truthy"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Melee Weapon§Deathwatch Terminator Squad—Chainfist – standard": {
+        "aspects": {
+          "Label": "Chainfist – Standard"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 2
+          },
+          "WS": {
+            "value": 4
+          },
+          "S": {
+            "value": 8
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          }
+        }
+      },
+      "Melee Weapon§Deathwatch Terminator Squad—Chainfist – hunter": {
+        "aspects": {
+          "Label": "Chainfist – Hunter"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 12
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 3
+          }
+        }
+      },
+      "Ranged Weapon§Deathwatch Veterans—Combi-weapon – purgatus": {
+        "aspects": {
+          "Label": "Combi-weapon – Purgatus"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 7
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Deathwatch Veterans—Combi-weapon – damnatus": {
+        "aspects": {
+          "Label": "Combi-weapon – Damnatus"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 9
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D3",
+            "value": 2
+          }
+        }
+      },
+      "Ranged Weapon§Deathwatch Veterans—Combi-weapon – infernus": {
+        "aspects": {
+          "Label": "Combi-weapon – Infernus"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Torrent",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Deathwatch Veterans—Infernus heavy bolter – infernus": {
+        "aspects": {
+          "Label": "Infernus Heavy Bolter – Infernus"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Torrent",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Deathwatch Veterans—Infernus heavy bolter – bolt": {
+        "aspects": {
+          "Label": "Infernus Heavy Bolter – Bolt"
+        },
+        "stats": {
+          "Range": {
+            "value": 36
+          },
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            "Ability§Heavy"
+          ]
+        }
+      },
+      "Melee Weapon§Deathwatch Veterans—Heavy Thunder Hammer": {
+        "aspects": {
+          "Label": "Heavy Thunder Hammer"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 3
+          },
+          "WS": {
+            "value": 4
+          },
+          "S": {
+            "value": 10
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 3
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Devastating Wounds"
+          ]
+        }
+      },
+      "Melee Weapon§Deathwatch Veterans—Knives and Fists": {
+        "aspects": {
+          "Label": "Knives and Fists"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Ranged Weapon§Decimus Kill Team—Infernus heavy bolter – infernus": {
+        "aspects": {
+          "Label": "Infernus Heavy Bolter – Infernus"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Torrent",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Decimus Kill Team—Infernus heavy bolter – bolt": {
+        "aspects": {
+          "Label": "Infernus Heavy Bolter – Bolt"
+        },
+        "stats": {
+          "Range": {
+            "value": 36
+          },
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            "Ability§Heavy"
+          ]
+        }
+      },
+      "Ranged Weapon§Decimus Kill Team—Grenade Launcher – frag": {
+        "aspects": {
+          "Label": "Grenade Launcher – Frag"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Decimus Kill Team—Grenade Launcher – krak": {
+        "aspects": {
+          "Label": "Grenade Launcher – Krak"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 10
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 3
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Decimus Kill Team—Grenade Launcher": {
+        "aspects": {
+          "Label": "Grenade Launcher"
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Decimus Kill Team—Grenade Launcher – frag",
+            "Ranged Weapon§Decimus Kill Team—Grenade Launcher – krak"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
+        }
+      },
+      "Melee Weapon§Decimus Kill Team—Knives and Fists": {
+        "aspects": {
+          "Label": "Knives and Fists"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Ranged Weapon§Fortis Kill Team—Deathwatch Bolt Rifle": {
+        "aspects": {
+          "Label": "Deathwatch Bolt Rifle"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Lethal Hits",
+            "Ability§Heavy",
+            "Ability§Assault"
+          ]
+        }
+      },
+      "Ranged Weapon§Fortis Kill Team—Grenade Launcher – frag": {
+        "aspects": {
+          "Label": "Grenade Launcher – Frag"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Fortis Kill Team—Grenade Launcher – krak": {
+        "aspects": {
+          "Label": "Grenade Launcher – Krak"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 10
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 3
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Fortis Kill Team—Grenade Launcher": {
+        "aspects": {
+          "Label": "Grenade Launcher"
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Fortis Kill Team—Grenade Launcher – frag",
+            "Ranged Weapon§Fortis Kill Team—Grenade Launcher – krak"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
+        }
+      },
+      "Melee Weapon§Fortis Kill Team—Knives and Fists": {
+        "aspects": {
+          "Label": "Knives and Fists"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Melee Weapon§Fortis Kill Team—Chainsword": {
+        "aspects": {
+          "Label": "Chainsword"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 4
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Ranged Weapon§Indomitor Kill Team—Deathwatch Heavy Bolt Rifle": {
+        "aspects": {
+          "Label": "Deathwatch Heavy Bolt Rifle"
+        },
+        "stats": {
+          "Range": {
+            "value": 30
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Lethal Hits",
+            "Ability§Heavy",
+            "Ability§Assault"
+          ]
+        }
+      },
+      "Ranged Weapon§Indomitor Kill Team—Deathwatch Heavy Bolter": {
+        "aspects": {
+          "Label": "Deathwatch Heavy Bolter"
+        },
+        "stats": {
+          "Range": {
+            "value": 36
+          },
+          "A": {
+            "value": 3
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 3
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Lethal Hits",
+            "Ability§Heavy",
+            "Ability§Assault"
+          ]
+        }
+      },
+      "Ranged Weapon§Indomitor Kill Team—Flamestorm gauntlets – close quarters": {
+        "aspects": {
+          "Label": "Flamestorm Gauntlets – Close Quarters"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Close-quarters",
+            "Ability§Twin-linked",
+            "Ability§Torrent"
+          ]
+        }
+      },
+      "Ranged Weapon§Indomitor Kill Team—Flamestorm gauntlets – ranged": {
+        "aspects": {
+          "Label": "Flamestorm Gauntlets – Ranged"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Twin-linked",
+            "Ability§Torrent",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Indomitor Kill Team—Melta rifle – hunter": {
+        "aspects": {
+          "Label": "Melta Rifle – Hunter"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 12
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D3",
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Indomitor Kill Team—Multi-melta – hunter": {
+        "aspects": {
+          "Label": "Multi-melta – Hunter"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 12
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D3",
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Melee Weapon§Indomitor Kill Team—Twin Power Fists": {
+        "aspects": {
+          "Label": "Twin Power Fists"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 8
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Twin-linked"
+          ]
+        }
+      },
+      "Melee Weapon§Indomitor Kill Team—Ceramite Fists": {
+        "aspects": {
+          "Label": "Ceramite Fists"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Ranged Weapon§Spectrus Kill Team—Deathwatch Occulus Bolt Carbine": {
+        "aspects": {
+          "Label": "Deathwatch Occulus Bolt Carbine"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Lethal Hits",
+            "Ability§Ignores Cover",
+            "Ability§Assault"
+          ]
+        }
+      },
+      "Ranged Weapon§Spectrus Kill Team—Deathwatch Marksman Bolt Carbine": {
+        "aspects": {
+          "Label": "Deathwatch Marksman Bolt Carbine"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Lethal Hits",
+            "Ability§Heavy"
+          ]
+        }
+      },
+      "Ranged Weapon§Spectrus Kill Team—Deathwatch Bolt Carbine": {
+        "aspects": {
+          "Label": "Deathwatch Bolt Carbine"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Precision",
+            "Ability§Lethal Hits"
+          ]
+        }
+      },
+      "Melee Weapon§Spectrus Kill Team—Ceramite Fists": {
+        "aspects": {
+          "Label": "Ceramite Fists"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Ranged Weapon§Talonstrike Kill Team—Plasma exterminators – standard": {
+        "aspects": {
+          "Label": "Plasma Exterminators – Standard"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 7
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Twin-linked",
+            "Ability§Assault",
+            "Ability§Close-quarters"
+          ]
+        }
+      },
+      "Ranged Weapon§Talonstrike Kill Team—Plasma exterminators – supercharge": {
+        "aspects": {
+          "Label": "Plasma Exterminators – Supercharge"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 8
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 3
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Close-quarters",
+            "Ability§Assault",
+            "Ability§Hazardous",
+            "Ability§Twin-linked"
+          ]
+        }
+      },
+      "Ranged Weapon§Talonstrike Kill Team—Plasma pistol – standard": {
+        "aspects": {
+          "Label": "Plasma Pistol – Standard"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 7
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Close-quarters"
+          ]
+        }
+      },
+      "Ranged Weapon§Talonstrike Kill Team—Plasma pistol – supercharge": {
+        "aspects": {
+          "Label": "Plasma Pistol – Supercharge"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 8
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Hazardous",
+            "Ability§Close-quarters"
+          ]
+        }
+      },
+      "Melee Weapon§Talonstrike Kill Team—Chainsword": {
+        "aspects": {
+          "Label": "Chainsword"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 4
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Melee Weapon§Talonstrike Kill Team—Ceramite Fists": {
+        "aspects": {
+          "Label": "Ceramite Fists"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Ability§Veteran Recruits": {
+        "text": "Your army cannot include the following **ADEPTUS ASTARTES** units:\n- **SCOUT SQUAD** units.\n- **TERMINATOR SQUAD** units.\n- **TERMINATOR ASSAULT SQUAD** units."
+      },
+      "Ability§Helix Gauntlet": {
+        "text": "In your Command phase, this unit heals D3 wounds."
+      },
+      "Ability§Purgatus Quarry": {
+        "text": "At the start of the first battle round, select up to one enemy unit to be this unit’s **hunted**:\n\n- This unit’s attacks that target this unit’s **hunted** unit can re-roll wound rolls of 1.\n\n- Each time this unit’s **hunted** is destroyed, select up to one enemy unit to be this unit’s **hunted**."
+      },
+      "Ranged Weapon§Deathwatch Armoury (Agents)—Bolt pistol": {
+        "stats": {
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Close-quarters"
+          ]
+        },
+        "removed": {
+          "assets": {
+            "traits": [
+              "Ability§Pistol"
+            ]
+          }
+        }
+      },
+      "Ranged Weapon§Indomitor Kill Team—Flamestorm gauntlets – standard": {
+        "aspects": {
+          "Label": "Flamestorm gauntlets – standard"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            "Ability§Torrent",
+            "Ability§Twin-linked"
+          ]
+        }
+      },
+      "Ranged Weapon§Indomitor Kill Team—Melta rifle – standard": {
+        "aspects": {
+          "Label": "Melta rifle – standard"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 10
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D3",
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Indomitor Kill Team—Multi-melta – standard": {
+        "aspects": {
+          "Label": "Multi-melta – standard"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 10
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D3",
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Talonstrike Kill Team—Plasma exterminators": {
+        "aspects": {
+          "Label": "Plasma exterminators"
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Talonstrike Kill Team—Plasma exterminators – standard",
+            "Ranged Weapon§Talonstrike Kill Team—Plasma exterminators – supercharge"
           ]
         },
         "keywords": {

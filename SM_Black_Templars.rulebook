@@ -1,6 +1,6 @@
 {
   "name": "Black Templars 11e",
-  "revision": "11.0.4",
+  "revision": "11.1.11",
   "game": "Warhammer 40k",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -10,9 +10,9 @@
   "dependencies": [
     {
       "slug": "",
-      "name": "Space Marines 11e",
-      "game": "Warhammer 40k",
-      "source": "https://raw.githubusercontent.com/RosterizerData/Warhammer40k11e/main/Space_Marines.rulebook"
+      "name": "Space Marines",
+      "game": "Warhammer 40k 11e",
+      "source": "https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k11e/main/Space_Marines.rulebook"
     }
   ],
   "rulebook": {
@@ -373,12 +373,11 @@
         "assets": {
           "traits": [
             {
-              "item": "Ability§Leader",
-              "text": "* Before the battle, Character units with the Leader ability can be attached to one of their Bodyguard units to form an Attached unit.\n* Attached units can only contain one Leader.\n* Attacks cannot be allocated to Character models in Attached units.\n\nThis model can be attached to the following units:\n\n* Assault Intercessor Squad\n\n* Infernus Squad\n\n* Intercessor Squad\n\n* Crusader Squad\n\n* Sword Brethren\n\n* Sternguard Veteran Squad \n\nYou can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+              "item": "Ability§Support",
+              "text": "This model can be attached to the following units:\n\n* Assault Intercessor Squad\n\n* Bladeguard Veteran Squad\n\n* Company Heroes\n\n* Crusader Squad\n\n* Infernus Squad\n\n* Intercessor Squad\n\n* Sternguard Veteran Squad\n\n* Sword Brethren Squad"
             },
-            "Ability§Oath of Moment",
-            "Ability§Vehement Aggression",
-            "Ability§Prioritised Eradication"
+            "Ability§Combat Doctrines",
+            "Ability§Vehement Aggression"
           ]
         },
         "keywords": {
@@ -396,7 +395,8 @@
             "Imperium",
             "Infantry",
             "Lieutenant",
-            "Tacticus"
+            "Tacticus",
+            "Explosives"
           ],
           "Category": [
             "Character"
@@ -488,7 +488,7 @@
             "value": 1
           },
           "Points": {
-            "value": 70
+            "value": 75
           },
           "Ranged Option": {
             "dynamic": true,
@@ -520,7 +520,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 4
@@ -534,6 +534,10 @@
         "assets": {
           "traits": [
             {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Assault Intercessor Squad\n\n* Crusader Squad\n\n* Infernus Squad\n\n* Intercessor Squad\n\n* Sword Brethren Squad"
+            },
+            {
               "item": "Ability§Feel No Pain",
               "stats": {
                 "x": {
@@ -541,11 +545,7 @@
                 }
               }
             },
-            {
-              "item": "Ability§Leader",
-              "text": "This unit can be attached to the following units:\n\n* Assault Intercessor Squad\n\n* Infernus Squad\n\n* Intercessor Squad\n\n* Primaris Crusader Squad\n\n* Primaris Sword Brethren"
-            },
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Litanies of the Devout",
             {
               "item": "Ability§Temple Relics",
@@ -563,7 +563,11 @@
             {
               "item": "Model§Cenobyte Servitor",
               "quantity": 3
-            }
+            },
+            "Ability§Faithful Cenobytes",
+            "Ability§Banner of the Emperor Victorious",
+            "Ability§Column from the Major Altar",
+            "Ability§Water from the Stoup of Elucidation"
           ]
         },
         "keywords": {
@@ -579,7 +583,8 @@
             "Epic Hero",
             "Imperium",
             "Infantry",
-            "Tacticus"
+            "Tacticus",
+            "Chaplain"
           ],
           "Category": [
             "Epic Hero"
@@ -598,7 +603,7 @@
             "value": 4
           },
           "Points": {
-            "value": 110
+            "value": 120
           }
         }
       },
@@ -606,9 +611,10 @@
         "assets": {
           "traits": [
             {
-              "item": "Ability§Leader",
-              "text": "\n\nThis model can be attached to the following units: \n* Crusader Squad \n* Sword Brethren Squad.\n\nYou can attach this model to one of those units even if one Captain, Chapter Master, Execrator, or Lieutenant model has already been attached to it. If the Bodyguard unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths.\n"
+              "item": "Ability§Support",
+              "text": "This model can be attached to the following units:\n\n* Crusader Squad\n\n* Sword Brethren Squad"
             },
+            "Ability§Combat Doctrines",
             "Ability§Martial Honour",
             "Ability§Vengeful Exhortation",
             "Ranged Weapon§Crusade Ancient—Bolt pistol",
@@ -622,7 +628,9 @@
             "Grenades",
             "Imperium",
             "Infantry",
-            "Tacticus"
+            "Tacticus",
+            "Explosives",
+            "Character"
           ],
           "Category": [
             "Character"
@@ -727,7 +735,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 4
@@ -739,8 +747,9 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "\n\nThis model can lead the following units:\n\n* Crusader Squad\n* Sword Brethren"
+              "text": "This model can be attached to the following units:\n\n* Crusader Squad\n\n* Sword Brethren Squad"
             },
+            "Ability§Combat Doctrines",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -762,7 +771,8 @@
             "Grenades",
             "Imperium",
             "Infantry",
-            "Tacticus"
+            "Tacticus",
+            "Explosives"
           ],
           "Faction": [
             "Adeptus Astartes",
@@ -823,13 +833,13 @@
             "value": 1
           },
           "Points": {
-            "value": 60
+            "value": 65
           },
           "Sv": {
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 4
@@ -844,9 +854,10 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Assault Intercessor Squad\n\n* Intercessor Squad\n\n* Crusader Squad\n\n* Sword Brethren"
+              "text": "This model can be attached to the following units:\n\n* Assault Intercessor Squad\n\n* Bladeguard Veteran Squad\n\n* Company Heroes\n\n* Crusader Squad\n\n* Intercessor Squad\n\n* Sword Brethren Squad"
             },
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
+            "Ability§Transhuman Strategist",
             "Ability§Crusade of Wrath",
             "Ability§High Marshal",
             {
@@ -877,7 +888,8 @@
             "High Marshal Helbrecht",
             "Imperium",
             "Infantry",
-            "Tacticus"
+            "Tacticus",
+            "Explosives"
           ],
           "Category": [
             "Epic Hero"
@@ -894,13 +906,13 @@
             "value": 3
           },
           "Points": {
-            "value": 120
+            "value": 125
           },
           "Sv": {
             "value": 2
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 6
@@ -912,9 +924,10 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Assault Intercessor Squad\n\n* Infernus Squad\n\n* Intercessor Squad\n\n* Crusader Squad\n\n* Sword Brethren\n\n* Sternguard Veteran Squad"
+              "text": "This model can be attached to the following units:\n\n* Assault Intercessor Squad\n\n* Bladeguard Veteran Squad\n\n* Crusader Squad\n\n* Infernus Squad\n\n* Intercessor Squad\n\n* Sternguard Veteran Squad\n\n* Sword Brethren Squad"
             },
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
+            "Ability§Transhuman Strategist",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -943,7 +956,8 @@
             "Imperium",
             "Infantry",
             "Marshal",
-            "Tacticus"
+            "Tacticus",
+            "Explosives"
           ],
           "Category": [
             "Character"
@@ -960,7 +974,7 @@
             "value": 1
           },
           "Points": {
-            "value": 90
+            "value": 80
           },
           "Ranged Option": {
             "dynamic": true,
@@ -992,20 +1006,20 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "unitDiscount": {
-            "value": 10
+            "value": 0
           },
           "unitDiscountThreshold": {
-            "value": 2
+            "value": 0
           },
           "W": {
             "value": 5
           }
         }
       },
-      "Character§The Emperor’s Champion": {
+      "Character§Emperor’s Champion": {
         "aspects": {
           "Unique": true
         },
@@ -1013,7 +1027,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Assault Intercessor Squad\n\n* Intercessor Squad\n\n* Crusader Squad\n\n* Sword Brethren\n\n* Sternguard Veteran Squad"
+              "text": "This model can be attached to the following units:\n\n* Assault Intercessor Squad\n\n* Crusader Squad\n\n* Intercessor Squad\n\n* Sternguard Veteran Squad\n\n* Sword Brethren Squad"
             },
             "Ability§Oath of Moment",
             "Ability§Armour of Faith",
@@ -1026,9 +1040,11 @@
                 }
               }
             },
-            "Ranged Weapon§The Emperor’s Champion—Bolt pistol",
-            "Melee Weapon§The Emperor’s Champion—Black Sword",
-            "Ability§Lone Operative"
+            "Ranged Weapon§Emperor’s Champion—Bolt pistol",
+            "Melee Weapon§Emperor’s Champion—Black Sword",
+            "Ability§Lone Operative",
+            "Ability§Combat Doctrines",
+            "Ability§Chosen of the Emperor"
           ]
         },
         "keywords": {
@@ -1045,7 +1061,8 @@
             "Grenades",
             "Imperium",
             "Tacticus",
-            "The Emperor’s Champion"
+            "Emperor’s Champion",
+            "Explosives"
           ],
           "Category": [
             "Character"
@@ -1068,230 +1085,12 @@
             "value": 2
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 5
           }
         }
-      },
-      "Detachment§Companions of Vehemence": {
-        "keywords": {
-          "Keywords": [
-            "Companions of Vehemence"
-          ],
-          "Role": [
-            "Purge The Foe"
-          ]
-        },
-        "rules": {
-          "assignStratagems": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Heresy Begets Retribution"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Hearts Hardened to Duty"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Pious Enmity"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§For the Emperor's Honour"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Dread Crusaders"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Devout Push"
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "stats": {
-          "Detachment Points": {
-            "value": 2
-          }
-        },
-        "text": "**Righteous Fervour**\n\nYou can re-roll Advance and Charge rolls made for Adeptus Astartes units from your army."
-      },
-      "Detachment§Godhammer Assault Force": {
-        "keywords": {
-          "Keywords": [
-            "Godhammer Assault Force"
-          ],
-          "Role": [
-            "Disruption"
-          ]
-        },
-        "rules": {
-          "assignStratagems": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Condemnatory Info-Screed"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Blessed Hull"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Uncompromising Egress"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Focused Hatred"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§A Ceaseless Cause"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Gauntlet of the God-Emperor"
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "stats": {
-          "Detachment Points": {
-            "value": 2
-          }
-        },
-        "text": "## Shock and Awe\n\nEach time an Adeptus Astartes unit from your army declares a charge, if it disembarked from a Transport this turn, after selecting the targets of that charge, select one of those targets; that enemy unit must take a Battle-shock test.\n\nEach time a model in an Adeptus Astartes unit from your army makes a melee attack, if it disembarked from a Transport this turn, add 1 to the Hit roll."
       },
       "Detachment§Ironstorm Spearhead": {
         "keywords": {
@@ -1301,7 +1100,7 @@
         },
         "stats": {
           "Detachment Points": {
-            "value": 2
+            "value": 1
           }
         }
       },
@@ -1316,137 +1115,7 @@
             "value": 1
           }
         },
-        "text": "WARNING: this detachment was not in 10e and needs importing.\n\n**Faith-fuelled Resolve**\nFriendly **Sword Brethren squad** units have +1 **OC**.\n**Restrictions:** Your army can include **Black Templars** units, but it cannot include any **Adeptus Astartes** units drawn from any other Chapter."
-      },
-      "Detachment§The Living Miracle": {
-        "keywords": {
-          "Role": [
-            "Purge The Foe"
-          ]
-        },
-        "stats": {
-          "Detachment Points": {
-            "value": 1
-          }
-        },
-        "text": "WARNING: this detachment was not in 10e and needs importing.\n\n**Anointed Champion**\n- When a friendly **Emperor’s Champion** unit is **selected to fight**, that model’s melee attacks can:\n\n- Re-roll __one__ **hit roll**.\n\n- Re-roll __one__ **wound roll**.\n\n- **Enhancements** selected from this **detachment** do not count towards the total number of **enhancements** in your army.\n**Restrictions:** Your army can include **Black Templars** units, but it cannot include any **Adeptus Astartes** units drawn from any other Chapter."
-      },
-      "Detachment§Vindication Task Force": {
-        "keywords": {
-          "Keywords": [
-            "Vindication Task Force"
-          ],
-          "Role": [
-            "Priority Assets"
-          ]
-        },
-        "rules": {
-          "asignStratagem": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Recitation of the Revered"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Perfervid Intervention"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Refusal to Yield"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Reclaim Our Honour!"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Spoor of the Unholy"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Litanies of Purgation"
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "stats": {
-          "Detachment Points": {
-            "value": 2
-          }
-        },
-        "text": "## Purge and Sanctify\n\nEach time an attack targets an Ancient unit from your army, if that unit is within range of one or more objective markers and the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.\n\nEach time a Crusader Squad unit from your army makes a Righteous Zeal move, that unit can end that move as close as possible to the closest objective marker instead of as close as possible to the closest enemy unit."
-      },
-      "Detachment§Wrathful Procession": {
-        "keywords": {
-          "Keywords": [],
-          "Role": [
-            "Take And Hold"
-          ]
-        },
+        "text": "**FAITH-FUELLED RESOLVE**\n\nIn the Fight phase, if a friendly **SWORD BRETHREN SQUAD** unit is within range of an **objective**, that unit’s melee attacks have +1 **A**.\n\n**Restrictions:** Your army can include **BLACK TEMPLARS** units, but it cannot include any **ADEPTUS ASTARTES** units drawn from any other Chapter.",
         "rules": {
           "assignStratagems": {
             "actions": [
@@ -1462,7 +1131,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Armour of Contempt"
+                "value": "Stratagem§Slayers of Abominations"
               },
               {
                 "actionType": "add",
@@ -1476,7 +1145,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Fuelled by Faith"
+                "value": "Stratagem§Unsparing Execution"
               },
               {
                 "actionType": "add",
@@ -1490,67 +1159,19 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Brute Fervour"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Relentless Momentum"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Castigate the Demagogues"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Voice of Devotion"
+                "value": "Stratagem§Blade of Detestation"
               }
             ],
             "evals": [],
             "evaluate": "AND",
             "failState": "pass"
           }
-        },
-        "stats": {
-          "Detachment Points": {
-            "value": 1
-          }
-        },
-        "text": "ZEALOUS LITANIES\n\nAt the start of the battle round, you can\nselect one of the Litanies listed below. If\nyou do, until the end of the battle round,\nthat Litany is active and its effects apply\nto all **Adeptus Astartes Infantry** and\n**Adeptus Astartes Mounted** units from\nyour army.\n\n**Chorus of Relentless Hate:**\nAdd 2\" to the Move characteristic of\nmodels in this unit and add 1 to Advance\nrolls made for it.\n\n**Rite of Perfervid Wrath:**\nAdd 1 to the Strength characteristic of\nmelee weapons equipped by models in\nthis unit.\n\n**Chant of Deathless Devotion:**\nModels in this unit have a 5+\ninvulnerable save against ranged attacks.\n\nRESTRICTIONS\n\nYour army can include\n**Black Templars** units, but it *cannot*\ninclude **Adeptus Astartes** units drawn\nfrom any other Chapter."
+        }
       },
-      "Enhancement§Adaptable Executioner": {
+      "Enhancement§Augury Servo-Host": {
         "keywords": {
           "Keywords": [
-            "Wrathful Procession"
+            "Vow-sworn Crusaders"
           ]
         },
         "stats": {
@@ -1558,87 +1179,9 @@
             "value": 20
           }
         },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Execrator** model only. When this unit is **selected to fight**, this model’s melee attacks have:\n\n- **[Cleave 1]**.\n\n- __Or:__ **[Precision]**."
-      },
-      "Enhancement§Adept of the Omnissiah": {
-        "keywords": {
-          "Keywords": [
-            "Ironstorm Spearhead"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 35
-          }
-        },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**TECHMARINE** model only. Once per battle round, when a saving throw is failed for a friendly **ADEPTUS ASTARTES VEHICLE** model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0."
-      },
-      "Enhancement§Augury Servo-Host": {
-        "keywords": {
-          "Keywords": [
-            "Godhammer Assault Force"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "Adeptus Astartes model only. At the start of your Shooting phase, select one enemy unit within 12\" and visible to the bearer. Until the end of the phase, models in that unit cannot have the Benefit of Cover."
-      },
-      "Enhancement§Battle-Psalm Precentor": {
-        "keywords": {
-          "Keywords": [
-            "Godhammer Assault Force"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "Adeptus Astartes model only. Each time the bearer's unit declares a charge, if an enemy unit takes a Battle-shock test as a result of the Shock and Awe Detachment rule, subtract 1 from that Battle-shock test."
-      },
-      "Enhancement§Benediction of Fury": {
-        "keywords": {
-          "Keywords": [
-            "Wrathful Procession"
-          ]
-        },
+        "text": "**ADEPTUS ASTARTES** model only. In your Shooting phase, you can select one **visible** enemy unit within 18” of this unit. That enemy unit cannot have the **benefit of cover**.",
         "rules": {
-          "apply": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits",
-                    "classification",
-                    "Melee Weapon",
-                    "traits"
-                  ],
-                  [
-                    "{parent}",
-                    "traits",
-                    "classIdentity",
-                    "Weapon",
-                    "traits",
-                    "classification",
-                    "Melee Weapon",
-                    "traits"
-                  ]
-                ],
-                "value": "Ability§Devastating Wounds"
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 90
-          },
-          "Chaplain model only.": {
+          "ADEPTUS ASTARTES model only.": {
             "evals": [
               {
                 "actionable": true,
@@ -1649,27 +1192,21 @@
                   [
                     "{parent}",
                     "keywords",
-                    "Keywords"
+                    "Faction"
                   ]
                 ],
-                "value": "Chaplain"
+                "value": "Adeptus Astartes"
               }
             ],
             "evaluate": "AND",
             "failState": "error"
           }
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "**Chaplain** model only. The bearer’s melee weapons\nhave the **[DEVASTATING WOUNDS]** ability."
+        }
       },
       "Enhancement§Consecrating Aura": {
         "keywords": {
           "Keywords": [
-            "Vindication Task Force"
+            "Vow-sworn Crusaders"
           ]
         },
         "rules": {
@@ -1703,62 +1240,8 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 50
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "Adeptus Astartes model only. Models in the bearer's unit have a 5+ invulnerable save."
-      },
-      "Enhancement§Fervent Exemplars (Upgrade)": {
-        "keywords": {
-          "Keywords": [
-            "Marshal'S Household"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Sword Brethren squad** unit only. This unit has +1 to **charge rolls**."
-      },
-      "Enhancement§Guiding Omens": {
-        "keywords": {
-          "Keywords": [
-            "The Living Miracle"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**EMPEROR’S CHAMPION** model only. At the start of the first battle round, you can select up to three of the following abilities. This model has those abilities until the end of the battle:\n\n- **Instrument of the God‑Emperor (Once per battle, per army): **In the Fight phase, when this unit is **selected to fight**, if this unit is **engaged** with an enemy **CHARACTER** unit, you can use this ability. If you do, this model’s melee attacks have **[DEVASTATING WOUNDS]**. \n\n- **Foreseen Paths of the Unholy:** This unit has ‑3\" **detection range**. \n\n- **Vision of Momentous Brutality:** This model’s melee attacks have +2 **A**. \n\n- **Augury of Retribution:** Melee attacks that target this unit have **[HAZARDOUS]**. \n\n- **Omen of Sacred Intervention:** When you target this unit with the **Heroic Intervention stratagem**, that use is ‑1 CP. \n\n- **Harbinger of Judgement:** When an enemy unit (excluding **MONSTER/VEHICLE** units) **engaged** with this model is selected to make a **fall‑back move**, roll one D6: \n\n- On a 2+, that enemy unit suffers D6 **mortal wounds**."
-      },
-      "Enhancement§Herald of Sacred Slaughter": {
-        "keywords": {
-          "Keywords": [
-            "Godhammer Assault Force"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "Adeptus Astartes model only. In the Declare Battle Formations step, if the bearer starts the battle embarked within a Dedicated Transport, that Dedicated Transport has Scouts 9\" ability."
-      },
-      "Enhancement§Imperialis of the Eternal Crusade": {
-        "keywords": {
-          "Keywords": [
-            "Vindication Task Force"
-          ]
-        },
-        "rules": {
-          "Ancient model only.": {
+          },
+          "ADEPTUS ASTARTES model only.": {
             "evals": [
               {
                 "actionable": true,
@@ -1769,10 +1252,10 @@
                   [
                     "{parent}",
                     "keywords",
-                    "Keywords"
+                    "Faction"
                   ]
                 ],
-                "value": "Ancient"
+                "value": "Adeptus Astartes"
               }
             ],
             "evaluate": "AND",
@@ -1781,15 +1264,77 @@
         },
         "stats": {
           "Points": {
-            "value": 15
+            "value": 20
           }
         },
-        "text": "Ancient model only. Each time an enemy unit selects the bearer's unit as a target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers that that Charge roll)."
+        "text": "**ADEPTUS ASTARTES** model only. This unit has 5+ **InSv**."
+      },
+      "Enhancement§Fervent Exemplars (Upgrade)": {
+        "keywords": {
+          "Keywords": [
+            "Marshal's Household"
+          ],
+          "Tags": [
+            "Upgrade"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 10
+          }
+        },
+        "text": "**SWORD BRETHREN SQUAD** unit only. This unit has +1 to **charge rolls**.",
+        "removed": {
+          "keywords": {
+            "Tags": [
+              "Character Only"
+            ]
+          }
+        },
+        "aspects": {
+          "Unique": false
+        },
+        "rules": {
+          "SWORD BRETHREN SQUAD unit only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Sword Brethren"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Squad"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Enhancement§Incendiary Animus": {
         "keywords": {
           "Keywords": [
-            "Companions Of Vehemence"
+            "Vow-sworn Crusaders"
           ]
         },
         "rules": {
@@ -1833,12 +1378,15 @@
             "value": 25
           }
         },
-        "text": "Chaplain or Judiciar model only. Improve the Armour Penetration characteristic of melee weapons equipped by models in the bearer's unit by 1."
+        "text": "**CHAPLAIN/JUDICIAR** model only. This unit’s melee attacks have +1 **S**."
       },
       "Enhancement§Inheritors of Sigismund (Upgrade)": {
         "keywords": {
           "Keywords": [
-            "Marshal'S Household"
+            "Marshal's Household"
+          ],
+          "Tags": [
+            "Upgrade"
           ]
         },
         "stats": {
@@ -1846,29 +1394,19 @@
             "value": 15
           }
         },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Sword Brethren squad** unit only. This unit has **Fights First**."
-      },
-      "Enhancement§Master of Machine War": {
-        "keywords": {
-          "Keywords": [
-            "Ironstorm Spearhead"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 20
+        "text": "**SWORD BRETHREN SQUAD** unit only. This unit has **Fights First**.",
+        "removed": {
+          "keywords": {
+            "Tags": [
+              "Character Only"
+            ]
           }
         },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**ADEPTUS ASTARTES** model only. In your Command phase, select one **ADEPTUS ASTARTES VEHICLE** model within 6\" of the bearer. Until the start of your next Command phase, that **VEHICLE** is eligible to shoot even if it Fell Back or Advanced this turn."
-      },
-      "Enhancement§Merciless Denunciation": {
-        "keywords": {
-          "Keywords": [
-            "Companions Of Vehemence"
-          ]
+        "aspects": {
+          "Unique": false
         },
         "rules": {
-          "Chaplain or Judiciar model only.": {
+          "SWORD BRETHREN SQUAD unit only.": {
             "evals": [
               {
                 "actionable": true,
@@ -1882,7 +1420,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Chaplain"
+                "value": "Sword Brethren"
               },
               {
                 "actionable": true,
@@ -1896,24 +1434,18 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Judiciar"
+                "value": "Squad"
               }
             ],
-            "evaluate": "OR",
+            "evaluate": "AND",
             "failState": "error"
           }
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "Chaplain or Judiciar model only. Each time a model in the bearer's unit makes a melee attack, you can re-roll the Hit roll."
+        }
       },
       "Enhancement§Oathbound Exemplar": {
         "keywords": {
           "Keywords": [
-            "Companions Of Vehemence"
+            "Fist of the God-Emperor"
           ]
         },
         "rules": {
@@ -1940,105 +1472,10 @@
         },
         "stats": {
           "Points": {
-            "value": 15
-          }
-        },
-        "text": "Adeptus Astartes Infantry model only. Add 1 to the Advance rolls made for the bearer's unit. If the mission pack you are playing features Actions, the bearer's unit is eligible to start to perform an Action in a turn in which it Advanced."
-      },
-      "Enhancement§Orb of the Emperor's Aegis": {
-        "rules": {
-          "apply": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "traits"
-                  ],
-                  [
-                    "{parent}",
-                    "traits"
-                  ]
-                ],
-                "value": "Ability§Deep Strike"
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "stats": {
-          "Points": {
             "value": 10
           }
         },
-        "text": "Adeptus Astartes model only. Models in the bearer's unit have the Deep Strike ability."
-      },
-      "Enhancement§Orb of the Emperor’s Aegis": {
-        "keywords": {
-          "Keywords": [
-            "Vindication Task Force"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**ADEPTUS ASTARTES** model only. Models in the bearer’s unit have the Deep Strike ability."
-      },
-      "Enhancement§Paragon of Fury": {
-        "keywords": {
-          "Keywords": [
-            "Godhammer Assault Force"
-          ]
-        },
-        "rules": {
-          "apply": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "S",
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classIdentity",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "S",
-                    "value"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "Adeptus Astartes model only. Add 2 to the Strength characteristic of melee weapons equipped by the bearer. Each time a melee attack mode by the bearer is allocated to an enemy model, if the bearer disembarked from a Transport this turn, add 1 to the Damage characteristic of that attack."
+        "text": "**ADEPTUS ASTARTES INFANTRY** unit only. When this unit is selected to make an **advance/fall-back move**, that **advance/fall-back move** does not prevent this unit from being **eligible to start an action**."
       },
       "Enhancement§Perdition’s Edge": {
         "keywords": {
@@ -2121,47 +1558,6 @@
         },
         "text": "Adeptus Astartes model only.\n* Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1.\n* If the Suffer Not the Unclean to Live vow is active for your army, add 1 to the Attacks characteristic of the bearer’s melee weapons as well."
       },
-      "Enhancement§Pyrebrand": {
-        "rules": {
-          "apply": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits"
-                  ],
-                  [
-                    "{parent}",
-                    "{parent}",
-                    "traits"
-                  ]
-                ],
-                "value": "Ability§Stealth"
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "**Black Templars** model only. Models in the bearer’s\nunit have the Stealth ability."
-      },
-      "Enhancement§Sacred Rage": {
-        "stats": {
-          "Points": {
-            "value": 30
-          }
-        },
-        "text": "**Adeptus Astartes** model only. Once per battle,\nat the start of the Fight phase, the bearer can use\nthis Enhancement. If it does, until the end of\nthe phase, models in the bearer’s unit have the\nFights First ability."
-      },
       "Enhancement§Sigismund’s Seal": {
         "keywords": {
           "Keywords": [
@@ -2231,75 +1627,6 @@
           }
         },
         "text": "Adeptus Astartes model only.\n* Each time an attack is allocated to the bearer, halve the Damage characteristic of that attack.\n* While the bearer is leading a unit, if the Uphold the Honour of the Emperor vow is active for your army, models in that unit have the Feel No Pain 5+ ability."
-      },
-      "Enhancement§Taramond's Censer": {
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "**Black Templars** model only. At the start of the Fight\nphase, each enemy unit within Engagement Range of\nthe bearer’s unit must take a Battle‑shock test. When\ndoing so, subtract 1 from the result."
-      },
-      "Enhancement§Target Augury Web": {
-        "keywords": {
-          "Keywords": [
-            "Ironstorm Spearhead"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 30
-          }
-        },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**TECHMARINE** model only. In your Command phase, select one **ADEPTUS ASTARTES VEHICLE** model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that **VEHICLE** model have the **[LETHAL HITS]** ability."
-      },
-      "Enhancement§The Flesh Is Weak": {
-        "keywords": {
-          "Keywords": [
-            "Ironstorm Spearhead"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**ADEPTUS ASTARTES** model only. The bearer has the Feel No Pain 4+ ability."
-      },
-      "Enhancement§Warden of Honour": {
-        "keywords": {
-          "Keywords": [
-            "Vindication Task Force"
-          ]
-        },
-        "rules": {
-          "Crusade Ancient model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Crusade Ancient"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "Crusade Ancient model only. While the bearer is leading a unit, each time you roll one D6 for the bearer's Vengeful Exhortation ability, add 1 to the result."
       },
       "Enhancement§Witchseeker Bolts": {
         "keywords": {
@@ -2401,7 +1728,7 @@
       "Enhancement§Zealous Vanguard": {
         "keywords": {
           "Keywords": [
-            "Companions Of Vehemence"
+            "Vow-sworn Crusaders"
           ]
         },
         "rules": {
@@ -2435,14 +1762,34 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 50
+          },
+          "ADEPTUS ASTARTES model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Adeptus Astartes"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
           "Points": {
-            "value": 20
+            "value": 25
           }
         },
-        "text": "Adeptus Astartes model only. Models in the bearer's unit have the Scouts 6\" ability."
+        "text": "**ADEPTUS ASTARTES** model only. This unit has **Scouts 6\"**."
       },
       "Infantry/Mounted§Crusader Squad (Old)": {
         "allowed": {
@@ -2467,7 +1814,7 @@
             }
           ],
           "traits": [
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Righteous Zeal",
             "Ability§Attached Unit",
             {
@@ -2773,7 +2120,7 @@
           }
         }
       },
-      "Infantry/Mounted§Primaris Crusader Squad": {
+      "Infantry/Mounted§Crusader Squad": {
         "allowed": {
           "items": [
             "Model§Initiate",
@@ -2782,7 +2129,7 @@
             "Character§Chaplain Grimaldus",
             "Character§High Marshal Helbrecht",
             "Character§Marshal",
-            "Character§The Emperor’s Champion",
+            "Character§Emperor’s Champion",
             "Character§Captain",
             "Character§Lieutenant",
             "Character§Chaplain",
@@ -2812,8 +2159,8 @@
           "traits": [
             "Ability§Oath of Moment",
             "Ability§Righteous Zeal",
-            "Ability§Attached Unit",
-            "Model§Sword Brother"
+            "Model§Sword Brother",
+            "Ability§Combat Doctrines"
           ]
         },
         "keywords": {
@@ -2830,7 +2177,8 @@
             "Grenades",
             "Imperium",
             "Infantry",
-            "Tacticus"
+            "Tacticus",
+            "Explosives"
           ],
           "Category": [
             "Battleline"
@@ -2878,7 +2226,7 @@
             "value": 10
           },
           "model2ndCost": {
-            "value": 300
+            "value": 305
           },
           "model2ndTally": {
             "value": 20
@@ -2900,11 +2248,11 @@
             "visibility": "hidden"
           },
           "Points": {
-            "value": 150
+            "value": 160
           }
         }
       },
-      "Infantry/Mounted§Primaris Sword Brethren": {
+      "Infantry/Mounted§Sword Brethren Squad": {
         "allowed": {
           "items": [
             "Model§Primaris Sword Brother - Sword Brethren",
@@ -2912,7 +2260,7 @@
             "Character§Chaplain Grimaldus",
             "Character§High Marshal Helbrecht",
             "Character§Marshal",
-            "Character§The Emperor’s Champion",
+            "Character§Emperor’s Champion",
             "Character§Captain",
             "Character§Lieutenant",
             "Character§Chaplain",
@@ -2932,11 +2280,11 @@
           "traits": [
             "Ability§Oath of Moment",
             "Ability§Exploit Their Cowardice",
-            "Ability§Attached Unit",
             {
               "item": "Model§Primaris Sword Brother - Sword Brethren",
               "quantity": 4
-            }
+            },
+            "Ability§Combat Doctrines"
           ]
         },
         "keywords": {
@@ -2952,7 +2300,8 @@
             "Imperium",
             "Infantry",
             "Sword Brethren",
-            "Tacticus"
+            "Tacticus",
+            "Explosives"
           ],
           "Category": [
             "Infantry"
@@ -3073,19 +2422,19 @@
             "value": 4
           },
           "model2ndCost": {
-            "value": 130
+            "value": 160
           },
           "model2ndTally": {
             "value": 5
           },
           "model3rdCost": {
-            "value": 235
+            "value": 270
           },
           "model3rdTally": {
             "value": 9
           },
           "model4thCost": {
-            "value": 260
+            "value": 295
           },
           "model4thTally": {
             "value": 10
@@ -3103,7 +2452,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 105
+            "value": 135
           },
           "Sword Brethren": {
             "max": 10,
@@ -3112,6 +2461,12 @@
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
+          },
+          "unitDiscount": {
+            "value": 20
+          },
+          "unitDiscountThreshold": {
+            "value": 3
           }
         }
       },
@@ -3142,7 +2497,7 @@
             "Character§Azrael",
             "Character§Lazarus",
             "Character§Gabriel Seth",
-            "Character§The Emperor’s Champion",
+            "Character§Emperor’s Champion",
             "Character§Blood Angels Captain",
             "Character§Lieutenant Titus",
             "Character§Uriel Ventris"
@@ -3574,7 +2929,7 @@
             "value": "Melee"
           },
           "S": {
-            "value": 5
+            "value": 6
           },
           "WS": {
             "value": 2
@@ -3587,7 +2942,7 @@
         },
         "stats": {
           "A": {
-            "value": 5
+            "value": 6
           },
           "AP": {
             "value": -2
@@ -3600,7 +2955,7 @@
             "value": "Melee"
           },
           "S": {
-            "value": 7
+            "value": 6
           },
           "WS": {
             "value": 2
@@ -3668,9 +3023,21 @@
         "aspects": {
           "Label": "Astartes chainsword"
         },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        },
         "stats": {
           "A": {
-            "value": 3
+            "value": 4
           },
           "AP": {
             "value": -1
@@ -3696,7 +3063,7 @@
         },
         "stats": {
           "A": {
-            "value": 2
+            "value": 3
           },
           "AP": {
             "value": 0
@@ -3748,7 +3115,7 @@
         },
         "stats": {
           "A": {
-            "value": 2
+            "value": 3
           },
           "AP": {
             "value": -2
@@ -3880,6 +3247,18 @@
           "WS": {
             "value": 2
           }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Cleave",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
         }
       },
       "Melee Weapon§Execrator—Master-crafted power weapon": {
@@ -3888,8 +3267,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Extra Attacks",
-            "Ability§Lethal Hits"
+            "Ability§Lethal Hits",
+            "Ability§Extra Attacks"
           ]
         },
         "stats": {
@@ -3907,7 +3286,7 @@
             "value": "Melee"
           },
           "S": {
-            "value": 5
+            "value": 6
           },
           "WS": {
             "value": 2
@@ -3920,8 +3299,8 @@
         },
         "assets": {
           "traits": [
-            "Melee Weapon§High Marshal Helbrecht—Sword of the High Marshals – one-handed",
-            "Melee Weapon§High Marshal Helbrecht—Sword of the High Marshals – two-handed"
+            "Melee Weapon§High Marshal Helbrecht—Sword of the High Marshals – strike",
+            "Melee Weapon§High Marshal Helbrecht—Sword of the High Marshals – sweep"
           ]
         },
         "keywords": {
@@ -4006,78 +3385,14 @@
             "value": "Melee"
           },
           "S": {
-            "value": 5
+            "value": 6
           },
           "WS": {
             "value": 2
           }
         }
       },
-      "Melee Weapon§Primaris Crusader Squad—Astartes chainsword": {
-        "aspects": {
-          "Label": "Astartes chainsword"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Primaris Crusader Squad—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Primaris Crusader Squad—Master-crafted power weapon": {
+      "Melee Weapon§Crusader Squad—Master-crafted power weapon": {
         "aspects": {
           "Label": "Master-crafted power weapon"
         },
@@ -4108,33 +3423,7 @@
           }
         }
       },
-      "Melee Weapon§Primaris Crusader Squad—Power fist": {
-        "aspects": {
-          "Label": "Power fist"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Primaris Sword Brethren—Astartes chainsword": {
+      "Melee Weapon§Sword Brethren Squad—Astartes chainsword": {
         "aspects": {
           "Label": "Astartes chainsword"
         },
@@ -4172,7 +3461,7 @@
           }
         }
       },
-      "Melee Weapon§Primaris Sword Brethren—Master-crafted power weapon": {
+      "Melee Weapon§Sword Brethren Squad—Master-crafted power weapon": {
         "aspects": {
           "Label": "Master-crafted power weapon"
         },
@@ -4203,7 +3492,7 @@
           }
         }
       },
-      "Melee Weapon§Primaris Sword Brethren—Power weapon": {
+      "Melee Weapon§Sword Brethren Squad—Power weapon": {
         "aspects": {
           "Label": "Power weapon"
         },
@@ -4229,7 +3518,7 @@
           }
         }
       },
-      "Melee Weapon§Primaris Sword Brethren—Thunder hammer": {
+      "Melee Weapon§Sword Brethren Squad—Thunder hammer": {
         "aspects": {
           "Label": "Thunder hammer"
         },
@@ -4246,7 +3535,7 @@
             "value": -2
           },
           "D": {
-            "value": 2
+            "value": 3
           },
           "Range": {
             "statType": "term",
@@ -4260,7 +3549,7 @@
           }
         }
       },
-      "Melee Weapon§Primaris Sword Brethren—Twin lightning claws": {
+      "Melee Weapon§Sword Brethren Squad—Twin lightning claws": {
         "aspects": {
           "Label": "Twin lightning claws"
         },
@@ -4284,17 +3573,21 @@
           },
           "WS": {
             "value": 2
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
           }
         }
       },
-      "Melee Weapon§The Emperor’s Champion—Black Sword": {
+      "Melee Weapon§Emperor’s Champion—Black Sword": {
         "aspects": {
           "Label": "Black Sword"
         },
         "assets": {
           "traits": [
-            "Melee Weapon§The Emperor’s Champion—Black Sword – strike",
-            "Melee Weapon§The Emperor’s Champion—Black Sword – sweep"
+            "Melee Weapon§Emperor’s Champion—Black Sword – sweep",
+            "Melee Weapon§Emperor’s Champion—Black Sword – strike"
           ]
         },
         "keywords": {
@@ -4303,13 +3596,35 @@
           ]
         }
       },
-      "Melee Weapon§The Emperor’s Champion—Black Sword – strike": {
+      "Melee Weapon§Emperor’s Champion—Black Sword – strike": {
         "aspects": {
-          "Label": "Strike"
+          "Label": "Black Sword – Strike"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 6
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 8
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 3
+          }
         },
         "assets": {
           "traits": [
             "Ability§Precision",
+            "Ability§Devastating Wounds",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -4322,59 +3637,46 @@
               }
             }
           ]
+        }
+      },
+      "Melee Weapon§Emperor’s Champion—Black Sword – sweep": {
+        "aspects": {
+          "Label": "Black Sword – Sweep"
         },
         "stats": {
-          "A": {
-            "value": 6
-          },
-          "AP": {
-            "value": -3
-          },
-          "D": {
-            "value": 3
-          },
           "Range": {
             "statType": "term",
             "value": "Melee"
           },
-          "S": {
-            "value": 8
+          "A": {
+            "value": 10
           },
           "WS": {
             "value": 2
-          }
-        }
-      },
-      "Melee Weapon§The Emperor’s Champion—Black Sword – sweep": {
-        "aspects": {
-          "Label": "Sweep"
-        },
-        "stats": {
-          "A": {
-            "value": 10
+          },
+          "S": {
+            "value": 6
           },
           "AP": {
             "value": -2
           },
           "D": {
             "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 2
           }
         }
       },
       "Model§Cenobyte Servitor": {
         "assets": {
           "traits": [
-            "Melee Weapon§Chaplain Grimaldus—Close combat weapon"
+            "Melee Weapon§Chaplain Grimaldus—Close combat weapon",
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "4+"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -4430,10 +3732,10 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -4451,13 +3753,13 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Primaris Crusader Squad—Bolt pistol"
+                    "trait": "Ranged Weapon§Crusader Squad—Bolt pistol"
                   },
                   {
-                    "trait": "Ranged Weapon§Primaris Crusader Squad—Bolt rifle"
+                    "trait": "Ranged Weapon§Crusader Squad—Bolt rifle"
                   },
                   {
-                    "trait": "Melee Weapon§Primaris Crusader Squad—Close combat weapon"
+                    "trait": "Melee Weapon§Crusader Squad—Close combat weapon"
                   }
                 ]
               },
@@ -4465,13 +3767,13 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Primaris Crusader Squad—Heavy bolt pistol"
+                    "trait": "Ranged Weapon§Crusader Squad—Heavy bolt pistol"
                   },
                   {
-                    "trait": "Melee Weapon§Primaris Crusader Squad—Astartes chainsword"
+                    "trait": "Melee Weapon§Crusader Squad—Astartes chainsword"
                   },
                   {
-                    "trait": "Ranged Weapon§Primaris Crusader Squad—Bolt pistol"
+                    "trait": "Ranged Weapon§Crusader Squad—Bolt pistol"
                   }
                 ]
               },
@@ -4482,13 +3784,13 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Primaris Crusader Squad—Heavy bolt pistol"
+                    "trait": "Ranged Weapon§Crusader Squad—Heavy bolt pistol"
                   },
                   {
-                    "trait": "Melee Weapon§Primaris Crusader Squad—Power fist"
+                    "trait": "Melee Weapon§Crusader Squad—Power fist"
                   },
                   {
-                    "trait": "Ranged Weapon§Primaris Crusader Squad—Bolt pistol"
+                    "trait": "Ranged Weapon§Crusader Squad—Bolt pistol"
                   }
                 ]
               },
@@ -4499,13 +3801,13 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Primaris Crusader Squad—Bolt pistol"
+                    "trait": "Ranged Weapon§Crusader Squad—Bolt pistol"
                   },
                   {
-                    "trait": "Melee Weapon§Primaris Crusader Squad—Close combat weapon"
+                    "trait": "Melee Weapon§Crusader Squad—Close combat weapon"
                   },
                   {
-                    "trait": "Ranged Weapon§Primaris Crusader Squad—Pyreblaster"
+                    "trait": "Ranged Weapon§Crusader Squad—Pyreblaster"
                   }
                 ]
               }
@@ -4524,7 +3826,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 2
@@ -4534,8 +3836,8 @@
       "Model§Initiate (Old)": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Crusader Squad—Bolt pistol",
-            "Melee Weapon§Crusader Squad—Close combat weapon"
+            "Ranged Weapon§Crusader Squad (Old)—Bolt pistol",
+            "Melee Weapon§Crusader Squad (Old)—Close combat weapon"
           ]
         },
         "stats": {
@@ -4551,7 +3853,7 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Crusader Squad—Boltgun"
+                    "trait": "Ranged Weapon§Crusader Squad (Old)—Boltgun"
                   }
                 ]
               },
@@ -4559,7 +3861,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Crusader Squad—Astartes chainsword"
+                    "trait": "Melee Weapon§Crusader Squad (Old)—Astartes chainsword"
                   }
                 ]
               },
@@ -4570,7 +3872,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Crusader Squad—Flamer"
+                    "trait": "Ranged Weapon§Crusader Squad (Old)—Flamer"
                   }
                 ]
               },
@@ -4581,7 +3883,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Crusader Squad—Grav-gun"
+                    "trait": "Ranged Weapon§Crusader Squad (Old)—Grav-gun"
                   }
                 ]
               },
@@ -4592,7 +3894,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Crusader Squad—Meltagun"
+                    "trait": "Ranged Weapon§Crusader Squad (Old)—Meltagun"
                   }
                 ]
               },
@@ -4603,7 +3905,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Crusader Squad—Plasma gun"
+                    "trait": "Ranged Weapon§Crusader Squad (Old)—Plasma gun"
                   }
                 ]
               },
@@ -4614,7 +3916,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Crusader Squad—Power fist"
+                    "trait": "Melee Weapon§Crusader Squad (Old)—Power fist"
                   }
                 ]
               },
@@ -4625,7 +3927,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Crusader Squad—Power weapon"
+                    "trait": "Melee Weapon§Crusader Squad (Old)—Power weapon"
                   }
                 ]
               },
@@ -4742,10 +4044,10 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Primaris Crusader Squad—Bolt pistol"
+                    "trait": "Ranged Weapon§Crusader Squad—Bolt pistol"
                   },
                   {
-                    "trait": "Melee Weapon§Primaris Crusader Squad—Astartes chainsword"
+                    "trait": "Melee Weapon§Crusader Squad—Astartes chainsword"
                   }
                 ]
               },
@@ -4753,10 +4055,10 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Primaris Crusader Squad—Neophyte firearm"
+                    "trait": "Ranged Weapon§Crusader Squad—Neophyte firearm"
                   },
                   {
-                    "trait": "Melee Weapon§Primaris Crusader Squad—Close combat weapon"
+                    "trait": "Melee Weapon§Crusader Squad—Close combat weapon"
                   }
                 ]
               }
@@ -4785,8 +4087,8 @@
       "Model§Neophyte (Old)": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Crusader Squad—Bolt pistol",
-            "Melee Weapon§Crusader Squad—Close combat weapon"
+            "Ranged Weapon§Crusader Squad (Old)—Bolt pistol",
+            "Melee Weapon§Crusader Squad (Old)—Close combat weapon"
           ]
         },
         "stats": {
@@ -4808,7 +4110,7 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Crusader Squad—Astartes shotgun"
+                    "trait": "Ranged Weapon§Crusader Squad (Old)—Astartes shotgun"
                   }
                 ]
               },
@@ -4816,7 +4118,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Crusader Squad—Boltgun"
+                    "trait": "Ranged Weapon§Crusader Squad (Old)—Boltgun"
                   }
                 ]
               },
@@ -4824,7 +4126,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Crusader Squad—Combat knife"
+                    "trait": "Melee Weapon§Crusader Squad (Old)—Combat knife"
                   }
                 ]
               }
@@ -4951,7 +4253,7 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Primaris Sword Brethren—Astartes chainsword"
+                    "trait": "Melee Weapon§Sword Brethren Squad—Astartes chainsword"
                   }
                 ]
               },
@@ -4959,7 +4261,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Primaris Sword Brethren—Master-crafted power weapon"
+                    "trait": "Melee Weapon§Sword Brethren Squad—Master-crafted power weapon"
                   }
                 ]
               },
@@ -4970,7 +4272,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Primaris Sword Brethren—Thunder hammer"
+                    "trait": "Melee Weapon§Sword Brethren Squad—Thunder hammer"
                   }
                 ]
               },
@@ -4981,7 +4283,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Primaris Sword Brethren—Twin lightning claws"
+                    "trait": "Melee Weapon§Sword Brethren Squad—Twin lightning claws"
                   }
                 ]
               }
@@ -5002,7 +4304,7 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Primaris Sword Brethren—Heavy bolt pistol"
+                    "trait": "Ranged Weapon§Sword Brethren Squad—Heavy bolt pistol"
                   }
                 ]
               },
@@ -5013,7 +4315,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Primaris Sword Brethren—Plasma pistol"
+                    "trait": "Ranged Weapon§Sword Brethren Squad—Plasma pistol"
                   }
                 ]
               },
@@ -5024,7 +4326,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Primaris Sword Brethren—Pyre pistol"
+                    "trait": "Ranged Weapon§Sword Brethren Squad—Pyre pistol"
                   }
                 ]
               },
@@ -5041,7 +4343,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 3
@@ -5051,7 +4353,7 @@
       "Model§Sword Brother": {
         "assets": {
           "traits": [
-            "Melee Weapon§Primaris Crusader Squad—Master-crafted power weapon"
+            "Melee Weapon§Crusader Squad—Master-crafted power weapon"
           ]
         },
         "stats": {
@@ -5073,7 +4375,7 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Primaris Crusader Squad—Heavy bolt pistol"
+                    "trait": "Ranged Weapon§Crusader Squad—Heavy bolt pistol"
                   }
                 ]
               },
@@ -5081,7 +4383,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Primaris Crusader Squad—Pyre pistol"
+                    "trait": "Ranged Weapon§Crusader Squad—Pyre pistol"
                   }
                 ]
               }
@@ -5094,7 +4396,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 2
@@ -5104,7 +4406,7 @@
       "Model§Sword Brother (Old)": {
         "assets": {
           "traits": [
-            "Melee Weapon§Crusader Squad—Close combat weapon"
+            "Melee Weapon§Crusader Squad (Old)—Close combat weapon"
           ]
         },
         "rules": {
@@ -5373,10 +4675,10 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Crusader Squad—Bolt pistol"
+                    "trait": "Ranged Weapon§Crusader Squad (Old)—Bolt pistol"
                   },
                   {
-                    "trait": "Ranged Weapon§Crusader Squad—Boltgun"
+                    "trait": "Ranged Weapon§Crusader Squad (Old)—Boltgun"
                   }
                 ]
               },
@@ -5388,7 +4690,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Crusader Squad—Twin lightning claws"
+                    "trait": "Melee Weapon§Crusader Squad (Old)—Twin lightning claws"
                   }
                 ]
               }
@@ -5416,7 +4718,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Crusader Squad—Astartes chainsword"
+                    "trait": "Melee Weapon§Crusader Squad (Old)—Astartes chainsword"
                   }
                 ]
               },
@@ -5429,7 +4731,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Crusader Squad—Bolt pistol"
+                    "trait": "Ranged Weapon§Crusader Squad (Old)—Bolt pistol"
                   }
                 ]
               },
@@ -5442,7 +4744,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Crusader Squad—Boltgun"
+                    "trait": "Ranged Weapon§Crusader Squad (Old)—Boltgun"
                   }
                 ]
               },
@@ -5519,7 +4821,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Crusader Squad—Power fist"
+                    "trait": "Melee Weapon§Crusader Squad (Old)—Power fist"
                   }
                 ]
               },
@@ -5531,7 +4833,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Crusader Squad—Power weapon"
+                    "trait": "Melee Weapon§Crusader Squad (Old)—Power weapon"
                   }
                 ]
               },
@@ -5556,7 +4858,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Crusader Squad—Thunder hammer"
+                    "trait": "Melee Weapon§Crusader Squad (Old)—Thunder hammer"
                   }
                 ]
               }
@@ -5581,7 +4883,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Crusader Squad—Astartes chainsword"
+                    "trait": "Melee Weapon§Crusader Squad (Old)—Astartes chainsword"
                   }
                 ]
               },
@@ -5594,7 +4896,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Crusader Squad—Bolt pistol"
+                    "trait": "Ranged Weapon§Crusader Squad (Old)—Bolt pistol"
                   }
                 ]
               },
@@ -5607,7 +4909,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Crusader Squad—Boltgun"
+                    "trait": "Ranged Weapon§Crusader Squad (Old)—Boltgun"
                   }
                 ]
               },
@@ -5684,7 +4986,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Crusader Squad—Power fist"
+                    "trait": "Melee Weapon§Crusader Squad (Old)—Power fist"
                   }
                 ]
               },
@@ -5696,7 +4998,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Crusader Squad—Power weapon"
+                    "trait": "Melee Weapon§Crusader Squad (Old)—Power weapon"
                   }
                 ]
               },
@@ -5721,7 +5023,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Crusader Squad—Thunder hammer"
+                    "trait": "Melee Weapon§Crusader Squad (Old)—Thunder hammer"
                   }
                 ]
               }
@@ -5746,10 +5048,10 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Primaris Sword Brethren—Combi-weapon"
+                    "trait": "Ranged Weapon§Sword Brethren Squad—Combi-weapon"
                   },
                   {
-                    "trait": "Melee Weapon§Primaris Sword Brethren—Astartes chainsword"
+                    "trait": "Melee Weapon§Sword Brethren Squad—Astartes chainsword"
                   }
                 ]
               },
@@ -5757,10 +5059,10 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Primaris Sword Brethren—Heavy bolt pistol"
+                    "trait": "Ranged Weapon§Sword Brethren Squad—Heavy bolt pistol"
                   },
                   {
-                    "trait": "Melee Weapon§Primaris Sword Brethren—Master-crafted power weapon"
+                    "trait": "Melee Weapon§Sword Brethren Squad—Master-crafted power weapon"
                   }
                 ]
               },
@@ -5768,10 +5070,10 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Primaris Sword Brethren—Combi-weapon"
+                    "trait": "Ranged Weapon§Sword Brethren Squad—Combi-weapon"
                   },
                   {
-                    "trait": "Melee Weapon§Primaris Sword Brethren—Master-crafted power weapon"
+                    "trait": "Melee Weapon§Sword Brethren Squad—Master-crafted power weapon"
                   }
                 ]
               },
@@ -5779,10 +5081,10 @@
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Primaris Sword Brethren—Astartes chainsword"
+                    "trait": "Melee Weapon§Sword Brethren Squad—Astartes chainsword"
                   },
                   {
-                    "trait": "Ranged Weapon§Primaris Sword Brethren—Heavy bolt pistol"
+                    "trait": "Ranged Weapon§Sword Brethren Squad—Heavy bolt pistol"
                   }
                 ]
               }
@@ -7875,47 +7177,15 @@
         },
         "assets": {
           "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "infantry"
-                },
-                "x": {
-                  "value": "4+"
-                }
-              }
-            },
-            "Ability§Devastating Wounds",
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
+            "Ranged Weapon§Castellan—Combi-weapon – purgatus",
+            "Ranged Weapon§Castellan—Combi-weapon – damnatus",
+            "Ranged Weapon§Castellan—Combi-weapon – infernus"
           ]
         },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
         }
       },
       "Ranged Weapon§Castellan—Heavy bolt pistol": {
@@ -7970,7 +7240,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -8001,7 +7271,7 @@
         "assets": {
           "traits": [
             "Ability§Hazardous",
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -8034,7 +7304,7 @@
             "value": 1
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -8046,8 +7316,13 @@
             "value": 12
           },
           "S": {
-            "value": 4
+            "value": 5
           }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Close-quarters"
+          ]
         }
       },
       "Ranged Weapon§Crusader Squad—Astartes shotgun": {
@@ -8084,12 +7359,17 @@
         "aspects": {
           "Label": "Bolt pistol"
         },
+        "assets": {
+          "traits": [
+            "Ability§Close-quarters"
+          ]
+        },
         "stats": {
           "A": {
             "value": 1
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -8101,7 +7381,7 @@
             "value": 12
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -8404,6 +7684,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Devastating Wounds",
             {
               "item": "Ability§Anti-",
               "stats": {
@@ -8414,8 +7695,7 @@
                   "value": "4+"
                 }
               }
-            },
-            "Ability§Devastating Wounds"
+            }
           ]
         },
         "stats": {
@@ -8445,47 +7725,15 @@
         },
         "assets": {
           "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "infantry"
-                },
-                "x": {
-                  "value": "4+"
-                }
-              }
-            },
-            "Ability§Devastating Wounds",
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
+            "Ranged Weapon§Marshal—Combi-weapon – damnatus",
+            "Ranged Weapon§Marshal—Combi-weapon – infernus",
+            "Ranged Weapon§Marshal—Combi-weapon – purgatus"
           ]
         },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
         }
       },
       "Ranged Weapon§Marshal—Plasma pistol": {
@@ -8510,7 +7758,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -8541,7 +7789,7 @@
         "assets": {
           "traits": [
             "Ability§Hazardous",
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -8565,74 +7813,29 @@
           }
         }
       },
-      "Ranged Weapon§Primaris Crusader Squad—Bolt pistol": {
-        "aspects": {
-          "Label": "Bolt pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Primaris Crusader Squad—Bolt rifle": {
+      "Ranged Weapon§Crusader Squad—Bolt rifle": {
         "aspects": {
           "Label": "Bolt rifle"
         },
         "assets": {
           "traits": [
-            "Ability§Assault",
-            "Ability§Heavy"
+            "Ranged Weapon§Crusader Squad—Bolt Rifle – focused fire",
+            "Ranged Weapon§Crusader Squad—Bolt Rifle – saturation"
           ]
         },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
         }
       },
-      "Ranged Weapon§Primaris Crusader Squad—Heavy bolt pistol": {
+      "Ranged Weapon§Crusader Squad—Heavy bolt pistol": {
         "aspects": {
           "Label": "Heavy bolt pistol"
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -8652,11 +7855,11 @@
             "value": 18
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
-      "Ranged Weapon§Primaris Crusader Squad—Neophyte firearm": {
+      "Ranged Weapon§Crusader Squad—Neophyte firearm": {
         "aspects": {
           "Label": "Neophyte firearm"
         },
@@ -8686,7 +7889,7 @@
           }
         }
       },
-      "Ranged Weapon§Primaris Crusader Squad—Pyre pistol": {
+      "Ranged Weapon§Crusader Squad—Pyre pistol": {
         "aspects": {
           "Label": "Pyre pistol"
         },
@@ -8721,41 +7924,42 @@
           }
         }
       },
-      "Ranged Weapon§Primaris Crusader Squad—Pyreblaster": {
+      "Ranged Weapon§Crusader Squad—Pyreblaster": {
         "aspects": {
           "Label": "Pyreblaster"
         },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
-          ]
-        },
         "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "format": "{t}",
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
           "Range": {
             "value": 12
           },
+          "A": {
+            "value": 3
+          },
           "S": {
             "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
           }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Torrent",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
         }
       },
-      "Ranged Weapon§Primaris Sword Brethren—Combi-weapon": {
+      "Ranged Weapon§Sword Brethren Squad—Combi-weapon": {
         "aspects": {
           "Label": "Combi-weapon"
         },
@@ -8804,13 +8008,13 @@
           }
         }
       },
-      "Ranged Weapon§Primaris Sword Brethren—Heavy bolt pistol": {
+      "Ranged Weapon§Sword Brethren Squad—Heavy bolt pistol": {
         "aspects": {
           "Label": "Heavy bolt pistol"
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -8830,18 +8034,18 @@
             "value": 18
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
-      "Ranged Weapon§Primaris Sword Brethren—Plasma pistol": {
+      "Ranged Weapon§Sword Brethren Squad—Plasma pistol": {
         "aspects": {
           "Label": "Plasma pistol"
         },
         "assets": {
           "traits": [
-            "Ranged Weapon§Primaris Sword Brethren—Plasma pistol – standard",
-            "Ranged Weapon§Primaris Sword Brethren—Plasma pistol – supercharge"
+            "Ranged Weapon§Sword Brethren Squad—Plasma pistol – standard",
+            "Ranged Weapon§Sword Brethren Squad—Plasma pistol – supercharge"
           ]
         },
         "keywords": {
@@ -8850,13 +8054,13 @@
           ]
         }
       },
-      "Ranged Weapon§Primaris Sword Brethren—Plasma pistol – standard": {
+      "Ranged Weapon§Sword Brethren Squad—Plasma pistol – standard": {
         "aspects": {
           "Label": "Standard"
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -8880,14 +8084,14 @@
           }
         }
       },
-      "Ranged Weapon§Primaris Sword Brethren—Plasma pistol – supercharge": {
+      "Ranged Weapon§Sword Brethren Squad—Plasma pistol – supercharge": {
         "aspects": {
           "Label": "Supercharge"
         },
         "assets": {
           "traits": [
             "Ability§Hazardous",
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -8911,7 +8115,7 @@
           }
         }
       },
-      "Ranged Weapon§Primaris Sword Brethren—Pyre pistol": {
+      "Ranged Weapon§Sword Brethren Squad—Pyre pistol": {
         "aspects": {
           "Label": "Pyre pistol"
         },
@@ -8946,13 +8150,13 @@
           }
         }
       },
-      "Ranged Weapon§The Emperor’s Champion—Bolt pistol": {
+      "Ranged Weapon§Emperor’s Champion—Bolt pistol": {
         "aspects": {
           "Label": "Bolt pistol"
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -8960,7 +8164,7 @@
             "value": 1
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 2
@@ -8972,7 +8176,7 @@
             "value": 12
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -8983,126 +8187,6 @@
         "rules": {
           "disallowUnits": {
             "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "disallowed",
-                    "items"
-                  ],
-                  [
-                    "{roster}",
-                    "traits",
-                    "classification",
-                    "Order of Battle",
-                    "disallowed",
-                    "items"
-                  ]
-                ],
-                "value": "Vehicle§Gladiator Reaper"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "disallowed",
-                    "items"
-                  ],
-                  [
-                    "{roster}",
-                    "traits",
-                    "classification",
-                    "Order of Battle",
-                    "disallowed",
-                    "items"
-                  ]
-                ],
-                "value": "Vehicle§Gladiator Lancer"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "disallowed",
-                    "items"
-                  ],
-                  [
-                    "{roster}",
-                    "traits",
-                    "classification",
-                    "Order of Battle",
-                    "disallowed",
-                    "items"
-                  ]
-                ],
-                "value": "Vehicle§Gladiator Valiant"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "disallowed",
-                    "items"
-                  ],
-                  [
-                    "{roster}",
-                    "traits",
-                    "classification",
-                    "Order of Battle",
-                    "disallowed",
-                    "items"
-                  ]
-                ],
-                "value": "Vehicle§Impulsor"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "disallowed",
-                    "items"
-                  ],
-                  [
-                    "{roster}",
-                    "traits",
-                    "classification",
-                    "Order of Battle",
-                    "disallowed",
-                    "items"
-                  ]
-                ],
-                "value": "Vehicle§Repulsor"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "disallowed",
-                    "items"
-                  ],
-                  [
-                    "{roster}",
-                    "traits",
-                    "classification",
-                    "Order of Battle",
-                    "disallowed",
-                    "items"
-                  ]
-                ],
-                "value": "Vehicle§Repulsor Executioner"
-              },
               {
                 "actionType": "add",
                 "iterations": 1,
@@ -9202,66 +8286,6 @@
                   ]
                 ],
                 "value": "Character§Librarian with Jump Pack"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "disallowed",
-                    "items"
-                  ],
-                  [
-                    "{roster}",
-                    "traits",
-                    "classification",
-                    "Order of Battle",
-                    "disallowed",
-                    "items"
-                  ]
-                ],
-                "value": "Vehicle§Land Raider Crusader"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "disallowed",
-                    "items"
-                  ],
-                  [
-                    "{roster}",
-                    "traits",
-                    "classification",
-                    "Order of Battle",
-                    "disallowed",
-                    "items"
-                  ]
-                ],
-                "value": "Infantry/Mounted§Sternguard Veteran Squad"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "disallowed",
-                    "items"
-                  ],
-                  [
-                    "{roster}",
-                    "traits",
-                    "classification",
-                    "Order of Battle",
-                    "disallowed",
-                    "items"
-                  ]
-                ],
-                "value": "Infantry/Mounted§Terminator Squad"
               }
             ],
             "evals": [],
@@ -9281,38 +8305,6 @@
           },
           "Detachment": {
             "ranks": {
-              "Vindication Task Force": {
-                "order": 8,
-                "traits": [
-                  {
-                    "trait": "Detachment§Vindication Task Force"
-                  }
-                ]
-              },
-              "Wrathful Procession": {
-                "order": 9,
-                "traits": [
-                  {
-                    "trait": "Detachment§Wrathful Procession"
-                  }
-                ]
-              },
-              "Companions of Vehemence": {
-                "order": 10,
-                "traits": [
-                  {
-                    "trait": "Detachment§Companions of Vehemence"
-                  }
-                ]
-              },
-              "Godhammer Assault Force": {
-                "order": 11,
-                "traits": [
-                  {
-                    "trait": "Detachment§Godhammer Assault Force"
-                  }
-                ]
-              },
               "Ironstorm Spearhead": {
                 "order": 12,
                 "traits": [
@@ -9329,11 +8321,19 @@
                   }
                 ]
               },
-              "The Living Miracle": {
-                "order": 14,
+              "Fist of the God-Emperor": {
+                "order": 15,
                 "traits": [
                   {
-                    "trait": "Detachment§The Living Miracle"
+                    "trait": "Detachment§Fist of the God-Emperor"
+                  }
+                ]
+              },
+              "Vow-sworn Crusaders": {
+                "order": 16,
+                "traits": [
+                  {
+                    "trait": "Detachment§Vow-sworn Crusaders"
                   }
                 ]
               }
@@ -9356,27 +8356,6 @@
           "Legends": {}
         }
       },
-      "Stratagem§A Ceaseless Cause": {
-        "keywords": {
-          "Keywords": [
-            "Godhammer Assault Force"
-          ],
-          "Category": [],
-          "Turn": [
-            "Yours",
-            "Opponent’s"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: End of the Fight phase.\n\n**TARGET**: One ADEPTUS ASTARTES INFANTRY unit from your army that was eligible to fight this phase.\n\n**EFFECT**: If your unit is within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". It cannot embark within a TRANSPORT at the end of this move if it disembarked from a TRANSPORT this turn."
-      },
       "Stratagem§Armour of Contempt": {
         "keywords": {
           "Keywords": [
@@ -9395,74 +8374,6 @@
           ]
         },
         "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\nTARGET: One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\nEFFECT: Until the end of the phase, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
-      },
-      "Stratagem§Blessed Hull": {
-        "keywords": {
-          "Keywords": [
-            "Godhammer Assault Force"
-          ],
-          "Category": [],
-          "Turn": [
-            "Opponent’s"
-          ],
-          "Phase": [
-            "Shooting"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 2
-          }
-        },
-        "text": "**WHEN**: Your opponent's Shooting phase, just after an enemy unit has selected its targets.\n\n**TARGET**: One ADEPTUS ASTARTES VEHICLE unit from your army that was selected as the target of one or more of the attacking unit's attacks.\n\n**EFFECT**: Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack."
-      },
-      "Stratagem§Brute Fervour": {
-        "keywords": {
-          "Phase": [
-            "Fight"
-          ],
-          "Keywords": [
-            "Wrathful Procession"
-          ],
-          "Category": [
-            "Battle Tactic"
-          ]
-        },
-        "text": "**WHEN:** Fight phase.\n\n**TARGET:** One **Adeptus Astartes** unit from your army\nthat has not been selected to fight this phase.\n\n**EFFECT:** Until the end of the phase, each time a\nmodel in your unit makes an attack, re‑roll a Hit roll\nof 1 and you can ignore any or all modifiers to the\nfollowing: that attack’s Weapon Skill characteristic;\nthe Hit roll; the Wound roll."
-      },
-      "Stratagem§Castigate the Demagogues": {
-        "keywords": {
-          "Keywords": [
-            "Wrathful Procession"
-          ],
-          "Category": [
-            "Battle Tactic"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "text": "**WHEN:** Fight phase.\n\n**TARGET:** One **Adeptus Astartes** unit from your army\nthat has not been selected to fight this phase.\n\n**EFFECT:** Until the end of the phase, melee weapons\nequipped by models in your unit have the\n**[PRECISION]** ability."
-      },
-      "Stratagem§Condemnatory Info-Screed": {
-        "keywords": {
-          "Keywords": [
-            "Godhammer Assault Force"
-          ],
-          "Category": [],
-          "Turn": [
-            "Yours"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your Fight phase.\n\n**TARGET**: One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase.\n\n**EFFECT**: Until the end of the phase, each time a model in your unit makes an attack, if it disembarked from a TRANSPORT this turn, re-roll a Wound roll of 1. If that TRANSPORT has the LAND RAIDER keyword, you can re-roll the Wound roll instead."
       },
       "Stratagem§Crusader’s Wrath": {
         "keywords": {
@@ -9485,28 +8396,25 @@
       "Stratagem§Devout Push": {
         "keywords": {
           "Keywords": [
-            "Companions of Vehemence"
+            "Adeptus Astartes",
+            "Vow-sworn Crusaders"
           ],
           "Category": [],
           "Turn": [
-            "Opponent’s",
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ],
           "Phase": [
             "Fight"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase.\n\n**TARGET**: One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to fight this phase.\n\n**EFFECT**: Until the end of the phase, each time a model in your unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of 3\".\n\n**RESTRICTIONS**: A unit cannot be targeted with this and the Hearts Hardened to Duty Stratagem in the same phase unless it has the CHAPLAIN or JUDICIAR keywords."
+        "text": "**WHEN:** Fight phase, when a friendly **ADEPTUS ASTARTES INFANTRY** unit is selected to make a **pile-in/consolidation move**.\n\n**TARGET:** That **ADEPTUS ASTARTES INFANTRY** unit.\n\n**EFFECT:** When making that **pile-in/consolidation move**, your unit can move up to D3+3”."
       },
       "Stratagem§Dread Crusaders": {
         "keywords": {
           "Keywords": [
-            "Companions of Vehemence"
+            "Adeptus Astartes",
+            "Vow-sworn Crusaders"
           ],
           "Category": [],
           "Turn": [
@@ -9516,12 +8424,7 @@
             "Charge"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your opponent's Charge phase, just after an enemy unit declares a Charge.\n\n**TARGET**: One ADEPTUS ASTARTES INFANTRY unit from your army that was selected as one of the targets of that charge.\n\n**EFFECT**: That enemy unit must take a Battle-Shock test, subtracting 1 from the result."
+        "text": "**WHEN:** Your opponent’s Charge phase, when an enemy unit selects **charge targets**.\n\n**TARGET:** One **ADEPTUS ASTARTES INFANTRY** unit that was selected as a **charge target** by that enemy unit this phase.\n\n**EFFECT:** That enemy unit must make a **battle-shock roll**, with -1 to that **battle-shock roll**."
       },
       "Stratagem§Fervent Acclamation": {
         "keywords": {
@@ -9540,142 +8443,21 @@
         },
         "text": "WHEN: Your Command phase.\n\nTARGET: One Adeptus Astartes Character unit from your army.\n\nEFFECT: Select one Templar Vow that is not active for your army. Until the start of your next Command phase, while that Character is leading a unit, models in that unit gain the benefits of that vow in addition to the vow selected to be active for your army at the start of the battle"
       },
-      "Stratagem§Focused Hatred": {
+      "Stratagem§Heresy Begets Retribution": {
         "keywords": {
           "Keywords": [
-            "Godhammer Assault Force"
+            "Adeptus Astartes",
+            "Vow-sworn Crusaders"
           ],
           "Category": [],
           "Turn": [
-            "Yours"
-          ],
-          "Phase": [
-            "Charge"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your Charge phase, just after you make a Charge roll for an ADEPTUS ASTARTES unit from your army that disembarked from a TRANSPORT this turn.\n\n**TARGET**: That ADEPTUS ASTARTES unit.\n\n**EFFECT**: Until the end of the phase, each time your unit makes a Charge move, models in your unit can move through models (when doing so, its models can move within Engagement Range of enemy models if those enemy models belong to a unit that your unit declared a charge against this turn)."
-      },
-      "Stratagem§For the Emperor's Honour": {
-        "keywords": {
-          "Keywords": [
-            "Companions of Vehemence"
-          ],
-          "Category": [],
-          "Turn": [
-            "Opponent’s",
-            "Yours"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase.\n\n**TARGET**: One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to fight this phase.\n\n**EFFECT**: Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability."
-      },
-      "Stratagem§Fuelled by Faith": {
-        "keywords": {
-          "Keywords": [
-            "Wrathful Procession"
-          ],
-          "Category": [
-            "Battle Tactic"
-          ],
-          "Phase": [
-            "Any"
-          ]
-        },
-        "text": "**WHEN:** Any phase, just after a mortal wound\nis allocated to an Adeptus Astartes unit from\nyour army.\n\n**TARGET:** That **Adeptus Astartes** unit.\n\nEFFECT: Until the end of the phase, models in\nyour unit have the Feel No Pain 5+ ability against\nmortal wounds."
-      },
-      "Stratagem§Gauntlet of the God-Emperor": {
-        "keywords": {
-          "Keywords": [
-            "Godhammer Assault Force"
-          ],
-          "Category": [],
-          "Turn": [
-            "Yours"
+            "Opponent’s"
           ],
           "Phase": [
             "Movement"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your Movement phase.\n\n**TARGET**: One ADEPTUS ASTARTES VEHICLE model from your army that has not been selected to move this phase.\n\n**EFFECT**: Until the end of the phase, each time your model makes a Normal or Advance move, it can move horizontally through terrain features."
-      },
-      "Stratagem§Hearts Hardened to Duty": {
-        "keywords": {
-          "Keywords": [
-            "Companions of Vehemence"
-          ],
-          "Category": [],
-          "Turn": [
-            "Opponent’s",
-            "Yours"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase just before an ADEPTUS ASTARTES INFANTRY unit from your army Consolidates.\n\n**TARGET**: That ADEPTUS ASTARTES INFANTRY unit.\n\n**EFFECT**: Until the end of the phase, each time a model in your unit makes a Consolidation move, it does not need to end that move closer to the closest enemy model (or closer to the closest enemy unit if the Suffer Not the Unclean to Live Vow is active for it)."
-      },
-      "Stratagem§Heresy Begets Retribution": {
-        "keywords": {
-          "Keywords": [
-            "Companions of Vehemence"
-          ],
-          "Category": [],
-          "Turn": [
-            "Opponent’s",
-            "Yours"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase just before an ADEPTUS ASTARTES INFANTRY unit from your army Consolidates.\n\n**TARGET**: That ADEPTUS ASTARTES INFANTRY unit.\n\n**EFFECT**: Until the end of the phase, each time a model in your unit makes a Consolidation move, it does not need to end that move closer to the closest enemy model (or closer to the closest enemy unit if the Suffer Not the Unclean to Live Vow is active for it)."
-      },
-      "Stratagem§Litanies of Purgation": {
-        "keywords": {
-          "Keywords": [
-            "Vindication Task Force"
-          ],
-          "Category": [],
-          "Turn": [
-            "Yours"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase.\n\n**TARGET**: One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase. \n\n**EFFECT**: Until the end of the phase, each time a model in your unit makes an attack, if that model's unit is within range of one or more objective markers or the target unit is within range of one or more objective markers, improve the Armour Penetration characteristic of that attack by 1."
+        "text": "**WHEN:** Your opponent’s Movement phase, when an enemy unit ends a move within 8” of a friendly **ADEPTUS ASTARTES INFANTRY** unit.\n\n**TARGET:** That **ADEPTUS ASTARTES INFANTRY** unit.\n\n**EFFECT:** Your unit can make a **surge move** of up to D6”."
       },
       "Stratagem§No Escape": {
         "keywords": {
@@ -9694,51 +8476,11 @@
         },
         "text": "WHEN: Your opponent’s Movement phase, when an enemy unit (excluding Vehicles and Monsters) is selected to Fall Back.\n\nTARGET: One Adeptus Astartes unit from your army that is within Engagement Range of that enemy unit.\n\nEFFECT: Roll one D6, adding 1 to the result if the Accept Any Challenge, No Matter the Odds vow is active for your army. On a 4+, that enemy unit cannot Fall Back this phase and must Remain Stationary. Otherwise, that enemy unit can Fall Back this phase, but if it does, all models in that unit must take a Desperate Escape test."
       },
-      "Stratagem§Perfervid Intervention": {
-        "keywords": {
-          "Keywords": [
-            "Vindication Task Force"
-          ],
-          "Category": [],
-          "Turn": [
-            "Opponent’s"
-          ],
-          "Phase": [
-            "Charge"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 2
-          }
-        },
-        "text": "**WHEN**: End of your opponent's Charge phase.\n\n**TARGET**: One ADEPTUS ASTARTES unit from your army that is within 6\" of one or more enemy units and would be eligible to declare a charge against one or more of those enemy units if it were your Charge phase.\n\n**EFFECT**: Your unit now declares a charge that only targets one or more of those enemy units and you resolve that charge.\n\n**RESTRICTIONS**: Note that even if this charge is successful, your unit does not receive a Charge bonus this turn"
-      },
       "Stratagem§Pious Enmity": {
         "keywords": {
           "Keywords": [
-            "Companions of Vehemence"
-          ],
-          "Category": [],
-          "Turn": [
-            "Opponent’s",
-            "Yours"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase.\n\n**TARGET**: One CHAPLAIN or JUDICIAR unit from your army that has not been selected to fight this phase.\n\n**EFFECT**: Until the end of the phase, each time a model in your unit makes a melee attack that targets an enemy unit, re-roll a Hit roll of 1. If that target is a MONSTER or VEHICLE unit, re-roll a Wound roll of 1 as well."
-      },
-      "Stratagem§Recitation of the Revered": {
-        "keywords": {
-          "Keywords": [
-            "Vindication Task Force"
+            "Adeptus Astartes",
+            "Vow-sworn Crusaders"
           ],
           "Category": [],
           "Turn": [
@@ -9749,108 +8491,25 @@
             "Fight"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase. \n\n**TARGET**: One ANCIENT unit from your army that was selected as the target of one or more of the attacking unit's attacks.\n\n**EFFECT**: Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll."
-      },
-      "Stratagem§Reclaim Our Honour!": {
-        "keywords": {
-          "Keywords": [
-            "Vindication Task Force"
-          ],
-          "Category": [],
-          "Turn": [
-            "Opponent’s"
-          ],
-          "Phase": [
-            "Shooting",
-            "Fight"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your opponent's Shooting phase or the Fight phase, just after an enemy unit destroys an ANCIENT model from your army that has not been targeted with the Refusal to Yield Stratagem. \n\n**TARGET**: One ADEPTUS ASTARTES unit from your army visible to that enemy unit. \n\n**EFFECT**: Until the end of the battle, each time an ADEPTUS ASTARTES model from your army makes an attack that targets that enemy unit, add 1 to the Hit roll. \n\n**RESTRICTIONS**: You cannot target that ANCIENT model with the Refusal to Yield Stratagem this phase."
-      },
-      "Stratagem§Refusal to Yield": {
-        "keywords": {
-          "Keywords": [
-            "Vindication Task Force"
-          ],
-          "Category": [],
-          "Turn": [
-            "Yours",
-            "Opponent’s"
-          ],
-          "Phase": [
-            "Any"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Any phase, just after an ANCIENT model from your army is destroyed. \n\n**TARGET**: That ANCIENT model. You can use this Stratagem on that model even though it was just destroyed.\n\n**EFFECT**: At the end of the phase, set your model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with its full wound remaining.\n\n**RESTRICTIONS**: You cannot target the same model with this Stratagem more than once per battle."
-      },
-      "Stratagem§Relentless Momentum": {
-        "keywords": {
-          "Keywords": [
-            "Wrathful Procession"
-          ],
-          "Category": [
-            "Strategic Ploy"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "text": "**WHEN:** Fight phase.\n\n**TARGET:** One **Adeptus Astartes** unit from your\narmy that has not been selected to fight this phase\nand is within Engagement Range of one or more\nenemy units.\n\n**EFFECT:** Until the end of the phase, when\ndetermining which models in your unit are eligible\nto fight, any models in it that are within 3\" of one\nor more enemy models are eligible to fight. When\nresolving those attacks, such models can target one\nof those enemy units that is within 3\" of them and\nwithin Engagement Range of their unit."
+        "text": "**WHEN:** Fight phase, when a friendly **CHAPLAIN/JUDICIAR** unit is **selected to fight**.\n\n**TARGET:** That **CHAPLIN/JUDICIAR** unit.\n\n**EFFECT:** - Your unit’s melee attacks can re-roll **hit rolls** of 1.\n- __Or:__ Your unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **hit rolls** of 1 and **wound rolls** of 1."
       },
       "Stratagem§Spoor of the Unholy": {
         "keywords": {
           "Keywords": [
-            "Vindication Task Force"
+            "Adeptus Astartes",
+            "Vow-sworn Crusaders"
           ],
           "Category": [],
           "Turn": [
-            "Yours"
+            "Yours",
+            "Opponent’s"
           ],
           "Phase": [
-            "Fight"
+            "Fight",
+            "Shooting"
           ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase.\n\n**TARGET**: One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase.\n\n**EFFECT**: Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability and each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack's Ballistic Skill or Weapon Skill characteristic; the Hit roll."
-      },
-      "Stratagem§Uncompromising Egress": {
-        "keywords": {
-          "Keywords": [
-            "Godhammer Assault Force"
-          ],
-          "Category": [],
-          "Turn": [
-            "Yours"
-          ],
-          "Phase": [
-            "Movement"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your Movement phase.\n\n**TARGET**: One LAND RAIDER model from your army that has not been selected to move this phase.\n\n**EFFECT**: One ADEPTUS ASTARTES unit embarked within your LAND RAIDER can disembark. When doing so, models in that unit can be set up anywhere on the battlefield wholly within 6\" of your LAND RAIDER and can be set up within Engagement Range of one or more enemy units."
+        "text": "**WHEN:** Your Shooting phase or the Fight phase, when a friendly **ADEPTUS ASTARTES** unit is selected to attack.\n\n**TARGET:** That **ADEPTUS ASTARTES** unit.\n\n**EFFECT:** Your unit can ignore modifiers to your unit’s: \n- **BS** and **WS**.\n- **Hit rolls**."
       },
       "Stratagem§Vicious Riposte": {
         "keywords": {
@@ -9869,53 +8528,6 @@
           ]
         },
         "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\n\nTARGET: One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\nEFFECT: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if the Uphold the Honour of the Emperor vow is active for your army. On a 4+, do not remove the destroyed model from play; it can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
-      },
-      "Stratagem§Voice of Devotion": {
-        "keywords": {
-          "Keywords": [
-            "Wrathful Procession"
-          ],
-          "Category": [
-            "Strategic Ploy"
-          ],
-          "Turn": [
-            "Yours"
-          ],
-          "Phase": [
-            "Command"
-          ]
-        },
-        "text": "**WHEN:** Your Command phase.\n\n**TARGET:** One **Adeptus Astartes Infantry** or\n**Adeptus Astartes Mounted** unit from your army.\n\n**EFFECT:** Select the Chorus of Relentless Hate, Rite\nof Perfervid Wrath or Chant of Deathless Devotion\nLitany. Until the end of the battle round, that Litany is\nactive for your unit instead of any other Litany that is\nactive for your army."
-      },
-      "Unit§Crusader Squad": {
-        "stats": {
-          "Points": {
-            "value": 150
-          }
-        },
-        "text": "WARNING: this unit was not in 10e and needs importing.\n\n**Righteous Zeal**\nIn your opponent's Shooting phase, each time an enemy unit has shot, if any models in this unit were **destroyed** as a result of those attacks, this unit can make a **surge move** of up to D6+2\".\n\n**Attached Unit**\nIf a **CHARACTER** from your army with the Leader ability can be attached to an **INTERCESSOR SQUAD**, it can be attached to this unit instead."
-      },
-      "Unit§Emperor’s Champion": {
-        "stats": {
-          "Points": {
-            "value": 100
-          }
-        },
-        "text": "WARNING: this unit was not in 10e and needs importing.\n\n**Armour of Faith**\nOnce per phase, when an attack is allocated to this model and the saving throw is failed, you can change the Damage characteristic of that attack to 0.\n\n**Sigismund’s Heir**\n- When this unit declares a charge, If an enemy **CHARACTER** unit is within 12\" of this unit, you can use this part of this ability. If you do:\n\n- This unit can re-roll that charge roll.\n\n- This unit __must__ end that charge move engaged with one or more of those enemy **CHARACTER** units.\n\n- (Once per battle, per army) In the Fight phase, when this unit is selected to fight, if this unit is engaged with a **CHARACTER** unit, you can use this part of this ability. If you do, this unit's melee attacks have **[DEVASTATING WOUNDS]**.\n\n**Chosen of the Emperor**\nYou cannot include more than one **EMPEROR’S CHAMPION** model in your army."
-      },
-      "Unit§Sword Brethren Squad": {
-        "stats": {
-          "Points": {
-            "value": 120
-          },
-          "unitDiscount": {
-            "value": 15
-          },
-          "unitDiscountThreshold": {
-            "value": 3
-          }
-        },
-        "text": "WARNING: this unit was not in 10e and needs importing.\n\n**Exploit Their Cowardice**\nEach time an enemy unit within Engagement Range of this unit is selected to Fall Back, after it ends that Fall Back move, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move.\n\n**Attached Unit**\nIf a **CHARACTER** from your army with the Leader ability can be attached to an **INTERCESSOR SQUAD**, it can be attached to this unit instead."
       },
       "Vehicle§Black Templars Gladiator Lancer": {
         "assets": {
@@ -9948,7 +8560,7 @@
             "Black Templars"
           ],
           "Source": [
-            "10th Edition Index"
+            "Legends"
           ],
           "Keywords": [
             "Vehicle",
@@ -10099,7 +8711,7 @@
             "Black Templars"
           ],
           "Source": [
-            "10th Edition Index"
+            "Legends"
           ],
           "Keywords": [
             "Vehicle",
@@ -10218,7 +8830,7 @@
             "Black Templars"
           ],
           "Source": [
-            "10th Edition Index"
+            "Legends"
           ],
           "Keywords": [
             "Vehicle",
@@ -10338,7 +8950,7 @@
             "Black Templars"
           ],
           "Source": [
-            "10th Edition Index"
+            "Legends"
           ],
           "Keywords": [
             "Vehicle",
@@ -10517,7 +9129,7 @@
             "Black Templars"
           ],
           "Source": [
-            "10th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Vehicle",
@@ -10665,7 +9277,7 @@
             "Black Templars"
           ],
           "Source": [
-            "10th Edition Index"
+            "Legends"
           ],
           "Keywords": [
             "Vehicle",
@@ -10803,10 +9415,10 @@
               "item": "Ability§Transport",
               "text": "This model has a transport capacity of 16 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
             },
-            "Ranged Weapon§Land Raider Crusader—Hurricane bolter",
-            "Ranged Weapon§Land Raider Crusader—Hurricane bolter",
-            "Ranged Weapon§Land Raider Crusader—Twin assault cannon",
-            "Melee Weapon§Land Raider Crusader—Armoured tracks",
+            "Ranged Weapon§Land Raider Crusader (BT)—Hurricane bolter",
+            "Ranged Weapon§Land Raider Crusader (BT)—Hurricane bolter",
+            "Ranged Weapon§Land Raider Crusader (BT)—Twin assault cannon",
+            "Melee Weapon§Land Raider Crusader (BT)—Armoured tracks",
             "Ability§Legacy of Jerulas"
           ]
         },
@@ -10843,7 +9455,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Land Raider Crusader—Hunter-killer missile"
+                    "trait": "Ranged Weapon§Land Raider Crusader (BT)—Hunter-killer missile"
                   }
                 ]
               }
@@ -10870,7 +9482,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Land Raider Crusader—Multi-melta"
+                    "trait": "Ranged Weapon§Land Raider Crusader (BT)—Multi-melta"
                   }
                 ]
               }
@@ -10897,7 +9509,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Land Raider Crusader—Storm bolter"
+                    "trait": "Ranged Weapon§Land Raider Crusader (BT)—Storm bolter"
                   }
                 ]
               }
@@ -10922,6 +9534,2538 @@
       },
       "Wargear§Shield Dome": {
         "text": "The bearer has a 5+ invulnerable save."
+      },
+      "Vehicle§Gladiator Lancer": {
+        "stats": {
+          "Points": {
+            "value": 185
+          },
+          "unitDiscount": {
+            "value": 20
+          }
+        }
+      },
+      "Vehicle§Gladiator Reaper": {
+        "stats": {
+          "Points": {
+            "value": 185
+          },
+          "unitDiscount": {
+            "value": 20
+          }
+        }
+      },
+      "Vehicle§Gladiator Valiant": {
+        "stats": {
+          "Points": {
+            "value": 165
+          },
+          "unitDiscount": {
+            "value": 20
+          }
+        }
+      },
+      "Ranged Weapon§Gladiator Valiant—Multi-melta": {
+        "stats": {
+          "Points": {
+            "value": 10
+          }
+        },
+        "aspects": {
+          "Label": "Multi-melta"
+        }
+      },
+      "Vehicle§Repulsor Executioner": {
+        "stats": {
+          "Points": {
+            "value": 285
+          }
+        }
+      },
+      "Detachment§Assault Brethren": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Devastator Brethren"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Tactical Brethren"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Devastator Brethren": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Assault Brethren"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Tactical Brethren"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Tactical Brethren": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Assault Brethren"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Devastator Brethren"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Gravis Linebreaker Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Gravis Siege Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Gravis Siege Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Gravis Linebreaker Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Phobos Shadow Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Phobos Shock Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Phobos Shock Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Phobos Shadow Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Tacticus Attack Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Tacticus Firestorm Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Tacticus Firestorm Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Tacticus Attack Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Fist of the God-Emperor": {
+        "text": "**PURGE AND SANCTIFY**\n\nEach time a friendly **CRUSADER SQUAD** unit makes a **surge move**, instead of selecting a **surge target**, you can select the closest **objective** to that unit. When that unit makes that **surge move**, each model in that unit must end that **surge move** as close as possible to that **objective** instead.\n\n**Restrictions:** Your army can include **BLACK TEMPLARS** units, but it cannot include any **ADEPTUS ASTARTES** units drawn from any other Chapter.",
+        "stats": {
+          "Detachment Points": {
+            "value": 1
+          }
+        },
+        "keywords": {
+          "Role": [
+            "Take And Hold"
+          ]
+        },
+        "rules": {
+          "assignStratagems": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Doctrinal Flexibility"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Angels Defiant"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Avowed Destruction"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Detachment§Vow-sworn Crusaders": {
+        "text": "**TEMPLAR VOWS**\n\nAt the start of the first battle round, you can select one **Vow** listed below. That **Vow** is active for friendly **ADEPTUS ASTARTES** units until the end of the battle. **Abhor the Witch, Destroy the Witch** This unit’s melee attacks that target a **PSYKER** unit: \n- Have **[PRECISION]**.\n- Have **[LANCE]**.**Accept Any Challenge, No Matter the Odds**Friendly melee attacks that target a unit with a **T** greater than this unit’s **S** have +1 to **wound rolls**.**Uphold the Honour of the Emperor**Friendly **INFANTRY** units have: \n- At the end of your Movement phase, if this unit is controlling an **objective**, that **objective** is **secured**.\n- When this unit is selected to make an **advance move**, that **advance move** does not prevent this unit from being **eligible to start an action**.\n\n**Restrictions:** Your army can include **BLACK TEMPLARS** units, but it cannot include any **ADEPTUS ASTARTES** units drawn from any other Chapter.",
+        "stats": {
+          "Detachment Points": {
+            "value": 2
+          }
+        },
+        "keywords": {
+          "Role": [
+            "Purge The Foe"
+          ]
+        },
+        "rules": {
+          "assignStratagems": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Dread Crusaders"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§For the Emperor's Honour!"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Heresy Begets Retribution"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Spoor of the Unholy"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Pious Enmity"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Devout Push"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Stratagem§Slayers of Abominations": {
+        "text": "**WHEN:** Fight phase, when a friendly **SWORD BRETHREN SQUAD** unit is **selected to fight**.\n\n**TARGET:** That **SWORD BRETHREN SQUAD** unit.\n\n**EFFECT:** Your unit's melee attacks that target a **MONSTER/VEHICLE** unit have +2 **S**.",
+        "keywords": {
+          "Keywords": [
+            "Adeptus Astartes",
+            "Marshal's Household"
+          ],
+          "Turn": [
+            "Yours",
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Fight"
+          ]
+        }
+      },
+      "Stratagem§Unsparing Execution": {
+        "text": "**WHEN:** Your opponent's Movement phase, when a unit is selected to make a **fall-back move**, if that unit is **engaged** with a friendly **SWORD BRETHREN SQUAD ** unit.\n\n**TARGET:** That **SWORD BRETHREN SQUAD** unit.\n\n**EFFECT:** When an enemy unit **engaged** with your unit is selected to make a **fall-back move **, that enemy unit must use the **desperate escape** mode, with -1 to those **hazard rolls** if that enemy unit is **battle-shocked**.",
+        "keywords": {
+          "Keywords": [
+            "Adeptus Astartes",
+            "Marshal's Household"
+          ],
+          "Turn": [
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Movement"
+          ]
+        }
+      },
+      "Stratagem§Blade of Detestation": {
+        "text": "**WHEN:** Your Charge phase, when a friendly **SWORD BRETHREN SQUAD** unit ends a **charge move**.\n\n**TARGET:** That **SWORD BRETHREN SQUAD**.\n\n**EFFECT:** Select one enemy unit **engaged** with your unit. Roll one D6 for each model in your unit **engaged** with that enemy unit:\n- For each 4+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 **mortal wounds**).",
+        "keywords": {
+          "Keywords": [
+            "Adeptus Astartes",
+            "Marshal's Household"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Phase": [
+            "Charge"
+          ]
+        }
+      },
+      "Stratagem§Doctrinal Flexibility": {
+        "text": "**WHEN:** Your Command phase.\n\n**TARGET:** One friendly **CRUSADER SQUAD** unit.\n\n**EFFECT:** Select one **combat doctrine**. That **combat doctrine** is active for your unit until the start of your next Command phase.",
+        "keywords": {
+          "Keywords": [
+            "Adeptus Astartes",
+            "Fist of the God-Emperor"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Phase": [
+            "Command"
+          ]
+        }
+      },
+      "Stratagem§Angels Defiant": {
+        "text": "**WHEN:** Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **CRUSADER SQUAD** unit.\n\n**TARGET:** That **CRUSADER SQUAD** unit.\n\n**EFFECT:** Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.",
+        "keywords": {
+          "Keywords": [
+            "Adeptus Astartes",
+            "Fist of the God-Emperor"
+          ],
+          "Turn": [
+            "Yours",
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Fight",
+            "Shooting"
+          ]
+        }
+      },
+      "Stratagem§Avowed Destruction": {
+        "text": "**WHEN:** The Fight phase, when a friendly **CRUSADER SQUAD** unit is **selected to fight**.\n\n**TARGET:** That **CRUSADER SQUAD** unit.\n\n**EFFECT:** Your unit’s melee attacks: \n- Have **[LETHAL HITS]**.\n- __Or:__ Have **[SUSTAINED HITS 1]**.",
+        "keywords": {
+          "Keywords": [
+            "Adeptus Astartes",
+            "Fist of the God-Emperor"
+          ],
+          "Turn": [
+            "Yours",
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Fight"
+          ]
+        }
+      },
+      "Stratagem§For the Emperor's Honour!": {
+        "text": "**WHEN:** The Fight phase, when a friendly **ADEPTUS ASTARTES INFANTRY** unit is **selected to fight**.\n\n**TARGET:** That **ADEPTUS ASTARTES INFANTRY** unit.\n\n**EFFECT:** Your unit’s melee attacks have **[PRECISION]**.",
+        "keywords": {
+          "Keywords": [
+            "Adeptus Astartes",
+            "Vow-sworn Crusaders"
+          ],
+          "Turn": [
+            "Yours",
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Fight"
+          ]
+        }
+      },
+      "Enhancement§Righteous Fervour (Upgrade)": {
+        "text": "**CRUSADER SQUAD** unit only. This unit can re-roll **Advance rolls**.",
+        "keywords": {
+          "Keywords": [
+            "Fist of the God-Emperor"
+          ],
+          "Tags": [
+            "Upgrade"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 15
+          }
+        },
+        "removed": {
+          "keywords": {
+            "Tags": [
+              "Character Only"
+            ]
+          }
+        },
+        "aspects": {
+          "Unique": false
+        },
+        "rules": {
+          "CRUSADER SQUAD unit only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Crusader Squad"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Ranged Weapon§Castellan—Combi-weapon – purgatus": {
+        "aspects": {
+          "Label": "Combi-weapon – Purgatus"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 7
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          }
+        }
+      },
+      "Ranged Weapon§Castellan—Combi-weapon – damnatus": {
+        "aspects": {
+          "Label": "Combi-weapon – Damnatus"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 9
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D3",
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Castellan—Combi-weapon – infernus": {
+        "aspects": {
+          "Label": "Combi-weapon – Infernus"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Torrent",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Melee Weapon§Castellan—Chainsword": {
+        "aspects": {
+          "Label": "Chainsword"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 7
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Crusader Squad—Heavy Bolt Pistol": {
+        "aspects": {
+          "Label": "Heavy Bolt Pistol"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Close-quarters"
+          ]
+        }
+      },
+      "Ranged Weapon§Crusader Squad—Shotgun": {
+        "aspects": {
+          "Label": "Shotgun"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Assault"
+          ]
+        }
+      },
+      "Ranged Weapon§Crusader Squad—Hand Flamer": {
+        "aspects": {
+          "Label": "Hand Flamer"
+        },
+        "stats": {
+          "Range": {
+            "value": 9
+          },
+          "A": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Torrent",
+            "Ability§Close-quarters"
+          ]
+        }
+      },
+      "Ranged Weapon§Crusader Squad—Bolt Rifle – focused fire": {
+        "aspects": {
+          "Label": "Bolt Rifle – Focused Fire"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 6
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Heavy"
+          ]
+        }
+      },
+      "Ranged Weapon§Crusader Squad—Bolt Rifle – saturation": {
+        "aspects": {
+          "Label": "Bolt Rifle – Saturation"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Assault"
+          ]
+        }
+      },
+      "Ranged Weapon§Crusader Squad—Bolt Rifle": {
+        "aspects": {
+          "Label": "Bolt Rifle"
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Crusader Squad—Bolt Rifle – focused fire",
+            "Ranged Weapon§Crusader Squad—Bolt Rifle – saturation"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
+        }
+      },
+      "Melee Weapon§Crusader Squad—Neophyte Chainsword": {
+        "aspects": {
+          "Label": "Neophyte Chainsword"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 4
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Melee Weapon§Crusader Squad—Master-crafted Power Weapon": {
+        "aspects": {
+          "Label": "Master-crafted Power Weapon"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 3
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Lethal Hits"
+          ]
+        }
+      },
+      "Melee Weapon§Crusader Squad—Initiate Chainsword": {
+        "aspects": {
+          "Label": "Initiate Chainsword"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 4
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Emperor’s Champion—Bolt Pistol": {
+        "aspects": {
+          "Label": "Bolt Pistol"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Close-quarters"
+          ]
+        }
+      },
+      "Ranged Weapon§Execrator—Hand Flamer": {
+        "aspects": {
+          "Label": "Hand Flamer"
+        },
+        "stats": {
+          "Range": {
+            "value": 9
+          },
+          "A": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Torrent",
+            "Ability§Close-quarters"
+          ]
+        }
+      },
+      "Ranged Weapon§Execrator—Absolvor Bolt Pistol": {
+        "aspects": {
+          "Label": "Absolvor Bolt Pistol"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Close-quarters"
+          ]
+        }
+      },
+      "Ranged Weapon§Gladiator Lancer—Multi-melta": {
+        "aspects": {
+          "Label": "Multi-melta"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 10
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D3",
+            "value": 2
+          },
+          "Points": {
+            "value": 10
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Gladiator Reaper—Multi-melta": {
+        "aspects": {
+          "Label": "Multi-melta"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 10
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D3",
+            "value": 2
+          },
+          "Points": {
+            "value": 10
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Melee Weapon§High Marshal Helbrecht—Sword of the High Marshals – sweep": {
+        "aspects": {
+          "Label": "Sword of the High Marshals – Sweep"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 12
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 6
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Melee Weapon§High Marshal Helbrecht—Sword of the High Marshals – strike": {
+        "aspects": {
+          "Label": "Sword of the High Marshals – Strike"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 6
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 9
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 3
+          }
+        }
+      },
+      "Ranged Weapon§Impulsor—Multi-melta": {
+        "aspects": {
+          "Label": "Multi-melta"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 10
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D3",
+            "value": 2
+          },
+          "Points": {
+            "value": 10
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Marshal—Combi-weapon – purgatus": {
+        "aspects": {
+          "Label": "Combi-weapon – Purgatus"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 7
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          }
+        }
+      },
+      "Ranged Weapon§Marshal—Combi-weapon – damnatus": {
+        "aspects": {
+          "Label": "Combi-weapon – Damnatus"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 9
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D3",
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Marshal—Combi-weapon – infernus": {
+        "aspects": {
+          "Label": "Combi-weapon – Infernus"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Torrent",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Repulsor—Multi-melta": {
+        "aspects": {
+          "Label": "Multi-melta"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 10
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D3",
+            "value": 2
+          },
+          "Points": {
+            "value": 10
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Repulsor Executioner—Multi-melta": {
+        "aspects": {
+          "Label": "Multi-melta"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 10
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D3",
+            "value": 2
+          },
+          "Points": {
+            "value": 10
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Sword Brethren Squad—Heavy Bolt Pistol": {
+        "aspects": {
+          "Label": "Heavy Bolt Pistol"
+        },
+        "stats": {
+          "Range": {
+            "value": 18
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Close-quarters"
+          ]
+        }
+      },
+      "Ranged Weapon§Sword Brethren Squad—Hand Flamer": {
+        "aspects": {
+          "Label": "Hand Flamer"
+        },
+        "stats": {
+          "Range": {
+            "value": 9
+          },
+          "A": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Torrent",
+            "Ability§Close-quarters"
+          ]
+        }
+      },
+      "Ranged Weapon§Sword Brethren Squad—Plasma Pistol – standard": {
+        "aspects": {
+          "Label": "Plasma Pistol – Standard"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 7
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Close-quarters"
+          ]
+        }
+      },
+      "Ranged Weapon§Sword Brethren Squad—Plasma Pistol – supercharge": {
+        "aspects": {
+          "Label": "Plasma Pistol – Supercharge"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 8
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Hazardous",
+            "Ability§Close-quarters"
+          ]
+        }
+      },
+      "Ranged Weapon§Sword Brethren Squad—Plasma Pistol": {
+        "aspects": {
+          "Label": "Plasma Pistol"
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Sword Brethren Squad—Plasma Pistol – standard",
+            "Ranged Weapon§Sword Brethren Squad—Plasma Pistol – supercharge"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
+        }
+      },
+      "Melee Weapon§Sword Brethren Squad—Thunder Hammer": {
+        "aspects": {
+          "Label": "Thunder Hammer"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 8
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 3
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Devastating Wounds"
+          ]
+        }
+      },
+      "Melee Weapon§Sword Brethren Squad—Master-crafted Power Weapon": {
+        "aspects": {
+          "Label": "Master-crafted Power Weapon"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 3
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Lethal Hits"
+          ]
+        }
+      },
+      "Melee Weapon§Sword Brethren Squad—Chainsword": {
+        "aspects": {
+          "Label": "Chainsword"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 6
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Melee Weapon§Sword Brethren Squad—Twin Lightning Claws": {
+        "aspects": {
+          "Label": "Twin Lightning Claws"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 5
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Twin-linked"
+          ]
+        }
+      },
+      "Melee Weapon§Crusader Squad (Old)—Astartes chainsword": {
+        "aspects": {
+          "Label": "Astartes chainsword"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "S": {
+            "value": 4
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
+      "Melee Weapon§Crusader Squad (Old)—Close combat weapon": {
+        "aspects": {
+          "Label": "Close combat weapon"
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "S": {
+            "value": 4
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
+      "Melee Weapon§Crusader Squad (Old)—Power fist": {
+        "aspects": {
+          "Label": "Power fist"
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "S": {
+            "value": 8
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
+      "Melee Weapon§Crusader Squad (Old)—Power weapon": {
+        "aspects": {
+          "Label": "Power weapon"
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "S": {
+            "value": 5
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
+      "Ranged Weapon§Crusader Squad (Old)—Bolt pistol": {
+        "aspects": {
+          "Label": "Bolt pistol"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Close-quarters"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 5
+          }
+        }
+      },
+      "Ranged Weapon§Crusader Squad (Old)—Boltgun": {
+        "aspects": {
+          "Label": "Boltgun"
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 4
+          }
+        }
+      },
+      "Ranged Weapon§Crusader Squad (Old)—Flamer": {
+        "aspects": {
+          "Label": "Flamer"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Ignores Cover",
+            "Ability§Torrent"
+          ]
+        },
+        "stats": {
+          "A": {
+            "format": "D6",
+            "value": 0
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "format": "{t}",
+            "statType": "term",
+            "value": "N/A"
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 4
+          }
+        }
+      },
+      "Ranged Weapon§Crusader Squad (Old)—Grav-gun": {
+        "aspects": {
+          "Label": "Grav-gun"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "vehicle"
+                },
+                "x": {
+                  "value": "2+"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 2
+          },
+          "Range": {
+            "value": 18
+          },
+          "S": {
+            "value": 5
+          }
+        }
+      },
+      "Ranged Weapon§Crusader Squad (Old)—Meltagun": {
+        "aspects": {
+          "Label": "Meltagun"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -4
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "format": "D6",
+            "value": 0
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 9
+          }
+        }
+      },
+      "Ranged Weapon§Crusader Squad (Old)—Plasma gun – standard": {
+        "aspects": {
+          "Label": "Standard"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -2
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 7
+          }
+        }
+      },
+      "Ranged Weapon§Crusader Squad (Old)—Plasma gun – supercharge": {
+        "aspects": {
+          "Label": "Supercharge"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Hazardous",
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -3
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 2
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 8
+          }
+        }
+      },
+      "Ranged Weapon§Crusader Squad (Old)—Plasma gun": {
+        "aspects": {
+          "Label": "Plasma gun"
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Crusader Squad (Old)—Plasma gun – standard",
+            "Ranged Weapon§Crusader Squad (Old)—Plasma gun – supercharge"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
+        }
+      },
+      "Melee Weapon§Crusader Squad (Old)—Combat knife": {
+        "aspects": {
+          "Label": "Combat knife"
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "S": {
+            "value": 4
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
+      "Ranged Weapon§Crusader Squad (Old)—Astartes shotgun": {
+        "aspects": {
+          "Label": "Astartes shotgun"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Assault"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 18
+          },
+          "S": {
+            "value": 4
+          }
+        }
+      },
+      "Melee Weapon§Crusader Squad (Old)—Thunder hammer": {
+        "aspects": {
+          "Label": "Thunder hammer"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Devastating Wounds"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "S": {
+            "value": 8
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Melee Weapon§Crusader Squad (Old)—Twin lightning claws": {
+        "aspects": {
+          "Label": "Twin lightning claws"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Twin-linked"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "S": {
+            "value": 5
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
+      "Melee Weapon§Land Raider Crusader (BT)—Armoured tracks": {
+        "aspects": {
+          "Label": "Armoured tracks"
+        },
+        "stats": {
+          "A": {
+            "value": 6
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "S": {
+            "value": 8
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Ranged Weapon§Land Raider Crusader (BT)—Hunter-killer missile": {
+        "aspects": {
+          "Label": "Hunter-killer missile"
+        },
+        "assets": {
+          "traits": [
+            "Ability§One Shot"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -3
+          },
+          "BS": {
+            "value": 2
+          },
+          "D": {
+            "format": "D3",
+            "value": 3
+          },
+          "Range": {
+            "value": 48
+          },
+          "S": {
+            "value": 14
+          }
+        }
+      },
+      "Ranged Weapon§Land Raider Crusader (BT)—Hurricane bolter": {
+        "aspects": {
+          "Label": "Hurricane bolter"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Twin-linked",
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "6"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 6
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 5
+          }
+        }
+      },
+      "Ranged Weapon§Land Raider Crusader (BT)—Multi-melta": {
+        "aspects": {
+          "Label": "Multi-melta"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "3"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": -3
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "format": "D3",
+            "value": 3
+          },
+          "Range": {
+            "value": 18
+          },
+          "S": {
+            "value": 10
+          }
+        }
+      },
+      "Ranged Weapon§Land Raider Crusader (BT)—Storm bolter": {
+        "aspects": {
+          "Label": "Storm bolter"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 5
+          }
+        }
+      },
+      "Ranged Weapon§Land Raider Crusader (BT)—Twin assault cannon": {
+        "aspects": {
+          "Label": "Twin assault cannon"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Twin-linked",
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 6
+          },
+          "AP": {
+            "value": -2
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 6
+          }
+        }
+      },
+      "Ability§Faithful Cenobytes": {
+        "text": "- If this unit’s Chaplain Grimaldus model is destroyed, this unit’s remaining Cenobyte Servitor models are also **destroyed**.\n\n- Each Cenobyte Servitor model in this unit takes up 0 transport capacity."
+      },
+      "Ability§Banner of the Emperor Victorious": {
+        "text": "This unit has +1 to advance rolls and charge rolls."
+      },
+      "Ability§Column from the Major Altar": {
+        "text": "This unit has +1 **T**."
+      },
+      "Ability§Water from the Stoup of Elucidation": {
+        "text": "This unit’s melee attacks have +1 **AP**."
+      },
+      "Infantry/Mounted§Bladeguard Veteran Squad": {
+        "allowed": {
+          "items": [
+            "Character§Castellan",
+            "Character§High Marshal Helbrecht",
+            "Character§Marshal"
+          ]
+        }
+      },
+      "Infantry/Mounted§Company Heroes": {
+        "allowed": {
+          "items": [
+            "Character§Castellan",
+            "Character§High Marshal Helbrecht"
+          ]
+        }
+      },
+      "Ability§Chosen of the Emperor": {
+        "text": "You cannot include more than one **EMPEROR’S** **CHAMPION** unit in your army."
+      },
+      "Infantry/Mounted§Assault Intercessor Squad": {
+        "allowed": {
+          "items": [
+            "Character§Emperor’s Champion"
+          ]
+        }
+      },
+      "Infantry/Mounted§Intercessor Squad": {
+        "allowed": {
+          "items": [
+            "Character§Emperor’s Champion"
+          ]
+        }
+      },
+      "Infantry/Mounted§Sternguard Veteran Squad": {
+        "allowed": {
+          "items": [
+            "Character§Emperor’s Champion"
+          ]
+        }
       }
     },
     "gameModes": {},

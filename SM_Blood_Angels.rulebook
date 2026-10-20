@@ -1,6 +1,6 @@
 {
   "name": "Blood Angels 11e",
-  "revision": "11.0.4",
+  "revision": "11.1.11",
   "game": "Warhammer 40k",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -10,9 +10,9 @@
   "dependencies": [
     {
       "slug": "",
-      "name": "Space Marines 11e",
-      "game": "Warhammer 40k",
-      "source": "https://raw.githubusercontent.com/RosterizerData/Warhammer40k11e/main/Space_Marines.rulebook"
+      "name": "Space Marines",
+      "game": "Warhammer 40k 11e",
+      "source": "https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k11e/main/Space_Marines.rulebook"
     }
   ],
   "rulebook": {
@@ -399,12 +399,12 @@
         },
         "assets": {
           "traits": [
-            "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Death Company Marines with Jump Packs"
+              "text": "This model can be attached to the following units:\n\n* Death Company Marines With Jump Packs"
             },
-            "Ability§Oath of Moment",
+            "Ability§Deep Strike",
+            "Ability§Combat Doctrines",
             "Ability§Redeemer of the Lost",
             "Ability§Mass of Doom",
             {
@@ -452,13 +452,13 @@
             "value": 1
           },
           "Points": {
-            "value": 85
+            "value": 90
           },
           "Sv": {
             "value": 2
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 5
@@ -468,12 +468,13 @@
       "Character§Blood Angels Captain": {
         "assets": {
           "traits": [
-            "Ability§Deep Strike",
-            "Ability§Oath of Moment",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit: Assault Intercessor Squad, Company Heroes, Infernus Squad, Intercessor Squad, Sternguard Veteran Squad, Tactical Squad"
+              "text": "This model can be attached to the following units:\n\n* Assault Intercessor Squad\n\n* Company Heroes\n\n* Infernus Squad\n\n* Intercessor Squad\n\n* Sternguard Veteran Squad"
             },
+            "Ability§Deep Strike",
+            "Ability§Combat Doctrines",
+            "Ability§Transhuman Strategist",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -483,7 +484,7 @@
               }
             },
             "Ability§Finest Hour",
-            "Ability§Rites of Battle (BA)"
+            "Ability§Strategic Acumen"
           ]
         },
         "keywords": {
@@ -497,7 +498,8 @@
             "Grenades",
             "Imperium",
             "Infantry",
-            "Tacticus"
+            "Tacticus",
+            "Explosives"
           ],
           "Category": [
             "Character"
@@ -552,7 +554,7 @@
             "value": 1
           },
           "Points": {
-            "value": 80
+            "value": 90
           },
           "Ranged Options": {
             "dynamic": true,
@@ -584,7 +586,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 5
@@ -759,25 +761,17 @@
         "assets": {
           "traits": [
             {
-              "item": "Ability§Feel No Pain",
-              "stats": {
-                "x": {
-                  "value": "4+"
-                }
-              }
-            },
-            {
               "item": "Ability§Leader",
               "text": "This model can be attached to the following units:\n\n* Assault Intercessor Squad\n\n* Intercessor Squad\n\n* Sternguard Veteran Squad"
             },
-            "Ability§Oath of Moment",
-            "Ability§The Quickening (psychic)",
+            "Ability§Combat Doctrines",
+            "Ability§Transhuman Strategist",
             "Ability§Transfixing Gaze (psychic)",
             {
               "item": "Ability§Invulnerable",
               "stats": {
                 "x": {
-                  "value": "5+"
+                  "value": "4+"
                 }
               }
             },
@@ -785,7 +779,17 @@
             "Ranged Weapon§Chief Librarian Mephiston—Fury of the Ancients",
             "Ranged Weapon§Chief Librarian Mephiston—Plasma pistol",
             "Ability§Lone Operative",
-            "Ability§Fights First"
+            "Ability§Fights First",
+            {
+              "item": "Ability§Feel No Pain",
+              "stats": {
+                "x": {
+                  "value": "5+"
+                }
+              }
+            },
+            "Ability§Chief Librarian (psyker level 3)",
+            "Ability§Quickening"
           ]
         },
         "keywords": {
@@ -804,7 +808,8 @@
             "Grenades",
             "Imperium",
             "Tacticus",
-            "Chief Librarian Mephiston"
+            "Chief Librarian Mephiston",
+            "Explosives"
           ],
           "Category": [
             "Epic Hero"
@@ -815,19 +820,19 @@
             "value": 6
           },
           "M": {
-            "value": 7
+            "value": 8
           },
           "OC": {
             "value": 1
           },
           "Points": {
-            "value": 110
+            "value": 175
           },
           "Sv": {
             "value": 2
           },
           "T": {
-            "value": 5
+            "value": 6
           },
           "W": {
             "value": 6
@@ -840,12 +845,13 @@
         },
         "assets": {
           "traits": [
-            "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Assault Intercessors with Jump Packs\n* Assault Squad with Jump Packs\n* Sanguinary Guard\n* Vanguard Veteran Squad with Jump Packs"
+              "text": "This model can be attached to the following units:\n\n* Assault Intercessors With Jump Packs\n\n* Sanguinary Guard\n\n* Vanguard Veteran Squad With Jump Packs"
             },
-            "Ability§Oath of Moment",
+            "Ability§Deep Strike",
+            "Ability§Combat Doctrines",
+            "Ability§Transhuman Strategist",
             "Ability§Warden of the Imperium Nihilus",
             "Ability§Death Mask of Sanguinius",
             {
@@ -878,7 +884,8 @@
             "Imperium",
             "Tacticus",
             "Chapter Master",
-            "Commander Dante"
+            "Commander Dante",
+            "Explosives"
           ],
           "Category": [
             "Epic Hero"
@@ -895,13 +902,13 @@
             "value": 1
           },
           "Points": {
-            "value": 125
+            "value": 140
           },
           "Sv": {
             "value": 2
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 6
@@ -911,6 +918,10 @@
       "Character§Death Company Captain": {
         "assets": {
           "traits": [
+            {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Death Company Marines"
+            },
             "Ability§Deep Strike",
             {
               "item": "Ability§Feel No Pain",
@@ -920,11 +931,7 @@
                 }
               }
             },
-            "Ability§Oath of Moment",
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit: Death Company Marines, Death Company Marines with Bolts Rifles."
-            },
+            "Ability§Combat Doctrines",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -934,8 +941,8 @@
               }
             },
             "Ability§Black Rage",
-            "Ability§Death Vision of Sanguinius",
-            "Ability§Forlorn Hero"
+            "Ability§Forlorn Hero",
+            "Ability§Death Visions of Sanguinius"
           ]
         },
         "keywords": {
@@ -950,7 +957,8 @@
             "Grenades",
             "Imperium",
             "Infantry",
-            "Tacticus"
+            "Tacticus",
+            "Explosives"
           ],
           "Category": [
             "Character"
@@ -1005,7 +1013,7 @@
             "value": 1
           },
           "Points": {
-            "value": 70
+            "value": 80
           },
           "Ranged Options": {
             "dynamic": true,
@@ -1037,7 +1045,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 5
@@ -1047,6 +1055,10 @@
       "Character§Death Company Captain with Jump Pack": {
         "assets": {
           "traits": [
+            {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Death Company Marines With Jump Packs"
+            },
             "Ability§Deep Strike",
             {
               "item": "Ability§Feel No Pain",
@@ -1056,11 +1068,7 @@
                 }
               }
             },
-            "Ability§Oath of Moment",
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit: Death Company Marines with Jump Packs."
-            },
+            "Ability§Combat Doctrines",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -1071,7 +1079,7 @@
             },
             "Ability§Lost to Fury",
             "Ability§Black Rage",
-            "Ability§Death Vision of Sanguinius"
+            "Ability§Death Visions of Sanguinius"
           ]
         },
         "keywords": {
@@ -1088,7 +1096,8 @@
             "Imperium",
             "Infantry",
             "Jump Pack",
-            "Tacticus"
+            "Tacticus",
+            "Explosives"
           ],
           "Category": [
             "Character"
@@ -1143,7 +1152,7 @@
             "value": 1
           },
           "Points": {
-            "value": 75
+            "value": 85
           },
           "Ranged Options": {
             "dynamic": true,
@@ -1183,7 +1192,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 5
@@ -1339,6 +1348,10 @@
         },
         "assets": {
           "traits": [
+            {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Death Company Marines With Jump Packs"
+            },
             "Ability§Deep Strike",
             {
               "item": "Ability§Feel No Pain",
@@ -1348,11 +1361,7 @@
                 }
               }
             },
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Death Company Marines with Jump Packs"
-            },
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Guardian of the Lost",
             "Ability§Fury Unbound",
             {
@@ -1385,7 +1394,9 @@
             "Infantry",
             "Jump Pack",
             "Lemartes",
-            "Tacticus"
+            "Tacticus",
+            "Death Company",
+            "Explosives"
           ],
           "Category": [
             "Epic Hero"
@@ -1402,16 +1413,16 @@
             "value": 1
           },
           "Points": {
-            "value": 100
+            "value": 110
           },
           "Sv": {
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -1419,14 +1430,14 @@
         "assets": {
           "traits": [
             {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Assault Intercessor Squad\n* Desolation Squad\n* Devastator Squad\n* Hellblaster Squad\n* Infernus Squad\n* Intercessor Squad\n* Tactical Squad\n* Sternguard Veteran Squad\n\n\nYou can attach this model to one of the above units, even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+              "item": "Ability§Support",
+              "text": "This model can be attached to the following units:\n\n* Assault Intercessor Squad\n\n* Bladeguard Veteran Squad\n\n* Company Heroes\n\n* Desolation Squad\n\n* Hellblaster Squad\n\n* Infernus Squad\n\n* Intercessor Squad\n\n* Sternguard Veteran Squad"
             },
-            "Ability§Oath of Moment",
-            "Ability§Sanguinary Priest",
+            "Ability§Combat Doctrines",
             "Ability§Blood Chalice",
             "Ranged Weapon§Sanguinary Priest—Absolvor bolt pistol",
-            "Melee Weapon§Sanguinary Priest—Astartes chainsword"
+            "Melee Weapon§Sanguinary Priest—Astartes chainsword",
+            "Ability§Narthecium (Sanguinary Priest)"
           ]
         },
         "keywords": {
@@ -1443,7 +1454,8 @@
             "Imperium",
             "Infantry",
             "Sanguinary Priest",
-            "Tacticus"
+            "Tacticus",
+            "Explosives"
           ],
           "Category": [
             "Character"
@@ -1522,19 +1534,19 @@
             "value": 1
           },
           "Points": {
-            "value": 85
+            "value": 60
           },
           "Sv": {
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "unitDiscount": {
-            "value": 10
+            "value": 0
           },
           "unitDiscountThreshold": {
-            "value": 3
+            "value": 0
           },
           "W": {
             "value": 4
@@ -1844,7 +1856,7 @@
             "Ability§Deep Strike",
             "Ability§Fights First",
             "Ability§Lone Operative",
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Aura of Fervour (aura)",
             "Ability§Miraculous Saviour",
             {
@@ -1891,13 +1903,13 @@
             "value": 1
           },
           "Points": {
-            "value": 130
+            "value": 120
           },
           "Sv": {
             "value": 2
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 7
@@ -2016,7 +2028,8 @@
         "keywords": {
           "Keywords": [],
           "Role": [
-            "Priority Assets"
+            "Priority Assets",
+            "Purge The Foe"
           ]
         },
         "rules": {
@@ -2034,35 +2047,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Armour of Contempt"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Strike now for Glory"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Focused Fury"
+                "value": "Stratagem§Unto the Burning Skies"
               },
               {
                 "actionType": "add",
@@ -2090,6 +2075,20 @@
                     "traits"
                   ]
                 ],
+                "value": "Stratagem§Strike now for Glory"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
                 "value": "Stratagem§Instant of Grace"
               },
               {
@@ -2104,7 +2103,21 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Unto the Burning Skies"
+                "value": "Stratagem§Focused Fury"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Measured Strategist"
               }
             ],
             "evals": [],
@@ -2117,7 +2130,7 @@
             "value": 3
           }
         },
-        "text": "LEGACY OF THE ANGEL\n\nAt the start of the first battle round, select\ntwo of the Angelic Legacy abilities listed\nbelow. Until the end of the battle, those\nAngelic Legacy abilities are active and\ntheir effects apply to all **Adeptus Astartes\nCharacter** units from your army.\n\n**Sanguinary Grace:** This unit is eligible\nto shoot and declare a charge in a turn in\nwhich it Fell Back.\n\n**Carmine Wrath:** Each time a model in\nthis unit makes an attack, re‑roll a Hit roll\nof 1 and re‑roll a Wound roll of 1.\n\n**Their Appointed Hour:** You can re‑roll\nAdvance and Charge rolls made for\nthis unit.\n\nRESTRICTIONS\n\nYour army can include **Blood Angels**\nunits, but it *cannot* include **Adeptus\nAstartes** units drawn from *any\nother Chapter.*"
+        "text": "**LEGACY OF THE ANGEL**\n\nFriendly **BLOOD ANGELS CHARACTER** units: \n- Can re-roll **hit rolls** of 1.\n- Can re-roll **wound rolls** of 1.\n\n**Restrictions:** Your army can include **BLOOD ANGELS** units, but it cannot include any **ADEPTUS ASTARTES** units drawn from any other Chapter."
       },
       "Detachment§Encarmine Speartip": {
         "keywords": {
@@ -2130,27 +2143,7 @@
             "value": 1
           }
         },
-        "text": "WARNING: this detachment was not in 10e and needs importing.\n\n**Wrath of Angels**\nWhen a friendly **Sanguinary Guard** unit is selected to make a **fall‑back move**, that move does not prevent that unit from being **eligible to shoot/eligible to declare a charge**.\n**Restrictions:** Your army can include **Blood Angels** units, but it cannot include any **Adeptus Astartes** units drawn from any other Chapter."
-      },
-      "Detachment§Legacy Of Grace": {
-        "keywords": {
-          "Role": [
-            "Priority Assets"
-          ]
-        },
-        "stats": {
-          "Detachment Points": {
-            "value": 1
-          }
-        },
-        "text": "WARNING: this detachment was not in 10e and needs importing.\n\n**Legacy Of The Angel**\nFriendly **Blood Angels Infantry Character** units (excluding **Commander Dante** units) have +1 to **advance rolls** and **charge rolls**.\nThis **detachment** has the **GRACE** tag and cannot be taken with another **GRACE** **detachment**.\n**Restrictions:** Your army can include **Blood Angels** units, but it cannot include any **Adeptus Astartes** units drawn from any other Chapter."
-      },
-      "Detachment§Liberator Assault Group": {
-        "keywords": {
-          "Role": [
-            "Take And Hold"
-          ]
-        },
+        "text": "**WRATH OF ANGELS**\n\nThe **tactical doctrine** is active for **SANGUINARY GUARD** units __in addition__ to any other **combat doctrine**.\n\n**Restrictions:** Your army can include **BLOOD ANGELS** units, but it cannot include any **ADEPTUS ASTARTES** units drawn from any other Chapter.",
         "rules": {
           "assignStratagems": {
             "actions": [
@@ -2166,7 +2159,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Angelic Grace"
+                "value": "Stratagem§Inexorable Valour"
               },
               {
                 "actionType": "add",
@@ -2180,7 +2173,7 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Aggressive Onslaught"
+                "value": "Stratagem§Judgement of the Golden Host"
               },
               {
                 "actionType": "add",
@@ -2194,380 +2187,14 @@
                     "traits"
                   ]
                 ],
-                "value": "Stratagem§Armour of Contempt"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Red Rampage"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Savage Echoes"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Relentless Assault"
+                "value": "Stratagem§Blinding Blurs of Vengeance"
               }
             ],
             "evals": [],
             "evaluate": "AND",
             "failState": "pass"
           }
-        },
-        "stats": {
-          "Detachment Points": {
-            "value": 3
-          }
-        },
-        "text": "**Red Thirst**\n\nEach time an ADEPTUS ASTARTES unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic and add 2 to the Strength characteristic of melee weapons equipped by models in that unit.\n\n**RESTRICTIONS**\n\nYour army can include Blood Angels units, but it cannot include any Adeptus Astartes units drawn from any other Chapter."
-      },
-      "Detachment§Rage-cursed Onslaught": {
-        "keywords": {
-          "Role": [
-            "Purge The Foe"
-          ]
-        },
-        "rules": {
-          "assignStratagems": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Armour of Contempt"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Red Wrath"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Deathless Duty"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Limb From Limb"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Insensate Rampage"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§A Grim Warning"
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "stats": {
-          "Detachment Points": {
-            "value": 3
-          }
-        },
-        "text": "## MADDENED FEROCITY\n\nEach time an Adeptus Astartes model from your army makes a melee attack, re‑roll a Wound roll of 1.\n\nEach time an Adeptus Astartes unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. If your unit is Battle‑shocked, add 2 to the Attacks characteristic of melee weapons equipped by models in that unit instead.\n\n## RESTRICTIONS\n\nYour army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter."
-      },
-      "Detachment§The Angelic Host": {
-        "keywords": {
-          "Role": [
-            "Disruption"
-          ]
-        },
-        "rules": {
-          "assignstratagems": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Martial Exemplars"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Armour of Contempt"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Unbridled Ardour"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Descent of Angels"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Angel's Sacrifice"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Death from the Skies"
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "stats": {
-          "Detachment Points": {
-            "value": 2
-          }
-        },
-        "text": "**Upon Wings of Fire**\n\nAt the end of your opponent s turn, you can select a number of ADEPTUS ASTARTES JUMP PACK units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows:\n\n|||\n|---|---|\n|BATTLE SIZE| UNITS|\n|INCURSION|Up to 1 units|\n|STRIKE FORCE|Up to 2 units|\n|ONSLAUGHT|Up to 3 units|\n\n\nOnce you have made your selections, remove those units from the battlefield and place them into Strategic Reserves. In the Reinforcements step of your next Movement phase, set each of those units up using their Deep Strike ability.\n\n**RESTRICTIONS**\n\nYour army can include Blood Angels units, but it cannot include any Adeptus Astartes units drawn from any other Chapter."
-      },
-      "Detachment§The Lost Brethren": {
-        "keywords": {
-          "Role": [
-            "Purge The Foe"
-          ]
-        },
-        "rules": {
-          "assignStratagems": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Furious Onslaught"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Armour of Contempt"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Glorious Sacrifice"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Lost to Rage"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Wrathful Rampage"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{roster}",
-                    "traits",
-                    "item",
-                    "Stratagems§Stratagems",
-                    "traits"
-                  ]
-                ],
-                "value": "Stratagem§Final Retribution"
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "stats": {
-          "Detachment Points": {
-            "value": 2
-          }
-        },
-        "text": "**A Noble Death in Combat**\n\nEach time a DEATH COMPANY model from your army makes a melee attack, re-roll a Wound roll of 1 if that model’s unit is below its Starting Strength; if that model’s unit is Below Half-strength, you can re-roll the Wound roll instead.\n\n**KEYWORDS**\n\n\nIf you select this Detachment, DEATH COMPANY MARINES and DEATH COMPANY MARINES WITH BOLT RIFLES units from your army have the BATTLELINE keyword.\n\n**RESTRICTIONS**\n\nYour army can include Blood Angels units, but it cannot include any Adeptus Astartes units drawn from any other Chapter."
+        }
       },
       "Detachment§Wrath Of The Doomed": {
         "keywords": {
@@ -2580,16 +2207,73 @@
             "value": 1
           }
         },
-        "text": "WARNING: this detachment was not in 10e and needs importing.\n\n**Fanatical Celerity**\nWhen a friendly **DEATH COMPANY** unit is selected to make an **advance move**, you can use this ability. If you do:\n\n- That unit suffers D3+1 **mortal wounds**.\n\n- That move does not prevent that unit from being **eligible to declare a charge**.\nThis **detachment** has the **DOOMED** tag and cannot be taken with another **DOOMED** **detachment**.\n**Restrictions:** Your army can include **Blood Angels** units, but it cannot include any **Adeptus Astartes** units drawn from any other Chapter."
+        "text": "**SANGUINIUS' FURY**\n\nFriendly **DEATH COMPANY** units have the following: \n-  At the start of each phase, the **assault doctrine** is active for this unit.\n- The **devastator/tactical doctrine** __cannot__ be active for this unit.\n_This means that, regardless of any other rules, **DEATH COMPANY** units can never have an active doctrine other than the **assault doctrine**._\n\n**Restrictions:** Your army can include **BLOOD ANGELS** units, but it cannot include any **ADEPTUS ASTARTES** units drawn from any other Chapter.",
+        "rules": {
+          "assignStratagems": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§No Barrier to Retribution"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Death Begets Vengeance"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "traits",
+                    "item",
+                    "Stratagems§Stratagems",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Rage-fuelled Response"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
       },
-      "Enhancement§Angel's Fang": {
+      "Enhancement§Angelic Executioner": {
         "keywords": {
           "Keywords": [
-            "Rage-cursed Onslaught"
+            "Encarmine Speartip"
           ]
         },
+        "stats": {
+          "Points": {
+            "value": 20
+          }
+        },
+        "text": "**ADEPTUS ASTARTES JUMP PACK** model only. When this unit is **selected to fight**, this unit's melee attacks have:\n- **[LETHAL HITS]**.\n- __Or:__ **[SUSTAINED HITS 1]**",
         "rules": {
-          "Adeptus Astartes model only": {
+          "ADEPTUS ASTARTES JUMP PACK model only.": {
             "evals": [
               {
                 "actionable": true,
@@ -2604,120 +2288,7 @@
                   ]
                 ],
                 "value": "Adeptus Astartes"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "**ADEPTUS ASTARTES** model only. Each time the bearer makes a melee attack that targets a **CHARACTER**, **MONSTER** or **VEHICLE** unit, that attack has the **[SUSTAINED HITS 2]** ability."
-      },
-      "Enhancement§Angel’s Fang": {
-        "keywords": {
-          "Keywords": [
-            "Rage-Cursed Onslaught"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**ADEPTUS ASTARTES** model only. Each time the bearer makes a melee attack that targets a **CHARACTER**, **MONSTER** or **VEHICLE** unit, that attack has the **[SUSTAINED HITS 2]** ability."
-      },
-      "Enhancement§Angelic Executioner": {
-        "keywords": {
-          "Keywords": [
-            "Encarmine Speartip"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Adeptus Astartes Jump Pack** model only. When this unit is **selected to fight**, this unit’s melee attacks have:\n\n- **[Lethal Hits]**.\n\n- __Or:__ **[Sustained Hits 1]**."
-      },
-      "Enhancement§Archangel’s Shard": {
-        "keywords": {
-          "Keywords": [
-            "The Angelic Host"
-          ]
-        },
-        "rules": {
-          "ability": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits",
-                    "classification",
-                    "Melee Weapon",
-                    "traits"
-                  ],
-                  [
-                    "{parent}",
-                    "traits",
-                    "classIdentity",
-                    "Weapon",
-                    "traits",
-                    "classification",
-                    "Melee Weapon",
-                    "traits"
-                  ]
-                ],
-                "value": {
-                  "item": "Ability§Anti-",
-                  "stats": {
-                    "keyword": {
-                      "value": "chaos"
-                    },
-                    "x": {
-                      "value": "5+"
-                    }
-                  }
-                }
               },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits",
-                    "classification",
-                    "Melee Weapon",
-                    "traits"
-                  ],
-                  [
-                    "{parent}",
-                    "traits",
-                    "classIdentity",
-                    "Weapon",
-                    "traits",
-                    "classification",
-                    "Melee Weapon",
-                    "traits"
-                  ]
-                ],
-                "value": "Ability§Lance"
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 90
-          },
-          "Adeptus Astartes Jump Pack model only.": {
-            "evals": [
               {
                 "actionable": true,
                 "contains": true,
@@ -2736,109 +2307,7 @@
             "evaluate": "AND",
             "failState": "error"
           }
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "ADEPTUS ASTARTES JUMP PACK model only. The bearer’s melee weapons have the [Anti-Chaos 5+] and [Lance] abilities."
-      },
-      "Enhancement§Artisan of War": {
-        "keywords": {
-          "Keywords": [
-            "The Angelic Host"
-          ]
-        },
-        "rules": {
-          "Abilities": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classIdentity",
-                    "Weapon",
-                    "stats",
-                    "AP",
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classIdentity",
-                    "Weapon",
-                    "assets",
-                    "classIdentity",
-                    "Weapon",
-                    "stats",
-                    "AP",
-                    "value"
-                  ]
-                ],
-                "value": -1
-              },
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Sv",
-                    "value"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          },
-          "Adeptus Astartes Jump Pack model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Jump Pack"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "ADEPTUS ASTARTES JUMP PACK model only. Improve the Armour Penetration characteristic of the bearers weapons by 1, and the bearer has a Save characteristic of 2+."
-      },
-      "Enhancement§Aureole of the Angel": {
-        "keywords": {
-          "Keywords": [
-            "Legacy Of Grace"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Adeptus Astartes** model only. This unit has ‑3\" **detection range**."
+        }
       },
       "Enhancement§Blazing Icon": {
         "keywords": {
@@ -2873,12 +2342,12 @@
             "value": 20
           }
         },
-        "text": "**Adeptus Astartes Infantry** model only. Enemy units\ncannot use the Fire Overwatch Stratagem to shoot at\nthe bearer’s unit."
+        "text": "**ADEPTUS ASTARTES** model only. Enemy units cannot target this unit with **snap shooting** attacks."
       },
-      "Enhancement§Blood Boil": {
+      "Enhancement§Instinctive Interception": {
         "keywords": {
           "Keywords": [
-            "Legacy Of Grace"
+            "Wrath Of The Doomed"
           ]
         },
         "stats": {
@@ -2886,16 +2355,9 @@
             "value": 10
           }
         },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Adeptus Astartes Psyker** model only. This model’s **[Psychic]** attacks:\n\n- Have **[Anti:** non‑**Monster/Vehicle 5+]**.\n\n- Can re‑roll **damage rolls**."
-      },
-      "Enhancement§Blood Shard": {
-        "keywords": {
-          "Keywords": [
-            "The Lost Brethren"
-          ]
-        },
+        "text": "**DEATH COMPANY** model only. When you target this unit with the **Heroic Intervention stratagem**, that use is -1 **CP**.",
         "rules": {
-          "Death Company model only.": {
+          "DEATH COMPANY model only.": {
             "evals": [
               {
                 "actionable": true,
@@ -2915,53 +2377,22 @@
             "evaluate": "AND",
             "failState": "error"
           }
+        }
+      },
+      "Enhancement§On the Archtraitor's Bridge": {
+        "keywords": {
+          "Keywords": [
+            "Wrath Of The Doomed"
+          ]
         },
         "stats": {
           "Points": {
-            "value": 25
+            "value": 20
           }
         },
-        "text": "DEATH COMPANY model only. The first time the bearer is destroyed, at the end of the phase, roll one D6: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining."
-      },
-      "Enhancement§Carmine Reliquary": {
-        "keywords": {
-          "Keywords": [
-            "Rage-Cursed Onslaught"
-          ]
-        },
+        "text": "**DEATH COMPANY** model only. This model's melee attacks have +2 **A**.",
         "rules": {
-          "apply": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits"
-                  ],
-                  [
-                    "{parent}",
-                    "{parent}",
-                    "traits"
-                  ]
-                ],
-                "value": {
-                  "item": "Ability§Scouts",
-                  "stats": {
-                    "x": {
-                      "value": "6″"
-                    }
-                  }
-                }
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 90
-          },
-          "Chaplain model only": {
+          "DEATH COMPANY model only.": {
             "evals": [
               {
                 "actionable": true,
@@ -2975,40 +2406,18 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Chaplain"
+                "value": "Death Company"
               }
             ],
             "evaluate": "AND",
             "failState": "error"
           }
-        },
-        "stats": {
-          "Points": {
-            "value": 30
-          }
-        },
-        "text": "**CHAPLAIN** model only. Models in the bearer's unit have the Scouts 6\" ability. Each time you take a Battle-shock test for an **ADEPTUS ASTARTES** unit within 6\" of the bearer, you can re-roll the result."
+        }
       },
-      "Enhancement§Gift of Foresight": {
+      "Enhancement§Ordained Sacrifice": {
         "keywords": {
           "Keywords": [
-            "Liberator Assault Group"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "group": "Cost",
-            "statType": "numeric",
-            "value": 15,
-            "visibility": "normal"
-          }
-        },
-        "text": "ADEPTUS ASTARTES model only. Once per battle round, just after making a Hit roll, a Wound roll or a saving throw for the bearer, you can treat the result as an unmodified roll of 6 instead."
-      },
-      "Enhancement§Gleaming Pinions": {
-        "keywords": {
-          "Keywords": [
-            "The Angelic Host"
+            "Angelic Inheritors"
           ]
         },
         "stats": {
@@ -3016,45 +2425,9 @@
             "value": 25
           }
         },
-        "text": "ADEPTUS ASTARTES JUMP PACK model only. Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of the bearer, if this bearer’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\"."
-      },
-      "Enhancement§Icon of the Angel": {
-        "keywords": {
-          "Keywords": [
-            "Liberator Assault Group"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "group": "Cost",
-            "statType": "numeric",
-            "value": 20,
-            "visibility": "normal"
-          }
-        },
-        "text": "ADEPTUS ASTARTES model only. Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer’s unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. When doing so, if that enemy unit is also Battle-shocked by other means, subtract 1 from each of those Desperate Escape tests."
-      },
-      "Enhancement§Instinctive Interception": {
-        "keywords": {
-          "Keywords": [
-            "Wrath Of The Doomed"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Death Company** model only. When you target this unit with the **Heroic Intervention stratagem**, that use is ‑1 **CP**."
-      },
-      "Enhancement§Master of the Red Thirst": {
-        "keywords": {
-          "Keywords": [
-            "Rage-Cursed Onslaught"
-          ]
-        },
+        "text": "**ADEPTUS ASTARTES** model only. (Once per battle, per army) At the end of a phase in which this model is **destroyed**, roll one D6: \n- On a 2+, set this model back up on the battlefield as close as possible to where it was **destroyed**, **unengaged**, with 3 wounds remaining.",
         "rules": {
-          "Adeptus Astartes model only": {
+          "ADEPTUS ASTARTES model only.": {
             "evals": [
               {
                 "actionable": true,
@@ -3074,39 +2447,7 @@
             "evaluate": "AND",
             "failState": "error"
           }
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "**ADEPTUS ASTARTES** model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Fights First ability."
-      },
-      "Enhancement§On the Archtraitor's Bridge": {
-        "keywords": {
-          "Keywords": [
-            "Wrath Of The Doomed"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Death Company** model only. This model’s melee attacks have +2 **A**."
-      },
-      "Enhancement§Ordained Sacrifice": {
-        "keywords": {
-          "Keywords": [
-            "Angelic Inheritors"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "**Adeptus Astartes** model only. The first time the bearer\nis destroyed, roll one D6 at the end of the phase: on a\n2+, set the bearer back up on the battlefield as close\nas possible to where it was destroyed and not within\nEngagement Range of one or more enemy units, with\n3 wounds remaining."
+        }
       },
       "Enhancement§Prescient Flash": {
         "keywords": {
@@ -3143,39 +2484,8 @@
             "evals": [],
             "evaluate": "AND",
             "failState": "pass"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "**Adeptus Astartes** model only. Models in the bearer’s\nunit have the Scouts 6\" ability."
-      },
-      "Enhancement§Rage-fuelled Warrior": {
-        "keywords": {
-          "Keywords": [
-            "Liberator Assault Group"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "group": "Cost",
-            "statType": "numeric",
-            "value": 35,
-            "visibility": "normal"
-          }
-        },
-        "text": "ADEPTUS ASTARTES model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearers melee weapons have the [sustained hits 3] ability."
-      },
-      "Enhancement§Sanguinary Tear": {
-        "keywords": {
-          "Keywords": [
-            "Rage-Cursed Onslaught"
-          ]
-        },
-        "rules": {
-          "Adeptus Astartes model only": {
+          },
+          "ADEPTUS ASTARTES model only.": {
             "evals": [
               {
                 "actionable": true,
@@ -3198,45 +2508,10 @@
         },
         "stats": {
           "Points": {
-            "value": 35
+            "value": 25
           }
         },
-        "text": "**ADEPTUS ASTARTES** model only. While a friendly **DEATH COMPANY** unit is within 6\" of the bearer, add 1 to the Strength characteristic of weapons equipped by models in that unit."
-      },
-      "Enhancement§Sanguinius’ Grace": {
-        "keywords": {
-          "Keywords": [
-            "The Lost Brethren"
-          ]
-        },
-        "rules": {
-          "Death Company model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Death Company"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "DEATH COMPANY model only. Once per battle, at the end of the Fight phase, if the bearer is within Engagement Range of three or more enemy models, the bearer can fight one additional time."
+        "text": "**ADEPTUS ASTARTES** model only. This unit has **Scouts 6”**."
       },
       "Enhancement§Shadow of Abomination": {
         "keywords": {
@@ -3246,35 +2521,12 @@
         },
         "stats": {
           "Points": {
-            "value": 25
+            "value": 15
           }
         },
-        "text": "WARNING: this enhancement was not in 10e and needs importing.\n\n**Adeptus Astartes Jump Pack** model only. (Once per battle, per army) When this unit is **selected to fight** you can use this ability. If you do, this model’s melee attacks have +1 **D**."
-      },
-      "Enhancement§Speed of the Primarch": {
-        "keywords": {
-          "Keywords": [
-            "Liberator Assault Group"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "group": "Cost",
-            "statType": "numeric",
-            "value": 25,
-            "visibility": "normal"
-          }
-        },
-        "text": "ADEPTUS ASTARTES model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability."
-      },
-      "Enhancement§To Slay The Warmaster": {
-        "keywords": {
-          "Keywords": [
-            "The Lost Brethren"
-          ]
-        },
+        "text": "**ADEPTUS ASTARTES JUMP PACK** model only. (once per battle, per army) When this unit is **selected to fight** you can use this ability. If you do, this model's melee attacks have +1 **D**.",
         "rules": {
-          "Death Company model only.": {
+          "ADEPTUS ASTARTES JUMP PACK model only.": {
             "evals": [
               {
                 "actionable": true,
@@ -3285,80 +2537,11 @@
                   [
                     "{parent}",
                     "keywords",
-                    "Keywords"
+                    "Faction"
                   ]
                 ],
-                "value": "Death Company"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "DEATH COMPANY model only. Once per battle, at the start of the Fight phase, if the bearer is within Engagement Range of one or more enemy CHARACTER units, you can select one of those CHARACTER units and roll six D6: for each 4+, one CHARACTER model in that unit suffers 1 mortal wound."
-      },
-      "Enhancement§Troubling Visions": {
-        "keywords": {
-          "Keywords": [
-            "Angelic Inheritors"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "**Adeptus Astartes** model only. Once per battle,\nin your Command phase, the bearer can use this\nEnhancement. When it does, until the start of your\nnext Command phase, all Angelic Legacy abilities are active for the bearer’s unit, instead of\nonly two of them."
-      },
-      "Enhancement§Vengeful Onslaught": {
-        "keywords": {
-          "Keywords": [
-            "The Lost Brethren"
-          ]
-        },
-        "rules": {
-          "Death Company model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Death Company"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "DEATH COMPANY model only. It the bearer is destroyed, until the end of your next turn, each time a friendly DEATH COMPANY model makes an attack, add 1 to the Hit roll."
-      },
-      "Enhancement§Visage of Death": {
-        "keywords": {
-          "Keywords": [
-            "The Angelic Host"
-          ]
-        },
-        "rules": {
-          "Adeptus Astartes Jump Pack model only.": {
-            "evals": [
+                "value": "Adeptus Astartes"
+              },
               {
                 "actionable": true,
                 "contains": true,
@@ -3377,13 +2560,20 @@
             "evaluate": "AND",
             "failState": "error"
           }
+        }
+      },
+      "Enhancement§Troubling Visions": {
+        "keywords": {
+          "Keywords": [
+            "Angelic Inheritors"
+          ]
         },
         "stats": {
           "Points": {
             "value": 15
           }
         },
-        "text": "ADEPTUS ASTARTES JUMP PACK model only. In the Battle-shock step of your opponents Command phase, each enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer must take a Battle-shock test."
+        "text": "**Adeptus Astartes** model only. Once per battle,\nin your Command phase, the bearer can use this\nEnhancement. When it does, until the start of your\nnext Command phase, all Angelic Legacy abilities are active for the bearer’s unit, instead of\nonly two of them."
       },
       "Infantry/Mounted§Death Company Marines": {
         "allowed": {
@@ -3403,14 +2593,13 @@
                 }
               }
             },
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Black Rage",
             "Ability§An Honourable Death in Combat",
             {
               "item": "Model§Death Company Marine",
               "quantity": 5
-            },
-            "Ability§Attached Unit (Death Company Marines)"
+            }
           ]
         },
         "keywords": {
@@ -3427,7 +2616,8 @@
             "Grenades",
             "Imperium",
             "Infantry",
-            "Tacticus"
+            "Tacticus",
+            "Explosives"
           ],
           "Category": [
             "Infantry"
@@ -3460,55 +2650,6 @@
             ],
             "evaluate": "AND",
             "failState": "error"
-          },
-          "lostDetachBonus": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Battleline"
-              },
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "maxQty",
-                    "value"
-                  ]
-                ],
-                "prepend": " ",
-                "value": 6
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{roster}",
-                    "stats",
-                    "Detachment",
-                    "value"
-                  ]
-                ],
-                "value": "The Lost Brethren"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 200
           },
           "Only one model can swap their bolt pistol for a special pistol.": {
             "evals": [
@@ -3562,7 +2703,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 170
+            "value": 185
           },
           "model2ndTally": {
             "value": 10
@@ -3580,10 +2721,10 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 95
+            "value": 105
           },
           "unitDiscount": {
-            "value": 10
+            "value": 15
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -3625,7 +2766,7 @@
             "Blood Angels"
           ],
           "Source": [
-            "10th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Death Company",
@@ -3693,55 +2834,6 @@
             ],
             "evaluate": "AND",
             "failState": "error"
-          },
-          "lostDetachBonus": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Battleline"
-              },
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "maxQty",
-                    "value"
-                  ]
-                ],
-                "prepend": " ",
-                "value": 6
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{roster}",
-                    "stats",
-                    "Detachment",
-                    "value"
-                  ]
-                ],
-                "value": "The Lost Brethren"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 200
           },
           "Only 1 special weapon change for the bolt rifle.": {
             "evals": [
@@ -4012,13 +3104,9 @@
                 }
               }
             },
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Black Rage",
             "Ability§Savage Fury",
-            {
-              "item": "Ability§Attached Unit (Death Company)",
-              "text": "If a Chaplain model from your army with the Leader ability can be attached to an Assault Squad with Jump Packs, it can be attached to this unit instead."
-            },
             {
               "item": "Model§Death Company Marine with Jump Pack",
               "quantity": 5
@@ -4040,7 +3128,9 @@
             "Grenades",
             "Imperium",
             "Infantry",
-            "Jump Pack"
+            "Jump Pack",
+            "Tacticus",
+            "Explosives"
           ],
           "Category": [
             "Infantry"
@@ -4161,7 +3251,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 245
+            "value": 290
           },
           "model2ndTally": {
             "value": 10
@@ -4179,10 +3269,10 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 135
+            "value": 160
           },
           "unitDiscount": {
-            "value": 15
+            "value": 30
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -4200,10 +3290,9 @@
         "assets": {
           "traits": [
             "Ability§Deep Strike",
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Angelic Visage",
             "Ability§Heirs of Azkaellon",
-            "Ability§Attached Unit",
             {
               "item": "Model§Sanguinary Guard",
               "quantity": 3
@@ -4233,7 +3322,8 @@
             "Infantry",
             "Jump Pack",
             "Sanguinary Guard",
-            "Tacticus"
+            "Tacticus",
+            "Explosives"
           ],
           "Category": [
             "Infantry"
@@ -4292,7 +3382,7 @@
             "value": 3
           },
           "model2ndCost": {
-            "value": 280
+            "value": 290
           },
           "model2ndTally": {
             "value": 6
@@ -4310,7 +3400,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 145
+            "value": 150
           },
           "Sanguinary Guard": {
             "max": 6,
@@ -4321,7 +3411,7 @@
             "visibility": "hidden"
           },
           "unitDiscount": {
-            "value": 20
+            "value": 15
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -4334,6 +3424,7 @@
         },
         "assets": {
           "traits": [
+            "Ability§Precision",
             "Ability§Devastating Wounds"
           ]
         },
@@ -4404,7 +3495,7 @@
             "value": "Melee"
           },
           "S": {
-            "value": 4
+            "value": 5
           },
           "WS": {
             "value": 2
@@ -4456,7 +3547,7 @@
             "value": "Melee"
           },
           "S": {
-            "value": 5
+            "value": 6
           },
           "WS": {
             "value": 2
@@ -4545,15 +3636,14 @@
             "value": -3
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "value": 3
           },
           "Range": {
             "statType": "term",
             "value": "Melee"
           },
           "S": {
-            "value": 9
+            "value": 10
           },
           "WS": {
             "value": 2
@@ -4662,7 +3752,7 @@
             "value": "Melee"
           },
           "S": {
-            "value": 5
+            "value": 6
           },
           "WS": {
             "value": 2
@@ -4675,7 +3765,7 @@
         },
         "stats": {
           "A": {
-            "value": 7
+            "value": 8
           },
           "AP": {
             "value": -1
@@ -4688,11 +3778,23 @@
             "value": "Melee"
           },
           "S": {
-            "value": 4
+            "value": 5
           },
           "WS": {
             "value": 2
           }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
         }
       },
       "Melee Weapon§Death Company Captain—Power fist": {
@@ -4701,7 +3803,7 @@
         },
         "stats": {
           "A": {
-            "value": 5
+            "value": 6
           },
           "AP": {
             "value": -2
@@ -4727,7 +3829,7 @@
         },
         "stats": {
           "A": {
-            "value": 6
+            "value": 7
           },
           "AP": {
             "value": -2
@@ -4740,7 +3842,7 @@
             "value": "Melee"
           },
           "S": {
-            "value": 5
+            "value": 6
           },
           "WS": {
             "value": 2
@@ -4823,9 +3925,10 @@
             "value": 6
           },
           "AP": {
-            "value": -2
+            "value": -3
           },
           "D": {
+            "format": "D3",
             "value": 3
           },
           "Range": {
@@ -4847,7 +3950,24 @@
         "assets": {
           "traits": [
             "Melee Weapon§Death Company Dreadnought—Blood talons - strike",
-            "Melee Weapon§Death Company Dreadnought—Blood talons - sweep"
+            "Melee Weapon§Death Company Dreadnought—Blood talons - sweep",
+            "Ability§Twin-linked",
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1 (non-MONSTER/VEHICLE)"
+                }
+              }
+            },
+            {
+              "item": "Ability§Cleave",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
           ]
         },
         "keywords": {
@@ -4856,15 +3976,25 @@
           ]
         },
         "stats": {
-          "A": {},
-          "AP": {},
-          "D": {},
+          "A": {
+            "value": 8
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          },
           "Range": {
             "statType": "term",
             "value": "Melee"
           },
-          "S": {},
-          "WS": {}
+          "S": {
+            "value": 10
+          },
+          "WS": {
+            "value": 3
+          }
         }
       },
       "Melee Weapon§Death Company Dreadnought—Blood talons - strike": {
@@ -5437,7 +4567,7 @@
         "assets": {
           "traits": [
             {
-              "item": "Ability§Sustained Hits",
+              "item": "Ability§Cleave",
               "stats": {
                 "x": {
                   "value": "1"
@@ -5464,7 +4594,7 @@
             "value": 7
           },
           "WS": {
-            "value": 4
+            "value": 3
           }
         }
       },
@@ -5610,7 +4740,7 @@
         "assets": {
           "traits": [
             {
-              "item": "Ability§Sustained Hits",
+              "item": "Ability§Cleave",
               "stats": {
                 "x": {
                   "value": "1"
@@ -5637,7 +4767,7 @@
             "value": 7
           },
           "WS": {
-            "value": 4
+            "value": 3
           }
         }
       },
@@ -5710,7 +4840,7 @@
             "value": -2
           },
           "D": {
-            "value": 2
+            "value": 3
           },
           "Range": {
             "statType": "term",
@@ -5856,12 +4986,20 @@
         },
         "assets": {
           "traits": [
-            "Ability§Lethal Hits"
+            "Ability§Lethal Hits",
+            {
+              "item": "Ability§Cleave",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
           ]
         },
         "stats": {
           "A": {
-            "value": 5
+            "value": 6
           },
           "AP": {
             "value": -2
@@ -6345,7 +5483,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 2
@@ -6743,7 +5881,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Death Company Captain with Jump Pack—Heavy bolt pistol"
+                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Heavy bolt pistol"
                   }
                 ]
               },
@@ -6771,7 +5909,7 @@
             "value": 3
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "Unique Loadouts": {
             "dynamic": true,
@@ -7261,7 +6399,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Death Company Marines—Inferno pistol"
+                    "trait": "Ranged Weapon§Death Company Marines with Bolt Rifles—Inferno pistol"
                   }
                 ]
               },
@@ -7528,7 +6666,7 @@
             "visibility": "normal"
           },
           "OC": {
-            "value": 1
+            "value": 2
           },
           "Ranged Options": {
             "dynamic": true,
@@ -7587,11 +6725,23 @@
             "value": 2
           },
           "T": {
-            "value": 4
+            "value": 5
           },
           "W": {
             "value": 3
           }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "4+"
+                }
+              }
+            }
+          ]
         }
       },
       "Ranged Weapon§Astorath—Bolt pistol": {
@@ -7630,15 +6780,21 @@
         },
         "assets": {
           "traits": [
-            "Ability§Ignores Cover",
             "Ability§Torrent",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
             "Ability§Assault"
           ]
         },
         "stats": {
           "A": {
-            "format": "D6",
-            "value": 3
+            "value": 6
           },
           "AP": {
             "value": -2
@@ -7673,6 +6829,14 @@
                 }
               }
             },
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
             "Ability§Assault"
           ]
         },
@@ -7703,15 +6867,21 @@
         },
         "assets": {
           "traits": [
-            "Ability§Ignores Cover",
             "Ability§Torrent",
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
             "Ability§Assault"
           ]
         },
         "stats": {
           "A": {
-            "format": "D6",
-            "value": 0
+            "value": 3
           },
           "AP": {
             "value": -1
@@ -7738,7 +6908,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§One Shot"
+            "Ability§One Shot",
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -7752,8 +6923,8 @@
             "value": 2
           },
           "D": {
-            "format": "D6",
-            "value": 0
+            "format": "D3",
+            "value": 3
           },
           "Range": {
             "value": 48
@@ -7776,7 +6947,8 @@
                   "value": "2"
                 }
               }
-            }
+            },
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -7784,7 +6956,7 @@
             "value": 2
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -7796,7 +6968,7 @@
             "value": 24
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -7806,8 +6978,15 @@
         },
         "assets": {
           "traits": [
-            "Ability§Devastating Wounds",
             "Ability§Twin-linked",
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
             "Ability§Assault"
           ]
         },
@@ -7816,7 +6995,7 @@
             "value": 6
           },
           "AP": {
-            "value": 0
+            "value": -2
           },
           "BS": {
             "value": 3
@@ -7838,7 +7017,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -7858,7 +7037,7 @@
             "value": 18
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -7872,11 +7051,11 @@
               "item": "Ability§Melta",
               "stats": {
                 "x": {
-                  "value": "2"
+                  "value": "1"
                 }
               }
             },
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -7884,17 +7063,17 @@
             "value": 1
           },
           "AP": {
-            "value": -4
+            "value": -3
           },
           "BS": {
             "value": 2
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 2
           },
           "Range": {
-            "value": 6
+            "value": 9
           },
           "S": {
             "value": 8
@@ -8016,8 +7195,8 @@
         },
         "assets": {
           "traits": [
-            "Ranged Weapon§Chief Librarian Mephiston—Fury of the Ancients – witchfire",
-            "Ranged Weapon§Chief Librarian Mephiston—Fury of the Ancients – focused witchfire"
+            "Ranged Weapon§Chief Librarian Mephiston—Fury of the Ancients – focused witchfire",
+            "Ranged Weapon§Chief Librarian Mephiston—Fury of the Ancients – witchfire"
           ]
         },
         "keywords": {
@@ -8032,17 +7211,10 @@
         },
         "assets": {
           "traits": [
-            "Ability§Hazardous",
-            "Ability§Pistol",
             "Ability§Psychic",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "3"
-                }
-              }
-            }
+            "Ability§Hazardous",
+            "Ability§Close-quarters",
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -8056,14 +7228,13 @@
             "value": 2
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "value": 3
           },
           "Range": {
             "value": 18
           },
           "S": {
-            "value": 5
+            "value": 6
           }
         }
       },
@@ -8073,16 +7244,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol",
             "Ability§Psychic",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
+            "Ability§Close-quarters",
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -8096,14 +7260,13 @@
             "value": 2
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "value": 2
           },
           "Range": {
             "value": 18
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -8129,7 +7292,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters",
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -8159,8 +7323,8 @@
         },
         "assets": {
           "traits": [
-            "Ability§Hazardous",
-            "Ability§Pistol"
+            "Ability§Close-quarters",
+            "Ability§Assault"
           ]
         },
         "stats": {
@@ -8237,15 +7401,13 @@
         },
         "assets": {
           "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Pistol",
-            "Ability§Torrent"
+            "Ability§Torrent",
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
           "A": {
-            "format": "D6",
-            "value": 0
+            "value": 3
           },
           "AP": {
             "value": 0
@@ -8259,10 +7421,10 @@
             "value": 1
           },
           "Range": {
-            "value": 12
+            "value": 9
           },
           "S": {
-            "value": 3
+            "value": 4
           }
         }
       },
@@ -8272,7 +7434,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -8292,7 +7454,7 @@
             "value": 18
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -8318,7 +7480,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -8348,8 +7510,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Hazardous",
-            "Ability§Pistol"
+            "Ability§Hazardous"
           ]
         },
         "stats": {
@@ -8379,7 +7540,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -8399,7 +7560,7 @@
             "value": 18
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -8413,11 +7574,11 @@
               "item": "Ability§Melta",
               "stats": {
                 "x": {
-                  "value": "2"
+                  "value": "1"
                 }
               }
             },
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -8425,17 +7586,17 @@
             "value": 1
           },
           "AP": {
-            "value": -4
+            "value": -3
           },
           "BS": {
             "value": 2
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 2
           },
           "Range": {
-            "value": 6
+            "value": 9
           },
           "S": {
             "value": 8
@@ -8577,7 +7738,7 @@
             "value": 24
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -8625,17 +7786,7 @@
         },
         "assets": {
           "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "fly"
-                },
-                "x": {
-                  "value": "4+"
-                }
-              }
-            },
+            "Ability§Twin-linked",
             {
               "item": "Ability§Rapid Fire",
               "stats": {
@@ -8644,7 +7795,17 @@
                 }
               }
             },
-            "Ability§Twin-linked"
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "fly"
+                },
+                "x": {
+                  "value": "3+"
+                }
+              }
+            }
           ]
         },
         "stats": {
@@ -8652,7 +7813,7 @@
             "value": 3
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
             "value": 3
@@ -8674,15 +7835,15 @@
         },
         "assets": {
           "traits": [
+            "Ability§Twin-linked",
             {
               "item": "Ability§Melta",
               "stats": {
                 "x": {
-                  "value": "2"
+                  "value": "3"
                 }
               }
-            },
-            "Ability§Twin-linked"
+            }
           ]
         },
         "stats": {
@@ -8690,20 +7851,20 @@
             "value": 2
           },
           "AP": {
-            "value": -4
+            "value": -3
           },
           "BS": {
             "value": 3
           },
           "D": {
-            "format": "D6",
-            "value": 0
+            "format": "D3",
+            "value": 2
           },
           "Range": {
             "value": 18
           },
           "S": {
-            "value": 9
+            "value": 10
           }
         }
       },
@@ -9426,15 +8587,13 @@
         },
         "assets": {
           "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Pistol",
-            "Ability§Torrent"
+            "Ability§Torrent",
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
           "A": {
-            "format": "D6",
-            "value": 0
+            "value": 3
           },
           "AP": {
             "value": 0
@@ -9448,10 +8607,10 @@
             "value": 1
           },
           "Range": {
-            "value": 12
+            "value": 9
           },
           "S": {
-            "value": 3
+            "value": 4
           }
         }
       },
@@ -9461,7 +8620,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -9481,7 +8640,7 @@
             "value": 18
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -9495,11 +8654,11 @@
               "item": "Ability§Melta",
               "stats": {
                 "x": {
-                  "value": "2"
+                  "value": "1"
                 }
               }
             },
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -9507,17 +8666,17 @@
             "value": 1
           },
           "AP": {
-            "value": -4
+            "value": -3
           },
           "BS": {
             "value": 3
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 2
           },
           "Range": {
-            "value": 6
+            "value": 9
           },
           "S": {
             "value": 8
@@ -9546,7 +8705,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -9577,7 +8736,7 @@
         "assets": {
           "traits": [
             "Ability§Hazardous",
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -9662,15 +8821,13 @@
         },
         "assets": {
           "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Pistol",
-            "Ability§Torrent"
+            "Ability§Torrent",
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
           "A": {
-            "format": "D6",
-            "value": 0
+            "value": 3
           },
           "AP": {
             "value": 0
@@ -9684,10 +8841,10 @@
             "value": 1
           },
           "Range": {
-            "value": 12
+            "value": 9
           },
           "S": {
-            "value": 3
+            "value": 4
           }
         }
       },
@@ -9697,7 +8854,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -9717,7 +8874,7 @@
             "value": 18
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -9731,11 +8888,11 @@
               "item": "Ability§Melta",
               "stats": {
                 "x": {
-                  "value": "2"
+                  "value": "1"
                 }
               }
             },
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -9743,17 +8900,17 @@
             "value": 1
           },
           "AP": {
-            "value": -4
+            "value": -3
           },
           "BS": {
             "value": 3
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 2
           },
           "Range": {
-            "value": 6
+            "value": 9
           },
           "S": {
             "value": 8
@@ -9782,7 +8939,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -9813,7 +8970,7 @@
         "assets": {
           "traits": [
             "Ability§Hazardous",
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -10021,7 +9178,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -10029,7 +9186,7 @@
             "value": 1
           },
           "AP": {
-            "value": -1
+            "value": -2
           },
           "BS": {
             "value": 2
@@ -10255,27 +9412,28 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters",
+            "Ability§Assault"
           ]
         },
         "stats": {
           "A": {
-            "value": 2
+            "value": 3
           },
           "AP": {
-            "value": 0
+            "value": -1
           },
           "BS": {
-            "value": 3
+            "value": 2
           },
           "D": {
             "value": 1
           },
           "Range": {
-            "value": 12
+            "value": 18
           },
           "S": {
-            "value": 4
+            "value": 5
           }
         }
       },
@@ -10289,11 +9447,11 @@
               "item": "Ability§Melta",
               "stats": {
                 "x": {
-                  "value": "2"
+                  "value": "1"
                 }
               }
             },
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -10301,17 +9459,17 @@
             "value": 1
           },
           "AP": {
-            "value": -4
+            "value": -3
           },
           "BS": {
-            "value": 3
+            "value": 2
           },
           "D": {
-            "statType": "term",
-            "value": "D3"
+            "format": "D3",
+            "value": 2
           },
           "Range": {
-            "value": 6
+            "value": 9
           },
           "S": {
             "value": 8
@@ -10716,7 +9874,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Pistol"
+            "Ability§Close-quarters"
           ]
         },
         "stats": {
@@ -10724,7 +9882,7 @@
             "value": 1
           },
           "AP": {
-            "value": -1
+            "value": -2
           },
           "BS": {
             "value": 3
@@ -10837,30 +9995,6 @@
           },
           "Detachment": {
             "ranks": {
-              "Liberator Assault Group": {
-                "order": 15,
-                "traits": [
-                  {
-                    "trait": "Detachment§Liberator Assault Group"
-                  }
-                ]
-              },
-              "The Lost Brethren": {
-                "order": 16,
-                "traits": [
-                  {
-                    "trait": "Detachment§The Lost Brethren"
-                  }
-                ]
-              },
-              "The Angelic Host": {
-                "order": 17,
-                "traits": [
-                  {
-                    "trait": "Detachment§The Angelic Host"
-                  }
-                ]
-              },
               "Angelic Inheritors": {
                 "order": 18,
                 "traits": [
@@ -10869,27 +10003,11 @@
                   }
                 ]
               },
-              "Rage-cursed Onslaught": {
-                "order": 19,
-                "traits": [
-                  {
-                    "trait": "Detachment§Rage-cursed Onslaught"
-                  }
-                ]
-              },
               "Encarmine Speartip": {
                 "order": 20,
                 "traits": [
                   {
                     "trait": "Detachment§Encarmine Speartip"
-                  }
-                ]
-              },
-              "Legacy Of Grace": {
-                "order": 21,
-                "traits": [
-                  {
-                    "trait": "Detachment§Legacy Of Grace"
                   }
                 ]
               },
@@ -10916,93 +10034,13 @@
             "dynamic": false,
             "value": "Imperium"
           }
-        }
-      },
-      "Stratagem§A Grim Warning": {
-        "keywords": {
-          "Keywords": [
-            "Rage-cursed Onslaught"
-          ],
-          "Category": [
-            "Stratagem"
-          ],
-          "Turn": [
-            "Yours",
-            "Opponent’s"
-          ],
-          "Phase": [
-            "Any"
-          ]
         },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Any phase.\n\n**TARGET**: One BLOOD ANGELS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.\n\n**EFFECT**: Select one of those objective markers. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase."
-      },
-      "Stratagem§Aggressive Onslaught": {
-        "keywords": {
-          "Keywords": [
-            "Liberator Assault Group"
-          ],
-          "Phase": [
-            "Fight"
-          ],
-          "Category": [
-            "Strategic Ploy"
-          ],
-          "Turn": [
-            "Opponent’s",
-            "Yours"
-          ]
-        },
-        "text": "**WHEN**: Your Movement phase, just after an Adeptus Astartes unit from your army has Advanced.\n\n**TARGET**: That ADEPTUS ASTARTES unit.\n\n**EFFECT**: Until the end of the turn, your unit is eligible to either shoot or declare a charge, even though it Advanced. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, your unit is eligible to both shoot and declare a charge, even though it Advanced."
-      },
-      "Stratagem§Angel's Sacrifice": {
-        "keywords": {
-          "Category": [
-            "Battle Tactic"
-          ],
-          "Keywords": [
-            "Adeptus Astartes",
-            "The Angelic Host"
-          ],
-          "Turn": [
-            "Any"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "text": "**WHEN**: Start of the Fight phase.\n\n**TARGET**: One ADEPTUS ASTARTES JUMP PACK unit from your army.\n\n**EFFECT**: Until the end of the phase, each time an enemy model within Engagement Range of your unit selects its targets, it must select your unit as the target of all of its attacks."
-      },
-      "Stratagem§Angelic Grace": {
-        "keywords": {
-          "Keywords": [
-            "Liberator Assault Group"
-          ],
-          "Phase": [
-            "Any"
-          ],
-          "Category": [
-            "Strategic Ploy"
-          ],
-          "Turn": [
-            "Opponent’s",
-            "Yours"
-          ]
-        },
-        "text": "**WHEN**: Any phase, just after an ADEPTUS ASTARTES unit from your army has a mortal wound allocated to it.\n\n**TARGET**: That ADEPTUS ASTARTES unit.\n\n**EFFECT**: Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds."
+        "rules": {}
       },
       "Stratagem§Armour of Contempt": {
         "keywords": {
           "Keywords": [
-            "Angelic Inheritors",
-            "Liberator Assault Group",
-            "Rage-cursed Onslaught",
-            "The Angelic Host",
-            "The Lost Brethren"
+            "Angelic Inheritors"
           ],
           "Phase": [],
           "Category": [],
@@ -11010,86 +10048,10 @@
         },
         "text": ""
       },
-      "Stratagem§Death from the Skies": {
-        "keywords": {
-          "Turn": [
-            "Yours"
-          ],
-          "Phase": [
-            "Charge"
-          ],
-          "Category": [
-            "Epic Deed"
-          ],
-          "Keywords": [
-            "Adeptus Astartes",
-            "The Angelic Host"
-          ]
-        },
-        "text": "**WHEN**: Your Movement phase, just after an Adeptus Astartes Jump Pack unit from your army Advances or Falls Back.\n\n**TARGET**: That Adeptus Astartes Jump Pack unit\n\n**EFFECT**: Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back."
-      },
-      "Stratagem§Deathless Duty": {
-        "keywords": {
-          "Keywords": [
-            "Rage-cursed Onslaught"
-          ],
-          "Category": [
-            "Stratagem"
-          ],
-          "Turn": [
-            "Yours",
-            "Opponent’s"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 2
-          }
-        },
-        "text": "**WHEN**: Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET**: One DEATH COMPANY unit from your army that was selected as the target of one or more of the attacking unit's attacks.\n\n**EFFECT**: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
-      },
-      "Stratagem§Descent of Angels": {
-        "keywords": {
-          "Category": [
-            "Epic Deed"
-          ],
-          "Keywords": [
-            "Adeptus Astartes",
-            "The Angelic Host"
-          ],
-          "Turn": [
-            "Yours"
-          ],
-          "Phase": [
-            "Movement"
-          ]
-        },
-        "text": "**WHEN**: Your Movement phase.\n\n**TARGET**: One ADEPTUS ASTARTES JUMP PACK unit from your army that is arriving using the Deep Strike ability this phase.\n\n**EFFECT**: Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.\n\n**RESTRICTIONS**: A unit targeted by this Stratagem is not eligible to declare a charge in the same turn."
-      },
-      "Stratagem§Final Retribution": {
-        "keywords": {
-          "Keywords": [
-            "Adeptus Astartes",
-            "The Lost Brethren"
-          ],
-          "Category": [
-            "Epic Deed"
-          ],
-          "Turn": [
-            "Any"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "text": "**WHEN**: Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET**: One DEATH COMPANY unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\n**EFFECT**: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if your unit is within 12\" of one or more friendly CHAPLAIN models; on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
-      },
       "Stratagem§Focused Fury": {
         "keywords": {
           "Keywords": [
+            "Adeptus Astartes",
             "Angelic Inheritors"
           ],
           "Category": [
@@ -11099,50 +10061,16 @@
             "Fight"
           ],
           "Turn": [
-            "Any"
+            "Yours",
+            "Opponent’s"
           ]
         },
-        "text": "**WHEN:** Fight phase.\n\n**TARGET:** One **Adeptus Astartes** unit from your army\nthat has not been selected to fight this phase.\n\n**EFFECT:** Until the end of the phase, melee weapons\nequipped by models in your unit have the\n**[LETHAL HITS]** ability. If your unit is a **Character**\nunit, until the end of the phase, those weapons have\nthe **[LANCE]** ability as well."
-      },
-      "Stratagem§Furious Onslaught": {
-        "keywords": {
-          "Keywords": [
-            "Adeptus Astartes",
-            "The Lost Brethren"
-          ],
-          "Category": [
-            "Battle Tactic"
-          ],
-          "Turn": [
-            "Any"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "text": "**WHEN**: Fight phase.\n\n**TARGET**: One DEATH COMPANY unit from your army, just before that unit Piles-in.\n\n**EFFECT**: Until the end of the phase, each time a model in your unit makes a Pile-in move, it can move up to D3+3\" instead of up to 3\". If your unit is within 12\" of one or more friendly CHAPLAIN models, or if it is below Starting Strength, it can move up to 6\" instead. In either case, it can only do so provided your unit ends that Pile-in move in Unit Coherency and within Engagement Range of one or more enemy units."
-      },
-      "Stratagem§Glorious Sacrifice": {
-        "keywords": {
-          "Keywords": [
-            "Adeptus Astartes",
-            "The Lost Brethren"
-          ],
-          "Category": [
-            "Epic Deed"
-          ],
-          "Turn": [
-            "Any"
-          ],
-          "Phase": [
-            "Any"
-          ]
-        },
-        "text": "**WHEN**: Any phase.\n\n**TARGET**: One DEATH COMPANY unit from your army that was just destroyed while it was within range of an objective marker you controlled. You can use this Stratagem on that unit even though it was just destroyed.\n\n**EFFECT**: That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+        "text": "**WHEN:** Fight phase, when a friendly **ADEPTUS ASTARTES** unit is **selected to fight**.\n\n**TARGET:** That **ADEPTUS ASTARTES** unit.\n\n**EFFECT:** Your unit’s melee attacks: \n- Have **[LETHAL HITS]**.\n- __Or:__ If your unit is a **CHARACTER** unit, have **[LETHAL HITS]**, **[LANCE]**."
       },
       "Stratagem§In the Shadow of Great Wings": {
         "keywords": {
           "Keywords": [
+            "Adeptus Astartes",
             "Angelic Inheritors"
           ],
           "Category": [
@@ -11155,34 +10083,12 @@
             "Shooting"
           ]
         },
-        "text": "**WHEN:** Your opponent’s Shooting phase, just after an\nenemy unit has selected its targets.\n\n**TARGET:** One **Adeptus Astartes Character** unit\nfrom your army that was selected as the target of\none or more of the attacking unit’s attacks.\n\n**EFFECT:** Until the end of the phase, your unit can\nonly be selected as the target of a ranged attack if\nthe attacking model is within 18\"."
-      },
-      "Stratagem§Insensate Rampage": {
-        "keywords": {
-          "Keywords": [
-            "Rage-cursed Onslaught"
-          ],
-          "Category": [
-            "Stratagem"
-          ],
-          "Turn": [
-            "Opponent’s"
-          ],
-          "Phase": [
-            "Shooting",
-            "Fight"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\n**TARGET**: One DEATH COMPANY unit from your army that was selected as the target of one or more of the attacking unit's attacks.\n\n**EFFECT**: Until the end of the phase, models in your unit have the Feel No Pain 5+ ability."
+        "text": "**WHEN:** Your opponent's Shooting phase, when an enemy unit targets a friendly **ADEPTUS ASTARTES CHARACTER** unit.\n\n**TARGET:** That **ADEPTUS ASTARTES CHARACTER** unit.\n\n**EFFECT:** Your unit has:\n- **Stealth**.\n- -3\" **detection range**.."
       },
       "Stratagem§Instant of Grace": {
         "keywords": {
           "Keywords": [
+            "Adeptus Astartes",
             "Angelic Inheritors"
           ],
           "Category": [
@@ -11195,112 +10101,12 @@
             "Command"
           ]
         },
-        "text": "**WHEN:** Your Command phase.\n\n**TARGET:** One **Adeptus Astartes Infantry** unit from\nyour army.\n\nEFFECT: Select one **non‑Character** model in your\nunit. Until the start of your next Command phase,\nyour model has the **Character** keyword.\n\n*Designer’s Note:* While in effect, your model’s unit\nis therefore a Character unit, meaning it can\ninteract with the Legacy of the Angel Detachment\nrule, in addition to other rules that interact with\nCharacter units."
-      },
-      "Stratagem§Limb From Limb": {
-        "keywords": {
-          "Keywords": [
-            "Rage-cursed Onslaught"
-          ],
-          "Category": [
-            "Stratagem"
-          ],
-          "Turn": [
-            "Yours"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Fight phase.\n\n**TARGET**: One ADEPTUS ASTARTES unit from your army that made a Charge move this turn.\n\n**EFFECT**: Select either the Strength or Armour Penetration characteristic of melee weapons equipped by models in your unit. Until the end of the phase, add 1 to the selected characteristic. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the phase, add 1 to the Strength and Armour Penetration characteristics of melee weapons equipped by models in your unit."
-      },
-      "Stratagem§Lost to Rage": {
-        "keywords": {
-          "Keywords": [
-            "Adeptus Astartes",
-            "The Lost Brethren"
-          ],
-          "Category": [
-            "Battle Tactic"
-          ],
-          "Turn": [
-            "Any"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "text": "**WHEN**: Fight phase.\n\n**TARGET**: One DEATH COMPANY unit from your army that is below Starting Strength and has not been selected to fight this phase.\n\n**EFFECT**: Until the end of the phase, improve the Attacks, Stength and Armour Penetration characteristics of melee weapons equipped by models in your unit by 1 and, unless your unit is within 12\" of one or more friendly CHAPLAIN models, until the end of the phase, those weapons have the [HAZARDOUS] ability."
-      },
-      "Stratagem§Martial Exemplars": {
-        "keywords": {
-          "Keywords": [
-            "Adeptus Astartes",
-            "The Angelic Host"
-          ],
-          "Category": [
-            "Battle Tactic"
-          ],
-          "Turn": [
-            "Any"
-          ],
-          "Phase": [
-            "Fight"
-          ]
-        },
-        "text": "**WHEN**: Fight phase.\n\n**TARGET**: One ADEPTUS ASTARTES JUMP PACK unit from your army that has not been selected to fight this phase.\n\n**EFFECT**: Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] and [PRECISION] abilities."
+        "text": "**WHEN:** Your Command phase.\n\n**TARGET:** One friendly **ADEPTUS ASTARTES INFANTRY** unit.\n\n**EFFECT:** Your unit has **CHARACTER** until the start of your next Command phase."
       },
       "Stratagem§Only in Death Does Duty End": {},
-      "Stratagem§Red Rampage": {
-        "keywords": {
-          "Keywords": [
-            "Liberator Assault Group"
-          ],
-          "Phase": [
-            "Fight"
-          ],
-          "Category": [
-            "Battle Tactic"
-          ],
-          "Turn": [
-            "Opponent’s",
-            "Yours"
-          ]
-        },
-        "text": "**WHEN**: Fight phase.\n\n**TARGET**: One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase.\n\n**EFFECT**: Select either the [LANCE] or [LETHAL HITS] abilities. Until the end of the phase, melee weapons equipped by models in your unit have the selected ability. You can instead choose for your unit to give in to the Red Thirst; if it does, then it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] and [LETHAL HITS] abilities."
-      },
-      "Stratagem§Red Wrath": {
-        "keywords": {
-          "Keywords": [
-            "Rage-cursed Onslaught"
-          ],
-          "Category": [
-            "Stratagem"
-          ],
-          "Turn": [
-            "Yours"
-          ],
-          "Phase": [
-            "Movement"
-          ]
-        },
-        "stats": {
-          "Command Cost": {
-            "value": 1
-          }
-        },
-        "text": "**WHEN**: Your Movement phase, just after an ADEPTUS ASTARTES unit from your army Advances.\n\n**TARGET**: That ADEPTUS ASTARTES unit.\n\n**EFFECT**: Until the end of the turn, your unit is eligible to either shoot or declare a charge in a turn in which it Advanced. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced."
-      },
       "Stratagem§Relentless Assault": {
         "keywords": {
-          "Keywords": [
-            "Liberator Assault Group"
-          ],
+          "Keywords": [],
           "Phase": [
             "Movement"
           ],
@@ -11313,29 +10119,10 @@
         },
         "text": "**WHEN**: Your Movement phase, just after an ADEPTUS ASTARTES unit from your army Falls Back.\n\n**TARGET**: That ADEPTUS ASTARTES unit.\n\n**EFFECT**: Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Fell Back. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, your unit is eligible to both shoot and declare a charge, even though it Fell Back."
       },
-      "Stratagem§Savage Echoes": {
-        "keywords": {
-          "Keywords": [
-            "Liberator Assault Group"
-          ],
-          "Phase": [
-            "Charge"
-          ],
-          "Category": [
-            "Battle Tactic"
-          ],
-          "Turn": [
-            "Opponent’s"
-          ]
-        },
-        "stats": {
-          "Command Cost": {}
-        },
-        "text": "**WHEN**: Your opponent’s Charge phase.\n\n**TARGET**: One ADEPTUS ASTARTES unit from your army that was just charged by an enemy unit.\n\n**EFFECT**: Select either the Strength or Attacks characteristic of melee weapons equipped bg models in your unit. Until the end of the turn, add 1 to the selected characteristic. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in your unit."
-      },
       "Stratagem§Strike now for Glory": {
         "keywords": {
           "Keywords": [
+            "Adeptus Astartes",
             "Angelic Inheritors"
           ],
           "Category": [
@@ -11348,29 +10135,12 @@
             "Shooting"
           ]
         },
-        "text": "**WHEN:** Your Shooting phase.\n\n**TARGET:** One **Adeptus Astartes** unit from your army\nthat has not been selected to shoot this phase.\n\n**EFFECT:** Until the end of the phase, ranged\nweapons equipped by models in your unit have the\n**[SUSTAINED HITS 1]** ability."
-      },
-      "Stratagem§Unbridled Ardour": {
-        "keywords": {
-          "Keywords": [
-            "Adeptus Astartes",
-            "The Angelic Host"
-          ],
-          "Category": [
-            "Epic Deed"
-          ],
-          "Turn": [
-            "Any"
-          ],
-          "Phase": [
-            "Any"
-          ]
-        },
-        "text": "**WHEN**: Any phase.\n\n**TARGET**: One ADEPTUS ASTARTES unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.\n\n**EFFECT**: Until the end of the battle, each time a friendly SANGUINARY GUARD unit makes an attack that targets the enemy unit that just destroyed your unit, you can re-roll the Hit roll and you can re-roll the Wound roll."
+        "text": "**WHEN:** Your Shooting phase when a friendly **ADEPTUS ASTARTES** unit is selected to attack.\n\n**TARGET:** That **ADEPTUS ASTARTES** unit.\n\n**EFFECT:** Your unit’s ranged attacks have **[SUSTAINED HITS 1]**."
       },
       "Stratagem§Unto the Burning Skies": {
         "keywords": {
           "Keywords": [
+            "Adeptus Astartes",
             "Angelic Inheritors"
           ],
           "Category": [
@@ -11383,31 +10153,13 @@
             "Fight"
           ]
         },
-        "text": "**WHEN:** End of your opponent’s Fight phase.\n\n**TARGET:** One **Adeptus Astartes Jump Pack** unit from\nyour army. You cannot target a unit that is within\nEngagement Range of one or more enemy units,\nunless it is **The Sanguinor.**\n\n**EFFECT:** Remove your unit from the battlefield and\nplace it into Strategic Reserves."
-      },
-      "Stratagem§Wrathful Rampage": {
-        "keywords": {
-          "Keywords": [
-            "Adeptus Astartes",
-            "The Lost Brethren"
-          ],
-          "Category": [
-            "Strategic Ploy"
-          ],
-          "Turn": [
-            "Yours"
-          ],
-          "Phase": [
-            "Movement"
-          ]
-        },
-        "text": "**WHEN**: Your Movement phase, just after a DEATH COMPANY unit from your army Advances.\n\n**TARGET**: That DEATH COMPANY unit.\n\n**EFFECT**: Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced. If your unit is within 12\" of one or more friendly CHAPLAIN models, or it is below its Starting Strength, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced."
+        "text": "**WHEN:** End of your opponent’s Fight phase.\n\n**TARGET:** One friendly **THE SANGUINOR**/**unengaged** **ADEPTUS ASTARTES JUMP PACK** unit.\n\n**EFFECT:** Place your unit in **strategic reserves**."
       },
       "Vehicle§Baal Predator": {
         "assets": {
           "included": [],
           "traits": [
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Overcharged Engines",
             {
               "item": "Ability§Damaged:",
@@ -11440,7 +10192,8 @@
             "Vehicle",
             "Smoke",
             "Imperium",
-            "Baal Predator"
+            "Baal Predator",
+            "Frame"
           ],
           "Category": [
             "Vehicle"
@@ -11506,7 +10259,7 @@
             "value": 3
           },
           "Points": {
-            "value": 135
+            "value": 150
           },
           "Ranged Options": {
             "dynamic": true,
@@ -11573,7 +10326,7 @@
             "value": 10
           },
           "unitDiscount": {
-            "value": 10
+            "value": 15
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -11602,7 +10355,7 @@
                 }
               }
             },
-            "Ability§Oath of Moment",
+            "Ability§Combat Doctrines",
             "Ability§Black Rage",
             "Ability§Driven by Fury",
             {
@@ -11668,13 +10421,13 @@
             "value": 6
           },
           "M": {
-            "value": 8
+            "value": 10
           },
           "OC": {
             "value": 4
           },
           "Points": {
-            "value": 160
+            "value": 185
           },
           "Ranged Options": {
             "dynamic": true,
@@ -11709,7 +10462,7 @@
             "value": 10
           },
           "unitDiscount": {
-            "value": 10
+            "value": 20
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -11947,7 +10700,7 @@
                     "trait": "Ranged Weapon§Furioso Dreadnought—Meltagun"
                   },
                   {
-                    "trait": "Melee Weapon§Death Company Dreadnought—Blood talons"
+                    "trait": "Melee Weapon§Furioso Dreadnought—Blood talons"
                   }
                 ]
               },
@@ -12208,6 +10961,895 @@
           }
         },
         "text": "The bearer loses the Magna-grapple ability and gains the Smoke keyword"
+      },
+      "Detachment§Assault Brethren": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Devastator Brethren"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Tactical Brethren"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Devastator Brethren": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Assault Brethren"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Tactical Brethren"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Tactical Brethren": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Assault Brethren"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Devastator Brethren"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Gravis Linebreaker Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Gravis Siege Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Gravis Siege Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Gravis Linebreaker Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Phobos Shadow Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Phobos Shock Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Phobos Shock Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Phobos Shadow Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Tacticus Attack Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Tacticus Firestorm Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Detachment§Tacticus Firestorm Force": {
+        "rules": {
+          "removeSameTagDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Tacticus Attack Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        }
+      },
+      "Stratagem§Inexorable Valour": {
+        "text": "**WHEN:** Your opponent's Movement phase, when an enemy unit that was **engaged** with a friendly **SANGUINARY GUARD** unit ends a **fall-back move**, if that **SANGUINARY GUARD** unit is **unengaged**.\n\n**TARGET:** That **SANGUINARY GUARD** unit.\n\n**EFFECT:** Your unit can make a **normal move** of up to D3+3\".",
+        "keywords": {
+          "Keywords": [
+            "Adeptus Astartes",
+            "Encarmine Speartip"
+          ],
+          "Turn": [
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Movement"
+          ]
+        }
+      },
+      "Stratagem§Judgement of the Golden Host": {
+        "text": "**WHEN:** Your Charge phase, when a friendly **SANGUINARY GUARD** unit form your army ends a **charge move**.\n\n**TARGET:** That **SANGUINARY GUARD** unit.\n\n**EFFECT:** Select one enemy unit **engaged** with your unit. Roll one D6 for each model in your unit **engaged** with that enemy unit:\n- For each 3+, that enemy unit suffers 1 **mortal wound**.",
+        "keywords": {
+          "Keywords": [
+            "Adeptus Astartes",
+            "Encarmine Speartip"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Phase": [
+            "Charge"
+          ]
+        }
+      },
+      "Stratagem§Blinding Blurs of Vengeance": {
+        "text": "**WHEN:** Your opponent's Shooting phase, when an enemy unit targets a friendly **SANGUINARY GUARD** unit.\n\n**TARGET:** That **SANGUINARY GUARD** unit.\n\n**EFFECT:** Your unit has:\n- **Stealth**.\n- -3\" **detection range**..",
+        "keywords": {
+          "Keywords": [
+            "Adeptus Astartes",
+            "Encarmine Speartip"
+          ],
+          "Turn": [
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Shooting"
+          ]
+        }
+      },
+      "Stratagem§Measured Strategist": {
+        "text": "**WHEN:** Your Command phase.\n\n**TARGET:** One friendly **ADEPTUS ASTARTES CHARACTER** unit.\n\n**EFFECT:** Select one **combat doctrine**. That **combat doctrine** is active for your unit until the start of your next Command phase.",
+        "keywords": {
+          "Keywords": [
+            "Adeptus Astartes",
+            "Angelic Inheritors"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Phase": [
+            "Command"
+          ]
+        }
+      },
+      "Stratagem§No Barrier to Retribution": {
+        "text": "**WHEN:** Your Movement or your Charge phase, when a friendly **DEATH COMPANY DREADNOUGHT** unit is selected to make a **normal/advance/charge move**.\n\n**TARGET:** That **DEATH COMPANY DREADNOUGHT** unit.\n\n**EFFECT:** Your unit has **MOBILE**.",
+        "keywords": {
+          "Keywords": [
+            "Adeptus Astartes",
+            "Wrath Of The Doomed"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Phase": [
+            "Charge",
+            "Movement"
+          ]
+        }
+      },
+      "Stratagem§Death Begets Vengeance": {
+        "text": "**WHEN:** Any phase, when a friendly **DEATH COMPANY** unit is **destroyed** by an enemy unit.\n\n**TARGET:** That enemy unit.\n\n**EFFECT:** That enemy unit is **hated** until the end of the battle:\n- While a unit is **hated**, friendly **DEATH COMPANY** units' attacks that target that unit have +1 to **wound rolls**.",
+        "keywords": {
+          "Keywords": [
+            "Adeptus Astartes",
+            "Wrath Of The Doomed"
+          ],
+          "Turn": [
+            "Yours",
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Any"
+          ]
+        }
+      },
+      "Stratagem§Rage-fuelled Response": {
+        "text": "**WHEN:** Your opponent's Shooting phase, when an enemy unit that targeted a friendly **unengaged** **DEATH COMPANY** unit has shot.\n\n**TARGET:** That **DEATH COMPANY** unit.\n\n**EFFECT:** Your unit can make a **surge move** of up to D6\".",
+        "keywords": {
+          "Keywords": [
+            "Adeptus Astartes",
+            "Wrath Of The Doomed"
+          ],
+          "Turn": [
+            "Opponent’s"
+          ],
+          "Phase": [
+            "Shooting"
+          ]
+        }
+      },
+      "Enhancement§Unto Death": {
+        "text": "**ADEPTUS ASTARTES** model only. (Once per battle, per army) In your Command phase you can use this ability. If you do, until the end of the turn this unit can: \n- Re-roll **advance rolls**.\n- Re-roll **charge rolls**.",
+        "keywords": {
+          "Keywords": [
+            "Angelic Inheritors"
+          ]
+        },
+        "stats": {
+          "Points": {
+            "value": 15
+          }
+        },
+        "rules": {
+          "ADEPTUS ASTARTES model only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Adeptus Astartes"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Ranged Weapon§Commander Dante—Perdition Pistol": {
+        "aspects": {
+          "Label": "Perdition Pistol"
+        },
+        "stats": {
+          "Range": {
+            "value": 9
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 10
+          },
+          "AP": {
+            "value": -3
+          },
+          "D": {
+            "format": "D3",
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            },
+            "Ability§Close-quarters"
+          ]
+        }
+      },
+      "Melee Weapon§Death Company Captain with Jump Pack—Chainsword": {
+        "aspects": {
+          "Label": "Chainsword"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 8
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Melee Weapon§Death Company Captain with Jump Pack—Thunder Hammer": {
+        "aspects": {
+          "Label": "Thunder Hammer"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 5
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 8
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 3
+          }
+        }
+      },
+      "Ranged Weapon§Death Company Marines—Grenade Launcher – frag": {
+        "aspects": {
+          "Label": "Grenade Launcher – Frag"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 4
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 4
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Blast",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Death Company Marines—Grenade Launcher – krak": {
+        "aspects": {
+          "Label": "Grenade Launcher – Krak"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 10
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 3
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "Ranged Weapon§Death Company Marines—Grenade Launcher": {
+        "aspects": {
+          "Label": "Grenade Launcher"
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Death Company Marines—Grenade Launcher – frag",
+            "Ranged Weapon§Death Company Marines—Grenade Launcher – krak"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
+        }
+      },
+      "Ranged Weapon§Death Company Marines—Bolt Rifle – focused fire": {
+        "aspects": {
+          "Label": "Bolt Rifle – Focused Fire"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 6
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Heavy"
+          ]
+        }
+      },
+      "Ranged Weapon§Death Company Marines—Bolt Rifle – saturation": {
+        "aspects": {
+          "Label": "Bolt Rifle – Saturation"
+        },
+        "stats": {
+          "Range": {
+            "value": 24
+          },
+          "A": {
+            "value": 2
+          },
+          "BS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Assault"
+          ]
+        }
+      },
+      "Ranged Weapon§Death Company Marines—Bolt Rifle": {
+        "aspects": {
+          "Label": "Bolt Rifle"
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Death Company Marines—Bolt Rifle – focused fire",
+            "Ranged Weapon§Death Company Marines—Bolt Rifle – saturation"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
+        }
+      },
+      "Melee Weapon§Death Company Marines—Combat Blade": {
+        "aspects": {
+          "Label": "Combat Blade"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 3
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Melee Weapon§Death Company Marines—Chainsword": {
+        "aspects": {
+          "Label": "Chainsword"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 4
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Melee Weapon§Death Company Marines with Jump Packs—Chainsword": {
+        "aspects": {
+          "Label": "Chainsword"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 4
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Melee Weapon§Sanguinary Guard—Encarmine Weapon": {
+        "aspects": {
+          "Label": "Encarmine Weapon"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 4
+          },
+          "WS": {
+            "value": 2
+          },
+          "S": {
+            "value": 6
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Lance"
+          ]
+        }
+      },
+      "Melee Weapon§Sanguinary Priest—Chainsword": {
+        "aspects": {
+          "Label": "Chainsword"
+        },
+        "stats": {
+          "Range": {
+            "statType": "term",
+            "value": "Melee"
+          },
+          "A": {
+            "value": 5
+          },
+          "WS": {
+            "value": 3
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          }
+        }
+      },
+      "Ranged Weapon§Death Company Marines with Bolt Rifles—Inferno pistol": {
+        "aspects": {
+          "Label": "Inferno pistol"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Melta",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Close-quarters"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -3
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "format": "D3",
+            "value": 2
+          },
+          "Range": {
+            "value": 9
+          },
+          "S": {
+            "value": 8
+          }
+        }
+      },
+      "Ability§Quickening": {
+        "text": "_psychic level 1_\n\nIn your Command phase, if this unit is not battle-shocked, you can make a **psychic roll** for this unit by rolling one D6. If you do:\n\n- On a 1, this unit is **battle-shocked**.\n\n- The assault doctrine is active for this unit in addition to any other combat doctrine until the start of your next Command phase."
+      },
+      "Ability§Narthecium (Sanguinary Priest)": {
+        "text": "_Once per turn, per unit_\n\nIn your Command phase, this unit heals D3+1 wounds."
+      },
+      "Infantry/Mounted§Company Heroes": {
+        "allowed": {
+          "items": [
+            "Character§Sanguinary Priest"
+          ]
+        }
+      },
+      "Ability§Death Visions of Sanguinius": {
+        "text": "In the Fight phase, when an enemy unit has fought, if this model was destroyed by those attacks, you can use this ability. If you do, roll one D6, with +2 to that roll if this model was engaged with an enemy **WARLORD** unit:\n\n- On a 2-3, that enemy unit suffers D3 mortal wounds.\n\n- On a 4-5, that enemy unit suffers 3 **mortal wounds**.\n\n- On a 6+, that enemy unit suffers D3+3 **mortal wounds**."
       }
     },
     "gameModes": {},
