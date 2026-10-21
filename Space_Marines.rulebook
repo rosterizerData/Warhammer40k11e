@@ -1624,91 +1624,9 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
-          },
-          "hideTankAceWarlordoption": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Warlord",
-                    "value"
-                  ]
-                ],
-                "value": "-"
-              },
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Warlord",
-                    "visibility"
-                  ]
-                ],
-                "value": "hidden"
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{roster}",
-                    "tracked",
-                    "Warlord"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Warlord",
-                    "value"
-                  ]
-                ],
-                "value": "✓"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 25
           }
         },
-        "stats": {
-          "Warlord": {
-            "dynamic": true,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1,
-                "tracking": {
-                  "Warlord": 1
-                }
-              }
-            },
-            "statOrder": 100,
-            "statType": "rank",
-            "tracked": true,
-            "value": "-",
-            "visibility": "normal"
-          }
-        }
+        "stats": {}
       }
     },
     "assetCatalog": {
