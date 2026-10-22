@@ -1,6 +1,6 @@
 {
   "name": "Black Templars 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -458,37 +458,46 @@
           "M": {
             "value": 6
           },
-          "Melee Option": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Astartes chainsword": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Castellan—Astartes chainsword"
-                  }
-                ]
-              },
-              "Master-crafted power weapon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Castellan—Master-crafted power weapon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Astartes chainsword",
-            "visibility": "active"
-          },
           "OC": {
             "value": 1
           },
           "Points": {
             "value": 75
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 4
+          },
+          "Melee Option": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Master-crafted Power Weapon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Castellan—Master-crafted power weapon"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Castellan—Chainsword"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Master-crafted Power Weapon",
+            "visibility": "active"
           },
           "Ranged Option": {
             "dynamic": true,
@@ -503,7 +512,7 @@
                   }
                 ]
               },
-              "Heavy bolt pistol": {
+              "Heavy Bolt Pistol": {
                 "order": 1,
                 "traits": [
                   {
@@ -514,16 +523,7 @@
             },
             "statType": "rank",
             "value": "Combi-weapon",
-            "visibility": "normal"
-          },
-          "Sv": {
-            "value": 3
-          },
-          "T": {
-            "value": 5
-          },
-          "W": {
-            "value": 4
+            "visibility": "active"
           }
         }
       },
@@ -789,43 +789,6 @@
           "Ld": {
             "value": 5
           },
-          "Loadout": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Absolver bolt pistol": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Execrator—Absolver bolt pistol"
-                  }
-                ]
-              },
-              "Pyre pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Execrator—Pyre pistol"
-                  }
-                ]
-              },
-              "Absolver bolt pistol & Master-crafted power weapon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Execrator—Absolver bolt pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Execrator—Master-crafted power weapon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Absolver bolt pistol",
-            "visibility": "active"
-          },
           "M": {
             "value": 6
           },
@@ -843,6 +806,43 @@
           },
           "W": {
             "value": 4
+          },
+          "Loadout": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Absolvor Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Execrator—Absolvor Bolt Pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Execrator—Hand Flamer"
+                  }
+                ]
+              },
+              "Absolvor Bolt Pistol & Master-crafted Power Weapon": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Execrator—Absolvor Bolt Pistol"
+                  },
+                  {
+                    "trait": "Melee Weapon§Execrator—Master-crafted power weapon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Absolvor Bolt Pistol",
+            "visibility": "active"
           }
         }
       },
@@ -2185,16 +2185,16 @@
           ]
         },
         "rules": {
-          "2 in 10 models can have a Power fist or Pyreblaster": {
+          "Up to 2 Power Fists or Pyreblasters for every 10 models": {
             "evals": [
               {
                 "actionable": true,
                 "max": [
                   "{self}",
                   "rules",
-                  "count2in10",
+                  "count1in10",
                   "evals",
-                  "1",
+                  "0",
                   "result",
                   "integer"
                 ],
@@ -2308,41 +2308,14 @@
           ]
         },
         "rules": {
-          "1 in 5 models can have a Plasma pistol": {
+          "Maximum 1 Thunder Hammer for every 4 models": {
             "evals": [
               {
                 "actionable": true,
                 "max": [
                   "{self}",
                   "rules",
-                  "count1in5",
-                  "evals",
-                  "0",
-                  "result",
-                  "integer"
-                ],
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "pl"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          },
-          "1 in 5 models can have a Thunder hammer": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": [
-                  "{self}",
-                  "rules",
-                  "count1in5",
+                  "count1in4",
                   "evals",
                   "0",
                   "result",
@@ -2362,14 +2335,14 @@
             "evaluate": "AND",
             "failState": "error"
           },
-          "1 in 5 models can have Twin lightning claws": {
+          "Maximum 1 Twin Lightning Claws for every 4 models": {
             "evals": [
               {
                 "actionable": true,
                 "max": [
                   "{self}",
                   "rules",
-                  "count1in5",
+                  "count1in4",
                   "evals",
                   "0",
                   "result",
@@ -2389,16 +2362,16 @@
             "evaluate": "AND",
             "failState": "error"
           },
-          "2 in 5 models can have a Pyre pistol": {
+          "Maximum 1 Plasma Pistol for every 4 models": {
             "evals": [
               {
                 "actionable": true,
                 "max": [
                   "{self}",
                   "rules",
-                  "count2in5",
+                  "count1in4",
                   "evals",
-                  "1",
+                  "0",
                   "result",
                   "integer"
                 ],
@@ -2408,7 +2381,34 @@
                   [
                     "{self}",
                     "tracked",
-                    "py"
+                    "pl"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Up to 2 Hand Flamers for every 4 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in4",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "hf"
                   ]
                 ]
               }
@@ -2867,44 +2867,6 @@
           }
         }
       },
-      "Melee Weapon§Castellan—Astartes chainsword": {
-        "aspects": {
-          "Label": "Astartes chainsword"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 7
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Castellan—Master-crafted power weapon": {
         "aspects": {
           "Label": "Master-crafted power weapon"
@@ -3019,44 +2981,6 @@
           }
         }
       },
-      "Melee Weapon§Crusader Squad—Astartes chainsword": {
-        "aspects": {
-          "Label": "Astartes chainsword"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§Crusader Squad—Close combat weapon": {
         "aspects": {
           "Label": "Close combat weapon"
@@ -3129,94 +3053,6 @@
           },
           "S": {
             "value": 8
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Crusader Squad—Power weapon": {
-        "aspects": {
-          "Label": "Power weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Crusader Squad—Thunder hammer": {
-        "aspects": {
-          "Label": "Thunder hammer"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Devastating Wounds"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
-          },
-          "WS": {
-            "value": 4
-          }
-        }
-      },
-      "Melee Weapon§Crusader Squad—Twin lightning claws": {
-        "aspects": {
-          "Label": "Twin lightning claws"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
           },
           "WS": {
             "value": 3
@@ -3492,32 +3328,6 @@
           }
         }
       },
-      "Melee Weapon§Sword Brethren Squad—Power weapon": {
-        "aspects": {
-          "Label": "Power weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§Sword Brethren Squad—Thunder hammer": {
         "aspects": {
           "Label": "Thunder hammer"
@@ -3744,78 +3554,6 @@
           "Ld": {
             "value": 6
           },
-          "Loadout Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Bolt pistol & Bolt rifle": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Crusader Squad—Bolt pistol"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Crusader Squad—Bolt rifle"
-                  },
-                  {
-                    "trait": "Melee Weapon§Crusader Squad—Close combat weapon"
-                  }
-                ]
-              },
-              "Heavy bolt pistol & Chainsword": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Crusader Squad—Heavy bolt pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Crusader Squad—Astartes chainsword"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Crusader Squad—Bolt pistol"
-                  }
-                ]
-              },
-              "Heavy bolt pistol & Power fist": {
-                "order": 2,
-                "tracking": {
-                  "special": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Crusader Squad—Heavy bolt pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Crusader Squad—Power fist"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Crusader Squad—Bolt pistol"
-                  }
-                ]
-              },
-              "Pyreblaster & Bolt pistol": {
-                "order": 3,
-                "tracking": {
-                  "special": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Crusader Squad—Bolt pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Crusader Squad—Close combat weapon"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Crusader Squad—Pyreblaster"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Bolt pistol & Bolt rifle",
-            "visibility": "active"
-          },
           "M": {
             "value": 6
           },
@@ -3830,7 +3568,67 @@
           },
           "W": {
             "value": 2
+          },
+          "Loadout Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Rifle": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Crusader Squad—Bolt rifle"
+                  }
+                ]
+              },
+              "Heavy Bolt Pistol & Initiate Chainsword": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Crusader Squad—Heavy bolt pistol"
+                  },
+                  {
+                    "trait": "Melee Weapon§Crusader Squad—Initiate Chainsword"
+                  }
+                ]
+              },
+              "Heavy Bolt Pistol & Power Fist": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Crusader Squad—Heavy bolt pistol"
+                  },
+                  {
+                    "trait": "Melee Weapon§Crusader Squad—Power fist"
+                  }
+                ],
+                "tracking": {
+                  "special": 0.5
+                }
+              },
+              "Pyreblaster": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Crusader Squad—Pyreblaster"
+                  }
+                ],
+                "tracking": {
+                  "special": 0.5
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Bolt Rifle",
+            "visibility": "active"
           }
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Crusader Squad—Bolt pistol",
+            "Melee Weapon§Crusader Squad—Close combat weapon"
+          ]
         }
       },
       "Model§Initiate (Old)": {
@@ -4035,38 +3833,6 @@
           "Ld": {
             "value": 6
           },
-          "Loadout Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Bolt pistol & Astartes Chainsword": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Crusader Squad—Bolt pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Crusader Squad—Astartes chainsword"
-                  }
-                ]
-              },
-              "Neophyte firearm": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Crusader Squad—Neophyte firearm"
-                  },
-                  {
-                    "trait": "Melee Weapon§Crusader Squad—Close combat weapon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Bolt pistol & Astartes Chainsword",
-            "visibility": "active"
-          },
           "M": {
             "value": 6
           },
@@ -4081,6 +3847,38 @@
           },
           "W": {
             "value": 2
+          },
+          "Loadout Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol & Neophyte Chainsword": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Crusader Squad—Bolt pistol"
+                  },
+                  {
+                    "trait": "Melee Weapon§Crusader Squad—Neophyte Chainsword"
+                  }
+                ]
+              },
+              "Shotgun & Combat Knife": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Crusader Squad—Shotgun"
+                  },
+                  {
+                    "trait": "Melee Weapon§Crusader Squad—Combat knife"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Bolt Pistol & Neophyte Chainsword",
+            "visibility": "active"
           }
         }
       },
@@ -4244,100 +4042,8 @@
           "M": {
             "value": 6
           },
-          "Melee Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Astartes chainsword": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Sword Brethren Squad—Astartes chainsword"
-                  }
-                ]
-              },
-              "Master-crafted power weapon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Sword Brethren Squad—Master-crafted power weapon"
-                  }
-                ]
-              },
-              "Thunder hammer": {
-                "order": 2,
-                "tracking": {
-                  "th": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Sword Brethren Squad—Thunder hammer"
-                  }
-                ]
-              },
-              "Twin lightning claws": {
-                "order": 3,
-                "tracking": {
-                  "claw": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Sword Brethren Squad—Twin lightning claws"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Astartes chainsword",
-            "visibility": "normal"
-          },
           "OC": {
             "value": 1
-          },
-          "Pistol Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Heavy bolt pistol": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Sword Brethren Squad—Heavy bolt pistol"
-                  }
-                ]
-              },
-              "Plasma pistol": {
-                "order": 1,
-                "tracking": {
-                  "pl": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Sword Brethren Squad—Plasma pistol"
-                  }
-                ]
-              },
-              "Pyre pistol": {
-                "order": 2,
-                "tracking": {
-                  "py": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Sword Brethren Squad—Pyre pistol"
-                  }
-                ]
-              },
-              "-": {
-                "order": 3,
-                "tracking": {}
-              }
-            },
-            "statType": "rank",
-            "value": "Heavy bolt pistol",
-            "visibility": "active"
           },
           "Sv": {
             "value": 3
@@ -4347,6 +4053,97 @@
           },
           "W": {
             "value": 3
+          },
+          "Melee Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Chainsword": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Sword Brethren Squad—Chainsword"
+                  }
+                ]
+              },
+              "Master-crafted Power Weapon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Sword Brethren Squad—Master-crafted power weapon"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Sword Brethren Squad—Thunder hammer"
+                  }
+                ],
+                "tracking": {
+                  "th": 1
+                }
+              },
+              "Twin lightning claws": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Sword Brethren Squad—Twin lightning claws"
+                  }
+                ],
+                "tracking": {
+                  "claw": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Chainsword",
+            "visibility": "active"
+          },
+          "Pistol Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Heavy Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Sword Brethren Squad—Heavy bolt pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Sword Brethren Squad—Hand Flamer"
+                  }
+                ],
+                "tracking": {
+                  "hf": 0.5
+                }
+              },
+              "Plasma Pistol": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Sword Brethren Squad—Plasma pistol"
+                  }
+                ],
+                "tracking": {
+                  "pl": 1
+                }
+              },
+              "-": {
+                "order": 3
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolt Pistol",
+            "visibility": "active"
           }
         }
       },
@@ -4366,32 +4163,6 @@
           "OC": {
             "value": 2
           },
-          "Pistol Option": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Heavy bolt pistol": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Crusader Squad—Heavy bolt pistol"
-                  }
-                ]
-              },
-              "Pyre pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Crusader Squad—Pyre pistol"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Heavy bolt pistol",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 3
           },
@@ -4400,6 +4171,32 @@
           },
           "W": {
             "value": 2
+          },
+          "Pistol Option": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Heavy Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Crusader Squad—Heavy bolt pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Crusader Squad—Hand Flamer"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolt Pistol",
+            "visibility": "active"
           }
         }
       },
@@ -7325,36 +7122,6 @@
           ]
         }
       },
-      "Ranged Weapon§Crusader Squad—Astartes shotgun": {
-        "aspects": {
-          "Label": "Astartes shotgun"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Assault"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
       "Ranged Weapon§Crusader Squad—Bolt pistol": {
         "aspects": {
           "Label": "Bolt pistol"
@@ -7382,299 +7149,6 @@
           },
           "S": {
             "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Crusader Squad—Boltgun": {
-        "aspects": {
-          "Label": "Boltgun"
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Crusader Squad—Flamer": {
-        "aspects": {
-          "Label": "Flamer"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "format": "{t}",
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Crusader Squad—Grav-gun": {
-        "aspects": {
-          "Label": "Grav-gun"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "vehicle"
-                },
-                "x": {
-                  "value": "2+"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Crusader Squad—Meltagun": {
-        "aspects": {
-          "Label": "Meltagun"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Melta",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -4
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "format": "D6",
-            "value": 0
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 9
-          }
-        }
-      },
-      "Ranged Weapon§Crusader Squad—Plasma gun": {
-        "aspects": {
-          "Label": "Plasma gun"
-        },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Crusader Squad—Plasma gun – standard",
-            "Ranged Weapon§Crusader Squad—Plasma gun – supercharge"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Ranged Weapon§Crusader Squad—Plasma gun – standard": {
-        "aspects": {
-          "Label": "Standard"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 7
-          }
-        }
-      },
-      "Ranged Weapon§Crusader Squad—Plasma gun – supercharge": {
-        "aspects": {
-          "Label": "Supercharge"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Hazardous",
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -3
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 8
-          }
-        }
-      },
-      "Ranged Weapon§Execrator—Absolver bolt pistol": {
-        "aspects": {
-          "Label": "Absolver bolt pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Execrator—Pyre pistol": {
-        "aspects": {
-          "Label": "Pyre pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Pistol",
-            "Ability§Torrent"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "format": "{t}",
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
           }
         }
       },
@@ -7856,71 +7330,6 @@
           },
           "S": {
             "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Crusader Squad—Neophyte firearm": {
-        "aspects": {
-          "Label": "Neophyte firearm"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Assault"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Crusader Squad—Pyre pistol": {
-        "aspects": {
-          "Label": "Pyre pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Pistol",
-            "Ability§Torrent"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "format": "{t}",
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
           }
         }
       },
@@ -8112,41 +7521,6 @@
           },
           "S": {
             "value": 8
-          }
-        }
-      },
-      "Ranged Weapon§Sword Brethren Squad—Pyre pistol": {
-        "aspects": {
-          "Label": "Pyre pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Pistol",
-            "Ability§Torrent"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "format": "{t}",
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
           }
         }
       },
@@ -9533,7 +8907,7 @@
         "text": "While a friendly Adeptus Astartes unit is within 6″ of the bearer, each time you target that unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
       },
       "Wargear§Shield Dome": {
-        "text": "The bearer has a 5+ invulnerable save."
+        "text": "This unit has 5+ InSv."
       },
       "Vehicle§Gladiator Lancer": {
         "stats": {
@@ -9542,6 +8916,27 @@
           },
           "unitDiscount": {
             "value": 20
+          },
+          "Multi-melta": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Gladiator Lancer—Multi-melta"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
           }
         }
       },
@@ -9552,6 +8947,27 @@
           },
           "unitDiscount": {
             "value": 20
+          },
+          "Multi-melta": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Gladiator Reaper—Multi-melta"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
           }
         }
       },
@@ -9562,6 +8978,27 @@
           },
           "unitDiscount": {
             "value": 20
+          },
+          "Multi-melta": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Gladiator Valiant—Multi-melta"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
           }
         }
       },
@@ -9579,6 +9016,27 @@
         "stats": {
           "Points": {
             "value": 285
+          },
+          "Multi-melta": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Repulsor Executioner—Multi-melta"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
           }
         }
       },
@@ -10310,36 +9768,6 @@
           ]
         }
       },
-      "Ranged Weapon§Crusader Squad—Heavy Bolt Pistol": {
-        "aspects": {
-          "Label": "Heavy Bolt Pistol"
-        },
-        "stats": {
-          "Range": {
-            "value": 18
-          },
-          "A": {
-            "value": 1
-          },
-          "BS": {
-            "value": 3
-          },
-          "S": {
-            "value": 5
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Close-quarters"
-          ]
-        }
-      },
       "Ranged Weapon§Crusader Squad—Shotgun": {
         "aspects": {
           "Label": "Shotgun"
@@ -10482,22 +9910,6 @@
           ]
         }
       },
-      "Ranged Weapon§Crusader Squad—Bolt Rifle": {
-        "aspects": {
-          "Label": "Bolt Rifle"
-        },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Crusader Squad—Bolt Rifle – focused fire",
-            "Ranged Weapon§Crusader Squad—Bolt Rifle – saturation"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
       "Melee Weapon§Crusader Squad—Neophyte Chainsword": {
         "aspects": {
           "Label": "Neophyte Chainsword"
@@ -10533,37 +9945,6 @@
                 }
               }
             }
-          ]
-        }
-      },
-      "Melee Weapon§Crusader Squad—Master-crafted Power Weapon": {
-        "aspects": {
-          "Label": "Master-crafted Power Weapon"
-        },
-        "stats": {
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "A": {
-            "value": 3
-          },
-          "WS": {
-            "value": 2
-          },
-          "S": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits"
           ]
         }
       },
@@ -11048,36 +10429,6 @@
           ]
         }
       },
-      "Ranged Weapon§Sword Brethren Squad—Heavy Bolt Pistol": {
-        "aspects": {
-          "Label": "Heavy Bolt Pistol"
-        },
-        "stats": {
-          "Range": {
-            "value": 18
-          },
-          "A": {
-            "value": 1
-          },
-          "BS": {
-            "value": 3
-          },
-          "S": {
-            "value": 5
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Close-quarters"
-          ]
-        }
-      },
       "Ranged Weapon§Sword Brethren Squad—Hand Flamer": {
         "aspects": {
           "Label": "Hand Flamer"
@@ -11103,145 +10454,6 @@
           "traits": [
             "Ability§Torrent",
             "Ability§Close-quarters"
-          ]
-        }
-      },
-      "Ranged Weapon§Sword Brethren Squad—Plasma Pistol – standard": {
-        "aspects": {
-          "Label": "Plasma Pistol – Standard"
-        },
-        "stats": {
-          "Range": {
-            "value": 12
-          },
-          "A": {
-            "value": 1
-          },
-          "BS": {
-            "value": 3
-          },
-          "S": {
-            "value": 7
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Close-quarters"
-          ]
-        }
-      },
-      "Ranged Weapon§Sword Brethren Squad—Plasma Pistol – supercharge": {
-        "aspects": {
-          "Label": "Plasma Pistol – Supercharge"
-        },
-        "stats": {
-          "Range": {
-            "value": 12
-          },
-          "A": {
-            "value": 1
-          },
-          "BS": {
-            "value": 3
-          },
-          "S": {
-            "value": 8
-          },
-          "AP": {
-            "value": -3
-          },
-          "D": {
-            "value": 2
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Hazardous",
-            "Ability§Close-quarters"
-          ]
-        }
-      },
-      "Ranged Weapon§Sword Brethren Squad—Plasma Pistol": {
-        "aspects": {
-          "Label": "Plasma Pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Sword Brethren Squad—Plasma Pistol – standard",
-            "Ranged Weapon§Sword Brethren Squad—Plasma Pistol – supercharge"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Melee Weapon§Sword Brethren Squad—Thunder Hammer": {
-        "aspects": {
-          "Label": "Thunder Hammer"
-        },
-        "stats": {
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "A": {
-            "value": 3
-          },
-          "WS": {
-            "value": 3
-          },
-          "S": {
-            "value": 8
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 3
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Devastating Wounds"
-          ]
-        }
-      },
-      "Melee Weapon§Sword Brethren Squad—Master-crafted Power Weapon": {
-        "aspects": {
-          "Label": "Master-crafted Power Weapon"
-        },
-        "stats": {
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "A": {
-            "value": 3
-          },
-          "WS": {
-            "value": 2
-          },
-          "S": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits"
           ]
         }
       },
@@ -11280,37 +10492,6 @@
                 }
               }
             }
-          ]
-        }
-      },
-      "Melee Weapon§Sword Brethren Squad—Twin Lightning Claws": {
-        "aspects": {
-          "Label": "Twin Lightning Claws"
-        },
-        "stats": {
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "A": {
-            "value": 5
-          },
-          "WS": {
-            "value": 2
-          },
-          "S": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked"
           ]
         }
       },
@@ -12065,6 +11246,109 @@
           "items": [
             "Character§Emperor’s Champion"
           ]
+        }
+      },
+      "Vehicle§Impulsor": {
+        "stats": {
+          "Heavy stubber (11e)": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Ironhail Heavy Stubber": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Impulsor—Ironhail heavy stubber"
+                  }
+                ]
+              },
+              "Multi-melta": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Impulsor—Multi-melta"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active",
+            "label": "Heavy stubber"
+          },
+          "Upgrade (11e)": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Bellicatus Missile Array": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Impulsor—Bellicatus missile array"
+                  }
+                ]
+              },
+              "Orbital Comms Array": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Wargear§Orbital Comms Array"
+                  }
+                ]
+              },
+              "Shield Dome": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Wargear§Shield Dome"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active",
+            "label": "Upgrade"
+          }
+        },
+        "removed": {
+          "stats": {
+            "Upgrade": {},
+            "Heavy stubber": {}
+          }
+        }
+      },
+      "Vehicle§Repulsor": {
+        "stats": {
+          "Multi-melta": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Repulsor—Multi-melta"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
+          }
         }
       }
     },

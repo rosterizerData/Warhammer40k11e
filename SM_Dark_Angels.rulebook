@@ -1,6 +1,6 @@
 {
   "name": "Dark Angels 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -4427,37 +4427,6 @@
           }
         }
       },
-      "Melee Weapon§Ravenwing Black Knights—Black Knight combat weapon": {
-        "aspects": {
-          "Label": "Black Knight combat weapon"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Devastating Wounds"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§Ravenwing Command Squad—Black Knight combat weapon": {
         "aspects": {
           "Label": "Black Knight combat weapon"
@@ -4538,32 +4507,6 @@
           },
           "WS": {
             "value": 4
-          }
-        }
-      },
-      "Melee Weapon§Ravenwing Darkshroud—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
           }
         }
       },
@@ -5310,7 +5253,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Ravenwing Command Squad—Bolt pistol",
-            "Melee Weapon§Ravenwing Command Squad—Black Knight combat weapon",
+            "Melee Weapon§Ravenwing Command Squad—Corvus Hammers",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -5344,14 +5287,14 @@
                   }
                 ]
               },
-              "Astartes grenade launcher": {
+              "Grenade Launcher": {
                 "order": 1,
                 "tracking": {
                   "grenade": 1
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Ravenwing Command Squad—Astartes grenade launcher"
+                    "trait": "Ranged Weapon§Ravenwing Command Squad—Grenade Launcher"
                   }
                 ]
               }
@@ -5375,7 +5318,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Ravenwing Command Squad—Bolt pistol",
-            "Melee Weapon§Ravenwing Command Squad—Black Knight combat weapon",
+            "Melee Weapon§Ravenwing Command Squad—Corvus Hammers",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -5409,14 +5352,14 @@
                   }
                 ]
               },
-              "Astartes grenade launcher": {
+              "Grenade Launcher": {
                 "order": 1,
                 "tracking": {
                   "grenade": 1
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Ravenwing Command Squad—Astartes grenade launcher"
+                    "trait": "Ranged Weapon§Ravenwing Command Squad—Grenade Launcher"
                   }
                 ]
               }
@@ -5440,7 +5383,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Ravenwing Black Knights—Bolt pistol",
-            "Melee Weapon§Ravenwing Black Knights—Black Knight combat weapon",
+            "Melee Weapon§Ravenwing Black Knights—Corvus Hammers",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -5474,14 +5417,14 @@
                   }
                 ]
               },
-              "Astartes grenade launcher": {
+              "Grenade Launcher": {
                 "order": 1,
                 "tracking": {
                   "grenade": 1
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Ravenwing Black Knights—Astartes grenade launcher"
+                    "trait": "Ranged Weapon§Ravenwing Black Knights—Grenade Launcher"
                   }
                 ]
               }
@@ -5548,14 +5491,14 @@
                   }
                 ]
               },
-              "Astartes grenade launcher": {
+              "Grenade Launcher": {
                 "order": 1,
                 "tracking": {
                   "grenade": 1
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Ravenwing Command Squad—Astartes grenade launcher"
+                    "trait": "Ranged Weapon§Ravenwing Command Squad—Grenade Launcher"
                   }
                 ]
               }
@@ -5579,7 +5522,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Ravenwing Black Knights—Bolt pistol",
-            "Melee Weapon§Ravenwing Black Knights—Black Knight combat weapon",
+            "Melee Weapon§Ravenwing Black Knights—Corvus Hammers",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -5613,14 +5556,14 @@
                   }
                 ]
               },
-              "Astartes grenade launcher": {
+              "Grenade Launcher": {
                 "order": 1,
                 "tracking": {
                   "grenade": 1
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Ravenwing Black Knights—Astartes grenade launcher"
+                    "trait": "Ranged Weapon§Ravenwing Black Knights—Grenade Launcher"
                   }
                 ]
               }
@@ -6768,79 +6711,6 @@
           }
         }
       },
-      "Ranged Weapon§Ravenwing Black Knights—Astartes grenade launcher": {
-        "aspects": {
-          "Label": "Astartes grenade launcher"
-        },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Ravenwing Black Knights—Astartes grenade launcher – frag",
-            "Ranged Weapon§Ravenwing Black Knights—Astartes grenade launcher – krak"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Ranged Weapon§Ravenwing Black Knights—Astartes grenade launcher – frag": {
-        "aspects": {
-          "Label": "Frag"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast"
-          ]
-        },
-        "stats": {
-          "A": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Ravenwing Black Knights—Astartes grenade launcher – krak": {
-        "aspects": {
-          "Label": "Krak"
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 9
-          }
-        }
-      },
       "Ranged Weapon§Ravenwing Black Knights—Bolt pistol": {
         "aspects": {
           "Label": "Bolt pistol"
@@ -7894,7 +7764,7 @@
                 }
               }
             },
-            "Melee Weapon§Land Speeder Vengeance—Close combat weapon",
+            "Melee Weapon§Land Speeder Vengeance—Armoured Hull",
             "Ranged Weapon§Land Speeder Vengeance—Plasma storm battery",
             "Ability§Deep Strike"
           ]
@@ -8184,7 +8054,7 @@
                 }
               }
             },
-            "Melee Weapon§Ravenwing Darkshroud—Close combat weapon",
+            "Melee Weapon§Ravenwing Darkshroud—Armoured Hull",
             "Ability§Deep Strike",
             {
               "item": "Ability§Lone Operative",
@@ -9085,32 +8955,6 @@
           },
           "S": {
             "value": 5
-          }
-        }
-      },
-      "Melee Weapon§Land Speeder Vengeance—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
           }
         }
       },

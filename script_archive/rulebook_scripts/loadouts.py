@@ -141,7 +141,8 @@ def referenced(keys):
 LEGENDS_UNITS = {k.split("§", 1)[1] for k, v in res.items() if k.split("§")[0] in UNITCLS
                  and "Legends" in ((v.get("keywords") or {}).get("Source") or [])}
 ORPHANABLE = lambda k: k.split("§")[0] in ("Wargear", "Model") or (
-    k.split("§")[0] in WEP and k.split("§", 1)[1].split("—")[0] not in LEGENDS_UNITS)   # Legends units keep their weapons
+    k.split("§")[0] in WEP and k.split("§", 1)[1].split("—")[0] not in LEGENDS_UNITS   # Legends units keep their weapons
+    and "Armoury" not in k.split("§", 1)[1].split("—")[0])   # armoury weapons stay shared even when unused
 was_referenced = referenced([k for k in own if ORPHANABLE(k)])
 
 REFPAT = re.compile(r'"((?:Ranged Weapon|Melee Weapon|Weapon|Wargear|Model)§[^"]+)"')
@@ -182,6 +183,13 @@ for uname, uspec in SPEC.items():
                 if ((st.get(sn) or {}).get("ranks") or {}).pop(lb, None) is not None: log.append(f"{key}: dropped rank '{sn}/{lb}'")
         if a.get("rules") == {}:
             del a["rules"]
+        for sn, ranks in (hs.get("add_slots") or {}).items():   # an extra option beside the existing loadout
+            rk = {}
+            for i, r in enumerate(ranks):
+                label, body = parse_rank(wunit, r)
+                rk[label] = {"order": i, **body}
+            st[sn] = {"dynamic": True, "group": "Loadout", "groupOrder": 2, "ranks": rk, "statType": "rank",
+                      "value": next(iter(rk)), "visibility": "active"}
         if "static" not in hs and "slots" not in hs:
             continue
         keep = set(hs.get("keep", []))
@@ -254,8 +262,36 @@ for uname, uspec in SPEC.items():
 
 # inherited holders → overrides in this book, verified with the merge simulator
 from rzmerge import make_overlay, canon_unordered_traits as canon
+def avoid_readd(k, t):
+    """The app loses a stat an override both removes and re-adds (seen 2026-10-22: Stormraven Loadout 1/2,
+    BT Impulsor). Ranks that only grow merge without a removal; otherwise the new stat gets its own key, shown
+    under the old name via `label`."""
+    bst = base[k].get("stats") or {}
+    for sn in list((t.get("stats") or {}).keys()):
+        new, old = t["stats"][sn], bst.get(sn)
+        if not (isinstance(new, dict) and new.get("ranks") and isinstance(old, dict) and old.get("ranks")) or new == old:
+            continue
+        if set(old["ranks"]) <= set(new["ranks"]):
+            continue   # make_overlay's rank diff merges cleanly
+        key = f"{sn} (11e)"
+        t["stats"][key] = {**new, "label": new.get("label") or sn}
+        del t["stats"][sn]
+        txt = json.dumps(t.get("rules") or {}, ensure_ascii=False)
+        if f'"stats", "{sn}"' in txt:
+            t["rules"] = json.loads(txt.replace(f'"stats", "{sn}"', f'"stats", "{key}"'))
+        log.append(f"{k}: stat '{sn}' re-keyed '{key}' (override can't remove and re-add one name)")
+
 for k, t in targets.items():
+    avoid_readd(k, t)
     ov = make_overlay(base[k], t)
+    rem = (ov.get("removed") or {}).get("stats") or {}
+    for sn in [x for x in rem if x in (ov.get("stats") or {})]:   # rank-growing stats: plain merge, no removal
+        del rem[sn]
+        ov["stats"][sn] = {kk: vv for kk, vv in t["stats"][sn].items() if (base[k]["stats"].get(sn) or {}).get(kk) != vv}
+    if "removed" in ov and "stats" in ov["removed"] and not ov["removed"]["stats"]:
+        del ov["removed"]["stats"]
+    if ov.get("removed") == {}:
+        del ov["removed"]
     if canon(W.merge_entry(base[k], ov)) != canon(t):
         got, want = canon(W.merge_entry(base[k], ov)), canon(t)
         diff = {f: (got.get(f), want.get(f)) for f in set(got) | set(want) if got.get(f) != want.get(f)}

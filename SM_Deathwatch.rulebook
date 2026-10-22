@@ -1,6 +1,6 @@
 {
   "name": "Deathwatch 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1218,7 +1218,7 @@
           ]
         },
         "rules": {
-          "1 in 5 Frag cannon": {
+          "Maximum 1 Stalker-pattern Boltgun for every 5 models": {
             "evals": [
               {
                 "actionable": true,
@@ -1237,7 +1237,7 @@
                   [
                     "{self}",
                     "tracked",
-                    "Frag cannon"
+                    "stalker"
                   ]
                 ]
               }
@@ -1245,7 +1245,7 @@
             "evaluate": "AND",
             "failState": "error"
           },
-          "1 in 5 Infernus heavy bolter": {
+          "Maximum 1 Infernus Heavy Bolter for every 5 models": {
             "evals": [
               {
                 "actionable": true,
@@ -1264,7 +1264,7 @@
                   [
                     "{self}",
                     "tracked",
-                    "Infernus heavy bolter"
+                    "ihb"
                   ]
                 ]
               }
@@ -1272,7 +1272,7 @@
             "evaluate": "AND",
             "failState": "error"
           },
-          "1 in 5 Stalker-pattern boltgun": {
+          "Up to 2 Deathwatch Shotguns for every 5 models": {
             "evals": [
               {
                 "actionable": true,
@@ -1291,7 +1291,7 @@
                   [
                     "{self}",
                     "tracked",
-                    "Stalker-pattern boltgun"
+                    "shotgun"
                   ]
                 ]
               }
@@ -1299,16 +1299,16 @@
             "evaluate": "AND",
             "failState": "error"
           },
-          "2 in 5 Astartes shield": {
+          "Up to 2 Heavy Thunder Hammers for every 5 models": {
             "evals": [
               {
                 "actionable": true,
                 "max": [
                   "{self}",
                   "rules",
-                  "count2in5",
+                  "count1in5",
                   "evals",
-                  "1",
+                  "0",
                   "result",
                   "integer"
                 ],
@@ -1318,7 +1318,7 @@
                   [
                     "{self}",
                     "tracked",
-                    "Astartes shield"
+                    "hth"
                   ]
                 ]
               }
@@ -1326,16 +1326,16 @@
             "evaluate": "AND",
             "failState": "error"
           },
-          "2 in 5 Deathwatch shotgun": {
+          "Maximum 1 Frag Cannon for every 5 models": {
             "evals": [
               {
                 "actionable": true,
                 "max": [
                   "{self}",
                   "rules",
-                  "count2in5",
+                  "count1in5",
                   "evals",
-                  "1",
+                  "0",
                   "result",
                   "integer"
                 ],
@@ -1345,7 +1345,7 @@
                   [
                     "{self}",
                     "tracked",
-                    "Deathwatch shotgun"
+                    "frag"
                   ]
                 ]
               }
@@ -1353,34 +1353,7 @@
             "evaluate": "AND",
             "failState": "error"
           },
-          "2 in 5 Deathwatch thunder hammer": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": [
-                  "{self}",
-                  "rules",
-                  "count2in5",
-                  "evals",
-                  "1",
-                  "result",
-                  "integer"
-                ],
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "Deathwatch thunder hammer"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          },
-          "One Black shield blade": {
+          "Only 1 Black Shield Blades": {
             "evals": [
               {
                 "actionable": true,
@@ -1391,7 +1364,34 @@
                   [
                     "{self}",
                     "tracked",
-                    "Black shield blades"
+                    "bsb"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Up to 2 Storm Shields for every 5 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "shield"
                   ]
                 ]
               }
@@ -1574,6 +1574,89 @@
             "value": "1 Sergeant, 1 Gravis, 3 Veterans",
             "visibility": "normal"
           }
+        },
+        "rules": {
+          "Maximum 1 Power Weapon and Storm Shield for every 5 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "shield"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Maximum 1 Plasma Incinerator for every 5 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "pi"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Maximum 1 Frag Cannon or Hellstorm Bolt Rifle for every 5 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "gv"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
         }
       },
       "Infantry/Mounted§Fortis Kill Team": {
@@ -1637,33 +1720,6 @@
           }
         },
         "rules": {
-          "1 in 5 Astartes grenade launcher": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": [
-                  "{self}",
-                  "rules",
-                  "count1in5",
-                  "evals",
-                  "0",
-                  "result",
-                  "integer"
-                ],
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "Astartes grenade launcher"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          },
           "appliedIntercessorTally": {
             "evals": [
               {
@@ -2594,44 +2650,6 @@
             "evaluate": "AND",
             "failState": "error"
           },
-          "Only one plasma pistol incinerator": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "Plasma pistol"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          },
-          "Only one Vengor launcher": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "Vengor launcher"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          },
           "reduceIntercessorQty": {
             "actions": [
               {
@@ -2840,6 +2858,71 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 30
+          },
+          "Maximum 1 Grenade Launcher for every 5 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "gl"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only 1 Plasma Pistol": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "pp"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only 1 Vengor Launcher": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "vengor"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
@@ -3012,33 +3095,6 @@
           }
         },
         "rules": {
-          "1 in 5 models can have a heavy bolter": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": [
-                  "{self}",
-                  "rules",
-                  "count1in5",
-                  "evals",
-                  "0",
-                  "result",
-                  "integer"
-                ],
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "heavy"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          },
           "appliedHeavy IntercessorTally": {
             "evals": [
               {
@@ -3062,37 +3118,6 @@
                     "{self}",
                     "tally",
                     "Kill Team Heavy Intercessor"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 40
-          },
-          "appliedw/jumpTally": {
-            "evals": [
-              {
-                "actionable": false,
-                "equation": {
-                  "operator": "T-O",
-                  "value": [
-                    "{self}",
-                    "assets",
-                    "classIdentity",
-                    "Unit",
-                    "tally",
-                    "Kill Team Heavy Intercessor with jump pack"
-                  ]
-                },
-                "not": false,
-                "note": "Count the total number of tallyable models for points threshold purposes",
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Kill Team Heavy Intercessor with jump pack"
                   ]
                 ]
               }
@@ -3246,90 +3271,6 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 31
-          },
-          "applyMissingw/jumps": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "traits"
-                  ]
-                ],
-                "prepend": "",
-                "value": "Model§Kill Team Heavy Intercessor with jump pack"
-              },
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "traits",
-                    "item",
-                    "Model§Kill Team Heavy Intercessor with jump pack",
-                    "quantity"
-                  ]
-                ],
-                "value": [
-                  "{this}",
-                  "evals",
-                  "0",
-                  "result",
-                  "integer"
-                ]
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "equation": {
-                  "operator": "T-O",
-                  "value": [
-                    "{self}",
-                    "rules",
-                    "truew/jumpTally",
-                    "evals",
-                    "0",
-                    "result",
-                    "integer"
-                  ]
-                },
-                "not": true,
-                "note": "Number of w/jumps remaining to be added",
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "w/jump",
-                    "value"
-                  ]
-                ],
-                "value": 0
-              },
-              {
-                "actionable": true,
-                "not": false,
-                "note": "If there are no traits with the modelKey, we can proceed",
-                "operator": "SUM",
-                "paths": [
-                  [
-                    "{self}",
-                    "traits",
-                    "item",
-                    "Model§Kill Team Heavy Intercessor with jump pack",
-                    "quantity"
-                  ]
-                ],
-                "value": 0
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 32
           },
           "applyMissingw/meltas": {
             "actions": [
@@ -3568,75 +3509,6 @@
             "failState": "pass",
             "order": 41
           },
-          "applyMorew/jumps": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "traits",
-                    "item",
-                    "Model§Kill Team Heavy Intercessor with jump pack",
-                    "quantity"
-                  ]
-                ],
-                "prepend": "",
-                "value": [
-                  "{this}",
-                  "evals",
-                  "0",
-                  "result",
-                  "integer"
-                ]
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "equation": {
-                  "operator": "T-O",
-                  "value": [
-                    "{self}",
-                    "rules",
-                    "appliedw/jumpTally",
-                    "evals",
-                    "0",
-                    "result",
-                    "integer"
-                  ]
-                },
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "w/jump",
-                    "value"
-                  ]
-                ],
-                "value": 0
-              },
-              {
-                "actionable": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Kill Team Heavy Intercessor with jump pack"
-                  ]
-                ],
-                "value": 0
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 42
-          },
           "applyMorew/meltas": {
             "actions": [
               {
@@ -3775,25 +3647,6 @@
             "failState": "pass",
             "order": 44
           },
-          "Maximum 1 Multi-melta": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "melta"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          },
           "Maximum 10 models": {
             "evals": [
               {
@@ -3895,37 +3748,6 @@
             "failState": "pass",
             "order": 30
           },
-          "truew/jumpTally": {
-            "evals": [
-              {
-                "actionable": false,
-                "equation": {
-                  "operator": "T-O",
-                  "value": [
-                    "{self}",
-                    "assets",
-                    "classIdentity",
-                    "Unit",
-                    "tally",
-                    "Kill Team Heavy Intercessor with jump pack"
-                  ]
-                },
-                "not": false,
-                "note": "Count the total number of tallyable models for points threshold purposes",
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Kill Team Heavy Intercessor with jump pack"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 30
-          },
           "truew/meltaTally": {
             "evals": [
               {
@@ -3987,6 +3809,52 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 30
+          },
+          "Maximum 1 Deathwatch Heavy Bolter for every 5 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "hb"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only 1 Multi-melta": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "mm"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
@@ -4921,25 +4789,6 @@
             "failState": "pass",
             "order": 29
           },
-          "Maximum 1 Sniper can have a Bolt Carbine": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "bolt"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          },
           "Maximum 1 Wargear": {
             "evals": [
               {
@@ -5824,6 +5673,33 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 30
+          },
+          "Maximum 1 Plasma Pistol for every 5 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "pp"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
@@ -6216,63 +6092,6 @@
           }
         }
       },
-      "Melee Weapon§Decimus Kill Team—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Decimus Kill Team—Combat knife": {
-        "aspects": {
-          "Label": "Combat knife"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Precision"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§Decimus Kill Team—Heavy thunder hammer": {
         "aspects": {
           "Label": "Heavy thunder hammer"
@@ -6399,58 +6218,6 @@
           }
         }
       },
-      "Melee Weapon§Fortis Kill Team—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Fortis Kill Team—Long Vigil melee weapon": {
-        "aspects": {
-          "Label": "Long Vigil melee weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§Fortis Kill Team—Power fist": {
         "aspects": {
           "Label": "Power fist"
@@ -6554,37 +6321,6 @@
           },
           "S": {
             "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Indomitor Kill Team—Power fists": {
-        "aspects": {
-          "Label": "Twin power fists"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
           },
           "WS": {
             "value": 3
@@ -6954,58 +6690,6 @@
           }
         }
       },
-      "Melee Weapon§Talonstrike Kill Team—Astartes chainsword": {
-        "aspects": {
-          "Label": "Astartes chainsword"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Talonstrike Kill Team—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§Talonstrike Kill Team—Power fist": {
         "aspects": {
           "Label": "Power fist"
@@ -7253,169 +6937,9 @@
         }
       },
       "Model§Deathwatch Terminator": {
-        "rules": {
-          "Unique loadouts can not take other options": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "special1"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "special2"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
         "stats": {
           "Ld": {
             "value": 6
-          },
-          "Loadout": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Storm bolter & Power fist": {
-                "order": 0,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Storm bolter"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Power fist"
-                  }
-                ]
-              },
-              "Assault cannon": {
-                "order": 1,
-                "tracking": {
-                  "heavy": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Assault cannon"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Power fist"
-                  }
-                ]
-              },
-              "Heavy flamer": {
-                "order": 2,
-                "tracking": {
-                  "heavy": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Heavy flamer"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Power fist"
-                  }
-                ]
-              },
-              "Plasma cannon": {
-                "order": 3,
-                "tracking": {
-                  "heavy": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Power fist"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Plasma cannon"
-                  }
-                ]
-              },
-              "Cyclone missile launcher": {
-                "order": 4,
-                "tracking": {
-                  "heavy": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Power fist"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Cyclone missile launcher"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Storm bolter"
-                  }
-                ]
-              },
-              "Storm bolter & Power weapon": {
-                "order": 5,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Storm bolter"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Power weapon"
-                  }
-                ]
-              },
-              "Storm bolter & Chainfist": {
-                "order": 6,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Storm bolter"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Chainfist"
-                  }
-                ]
-              },
-              "Thunder hammer & Storm shield": {
-                "order": 7,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Thunder hammer"
-                  },
-                  {
-                    "trait": "Wargear§Storm Shield"
-                  }
-                ]
-              },
-              "Twin lightning claws": {
-                "order": 8,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Twin lightning claws"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Storm bolter & Power fist",
-            "visibility": "normal"
           },
           "M": {
             "value": 5
@@ -7431,6 +6955,127 @@
           },
           "W": {
             "value": 3
+          },
+          "Loadout": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Storm Bolter & Power Fist": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Storm bolter"
+                  },
+                  {
+                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Power fist"
+                  }
+                ]
+              },
+              "Storm Bolter & Chainfist": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Storm bolter"
+                  },
+                  {
+                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Chainfist"
+                  }
+                ]
+              },
+              "Storm Bolter & Power Weapon": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Storm bolter"
+                  },
+                  {
+                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Power weapon"
+                  }
+                ]
+              },
+              "Thunder Hammer & Storm Shield": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Thunder hammer"
+                  },
+                  {
+                    "trait": "Wargear§Deathwatch Terminator Squad—Storm Shield"
+                  }
+                ]
+              },
+              "Twin Lightning Claws": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Twin lightning claws"
+                  }
+                ]
+              },
+              "Assault Cannon & Power Fist": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Assault cannon"
+                  },
+                  {
+                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Power fist"
+                  }
+                ],
+                "tracking": {
+                  "heavy": 1
+                }
+              },
+              "Cyclone Missile Launcher & Storm Bolter & Power Fist": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Cyclone missile launcher"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Storm bolter"
+                  },
+                  {
+                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Power fist"
+                  }
+                ],
+                "tracking": {
+                  "heavy": 1
+                }
+              },
+              "Heavy Flamer & Power Fist": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Heavy flamer"
+                  },
+                  {
+                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Power fist"
+                  }
+                ],
+                "tracking": {
+                  "heavy": 1
+                }
+              },
+              "Plasma Cannon & Power Fist": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Plasma cannon"
+                  },
+                  {
+                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Power fist"
+                  }
+                ],
+                "tracking": {
+                  "heavy": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Storm Bolter & Power Fist",
+            "visibility": "active"
           }
         },
         "assets": {
@@ -7463,14 +7108,16 @@
           "T": {
             "value": 6
           },
+          "W": {
+            "value": 3
+          },
           "Unique Loadouts": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Storm bolter & Power fist": {
+              "Storm Bolter & Power Fist": {
                 "order": 0,
-                "tracking": {},
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Deathwatch Terminator Squad—Storm bolter"
@@ -7480,21 +7127,8 @@
                   }
                 ]
               },
-              "Storm bolter & Power weapon": {
+              "Storm Bolter & Chainfist": {
                 "order": 1,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Storm bolter"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Power weapon"
-                  }
-                ]
-              },
-              "Storm bolter & Chainfist": {
-                "order": 2,
-                "tracking": {},
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Deathwatch Terminator Squad—Storm bolter"
@@ -7504,21 +7138,30 @@
                   }
                 ]
               },
-              "Thunder hammer & Storm shield": {
+              "Storm Bolter & Power Weapon": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Terminator Squad—Storm bolter"
+                  },
+                  {
+                    "trait": "Melee Weapon§Deathwatch Terminator Squad—Power weapon"
+                  }
+                ]
+              },
+              "Thunder Hammer & Storm Shield": {
                 "order": 3,
-                "tracking": {},
                 "traits": [
                   {
                     "trait": "Melee Weapon§Deathwatch Terminator Squad—Thunder hammer"
                   },
                   {
-                    "trait": "Wargear§Storm Shield"
+                    "trait": "Wargear§Deathwatch Terminator Squad—Storm Shield"
                   }
                 ]
               },
-              "Twin lightning claws": {
+              "Twin Lightning Claws": {
                 "order": 4,
-                "tracking": {},
                 "traits": [
                   {
                     "trait": "Melee Weapon§Deathwatch Terminator Squad—Twin lightning claws"
@@ -7527,11 +7170,8 @@
               }
             },
             "statType": "rank",
-            "value": "Storm bolter & Power fist",
-            "visibility": "normal"
-          },
-          "W": {
-            "value": 3
+            "value": "Storm Bolter & Power Fist",
+            "visibility": "active"
           }
         },
         "assets": {
@@ -7552,136 +7192,6 @@
           "Ld": {
             "value": 6
           },
-          "Loadout Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Boltgun & Power weapon": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Boltgun"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Power weapon"
-                  }
-                ]
-              },
-              "Boltgun & Astartes shield": {
-                "order": 1,
-                "tracking": {
-                  "Astartes shield": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Boltgun"
-                  },
-                  {
-                    "trait": "Wargear§Astartes Shield"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Close combat weapon"
-                  }
-                ]
-              },
-              "Power weapon & Astartes shield": {
-                "order": 2,
-                "tracking": {
-                  "Astartes shield": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Astartes Shield"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Power weapon"
-                  }
-                ]
-              },
-              "Deathwatch thunder hammer": {
-                "order": 3,
-                "tracking": {
-                  "Deathwatch thunder hammer": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Deathwatch thunder hammer"
-                  }
-                ]
-              },
-              "Stalker-pattern boltgun": {
-                "order": 4,
-                "tracking": {
-                  "Stalker-pattern boltgun": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Stalker-pattern boltgun"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Close combat weapon"
-                  }
-                ]
-              },
-              "Deathwatch shotgun": {
-                "order": 5,
-                "tracking": {
-                  "Deathwatch shotgun": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Close combat weapon"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Deathwatch shotgun"
-                  }
-                ]
-              },
-              "Frag cannon": {
-                "order": 6,
-                "tracking": {
-                  "Frag cannon": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Close combat weapon"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Frag cannon"
-                  }
-                ]
-              },
-              "Infernus heavy bolter": {
-                "order": 7,
-                "tracking": {
-                  "Infernus heavy bolter": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Infernus heavy bolter"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Close combat weapon"
-                  }
-                ]
-              },
-              "Black Shield blades": {
-                "order": 8,
-                "tracking": {
-                  "Black shield blades": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Black Shield blades"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Boltgun & Power weapon",
-            "visibility": "active"
-          },
           "M": {
             "value": 6
           },
@@ -7696,6 +7206,133 @@
           },
           "W": {
             "value": 2
+          },
+          "Loadout Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Boltgun & Power Weapon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Veterans—Boltgun"
+                  },
+                  {
+                    "trait": "Melee Weapon§Deathwatch Veterans—Power weapon"
+                  }
+                ]
+              },
+              "Stalker-pattern Boltgun & Knives and Fists": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Veterans—Stalker-pattern boltgun"
+                  },
+                  {
+                    "trait": "Melee Weapon§Deathwatch Veterans—Knives and Fists"
+                  }
+                ],
+                "tracking": {
+                  "stalker": 1
+                }
+              },
+              "Infernus Heavy Bolter & Knives and Fists": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Veterans—Infernus heavy bolter"
+                  },
+                  {
+                    "trait": "Melee Weapon§Deathwatch Veterans—Knives and Fists"
+                  }
+                ],
+                "tracking": {
+                  "ihb": 1
+                }
+              },
+              "Deathwatch Shotgun & Knives and Fists": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Veterans—Deathwatch shotgun"
+                  },
+                  {
+                    "trait": "Melee Weapon§Deathwatch Veterans—Knives and Fists"
+                  }
+                ],
+                "tracking": {
+                  "shotgun": 0.5
+                }
+              },
+              "Heavy Thunder Hammer": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Deathwatch Veterans—Heavy Thunder Hammer"
+                  }
+                ],
+                "tracking": {
+                  "hth": 0.5
+                }
+              },
+              "Frag Cannon & Knives and Fists": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Veterans—Frag cannon"
+                  },
+                  {
+                    "trait": "Melee Weapon§Deathwatch Veterans—Knives and Fists"
+                  }
+                ],
+                "tracking": {
+                  "frag": 1
+                }
+              },
+              "Black Shield Blades": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Deathwatch Veterans—Black Shield blades"
+                  }
+                ],
+                "tracking": {
+                  "bsb": 1
+                }
+              },
+              "Boltgun & Storm Shield": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Veterans—Boltgun"
+                  },
+                  {
+                    "trait": "Wargear§Storm Shield"
+                  }
+                ],
+                "tracking": {
+                  "shield": 0.5
+                }
+              },
+              "Power Weapon & Storm Shield": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Deathwatch Veterans—Power weapon"
+                  },
+                  {
+                    "trait": "Wargear§Storm Shield"
+                  }
+                ],
+                "tracking": {
+                  "shield": 0.5
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Boltgun & Power Weapon",
+            "visibility": "active"
           }
         }
       },
@@ -7723,36 +7360,6 @@
           "OC": {
             "value": 2
           },
-          "Ranged Weapon": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "label": "Loadout",
-            "ranks": {
-              "Heavy thunder hammer": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Decimus Kill Team—Heavy thunder hammer"
-                  }
-                ]
-              },
-              "Power weapon & Astartes shield": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Decimus Kill Team—Power weapon"
-                  },
-                  {
-                    "trait": "Wargear§Astartes Shield"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Heavy thunder hammer",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 3
           },
@@ -7761,6 +7368,38 @@
           },
           "W": {
             "value": 2
+          },
+          "Ranged Weapon": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Heavy Thunder Hammer": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Decimus Kill Team—Heavy thunder hammer"
+                  }
+                ]
+              },
+              "Power Weapon & Storm Shield": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Decimus Kill Team—Power weapon"
+                  },
+                  {
+                    "trait": "Wargear§Storm Shield"
+                  }
+                ],
+                "tracking": {
+                  "shield": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Thunder Hammer",
+            "visibility": "active"
           }
         }
       },
@@ -7771,7 +7410,8 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Decimus Kill Team—Special-issue bolt pistol",
-            "Melee Weapon§Decimus Kill Team—Close combat weapon"
+            "Melee Weapon§Decimus Kill Team—Knives and Fists",
+            "Ranged Weapon§Decimus Kill Team—Deathwatch marksman bolt carbine"
           ]
         },
         "keywords": {
@@ -7788,33 +7428,6 @@
           },
           "OC": {
             "value": 2
-          },
-          "Ranged Weapon": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "label": "Loadout",
-            "ranks": {
-              "Deathwatch marksman bolt carbine": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Decimus Kill Team—Deathwatch marksman bolt carbine"
-                  }
-                ]
-              },
-              "Combat knife": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Decimus Kill Team—Combat knife"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Deathwatch marksman bolt carbine",
-            "visibility": "active"
           },
           "Sv": {
             "value": 3
@@ -7834,7 +7447,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Decimus Kill Team—Bolt pistol",
-            "Melee Weapon§Decimus Kill Team—Close combat weapon"
+            "Melee Weapon§Decimus Kill Team—Knives and Fists"
           ]
         },
         "keywords": {
@@ -7852,33 +7465,6 @@
           "OC": {
             "value": 2
           },
-          "Ranged Weapon": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "label": "Loadout",
-            "ranks": {
-              "Stalker bolt rifle": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Decimus Kill Team—Stalker bolt rifle"
-                  }
-                ]
-              },
-              "Plasma incinerator": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Decimus Kill Team—Plasma incinerator"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Stalker bolt rifle",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 3
           },
@@ -7887,6 +7473,35 @@
           },
           "W": {
             "value": 2
+          },
+          "Ranged Weapon": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Stalker Bolt Rifle": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Decimus Kill Team—Stalker bolt rifle"
+                  }
+                ]
+              },
+              "Plasma Incinerator": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Decimus Kill Team—Plasma incinerator"
+                  }
+                ],
+                "tracking": {
+                  "pi": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Stalker Bolt Rifle",
+            "visibility": "active"
           }
         }
       },
@@ -8054,7 +7669,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Decimus Kill Team—Bolt pistol",
-            "Melee Weapon§Decimus Kill Team—Close combat weapon"
+            "Melee Weapon§Decimus Kill Team—Knives and Fists"
           ]
         },
         "keywords": {
@@ -8065,46 +7680,6 @@
         "stats": {
           "Ld": {
             "value": 6
-          },
-          "Loadout": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Infernus heavy bolter": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Decimus Kill Team—Infernus heavy bolter"
-                  }
-                ]
-              },
-              "Frag cannon": {
-                "order": 1,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Decimus Kill Team—Frag cannon"
-                  }
-                ]
-              },
-              "Hellstorm bolt rifle + Astartes Grenade Launcher": {
-                "order": 2,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Decimus Kill Team—Hellstorm bolt rifle"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Decimus Kill Team—Astartes grenade launcher"
-                  }
-                ]
-              }
-            },
-            "statOrder": 9,
-            "statType": "rank",
-            "value": "Infernus heavy bolter",
-            "visibility": "active"
           },
           "M": {
             "value": 5
@@ -8120,6 +7695,49 @@
           },
           "W": {
             "value": 3
+          },
+          "Loadout": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Infernus Heavy Bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Decimus Kill Team—Infernus heavy bolter"
+                  }
+                ]
+              },
+              "Frag Cannon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Decimus Kill Team—Frag cannon"
+                  }
+                ],
+                "tracking": {
+                  "gv": 1
+                }
+              },
+              "Hellstorm Bolt Rifle & Grenade Launcher": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Decimus Kill Team—Hellstorm bolt rifle"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Decimus Kill Team—Grenade Launcher"
+                  }
+                ],
+                "tracking": {
+                  "gv": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Infernus Heavy Bolter",
+            "visibility": "active"
           }
         }
       },
@@ -8241,8 +7859,7 @@
       "Model§Kill Team Heavy Intercessor": {
         "assets": {
           "traits": [
-            "Melee Weapon§Indomitor Kill Team—Close combat weapon",
-            "Ranged Weapon§Deathwatch Armoury (Agents)—Bolt pistol"
+            "Melee Weapon§Indomitor Kill Team—Ceramite Fists"
           ]
         },
         "removed": {
@@ -8263,35 +7880,6 @@
           "OC": {
             "value": 1
           },
-          "Ranged Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Heavy bolt rifle": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Indomitor Kill Team—Heavy bolt rifle"
-                  }
-                ]
-              },
-              "Heavy bolter": {
-                "order": 1,
-                "tracking": {
-                  "heavy": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Indomitor Kill Team—Heavy bolter"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Heavy bolt rifle",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 3
           },
@@ -8300,6 +7888,35 @@
           },
           "W": {
             "value": 3
+          },
+          "Ranged Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Deathwatch Heavy Bolt Rifle": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Indomitor Kill Team—Deathwatch Heavy Bolt Rifle"
+                  }
+                ]
+              },
+              "Deathwatch Heavy Bolter": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Indomitor Kill Team—Deathwatch Heavy Bolter"
+                  }
+                ],
+                "tracking": {
+                  "hb": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Deathwatch Heavy Bolt Rifle",
+            "visibility": "active"
           }
         }
       },
@@ -8360,7 +7977,7 @@
       "Model§Kill Team Heavy Intercessor with Jump Pack": {
         "assets": {
           "traits": [
-            "Melee Weapon§Talonstrike Kill Team—Close combat weapon"
+            "Melee Weapon§Talonstrike Kill Team—Ceramite Fists"
           ]
         },
         "stats": {
@@ -8373,33 +7990,6 @@
           "OC": {
             "value": 1
           },
-          "Primary": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Assault bolters": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Talonstrike Kill Team—Assault bolters"
-                  }
-                ]
-              },
-              "Plasma exterminators": {
-                "order": 1,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Talonstrike kill team—Plasma exterminators"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Assault bolters",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 3
           },
@@ -8408,14 +7998,40 @@
           },
           "W": {
             "value": 3
+          },
+          "Primary": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Assault Bolters": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Talonstrike Kill Team—Assault bolters"
+                  }
+                ]
+              },
+              "Plasma Exterminators": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Talonstrike kill team—Plasma exterminators"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Assault Bolters",
+            "visibility": "active"
           }
         }
       },
       "Model§Kill Team Heavy Intercessor with melta rifle": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Deathwatch Armoury—Bolt pistol",
-            "Melee Weapon§Indomitor Kill Team—Close combat weapon"
+            "Ranged Weapon§Indomitor Kill Team—Bolt pistol",
+            "Melee Weapon§Indomitor Kill Team—Ceramite Fists"
           ]
         },
         "stats": {
@@ -8428,12 +8044,21 @@
           "OC": {
             "value": 1
           },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 6
+          },
+          "W": {
+            "value": 3
+          },
           "Ranged Options": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Melta rifle": {
+              "Melta Rifle": {
                 "order": 0,
                 "traits": [
                   {
@@ -8443,35 +8068,26 @@
               },
               "Multi-melta": {
                 "order": 1,
-                "tracking": {
-                  "melta": 1
-                },
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Indomitor Kill Team—Multi-melta"
                   }
-                ]
+                ],
+                "tracking": {
+                  "mm": 1
+                }
               }
             },
             "statType": "rank",
-            "value": "Melta rifle",
+            "value": "Melta Rifle",
             "visibility": "active"
-          },
-          "Sv": {
-            "value": 3
-          },
-          "T": {
-            "value": 6
-          },
-          "W": {
-            "value": 3
           }
         }
       },
       "Model§Kill Team Heavy Intercessor with power fist": {
         "assets": {
           "traits": [
-            "Melee Weapon§Indomitor Kill Team—Power fists"
+            "Melee Weapon§Indomitor Kill Team—Twin Power Fists"
           ]
         },
         "stats": {
@@ -8484,12 +8100,21 @@
           "OC": {
             "value": 1
           },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 6
+          },
+          "W": {
+            "value": 3
+          },
           "Ranged Options": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Flamestorm gauntlets": {
+              "Flamestorm Gauntlets": {
                 "order": 0,
                 "traits": [
                   {
@@ -8497,7 +8122,7 @@
                   }
                 ]
               },
-              "Auto boltstorm gauntlets & Fragstorm grenade launcher": {
+              "Auto Boltstorm Gauntlets & Fragstorm Grenade Launcher": {
                 "order": 1,
                 "traits": [
                   {
@@ -8510,26 +8135,16 @@
               }
             },
             "statType": "rank",
-            "value": "Flamestorm gauntlets",
+            "value": "Flamestorm Gauntlets",
             "visibility": "active"
-          },
-          "Sv": {
-            "value": 3
-          },
-          "T": {
-            "value": 6
-          },
-          "W": {
-            "value": 3
           }
         }
       },
       "Model§Kill Team Infiltrator": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Spectrus Kill Team—Marksman bolt carbine",
             "Ranged Weapon§Spectrus Kill Team—Bolt pistol",
-            "Melee Weapon§Spectrus Kill Team—Close combat weapon"
+            "Melee Weapon§Spectrus Kill Team—Ceramite Fists"
           ]
         },
         "stats": {
@@ -8556,34 +8171,28 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "-": {
-                "order": 0
+              "Deathwatch Marksman Bolt Carbine": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Spectrus Kill Team—Deathwatch Marksman Bolt Carbine"
+                  }
+                ]
               },
-              "Helix gauntlet": {
+              "Helix Gauntlet": {
                 "order": 1,
-                "tracking": {
-                  "wargear": 1
-                },
                 "traits": [
                   {
                     "trait": "Wargear§Helix Gauntlet"
                   }
-                ]
-              },
-              "Infiltrator comms array": {
-                "order": 2,
+                ],
                 "tracking": {
                   "wargear": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Infiltrator Comms Array"
-                  }
-                ]
+                }
               }
             },
             "statType": "rank",
-            "value": "-",
+            "value": "Deathwatch Marksman Bolt Carbine",
             "visibility": "active"
           }
         }
@@ -8592,7 +8201,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Spectrus Kill Team—Bolt pistol",
-            "Melee Weapon§Spectrus Kill Team—Close combat weapon"
+            "Melee Weapon§Spectrus Kill Team—Ceramite Fists"
           ]
         },
         "stats": {
@@ -8605,9 +8214,19 @@
           "OC": {
             "value": 1
           },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
           "Ranged Option": {
             "dynamic": true,
             "group": "Loadout",
+            "groupOrder": 2,
             "ranks": {
               "Bolt Sniper Rifle": {
                 "order": 0,
@@ -8617,38 +8236,26 @@
                   }
                 ]
               },
-              "Instigator bolt carbine": {
-                "order": 1,
-                "tracking": {
-                  "bolt": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Spectrus Kill Team—Instigator bolt carbine"
-                  }
-                ]
-              },
               "Las Fusil": {
-                "order": 2,
+                "order": 1,
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Spectrus Kill Team—Las fusil"
+                  }
+                ]
+              },
+              "Instigator Bolt Carbine": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Spectrus Kill Team—Instigator bolt carbine"
                   }
                 ]
               }
             },
             "statType": "rank",
             "value": "Bolt Sniper Rifle",
-            "visibility": "normal"
-          },
-          "Sv": {
-            "value": 3
-          },
-          "T": {
-            "value": 4
-          },
-          "W": {
-            "value": 2
+            "visibility": "active"
           }
         }
       },
@@ -8662,34 +8269,6 @@
           "Ld": {
             "value": 6
           },
-          "Loadout Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "ranks": {
-              "Combat Knife": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Spectrus Kill Team—Combat knife"
-                  }
-                ]
-              },
-              "Bolt Carbine": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Spectrus Kill Team—Bolt carbine"
-                  },
-                  {
-                    "trait": "Melee Weapon§Spectrus Kill Team—Close combat weapon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Combat Knife",
-            "visibility": "normal"
-          },
           "M": {
             "value": 8
           },
@@ -8704,6 +8283,35 @@
           },
           "W": {
             "value": 2
+          },
+          "Loadout Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Combat Knife": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Spectrus Kill Team—Combat knife"
+                  }
+                ]
+              },
+              "Deathwatch Bolt Carbine & Ceramite Fists": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Spectrus Kill Team—Deathwatch Bolt Carbine"
+                  },
+                  {
+                    "trait": "Melee Weapon§Spectrus Kill Team—Ceramite Fists"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Combat Knife",
+            "visibility": "active"
           }
         }
       },
@@ -8741,8 +8349,8 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Spectrus Kill Team—Bolt pistol",
-            "Melee Weapon§Spectrus Kill Team—Paired combat blades",
-            "Ranged Weapon§Spectrus Kill Team—Occulus bolt carbine"
+            "Ranged Weapon§Spectrus Kill Team—Deathwatch Occulus Bolt Carbine",
+            "Melee Weapon§Spectrus Kill Team—Paired combat blades"
           ]
         },
         "stats": {
@@ -8769,7 +8377,8 @@
       "Model§Kill Team Intercessor": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Fortis Kill Team—Bolt pistol"
+            "Ranged Weapon§Fortis Kill Team—Bolt pistol",
+            "Melee Weapon§Fortis Kill Team—Knives and Fists"
           ]
         },
         "stats": {
@@ -8782,44 +8391,6 @@
           "OC": {
             "value": 2
           },
-          "Ranged Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Bolt rifle": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Fortis Kill Team—Bolt rifle"
-                  },
-                  {
-                    "trait": "Melee Weapon§Fortis Kill Team—Close combat weapon"
-                  }
-                ]
-              },
-              "Bolt rifle & Astartes grenade launcher": {
-                "order": 1,
-                "tracking": {
-                  "Astartes grenade launcher": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Fortis Kill Team—Bolt rifle"
-                  },
-                  {
-                    "trait": "Melee Weapon§Fortis Kill Team—Close combat weapon"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Fortis Kill Team—Astartes grenade launcher"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Bolt rifle",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 3
           },
@@ -8828,6 +8399,38 @@
           },
           "W": {
             "value": 2
+          },
+          "Ranged Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Deathwatch Bolt Rifle": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Fortis Kill Team—Deathwatch Bolt Rifle"
+                  }
+                ]
+              },
+              "Deathwatch Bolt Rifle & Grenade Launcher": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Fortis Kill Team—Deathwatch Bolt Rifle"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Fortis Kill Team—Grenade Launcher"
+                  }
+                ],
+                "tracking": {
+                  "gl": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Deathwatch Bolt Rifle",
+            "visibility": "active"
           }
         }
       },
@@ -8835,7 +8438,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Fortis Kill Team—Heavy bolt pistol",
-            "Melee Weapon§Fortis Kill Team—Astartes chainsword"
+            "Melee Weapon§Fortis Kill Team—Chainsword"
           ]
         },
         "stats": {
@@ -8862,41 +8465,12 @@
       "Model§Kill Team Intercessor with Jump Pack": {
         "assets": {
           "traits": [
-            "Melee Weapon§Talonstrike Kill Team—Astartes chainsword"
+            "Melee Weapon§Talonstrike Kill Team—Chainsword"
           ]
         },
         "stats": {
           "Ld": {
             "value": 6
-          },
-          "Loadout": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Heavy bolt pistol": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Talonstrike Kill Team—Heavy bolt pistol"
-                  }
-                ]
-              },
-              "Plasma pistol": {
-                "order": 1,
-                "tracking": {
-                  "Plasma pistol": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Talonstrike kill team—Plasma pistol"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Heavy bolt pistol",
-            "visibility": "active"
           },
           "M": {
             "value": 12
@@ -8912,6 +8486,35 @@
           },
           "W": {
             "value": 2
+          },
+          "Loadout": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Heavy Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Talonstrike Kill Team—Heavy bolt pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Talonstrike kill team—Plasma pistol"
+                  }
+                ],
+                "tracking": {
+                  "pp": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolt Pistol",
+            "visibility": "active"
           }
         }
       },
@@ -8919,7 +8522,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Fortis Kill Team—Plasma incinerator",
-            "Melee Weapon§Fortis Kill Team—Close combat weapon"
+            "Melee Weapon§Fortis Kill Team—Knives and Fists"
           ]
         },
         "stats": {
@@ -8932,35 +8535,6 @@
           "OC": {
             "value": 2
           },
-          "Pistol Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Bolt pistol": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Fortis Kill Team—Bolt pistol"
-                  }
-                ]
-              },
-              "Plasma pistol": {
-                "order": 1,
-                "tracking": {
-                  "Plasma pistol": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Fortis Kill Team—Plasma pistol"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Bolt pistol",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 3
           },
@@ -8969,14 +8543,43 @@
           },
           "W": {
             "value": 2
+          },
+          "Pistol Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Fortis Kill Team—Bolt pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Fortis Kill Team—Plasma pistol"
+                  }
+                ],
+                "tracking": {
+                  "pp": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "active"
           }
         }
       },
       "Model§Kill Team Intercessor with pyreblaster": {
         "assets": {
           "traits": [
-            "Melee Weapon§Fortis Kill Team—Close combat weapon",
             "Ranged Weapon§Fortis Kill Team—Bolt pistol",
+            "Melee Weapon§Fortis Kill Team—Knives and Fists",
             "Ranged Weapon§Fortis Kill Team—Pyreblaster"
           ]
         },
@@ -9004,51 +8607,14 @@
       "Model§Kill Team Intercessor with superfrag rocket launcher": {
         "assets": {
           "traits": [
-            "Melee Weapon§Fortis Kill Team—Close combat weapon",
             "Ranged Weapon§Fortis Kill Team—Bolt pistol",
+            "Melee Weapon§Fortis Kill Team—Knives and Fists",
             "Ranged Weapon§Fortis Kill Team—Castellan launcher"
           ]
         },
         "stats": {
           "Ld": {
             "value": 6
-          },
-          "Loadout": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Superfrag rocket launcher": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Fortis Kill Team—Superfrag rocket launcher"
-                  }
-                ]
-              },
-              "Superkrak rocket launcher": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Fortis Kill Team—Superkrak rocket launcher"
-                  }
-                ]
-              },
-              "Vengor launcher": {
-                "order": 2,
-                "tracking": {
-                  "Vengor launcher": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Fortis Kill Team—Vengor launcher"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Superfrag rocket launcher",
-            "visibility": "active"
           },
           "M": {
             "value": 6
@@ -9064,6 +8630,43 @@
           },
           "W": {
             "value": 2
+          },
+          "Loadout": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Superfrag Rocket Launcher": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Fortis Kill Team—Superfrag rocket launcher"
+                  }
+                ]
+              },
+              "Superkrak Rocket Launcher": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Fortis Kill Team—Superkrak rocket launcher"
+                  }
+                ]
+              },
+              "Vengor Launcher": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Fortis Kill Team—Vengor launcher"
+                  }
+                ],
+                "tracking": {
+                  "vengor": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Superfrag Rocket Launcher",
+            "visibility": "active"
           }
         }
       },
@@ -9112,129 +8715,6 @@
           "OC": {
             "value": 2
           },
-          "Primary": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Bolt rifle": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Fortis Kill Team—Bolt rifle"
-                  }
-                ]
-              },
-              "Bolt rifle & Astartes grenade launcher": {
-                "order": 1,
-                "tracking": {
-                  "Astartes grenade launcher": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Fortis Kill Team—Astartes grenade launcher"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Fortis Kill Team—Bolt rifle"
-                  }
-                ]
-              },
-              "Astartes chainsword": {
-                "order": 2,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Fortis Kill Team—Astartes chainsword"
-                  }
-                ]
-              },
-              "Hand flamer": {
-                "order": 3,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Fortis Kill Team—Hand flamer"
-                  }
-                ]
-              },
-              "Plasma pistol": {
-                "order": 4,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Fortis Kill Team—Plasma pistol"
-                  }
-                ]
-              },
-              "Power weapon": {
-                "order": 5,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Fortis Kill Team—Power weapon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Bolt rifle",
-            "visibility": "active"
-          },
-          "Secondary": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Close combat weapon": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Fortis Kill Team—Close combat weapon"
-                  }
-                ]
-              },
-              "Astartes chainsword": {
-                "order": 1,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Fortis Kill Team—Astartes chainsword"
-                  }
-                ]
-              },
-              "Power fist": {
-                "order": 2,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Fortis Kill Team—Power fist"
-                  }
-                ]
-              },
-              "Power weapon": {
-                "order": 3,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Fortis Kill Team—Power weapon"
-                  }
-                ]
-              },
-              "Thunder hammer": {
-                "order": 4,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Fortis Kill Team—Thunder hammer"
-                  }
-                ]
-              }
-            },
-            "statOrder": 1,
-            "statType": "rank",
-            "value": "Close combat weapon",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 3
           },
@@ -9243,6 +8723,120 @@
           },
           "W": {
             "value": 2
+          },
+          "Primary": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Deathwatch Bolt Rifle": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Fortis Kill Team—Deathwatch Bolt Rifle"
+                  }
+                ]
+              },
+              "Deathwatch Bolt Rifle & Grenade Launcher": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Fortis Kill Team—Deathwatch Bolt Rifle"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Fortis Kill Team—Grenade Launcher"
+                  }
+                ],
+                "tracking": {
+                  "gl": 1
+                }
+              },
+              "Chainsword": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Fortis Kill Team—Chainsword"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Fortis Kill Team—Hand flamer"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Fortis Kill Team—Plasma pistol"
+                  }
+                ]
+              },
+              "Power Weapon": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Fortis Kill Team—Power weapon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Deathwatch Bolt Rifle",
+            "visibility": "active"
+          },
+          "Secondary": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Knives and Fists": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Fortis Kill Team—Knives and Fists"
+                  }
+                ]
+              },
+              "Chainsword": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Fortis Kill Team—Chainsword"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Fortis Kill Team—Power fist"
+                  }
+                ]
+              },
+              "Power Weapon": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Fortis Kill Team—Power weapon"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Fortis Kill Team—Thunder hammer"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Knives and Fists",
+            "visibility": "active"
           }
         }
       },
@@ -9283,9 +8877,6 @@
         }
       },
       "Model§Kill Team Sergeant with Jump Pack": {
-        "assets": {
-          "traits": []
-        },
         "stats": {
           "Ld": {
             "value": 6
@@ -9296,80 +8887,6 @@
           "OC": {
             "value": 1
           },
-          "Primary": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Heavy bolt pistol": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Talonstrike Kill Team—Heavy bolt pistol"
-                  }
-                ]
-              },
-              "Hand flamer": {
-                "order": 1,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Talonstrike Kill Team—Hand flamer"
-                  }
-                ]
-              },
-              "Plasma pistol": {
-                "order": 2,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Talonstrike kill team—Plasma pistol"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Heavy bolt pistol",
-            "visibility": "active"
-          },
-          "Secondary": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Astartes chainsword": {
-                "order": 0,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Talonstrike Kill Team—Astartes chainsword"
-                  }
-                ]
-              },
-              "Power fist": {
-                "order": 1,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Talonstrike Kill Team—Power fist"
-                  }
-                ]
-              },
-              "Power weapon": {
-                "order": 2,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Talonstrike Kill Team—Power weapon"
-                  }
-                ]
-              }
-            },
-            "statOrder": 1,
-            "statType": "rank",
-            "value": "Astartes chainsword",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 3
           },
@@ -9378,6 +8895,74 @@
           },
           "W": {
             "value": 2
+          },
+          "Primary": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Heavy Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Talonstrike Kill Team—Heavy bolt pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Talonstrike Kill Team—Hand flamer"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Talonstrike kill team—Plasma pistol"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolt Pistol",
+            "visibility": "active"
+          },
+          "Secondary": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Chainsword": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Talonstrike Kill Team—Chainsword"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Talonstrike Kill Team—Power fist"
+                  }
+                ]
+              },
+              "Power Weapon": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Talonstrike Kill Team—Power weapon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Chainsword",
+            "visibility": "active"
           }
         }
       },
@@ -9944,203 +9529,6 @@
           "Ld": {
             "value": 6
           },
-          "Loadout Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Boltgun & Power weapon": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Boltgun"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Power weapon"
-                  }
-                ]
-              },
-              "Boltgun & Astartes shield": {
-                "order": 1,
-                "tracking": {
-                  "Astartes shield": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Boltgun"
-                  },
-                  {
-                    "trait": "Wargear§Astartes Shield"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Close combat weapon"
-                  }
-                ]
-              },
-              "Combi & Astartes shield": {
-                "order": 2,
-                "tracking": {
-                  "Astartes shield": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Astartes Shield"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Close combat weapon"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Combi-weapon"
-                  }
-                ]
-              },
-              "Power weapon & Astartes shield": {
-                "order": 3,
-                "tracking": {
-                  "Astartes shield": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Astartes Shield"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Power weapon"
-                  }
-                ]
-              },
-              "Xenophase & Astartes shield": {
-                "order": 4,
-                "tracking": {
-                  "Astartes shield": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Astartes Shield"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Xenophase blade"
-                  }
-                ]
-              },
-              "Deathwatch thunder hammer": {
-                "order": 5,
-                "tracking": {
-                  "Deathwatch thunder hammer": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Deathwatch thunder hammer"
-                  }
-                ]
-              },
-              "Stalker-pattern boltgun": {
-                "order": 6,
-                "tracking": {
-                  "Stalker-pattern boltgun": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Stalker-pattern boltgun"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Close combat weapon"
-                  }
-                ]
-              },
-              "Deathwatch shotgun": {
-                "order": 7,
-                "tracking": {
-                  "Deathwatch shotgun": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Close combat weapon"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Deathwatch shotgun"
-                  }
-                ]
-              },
-              "Frag cannon": {
-                "order": 8,
-                "tracking": {
-                  "Frag cannon": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Close combat weapon"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Frag cannon"
-                  }
-                ]
-              },
-              "Infernus heavy bolter": {
-                "order": 9,
-                "tracking": {
-                  "Infernus heavy bolter": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Infernus heavy bolter"
-                  },
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Close combat weapon"
-                  }
-                ]
-              },
-              "Black Shield blades": {
-                "order": 10,
-                "tracking": {
-                  "Black shield blades": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Black Shield blades"
-                  }
-                ]
-              },
-              "Xenophase": {
-                "order": 11,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Xenophase blade"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Boltgun"
-                  }
-                ]
-              },
-              "Combi-weapon": {
-                "order": 12,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Power weapon"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Combi-weapon"
-                  }
-                ]
-              },
-              "Combi & Xeno": {
-                "order": 13,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Deathwatch Veterans—Xenophase blade"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Deathwatch Veterans—Combi-weapon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Boltgun & Power weapon",
-            "visibility": "active"
-          },
           "M": {
             "value": 6
           },
@@ -10155,6 +9543,58 @@
           },
           "W": {
             "value": 2
+          },
+          "Ranged": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Boltgun": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Veterans—Boltgun"
+                  }
+                ]
+              },
+              "Combi-weapon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Deathwatch Veterans—Combi-weapon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Boltgun",
+            "visibility": "active"
+          },
+          "Melee": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Power Weapon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Deathwatch Veterans—Power weapon"
+                  }
+                ]
+              },
+              "Xenophase Blade": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Deathwatch Veterans—Xenophase blade"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Power Weapon",
+            "visibility": "active"
           }
         }
       },
@@ -10382,36 +9822,6 @@
           },
           "S": {
             "value": 6
-          }
-        }
-      },
-      "Ranged Weapon§Deathwatch Armoury—Bolt pistol": {
-        "aspects": {
-          "Label": "Bolt pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Close-quarters"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 5
           }
         }
       },
@@ -11103,77 +10513,6 @@
           ]
         }
       },
-      "Ranged Weapon§Deathwatch Veterans—Infernus heavy bolter – heavy bolter": {
-        "aspects": {
-          "Label": "Heavy bolter"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Heavy",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Deathwatch Veterans—Infernus heavy bolter – heavy flamer": {
-        "aspects": {
-          "Label": "Heavy flamer"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
       "Ranged Weapon§Deathwatch Veterans—Long Vigil ranged weapon": {
         "aspects": {
           "Label": "Long Vigil ranged weapon"
@@ -11223,85 +10562,6 @@
           }
         }
       },
-      "Ranged Weapon§Deathwatch Veterans—Missile launcher": {
-        "aspects": {
-          "Label": "Missile launcher"
-        },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Deathwatch Veterans—Missile launcher – frag",
-            "Ranged Weapon§Deathwatch Veterans—Missile launcher – krak"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Ranged Weapon§Deathwatch Veterans—Missile launcher – frag": {
-        "aspects": {
-          "Label": "Frag"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast",
-            "Ability§Heavy"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 48
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Deathwatch Veterans—Missile launcher – krak": {
-        "aspects": {
-          "Label": "Krak"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Heavy"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "format": "D6",
-            "value": 0
-          },
-          "Range": {
-            "value": 48
-          },
-          "S": {
-            "value": 9
-          }
-        }
-      },
       "Ranged Weapon§Deathwatch Veterans—Stalker-pattern boltgun": {
         "aspects": {
           "Label": "Stalker-pattern boltgun"
@@ -11330,79 +10590,6 @@
           },
           "S": {
             "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Decimus Kill Team—Astartes grenade launcher": {
-        "aspects": {
-          "Label": "Astartes grenade launcher"
-        },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Decimus Kill Team—Astartes grenade launcher – frag",
-            "Ranged Weapon§Decimus Kill Team—Astartes grenade launcher – krak"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Ranged Weapon§Decimus Kill Team—Astartes grenade launcher – frag": {
-        "aspects": {
-          "Label": "Frag"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast"
-          ]
-        },
-        "stats": {
-          "A": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Decimus Kill Team—Astartes grenade launcher – krak": {
-        "aspects": {
-          "Label": "Krak"
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 9
           }
         }
       },
@@ -11560,77 +10747,6 @@
           "Tags": [
             "Multi-weapon"
           ]
-        }
-      },
-      "Ranged Weapon§Decimus Kill Team—Infernus heavy bolter – heavy bolter": {
-        "aspects": {
-          "Label": "Heavy bolter"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Decimus Kill Team—Infernus heavy bolter – heavy flamer": {
-        "aspects": {
-          "Label": "Heavy flamer"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "format": "{t}",
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 5
-          }
         }
       },
       "Ranged Weapon§Decimus Kill Team—Plasma incinerator": {
@@ -11867,79 +10983,6 @@
           }
         }
       },
-      "Ranged Weapon§Fortis Kill Team—Astartes grenade launcher": {
-        "aspects": {
-          "Label": "Astartes grenade launcher"
-        },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Fortis Kill Team—Astartes grenade launcher – frag",
-            "Ranged Weapon§Fortis Kill Team—Astartes grenade launcher – krak"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Ranged Weapon§Fortis Kill Team—Astartes grenade launcher – frag": {
-        "aspects": {
-          "Label": "Frag"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast"
-          ]
-        },
-        "stats": {
-          "A": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Fortis Kill Team—Astartes grenade launcher – krak": {
-        "aspects": {
-          "Label": "Krak"
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 9
-          }
-        }
-      },
       "Ranged Weapon§Fortis Kill Team—Bolt pistol": {
         "aspects": {
           "Label": "Bolt pistol"
@@ -11964,38 +11007,6 @@
           },
           "Range": {
             "value": 12
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Fortis Kill Team—Bolt rifle": {
-        "aspects": {
-          "Label": "Deathwatch bolt rifle"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Assault",
-            "Ability§Heavy",
-            "Ability§Lethal Hits"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
           },
           "S": {
             "value": 5
@@ -12092,55 +11103,6 @@
           },
           "S": {
             "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Fortis Kill Team—Long Vigil ranged weapon": {
-        "aspects": {
-          "Label": "Long Vigil ranged weapon"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "infantry"
-                },
-                "x": {
-                  "value": "4+"
-                }
-              }
-            },
-            "Ability§Devastating Wounds",
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
           }
         }
       },
@@ -12350,43 +11312,6 @@
           }
         }
       },
-      "Ranged Weapon§Fortis Kill Team—Storm bolter": {
-        "aspects": {
-          "Label": "Storm bolter"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
       "Ranged Weapon§Fortis Kill Team—Superfrag rocket launcher": {
         "aspects": {
           "Label": "Superfrag rocket launcher"
@@ -12525,46 +11450,6 @@
           }
         }
       },
-      "Ranged Weapon§Indomitor Kill Team—Assault bolters": {
-        "aspects": {
-          "Label": "Assault bolters"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Assault",
-            "Ability§Pistol",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            },
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
       "Ranged Weapon§Indomitor Kill Team—Auto boltstorm gauntlets": {
         "aspects": {
           "Label": "Auto boltstorm gauntlets"
@@ -12679,85 +11564,6 @@
           }
         }
       },
-      "Ranged Weapon§Indomitor Kill Team—Heavy bolt rifle": {
-        "aspects": {
-          "Label": "Deathwatch heavy bolt rifle"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits",
-            "Ability§Assault",
-            "Ability§Heavy"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 30
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Indomitor Kill Team—Heavy bolter": {
-        "aspects": {
-          "Label": "Deathwatch heavy bolter"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            },
-            "Ability§Lethal Hits",
-            "Ability§Assault",
-            "Ability§Heavy"
-          ]
-        },
-        "removed": {
-          "assets": {
-            "traits": [
-              "Ability§Sustained Hits"
-            ]
-          }
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
       "Ranged Weapon§Indomitor Kill Team—Melta rifle": {
         "aspects": {
           "Label": "Melta rifle"
@@ -12802,87 +11608,6 @@
           "Tags": [
             "Multi-weapon"
           ]
-        }
-      },
-      "Ranged Weapon§Indomitor Kill Team—Plasma exterminators": {
-        "aspects": {
-          "Label": "Plasma exterminators"
-        },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Indomitor Kill Team—Plasma exterminators – standard",
-            "Ranged Weapon§Indomitor Kill Team—Plasma exterminators – supercharge"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Ranged Weapon§Indomitor Kill Team—Plasma exterminators – standard": {
-        "aspects": {
-          "Label": "Standard"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Assault",
-            "Ability§Pistol",
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 7
-          }
-        }
-      },
-      "Ranged Weapon§Indomitor Kill Team—Plasma exterminators – supercharge": {
-        "aspects": {
-          "Label": "Supercharge"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Assault",
-            "Ability§Hazardous",
-            "Ability§Pistol",
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -3
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 8
-          }
         }
       },
       "Ranged Weapon§Kill Team Cassius—Bolt pistol": {
@@ -13089,37 +11814,6 @@
           }
         }
       },
-      "Ranged Weapon§Spectrus Kill Team—Bolt carbine": {
-        "aspects": {
-          "Label": "Bolt carbine"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Precision",
-            "Ability§Lethal Hits"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
       "Ranged Weapon§Spectrus Kill Team—Bolt pistol": {
         "aspects": {
           "Label": "Bolt pistol"
@@ -13256,69 +11950,6 @@
           },
           "S": {
             "value": 10
-          }
-        }
-      },
-      "Ranged Weapon§Spectrus Kill Team—Marksman bolt carbine": {
-        "aspects": {
-          "Label": "Marksman bolt carbine"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Heavy",
-            "Ability§Lethal Hits"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Spectrus Kill Team—Occulus bolt carbine": {
-        "aspects": {
-          "Label": "Occulus bolt carbine"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Assault",
-            "Ability§Ignores Cover",
-            "Ability§Lethal Hits"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 5
           }
         }
       },
@@ -14040,7 +12671,8 @@
               "item": "Ability§Transport",
               "text": "This model has a transport capacity of 12 **Adeptus Astartes Infantry or Kill Team** models. Each **Jump Pack, Gravis or Terminator** model takes up the space of 2 models and each **Centurion** model takes up the space of 3 models."
             },
-            "Melee Weapon§Corvus Blackstar—Armoured hull"
+            "Melee Weapon§Corvus Blackstar—Armoured hull",
+            "Wargear§Auspex Array"
           ]
         },
         "keywords": {
@@ -14065,12 +12697,65 @@
           ]
         },
         "stats": {
+          "Ld": {
+            "value": 6
+          },
+          "M": {
+            "value": 14
+          },
+          "OC": {
+            "value": 0
+          },
+          "Points": {
+            "value": 180
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 10
+          },
+          "W": {
+            "value": 14
+          },
+          "Rocket Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "2 Blackstar Rocket Launcher": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Corvus Blackstar—Blackstar rocket launcher"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Corvus Blackstar—Blackstar rocket launcher"
+                  }
+                ]
+              },
+              "2 Stormstrike Missile Launcher": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Corvus Blackstar—Stormstrike missile launcher"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Corvus Blackstar—Stormstrike missile launcher"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "2 Blackstar Rocket Launcher",
+            "visibility": "active"
+          },
           "Cannon Options": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Twin assault cannon": {
+              "Twin Assault Cannon": {
                 "order": 0,
                 "traits": [
                   {
@@ -14078,7 +12763,7 @@
                   }
                 ]
               },
-              "Twin lascannon": {
+              "Twin Lascannon": {
                 "order": 1,
                 "traits": [
                   {
@@ -14088,8 +12773,8 @@
               }
             },
             "statType": "rank",
-            "value": "Twin assault cannon",
-            "visibility": "normal"
+            "value": "Twin Assault Cannon",
+            "visibility": "active"
           },
           "Hurricane bolter": {
             "dynamic": true,
@@ -14110,89 +12795,7 @@
             },
             "statType": "rank",
             "value": "-",
-            "visibility": "normal"
-          },
-          "Ld": {
-            "value": 6
-          },
-          "M": {
-            "value": 14
-          },
-          "OC": {
-            "value": 0
-          },
-          "Points": {
-            "value": 180
-          },
-          "Rocket Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "2 Blackstar rocket launchers": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Ranged Weapon§Corvus Blackstar—Blackstar rocket launcher",
-                      "quantity": 2
-                    }
-                  }
-                ]
-              },
-              "2 Stormstrike missile launchers": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Ranged Weapon§Corvus Blackstar—Stormstrike missile launcher",
-                      "quantity": 2
-                    }
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "2 Blackstar rocket launchers",
             "visibility": "active"
-          },
-          "Sv": {
-            "value": 3
-          },
-          "T": {
-            "value": 10
-          },
-          "W": {
-            "value": 14
-          },
-          "Wargear": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Auspex array": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Auspex Array"
-                  }
-                ]
-              },
-              "Infernum halo-launcher": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Infernum Halo-launcher"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
           }
         }
       },
@@ -14203,13 +12806,10 @@
         "text": "The bearer has a 4+ invulnerable save."
       },
       "Wargear§Auspex Array": {
-        "text": "Ranged weapons equipped by the bearer have the **[IGNORES COVER]** ability."
+        "text": "Ranged weapons equipped by the bearer have the [IGNORES COVER] ability."
       },
       "Wargear§Helix Gauntlet": {
-        "text": ""
-      },
-      "Wargear§Infernum Halo-launcher": {
-        "text": "The bearer has the **Smoke** keyword."
+        "text": "In your Command phase, this unit heals D3 wounds."
       },
       "Wargear§Infiltrator Comms Array": {
         "text": ""
@@ -14255,7 +12855,7 @@
             "failState": "pass"
           }
         },
-        "text": "The bearer has a Wounds characteristic of 4."
+        "text": "This model has a 4+ InSv."
       },
       "Weapon§Watch Master—Vigil spear": {
         "aspects": {
@@ -15439,42 +14039,6 @@
           ]
         }
       },
-      "Ranged Weapon§Indomitor Kill Team—Flamestorm gauntlets – ranged": {
-        "aspects": {
-          "Label": "Flamestorm Gauntlets – Ranged"
-        },
-        "stats": {
-          "Range": {
-            "value": 12
-          },
-          "A": {
-            "value": 3
-          },
-          "S": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked",
-            "Ability§Torrent",
-            {
-              "item": "Ability§Blast",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            }
-          ]
-        }
-      },
       "Ranged Weapon§Indomitor Kill Team—Melta rifle – hunter": {
         "aspects": {
           "Label": "Melta Rifle – Hunter"
@@ -16063,6 +14627,44 @@
           "Tags": [
             "Multi-weapon"
           ]
+        }
+      },
+      "Wargear§Deathwatch Terminator Squad—Storm Shield": {
+        "text": "This model has +1 **W**.",
+        "stats": {
+          "Points": {
+            "value": 5
+          }
+        }
+      },
+      "Ranged Weapon§Deathwatch Armoury—Bolt pistol": {
+        "aspects": {
+          "Label": "Bolt pistol"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Close-quarters"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 5
+          }
         }
       }
     },

@@ -1,6 +1,6 @@
 {
   "name": "Space Wolves 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1308,7 +1308,7 @@
                 }
               }
             },
-            "Melee Weapon§Logan Grimnar—The Axe Morkai",
+            "Melee Weapon§Logan Grimnar—Axe Morkai",
             "Ranged Weapon§Logan Grimnar—Storm bolter",
             "Melee Weapon§Logan Grimnar—Tyrnak and Fenrir"
           ]
@@ -1554,7 +1554,7 @@
             "Ability§Bestial Fury",
             "Ranged Weapon§Murderfang—Heavy flamer",
             "Ranged Weapon§Murderfang—Storm bolter",
-            "Melee Weapon§Murderfang—The Murderclaws"
+            "Melee Weapon§Murderfang—Murderclaws"
           ]
         },
         "keywords": {
@@ -1802,7 +1802,7 @@
                 }
               }
             },
-            "Melee Weapon§Ulrik the Slayer—Artificer crozius",
+            "Melee Weapon§Ulrik the Slayer—Artificer Crozius Arcanum",
             "Ranged Weapon§Ulrik the Slayer—Plasma pistol"
           ]
         },
@@ -1896,76 +1896,6 @@
           "Ld": {
             "value": 6
           },
-          "Loadout Options 1": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Master-crafted power weapon": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Wolf Guard Battle Leader—Master-crafted power weapon"
-                  }
-                ]
-              },
-              "Thunder hammer": {
-                "order": 1,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Wolf Guard Battle Leader—Thunder hammer"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Master-crafted power weapon",
-            "visibility": "normal"
-          },
-          "Loadout Options 2": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Storm Shield": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Wargear§Storm Shield - Battle Leader"
-                  }
-                ]
-              },
-              "Master-crafted bolt carbine": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Wolf Guard Battle Leader—Master-crafted bolt carbine"
-                  }
-                ]
-              },
-              "Master-crafted heavy bolt pistol": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Wolf Guard Battle Leader—Master-crafted heavy bolt pistol"
-                  }
-                ]
-              },
-              "Plasma pistol": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Wolf Guard Battle Leader—Plasma pistol"
-                  }
-                ]
-              }
-            },
-            "statOrder": 3,
-            "statType": "rank",
-            "value": "Storm Shield",
-            "visibility": "active"
-          },
           "M": {
             "value": 7
           },
@@ -1983,6 +1913,58 @@
           },
           "W": {
             "value": 5
+          },
+          "Loadout Options 1": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Master-crafted Power Weapon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Wolf Guard Battle Leader—Master-crafted power weapon"
+                  }
+                ]
+              },
+              "Thunder Hammer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Wolf Guard Battle Leader—Thunder hammer"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Master-crafted Power Weapon",
+            "visibility": "active"
+          },
+          "Loadout Options 2": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Plasma Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Wolf Guard Battle Leader—Plasma pistol"
+                  }
+                ]
+              },
+              "Storm Shield - Battle Leader": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Storm Shield - Battle Leader"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Plasma Pistol",
+            "visibility": "active"
           }
         }
       },
@@ -7639,33 +7621,6 @@
           ]
         },
         "rules": {
-          "1 in 12 can have an Instigator Bolt Carbine": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": [
-                  "{self}",
-                  "rules",
-                  "count1in12",
-                  "evals",
-                  "0",
-                  "result",
-                  "integer"
-                ],
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "4"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          },
           "count1in12": {
             "evals": [
               {
@@ -7688,63 +7643,6 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 100
-          },
-          "Only one model can have a Haywire mine": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "2"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          },
-          "Only one model can have a plasma gun": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "1"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          },
-          "Only one model can have a Runic Stave": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "3"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
           },
           "setLimit1PL4WS1HW": {
             "actions": [
@@ -7909,6 +7807,90 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 0
+          },
+          "Only 1 Wolf Scout can take a Bolt Pistol, Runic Stave or Thunderclap": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "swap"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Maximum 1 Instigator Bolt Carbine for every 12 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in12",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "inst"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only 1 model can take a Haywire Mine": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "hm"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only 1 Wolf Scout can take a Plasma Gun": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "pg"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
@@ -8372,32 +8354,6 @@
           }
         }
       },
-      "Melee Weapon§Blood Claws—Astartes chainsword": {
-        "aspects": {
-          "Label": "Astartes chainsword"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§Blood Claws—Power weapon": {
         "aspects": {
           "Label": "Power weapon"
@@ -8535,32 +8491,6 @@
           },
           "WS": {
             "value": 4
-          }
-        }
-      },
-      "Melee Weapon§Grey Hunters—Astartes chainsword": {
-        "aspects": {
-          "Label": "Astartes chainsword"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
           }
         }
       },
@@ -8960,74 +8890,6 @@
           }
         }
       },
-      "Melee Weapon§Logan Grimnar—The Axe Morkai": {
-        "aspects": {
-          "Label": "The Axe Morkai"
-        },
-        "assets": {
-          "traits": [
-            "Melee Weapon§Logan Grimnar—The Axe Morkai – one-handed",
-            "Melee Weapon§Logan Grimnar—The Axe Morkai – strike"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Melee Weapon§Logan Grimnar—The Axe Morkai – one-handed": {
-        "aspects": {
-          "Label": "One-handed"
-        },
-        "stats": {
-          "A": {
-            "value": 10
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Logan Grimnar—The Axe Morkai – strike": {
-        "aspects": {
-          "Label": "strike"
-        },
-        "stats": {
-          "A": {
-            "value": 6
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Logan Grimnar—Tyrnak and Fenrir": {
         "aspects": {
           "Label": "Tyrnak and Fenrir"
@@ -9186,45 +9048,6 @@
           },
           "WS": {
             "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Murderfang—The Murderclaws": {
-        "aspects": {
-          "Label": "The Murderclaws"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 8
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 14
-          },
-          "WS": {
-            "value": 3
           }
         }
       },
@@ -9556,37 +9379,6 @@
           }
         }
       },
-      "Melee Weapon§Thunderwolf Cavalry—Crushing teeth and claws": {
-        "aspects": {
-          "Label": "Crushing teeth and claws"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Extra Attacks"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 4
-          }
-        }
-      },
       "Melee Weapon§Thunderwolf Cavalry—Wolf Guard weapon": {
         "aspects": {
           "Label": "Wolf Guard weapon"
@@ -9610,58 +9402,6 @@
           },
           "WS": {
             "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Ulrik the Slayer—Artificer crozius": {
-        "aspects": {
-          "Label": "Artificer crozius"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "monster"
-                },
-                "x": {
-                  "value": "4+"
-                }
-              }
-            },
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "vehicle"
-                },
-                "x": {
-                  "value": "4+"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 2
           }
         }
       },
@@ -11064,58 +10804,6 @@
           }
         }
       },
-      "Melee Weapon§Wolf Scouts—Astartes chainsword": {
-        "aspects": {
-          "Label": "Astartes chainsword"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Wolf Scouts—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§Wolf Scouts—Combat knife": {
         "aspects": {
           "Label": "Combat knife"
@@ -11142,97 +10830,9 @@
           }
         }
       },
-      "Melee Weapon§Wolf Scouts—Power fist": {
-        "aspects": {
-          "Label": "Power fist"
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§Wolf Scouts—Power weapon": {
         "aspects": {
           "Label": "Power weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Wolf Scouts—Thunder hammer": {
-        "aspects": {
-          "Label": "Thunder hammer"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Devastating Wounds"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
-          },
-          "WS": {
-            "value": 4
-          }
-        }
-      },
-      "Melee Weapon§Wolf Scouts—Twin lightning claws": {
-        "aspects": {
-          "Label": "Twin lightning claws"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked"
-          ]
         },
         "stats": {
           "A": {
@@ -11445,7 +11045,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Blood Claws—Bolt pistol",
-            "Melee Weapon§Blood Claws—Astartes chainsword"
+            "Melee Weapon§Blood Claws—Chainsword"
           ]
         },
         "stats": {
@@ -11482,11 +11082,11 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Astartes chainsword": {
+              "Chainsword": {
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Blood Claws—Astartes chainsword"
+                    "trait": "Melee Weapon§Blood Claws—Chainsword"
                   }
                 ]
               },
@@ -11500,7 +11100,7 @@
               }
             },
             "statType": "rank",
-            "value": "Astartes chainsword",
+            "value": "Chainsword",
             "visibility": "active"
           },
           "OC": {
@@ -11575,7 +11175,7 @@
           "traits": [
             "Ranged Weapon§Grey Hunters—Bolt carbine",
             "Ranged Weapon§Grey Hunters—Bolt pistol",
-            "Melee Weapon§Grey Hunters—Astartes chainsword"
+            "Melee Weapon§Grey Hunters—Chainsword"
           ]
         },
         "stats": {
@@ -11602,7 +11202,7 @@
       "Model§Grey Hunter Pack Leader": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Grey Hunters—Bolt pistol"
+            "Ranged Weapon§Grey Hunters—Bolt carbine"
           ]
         },
         "stats": {
@@ -11612,70 +11212,8 @@
           "M": {
             "value": 7
           },
-          "Melee Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Astartes chainsword": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Grey Hunters—Astartes chainsword"
-                  }
-                ]
-              },
-              "Power fist": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Grey Hunters—Power fist"
-                  }
-                ]
-              },
-              "Power weapon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Grey Hunters—Power weapon"
-                  }
-                ]
-              }
-            },
-            "statOrder": 2,
-            "statType": "rank",
-            "value": "Astartes chainsword",
-            "visibility": "active"
-          },
           "OC": {
             "value": 3
-          },
-          "Ranged Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Bolt carbine": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Grey Hunters—Bolt carbine"
-                  }
-                ]
-              },
-              "Plasma pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Grey Hunters—Plasma pistol"
-                  }
-                ]
-              }
-            },
-            "statOrder": 1,
-            "statType": "rank",
-            "value": "Bolt carbine",
-            "visibility": "normal"
           },
           "Sv": {
             "value": 3
@@ -11685,6 +11223,66 @@
           },
           "W": {
             "value": 2
+          },
+          "Melee Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Chainsword": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Grey Hunters—Chainsword"
+                  }
+                ]
+              },
+              "Power Fist": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Grey Hunters—Power fist"
+                  }
+                ]
+              },
+              "Power Weapon": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Grey Hunters—Power weapon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Chainsword",
+            "visibility": "active"
+          },
+          "Ranged Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grey Hunters—Bolt pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Grey Hunters—Plasma pistol"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "active"
           }
         }
       },
@@ -12246,7 +11844,7 @@
       "Model§Thunderwolf Cavalry": {
         "assets": {
           "traits": [
-            "Melee Weapon§Thunderwolf Cavalry—Crushing teeth and claws",
+            "Melee Weapon§Thunderwolf Cavalry—Teeth and Claws",
             "Melee Weapon§Thunderwolf Cavalry—Wolf Guard weapon"
           ]
         },
@@ -12260,51 +11858,6 @@
           "OC": {
             "value": 2
           },
-          "Pistol Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Bolt pistol": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Thunderwolf Cavalry—Bolt pistol"
-                  }
-                ]
-              },
-              "Boltgun": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Thunderwolf Cavalry—Boltgun"
-                  }
-                ]
-              },
-              "Storm shield": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Storm Shield"
-                  }
-                ]
-              },
-              "Plasma pistol": {
-                "order": 3,
-                "tracking": {
-                  "plasma": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Thunderwolf Cavalry—Plasma pistol"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Bolt pistol",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 3
           },
@@ -12313,13 +11866,53 @@
           },
           "W": {
             "value": 4
+          },
+          "Pistol Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Thunderwolf Cavalry—Bolt pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Thunderwolf Cavalry—Plasma pistol"
+                  }
+                ],
+                "tracking": {
+                  "plasma": 1
+                }
+              },
+              "Boltgun & Storm Shield": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Thunderwolf Cavalry—Boltgun"
+                  },
+                  {
+                    "trait": "Wargear§Storm Shield"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "active"
           }
         }
       },
       "Model§Thunderwolf Cavalry Pack Leader": {
         "assets": {
           "traits": [
-            "Melee Weapon§Thunderwolf Cavalry—Crushing teeth and claws",
+            "Melee Weapon§Thunderwolf Cavalry—Teeth and Claws",
             "Melee Weapon§Thunderwolf Cavalry—Wolf Guard weapon"
           ]
         },
@@ -12333,51 +11926,6 @@
           "OC": {
             "value": 2
           },
-          "Pistol Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Bolt pistol": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Thunderwolf Cavalry—Bolt pistol"
-                  }
-                ]
-              },
-              "Boltgun": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Thunderwolf Cavalry—Boltgun"
-                  }
-                ]
-              },
-              "Storm shield": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Wargear§Storm Shield"
-                  }
-                ]
-              },
-              "Plasma pistol": {
-                "order": 3,
-                "tracking": {
-                  "plasma": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Thunderwolf Cavalry—Plasma pistol"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Bolt pistol",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 3
           },
@@ -12386,6 +11934,46 @@
           },
           "W": {
             "value": 4
+          },
+          "Pistol Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Thunderwolf Cavalry—Bolt pistol"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Thunderwolf Cavalry—Plasma pistol"
+                  }
+                ],
+                "tracking": {
+                  "plasma": 1
+                }
+              },
+              "Boltgun & Storm Shield": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Thunderwolf Cavalry—Boltgun"
+                  },
+                  {
+                    "trait": "Wargear§Storm Shield"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "active"
           }
         }
       },
@@ -12496,35 +12084,6 @@
           "Ld": {
             "value": 6
           },
-          "Loadout Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Master-crafted power weapon & Storm shield": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Wolf Guard Headtakers—Master-crafted power weapon"
-                  },
-                  {
-                    "trait": "Wargear§Storm Shield - Headtakers"
-                  }
-                ]
-              },
-              "Paired master-crafted power weapons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Wolf Guard Headtakers—Paired master-crafted power weapons"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Master-crafted power weapon & Storm shield",
-            "visibility": "active"
-          },
           "M": {
             "value": 7
           },
@@ -12539,6 +12098,35 @@
           },
           "W": {
             "value": 3
+          },
+          "Loadout Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Paired Master-crafted Power Weapons": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Wolf Guard Headtakers—Paired master-crafted power weapons"
+                  }
+                ]
+              },
+              "Master-crafted Power Weapon & Storm Shield - Headtakers": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Wolf Guard Headtakers—Master-crafted power weapon"
+                  },
+                  {
+                    "trait": "Wargear§Storm Shield - Headtakers"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Paired Master-crafted Power Weapons",
+            "visibility": "active"
           }
         }
       },
@@ -12949,95 +12537,9 @@
         }
       },
       "Model§Wolf Scout": {
-        "assets": {
-          "traits": []
-        },
         "stats": {
           "Ld": {
             "value": 6
-          },
-          "Loadout Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Plasma pistol & Combat blade": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Wolf Scouts—Plasma pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Wolf Scouts—Combat blade"
-                  }
-                ]
-              },
-              "Plasma gun & Combat blade": {
-                "order": 1,
-                "tracking": {
-                  "1": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Wolf Scouts—Plasma gun"
-                  },
-                  {
-                    "trait": "Melee Weapon§Wolf Scouts—Combat blade"
-                  }
-                ]
-              },
-              "Plasma pistol, Combat blade & Haywire Mine": {
-                "order": 2,
-                "tracking": {
-                  "2": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Wolf Scouts—Plasma pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Wolf Scouts—Combat blade"
-                  },
-                  {
-                    "trait": "Wargear§Haywire Mine"
-                  }
-                ]
-              },
-              "Runic Stave and Thunderclap": {
-                "order": 3,
-                "tracking": {
-                  "3": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Wolf Scouts—Bolt pistol"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Wolf Scouts—Thunderclap"
-                  },
-                  {
-                    "trait": "Melee Weapon§Wolf Scouts—Runic Stave"
-                  }
-                ]
-              },
-              "Instigator bolt carbine & Combat blade": {
-                "order": 4,
-                "tracking": {
-                  "4": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Wolf Scouts—Instigator Bolt Carbine"
-                  },
-                  {
-                    "trait": "Melee Weapon§Wolf Scouts—Combat blade"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Plasma pistol & Combat blade",
-            "visibility": "active"
           },
           "M": {
             "value": 8
@@ -13053,6 +12555,115 @@
           },
           "W": {
             "value": 2
+          },
+          "Loadout Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Plasma Pistol & Combat Knife": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Wolf Scouts—Plasma pistol"
+                  },
+                  {
+                    "trait": "Melee Weapon§Wolf Scouts—Combat knife"
+                  }
+                ],
+                "tracking": {
+                  "pp": 1
+                }
+              },
+              "Bolt Pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Wolf Scouts—Bolt pistol"
+                  }
+                ],
+                "tracking": {
+                  "swap": 1
+                }
+              },
+              "Runic Stave": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Wolf Scouts—Runic Stave"
+                  }
+                ],
+                "tracking": {
+                  "swap": 1
+                }
+              },
+              "Thunderclap": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Wolf Scouts—Thunderclap"
+                  }
+                ],
+                "tracking": {
+                  "swap": 1
+                }
+              },
+              "Instigator Bolt Carbine & Combat Knife": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Wolf Scouts—Instigator Bolt Carbine"
+                  },
+                  {
+                    "trait": "Melee Weapon§Wolf Scouts—Combat knife"
+                  }
+                ],
+                "tracking": {
+                  "inst": 1
+                }
+              },
+              "Plasma Gun & Combat Knife": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Wolf Scouts—Plasma gun"
+                  },
+                  {
+                    "trait": "Melee Weapon§Wolf Scouts—Combat knife"
+                  }
+                ],
+                "tracking": {
+                  "pg": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Plasma Pistol & Combat Knife",
+            "visibility": "active"
+          },
+          "Haywire Mine": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Haywire Mine"
+                  }
+                ],
+                "tracking": {
+                  "hm": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
           }
         }
       },
@@ -13251,6 +12862,30 @@
           },
           "W": {
             "value": 2
+          },
+          "Haywire Mine": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Haywire Mine"
+                  }
+                ],
+                "tracking": {
+                  "hm": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
           }
         }
       },
@@ -13921,7 +13556,6 @@
       "Model§Wulfen with Storm Shield": {
         "assets": {
           "traits": [
-            "Melee Weapon§Wulfen with Storm Shields—Wulfen hammer",
             "Wargear§Storm Shield",
             {
               "item": "Ability§Invulnerable",
@@ -13930,7 +13564,8 @@
                   "value": "4+"
                 }
               }
-            }
+            },
+            "Melee Weapon§Wulfen with Storm Shields—Thunder Hammer"
           ]
         },
         "stats": {
@@ -13957,26 +13592,26 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Death Totem": {
+              "Stormfrag Auto-launcher": {
                 "order": 0,
-                "traits": [
-                  {
-                    "trait": "Wargear§Death Totem"
-                  }
-                ]
-              },
-              "Stormfrag auto-launcher": {
-                "order": 1,
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Wulfen with Storm Shields—Stormfrag auto-launcher"
                   }
                 ]
+              },
+              "Death Totem": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Death Totem"
+                  }
+                ]
               }
             },
             "statType": "rank",
-            "value": "Death Totem",
-            "visibility": "normal"
+            "value": "Stormfrag Auto-launcher",
+            "visibility": "active"
           }
         }
       },
@@ -17610,61 +17245,6 @@
           }
         }
       },
-      "Ranged Weapon§Wolf Guard Battle Leader—Master-crafted bolt carbine": {
-        "aspects": {
-          "Label": "Master-crafted bolt carbine"
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Wolf Guard Battle Leader—Master-crafted heavy bolt pistol": {
-        "aspects": {
-          "Label": "Master-crafted heavy bolt pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
       "Ranged Weapon§Wolf Guard Battle Leader—Plasma pistol": {
         "aspects": {
           "Label": "Plasma pistol"
@@ -19213,36 +18793,6 @@
           }
         }
       },
-      "Ranged Weapon§Wolf Scouts—Astartes shotgun": {
-        "aspects": {
-          "Label": "Astartes shotgun"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Assault"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
       "Ranged Weapon§Wolf Scouts—Bolt pistol": {
         "aspects": {
           "Label": "Bolt pistol"
@@ -19270,148 +18820,6 @@
           },
           "S": {
             "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Wolf Scouts—Boltgun": {
-        "aspects": {
-          "Label": "Boltgun"
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Wolf Scouts—Heavy bolter": {
-        "aspects": {
-          "Label": "Heavy bolter"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Heavy",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Wolf Scouts—Missile launcher": {
-        "aspects": {
-          "Label": "Missile launcher"
-        },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Wolf Scouts—Missile launcher – frag",
-            "Ranged Weapon§Wolf Scouts—Missile launcher – krak"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Ranged Weapon§Wolf Scouts—Missile launcher – frag": {
-        "aspects": {
-          "Label": "Frag"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast",
-            "Ability§Heavy"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 48
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Wolf Scouts—Missile launcher – krak": {
-        "aspects": {
-          "Label": "Krak"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Heavy"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "format": "D6",
-            "value": 0
-          },
-          "Range": {
-            "value": 48
-          },
-          "S": {
-            "value": 9
           }
         }
       },
@@ -20354,17 +19762,6 @@
                     "trait": "Ranged Weapon§Venerable Dreadnought (SW)—Multi-melta"
                   }
                 ]
-              },
-              "Twin lascannon": {
-                "order": 4,
-                "tracking": {
-                  "special1": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Space Wolves Venerable Dreadnought—Twin lascannon"
-                  }
-                ]
               }
             },
             "statType": "rank",
@@ -20731,7 +20128,7 @@
         "text": "The bearer has a 4+ invulnerable save."
       },
       "Wargear§Death Totem": {
-        "text": "Each time the bearer makes a melee attack, re-roll a Hit roll of 1."
+        "text": "This unit’s melee attacks can re-roll hit rolls of 1."
       },
       "Wargear§Relic Shield": {
         "aspects": {
@@ -20739,7 +20136,7 @@
         }
       },
       "Wargear§Storm Shield": {
-        "text": "The bearer has a 4+ invulnerable save."
+        "text": "This model has a 4+ InSv."
       },
       "Wargear§Storm Shield - Battle Leader": {
         "aspects": {
@@ -21599,37 +20996,6 @@
           ]
         }
       },
-      "Melee Weapon§Wulfen with Storm Shields—Thunder Hammer – thunder hammer": {
-        "aspects": {
-          "Label": "Thunder Hammer"
-        },
-        "stats": {
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "A": {
-            "value": 2
-          },
-          "WS": {
-            "value": 3
-          },
-          "S": {
-            "value": 8
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 3
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Devastating Wounds"
-          ]
-        }
-      },
       "Melee Weapon§Wulfen with Storm Shields—Thunder Hammer – hunter": {
         "aspects": {
           "Label": "Thunder Hammer – Hunter"
@@ -21679,32 +21045,6 @@
       },
       "Ability§High Rune Priest (psyker level 3)": {
         "text": "**Murderous Hurricane (psychic level 1):** In your Movement phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:\n\n- On a 1, this unit is **battle-shocked**.\n- Select one **visible** enemy unit within 12\". That enemy unit cannot make **Snap shooting** attacks.\n\n**Storm Caller (psychic level 1):** When an enemy unit targets this unit, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:\n- On a 1, this unit is **battle-shocked**.\n- This unit has -3\" **detection range** until the end of the phase.\n\n**Tempest's Wrath (psychic level 1):** In your Shooting phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:\n\n- On a 1, this unit is **battle-shocked**.\n- Select one **visible** enemy unit within 18\". That enemy unit is **suppressed **until the start of your next turn:\n- While a unit is **suppressed**, that unit’s attacks have -1 to **hit rolls**."
-      },
-      "Melee Weapon§Wolf Scouts—Combat blade": {
-        "aspects": {
-          "Label": "Combat blade"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
       },
       "Melee Weapon§Wolf Scouts—Runic Stave": {
         "aspects": {
@@ -22326,58 +21666,6 @@
           }
         }
       },
-      "Melee Weapon§Wulfen with Storm Shields—Wulfen hammer": {
-        "aspects": {
-          "Label": "Wulfen hammer"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "monster"
-                },
-                "x": {
-                  "value": "3+"
-                }
-              }
-            },
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "vehicle"
-                },
-                "x": {
-                  "value": "3+"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Ranged Weapon§Wulfen with Storm Shields—Stormfrag auto-launcher": {
         "aspects": {
           "Label": "Stormfrag auto-launcher"
@@ -22714,6 +22002,9 @@
             "Ability§Devastating Wounds"
           ]
         }
+      },
+      "Wargear§Haywire Mine": {
+        "text": "In your Shooting phase, select up to one visible enemy unit within 6\" of this unit and roll one D6. On a 2+:\n\n- That enemy unit suffers D3 mortal wounds.\n\n- Or: If that enemy unit is a **VEHICLE** unit, that enemy unit suffers 2D3 **mortal wounds**."
       }
     },
     "gameModes": {},

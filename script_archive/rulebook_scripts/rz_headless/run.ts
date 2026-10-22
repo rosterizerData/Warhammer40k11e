@@ -22,7 +22,8 @@ function chain(b: any): any[] {
 }
 
 const [host, rosterPath] = process.argv.slice(2);
-const TRAITS = process.argv.includes('--traits'); // also list each asset's weapon/wargear traits
+const TRAITS = process.argv.includes('--traits');
+const STATS = process.argv.includes('--stats'); // also dump each asset's rank stats as the engine sees them // also list each asset's weapon/wargear traits
 const fixture = books[host];
 const imports = chain(fixture).map((b) => b.rulebook);
 const roster = JSON.parse(fs.readFileSync(rosterPath, 'utf8'));
@@ -46,6 +47,11 @@ const walk = (a: any, depth: number) => {
     if (s !== undefined) extra[n] = s.value;
   }
   console.log(`${'  '.repeat(depth)}${a.item}${a.quantity && a.quantity > 1 ? ' x' + a.quantity : ''} ${JSON.stringify(extra)}${errs.length ? '  ERRORS: ' + errs.join(' | ') : ''}`);
+  if (STATS) {
+    for (const [n, st] of Object.entries<any>(a.stats ?? {})) {
+      if (st?.ranks) console.log(`${'  '.repeat(depth)}  [${n}] value=${JSON.stringify(st.value)} processed=${JSON.stringify(st.processed?.rank)} ranks=${JSON.stringify(Object.keys(st.ranks))} traitsOfValue=${JSON.stringify(st.ranks?.[st.value]?.traits)}`);
+    }
+  }
   if (TRAITS) {
     const gear = (x: any): string[] => (x.assets?.traits ?? []).flatMap((t: any) =>
       /^(Ranged Weapon|Melee Weapon|Weapon|Wargear)§/.test(t.item) ? [t.item.split('—').pop()] : t.item?.startsWith('Model§') ? [`[${t.item}${t.quantity > 1 ? ' x' + t.quantity : ''}: ${gear(t).join(', ')}]`] : []);

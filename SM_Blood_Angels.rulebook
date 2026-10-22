@@ -1,6 +1,6 @@
 {
   "name": "Blood Angels 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -862,7 +862,7 @@
                 }
               }
             },
-            "Ranged Weapon§Commander Dante—Perdition",
+            "Ranged Weapon§Commander Dante—Perdition Pistol",
             "Melee Weapon§Commander Dante—The Axe Mortalis"
           ]
         },
@@ -1113,80 +1113,11 @@
           "M": {
             "value": 12
           },
-          "Melee Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Astartes chainsword": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Death Company Captain with Jump Pack—Astartes chainsword"
-                  }
-                ]
-              },
-              "Power fist": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Death Company Captain with Jump Pack—Power fist"
-                  }
-                ]
-              },
-              "Relic weapon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Death Company Captain with Jump Pack—Relic weapon"
-                  }
-                ]
-              }
-            },
-            "statOrder": 3,
-            "statType": "rank",
-            "value": "Astartes chainsword",
-            "visibility": "active"
-          },
           "OC": {
             "value": 1
           },
           "Points": {
             "value": 85
-          },
-          "Ranged Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Heavy bolt pistol": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Captain with Jump Pack—Heavy bolt pistol"
-                  }
-                ]
-              },
-              "Hand flamer": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Captain with Jump Pack—Hand flamer"
-                  }
-                ]
-              },
-              "Plasma pistol": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Captain with Jump Pack—Plasma pistol"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Heavy bolt pistol",
-            "visibility": "active"
           },
           "Sv": {
             "value": 3
@@ -1196,6 +1127,137 @@
           },
           "W": {
             "value": 5
+          },
+          "Loadout": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Heavy Bolt Pistol & Chainsword": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Captain with Jump Pack—Heavy bolt pistol"
+                  },
+                  {
+                    "trait": "Melee Weapon§Death Company Captain with Jump Pack—Chainsword"
+                  }
+                ]
+              },
+              "Heavy Bolt Pistol & Power Fist": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Captain with Jump Pack—Heavy bolt pistol"
+                  },
+                  {
+                    "trait": "Melee Weapon§Death Company Captain with Jump Pack—Power fist"
+                  }
+                ]
+              },
+              "Heavy Bolt Pistol & Relic Weapon": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Captain with Jump Pack—Heavy bolt pistol"
+                  },
+                  {
+                    "trait": "Melee Weapon§Death Company Captain with Jump Pack—Relic weapon"
+                  }
+                ]
+              },
+              "Hand Flamer & Chainsword": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Captain with Jump Pack—Hand flamer"
+                  },
+                  {
+                    "trait": "Melee Weapon§Death Company Captain with Jump Pack—Chainsword"
+                  }
+                ]
+              },
+              "Hand Flamer & Power Fist": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Captain with Jump Pack—Hand flamer"
+                  },
+                  {
+                    "trait": "Melee Weapon§Death Company Captain with Jump Pack—Power fist"
+                  }
+                ]
+              },
+              "Hand Flamer & Relic Weapon": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Captain with Jump Pack—Hand flamer"
+                  },
+                  {
+                    "trait": "Melee Weapon§Death Company Captain with Jump Pack—Relic weapon"
+                  }
+                ]
+              },
+              "Plasma Pistol & Chainsword": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Captain with Jump Pack—Plasma pistol"
+                  },
+                  {
+                    "trait": "Melee Weapon§Death Company Captain with Jump Pack—Chainsword"
+                  }
+                ]
+              },
+              "Plasma Pistol & Power Fist": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Captain with Jump Pack—Plasma pistol"
+                  },
+                  {
+                    "trait": "Melee Weapon§Death Company Captain with Jump Pack—Power fist"
+                  }
+                ]
+              },
+              "Plasma Pistol & Relic Weapon": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Captain with Jump Pack—Plasma pistol"
+                  },
+                  {
+                    "trait": "Melee Weapon§Death Company Captain with Jump Pack—Relic weapon"
+                  }
+                ]
+              },
+              "Thunder Hammer & Relic Shield": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Death Company Captain with Jump Pack—Thunder Hammer"
+                  },
+                  {
+                    "trait": "Wargear§Relic Shield"
+                  }
+                ]
+              },
+              "Chainsword & Relic Shield": {
+                "order": 10,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Death Company Captain with Jump Pack—Chainsword"
+                  },
+                  {
+                    "trait": "Wargear§Relic Shield"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolt Pistol & Chainsword",
+            "visibility": "active"
           }
         }
       },
@@ -1436,7 +1498,7 @@
             "Ability§Combat Doctrines",
             "Ability§Blood Chalice",
             "Ranged Weapon§Sanguinary Priest—Absolvor bolt pistol",
-            "Melee Weapon§Sanguinary Priest—Astartes chainsword",
+            "Melee Weapon§Sanguinary Priest—Chainsword",
             "Ability§Narthecium (Sanguinary Priest)"
           ]
         },
@@ -2688,6 +2750,60 @@
             ],
             "evaluate": "AND",
             "failState": "error"
+          },
+          "Maximum 1 Grenade Launcher for every 5 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "gl"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "A Grenade Launcher needs a Bolt Rifle": {
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{self}",
+                    "tracked",
+                    "rifle"
+                  ]
+                },
+                "max": 0,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "gl"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
@@ -3137,7 +3253,7 @@
           ]
         },
         "rules": {
-          "1 in 5 can have Eviscerators": {
+          "Maximum 1 Eviscerator for every 5 models": {
             "evals": [
               {
                 "actionable": true,
@@ -3164,7 +3280,7 @@
             "evaluate": "AND",
             "failState": "error"
           },
-          "1 in 5 can have Unique loadouts": {
+          "Maximum 1 Power Fist for every 5 models": {
             "evals": [
               {
                 "actionable": true,
@@ -3183,7 +3299,7 @@
                   [
                     "{self}",
                     "tracked",
-                    "unique"
+                    "fist"
                   ]
                 ]
               }
@@ -3191,26 +3307,7 @@
             "evaluate": "AND",
             "failState": "error"
           },
-          "Only one Power weapon.": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "power"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          },
-          "Outside of unique loadouts, 1 in 5 can have Plasma pistols": {
+          "Up to 2 Power Weapons for every 5 models": {
             "evals": [
               {
                 "actionable": true,
@@ -3229,7 +3326,88 @@
                   [
                     "{self}",
                     "tracked",
-                    "plasma"
+                    "pw"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Maximum 1 Hand Flamer for every 5 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "hf"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Maximum 1 Inferno Pistol for every 5 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "inf"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Up to 2 Plasma Pistols for every 5 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "pl"
                   ]
                 ]
               }
@@ -3350,25 +3528,6 @@
                     "{self}",
                     "tracked",
                     "inferno"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          },
-          "Maximum 1 Banner": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "flag"
                   ]
                 ]
               }
@@ -3675,32 +3834,6 @@
           },
           "S": {
             "value": 8
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Death Company Captain with Jump Pack—Astartes chainsword": {
-        "aspects": {
-          "Label": "Astartes chainsword"
-        },
-        "stats": {
-          "A": {
-            "value": 7
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
           },
           "WS": {
             "value": 2
@@ -4508,58 +4641,6 @@
           }
         }
       },
-      "Melee Weapon§Death Company Marines with Jump Packs—Astartes chainsword": {
-        "aspects": {
-          "Label": "Astartes chainsword"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Death Company Marines with Jump Packs—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§Death Company Marines with Jump Packs—Eviscerator": {
         "aspects": {
           "Label": "Eviscerator"
@@ -4644,89 +4725,6 @@
           },
           "S": {
             "value": 5
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Death Company Marines with Jump Packs—Thunder hammer": {
-        "aspects": {
-          "Label": "Thunder hammer"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Devestating Wounds"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
-          },
-          "WS": {
-            "value": 4
-          }
-        }
-      },
-      "Melee Weapon§Death Company Marines—Astartes chainsword": {
-        "aspects": {
-          "Label": "Astartes chainsword"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Death Company Marines—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
           },
           "WS": {
             "value": 3
@@ -5078,63 +5076,6 @@
           }
         }
       },
-      "Melee Weapon§Sanguinary Guard—Encarmine blade": {
-        "aspects": {
-          "Label": "Encarmine blade"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Sanguinary Guard—Encarmine spear": {
-        "aspects": {
-          "Label": "Encarmine spear"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lance"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Sanguinary Priest on Bike—Astartes chainsword": {
         "aspects": {
           "Label": "Astartes chainsword"
@@ -5270,32 +5211,6 @@
           }
         }
       },
-      "Melee Weapon§Sanguinary Priest—Astartes chainsword": {
-        "aspects": {
-          "Label": "Astartes chainsword"
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§The Sanguinor—Encarmine broadsword": {
         "aspects": {
           "Label": "Encarmine broadsword"
@@ -5361,123 +5276,8 @@
           "M": {
             "value": 6
           },
-          "Melee Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Astartes chainsword": {
-                "order": 0,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Death Company Marines—Astartes chainsword"
-                  }
-                ]
-              },
-              "Power fist": {
-                "order": 1,
-                "tracking": {
-                  "special2": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Death Company Marines—Power fist"
-                  }
-                ]
-              },
-              "Power weapon": {
-                "order": 2,
-                "tracking": {
-                  "special2": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Death Company Marines—Power weapon"
-                  }
-                ]
-              },
-              "Thunder hammer": {
-                "order": 3,
-                "tracking": {
-                  "special2": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Death Company Marines—Thunder hammer"
-                  }
-                ]
-              },
-              "Eviscerator": {
-                "order": 4,
-                "tracking": {
-                  "evisce": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Death Company Marines—Eviscerator"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Astartes chainsword",
-            "visibility": "normal"
-          },
           "OC": {
             "value": 1
-          },
-          "Ranged Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Heavy bolt pistol": {
-                "order": 0,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines—Heavy bolt pistol"
-                  }
-                ]
-              },
-              "Hand flamer": {
-                "order": 1,
-                "tracking": {
-                  "special1": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines—Hand flamer"
-                  }
-                ]
-              },
-              "Inferno pistol": {
-                "order": 2,
-                "tracking": {
-                  "special1": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines—Inferno pistol"
-                  }
-                ]
-              },
-              "Plasma pistol": {
-                "order": 3,
-                "tracking": {
-                  "special1": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines—Plasma pistol"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Heavy bolt pistol",
-            "visibility": "active"
           },
           "Sv": {
             "value": 3
@@ -5487,6 +5287,157 @@
           },
           "W": {
             "value": 2
+          },
+          "Melee Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Chainsword": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Death Company Marines—Chainsword"
+                  }
+                ]
+              },
+              "Bolt Rifle & Combat Blade": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Marines—Bolt Rifle"
+                  },
+                  {
+                    "trait": "Melee Weapon§Death Company Marines—Combat Blade"
+                  }
+                ],
+                "tracking": {
+                  "rifle": 1
+                }
+              },
+              "Eviscerator": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Death Company Marines—Eviscerator"
+                  }
+                ],
+                "tracking": {
+                  "evisce": 1
+                }
+              },
+              "Power Fist": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Death Company Marines—Power fist"
+                  }
+                ],
+                "tracking": {
+                  "special2": 1
+                }
+              },
+              "Power Weapon": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Death Company Marines—Power weapon"
+                  }
+                ],
+                "tracking": {
+                  "special2": 1
+                }
+              },
+              "Thunder Hammer": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Death Company Marines—Thunder hammer"
+                  }
+                ],
+                "tracking": {
+                  "special2": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Chainsword",
+            "visibility": "active"
+          },
+          "Ranged Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Heavy Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Marines—Heavy bolt pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Marines—Hand flamer"
+                  }
+                ],
+                "tracking": {
+                  "special1": 1
+                }
+              },
+              "Inferno Pistol": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Marines—Inferno pistol"
+                  }
+                ],
+                "tracking": {
+                  "special1": 1
+                }
+              },
+              "Plasma Pistol": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Marines—Plasma pistol"
+                  }
+                ],
+                "tracking": {
+                  "special1": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolt Pistol",
+            "visibility": "active"
+          },
+          "Grenade Launcher": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Marines—Grenade Launcher"
+                  }
+                ],
+                "tracking": {
+                  "gl": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
           }
         }
       },
@@ -5725,79 +5676,6 @@
         }
       },
       "Model§Death Company Marine with Jump Pack": {
-        "rules": {
-          "NoUnique": {
-            "actions": [
-              {
-                "actionType": "remove",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    [
-                      "Melee Options",
-                      "Ranged Options"
-                    ],
-                    "ranks"
-                  ]
-                ],
-                "value": "-"
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Unique Loadouts",
-                    "value"
-                  ]
-                ],
-                "value": "-"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 220
-          },
-          "Unique Loadouts can not take other options": {
-            "evals": [
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "special1"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "special2"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
         "stats": {
           "Ld": {
             "value": 6
@@ -5805,105 +5683,8 @@
           "M": {
             "value": 12
           },
-          "Melee Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Astartes chainsword": {
-                "order": 0,
-                "tracking": {
-                  "special2": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Astartes chainsword"
-                  }
-                ]
-              },
-              "-": {
-                "order": 1,
-                "tracking": {}
-              },
-              "Eviscerator": {
-                "order": 2,
-                "tracking": {
-                  "evis": 1,
-                  "special2": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Eviscerator"
-                  }
-                ]
-              },
-              "Power fist": {
-                "order": 3,
-                "tracking": {
-                  "power": 1,
-                  "special2": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Power fist"
-                  }
-                ]
-              },
-              "Power weapon": {
-                "order": 4,
-                "tracking": {
-                  "power": 1,
-                  "special2": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Power weapon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Astartes chainsword",
-            "visibility": "normal"
-          },
           "OC": {
             "value": 1
-          },
-          "Ranged Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Heavy bolt pistol": {
-                "order": 0,
-                "tracking": {
-                  "special1": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Heavy bolt pistol"
-                  }
-                ]
-              },
-              "-": {
-                "order": 1
-              },
-              "Plasma pistol": {
-                "order": 2,
-                "tracking": {
-                  "plasma": 1,
-                  "special1": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Plasma pistol"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Heavy bolt pistol",
-            "visibility": "active"
           },
           "Sv": {
             "value": 3
@@ -5911,197 +5692,110 @@
           "T": {
             "value": 5
           },
-          "Unique Loadouts": {
+          "W": {
+            "value": 2
+          },
+          "Melee Options": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "-": {
-                "order": 0
+              "Chainsword": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Chainsword"
+                  }
+                ]
               },
-              "Hand flamer & Chainsword": {
+              "Eviscerator": {
                 "order": 1,
-                "tracking": {
-                  "special1": 1,
-                  "special2": 1,
-                  "unique": 1
-                },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Hand flamer"
-                  },
-                  {
-                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Astartes chainsword"
+                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Eviscerator"
                   }
-                ]
+                ],
+                "tracking": {
+                  "evis": 1
+                }
               },
-              "Hand flamer & Power fist": {
+              "Power Fist": {
                 "order": 2,
-                "tracking": {
-                  "special1": 1,
-                  "special2": 1,
-                  "unique": 1
-                },
                 "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Hand flamer"
-                  },
                   {
                     "trait": "Melee Weapon§Death Company Marines with Jump Packs—Power fist"
                   }
-                ]
+                ],
+                "tracking": {
+                  "fist": 1
+                }
               },
-              "Hand flamer & Power weapon": {
+              "Power Weapon": {
                 "order": 3,
-                "tracking": {
-                  "special1": 1,
-                  "special2": 1,
-                  "unique": 1
-                },
                 "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Hand flamer"
-                  },
                   {
                     "trait": "Melee Weapon§Death Company Marines with Jump Packs—Power weapon"
                   }
-                ]
-              },
-              "Heavy bolt pistol & Power fist": {
-                "order": 4,
+                ],
                 "tracking": {
-                  "special1": 1,
-                  "special2": 1,
-                  "unique": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Heavy bolt pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Power fist"
-                  }
-                ]
-              },
-              "Heavy bolt pistol & Power weapon": {
-                "order": 5,
-                "tracking": {
-                  "special1": 1,
-                  "special2": 1,
-                  "unique": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Heavy bolt pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Power weapon"
-                  }
-                ]
-              },
-              "Inferno pistol & Chainsword": {
-                "order": 6,
-                "tracking": {
-                  "special1": 1,
-                  "special2": 1,
-                  "unique": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Inferno pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Astartes chainsword"
-                  }
-                ]
-              },
-              "Inferno pistol & Power fist": {
-                "order": 7,
-                "tracking": {
-                  "special1": 1,
-                  "special2": 1,
-                  "unique": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Inferno pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Power fist"
-                  }
-                ]
-              },
-              "Inferno pistol & Power weapon": {
-                "order": 8,
-                "tracking": {
-                  "special1": 1,
-                  "special2": 1,
-                  "unique": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Inferno pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Power weapon"
-                  }
-                ]
-              },
-              "Plasma pistol & Chainsword": {
-                "order": 9,
-                "tracking": {
-                  "special1": 1,
-                  "special2": 1,
-                  "unique": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Plasma pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Astartes chainsword"
-                  }
-                ]
-              },
-              "Plasma pistol & Power fist": {
-                "order": 10,
-                "tracking": {
-                  "special1": 1,
-                  "special2": 1,
-                  "unique": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Plasma pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Power fist"
-                  }
-                ]
-              },
-              "Plasma pistol & Power weapon": {
-                "order": 11,
-                "tracking": {
-                  "special1": 1,
-                  "special2": 1,
-                  "unique": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Plasma pistol"
-                  },
-                  {
-                    "trait": "Melee Weapon§Death Company Marines with Jump Packs—Power weapon"
-                  }
-                ]
+                  "pw": 0.5
+                }
               }
             },
             "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
+            "value": "Chainsword",
+            "visibility": "active"
           },
-          "W": {
-            "value": 2
+          "Ranged Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Heavy Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Heavy bolt pistol"
+                  }
+                ]
+              },
+              "Hand Flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Hand flamer"
+                  }
+                ],
+                "tracking": {
+                  "hf": 1
+                }
+              },
+              "Inferno Pistol": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Inferno pistol"
+                  }
+                ],
+                "tracking": {
+                  "inf": 1
+                }
+              },
+              "Plasma Pistol": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Death Company Marines with Jump Packs—Plasma pistol"
+                  }
+                ],
+                "tracking": {
+                  "pl": 0.5
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolt Pistol",
+            "visibility": "active"
           }
         }
       },
@@ -6638,88 +6332,8 @@
           "M": {
             "value": 12
           },
-          "Melee Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Encarmine Blade": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Sanguinary Guard—Encarmine blade"
-                  }
-                ]
-              },
-              "Encarmine Spear": {
-                "order": 1,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Sanguinary Guard—Encarmine spear"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Encarmine Blade",
-            "visibility": "normal"
-          },
           "OC": {
             "value": 2
-          },
-          "Ranged Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Angelus boltgun": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Sanguinary Guard—Angelus boltgun"
-                  }
-                ]
-              },
-              "Inferno pistol": {
-                "order": 1,
-                "tracking": {
-                  "inferno": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Sanguinary Guard—Inferno pistol"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Angelus boltgun",
-            "visibility": "active"
-          },
-          "Sanguinary Banner": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1,
-                "tracking": {
-                  "flag": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Sanguinary Banner"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
           },
           "Sv": {
             "value": 2
@@ -6729,6 +6343,35 @@
           },
           "W": {
             "value": 3
+          },
+          "Ranged Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Angelus Boltgun": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Sanguinary Guard—Angelus boltgun"
+                  }
+                ]
+              },
+              "Inferno Pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Sanguinary Guard—Inferno pistol"
+                  }
+                ],
+                "tracking": {
+                  "inferno": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "Angelus Boltgun",
+            "visibility": "active"
           }
         },
         "assets": {
@@ -6740,7 +6383,8 @@
                   "value": "4+"
                 }
               }
-            }
+            },
+            "Melee Weapon§Sanguinary Guard—Encarmine Weapon"
           ]
         }
       },
@@ -7345,53 +6989,6 @@
           },
           "S": {
             "value": 8
-          }
-        }
-      },
-      "Ranged Weapon§Commander Dante—Perdition": {
-        "aspects": {
-          "Label": "Perdition Pistol"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Melta",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            },
-            "Ability§Pistol",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "D3"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -4
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "format": "D6",
-            "value": 0
-          },
-          "Range": {
-            "value": 6
-          },
-          "S": {
-            "value": 9
           }
         }
       },
@@ -8556,31 +8153,6 @@
           }
         }
       },
-      "Ranged Weapon§Death Company Marines with Jump Packs—Boltgun": {
-        "aspects": {
-          "Label": "Boltgun"
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
       "Ranged Weapon§Death Company Marines with Jump Packs—Hand flamer": {
         "aspects": {
           "Label": "Hand flamer"
@@ -8757,61 +8329,6 @@
           },
           "S": {
             "value": 8
-          }
-        }
-      },
-      "Ranged Weapon§Death Company Marines—Bolt pistol": {
-        "aspects": {
-          "Label": "Bolt pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Death Company Marines—Boltgun": {
-        "aspects": {
-          "Label": "Boltgun"
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
           }
         }
       },
@@ -10930,9 +10447,6 @@
           }
         },
         "text": "The bearer loses the Smoke keyword, but add 2 to Charge rolls made for the bearer if one or more of the targets of that charge is a Monster or Vehicle unit."
-      },
-      "Wargear§Sanguinary Banner": {
-        "text": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
       },
       "Wargear§Smoke Launchers": {
         "aspects": {

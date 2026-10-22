@@ -1,6 +1,6 @@
 {
   "name": "Space Marines 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -73189,23 +73189,6 @@
         }
       },
       "Vehicle§Stormraven Gunship": {
-        "keywords": {
-          "Faction": [
-            "Adeptus Astartes"
-          ],
-          "Keywords": [
-            "Ravenwing"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines",
-            {
-              "item": "Ability§Transport",
-              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models and 1 Dreadnought model. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
-            }
-          ]
-        },
         "stats": {
           "Hurricane bolters": {
             "dynamic": true,
@@ -73239,7 +73222,7 @@
             "value": "0",
             "visibility": "active"
           },
-          "Loadout 1": {
+          "Loadout 1 (11e)": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
@@ -73271,9 +73254,10 @@
             },
             "statType": "rank",
             "value": "Twin Assault Cannon",
-            "visibility": "active"
+            "visibility": "active",
+            "label": "Loadout 1"
           },
-          "Loadout 2": {
+          "Loadout 2 (11e)": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
@@ -73305,8 +73289,26 @@
             },
             "statType": "rank",
             "value": "Typhoon Missile Launcher",
-            "visibility": "active"
+            "visibility": "active",
+            "label": "Loadout 2"
           }
+        },
+        "keywords": {
+          "Faction": [
+            "Adeptus Astartes"
+          ],
+          "Keywords": [
+            "Ravenwing"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Combat Doctrines",
+            {
+              "item": "Ability§Transport",
+              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models and 1 Dreadnought model. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
+            }
+          ]
         },
         "removed": {
           "stats": {
@@ -74047,29 +74049,6 @@
         "text": ""
       },
       "Vehicle§Venerable Dreadnought": {
-        "keywords": {
-          "Faction": [
-            "Adeptus Astartes"
-          ],
-          "Category": [
-            "Vehicle—Walker"
-          ],
-          "Source": [
-            "Legends"
-          ],
-          "Keywords": [
-            "Venerable",
-            "Dreadnought",
-            "Deathwing"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines",
-            "Ability§Wisdom of the Ancients (aura)",
-            "Melee Weapon§Venerable Dreadnought—Armoured feet"
-          ]
-        },
         "stats": {
           "M": {
             "value": 6
@@ -74199,6 +74178,29 @@
             "value": "Dreadnought Fist & Storm Bolter",
             "visibility": "active"
           }
+        },
+        "keywords": {
+          "Category": [
+            "Vehicle—Walker"
+          ],
+          "Faction": [
+            "Adeptus Astartes"
+          ],
+          "Source": [
+            "Legends"
+          ],
+          "Keywords": [
+            "Venerable",
+            "Dreadnought",
+            "Deathwing"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Combat Doctrines",
+            "Ability§Wisdom of the Ancients (aura)",
+            "Melee Weapon§Venerable Dreadnought—Armoured feet"
+          ]
         }
       },
       "Vehicle§Vindicator": {
@@ -75080,23 +75082,6 @@
         }
       },
       "Vehicle§Terrax-pattern Termite": {
-        "keywords": {
-          "Faction": [
-            "Adeptus Astartes"
-          ],
-          "Keywords": [
-            "Frame"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines",
-            {
-              "item": "Ability§Transport",
-              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Phobos, Gravis, Centurion, Terminator, Obliterator, Possessed or Tacticus models (excluding Tacticus Character models that began the battle attached to a non-Tacticus unit)."
-            }
-          ]
-        },
         "stats": {
           "Loadout": {
             "dynamic": true,
@@ -75141,6 +75126,23 @@
             "value": "2 Combi-weapon",
             "visibility": "active"
           }
+        },
+        "keywords": {
+          "Faction": [
+            "Adeptus Astartes"
+          ],
+          "Keywords": [
+            "Frame"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Combat Doctrines",
+            {
+              "item": "Ability§Transport",
+              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Phobos, Gravis, Centurion, Terminator, Obliterator, Possessed or Tacticus models (excluding Tacticus Character models that began the battle attached to a non-Tacticus unit)."
+            }
+          ]
         },
         "removed": {
           "text": ""
