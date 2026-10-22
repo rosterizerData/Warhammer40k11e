@@ -1,6 +1,6 @@
 {
   "name": "Deathwatch 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -371,7 +371,14 @@
         },
         "text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
       },
-      "Character§Kill Team Cassius": {},
+      "Character§Kill Team Cassius": {
+        "keywords": {
+          "Faction": [
+            "Adeptus Astartes",
+            "Deathwatch"
+          ]
+        }
+      },
       "Character§Watch Captain Artemis": {
         "aspects": {
           "Unique": true
