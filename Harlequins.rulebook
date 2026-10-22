@@ -1,6 +1,6 @@
 {
   "name": "Harlequins 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -712,37 +712,6 @@
           }
         }
       },
-      "Melee Weapon§Troupe—Aeldari power sword": {
-        "aspects": {
-          "Label": "Power sword"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Devastating Wounds"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§Troupe—Harlequin’s blade": {
         "aspects": {
           "Label": "Harlequin’s blade"
@@ -860,11 +829,11 @@
                   }
                 ]
               },
-              "Aeldari power sword": {
+              "Power sword": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Troupe—Aeldari power sword"
+                    "trait": "Melee Weapon§Troupe—Power sword"
                   }
                 ]
               }
@@ -3698,6 +3667,76 @@
           "M": {
             "value": 14
           },
+          "OC": {
+            "value": 2
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
+          "Ranged Loadout": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Twin Shuriken Catapult": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Corsair Cloud Dancer Band—Twin shuriken catapult"
+                  }
+                ]
+              },
+              "Dark Lance": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Corsair Cloud Dancer Band—Dark lance"
+                  }
+                ]
+              },
+              "Dissonance Cannon": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Corsair Cloud Dancer Band—Dissonance cannon"
+                  }
+                ]
+              },
+              "Scatter Laser": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Corsair Cloud Dancer Band—Scatter laser"
+                  }
+                ]
+              },
+              "Shuriken Cannon": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Corsair Cloud Dancer Band—Shuriken cannon"
+                  }
+                ]
+              },
+              "Splinter Cannon": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Corsair Cloud Dancer Band—Splinter cannon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Twin Shuriken Catapult",
+            "visibility": "active"
+          },
           "Melee Options": {
             "dynamic": true,
             "group": "Loadout",
@@ -3706,7 +3745,7 @@
               "-": {
                 "order": 0
               },
-              "Dissonance pistol": {
+              "Dissonance Pistol": {
                 "order": 1,
                 "traits": [
                   {
@@ -3714,7 +3753,7 @@
                   }
                 ]
               },
-              "Void sabre": {
+              "Void Sabre": {
                 "order": 2,
                 "traits": [
                   {
@@ -3726,76 +3765,6 @@
             "statType": "rank",
             "value": "-",
             "visibility": "active"
-          },
-          "OC": {
-            "value": 2
-          },
-          "Ranged Loadout": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Twin shuriken catapult": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Corsair Cloud Dancer Band—Twin shuriken catapult"
-                  }
-                ]
-              },
-              "Dark lance": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Corsair Cloud Dancer Band—Dark lance"
-                  }
-                ]
-              },
-              "Dissonance cannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Corsair Cloud Dancer Band—Dissonance cannon"
-                  }
-                ]
-              },
-              "Scatter laser": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Corsair Cloud Dancer Band—Scatter laser"
-                  }
-                ]
-              },
-              "Shuriken cannon": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Corsair Cloud Dancer Band—Shuriken cannon"
-                  }
-                ]
-              },
-              "Splinter cannon": {
-                "order": 5,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Corsair Cloud Dancer Band—Splinter cannon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Twin shuriken catapult",
-            "visibility": "active"
-          },
-          "Sv": {
-            "value": 3
-          },
-          "T": {
-            "value": 4
-          },
-          "W": {
-            "value": 2
           }
         }
       },
@@ -3810,12 +3779,21 @@
           "OC": {
             "value": 2
           },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          },
           "Ranged Loadout": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Twin shuriken catapult": {
+              "Twin Shuriken Catapult": {
                 "order": 0,
                 "traits": [
                   {
@@ -3823,7 +3801,7 @@
                   }
                 ]
               },
-              "Dark lance": {
+              "Dark Lance": {
                 "order": 1,
                 "traits": [
                   {
@@ -3831,7 +3809,7 @@
                   }
                 ]
               },
-              "Dissonance cannon": {
+              "Dissonance Cannon": {
                 "order": 2,
                 "traits": [
                   {
@@ -3839,7 +3817,7 @@
                   }
                 ]
               },
-              "Scatter laser": {
+              "Scatter Laser": {
                 "order": 3,
                 "traits": [
                   {
@@ -3847,7 +3825,7 @@
                   }
                 ]
               },
-              "Shuriken cannon": {
+              "Shuriken Cannon": {
                 "order": 4,
                 "traits": [
                   {
@@ -3855,7 +3833,7 @@
                   }
                 ]
               },
-              "Splinter cannon": {
+              "Splinter Cannon": {
                 "order": 5,
                 "traits": [
                   {
@@ -3865,18 +3843,15 @@
               }
             },
             "statType": "rank",
-            "value": "Twin shuriken catapult",
+            "value": "Twin Shuriken Catapult",
             "visibility": "active"
-          },
-          "Sv": {
-            "value": 3
-          },
-          "T": {
-            "value": 4
-          },
-          "W": {
-            "value": 2
           }
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Corsair Cloud Dancer Band—Brace of pistols",
+            "Melee Weapon§Corsair Cloud Dancer Band—Close combat weapon"
+          ]
         }
       },
       "Ranged Weapon§Corsair Cloud Dancer Band—Brace of pistols": {
@@ -4304,22 +4279,6 @@
                   }
                 ]
               },
-              "Shardcarbine": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Corsair Reaver Band—Shardcarbine"
-                  }
-                ]
-              },
-              "Shuriken catapult": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Corsair Reaver Band—Shuriken catapult"
-                  }
-                ]
-              },
               "Spar-glaive": {
                 "order": 3,
                 "traits": [
@@ -4459,22 +4418,6 @@
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Corsair Reaver Band—Corsair firearm"
-                  }
-                ]
-              },
-              "Shardcarbine": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Corsair Reaver Band—Shardcarbine"
-                  }
-                ]
-              },
-              "Shuriken catapult": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Corsair Reaver Band—Shuriken catapult"
                   }
                 ]
               },

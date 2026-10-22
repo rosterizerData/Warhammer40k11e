@@ -1,6 +1,6 @@
 {
   "name": "Aeldari 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -3138,6 +3138,7 @@
                 }
               }
             },
+            "Melee Weapon§Autarch Skyrunner—Close combat weapon",
             "Ranged Weapon§Autarch Skyrunner—Twin shuriken catapult"
           ]
         },
@@ -3167,40 +3168,6 @@
           "M": {
             "value": 14
           },
-          "Main": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Laser lance": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Weapon§Autarch Skyrunner—Laser lance"
-                  }
-                ]
-              },
-              "Dragon fusion gun": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Autarch Skyrunner—Dragon fusion gun"
-                  }
-                ]
-              },
-              "Banshee blade": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Autarch Skyrunner—Banshee blade"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Laser lance",
-            "visibility": "active"
-          },
           "OC": {
             "value": 2
           },
@@ -3215,6 +3182,40 @@
           },
           "W": {
             "value": 5
+          },
+          "Main": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Laser Lance": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Weapon§Autarch Skyrunner—Laser lance"
+                  }
+                ]
+              },
+              "Dragon Fusion Gun": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Autarch Skyrunner—Dragon fusion gun"
+                  }
+                ]
+              },
+              "Banshee Blade": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Autarch Skyrunner—Banshee blade"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Laser Lance",
+            "visibility": "active"
           }
         }
       },
@@ -3403,8 +3404,8 @@
                 }
               }
             },
-            "Ranged Weapon§Avatar of Khaine—Wailing Doom",
-            "Melee Weapon§Avatar of Khaine—Wailing Doom"
+            "Ranged Weapon§Avatar of Khaine—The Wailing Doom",
+            "Melee Weapon§Avatar of Khaine—The Wailing Doom"
           ]
         },
         "keywords": {
@@ -4390,11 +4391,11 @@
       },
       "Character§Prince Yriel": {
         "keywords": {
-          "Source": [
-            "10th Edition Codex"
-          ],
           "Faction": [
             "Asuryani"
+          ],
+          "Source": [
+            "10th Edition Codex"
           ]
         },
         "assets": {
@@ -4403,8 +4404,8 @@
               "item": "Ability§Leader",
               "text": "This model can be attached to the following units:\n\n* Corsair Reaver Band\n\n* Corsair Voidreavers\n\n* Corsair Voidscarred"
             },
-            "Ranged Weapon§Prince Yriel—The Eye of Wrath",
-            "Melee Weapon§Prince Yriel—The Spear of Twilight"
+            "Ranged Weapon§Prince Yriel—Eye of Wrath",
+            "Melee Weapon§Prince Yriel—Spear of Twilight"
           ]
         },
         "aspects": {
@@ -9823,75 +9824,6 @@
           }
         }
       },
-      "Melee Weapon§Avatar of Khaine—Wailing Doom": {
-        "aspects": {
-          "Label": "Wailing Doom"
-        },
-        "assets": {
-          "traits": [
-            "Melee Weapon§Avatar of Khaine—Wailing Doom – strike",
-            "Melee Weapon§Avatar of Khaine—Wailing Doom – sweep"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Melee Weapon§Avatar of Khaine—Wailing Doom – strike": {
-        "aspects": {
-          "Label": "Strike"
-        },
-        "stats": {
-          "A": {
-            "value": 6
-          },
-          "AP": {
-            "value": -4
-          },
-          "D": {
-            "format": "D6",
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 16
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Avatar of Khaine—Wailing Doom – sweep": {
-        "aspects": {
-          "Label": "Sweep"
-        },
-        "stats": {
-          "A": {
-            "value": 12
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Baharroth—Shining Blade": {
         "aspects": {
           "Label": "Shining Blade"
@@ -11882,32 +11814,6 @@
           },
           "WS": {
             "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Storm Guardians—Guardian combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 3
-          },
-          "WS": {
-            "value": 3
           }
         }
       },
@@ -15379,7 +15285,7 @@
       "Model§Ranger": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Rangers—Ranger long rifle",
+            "Ranged Weapon§Rangers—Long rifle",
             "Ranged Weapon§Rangers—Shuriken pistol",
             "Melee Weapon§Rangers—Close combat weapon"
           ]
@@ -15512,7 +15418,7 @@
       "Model§Serpent’s Scale Platform": {
         "assets": {
           "traits": [
-            "Melee Weapon§Storm Guardians—Guardian combat weapon",
+            "Melee Weapon§Storm Guardians—Close combat weapon",
             "Wargear§Serpent Shield"
           ]
         },
@@ -15896,7 +15802,7 @@
       "Model§Shroud Runner": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Shroud Runners—Ranger long rifle",
+            "Ranged Weapon§Shroud Runners—Long rifle",
             "Ranged Weapon§Shroud Runners—Scatter laser",
             "Ranged Weapon§Shroud Runners—Shuriken pistol",
             "Melee Weapon§Shroud Runners—Close combat weapon"
@@ -15940,7 +15846,7 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Storm Guardians—Guardian combat weapon"
+                    "trait": "Melee Weapon§Storm Guardians—Close combat weapon"
                   }
                 ]
               },
@@ -15985,7 +15891,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Storm Guardians—Guardian fusion gun"
+                    "trait": "Ranged Weapon§Storm Guardians—Fusion gun"
                   }
                 ]
               }
@@ -17933,44 +17839,6 @@
           },
           "S": {
             "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Avatar of Khaine—Wailing Doom": {
-        "aspects": {
-          "Label": "Wailing Doom"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "D3"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -4
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "format": "D6",
-            "value": 2
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 16
           }
         }
       },
@@ -21365,37 +21233,6 @@
           }
         }
       },
-      "Ranged Weapon§Rangers—Ranger long rifle": {
-        "aspects": {
-          "Label": "Ranger long rifle"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Heavy",
-            "Ability§Precision"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
       "Ranged Weapon§Rangers—Shuriken pistol": {
         "aspects": {
           "Label": "Shuriken pistol"
@@ -22105,36 +21942,6 @@
           }
         }
       },
-      "Ranged Weapon§Shroud Runners—Ranger long rifle": {
-        "aspects": {
-          "Label": "Ranger long rifle"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Precision"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
       "Ranged Weapon§Shroud Runners—Scatter laser": {
         "aspects": {
           "Label": "Scatter laser"
@@ -22384,45 +22191,6 @@
           },
           "S": {
             "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Storm Guardians—Guardian fusion gun": {
-        "aspects": {
-          "Label": "Fusion gun"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Assault",
-            {
-              "item": "Ability§Melta",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -4
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "format": "D6",
-            "value": 0
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 8
           }
         }
       },
@@ -27004,6 +26772,9 @@
         "keywords": {
           "Faction": [
             "Asuryani"
+          ],
+          "Source": [
+            "10th Edition Codex"
           ]
         },
         "assets": {
@@ -27071,9 +26842,24 @@
             "Model§Corsair Cloud Dancers",
             "Character§Autarch Skyrunner"
           ]
+        },
+        "removed": {
+          "keywords": {
+            "Source": [
+              "Legends"
+            ]
+          }
         }
       },
       "Unit§Corsair Reaver Band": {
+        "keywords": {
+          "Faction": [
+            "Asuryani"
+          ],
+          "Source": [
+            "10th Edition Codex"
+          ]
+        },
         "rules": {
           "Maximum 1 Special Weapon for every 5 models": {
             "evals": [
@@ -27118,21 +26904,6 @@
             "evaluate": "AND",
             "failState": "error"
           }
-        },
-        "allowed": {
-          "items": [
-            "Model§Corsair Reaver Felarch",
-            "Model§Corsair Reavers",
-            "Character§Yvraine",
-            "Character§The Visarch",
-            "Character§Prince Yriel",
-            "Character§Kharseth"
-          ]
-        },
-        "keywords": {
-          "Faction": [
-            "Asuryani"
-          ]
         },
         "assets": {
           "traits": [
@@ -27191,6 +26962,23 @@
             "min": 5,
             "value": 5,
             "visibility": "normal"
+          }
+        },
+        "allowed": {
+          "items": [
+            "Model§Corsair Reaver Felarch",
+            "Model§Corsair Reavers",
+            "Character§Yvraine",
+            "Character§The Visarch",
+            "Character§Prince Yriel",
+            "Character§Kharseth"
+          ]
+        },
+        "removed": {
+          "keywords": {
+            "Source": [
+              "Legends"
+            ]
           }
         }
       },
@@ -34530,32 +34318,6 @@
           ]
         },
         "stats": {
-          "Cannon Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Splinter cannon": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Ynnari Venom—Splinter cannon"
-                  }
-                ]
-              },
-              "Twin splinter rifle": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Ynnari Venom—Twin splinter rifle"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Splinter cannon",
-            "visibility": "active"
-          },
           "Ld": {
             "value": 6
           },
@@ -34582,6 +34344,32 @@
           },
           "unitDiscountThreshold": {
             "value": 4
+          },
+          "Cannon Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Twin Splinter Rifle": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Ynnari Venom—Twin splinter rifle"
+                  }
+                ]
+              },
+              "Splinter Cannon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Ynnari Venom—Splinter cannon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Twin Splinter Rifle",
+            "visibility": "active"
           }
         }
       },
@@ -35267,44 +35055,6 @@
             "evaluate": "AND",
             "failState": "error"
           }
-        }
-      },
-      "Ranged Weapon§Avatar of Khaine—The Wailing Doom – Ranged": {
-        "aspects": {
-          "Label": "The Wailing Doom – Ranged"
-        },
-        "stats": {
-          "Range": {
-            "value": 12
-          },
-          "A": {
-            "value": 1
-          },
-          "BS": {
-            "value": 2
-          },
-          "S": {
-            "value": 16
-          },
-          "AP": {
-            "value": -4
-          },
-          "D": {
-            "format": "D6",
-            "value": 2
-          }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "D3"
-                }
-              }
-            }
-          ]
         }
       },
       "Melee Weapon§Avatar of Khaine—The Wailing Doom – sweep": {
@@ -36684,24 +36434,6 @@
           ]
         },
         "stats": {
-          "M": {
-            "value": 10
-          },
-          "T": {
-            "value": 5
-          },
-          "Sv": {
-            "value": 4
-          },
-          "W": {
-            "value": 4
-          },
-          "Ld": {
-            "value": 7
-          },
-          "OC": {
-            "value": 2
-          },
           "Points": {
             "value": 95
           },
@@ -36710,6 +36442,35 @@
           },
           "unitDiscountThreshold": {
             "value": 3
+          },
+          "model1stTally": {
+            "value": 3
+          },
+          "model2ndCost": {
+            "value": 190
+          },
+          "model2ndTally": {
+            "value": 6
+          },
+          "modelKey": {
+            "value": "Model§Dragon Knight"
+          },
+          "Models": {
+            "increment": {
+              "value": 3
+            },
+            "max": 6,
+            "min": 3,
+            "value": 3,
+            "visibility": "normal"
+          },
+          "Dragon Knight": {
+            "max": 6,
+            "min": 3,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           }
         },
         "assets": {
@@ -36717,19 +36478,18 @@
             "Ability§Battle Focus",
             "Ability§On the Hunt",
             "Ability§Agile Reach",
-            "Melee Weapon§Dragon Knights—Drakesteed Fangs and Talons",
-            "Ranged Weapon§Dragon Knights—Laser Lance",
-            "Ranged Weapon§Dragon Knights—Solar Carbine",
-            "Ability§Drakolithe"
+            "Ability§Drakolithe",
+            {
+              "item": "Model§Dragon Knight",
+              "quantity": 3
+            }
           ]
-        },
-        "aspects": {
-          "Type": "game piece"
         },
         "allowed": {
           "items": [
             "Character§Clanblade",
-            "Character§Stonesinger"
+            "Character§Stonesinger",
+            "Model§Dragon Knight"
           ]
         }
       },
@@ -39823,6 +39583,66 @@
           },
           "Points": {
             "value": 75
+          },
+          "Bright lance": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Bright Lance": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Vypers—Bright lance"
+                  }
+                ]
+              },
+              "Scatter Laser": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Vypers—Scatter laser"
+                  }
+                ]
+              },
+              "Starcannon": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Vypers—Starcannon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Bright Lance",
+            "visibility": "active"
+          },
+          "Shuriken cannon": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Shuriken Cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Vypers—Shuriken cannon"
+                  }
+                ]
+              },
+              "Missile Launcher": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Vypers—Missile launcher"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Shuriken Cannon",
+            "visibility": "active"
           }
         },
         "assets": {
@@ -39837,8 +39657,6 @@
             },
             "Ability§Battle Focus",
             "Ability§Harassment Fire",
-            "Ranged Weapon§Vypers—Shuriken cannon",
-            "Ranged Weapon§Vypers—Bright lance",
             "Melee Weapon§Vypers—Wraithbone hull"
           ]
         },
@@ -40061,6 +39879,36 @@
           "D": {
             "value": 1
           }
+        }
+      },
+      "Model§Dragon Knight": {
+        "stats": {
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 10
+          },
+          "OC": {
+            "value": 2
+          },
+          "Sv": {
+            "value": 4
+          },
+          "T": {
+            "value": 5
+          },
+          "W": {
+            "value": 4
+          }
+        },
+        "assets": {
+          "traits": [
+            "Melee Weapon§Dragon Knights—Drakesteed Fangs and Talons",
+            "Ranged Weapon§Dragon Knights—Laser Lance",
+            "Ranged Weapon§Dragon Knights—Solar Carbine",
+            "Melee Weapon§Dragon Knights—Laser Lance"
+          ]
         }
       }
     },

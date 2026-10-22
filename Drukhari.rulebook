@@ -1,6 +1,6 @@
 {
   "name": "Drukhari 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -819,7 +819,7 @@
                 }
               }
             },
-            "Melee Weapon§Drazhar—The Executioner’s demiklaives",
+            "Melee Weapon§Drazhar—Executioner’s demiklaives",
             "Ability§Master of Blades (Pain)",
             "Ability§Onslaught",
             "Ability§Silent Executioner"
@@ -4067,84 +4067,6 @@
           }
         }
       },
-      "Melee Weapon§Drazhar—The Executioner’s demiklaives": {
-        "aspects": {
-          "Label": "The Executioner’s demiklaives"
-        },
-        "assets": {
-          "traits": [
-            "Melee Weapon§Drazhar—The Executioner’s demiklaives – single blade",
-            "Melee Weapon§Drazhar—The Executioner’s demiklaives – dual blades"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Melee Weapon§Drazhar—The Executioner’s demiklaives – dual blades": {
-        "aspects": {
-          "Label": "Dual blades"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Devastating Wounds"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 8
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Drazhar—The Executioner’s demiklaives – single blade": {
-        "aspects": {
-          "Label": "Single blade"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Devastating Wounds"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 6
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Grotesques—Monstrous weapons": {
         "aspects": {
           "Label": "Monstrous weapons"
@@ -5438,47 +5360,6 @@
           }
         }
       },
-      "Melee Weapon§Wracks—Torturer's tool": {
-        "aspects": {
-          "Label": "Torturer's tool"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "infantry"
-                },
-                "x": {
-                  "value": "4+"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§Wracks—Twin torturer's tools": {
         "aspects": {
           "Label": "Twin torturer's tools"
@@ -5796,7 +5677,7 @@
                     "trait": "Melee Weapon§Wracks—Power weapon"
                   },
                   {
-                    "trait": "Melee Weapon§Wracks—Torturer's tool"
+                    "trait": "Melee Weapon§Wracks—Torturer’s tools"
                   }
                 ]
               }
@@ -5813,12 +5694,12 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Torturer's tool": {
+              "Torturer’s tools": {
                 "order": 0,
                 "tracking": {},
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Wracks—Torturer's tool"
+                    "trait": "Melee Weapon§Wracks—Torturer’s tools"
                   }
                 ]
               },
@@ -5836,7 +5717,7 @@
               }
             },
             "statType": "rank",
-            "value": "Torturer's tool",
+            "value": "Torturer’s tools",
             "visibility": "active"
           },
           "OC": {
@@ -7291,12 +7172,12 @@
                   }
                 ]
               },
-              "Drukhari haywire blaster": {
+              "Haywire blaster": {
                 "order": 3,
                 "tracking": {},
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scourges with Heavy Weapons—Drukhari haywire blaster"
+                    "trait": "Ranged Weapon§Scourges with Heavy Weapons—Haywire blaster"
                   }
                 ]
               },
@@ -7763,11 +7644,11 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Twin Drukhari haywire blaster": {
+              "Twin haywire blaster": {
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Talos—Twin Drukhari haywire blaster"
+                    "trait": "Ranged Weapon§Talos—Twin haywire blaster"
                   }
                 ]
               },
@@ -7881,7 +7762,7 @@
                     "trait": "Ranged Weapon§Wracks—Hexrifle"
                   },
                   {
-                    "trait": "Melee Weapon§Wracks—Torturer's tool"
+                    "trait": "Melee Weapon§Wracks—Torturer’s tools"
                   }
                 ]
               },
@@ -7895,7 +7776,7 @@
                     "trait": "Ranged Weapon§Wracks—Liquifier gun"
                   },
                   {
-                    "trait": "Melee Weapon§Wracks—Torturer's tool"
+                    "trait": "Melee Weapon§Wracks—Torturer’s tools"
                   }
                 ]
               },
@@ -7909,7 +7790,7 @@
                     "trait": "Ranged Weapon§Wracks—Ossefactor"
                   },
                   {
-                    "trait": "Melee Weapon§Wracks—Torturer's tool"
+                    "trait": "Melee Weapon§Wracks—Torturer’s tools"
                   }
                 ]
               },
@@ -7923,7 +7804,7 @@
                     "trait": "Ranged Weapon§Wracks—Stinger pistol"
                   },
                   {
-                    "trait": "Melee Weapon§Wracks—Torturer's tool"
+                    "trait": "Melee Weapon§Wracks—Torturer’s tools"
                   }
                 ]
               }
@@ -9310,31 +9191,6 @@
           }
         }
       },
-      "Ranged Weapon§Razorwing Jetfighter—Disintegrator": {
-        "aspects": {
-          "Label": "Disintegrator"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -3
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 6
-          }
-        }
-      },
       "Ranged Weapon§Razorwing Jetfighter—Razorwing missiles": {
         "aspects": {
           "Label": "Razorwing missiles"
@@ -9380,48 +9236,6 @@
           },
           "S": {
             "value": 6
-          }
-        }
-      },
-      "Ranged Weapon§Razorwing Jetfighter—Razorwing missiles – nuerotoxin missiles": {
-        "aspects": {
-          "Label": "Nuerotoxin missiles"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "infantry"
-                },
-                "x": {
-                  "value": "2+"
-                }
-              }
-            },
-            "Ability§Blast"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 3
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 48
-          },
-          "S": {
-            "value": 2
           }
         }
       },
@@ -10217,48 +10031,6 @@
           },
           "S": {
             "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Talos—Twin Drukhari haywire blaster": {
-        "aspects": {
-          "Label": "Twin Drukhari haywire blaster"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "vehicle"
-                },
-                "x": {
-                  "value": "4+"
-                }
-              }
-            },
-            "Ability§Devastating Wounds",
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 3
           }
         }
       },
@@ -12799,7 +12571,7 @@
               "item": "Ability§Transport",
               "text": "\n\nThis model has a transport capacity of 11 Drukhari Infantry models (excluding Jump Pack models)."
             },
-            "Melee Weapon§Raider—Bladevanes",
+            "Melee Weapon§Raider—Bladevanes and chainsnares",
             "Ability§Splinter Racks (Pain)",
             "Ability§Vanguard of the Dark City",
             "Ability§Masters of the Shadowed Sky",
@@ -13203,10 +12975,10 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Razorwing Jetfighter—Disintegrator"
+                    "trait": "Ranged Weapon§Razorwing Jetfighter—Disintegrator cannon"
                   },
                   {
-                    "trait": "Ranged Weapon§Razorwing Jetfighter—Disintegrator"
+                    "trait": "Ranged Weapon§Razorwing Jetfighter—Disintegrator cannon"
                   }
                 ]
               }
@@ -14027,9 +13799,9 @@
                 }
               }
             },
-            "Melee Weapon§Voidraven Bomber—Bladed wings",
             "Ability§Nowhere to Hide (Pain)",
-            "Ability§Void Mine"
+            "Ability§Void Mine",
+            "Melee Weapon§Voidraven Bomber—Bladed wings"
           ]
         },
         "keywords": {
@@ -14061,6 +13833,50 @@
           "OC": {
             "value": 0
           },
+          "Points": {
+            "value": 245
+          },
+          "Sv": {
+            "value": 4
+          },
+          "T": {
+            "value": 9
+          },
+          "W": {
+            "value": 12
+          },
+          "Ranged Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "2 Void Lance": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Voidraven Bomber—Void lance"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Voidraven Bomber—Void lance"
+                  }
+                ]
+              },
+              "2 Dark Scythe": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Voidraven Bomber—Dark scythe"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Voidraven Bomber—Dark scythe"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "2 Void Lance",
+            "visibility": "active"
+          },
           "Optional Voidraven missiles": {
             "dynamic": true,
             "group": "Loadout",
@@ -14080,51 +13896,7 @@
             },
             "statType": "rank",
             "value": "-",
-            "visibility": "normal"
-          },
-          "Points": {
-            "value": 245
-          },
-          "Ranged Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "2 Dark scythes": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Voidraven Bomber—Dark scythe"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Voidraven Bomber—Dark scythe"
-                  }
-                ]
-              },
-              "2 Void lances": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Voidraven Bomber—Void lance"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Voidraven Bomber—Void lance"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "2 Dark scythes",
             "visibility": "active"
-          },
-          "Sv": {
-            "value": 4
-          },
-          "T": {
-            "value": 9
-          },
-          "W": {
-            "value": 12
           }
         }
       },
@@ -14621,37 +14393,6 @@
           ]
         }
       },
-      "Melee Weapon§Drazhar—Executioner’s demiklaives – dual blade": {
-        "aspects": {
-          "Label": "Executioner’s demiklaives – Dual blade"
-        },
-        "stats": {
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "A": {
-            "value": 8
-          },
-          "WS": {
-            "value": 2
-          },
-          "S": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Devastating Wounds"
-          ]
-        }
-      },
       "Melee Weapon§Drazhar—Executioner’s demiklaives": {
         "aspects": {
           "Label": "Executioner’s demiklaives"
@@ -14693,48 +14434,6 @@
           "D": {
             "value": 1
           }
-        }
-      },
-      "Ranged Weapon§Razorwing Jetfighter—Razorwing missiles – necrotoxin missiles": {
-        "aspects": {
-          "Label": "Razorwing missiles – Necrotoxin missiles"
-        },
-        "stats": {
-          "Range": {
-            "value": 48
-          },
-          "A": {
-            "format": "D6",
-            "value": 3
-          },
-          "BS": {
-            "value": 3
-          },
-          "S": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast",
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "infantry"
-                },
-                "x": {
-                  "value": "2+"
-                }
-              }
-            }
-          ]
         }
       },
       "Ranged Weapon§Razorwing Jetfighter—Disintegrator cannon": {
@@ -14852,32 +14551,6 @@
           ]
         }
       },
-      "Melee Weapon§Talos—Maco-scalpel": {
-        "aspects": {
-          "Label": "Maco-scalpel"
-        },
-        "stats": {
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "A": {
-            "value": 5
-          },
-          "WS": {
-            "value": 3
-          },
-          "S": {
-            "value": 7
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Scourges with Heavy Weapons—Close combat weapon": {
         "aspects": {
           "Label": "Close combat weapon"
@@ -14966,48 +14639,6 @@
           },
           "Points": {
             "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Scourges with Heavy Weapons—Drukhari haywire blaster": {
-        "aspects": {
-          "Label": "Drukhari haywire blaster"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "vehicle"
-                },
-                "x": {
-                  "value": "4+"
-                }
-              }
-            },
-            "Ability§Devastating Wounds",
-            "Ability§Heavy"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 3
           }
         }
       },
@@ -15674,169 +15305,589 @@
         "text": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of that attack is within range of an objective marker, you can re-roll the Hit roll instead."
       },
       "Unit§Corsair Voidreavers": {
-        "aspects": {
-          "Type": "game piece"
+        "stats": {
+          "Corsair Voidreaver": {
+            "max": 9,
+            "min": 4,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "model1stTally": {
+            "value": 5
+          },
+          "model2ndCost": {
+            "value": 110
+          },
+          "model2ndTally": {
+            "value": 10
+          },
+          "modelKey": {
+            "value": "Model§Corsair Voidreaver"
+          },
+          "Models": {
+            "increment": {
+              "value": 5
+            },
+            "max": 10,
+            "min": 5,
+            "value": 5,
+            "visibility": "normal"
+          }
+        },
+        "assets": {
+          "traits": [
+            "Model§Voidreaver Felarch",
+            {
+              "item": "Model§Corsair Voidreaver",
+              "quantity": 4
+            }
+          ]
         },
         "keywords": {
+          "Faction": [
+            "Drukhari"
+          ],
           "Source": [
             "Legends"
           ],
           "Category": [
             "Infantry"
-          ],
-          "Faction": [
-            "Drukhari"
           ]
         },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Corsair Voidreavers—Shuriken pistol",
-            "Melee Weapon§Corsair Voidreavers—Power sword",
-            "Melee Weapon§Corsair Voidreavers—Close combat weapon"
-          ]
-        },
-        "stats": {
-          "M": {
-            "value": 7
+        "rules": {
+          "1 in 10 models can have a shuriken cannon or wraithcannon": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in10",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "cannon"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           },
-          "T": {
-            "value": 3
-          },
-          "Sv": {
-            "value": 4
-          },
-          "W": {
-            "value": 1
-          },
-          "Ld": {
-            "value": 7
-          },
-          "OC": {
-            "value": 2
+          "1 in 5 models can have a blaster or shredder": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "corsairWeapon"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
+        },
+        "allowed": {
+          "items": [
+            "Model§Corsair Voidreaver"
+          ]
         }
       },
       "Ability§Piratical Raiders": {
         "text": "At the start of the battle, select one unit from your opponent’s army. Weapons equipped by models in this unit have the [LETHAL HITS] and [PRECISION] abilities while targeting that unit."
       },
       "Unit§Corsair Voidscarred": {
-        "aspects": {
-          "Type": "game piece"
-        },
-        "keywords": {
-          "Source": [
-            "Legends"
-          ],
-          "Faction": [
-            "Drukhari"
-          ]
+        "stats": {
+          "Corsair Voidscarred": {
+            "max": 9,
+            "min": 4,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "model1stTally": {
+            "value": 5
+          },
+          "model2ndCost": {
+            "value": 140
+          },
+          "model2ndTally": {
+            "value": 10
+          },
+          "modelKey": {
+            "value": "Model§Corsair Voidscarred"
+          },
+          "Models": {
+            "increment": {
+              "value": 5
+            },
+            "max": 10,
+            "min": 5,
+            "value": 5,
+            "visibility": "normal"
+          },
+          "Shade Runner": {
+            "dynamic": true,
+            "group": "Loadout",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Model§Shade Runner"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "active"
+          },
+          "Soul Weaver": {
+            "dynamic": true,
+            "group": "Loadout",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Model§Soul Weaver"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "active"
+          },
+          "Way Seeker": {
+            "dynamic": true,
+            "group": "Loadout",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Model§Way Seeker"
+                  }
+                ]
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "active"
+          }
         },
         "assets": {
           "traits": [
-            "Ranged Weapon§Corsair Voidscarred—Shuriken pistol",
-            "Melee Weapon§Corsair Voidscarred—Power sword",
-            "Melee Weapon§Corsair Voidscarred—Close combat weapon"
+            "Model§Voidscarred Felarch",
+            {
+              "item": "Model§Corsair Voidscarred",
+              "quantity": 4
+            }
           ]
         },
-        "stats": {
-          "M": {
-            "value": 7
+        "keywords": {
+          "Faction": [
+            "Drukhari"
+          ],
+          "Source": [
+            "Legends"
+          ]
+        },
+        "rules": {
+          "1 in 10 models can have their power sword replaced with 1 Fusion pistol": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in10",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Fusion pistol"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           },
-          "T": {
-            "value": 3
+          "1 in 10 models can have their Shuriken rifle replaced with 1 Ranger long rifle": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in10",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Ranger long rifle"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           },
-          "Sv": {
-            "value": 4
+          "1 in 10 models can have their Shuriken rifle replaced with 1 Shuriken cannon or 1 Wraithcannon": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in10",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "cannon"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
           },
-          "W": {
-            "value": 1
+          "1 in 5 models can have their Shuriken rifle replaced with 1 blaster or shredder": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "corsairWeapon"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           },
-          "Ld": {
-            "value": 7
+          "1 model can be equipped with 1 Faolchú": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Faolchú"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           },
-          "OC": {
-            "value": 1
+          "This unit may only contain a maximum of 10 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 10,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Model"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
+        },
+        "allowed": {
+          "items": [
+            "Model§Corsair Voidscarred",
+            "Model§Shade Runner",
+            "Model§Soul Weaver",
+            "Model§Way Seeker"
+          ]
         }
       },
       "Ability§Reckless Abandon": {
         "text": "You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that **stratagem** this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that **stratagem** on other units this phase."
       },
       "Unit§Corsair Cloud Dancer Band": {
+        "stats": {
+          "Cloud Dancer Felarch": {
+            "max": 1,
+            "min": 0,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Corsair Cloud Dancers": {
+            "max": 6,
+            "min": 3,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "model1stTally": {
+            "value": 3
+          },
+          "model2ndCost": {
+            "value": 150
+          },
+          "model2ndTally": {
+            "value": 4
+          },
+          "model3rdCost": {
+            "value": 210
+          },
+          "model3rdTally": {
+            "value": 6
+          },
+          "model4thCost": {
+            "value": 245
+          },
+          "model4thTally": {
+            "value": 7
+          },
+          "modelKey": {
+            "value": "Model§Corsair Cloud Dancers"
+          },
+          "Models": {
+            "increment": {
+              "value": 1
+            },
+            "max": 7,
+            "min": 3,
+            "value": 3,
+            "visibility": "normal"
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Model§Corsair Cloud Dancers",
+              "quantity": 3
+            }
+          ]
+        },
         "keywords": {
           "Faction": [
             "Drukhari"
           ]
         },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Corsair Cloud Dancer Band—Brace of pistols",
-            "Ranged Weapon§Corsair Cloud Dancer Band—Twin shuriken catapult",
-            "Melee Weapon§Corsair Cloud Dancer Band—Close combat weapon"
+        "allowed": {
+          "items": [
+            "Model§Cloud Dancer Felarch",
+            "Model§Corsair Cloud Dancers"
           ]
-        },
-        "aspects": {
-          "Type": "game piece"
-        },
-        "stats": {
-          "M": {
-            "value": 14
-          },
-          "T": {
-            "value": 4
-          },
-          "Sv": {
-            "value": 3
-          },
-          "W": {
-            "value": 2
-          },
-          "Ld": {
-            "value": 6
-          },
-          "OC": {
-            "value": 2
-          }
         }
       },
       "Ability§Reaver Band": {
         "text": "In your opponent's Movement phase, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D6\"."
       },
       "Unit§Corsair Reaver Band": {
+        "stats": {
+          "Corsair Reaver Felarch": {
+            "max": 1,
+            "min": 0,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Corsair Reavers": {
+            "max": 10,
+            "min": 5,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "model1stTally": {
+            "value": 5
+          },
+          "model2ndCost": {
+            "value": 150
+          },
+          "model2ndTally": {
+            "value": 6
+          },
+          "model3rdCost": {
+            "value": 250
+          },
+          "model3rdTally": {
+            "value": 10
+          },
+          "model4thCost": {
+            "value": 275
+          },
+          "model4thTally": {
+            "value": 11
+          },
+          "modelKey": {
+            "value": "Model§Corsair Reavers"
+          },
+          "Models": {
+            "increment": {
+              "value": 1
+            },
+            "max": 11,
+            "min": 5,
+            "value": 5,
+            "visibility": "normal"
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Model§Corsair Reavers",
+              "quantity": 5
+            }
+          ]
+        },
         "keywords": {
           "Faction": [
             "Drukhari"
           ]
         },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Corsair Reaver Band—Brace of pistols",
-            "Ranged Weapon§Corsair Reaver Band—Corsair firearm",
-            "Melee Weapon§Corsair Reaver Band—Close combat weapon"
-          ]
-        },
-        "aspects": {
-          "Type": "game piece"
-        },
-        "stats": {
-          "M": {
-            "value": 7
-          },
-          "T": {
-            "value": 3
-          },
-          "Sv": {
-            "value": 5
-          },
-          "W": {
-            "value": 3
-          },
-          "Ld": {
-            "value": 6
-          },
-          "OC": {
-            "value": 2
+        "rules": {
+          "Maximum 1 Special Weapon for every 5 models": {
+            "evals": [
+              {
+                "actionable": false,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 5
+                },
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Model"
+                  ]
+                ]
+              },
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "Maximum 1 Special Weapon for every 5 models",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "special"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
+        },
+        "allowed": {
+          "items": [
+            "Model§Corsair Reaver Felarch",
+            "Model§Corsair Reavers",
+            "Character§Prince Yriel",
+            "Character§Kharseth"
+          ]
         }
       },
       "Ranged Weapon§Corsair Reaver Band—Aeldari missile launcher – sunburst": {
@@ -15902,42 +15953,206 @@
         "text": "At the end of the Fight phase, if this unit was eligible to fight this phase, and is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D3+3\". Otherwise, if this unit was eligible to fight this phase, this unit can make a Fall Back move of up to D3+3\"."
       },
       "Unit§Corsair Skyreavers": {
-        "keywords": {
-          "Source": [
-            "Legends"
-          ],
-          "Faction": [
-            "Drukhari"
-          ]
+        "stats": {
+          "model1stTally": {
+            "value": 5
+          },
+          "model2ndCost": {
+            "value": 140
+          },
+          "model2ndTally": {
+            "value": 10
+          },
+          "modelKey": {
+            "value": "Model§Skyreaver"
+          },
+          "Models": {
+            "increment": {
+              "value": 1
+            },
+            "max": 10,
+            "min": 5,
+            "value": 5,
+            "visibility": "normal"
+          },
+          "unitDiscount": {
+            "value": 0
+          },
+          "unitDiscountThreshold": {
+            "value": 0
+          }
         },
         "assets": {
           "traits": [
-            "Ranged Weapon§Corsair Skyreavers—Shuriken pistol",
-            "Melee Weapon§Corsair Skyreavers—Corsair blade"
+            "Model§Skyreaver Felarch",
+            {
+              "item": "Model§Skyreaver",
+              "quantity": 4
+            }
           ]
         },
-        "aspects": {
-          "Type": "game piece"
+        "keywords": {
+          "Faction": [
+            "Drukhari"
+          ],
+          "Source": [
+            "Legends"
+          ]
         },
-        "stats": {
-          "M": {
-            "value": 12
+        "rules": {
+          "1 in 5 can equip a Blaster": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "blast"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           },
-          "T": {
-            "value": 3
+          "1 in 5 can equip a Flamer": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "flame"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           },
-          "Sv": {
-            "value": 5
+          "1 in 5 can equip a Fusion gun": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "fusion"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           },
-          "W": {
-            "value": 1
+          "1 in 5 can equip a Shredder": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count1in5",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "shred"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           },
-          "Ld": {
-            "value": 7
-          },
-          "OC": {
-            "value": 1
+          "2 in 5 can have special weapons": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": [
+                  "{self}",
+                  "rules",
+                  "count2in5",
+                  "evals",
+                  "1",
+                  "result",
+                  "integer"
+                ],
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "special weapon"
+                  ]
+                ]
+              },
+              {
+                "actionable": false,
+                "min": 1,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "special weapon"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
           }
+        },
+        "allowed": {
+          "items": [
+            "Model§Skyreaver"
+          ]
         }
       },
       "Unit§Starfangs": {
