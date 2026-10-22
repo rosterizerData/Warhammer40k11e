@@ -1,7 +1,7 @@
 {
   "name": "Combat Patrol 11e",
-  "revision": "11.0.1",
-  "game": "Warhammer 40k",
+  "revision": "11.0.2",
+  "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com",
@@ -10,9 +10,9 @@
   "dependencies": [
     {
       "slug": "PCJ8SD",
-      "name": "40k",
-      "game": "Warhammer 40k 11e",
-      "source": "https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k11e/main/Warhammer_40k_11e.rulebook"
+      "name": "40k 11e",
+      "game": "Warhammer 40k 11th Edition",
+      "source": "https://raw.githubusercontent.com/RosterizerData/Warhammer40k11e/main/Warhammer_40k_11e.rulebook"
     }
   ],
   "rulebook": {

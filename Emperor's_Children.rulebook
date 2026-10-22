@@ -1,7 +1,7 @@
 {
   "name": "Emperor's Children 11e",
-  "revision": "11.1.15",
-  "game": "Warhammer 40k",
+  "revision": "11.1.16",
+  "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com",
@@ -10,9 +10,9 @@
   "dependencies": [
     {
       "slug": "",
-      "name": "Chaos",
-      "game": "Warhammer 40k 11e",
-      "source": "https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k11e/main/Chaos.rulebook"
+      "name": "Chaos 11e",
+      "game": "Warhammer 40k 11th Edition",
+      "source": "https://raw.githubusercontent.com/RosterizerData/Warhammer40k11e/main/Chaos.rulebook"
     }
   ],
   "rulebook": {

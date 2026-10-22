@@ -1,7 +1,7 @@
 {
   "name": "Genestealer Cults 11e",
-  "revision": "11.1.15",
-  "game": "Warhammer 40k",
+  "revision": "11.1.16",
+  "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
   "url": "https://warhammer40000.com",
@@ -10,15 +10,15 @@
   "dependencies": [
     {
       "slug": "3Y73N4",
-      "name": "Astra Militarum",
-      "game": "Warhammer 40k 11e",
-      "source": "https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k11e/main/Astra_Militarum.rulebook"
+      "name": "Astra Militarum 11e",
+      "game": "Warhammer 40k 11th Edition",
+      "source": "https://raw.githubusercontent.com/RosterizerData/Warhammer40k11e/main/Astra_Militarum.rulebook"
     },
     {
       "slug": "",
-      "name": "Tyranids",
-      "game": "Warhammer 40k 11e",
-      "source": "https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k11e/main/Tyranids.rulebook"
+      "name": "Tyranids 11e",
+      "game": "Warhammer 40k 11th Edition",
+      "source": "https://raw.githubusercontent.com/RosterizerData/Warhammer40k11e/main/Tyranids.rulebook"
     }
   ],
   "rulebook": {
