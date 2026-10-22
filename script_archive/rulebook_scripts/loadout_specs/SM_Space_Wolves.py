@@ -24,7 +24,11 @@ SPEC = {
         "Model§Wolf Scout": {"slots": {
             "Loadout Options": ["Plasma Pistol + Combat Knife @pp", "Bolt Pistol @swap", "Runic Stave @swap", "Thunderclap @swap",
                                 "Instigator Bolt Carbine + Combat Knife @inst", "Plasma Gun + Combat Knife @pg"],
-            "Haywire Mine": [("-", "-"), ("✓", "Haywire Mine @hm")]}},
+            "Haywire Mine": [("-", "-"), ("✓", "Haywire Mine @hm")]},
+            "rules": {"A Haywire Mine needs a Plasma Pistol": {"evals": [
+                {"actionable": True, "max": 0, "not": False, "operator": "AND", "paths": [["{self}", "tracked", "hm"]]},
+                {"actionable": True, "min": 1, "not": False, "operator": "AND", "paths": [["{self}", "tracked", "pp"]]}],
+                "evaluate": "OR", "failState": "error"}}},
         "Model§Wolf Scout Pack Leader": {"add_slots": {"Haywire Mine": [("-", "-"), ("✓", "Haywire Mine @hm")]}},
         "_drop_rules": ["Only one model can have a Haywire mine", "Only one model can have a plasma gun",
                         "Only one model can have a Runic Stave", "1 in 12 can have an Instigator Bolt Carbine"],

@@ -181,6 +181,8 @@ for uname, uspec in SPEC.items():
         for sn, labels in (hs.get("drop_ranks") or {}).items():
             for lb in labels:
                 if ((st.get(sn) or {}).get("ranks") or {}).pop(lb, None) is not None: log.append(f"{key}: dropped rank '{sn}/{lb}'")
+        if hs.get("rules"):
+            a.setdefault("rules", {}).update(hs["rules"])
         if a.get("rules") == {}:
             del a["rules"]
         for sn, ranks in (hs.get("add_slots") or {}).items():   # an extra option beside the existing loadout

@@ -1,6 +1,6 @@
 {
   "name": "Space Marines 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -73189,6 +73189,15 @@
         }
       },
       "Vehicle§Stormraven Gunship": {
+        "assets": {
+          "traits": [
+            "Ability§Combat Doctrines",
+            {
+              "item": "Ability§Transport",
+              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models and 1 Dreadnought model. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
+            }
+          ]
+        },
         "stats": {
           "Hurricane bolters": {
             "dynamic": true,
@@ -73299,15 +73308,6 @@
           ],
           "Keywords": [
             "Ravenwing"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines",
-            {
-              "item": "Ability§Transport",
-              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models and 1 Dreadnought model. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
-            }
           ]
         },
         "removed": {
@@ -73819,7 +73819,7 @@
             "value": 2
           }
         },
-        "text": "WARNING: loadout — Waha lists the default as a Hellstrike Missile Battery, but an option swaps Thunderhawk cluster bombs for one; the cluster-bombs default was left as it was. Check against the datasheet."
+        "text": "WARNING: loadout — Whether the default is a Hellstrike Missile Battery or Thunderhawk cluster bombs couldn’t be determined; cluster bombs are left as the default."
       },
       "Vehicle§Thunderhawk Transporter": {
         "assets": {
@@ -74049,6 +74049,13 @@
         "text": ""
       },
       "Vehicle§Venerable Dreadnought": {
+        "assets": {
+          "traits": [
+            "Ability§Combat Doctrines",
+            "Ability§Wisdom of the Ancients (aura)",
+            "Melee Weapon§Venerable Dreadnought—Armoured feet"
+          ]
+        },
         "stats": {
           "M": {
             "value": 6
@@ -74180,9 +74187,6 @@
           }
         },
         "keywords": {
-          "Category": [
-            "Vehicle—Walker"
-          ],
           "Faction": [
             "Adeptus Astartes"
           ],
@@ -74193,13 +74197,9 @@
             "Venerable",
             "Dreadnought",
             "Deathwing"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines",
-            "Ability§Wisdom of the Ancients (aura)",
-            "Melee Weapon§Venerable Dreadnought—Armoured feet"
+          ],
+          "Category": [
+            "Vehicle—Walker"
           ]
         }
       },
@@ -75082,6 +75082,15 @@
         }
       },
       "Vehicle§Terrax-pattern Termite": {
+        "assets": {
+          "traits": [
+            "Ability§Combat Doctrines",
+            {
+              "item": "Ability§Transport",
+              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Phobos, Gravis, Centurion, Terminator, Obliterator, Possessed or Tacticus models (excluding Tacticus Character models that began the battle attached to a non-Tacticus unit)."
+            }
+          ]
+        },
         "stats": {
           "Loadout": {
             "dynamic": true,
@@ -75133,15 +75142,6 @@
           ],
           "Keywords": [
             "Frame"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines",
-            {
-              "item": "Ability§Transport",
-              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Phobos, Gravis, Centurion, Terminator, Obliterator, Possessed or Tacticus models (excluding Tacticus Character models that began the battle attached to a non-Tacticus unit)."
-            }
           ]
         },
         "removed": {

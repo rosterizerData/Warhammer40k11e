@@ -170,7 +170,7 @@ SPEC = {
         "Hurricane bolters": [("0", "-"), ("1", "Hurricane Bolter"), ("2", "2x Hurricane Bolter")],
         "Loadout 1": ["Twin Assault Cannon", "Twin Heavy Plasma Cannon", "Twin Lascannon"],
         "Loadout 2": ["Typhoon Missile Launcher", "Twin Heavy Bolter", "Twin Multi-melta"]}}},
-    "Thunderhawk Gunship": {"_warning": "Waha lists the default as a Hellstrike Missile Battery, but an option swaps Thunderhawk cluster bombs for one; the cluster-bombs default was left as it was. Check against the datasheet."},
+    "Thunderhawk Gunship": {"_warning": "Whether the default is a Hellstrike Missile Battery or Thunderhawk cluster bombs couldn’t be determined; cluster bombs are left as the default."},
 
 }
 

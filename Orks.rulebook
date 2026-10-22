@@ -1,6 +1,6 @@
 {
   "name": "Orks 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -19780,7 +19780,7 @@
             "visibility": "active"
           }
         },
-        "text": "WARNING: loadout — “can be equipped with up to 3 Big Shootas” is read as up to 3 in addition to its default Big Shoota; check against the datasheet."
+        "text": "WARNING: loadout — Whether “up to 3 Big Shootas” counts its default Big Shoota couldn’t be determined; up to 3 more are allowed."
       },
       "Unit§Blitza-bommer": {
         "aspects": {
@@ -22449,7 +22449,7 @@
             "visibility": "active"
           }
         },
-        "text": "WARNING: loadout — Waha lists the default as “1 Kannon - Shell”; modelled as a full Kannon (both profiles) plus the optional extra Kannon/Supa-kannon; check against the datasheet."
+        "text": "WARNING: loadout — Whether the default Kannon has both profiles couldn’t be determined; it is modelled as a full Kannon, plus the optional extra Kannon or Supa-kannon."
       },
       "Unit§Gorkanaut": {
         "aspects": {
@@ -24011,7 +24011,7 @@
             "failState": "error"
           }
         },
-        "text": "WARNING: loadout — “three of the following: Kannon, Lobba, Zzap Gun” is read as allowing the same weapon more than once; check against the datasheet."
+        "text": "WARNING: loadout — Whether “three of the following: Kannon, Lobba, Zzap Gun” allows the same weapon more than once couldn’t be determined; it is allowed."
       },
       "Unit§Killa Kans": {
         "allowed": {

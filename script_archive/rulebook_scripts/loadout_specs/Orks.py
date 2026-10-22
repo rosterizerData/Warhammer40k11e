@@ -220,7 +220,7 @@ SPEC = {
         "Ranged Options": ["-", "Big Shoota + Rokkit Launcha", "2x Big Shoota", "2x Rokkit Launcha"],
         "Wreckin’ ball": OPT("Wreckin’ Ball")}}},
     "Big Trakk": {"_unit": {"static": ["Armoured Hull", "2x Big Shoota"], "slots": {"Kannon": ["-", "Kannon", "Supa-kannon"]}}},
-    "Kill Tank": {"_warning": "“three of the following: Kannon, Lobba, Zzap Gun” is read as allowing the same weapon more than once; check against the datasheet.",
+    "Kill Tank": {"_warning": "Whether “three of the following: Kannon, Lobba, Zzap Gun” allows the same weapon more than once couldn’t be determined; it is allowed.",
         "_unit": {"slots": {
         "Dual Big Shoota": ["Dual Big Shoota", "Rokkit Launcha", "Skorcha"],
         "Skorcha": ["Skorcha", "Dual Big Shoota", "Rokkit Launcha"],
@@ -235,10 +235,10 @@ SPEC = {
                 {"actionable": True, "max": 0, "not": False, "operator": "AND", "paths": [["{self}", "tracked", "rollabs"]]},
                 {"actionable": True, "min": 1, "not": False, "operator": "AND", "paths": [["{self}", "tracked", "rolla"]]}],
                 "evaluate": "OR", "failState": "error"}}},
-    "Gargantuan Squiggoth": {"_warning": "Waha lists the default as “1 Kannon - Shell”; modelled as a full Kannon (both profiles) plus the optional extra Kannon/Supa-kannon; check against the datasheet.",
+    "Gargantuan Squiggoth": {"_warning": "Whether the default Kannon has both profiles couldn’t be determined; it is modelled as a full Kannon, plus the optional extra Kannon or Supa-kannon.",
         "_unit": {"static": ["Huge Tusks"], "slots": {
         "Kannon": ["Kannon", "Supa-kannon"], "Extra Kannon": ["-", "Kannon", "Supa-kannon"]}}},
-    "Big’ed Bossbunka": {"_warning": "“can be equipped with up to 3 Big Shootas” is read as up to 3 in addition to its default Big Shoota; check against the datasheet.",
+    "Big’ed Bossbunka": {"_warning": "Whether “up to 3 Big Shootas” counts its default Big Shoota couldn’t be determined; up to 3 more are allowed.",
         "_unit": {"static": ["Big Shoota", "Gaze of Gork"], "slots": {
         "# of Additional Big Shootas": UPTO("Big Shoota", 3)}}},
     "Big Mek Dakkarig": {"_unit": {"static": ["Blitzkannon", "Multi-busta Launcha", "Stompy Feet"]}},
