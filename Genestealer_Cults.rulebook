@@ -1,6 +1,6 @@
 {
   "name": "Genestealer Cults 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1063,7 +1063,7 @@
                 }
               }
             },
-            "Weapon§Benefictus—Psychic Cascade",
+            "Ranged Weapon§Benefictus—Psionic Cascade",
             "Melee Weapon§Benefictus—Close combat weapon",
             "Ability§Bio-horror Disruption (psychic)",
             "Ability§Psionic Shield (psychic)"
@@ -1764,8 +1764,6 @@
             "Ability§Deep Strike",
             "Ability§Spiritual Leader",
             "Ability§Mind Control (psychic)",
-            "Ranged Weapon§Magus—Autopistol",
-            "Melee Weapon§Magus—Force stave",
             "Ability§Psychic Familiar (Magus)",
             {
               "item": "Ability§Invulnerable",
@@ -1774,7 +1772,9 @@
                   "value": "5+"
                 }
               }
-            }
+            },
+            "Ranged Weapon§Magus—Autopistol",
+            "Melee Weapon§Magus—Force stave"
           ]
         },
         "keywords": {
@@ -5229,32 +5229,6 @@
           }
         }
       },
-      "Melee Weapon§Goliath Truck—Goliath wheels": {
-        "aspects": {
-          "Label": "Goliath wheels"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 4
-          }
-        }
-      },
       "Melee Weapon§Hybrid Metamorphs—Leader’s bio weapons": {
         "aspects": {
           "Label": "Leader’s bio weapons"
@@ -6669,7 +6643,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Neophyte Hybrids—Leader pistol"
+                    "trait": "Ranged Weapon§Neophyte Hybrids—Anointed pistol"
                   },
                   {
                     "trait": "Melee Weapon§Neophyte Hybrids—Chainsword"
@@ -6680,7 +6654,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Neophyte Hybrids—Leader pistol"
+                    "trait": "Ranged Weapon§Neophyte Hybrids—Anointed pistol"
                   },
                   {
                     "trait": "Melee Weapon§Neophyte Hybrids—Power weapon"
@@ -7190,71 +7164,6 @@
           },
           "Range": {
             "value": 24
-          },
-          "S": {
-            "value": 12
-          }
-        }
-      },
-      "Ranged Weapon§Benefictus—Psychic Cascade – focused witchfire": {
-        "aspects": {
-          "Label": "Focused Witchfire"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Psychic",
-            "Ability§Hazardous"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -3
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "format": "D6",
-            "value": 1
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 12
-          }
-        }
-      },
-      "Ranged Weapon§Benefictus—Psychic Cascade – witchfire": {
-        "aspects": {
-          "Label": "Witchfire"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Psychic"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -3
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "format": "D6",
-            "value": 1
-          },
-          "Range": {
-            "value": 18
           },
           "S": {
             "value": 12
@@ -11369,7 +11278,7 @@
             "Ranged Weapon§Goliath Truck—Heavy stubber",
             "Ranged Weapon§Goliath Truck—Twin autocannon",
             "Ranged Weapon§Goliath Truck—Demolition charge cache",
-            "Melee Weapon§Goliath Truck—Goliath wheels"
+            "Melee Weapon§Goliath Truck—Armoured hull"
           ]
         },
         "keywords": {
@@ -12390,17 +12299,6 @@
       "Wargear§Survey Augur": {
         "text": "Each time the bearer’s unit has shot, select one enemy unit that was hit by one or more attacks made by the bearer this phase. Until the end of the phase, each time a friendly Genestealer Cults model makes an attack against that unit, that attack has the [IGNORES COVER] ability."
       },
-      "Weapon§Benefictus—Psychic Cascade": {
-        "aspects": {
-          "Label": "Psychic Cascade"
-        },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Benefictus—Psychic Cascade – witchfire",
-            "Ranged Weapon§Benefictus—Psychic Cascade – focused witchfire"
-          ]
-        }
-      },
       "Stratagem§Inhuman Reactions": {
         "text": "**WHEN:** Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged** **PURESTRAIN GENESTEALERS** unit.\n\n**TARGET:** That **PURESTRAIN GENESTEALERS** unit.\n\n**EFFECT:** Your unit can make a **normal move** of up to D3+3\".",
         "keywords": {
@@ -12998,38 +12896,6 @@
           "WS": {
             "value": 3
           }
-        }
-      },
-      "Melee Weapon§Magus—Magus stave": {
-        "aspects": {
-          "Label": "Magus stave"
-        },
-        "stats": {
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "A": {
-            "value": 3
-          },
-          "WS": {
-            "value": 3
-          },
-          "S": {
-            "value": 5
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "format": "D3",
-            "value": 0
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Psychic"
-          ]
         }
       },
       "Ability§Heroic Fusillade": {

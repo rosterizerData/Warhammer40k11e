@@ -1,6 +1,6 @@
 {
   "name": "T'au Empire 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -3730,7 +3730,6 @@
           "traits": [
             "Ability§Lone Operative",
             "Ability§Stealth",
-            "Melee Weapon§Kalamandra’s Bite",
             "Ability§Fire and Fade",
             "Ability§Advanced Scouting",
             {
@@ -3740,7 +3739,8 @@
                   "value": "7\""
                 }
               }
-            }
+            },
+            "Melee Weapon§Kroot Lone-Spear—Kalamandra’s bite"
           ]
         },
         "keywords": {
@@ -3787,33 +3787,35 @@
           },
           "Wargear": {
             "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
             "ranks": {
-              "Kroot Long Gun & Close Combat Weapon": {
+              "Kroot long gun & Close combat weapon": {
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Kroot Long Gun"
+                    "trait": "Ranged Weapon§Kroot Lone-Spear—Kroot long gun"
                   },
                   {
-                    "trait": "Melee Weapon§Lone-spear Close Combat weapon"
+                    "trait": "Melee Weapon§Kroot Lone-Spear—Close combat weapon"
                   }
                 ]
               },
-              "Blast Javelin & Hunting Javelin": {
+              "Blast javelin & Hunting javelin": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Blast Javelin"
+                    "trait": "Ranged Weapon§Kroot Lone-Spear—Blast javelin"
                   },
                   {
-                    "trait": "Melee Weapon§Hunting Javelin"
+                    "trait": "Melee Weapon§Kroot Lone-Spear—Hunting javelin"
                   }
                 ]
               }
             },
             "statType": "rank",
-            "value": "Kroot Long Gun & Close Combat Weapon",
-            "visibility": "normal"
+            "value": "Kroot long gun & Close combat weapon",
+            "visibility": "active"
           }
         }
       },
@@ -4191,9 +4193,7 @@
               "item": "Ability§Leader",
               "text": "This model can be attached to the following units:\n\n* Xv9 Hazard Battlesuits"
             },
-            "Ranged Weapon§Experimental Pulse Submunition Rifle",
             "Wargear§Blacklight Marker Drones",
-            "Melee Weapon§Shas’o R’alai—Battlesuit fists",
             "Ability§Deep Strike",
             "Ability§For the Greater Good",
             "Ability§Eclipse Field Generator",
@@ -4206,7 +4206,9 @@
                 }
               }
             },
-            "Ability§Assassin"
+            "Ability§Assassin",
+            "Ranged Weapon§Shas’o R’alai—Experimental pulse submunitions rifle",
+            "Melee Weapon§Shas’o R’alai—Battlesuit fists"
           ]
         },
         "keywords": {
@@ -6829,86 +6831,6 @@
           }
         }
       },
-      "Melee Weapon§Hunting Blades": {
-        "assets": {
-          "traits": [
-            "Ability§Lance"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Hunting Javelin": {
-        "assets": {
-          "traits": [
-            "Ability§Lance"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          }
-        }
-      },
-      "Melee Weapon§Kalamandra’s Bite": {
-        "assets": {
-          "traits": [
-            "Ability§Extra Attacks"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 4
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          }
-        }
-      },
       "Melee Weapon§Knarloc Beak and Talons": {
         "assets": {
           "traits": [
@@ -7148,25 +7070,6 @@
           }
         }
       },
-      "Melee Weapon§Lone-spear Close Combat weapon": {
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§Longstrike—Armoured hull": {
         "aspects": {
           "Label": "Armoured hull"
@@ -7268,38 +7171,6 @@
           },
           "D": {
             "value": 1
-          }
-        }
-      },
-      "Melee Weapon§Rampager Fists": {
-        "assets": {
-          "traits": [
-            "Ability§Extra Attacks",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 2
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 3
           }
         }
       },
@@ -7589,28 +7460,6 @@
           }
         }
       },
-      "Melee Weapon§Tetra—Close combat weapon": {
-        "aspects": {
-          "Label": "Close Combat Weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "S": {
-            "value": 3
-          },
-          "WS": {
-            "value": 5
-          }
-        }
-      },
       "Melee Weapon§The Twin Lance—Fusion eliminator": {
         "aspects": {
           "Label": "Melee"
@@ -7873,7 +7722,7 @@
             "Ranged Weapon§Breacher Team—Pulse pistol",
             "Melee Weapon§Breacher Team—Close combat weapon",
             "Ability§Ds8 Support Turret",
-            "Ranged Weapon§Breacher Team—Support turret missile system"
+            "Ranged Weapon§Breacher Team—Support turret"
           ]
         },
         "stats": {
@@ -11216,7 +11065,7 @@
           "traits": [
             "Ranged Weapon§Strike Team—Pulse pistol",
             "Melee Weapon§Strike Team—Close combat weapon",
-            "Ranged Weapon§Strike Team—Support turret missile system",
+            "Ranged Weapon§Strike Team—Support turret",
             "Ranged Weapon§Strike Team—Pulse rifle"
           ]
         },
@@ -11846,9 +11695,9 @@
       "Model§Krootox Rampager": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Kroot Pistol and Hunting Javelins",
-            "Melee Weapon§Hunting Blades",
-            "Melee Weapon§Rampager Fists"
+            "Ranged Weapon§Krootox Rampagers—Kroot pistol and hunting javelins",
+            "Melee Weapon§Krootox Rampagers—Hunting blades",
+            "Melee Weapon§Krootox Rampagers—Rampager fists"
           ]
         },
         "stats": {
@@ -12936,11 +12785,9 @@
       "Model§Tetra": {
         "assets": {
           "traits": [
-            {
-              "item": "Ranged Weapon§Tetras—Pulse rifle",
-              "quantity": 2
-            },
-            "Melee Weapon§Tetra—Close combat weapon"
+            "Ranged Weapon§Tetras—Pulse rifle",
+            "Ranged Weapon§Tetras—Pulse rifle",
+            "Melee Weapon§Tetras—Close combat weapons"
           ]
         },
         "stats": {
@@ -13399,35 +13246,6 @@
           }
         }
       },
-      "Ranged Weapon§Blast Javelin": {
-        "assets": {
-          "traits": [
-            "Ability§Assault",
-            "Ability§Blast"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 10
-          }
-        }
-      },
       "Ranged Weapon§Breacher Team—Pulse blaster": {
         "aspects": {
           "Label": "Pulse blaster"
@@ -13487,38 +13305,6 @@
             "value": 5
           }
         }
-      },
-      "Ranged Weapon§Breacher Team—Support turret missile system": {
-        "aspects": {
-          "Label": "Support turret missile system"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Indirect Fire",
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 5
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 30
-          },
-          "S": {
-            "value": 5
-          }
-        },
-        "text": "In your Movement phase, if this unit Remains Stationary, until the start of your next Movement phase, its Fire Warrior Shas’ui model is equipped with the support turret missile system weapon. Designer’s Note: Place a DS8 Support Turret token next to this unit to remind you."
       },
       "Ranged Weapon§Broadside Battlesuits—Heavy rail rifle": {
         "aspects": {
@@ -15285,99 +15071,6 @@
           }
         }
       },
-      "Ranged Weapon§Experimental Pulse Submunition Rifle": {
-        "aspects": {
-          "Label": "Experimental Pulse Submunition Rifle"
-        },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Experimental pulse submunitions rifle – EMP",
-            "Ranged Weapon§Experimental pulse submunitions rifle – ionic cluster-beam shell"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Ranged Weapon§Experimental pulse submunitions rifle – EMP": {
-        "aspects": {
-          "Label": "EMP"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "vehicle"
-                },
-                "x": {
-                  "value": "3+"
-                }
-              }
-            },
-            "Ability§Devastating Wounds"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 1
-          }
-        }
-      },
-      "Ranged Weapon§Experimental pulse submunitions rifle – ionic cluster-beam shell": {
-        "aspects": {
-          "Label": "Ionic cluster-beam shell"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "ranks": {
-              "D6": {
-                "order": 0
-              }
-            },
-            "value": 0
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 6
-          }
-        }
-      },
       "Ranged Weapon§Firesight Team—Longshot pulse rifles": {
         "aspects": {
           "Label": "Longshot pulse rifles"
@@ -16175,36 +15868,6 @@
           }
         }
       },
-      "Ranged Weapon§Heavy Rail Cannon": {
-        "aspects": {
-          "Label": "Heavy rail cannon"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Devastating Wounds"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -5
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 12
-          },
-          "Range": {
-            "value": 120
-          },
-          "S": {
-            "value": 26
-          }
-        }
-      },
       "Ranged Weapon§Heavy Rail Cannon Array": {
         "aspects": {
           "Label": "Heavy rail cannon array"
@@ -16530,34 +16193,6 @@
           }
         }
       },
-      "Ranged Weapon§Kroot Long Gun": {
-        "assets": {
-          "traits": [
-            "Ability§Heavy",
-            "Ability§Precision"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 6
-          }
-        }
-      },
       "Ranged Weapon§Kroot Pistol": {
         "assets": {
           "traits": [
@@ -16567,34 +16202,6 @@
         "stats": {
           "A": {
             "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Kroot Pistol and Hunting Javelins": {
-        "assets": {
-          "traits": [
-            "Ability§Assault",
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
           },
           "AP": {
             "value": 0
@@ -16709,28 +16316,6 @@
           },
           "AP": {
             "value": 0
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 6
-          }
-        }
-      },
-      "Ranged Weapon§Long-Barrelled Burst Cannon Array": {
-        "stats": {
-          "A": {
-            "value": 32
-          },
-          "AP": {
-            "value": -1
           },
           "BS": {
             "value": 4
@@ -17542,42 +17127,6 @@
           ]
         }
       },
-      "Ranged Weapon§Pulse Submunition Cannon": {
-        "aspects": {
-          "Label": "Pulse Submunition Cannon"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "ranks": {
-              "D6+2": {
-                "order": 0
-              }
-            },
-            "value": 2
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 60
-          },
-          "S": {
-            "value": 8
-          }
-        }
-      },
       "Ranged Weapon§Razorshark Strike Fighter—Accelerator burst cannon": {
         "aspects": {
           "Label": "Accelerator burst cannon"
@@ -18238,48 +17787,6 @@
           },
           "S": {
             "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Skyspear Missile Rack": {
-        "aspects": {
-          "Label": "Skyspear missile rack"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast",
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "fly"
-                },
-                "x": {
-                  "value": "3+"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 1
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 72
-          },
-          "S": {
-            "value": 6
           }
         }
       },
@@ -23436,33 +22943,36 @@
               }
             },
             {
-              "item": "Ranged Weapon§Heavy Rail Cannon",
-              "quantity": 2
-            },
-            {
-              "item": "Ranged Weapon§Manta—Ion cannon",
-              "quantity": 6
-            },
-            {
-              "item": "Ranged Weapon§Long-Barrelled Burst Cannon Array",
-              "quantity": 2
-            },
-            {
-              "item": "Ranged Weapon§Manta—Missile pod",
-              "quantity": 2
-            },
-            {
-              "item": "Ranged Weapon§Manta—Seeker missile",
-              "quantity": 10
-            },
-            {
               "item": "Ability§Deadly Demise",
               "stats": {
                 "x": {
                   "value": " 3D6"
                 }
               }
-            }
+            },
+            "Ranged Weapon§Manta—Heavy rail cannon",
+            "Ranged Weapon§Manta—Heavy rail cannon",
+            "Ranged Weapon§Manta—Ion cannon",
+            "Ranged Weapon§Manta—Ion cannon",
+            "Ranged Weapon§Manta—Ion cannon",
+            "Ranged Weapon§Manta—Ion cannon",
+            "Ranged Weapon§Manta—Ion cannon",
+            "Ranged Weapon§Manta—Ion cannon",
+            "Ranged Weapon§Manta—Long-barrelled burst cannon array",
+            "Ranged Weapon§Manta—Long-barrelled burst cannon array",
+            "Ranged Weapon§Manta—Missile pod",
+            "Ranged Weapon§Manta—Missile pod",
+            "Ranged Weapon§Manta—Seeker missile",
+            "Ranged Weapon§Manta—Seeker missile",
+            "Ranged Weapon§Manta—Seeker missile",
+            "Ranged Weapon§Manta—Seeker missile",
+            "Ranged Weapon§Manta—Seeker missile",
+            "Ranged Weapon§Manta—Seeker missile",
+            "Ranged Weapon§Manta—Seeker missile",
+            "Ranged Weapon§Manta—Seeker missile",
+            "Ranged Weapon§Manta—Seeker missile",
+            "Ranged Weapon§Manta—Seeker missile",
+            "Melee Weapon§Manta—Armoured hull"
           ]
         },
         "keywords": {
@@ -23998,8 +23508,8 @@
                 }
               }
             },
-            "Ranged Weapon§Pulse Submunition Cannon",
-            "Ranged Weapon§Pulse Submunition Cannon",
+            "Ranged Weapon§R’varna Battlesuit—Pulse submunitions cannon",
+            "Ranged Weapon§R’varna Battlesuit—Pulse submunitions cannon",
             "Melee Weapon§Battlesuit fists"
           ]
         },
@@ -24029,44 +23539,6 @@
           "M": {
             "value": 8
           },
-          "Missile Drones": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "0": {
-                "order": 0
-              },
-              "1": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§R’varna Battlesuit—Missile pods"
-                  },
-                  {
-                    "trait": "Wargear§Missile Drone"
-                  }
-                ]
-              },
-              "2": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§R’varna Battlesuit—Missile pods"
-                  },
-                  {
-                    "trait": "Wargear§Missile Drone"
-                  },
-                  {
-                    "trait": "Wargear§Missile Drone"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "0",
-            "visibility": "normal"
-          },
           "OC": {
             "value": 4
           },
@@ -24081,6 +23553,38 @@
           },
           "W": {
             "value": 15
+          },
+          "Missile Drones": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "0": {
+                "order": 0
+              },
+              "1": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Missile Drone"
+                  }
+                ]
+              },
+              "2": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Wargear§Missile Drone"
+                  },
+                  {
+                    "trait": "Wargear§Missile Drone"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "0",
+            "visibility": "active"
           }
         }
       },
@@ -25689,10 +25193,9 @@
                 }
               }
             },
-            {
-              "item": "Ranged Weapon§Tiger Shark—Missile pod",
-              "quantity": 2
-            }
+            "Ranged Weapon§Tiger Shark—Missile pod",
+            "Ranged Weapon§Tiger Shark—Missile pod",
+            "Melee Weapon§Tiger Shark—Armoured hull"
           ]
         },
         "keywords": {
@@ -25713,83 +25216,6 @@
           ]
         },
         "stats": {
-          "1st Wargear": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 7,
-            "ranks": {
-              "2 Ion Cannons": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Ranged Weapon§Tiger Shark—Ion cannon",
-                      "quantity": 2
-                    }
-                  }
-                ]
-              },
-              "2 Swiftstrike Burst Cannons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Ranged Weapon§Swiftstrike Burst Cannon",
-                      "quantity": 2
-                    }
-                  }
-                ]
-              },
-              "2 Swiftstrike Railguns": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Ranged Weapon§Swiftstrike Railgun",
-                      "quantity": 2
-                    }
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "2 Ion Cannons",
-            "visibility": "normal"
-          },
-          "2nd Wargear": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 7,
-            "ranks": {
-              "2 Burst Cannons": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Tiger Shark—Burst cannon"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Tiger Shark—Burst cannon"
-                  }
-                ]
-              },
-              "2 Cyclic ion blasters": {
-                "order": 1,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Tiger Shark—Cyclic ion blaster"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Tiger Shark—Cyclic ion blaster"
-                  }
-                ]
-              }
-            },
-            "statOrder": 0,
-            "statType": "rank",
-            "value": "2 Burst Cannons",
-            "visibility": "active"
-          },
           "Ld": {
             "value": 7
           },
@@ -25803,10 +25229,129 @@
           "Points": {
             "value": 445
           },
-          "Seeker missile": {
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 11
+          },
+          "Transport Bay": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 7,
+            "ranks": {
+              "Transport Bay": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ability§Transport Bay"
+                  }
+                ]
+              },
+              "2 Skyspear Missile Racks": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Tiger Shark—Skyspear missile rack"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Tiger Shark—Skyspear missile rack"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Transport Bay",
+            "visibility": "normal"
+          },
+          "unitDiscount": {
+            "value": 50
+          },
+          "unitDiscountThreshold": {
+            "value": 2
+          },
+          "W": {
+            "value": 18
+          },
+          "1st Wargear": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "2 Ion cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Tiger Shark—Ion cannon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Tiger Shark—Ion cannon"
+                  }
+                ]
+              },
+              "2 Swiftstrike burst cannon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Tiger Shark—Swiftstrike burst cannon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Tiger Shark—Swiftstrike burst cannon"
+                  }
+                ]
+              },
+              "2 Swiftstrike railgun": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Tiger Shark—Swiftstrike railgun"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Tiger Shark—Swiftstrike railgun"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "2 Ion cannon",
+            "visibility": "active"
+          },
+          "2nd Wargear": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "2 Burst cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Tiger Shark—Burst cannon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Tiger Shark—Burst cannon"
+                  }
+                ]
+              },
+              "2 Cyclic ion blaster": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Tiger Shark—Cyclic ion blaster"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Tiger Shark—Cyclic ion blaster"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "2 Burst cannon",
+            "visibility": "active"
+          },
+          "Seeker missile": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
             "ranks": {
               "0": {
                 "order": 0
@@ -25907,51 +25452,7 @@
             },
             "statType": "rank",
             "value": "0",
-            "visibility": "normal"
-          },
-          "Sv": {
-            "value": 3
-          },
-          "T": {
-            "value": 11
-          },
-          "Transport Bay": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 7,
-            "ranks": {
-              "Transport Bay": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ability§Transport Bay"
-                  }
-                ]
-              },
-              "2 Skyspear Missile Rack": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Ranged Weapon§Skyspear Missile Rack",
-                      "quantity": 2
-                    }
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Transport Bay",
-            "visibility": "normal"
-          },
-          "unitDiscount": {
-            "value": 50
-          },
-          "unitDiscountThreshold": {
-            "value": 2
-          },
-          "W": {
-            "value": 18
+            "visibility": "active"
           }
         }
       },
@@ -26454,6 +25955,25 @@
             "statType": "numeric",
             "value": 10
           },
+          "OC": {
+            "statType": "numeric",
+            "value": 4
+          },
+          "Points": {
+            "value": 210
+          },
+          "Sv": {
+            "statType": "numeric",
+            "value": 2
+          },
+          "T": {
+            "statType": "numeric",
+            "value": 9
+          },
+          "W": {
+            "statType": "numeric",
+            "value": 15
+          },
           "Missile Drones": {
             "dynamic": true,
             "group": "Loadout",
@@ -26474,9 +25994,6 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Y’vahra Battlesuit—Missile pods"
-                  },
-                  {
                     "trait": "Wargear§Missile Drone"
                   },
                   {
@@ -26487,26 +26004,7 @@
             },
             "statType": "rank",
             "value": "0",
-            "visibility": "normal"
-          },
-          "OC": {
-            "statType": "numeric",
-            "value": 4
-          },
-          "Points": {
-            "value": 210
-          },
-          "Sv": {
-            "statType": "numeric",
-            "value": 2
-          },
-          "T": {
-            "statType": "numeric",
-            "value": 9
-          },
-          "W": {
-            "statType": "numeric",
-            "value": 15
+            "visibility": "active"
           }
         }
       },
@@ -29797,76 +29295,6 @@
           }
         }
       },
-      "Melee Weapon§Krootox Rampagers—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "A": {
-            "value": 3
-          },
-          "WS": {
-            "value": 3
-          },
-          "S": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lance"
-          ]
-        }
-      },
-      "Melee Weapon§Krootox Rampagers—Krootox fists": {
-        "aspects": {
-          "Label": "Krootox fists"
-        },
-        "stats": {
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "A": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          },
-          "S": {
-            "value": 6
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 2
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Extra Attacks",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        }
-      },
       "Ability§DS8 Support Turret": {
         "text": "In your Movement phase, if this unit Remains Stationary, until the start of your next turn, its Shas’ui model is equipped with the support turret weapon.\n\n**Designer’s Note:** _Place a Support Turret token next to this unit to remind you._"
       },
@@ -30044,6 +29472,157 @@
         },
         "aspects": {
           "Label": "Kroot Hound"
+        }
+      },
+      "Ranged Weapon§Experimental Pulse Submunition Rifle": {
+        "aspects": {
+          "Label": "Experimental Pulse Submunition Rifle"
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Experimental pulse submunitions rifle – EMP",
+            "Ranged Weapon§Experimental pulse submunitions rifle – ionic cluster-beam shell"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
+        }
+      },
+      "Ranged Weapon§Experimental pulse submunitions rifle – ionic cluster-beam shell": {
+        "aspects": {
+          "Label": "Ionic cluster-beam shell"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Blast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "format": "D6",
+            "ranks": {
+              "D6": {
+                "order": 0
+              }
+            },
+            "value": 0
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 6
+          }
+        }
+      },
+      "Ranged Weapon§Experimental pulse submunitions rifle – EMP": {
+        "aspects": {
+          "Label": "EMP"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "vehicle"
+                },
+                "x": {
+                  "value": "3+"
+                }
+              }
+            },
+            "Ability§Devastating Wounds"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 3
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 1
+          }
+        }
+      },
+      "Ranged Weapon§Pulse Submunition Cannon": {
+        "aspects": {
+          "Label": "Pulse Submunition Cannon"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Blast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "format": "D6",
+            "ranks": {
+              "D6+2": {
+                "order": 0
+              }
+            },
+            "value": 2
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 4
+          },
+          "D": {
+            "value": 2
+          },
+          "Range": {
+            "value": 60
+          },
+          "S": {
+            "value": 8
+          }
+        }
+      },
+      "Melee Weapon§Tetra—Close combat weapon": {
+        "aspects": {
+          "Label": "Close Combat Weapon"
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 3
+          },
+          "WS": {
+            "value": 5
+          }
         }
       }
     },

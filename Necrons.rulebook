@@ -1,6 +1,6 @@
 {
   "name": "Necrons 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2957,9 +2957,6 @@
                 }
               }
             },
-            "Ranged Weapon§C’tan Shard of the Void Dragon—Voltaic storm",
-            "Melee Weapon§C’tan Shard of the Void Dragon—Canoptek tail blades",
-            "Weapon§C’tan Shard of the Void Dragon—Spear of the Void Dragon",
             {
               "item": "Ability§Feel No Pain",
               "stats": {
@@ -2968,7 +2965,11 @@
                 }
               }
             },
-            "Ability§Deep Strike"
+            "Ability§Deep Strike",
+            "Ranged Weapon§C’tan Shard of the Void Dragon—Voltaic storm",
+            "Melee Weapon§C’tan Shard of the Void Dragon—Canoptek tail blades",
+            "Weapon§C’tan Shard of the Void Dragon—Spear of the Void Dragon",
+            "Ranged Weapon§C’tan Shard of the Void Dragon—Spear of the Void Dragon"
           ]
         },
         "keywords": {
@@ -4198,51 +4199,6 @@
           "M": {
             "value": 5
           },
-          "Melee": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Tachyon arrow and Overlord’s blade": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Overlord—Tachyon arrow"
-                  },
-                  {
-                    "trait": "Melee Weapon§Overlord—Overlord’s blade"
-                  }
-                ]
-              },
-              "Overlord’s blade": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Overlord—Overlord’s blade"
-                  }
-                ]
-              },
-              "Staff of light": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Overlord—Staff of light"
-                  }
-                ]
-              },
-              "Voidscythe": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Overlord—Voidscythe"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Tachyon arrow and Overlord’s blade",
-            "visibility": "active"
-          },
           "OC": {
             "value": 1
           },
@@ -4278,6 +4234,43 @@
           },
           "W": {
             "value": 6
+          },
+          "Melee": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Tachyon arrow and Overlord’s blade": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Overlord—Tachyon arrow"
+                  },
+                  {
+                    "trait": "Melee Weapon§Overlord—Overlord’s blade"
+                  }
+                ]
+              },
+              "Staff of light": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Overlord—Staff of light"
+                  }
+                ]
+              },
+              "Voidscythe": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Overlord—Voidscythe"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Tachyon arrow and Overlord’s blade",
+            "visibility": "active"
           }
         }
       },
@@ -10417,63 +10410,6 @@
           }
         }
       },
-      "Melee Weapon§The Silent King—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 4
-          }
-        }
-      },
-      "Melee Weapon§The Silent King—Scythe of Dust": {
-        "aspects": {
-          "Label": "Scythe of Dust"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 12
-          },
-          "AP": {
-            "value": -3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Tomb Blades—Close combat weapon": {
         "aspects": {
           "Label": "Close combat weapon"
@@ -11551,7 +11487,7 @@
           "traits": [
             "Ranged Weapon§The Silent King—Sceptre of Eternal Glory",
             "Ranged Weapon§The Silent King—Staff of Stars",
-            "Melee Weapon§The Silent King—Scythe of Dust",
+            "Melee Weapon§The Silent King—Weapons of the Final Triarch",
             {
               "item": "Ability§Damaged:",
               "stats": {
@@ -11816,7 +11752,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§The Silent King—Annihilator beam",
-            "Melee Weapon§The Silent King—Close combat weapon",
+            "Melee Weapon§The Silent King—Armoured bulk",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -14417,116 +14353,6 @@
           }
         }
       },
-      "Ranged Weapon§Tesseract Vault—C’tan Power: Antimatter Meteor": {
-        "aspects": {
-          "Label": "C’tan Power: Antimatter Meteor"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast",
-            "Ability§Devastating Wounds",
-            "Ability§Indirect Fire"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 3
-          },
-          "AP": {
-            "value": -3
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 10
-          }
-        }
-      },
-      "Ranged Weapon§Tesseract Vault—C’tan Power: Cosmic Fire": {
-        "aspects": {
-          "Label": "C’tan Power: Cosmic Fire"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Devastating Wounds",
-            "Ability§Torrent"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "3D6",
-            "value": 0
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "format": "{t}",
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 6
-          }
-        }
-      },
-      "Ranged Weapon§Tesseract Vault—C’tan Power: Time’s Arrow": {
-        "aspects": {
-          "Label": "C’tan Power: Time’s Arrow"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "character"
-                },
-                "x": {
-                  "value": "4+"
-                }
-              }
-            },
-            "Ability§Devastating Wounds",
-            "Ability§Precision"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 6
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 3
-          }
-        }
-      },
       "Ranged Weapon§Tesseract Vault—Tesla spheres": {
         "aspects": {
           "Label": "Tesla spheres"
@@ -17072,7 +16898,7 @@
               }
             },
             "Wargear§Gloom Prism (Aura)",
-            "Melee Weapon§Canoptek Tomb Sentinel—Tomb Sentinel’s claws",
+            "Melee Weapon§Canoptek Tomb Sentinel—Tomb Sentinel claws",
             "Ranged Weapon§Canoptek Tomb Sentinel—Exile cannon"
           ]
         },
@@ -17134,7 +16960,7 @@
               }
             },
             "Wargear§Gloom Prism (Aura)",
-            "Melee Weapon§Canoptek Tomb Stalker—Tomb Stalker’s claws",
+            "Melee Weapon§Canoptek Tomb Stalker—Tomb Stalker claws",
             "Ranged Weapon§Canoptek Tomb Stalker—Gauss slicers",
             "Ability§Snaking Ambush"
           ]
@@ -19424,9 +19250,9 @@
             "Ranged Weapon§Tesseract Vault—Tesla spheres",
             "Ranged Weapon§Tesseract Vault—Tesla spheres",
             "Melee Weapon§Tesseract Vault—Armoured bulk",
-            "Ranged Weapon§Tesseract Vault—C’tan Power: Antimatter Meteor",
-            "Ranged Weapon§Tesseract Vault—C’tan Power: Cosmic Fire",
-            "Ranged Weapon§Tesseract Vault—C’tan Power: Time’s Arrow"
+            "Ranged Weapon§Tesseract Vault—Antimatter Meteor",
+            "Ranged Weapon§Tesseract Vault—Cosmic Fire",
+            "Ranged Weapon§Tesseract Vault—Time’s Arrow"
           ]
         },
         "keywords": {
@@ -20214,7 +20040,7 @@
         },
         "assets": {
           "traits": [
-            "Melee Weapon§Geomancer—Tremorglaive",
+            "Melee Weapon§Overlord—Staff of light",
             "Ranged Weapon§Overlord—Staff of light"
           ]
         },
@@ -20423,48 +20249,6 @@
           ],
           "Phase": [
             "Movement"
-          ]
-        }
-      },
-      "Ranged Weapon§C’tan Shard of the Void Dragon—Spear of the Void Dragon – Ranged": {
-        "aspects": {
-          "Label": "Spear of the Void Dragon – Ranged"
-        },
-        "stats": {
-          "Range": {
-            "value": 12
-          },
-          "A": {
-            "format": "D3",
-            "value": 0
-          },
-          "BS": {
-            "value": 2
-          },
-          "S": {
-            "value": 8
-          },
-          "AP": {
-            "value": -3
-          },
-          "D": {
-            "format": "D6",
-            "value": 2
-          }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "vehicle"
-                },
-                "x": {
-                  "value": "2+"
-                }
-              }
-            }
           ]
         }
       },
@@ -20763,57 +20547,6 @@
           "traits": [
             "Ability§Extra Attacks"
           ]
-        }
-      },
-      "Ranged Weapon§Overlord—Staff of light – Ranged": {
-        "aspects": {
-          "Label": "Staff of light – Ranged"
-        },
-        "stats": {
-          "Range": {
-            "value": 18
-          },
-          "A": {
-            "value": 3
-          },
-          "BS": {
-            "value": 2
-          },
-          "S": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          }
-        }
-      },
-      "Melee Weapon§Overlord—Staff of light – Melee": {
-        "aspects": {
-          "Label": "Staff of light – Melee"
-        },
-        "stats": {
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "A": {
-            "value": 4
-          },
-          "WS": {
-            "value": 2
-          },
-          "S": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          }
         }
       },
       "Ranged Weapon§Plasmancer—Plasmic lance – Ranged": {

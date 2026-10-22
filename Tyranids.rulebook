@@ -1,6 +1,6 @@
 {
   "name": "Tyranids 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -7481,56 +7481,6 @@
           }
         }
       },
-      "Melee Weapon§Norn Assimilator—Monstrous sharp claws": {
-        "aspects": {
-          "Label": "Monstrous sharp claws"
-        },
-        "stats": {
-          "A": {
-            "value": 6
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 3
-          },
-          "S": {
-            "value": 9
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Norn Assimilator—Toxic harpoons": {
-        "aspects": {
-          "Label": "Melee"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Extra Attacks"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -3
-          },
-          "D": {
-            "format": "D6",
-            "value": 1
-          },
-          "S": {
-            "value": 12
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Norn Emissary—Monstrous rending claws": {
         "aspects": {
           "Label": "Monstrous rending claws"
@@ -8341,63 +8291,6 @@
           "Range": {
             "statType": "term",
             "value": "Melee"
-          }
-        }
-      },
-      "Melee Weapon§Tyranid Warriors with Melee Bio-weapons—Bio-weapons": {
-        "aspects": {
-          "Label": "Bio-weapons"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 6
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Tyranid Warriors with Ranged Bio-weapons—Bio-weapons": {
-        "aspects": {
-          "Label": "Bio-weapons"
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 3
           }
         }
       },
@@ -9618,7 +9511,7 @@
       "Model§Tyranid Prime": {
         "assets": {
           "traits": [
-            "Melee Weapon§Tyranid Warriors with Ranged Bio-weapons—Bio-weapons"
+            "Melee Weapon§Tyranid Warriors with Ranged Bio-weapons—Tyranid Warrior claws and talons"
           ]
         },
         "stats": {
@@ -9704,7 +9597,7 @@
         },
         "assets": {
           "traits": [
-            "Melee Weapon§Tyranid Warriors with Melee Bio-weapons—Bio-weapons"
+            "Melee Weapon§Tyranid Warriors with Melee Bio-weapons—Tyranid Warrior claws and talons"
           ]
         },
         "stats": {
@@ -9731,7 +9624,7 @@
       "Model§Tyranid Warrior": {
         "assets": {
           "traits": [
-            "Melee Weapon§Tyranid Warriors with Ranged Bio-weapons—Bio-weapons"
+            "Melee Weapon§Tyranid Warriors with Ranged Bio-weapons—Tyranid Warrior claws and talons"
           ]
         },
         "stats": {
@@ -9817,7 +9710,7 @@
         },
         "assets": {
           "traits": [
-            "Melee Weapon§Tyranid Warriors with Melee Bio-weapons—Bio-weapons"
+            "Melee Weapon§Tyranid Warriors with Melee Bio-weapons—Tyranid Warrior claws and talons"
           ]
         },
         "stats": {
@@ -10855,37 +10748,6 @@
           },
           "S": {
             "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Norn Assimilator—Toxic harpoons": {
-        "aspects": {
-          "Label": "Ranged"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Harpooned"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -3
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "format": "D6",
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 12
           }
         }
       },
@@ -15344,8 +15206,9 @@
             },
             "Ability§Singular Purpose",
             "Ability§Harpoon Barbs",
-            "Melee Weapon§Norn Assimilator—Monstrous sharp claws",
-            "Weapon§Norn Assimilator—Toxic harpoons"
+            "Melee Weapon§Norn Assimilator—Monstrous scything talons",
+            "Ranged Weapon§Norn Assimilator—Toxinjector Harpoon",
+            "Melee Weapon§Norn Assimilator—Toxinjector harpoon"
           ]
         },
         "keywords": {
@@ -17696,22 +17559,6 @@
         },
         "text": "The bearer has a Save characteristic of 4+."
       },
-      "Weapon§Norn Assimilator—Toxic harpoons": {
-        "aspects": {
-          "Label": "Toxic harpoons"
-        },
-        "assets": {
-          "traits": [
-            "Melee Weapon§Norn Assimilator—Toxic harpoons",
-            "Ranged Weapon§Norn Assimilator—Toxic harpoons"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
       "Weapon§Toxicrene—Massive toxic lashes": {
         "aspects": {
           "Label": "Massive toxic lashes"
@@ -17891,6 +17738,11 @@
             "format": "D6",
             "value": 1
           }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Harpooned"
+          ]
         }
       },
       "Melee Weapon§Norn Assimilator—Monstrous scything talons": {
@@ -17917,38 +17769,6 @@
           "D": {
             "value": 3
           }
-        }
-      },
-      "Melee Weapon§Norn Assimilator—Toxinjector Harpoon – Toxinjector harpoon": {
-        "aspects": {
-          "Label": "Toxinjector Harpoon – Toxinjector harpoon"
-        },
-        "stats": {
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "A": {
-            "value": 4
-          },
-          "WS": {
-            "value": 2
-          },
-          "S": {
-            "value": 12
-          },
-          "AP": {
-            "value": -3
-          },
-          "D": {
-            "format": "D6",
-            "value": 1
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Extra Attacks"
-          ]
         }
       },
       "Ranged Weapon§Norn Emissary—Psychic tendril – neuroparasite": {

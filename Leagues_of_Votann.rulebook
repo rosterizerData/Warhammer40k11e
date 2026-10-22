@@ -1,6 +1,6 @@
 {
   "name": "Leagues of Votann 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -4753,6 +4753,7 @@
       "Model§Cthonian Earthshaker": {
         "assets": {
           "traits": [
+            "Ranged Weapon§Cthonian Earthshakers—Autoch-pattern bolt pistol",
             "Ranged Weapon§Cthonian Earthshakers—Autoch-pattern bolt pistol",
             "Melee Weapon§Cthonian Earthshakers—Plasma picks"
           ]

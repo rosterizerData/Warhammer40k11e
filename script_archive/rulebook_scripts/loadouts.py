@@ -140,9 +140,14 @@ def referenced(keys):
     return {k for k in keys if seen[k] > 1}
 LEGENDS_UNITS = {k.split("§", 1)[1] for k, v in res.items() if k.split("§")[0] in UNITCLS
                  and "Legends" in ((v.get("keywords") or {}).get("Source") or [])}
-ORPHANABLE = lambda k: k.split("§")[0] in ("Wargear", "Model") or (
+LEGENDS_GEAR = set()   # anything a Legends unit (or its models) uses, whatever its key looks like
+for _lk in [k for k, v in res.items() if k.split("§")[0] in UNITCLS and "Legends" in ((v.get("keywords") or {}).get("Source") or [])]:
+    _txt = json.dumps(res[_lk], ensure_ascii=False)
+    _txt += "".join(json.dumps(res.get(m) or {}, ensure_ascii=False) for m in re.findall(r'"(Model§[^"]+)"', _txt))
+    LEGENDS_GEAR |= set(re.findall(r'"((?:Ranged Weapon|Melee Weapon|Weapon|Wargear)§[^"]+)"', _txt))
+ORPHANABLE = lambda k: k not in LEGENDS_GEAR and k.split("§")[0] in ("Wargear", "Model") or (
     k.split("§")[0] in WEP and k.split("§", 1)[1].split("—")[0] not in LEGENDS_UNITS   # Legends units keep their weapons
-    and "Armoury" not in k.split("§", 1)[1].split("—")[0])   # armoury weapons stay shared even when unused
+    and "Armoury" not in k.split("§", 1)[1].split("—")[0] and k not in LEGENDS_GEAR)   # armoury weapons stay shared even when unused
 was_referenced = referenced([k for k in own if ORPHANABLE(k)])
 
 REFPAT = re.compile(r'"((?:Ranged Weapon|Melee Weapon|Weapon|Wargear|Model)§[^"]+)"')
