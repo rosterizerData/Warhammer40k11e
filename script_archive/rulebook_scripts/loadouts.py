@@ -200,7 +200,10 @@ for uname, uspec in SPEC.items():
         if "static" not in hs and "slots" not in hs:
             continue
         keep = set(hs.get("keep", []))
+        kept_order = {}   # a rebuilt stat keeps the display order of the one it replaces
         for sn in [s for s, v in st.items() if isinstance(v, dict) and v.get("group") == "Loadout" and v.get("statType") == "rank" and s not in keep]:
+            if "statOrder" in st[sn]:
+                kept_order[sn] = st[sn]["statOrder"]
             del st[sn]
         tr = (a.setdefault("assets", {})).setdefault("traits", [])
         a["assets"]["traits"] = [t for t in tr if not is_wep_trait(t)]
@@ -215,7 +218,7 @@ for uname, uspec in SPEC.items():
                 label, body = parse_rank(wunit, r)
                 rk[label] = {"order": i, **body}
             st[sn] = {"dynamic": True, "group": "Loadout", "groupOrder": 2, "ranks": rk, "statType": "rank",
-                      "value": next(iter(rk)), "visibility": "active"}
+                      "value": next(iter(rk)), "visibility": "active", **({"statOrder": kept_order[sn]} if sn in kept_order else {})}
         if not a["assets"]["traits"]:
             del a["assets"]["traits"]
         if not a["assets"]:

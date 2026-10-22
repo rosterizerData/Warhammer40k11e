@@ -1,6 +1,6 @@
 {
   "name": "Astra Militarum 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1770,6 +1770,21 @@
           "M": {
             "value": 6
           },
+          "OC": {
+            "value": 1
+          },
+          "Points": {
+            "value": 55
+          },
+          "Sv": {
+            "value": 5
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 4
+          },
           "Melee Weapon": {
             "dynamic": true,
             "group": "Loadout",
@@ -1783,15 +1798,18 @@
                   }
                 ]
               },
-              "Boltgun": {
+              "Boltgun & Close Combat Weapon": {
                 "order": 1,
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Cadian Castellan—Boltgun"
+                  },
+                  {
+                    "trait": "Melee Weapon§Cadian Castellan—Close combat weapon"
                   }
                 ]
               },
-              "Power fist": {
+              "Power Fist": {
                 "order": 2,
                 "traits": [
                   {
@@ -1799,7 +1817,7 @@
                   }
                 ]
               },
-              "Power weapon": {
+              "Power Weapon": {
                 "order": 3,
                 "traits": [
                   {
@@ -1811,12 +1829,6 @@
             "statType": "rank",
             "value": "Chainsword",
             "visibility": "active"
-          },
-          "OC": {
-            "value": 1
-          },
-          "Points": {
-            "value": 55
           },
           "Ranged Weapon": {
             "dynamic": true,
@@ -1831,7 +1843,7 @@
                   }
                 ]
               },
-              "Bolt pistol": {
+              "Bolt Pistol": {
                 "order": 1,
                 "traits": [
                   {
@@ -1839,7 +1851,7 @@
                   }
                 ]
               },
-              "Plasma pistol": {
+              "Plasma Pistol": {
                 "order": 2,
                 "traits": [
                   {
@@ -1851,15 +1863,6 @@
             "statType": "rank",
             "value": "Laspistol",
             "visibility": "active"
-          },
-          "Sv": {
-            "value": 5
-          },
-          "T": {
-            "value": 3
-          },
-          "W": {
-            "value": 4
           }
         }
       },
@@ -3129,10 +3132,10 @@
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Leman Russ Commander—Militarum plasma cannon"
+                    "trait": "Ranged Weapon§Leman Russ Commander—Plasma cannon"
                   },
                   {
-                    "trait": "Ranged Weapon§Leman Russ Commander—Militarum plasma cannon"
+                    "trait": "Ranged Weapon§Leman Russ Commander—Plasma cannon"
                   }
                 ]
               }
@@ -3832,7 +3835,20 @@
         }
       },
       "Character§Ministorum Priest": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Cadian Shock Troops\n\n* Catachan Jungle Fighters\n\n* Death Korps Grenadier Squad\n\n* Death Korps Of Krieg\n\n* Kasrkin\n\n* Krieg Combat Engineers\n\n* Tempestus Scions"
+            },
+            "Ability§War Hymns",
+            "Ability§Holy Piety"
+          ]
+        },
         "stats": {
+          "Points": {
+            "value": 35
+          },
           "Loadout Options": {
             "dynamic": true,
             "group": "Loadout",
@@ -3842,7 +3858,7 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Weapon§Ministorum Priest—Zealot's vindicator"
+                    "trait": "Weapon§Ministorum Priest—Zealot’s vindictor"
                   }
                 ]
               },
@@ -3861,27 +3877,14 @@
             "statType": "rank",
             "value": "Zealot’s vindictor",
             "visibility": "active"
-          },
-          "Points": {
-            "value": 35
           }
         },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Cadian Shock Troops\n\n* Catachan Jungle Fighters\n\n* Death Korps Grenadier Squad\n\n* Death Korps Of Krieg\n\n* Kasrkin\n\n* Krieg Combat Engineers\n\n* Tempestus Scions"
-            },
-            "Ability§War Hymns",
-            "Ability§Holy Piety"
-          ]
-        },
         "keywords": {
-          "Faction": [
-            "Astra Militarum"
-          ],
           "Keywords": [
             "Grenades"
+          ],
+          "Faction": [
+            "Astra Militarum"
           ]
         }
       },
@@ -4380,7 +4383,7 @@
             "Ability§A Hearty ‘Pick Me Up’",
             "Ability§Well-stocked Supplies",
             "Ranged Weapon§Provisionally Prepared—Sniper rifle",
-            "Melee Weapon§Provisionally Prepared—Close combat weapon"
+            "Melee Weapon§Provisionally Prepared—Close combat weapons"
           ]
         },
         "keywords": {
@@ -4870,11 +4873,6 @@
         }
       },
       "Character§Tech-Priest Enginseer": {
-        "stats": {
-          "Points": {
-            "value": 45
-          }
-        },
         "assets": {
           "traits": [
             {
@@ -4882,16 +4880,21 @@
               "text": "This model can be attached to the following units:\n\n* Cadian Shock Troops\n\n* Catachan Jungle Fighters\n\n* Death Korps Grenadier Squad\n\n* Death Korps Of Krieg\n\n* Kasrkin\n\n* Krieg Combat Engineers"
             },
             "Ability§Vengeance for the Omnissiah",
-            "Ranged Weapon§Tech-Priest Enginseer—Archeotech pistol",
+            "Ranged Weapon§Tech-Priest Enginseer—Mechanicus pistol",
             "Melee Weapon§Tech-Priest Enginseer—Enginseer axe"
           ]
         },
+        "stats": {
+          "Points": {
+            "value": 45
+          }
+        },
         "keywords": {
-          "Faction": [
-            "Astra Militarum"
-          ],
           "Keywords": [
             "Tech-Priest Enginseer"
+          ],
+          "Faction": [
+            "Astra Militarum"
           ]
         }
       },
@@ -18288,11 +18291,11 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Militarum multi-laser": {
+              "Multi-laser": {
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Armoured Sentinels—Militarum multi-laser"
+                    "trait": "Ranged Weapon§Armoured Sentinels—Multi-laser"
                   }
                 ]
               },
@@ -18339,7 +18342,7 @@
             },
             "statOrder": 1,
             "statType": "rank",
-            "value": "Militarum multi-laser",
+            "value": "Multi-laser",
             "visibility": "active"
           },
           "Sv": {
@@ -20228,11 +20231,11 @@
                   }
                 ]
               },
-              "Heavy Lascannon": {
+              "Lascannon": {
                 "order": 3,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Hippogriff AFV—Heavy Lascannon"
+                    "trait": "Ranged Weapon§Hippogriff AFV—Lascannon"
                   }
                 ]
               }
@@ -22369,12 +22372,27 @@
           "Ld": {
             "value": 7
           },
+          "M": {
+            "value": "-"
+          },
+          "OC": {
+            "value": 1
+          },
+          "Sv": {
+            "value": 4
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
           "Loadout": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Twin heavy bolter": {
+              "Twin Heavy Bolter": {
                 "order": 0,
                 "traits": [
                   {
@@ -22390,7 +22408,7 @@
                   }
                 ]
               },
-              "Twin autocannon": {
+              "Twin Autocannon": {
                 "order": 2,
                 "traits": [
                   {
@@ -22398,7 +22416,7 @@
                   }
                 ]
               },
-              "Twin heavy stubber": {
+              "Twin Heavy Stubber": {
                 "order": 3,
                 "traits": [
                   {
@@ -22406,7 +22424,7 @@
                   }
                 ]
               },
-              "Twin lascannon": {
+              "Twin Lascannon": {
                 "order": 4,
                 "traits": [
                   {
@@ -22416,23 +22434,8 @@
               }
             },
             "statType": "rank",
-            "value": "Twin autocannon",
+            "value": "Twin Heavy Bolter",
             "visibility": "active"
-          },
-          "M": {
-            "value": "-"
-          },
-          "OC": {
-            "value": 1
-          },
-          "Sv": {
-            "value": 4
-          },
-          "T": {
-            "value": 4
-          },
-          "W": {
-            "value": 4
           }
         }
       },
@@ -22503,11 +22506,11 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Militarum multi-laser": {
+              "Multi-laser": {
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Scout Sentinels—Militarum multi-laser"
+                    "trait": "Ranged Weapon§Scout Sentinels—Multi-laser"
                   }
                 ]
               },
@@ -22554,7 +22557,7 @@
             },
             "statOrder": 1,
             "statType": "rank",
-            "value": "Militarum multi-laser",
+            "value": "Multi-laser",
             "visibility": "active"
           },
           "Sv": {
@@ -22822,11 +22825,11 @@
                   }
                 ]
               },
-              "Drum-fed autogun": {
+              "Sergeant’s Autogun": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Cadian Shock Troops—Drum-fed autogun"
+                    "trait": "Ranged Weapon§Cadian Shock Troops—Sergeant’s autogun"
                   },
                   {
                     "trait": "Melee Weapon§Cadian Shock Troops—Close combat weapon"
@@ -25281,31 +25284,6 @@
           },
           "S": {
             "value": 12
-          }
-        }
-      },
-      "Ranged Weapon§Armoured Sentinels—Militarum multi-laser": {
-        "aspects": {
-          "Label": "Militarum multi-laser"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 6
           }
         }
       },
@@ -28946,102 +28924,6 @@
           },
           "S": {
             "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Chimera—Chimera heavy bolter": {
-        "aspects": {
-          "Label": "Chimera heavy bolter"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Chimera—Chimera heavy flamer": {
-        "aspects": {
-          "Label": "Chimera heavy flamer"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "format": "{t}",
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Chimera—Chimera multi-laser": {
-        "aspects": {
-          "Label": "Chimera multi-laser"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 6
           }
         }
       },
@@ -33519,37 +33401,6 @@
           }
         }
       },
-      "Ranged Weapon§Hippogriff AFV—Heavy Lascannon": {
-        "aspects": {
-          "Label": "Heavy Lascannon"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Assault"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -3
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "format": "D6",
-            "value": 1
-          },
-          "Range": {
-            "value": 48
-          },
-          "S": {
-            "value": 12
-          }
-        }
-      },
       "Ranged Weapon§Hippogriff AFV—Heavy stubber": {
         "aspects": {
           "Label": "Heavy stubber"
@@ -36247,85 +36098,6 @@
           },
           "S": {
             "value": 10
-          }
-        }
-      },
-      "Ranged Weapon§Leman Russ Commander—Militarum plasma cannon": {
-        "aspects": {
-          "Label": "Militarum plasma cannon"
-        },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Leman Russ Commander—Militarum plasma cannon – standard",
-            "Ranged Weapon§Leman Russ Commander—Militarum plasma cannon – supercharge"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Ranged Weapon§Leman Russ Commander—Militarum plasma cannon – standard": {
-        "aspects": {
-          "Label": "Standard"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast"
-          ]
-        },
-        "stats": {
-          "A": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 7
-          }
-        }
-      },
-      "Ranged Weapon§Leman Russ Commander—Militarum plasma cannon – supercharge": {
-        "aspects": {
-          "Label": "Supercharge"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast",
-            "Ability§Hazardous"
-          ]
-        },
-        "stats": {
-          "A": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "AP": {
-            "value": -3
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 8
           }
         }
       },
@@ -44168,31 +43940,6 @@
           }
         }
       },
-      "Ranged Weapon§Scout Sentinels—Militarum multi-laser": {
-        "aspects": {
-          "Label": "Militarum multi-laser"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 6
-          }
-        }
-      },
       "Ranged Weapon§Scout Sentinels—Missile launcher": {
         "aspects": {
           "Label": "Missile launcher"
@@ -47517,31 +47264,6 @@
           }
         }
       },
-      "Ranged Weapon§Valkyrie—Militarum multi-laser": {
-        "aspects": {
-          "Label": "Militarum multi-laser"
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 6
-          }
-        }
-      },
       "Ranged Weapon§Valkyrie—Multiple rocket pod": {
         "aspects": {
           "Label": "Multiple rocket pod"
@@ -50427,16 +50149,16 @@
               }
             },
             "Ability§Tremor Quake",
+            "Ability§Damaged: Baneblade Variant",
+            {
+              "item": "Ability§Transport",
+              "text": "This model has a transport capacity of 26 Astra Militarum Infantry models. Each Ogryn model takes up the space of 3 models. It cannot transport Artillery models."
+            },
             "Melee Weapon§Banehammer—Armoured tracks",
             "Ranged Weapon§Banehammer—Lascannon",
             "Ranged Weapon§Banehammer—Lascannon",
             "Ranged Weapon§Banehammer—Tremor cannon",
-            "Ability§Damaged: Baneblade Variant",
-            "Ranged Weapon§Banehammer—Twin heavy bolter",
-            {
-              "item": "Ability§Transport",
-              "text": "This model has a transport capacity of 26 Astra Militarum Infantry models. Each Ogryn model takes up the space of 3 models. It cannot transport Artillery models."
-            }
+            "Ranged Weapon§Banehammer—Twin heavy bolter"
           ]
         },
         "keywords": {
@@ -50472,82 +50194,6 @@
           "Points": {
             "value": 420
           },
-          "Sponson Weapons 1": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "2 Twin heavy flamers": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Banehammer—Twin heavy flamer"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Banehammer—Twin heavy flamer"
-                  }
-                ]
-              },
-              "2 Twin heavy bolters": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Banehammer—Twin heavy bolter"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Banehammer—Twin heavy bolter"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "2 Twin heavy flamers",
-            "visibility": "active"
-          },
-          "Sponson Weapons 2": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "2 Twin heavy flamers + 2 Lascannons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Banehammer—Twin heavy flamer"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Banehammer—Twin heavy flamer"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Banehammer—Lascannon"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Banehammer—Lascannon"
-                  }
-                ]
-              },
-              "2 Twin heavy bolters + 2 Lascannons": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Banehammer—Twin heavy bolter"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Banehammer—Twin heavy bolter"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Banehammer—Lascannon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "-",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 2
           },
@@ -50562,6 +50208,85 @@
           },
           "W": {
             "value": 24
+          },
+          "Sponson Weapons 1": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "2 Twin Heavy Flamer": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Banehammer—Twin heavy flamer"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Banehammer—Twin heavy flamer"
+                  }
+                ]
+              },
+              "2 Twin Heavy Bolter": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Banehammer—Twin heavy bolter"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Banehammer—Twin heavy bolter"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "2 Twin Heavy Flamer",
+            "visibility": "active"
+          },
+          "Sponson Weapons 2": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "2 Twin Heavy Flamer & 2 Lascannon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Banehammer—Twin heavy flamer"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Banehammer—Twin heavy flamer"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Banehammer—Lascannon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Banehammer—Lascannon"
+                  }
+                ]
+              },
+              "2 Twin Heavy Bolter & 2 Lascannon": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Banehammer—Twin heavy bolter"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Banehammer—Twin heavy bolter"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Banehammer—Lascannon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Banehammer—Lascannon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
           }
         }
       },
@@ -51229,12 +50954,12 @@
               }
             },
             "Ability§Mobile Command Vehicle",
-            "Melee Weapon§Chimera—Armoured tracks",
-            "Ranged Weapon§Chimera—Lasgun array",
             {
               "item": "Ability§Transport",
               "text": "This model has a transport capacity of 12 Astra Militarum Infantry models. Each Heavy Weapons Team model and  Veteran Heavy Weapons Team model takes up the space of 2 models. Each Ogryn model takes up the space of 3 models. It cannot transport Artillery models."
-            }
+            },
+            "Melee Weapon§Chimera—Armoured tracks",
+            "Ranged Weapon§Chimera—Lasgun array"
           ]
         },
         "keywords": {
@@ -51259,129 +50984,14 @@
           ]
         },
         "stats": {
-          "Hull Weapon": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Heavy bolter": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chimera—Heavy bolter"
-                  }
-                ]
-              },
-              "Heavy flamer": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chimera—Heavy flamer"
-                  }
-                ]
-              }
-            },
-            "statOrder": 2,
-            "statType": "rank",
-            "value": "Heavy bolter",
-            "visibility": "normal"
-          },
-          "Hunter-Killer": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1,
-                "tracking": {},
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chimera—Hunter-killer missile"
-                  }
-                ]
-              }
-            },
-            "statOrder": 4,
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
           "Ld": {
             "value": 7
           },
           "M": {
             "value": 10
           },
-          "Main Weapon": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Chimera multi-laser": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chimera—Chimera multi-laser"
-                  }
-                ]
-              },
-              "Chimera heavy bolter": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chimera—Chimera heavy bolter"
-                  }
-                ]
-              },
-              "Chimera heavy flamer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chimera—Chimera heavy flamer"
-                  }
-                ]
-              }
-            },
-            "statOrder": 1,
-            "statType": "rank",
-            "value": "Chimera multi-laser",
-            "visibility": "normal"
-          },
           "OC": {
             "value": 2
-          },
-          "Pintle Weapon": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Heavy stubber": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chimera—Heavy stubber"
-                  }
-                ]
-              },
-              "Storm bolter": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chimera—Storm bolter"
-                  }
-                ]
-              }
-            },
-            "statOrder": 3,
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
           },
           "Points": {
             "value": 85
@@ -51400,6 +51010,116 @@
           },
           "unitDiscountThreshold": {
             "value": 4
+          },
+          "Main Weapon": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Multi-laser": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chimera—Multi-laser"
+                  }
+                ]
+              },
+              "Heavy Bolter": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chimera—Heavy bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chimera—Heavy flamer"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Multi-laser",
+            "visibility": "active"
+          },
+          "Hull Weapon": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Heavy Bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chimera—Heavy bolter"
+                  }
+                ]
+              },
+              "Heavy Flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chimera—Heavy flamer"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Heavy Bolter",
+            "visibility": "active"
+          },
+          "Pintle Weapon": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Heavy Stubber": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chimera—Heavy stubber"
+                  }
+                ]
+              },
+              "Storm Bolter": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chimera—Storm bolter"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
+          },
+          "Hunter-Killer": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chimera—Hunter-killer missile"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
           }
         }
       },
@@ -58778,11 +58498,11 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Militarum multi-laser": {
+              "Multi-laser": {
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Valkyrie—Militarum multi-laser"
+                    "trait": "Ranged Weapon§Valkyrie—Multi-laser"
                   }
                 ]
               },
@@ -58796,7 +58516,7 @@
               }
             },
             "statType": "rank",
-            "value": "Militarum multi-laser",
+            "value": "Multi-laser",
             "visibility": "active"
           },
           "OC": {
@@ -59431,7 +59151,7 @@
         "text": "At the start of your Command phase, if the bearer’s unit is below its Starting Strength, you can return up to D3 destroyed Death Korps Troopers to this unit (if this unit contains two models equipped with a Death Korps medi-pack, return up to D3+1 destroyed Death Korps Troopers to this unit instead)."
       },
       "Wargear§Defence Searchlight": {
-        "text": "At the start of your Shooting phase, you can select one enemy unit within 24″ and visible to the bearer. Until the end of the phase, that unit cannot have the Benefit of Cover."
+        "text": "At the start of your Shooting phase, you can select one enemy unit within 24\" and visible to the bearer. Until the end of the phase, that unit cannot have the Benefit of Cover."
       },
       "Wargear§Demolition Gear": {
         "stats": {
@@ -61569,8 +61289,6 @@
             "Ability§Trapped by Excuses",
             "Ability§Psychic Blank",
             "Ability§Unparalleled Luck",
-            "Ranged Weapon§Ciaphas Cain—Laspistols",
-            "Ranged Weapon§Ciaphas Cain—Meltagun",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -61578,7 +61296,10 @@
                   "value": "5+"
                 }
               }
-            }
+            },
+            "Melee Weapon§Ciaphas Cain—Chainsword and Gun But",
+            "Ranged Weapon§Ciaphas Cain—Laspistols",
+            "Ranged Weapon§Ciaphas Cain—Meltagun"
           ]
         }
       },

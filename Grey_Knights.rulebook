@@ -1,6 +1,6 @@
 {
   "name": "Grey Knights 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -406,12 +406,21 @@
           "Points": {
             "value": 100
           },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 6
+          },
+          "W": {
+            "value": 6
+          },
           "Ranged Weapons": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Storm bolter": {
+              "Storm Bolter": {
                 "order": 0,
                 "traits": [
                   {
@@ -445,17 +454,8 @@
               }
             },
             "statType": "rank",
-            "value": "Incinerator",
+            "value": "Storm Bolter",
             "visibility": "active"
-          },
-          "Sv": {
-            "value": 2
-          },
-          "T": {
-            "value": 6
-          },
-          "W": {
-            "value": 6
           }
         }
       },

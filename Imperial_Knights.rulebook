@@ -1,6 +1,6 @@
 {
   "name": "Imperial Knights 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -3719,7 +3719,9 @@
         },
         "assets": {
           "traits": [
-            "Ability§Lone Operative"
+            "Ability§Lone Operative",
+            "Ranged Weapon§Sir Hekhtur—Hekhtur’s pistol",
+            "Melee Weapon§Sir Hekhtur—Close combat weapon"
           ]
         }
       },
@@ -3777,43 +3779,6 @@
           "D": {
             "value": 1
           }
-        }
-      },
-      "Ranged Weapon§Canis Rex—Questoris multi-laser": {
-        "aspects": {
-          "Label": "Questoris multi-laser"
-        },
-        "stats": {
-          "Range": {
-            "value": 36
-          },
-          "A": {
-            "value": 4
-          },
-          "BS": {
-            "value": 2
-          },
-          "S": {
-            "value": 6
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
         }
       },
       "Ranged Weapon§Tech-priest Dominus (Knights)—Phosphor serpenta": {

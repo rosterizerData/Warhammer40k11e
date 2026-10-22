@@ -1,6 +1,6 @@
 {
   "name": "Adeptus Custodes 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2063,46 +2063,6 @@
           "Ld": {
             "value": 6
           },
-          "Loadout Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Executioner greatblade": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Knight-centura—Executioner greatblade"
-                  }
-                ]
-              },
-              "Master-crafted boltgun": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Knight-centura—Master-crafted boltgun"
-                  },
-                  {
-                    "trait": "Melee Weapon§Knight Centura—Close combat weapon"
-                  }
-                ]
-              },
-              "Witchseeker flamer": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Knight-centura—Witchseeker flamer"
-                  },
-                  {
-                    "trait": "Melee Weapon§Knight Centura—Close combat weapon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Executioner greatblade",
-            "visibility": "active"
-          },
           "M": {
             "value": 7
           },
@@ -2120,6 +2080,46 @@
           },
           "W": {
             "value": 4
+          },
+          "Loadout Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Executioner Greatblade": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Knight-centura—Executioner greatblade"
+                  }
+                ]
+              },
+              "Master-crafted Boltgun & Gun Stock": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Knight-centura—Master-crafted boltgun"
+                  },
+                  {
+                    "trait": "Melee Weapon§Knight-centura—Gun Stock"
+                  }
+                ]
+              },
+              "Master-crafted Flamer & Gun Stock": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Knight-centura—Master-crafted Flamer"
+                  },
+                  {
+                    "trait": "Melee Weapon§Knight-centura—Gun Stock"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Executioner Greatblade",
+            "visibility": "active"
           }
         }
       },
@@ -2179,62 +2179,6 @@
           "Points": {
             "value": 110
           },
-          "Spear Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Guardian spear": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Weapon§Shield-captain—Guardian spear"
-                  }
-                ]
-              },
-              "Castellan axe": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Shield-captain—Castellan axe"
-                  }
-                ]
-              },
-              "Sentinel blade": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Weapon§Shield-captain—Sentinel blade"
-                  }
-                ]
-              },
-              "Sentinel blade & Praesidium Shield": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Weapon§Shield-captain—Sentinel blade"
-                  },
-                  {
-                    "trait": "Wargear§Praesidium Shield"
-                  }
-                ]
-              },
-              "Pyrithite spear & Praesidium Shield": {
-                "order": 4,
-                "traits": [
-                  {
-                    "trait": "Weapon§Shield-captain—Pyrithite spear"
-                  },
-                  {
-                    "trait": "Wargear§Praesidium Shield"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Guardian spear",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 2
           },
@@ -2243,6 +2187,54 @@
           },
           "W": {
             "value": 8
+          },
+          "Spear Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Pyrithite Spear & Praesidium Shield": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Weapon§Shield-captain—Pyrithite spear"
+                  },
+                  {
+                    "trait": "Wargear§Praesidium Shield"
+                  }
+                ]
+              },
+              "Eternity-pattern Paragon Blade & Praesidium Shield": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Shield-captain—Eternity-pattern Paragon Blade"
+                  },
+                  {
+                    "trait": "Wargear§Praesidium Shield"
+                  }
+                ]
+              },
+              "Castellan Axe": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Weapon§Shield-captain—Castellan axe"
+                  }
+                ]
+              },
+              "Guardian Spear": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Weapon§Shield-captain—Guardian spear"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Pyrithite Spear & Praesidium Shield",
+            "visibility": "active"
           }
         }
       },
@@ -2355,11 +2347,11 @@
                 }
               }
             },
-            "Melee Weapon§Shield-captain on Dawneagle Jetbike—Interceptor lance",
             "Ability§Aquila Commander",
             "Ability§Aegis of the Emperor",
             "Ability§Deep Strike",
-            "Ability§Master of Ka’tahs"
+            "Ability§Master of Ka’tahs",
+            "Melee Weapon§Shield-captain on Dawneagle Jetbike—Interceptor lance"
           ]
         },
         "keywords": {
@@ -2394,32 +2386,6 @@
           "Points": {
             "value": 150
           },
-          "Ranged Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Vertus hurricane bolter": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Shield-captain on Dawneagle Jetbike—Vertus hurricane bolter"
-                  }
-                ]
-              },
-              "Salvo launcher": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Shield-captain on Dawneagle Jetbike—Salvo launcher"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Vertus hurricane bolter",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 2
           },
@@ -2428,6 +2394,32 @@
           },
           "W": {
             "value": 10
+          },
+          "Ranged Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Salvo Launcher": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Shield-captain on Dawneagle Jetbike—Salvo launcher"
+                  }
+                ]
+              },
+              "Hurricane Bolter": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Shield-captain on Dawneagle Jetbike—Hurricane Bolter"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Salvo Launcher",
+            "visibility": "active"
           }
         }
       },
@@ -2464,9 +2456,10 @@
                 }
               }
             },
-            "Weapon§Trajann Valoris—Eagle’s Scream",
             "Ability§Aquila Commander",
-            "Ability§Aegis of the Emperor"
+            "Ability§Aegis of the Emperor",
+            "Weapon§Trajann Valoris—Eagle’s Scream",
+            "Melee Weapon§Trajann Valoris—Watcher’s Axe"
           ]
         },
         "keywords": {
@@ -4877,32 +4870,6 @@
           }
         }
       },
-      "Melee Weapon§Allarus Custodians—Misericordia": {
-        "aspects": {
-          "Label": "Misericordia"
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Anathema Psykana Rhino—Armoured tracks": {
         "aspects": {
           "Label": "Armoured tracks"
@@ -4926,58 +4893,6 @@
           },
           "WS": {
             "value": 4
-          }
-        }
-      },
-      "Melee Weapon§Aquilon Terminators with Solarite Power Gauntlets—Solerite power gauntlet": {
-        "aspects": {
-          "Label": "Solerite power gauntlet"
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Aquilon Terminators with Solarite Power Gauntlets—Solerite power talon": {
-        "aspects": {
-          "Label": "Solerite power talon"
-        },
-        "stats": {
-          "A": {
-            "value": 7
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 7
-          },
-          "WS": {
-            "value": 2
           }
         }
       },
@@ -5150,64 +5065,6 @@
           }
         }
       },
-      "Melee Weapon§Contemptor-Achillus Dreadnought—Achillus dreadspear": {
-        "aspects": {
-          "Label": "Melee"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lance"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "format": "D6",
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 12
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Contemptor-Galatus Dreadnought—Galatus warblade": {
-        "aspects": {
-          "Label": "Melee"
-        },
-        "stats": {
-          "A": {
-            "value": 8
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Coronus Grav-carrier—Armoured hull": {
         "aspects": {
           "Label": "Armoured hull"
@@ -5260,32 +5117,6 @@
           }
         }
       },
-      "Melee Weapon§Custodian Guard Sodality with Adrasite Spears—Pyrithite spear": {
-        "aspects": {
-          "Label": "Melee"
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 7
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Custodian Guard Sodality—Guardian spear": {
         "aspects": {
           "Label": "Melee"
@@ -5306,58 +5137,6 @@
           },
           "S": {
             "value": 8
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Custodian Guard Sodality—Misericordia": {
-        "aspects": {
-          "Label": "Misericordia"
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Custodian Guard Sodality—Sentinel blade": {
-        "aspects": {
-          "Label": "Melee"
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
           },
           "WS": {
             "value": 2
@@ -5438,28 +5217,6 @@
           },
           "WS": {
             "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Knight Centura—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
           }
         }
       },
@@ -5569,32 +5326,6 @@
           },
           "WS": {
             "value": 4
-          }
-        }
-      },
-      "Melee Weapon§Prosecutor Squad—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 3
-          },
-          "WS": {
-            "value": 3
           }
         }
       },
@@ -5821,84 +5552,6 @@
           ]
         }
       },
-      "Melee Weapon§Shield-captain—Sentinel blade": {
-        "aspects": {
-          "Label": "Melee"
-        },
-        "stats": {
-          "A": {
-            "value": 7
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Telemon Heavy Dreadnought—Armoured feet": {
-        "aspects": {
-          "Label": "Armoured feet"
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 7
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Telemon Heavy Dreadnought—Telemon caestus": {
-        "aspects": {
-          "Label": "Telemon caestus"
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 12
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Trajann Valoris—Eagle’s Scream": {
         "aspects": {
           "Label": "Melee"
@@ -5945,89 +5598,6 @@
           },
           "S": {
             "value": 8
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Venatari with Verutum Lances—Tarsis buckler": {
-        "aspects": {
-          "Label": "Tarsis buckler"
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Venatari with Verutum Lances—Venatari lance": {
-        "aspects": {
-          "Label": "Melee"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lance"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 7
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Venerable Contemptor Dreadnought—Contemptor combat weapon": {
-        "aspects": {
-          "Label": "Contemptor combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 12
           },
           "WS": {
             "value": 2
@@ -6134,32 +5704,6 @@
           },
           "S": {
             "value": 5
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Witchseeker Squad—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 3
           },
           "WS": {
             "value": 3
@@ -6303,46 +5847,6 @@
           "OC": {
             "value": 2
           },
-          "Spear Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Guardian spear": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Weapon§Allarus Custodians—Guardian spear"
-                  }
-                ]
-              },
-              "Castellan axe": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Allarus Custodians—Castellan axe"
-                  }
-                ]
-              },
-              "Misericordia & Vexilla": {
-                "order": 2,
-                "tracking": {
-                  "Vexilla": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Allarus Custodians—Misericordia"
-                  },
-                  {
-                    "trait": "Wargear§Vexilla"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Guardian spear",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 2
           },
@@ -6351,6 +5855,56 @@
           },
           "W": {
             "value": 6
+          },
+          "Spear Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Guardian Spear": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Weapon§Allarus Custodians—Guardian spear"
+                  }
+                ]
+              },
+              "Castellan Axe": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Weapon§Allarus Custodians—Castellan axe"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Guardian Spear",
+            "visibility": "active"
+          },
+          "Vexilla": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Vexilla"
+                  }
+                ],
+                "tracking": {
+                  "vexilla": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
           }
         }
       },
@@ -6362,68 +5916,8 @@
           "M": {
             "value": 7
           },
-          "Melee Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Solerite power gauntlet": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Aquilon Terminators with Solarite Power Gauntlets—Solerite power gauntlet"
-                  }
-                ]
-              },
-              "Solerite power talon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Aquilon Terminators with Solarite Power Gauntlets—Solerite power talon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Solerite power gauntlet",
-            "visibility": "normal"
-          },
           "OC": {
             "value": 2
-          },
-          "Ranged Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Lastrum storm bolter": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Aquilon Terminators with Solarite Power Gauntlets—Lastrum storm bolter"
-                  }
-                ]
-              },
-              "Infernus firepike": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Aquilon Terminators with Solarite Power Gauntlets—Infernus firepike"
-                  }
-                ]
-              },
-              "Twin adrathic destructor": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Aquilon Terminators with Solarite Power Gauntlets—Twin adrathic destructor"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Lastrum storm bolter",
-            "visibility": "active"
           },
           "Sv": {
             "value": 2
@@ -6434,6 +5928,12 @@
           "W": {
             "value": 6
           }
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Aquilon Terminators with Solarite Power Gauntlets—Adrathic Combi-destructor",
+            "Melee Weapon§Aquilon Terminators with Solarite Power Gauntlets—Solarite Power Gauntlet"
+          ]
         }
       },
       "Model§Custodian Guard": {
@@ -6447,52 +5947,6 @@
           "OC": {
             "value": 3
           },
-          "Spear Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Guardian spear": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Weapon§Custodian Guard Sodality—Guardian spear"
-                  }
-                ]
-              },
-              "Sentinel blade & Praesidium Shield": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Custodian Guard Sodality—Sentinel blade"
-                  },
-                  {
-                    "trait": "Wargear§Praesidium Shield"
-                  }
-                ]
-              },
-              "Vexilla, Misercordia & Praesidium Shield": {
-                "order": 2,
-                "tracking": {
-                  "Vex": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Wargear§Praesidium Shield"
-                  },
-                  {
-                    "trait": "Melee Weapon§Custodian Guard Sodality—Misericordia"
-                  },
-                  {
-                    "trait": "Wargear§Vexilla"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Guardian spear",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 2
           },
@@ -6501,6 +5955,30 @@
           },
           "W": {
             "value": 5
+          },
+          "Vexilla": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Vexilla"
+                  }
+                ],
+                "tracking": {
+                  "vexilla": 1
+                }
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
           }
         },
         "assets": {
@@ -6512,7 +5990,8 @@
                   "value": "4+"
                 }
               }
-            }
+            },
+            "Weapon§Custodian Guard Sodality—Guardian spear"
           ]
         }
       },
@@ -6527,32 +6006,6 @@
           "OC": {
             "value": 3
           },
-          "Spear Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Adrasite spear": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Weapon§Custodian Guard Sodality with Adrasite Spears—Adrasite spear"
-                  }
-                ]
-              },
-              "Pyrithite spear": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Weapon§Custodian Guard Sodality with Adrasite Spears—Pyrithite spear"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Adrasite spear",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 2
           },
@@ -6562,6 +6015,11 @@
           "W": {
             "value": 5
           }
+        },
+        "assets": {
+          "traits": [
+            "Weapon§Custodian Guard Sodality with Adrasite Spears—Adrasite spear"
+          ]
         }
       },
       "Model§Custodian Warden": {
@@ -6676,7 +6134,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Prosecutor Squad—Boltgun",
-            "Melee Weapon§Prosecutor Squad—Close combat weapon"
+            "Melee Weapon§Prosecutor Squad—Gun Stock"
           ]
         },
         "stats": {
@@ -6704,7 +6162,7 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Prosecutor Squad—Boltgun",
-            "Melee Weapon§Prosecutor Squad—Close combat weapon"
+            "Melee Weapon§Prosecutor Squad—Gun Stock"
           ]
         },
         "stats": {
@@ -6769,38 +6227,6 @@
           "Ld": {
             "value": 5
           },
-          "Loadout Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Venatari lance": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Weapon§Venatari with Verutum Lances—Venatari lance"
-                  }
-                ]
-              },
-              "Kinetic destroyer & Tarsis buckler": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Venatari with Verutum Lances—Kinetic destroyer"
-                  },
-                  {
-                    "trait": "Wargear§Tarsis Buckler"
-                  },
-                  {
-                    "trait": "Melee Weapon§Venatari with Verutum Lances—Tarsis buckler"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Venatari lance",
-            "visibility": "active"
-          },
           "M": {
             "value": 12
           },
@@ -6816,6 +6242,12 @@
           "W": {
             "value": 5
           }
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Venatari with Verutum Lances—Verutum Lance",
+            "Melee Weapon§Venatari with Verutum Lances—Verutum Lance"
+          ]
         }
       },
       "Model§Vertus Praetor": {
@@ -6834,32 +6266,6 @@
           "OC": {
             "value": 2
           },
-          "Ranged Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Salvo launcher": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Vertus Praetors—Salvo launcher"
-                  }
-                ]
-              },
-              "Vertus hurricane bolter": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Vertus Praetors—Vertus hurricane bolter"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Salvo launcher",
-            "visibility": "active"
-          },
           "Sv": {
             "value": 2
           },
@@ -6868,6 +6274,32 @@
           },
           "W": {
             "value": 7
+          },
+          "Ranged Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Salvo Launcher": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Vertus Praetors—Salvo launcher"
+                  }
+                ]
+              },
+              "Hurricane Bolter": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Vertus Praetors—Hurricane Bolter"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Salvo Launcher",
+            "visibility": "active"
           }
         }
       },
@@ -6928,8 +6360,8 @@
       "Model§Witchseeker": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Witchseeker Squad—Witchseeker flamer",
-            "Melee Weapon§Witchseeker Squad—Close combat weapon"
+            "Ranged Weapon§Witchseeker Squad—Flamer",
+            "Melee Weapon§Witchseeker Squad—Gun Stock"
           ]
         },
         "stats": {
@@ -6956,8 +6388,8 @@
       "Model§Witchseeker Sister Superior": {
         "assets": {
           "traits": [
-            "Ranged Weapon§Witchseeker Squad—Witchseeker flamer",
-            "Melee Weapon§Witchseeker Squad—Close combat weapon"
+            "Ranged Weapon§Witchseeker Squad—Flamer",
+            "Melee Weapon§Witchseeker Squad—Gun Stock"
           ]
         },
         "stats": {
@@ -7256,106 +6688,6 @@
           }
         }
       },
-      "Ranged Weapon§Aquilon Terminators with Solarite Power Gauntlets—Infernus firepike": {
-        "aspects": {
-          "Label": "Infernus firepike"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 6
-          }
-        }
-      },
-      "Ranged Weapon§Aquilon Terminators with Solarite Power Gauntlets—Lastrum storm bolter": {
-        "aspects": {
-          "Label": "Lastrum storm bolter"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Aquilon Terminators with Solarite Power Gauntlets—Twin adrathic destructor": {
-        "aspects": {
-          "Label": "Twin adrathic destructor"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 6
-          }
-        }
-      },
       "Ranged Weapon§Ares Gunship—Arachnus heavy blaze cannon": {
         "aspects": {
           "Label": "Arachnus heavy blaze cannon"
@@ -7432,78 +6764,6 @@
         },
         "text": "Blinding Light: Each time a unit is hit by this weapon, it is blinded until the start of your next turn. While a unit is blinded, each time a model in that units makes an attack, subtract 1 from the Hit roll."
       },
-      "Ranged Weapon§Caladius Grav-tank—Twin arachnus heavy blaze cannon": {
-        "aspects": {
-          "Label": "Twin arachnus heavy blaze cannon"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -3
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "format": "D6",
-            "value": 2
-          },
-          "Range": {
-            "value": 48
-          },
-          "S": {
-            "value": 12
-          },
-          "Points": {
-            "value": 15
-          }
-        }
-      },
-      "Ranged Weapon§Caladius Grav-tank—Twin iliastus accelerator cannon": {
-        "aspects": {
-          "Label": "Twin iliastus accelerator cannon"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "4"
-                }
-              }
-            },
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "value": 48
-          },
-          "S": {
-            "value": 10
-          }
-        }
-      },
       "Ranged Weapon§Caladius Grav-tank—Twin lastrum bolt cannon": {
         "aspects": {
           "Label": "Twin lastrum bolt cannon"
@@ -7536,64 +6796,6 @@
           },
           "Range": {
             "value": 36
-          },
-          "S": {
-            "value": 6
-          }
-        }
-      },
-      "Ranged Weapon§Contemptor-Achillus Dreadnought—Achillus dreadspear": {
-        "aspects": {
-          "Label": "Ranged"
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 9
-          }
-        }
-      },
-      "Ranged Weapon§Contemptor-Achillus Dreadnought—Infernus incinerator": {
-        "aspects": {
-          "Label": "Infernus incinerator"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Torrent",
-            "Ability§Ignores Cover"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
           },
           "S": {
             "value": 6
@@ -7634,70 +6836,6 @@
           },
           "S": {
             "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Contemptor-Achillus Dreadnought—Twin adrathic destructor": {
-        "aspects": {
-          "Label": "Twin adrathic destructor"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 6
-          }
-        }
-      },
-      "Ranged Weapon§Contemptor-Galatus Dreadnought—Galatus warblade": {
-        "aspects": {
-          "Label": "Ranged"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent",
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 6
           }
         }
       },
@@ -7795,44 +6933,6 @@
           }
         }
       },
-      "Ranged Weapon§Custodian Guard Sodality with Adrasite Spears—Pyrithite spear": {
-        "aspects": {
-          "Label": "Ranged"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Melta",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -4
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "format": "D6",
-            "value": 0
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 9
-          }
-        }
-      },
       "Ranged Weapon§Custodian Guard Sodality—Guardian spear": {
         "aspects": {
           "Label": "Ranged"
@@ -7868,37 +6968,6 @@
           },
           "S": {
             "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Custodian Guard Sodality—Sentinel blade": {
-        "aspects": {
-          "Label": "Ranged"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Assault",
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
           }
         }
       },
@@ -8024,40 +7093,6 @@
           },
           "S": {
             "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Knight-centura—Witchseeker flamer": {
-        "aspects": {
-          "Label": "Witchseeker flamer"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "format": "{t}",
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
           }
         }
       },
@@ -8420,44 +7455,6 @@
           }
         }
       },
-      "Ranged Weapon§Shield-captain on Dawneagle Jetbike—Vertus hurricane bolter": {
-        "aspects": {
-          "Label": "Vertus hurricane bolter"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "3"
-                }
-              }
-            },
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 18
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
       "Ranged Weapon§Shield-captain—Castellan axe": {
         "aspects": {
           "Label": "Ranged"
@@ -8573,37 +7570,6 @@
           }
         }
       },
-      "Ranged Weapon§Shield-captain—Sentinel blade": {
-        "aspects": {
-          "Label": "Ranged"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Assault",
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
       "Ranged Weapon§Telemon Heavy Dreadnought—Arachnus storm cannon": {
         "aspects": {
           "Label": "Arachnus storm cannon"
@@ -8716,39 +7682,6 @@
           }
         }
       },
-      "Ranged Weapon§Telemon Heavy Dreadnought—Twin plasma projector": {
-        "aspects": {
-          "Label": "Twin plasma projector"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Torrent",
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 7
-          }
-        }
-      },
       "Ranged Weapon§Trajann Valoris—Eagle’s Scream": {
         "aspects": {
           "Label": "Ranged"
@@ -8822,74 +7755,6 @@
           },
           "S": {
             "value": 6
-          }
-        }
-      },
-      "Ranged Weapon§Venatari with Verutum Lances—Kinetic destroyer": {
-        "aspects": {
-          "Label": "Kinetic destroyer"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Pistol",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 6
-          }
-        }
-      },
-      "Ranged Weapon§Venatari with Verutum Lances—Venatari lance": {
-        "aspects": {
-          "Label": "Ranged"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Assault"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
           }
         }
       },
@@ -9204,40 +8069,6 @@
           },
           "Range": {
             "value": 18
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Witchseeker Squad—Witchseeker flamer": {
-        "aspects": {
-          "Label": "Witchseeker flamer"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "format": "{t}",
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
           },
           "S": {
             "value": 4
@@ -10168,112 +8999,8 @@
           "rules": {}
         },
         "rules": {
-          "applyVexilla": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "traits",
-                    "item",
-                    "Model§Allarus Custodian",
-                    "quantity"
-                  ]
-                ],
-                "value": [
-                  "{this}",
-                  "evals",
-                  "0",
-                  "result",
-                  "integer"
-                ]
-              },
-              {
-                "actionType": "add",
-                "iterations": [
-                  "{self}",
-                  "stats",
-                  "Vexilla",
-                  "value"
-                ],
-                "paths": [
-                  [
-                    "{self}",
-                    "traits"
-                  ]
-                ],
-                "value": {
-                  "item": "Model§Allarus Custodian",
-                  "stats": {
-                    "Spear Options": {
-                      "dynamic": false,
-                      "value": "Misericordia & Vexilla"
-                    }
-                  }
-                }
-              },
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "assets",
-                    "classification",
-                    [
-                      "Character",
-                      "Model"
-                    ],
-                    "stats",
-                    "OC",
-                    "value"
-                  ]
-                ],
-                "prepend": " ",
-                "value": 1
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "equation": {
-                  "operator": "T*O",
-                  "value": -1
-                },
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Vexilla",
-                    "value"
-                  ]
-                ],
-                "value": 0
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 150
-          },
           "Maximum 1 Vexilla": {
             "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tracked",
-                    "Vexilla"
-                  ]
-                ]
-              },
               {
                 "actionable": true,
                 "max": 1,
@@ -10283,12 +9010,12 @@
                   [
                     "{self}",
                     "tracked",
-                    "Vexilla"
+                    "vexilla"
                   ]
                 ]
               }
             ],
-            "evaluate": "OR",
+            "evaluate": "AND",
             "failState": "error"
           }
         },
@@ -10336,17 +9063,6 @@
           },
           "Points": {
             "value": 160
-          },
-          "Vexilla": {
-            "dynamic": true,
-            "group": "Loadout",
-            "increment": {
-              "value": 1
-            },
-            "max": 1,
-            "statType": "numeric",
-            "value": 0,
-            "visibility": "normal"
           },
           "unitDiscount": {
             "value": 40
@@ -10658,11 +9374,11 @@
                 }
               }
             },
-            "Ranged Weapon§Caladius Grav-tank—Twin lastrum bolt cannon",
-            "Melee Weapon§Caladius Grav-tank—Armoured hull",
             "Ability§Aegis of the Emperor",
             "Ability§Deep Strike",
-            "Ability§Destructor Optics"
+            "Ability§Destructor Optics",
+            "Melee Weapon§Caladius Grav-tank—Armoured hull",
+            "Ranged Weapon§Caladius Grav-tank—Iliastus Accelerator Cannon"
           ]
         },
         "keywords": {
@@ -10689,32 +9405,6 @@
           "Ld": {
             "value": 5
           },
-          "Loadout Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Twin iliastus accelerator cannon": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Caladius Grav-tank—Twin iliastus accelerator cannon"
-                  }
-                ]
-              },
-              "Twin arachnus heavy blaze cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Caladius Grav-tank—Twin arachnus heavy blaze cannon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Twin iliastus accelerator cannon",
-            "visibility": "active"
-          },
           "M": {
             "value": 10
           },
@@ -10738,8 +9428,35 @@
           },
           "W": {
             "value": 14
+          },
+          "Loadout Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Twin Lastrum Bolt Cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Caladius Grav-tank—Twin lastrum bolt cannon"
+                  }
+                ]
+              },
+              "Twin Neutronium Cascade Projectors": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Caladius Grav-tank—Twin Neutronium Cascade Projectors"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Twin Lastrum Bolt Cannon",
+            "visibility": "active"
           }
-        }
+        },
+        "text": "WARNING: loadout — Whether the costed Twin Arachnus Heavy Blaze Cannon option (15 pts in the MFM) still exists couldn’t be determined; it is not offered."
       },
       "Unit§Contemptor-Achillus Dreadnought": {
         "aspects": {
@@ -10756,7 +9473,6 @@
                 }
               }
             },
-            "Weapon§Contemptor-Achillus Dreadnought—Achillus dreadspear",
             "Ability§Aegis of the Emperor",
             {
               "item": "Ability§Damaged:",
@@ -10774,7 +9490,9 @@
                 }
               }
             },
-            "Ability§Unyielding Ancient (Contemptor-Achillus Dreadnought)"
+            "Ability§Unyielding Ancient (Contemptor-Achillus Dreadnought)",
+            "Ranged Weapon§Contemptor-Achillus Dreadnought—Dreadspear",
+            "Melee Weapon§Contemptor-Achillus Dreadnought—Dreadspear"
           ]
         },
         "keywords": {
@@ -10799,74 +9517,6 @@
           "Ld": {
             "value": 5
           },
-          "Loadout 1": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Infernus incinerator": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Contemptor-Achillus Dreadnought—Infernus incinerator"
-                  }
-                ]
-              },
-              "Lastrum storm bolter": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Contemptor-Achillus Dreadnought—Lastrum storm bolter"
-                  }
-                ]
-              },
-              "Twin adrathic destructor": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Contemptor-Achillus Dreadnought—Twin adrathic destructor"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Infernus incinerator",
-            "visibility": "active"
-          },
-          "Loadout 2": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Infernus incinerator": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Contemptor-Achillus Dreadnought—Infernus incinerator"
-                  }
-                ]
-              },
-              "Lastrum storm bolter": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Contemptor-Achillus Dreadnought—Lastrum storm bolter"
-                  }
-                ]
-              },
-              "Twin adrathic destructor": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Contemptor-Achillus Dreadnought—Twin adrathic destructor"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Infernus incinerator",
-            "visibility": "active"
-          },
           "M": {
             "value": 9
           },
@@ -10890,6 +9540,49 @@
           },
           "W": {
             "value": 12
+          },
+          "Loadout": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "2 Lastrum Storm Bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Contemptor-Achillus Dreadnought—Lastrum storm bolter"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Contemptor-Achillus Dreadnought—Lastrum storm bolter"
+                  }
+                ]
+              },
+              "2 Adrathic Combi-destructor": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Contemptor-Achillus Dreadnought—Adrathic Combi-destructor"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Contemptor-Achillus Dreadnought—Adrathic Combi-destructor"
+                  }
+                ]
+              },
+              "2 Twin Infernus Incinerator": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Contemptor-Achillus Dreadnought—Twin Infernus Incinerator"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Contemptor-Achillus Dreadnought—Twin Infernus Incinerator"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "2 Lastrum Storm Bolter",
+            "visibility": "active"
           }
         }
       },
@@ -10908,7 +9601,6 @@
                 }
               }
             },
-            "Weapon§Contemptor-Galatus Dreadnought—Galatus warblade",
             "Ability§Aegis of the Emperor",
             {
               "item": "Ability§Damaged:",
@@ -10926,7 +9618,9 @@
                 }
               }
             },
-            "Ability§Unyielding Ancient (Contemptor-Galatus Dreadnought)"
+            "Ability§Unyielding Ancient (Contemptor-Galatus Dreadnought)",
+            "Ranged Weapon§Contemptor-Galatus Dreadnought—Warblade",
+            "Melee Weapon§Contemptor-Galatus Dreadnought—Warblade"
           ]
         },
         "keywords": {
@@ -11011,13 +9705,12 @@
               "item": "Ability§Transport",
               "text": "This model has a transport capacity of 8 Adeptus Custodes Infantry models."
             },
-            "Ranged Weapon§Coronus Grav-carrier—Twin arachnus blaze cannon",
-            "Ranged Weapon§Coronus Grav-carrier—Twin lastrum bolt cannon",
-            "Melee Weapon§Coronus Grav-carrier—Armoured hull",
             "Ability§Aegis of the Emperor",
             "Ability§Deep Strike",
             "Ability§Repulsor Suspensor Technology",
-            "Ability§Assault Vehicle"
+            "Ability§Assault Vehicle",
+            "Melee Weapon§Coronus Grav-carrier—Armoured hull",
+            "Ranged Weapon§Coronus Grav-carrier—Twin arachnus blaze cannon"
           ]
         },
         "keywords": {
@@ -11067,6 +9760,32 @@
           },
           "W": {
             "value": 16
+          },
+          "Loadout Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Twin Lastrum Bolt Cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Coronus Grav-carrier—Twin lastrum bolt cannon"
+                  }
+                ]
+              },
+              "Twin Neutronium Cascade Projectors": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Coronus Grav-carrier—Twin Neutronium Cascade Projectors"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Twin Lastrum Bolt Cannon",
+            "visibility": "active"
           }
         }
       },
@@ -11120,97 +9839,6 @@
           ]
         },
         "rules": {
-          "applyVexilla": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "traits",
-                    "item",
-                    "Model§Custodian Guard",
-                    "quantity"
-                  ]
-                ],
-                "value": [
-                  "{this}",
-                  "evals",
-                  "0",
-                  "result",
-                  "integer"
-                ]
-              },
-              {
-                "actionType": "add",
-                "iterations": [
-                  "{self}",
-                  "stats",
-                  "Vexilla",
-                  "value"
-                ],
-                "paths": [
-                  [
-                    "{self}",
-                    "traits"
-                  ]
-                ],
-                "value": {
-                  "item": "Model§Custodian Guard",
-                  "stats": {
-                    "Spear Options": {
-                      "dynamic": false,
-                      "value": "Vexilla, Misercordia & Praesidium Shield"
-                    }
-                  }
-                }
-              },
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "assets",
-                    "classification",
-                    [
-                      "Character",
-                      "Model"
-                    ],
-                    "stats",
-                    "OC",
-                    "value"
-                  ]
-                ],
-                "prepend": " ",
-                "value": 1
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "equation": {
-                  "operator": "T*O",
-                  "value": -1
-                },
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Vexilla",
-                    "value"
-                  ]
-                ],
-                "value": 0
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 150
-          },
           "costForFinalModel": {
             "actions": [
               {
@@ -11256,12 +9884,12 @@
                   [
                     "{self}",
                     "tracked",
-                    "Vex"
+                    "vexilla"
                   ]
                 ]
               }
             ],
-            "evaluate": "OR",
+            "evaluate": "AND",
             "failState": "error"
           }
         },
@@ -11295,17 +9923,6 @@
           },
           "unitDiscountThreshold": {
             "value": 4
-          },
-          "Vexilla": {
-            "dynamic": true,
-            "group": "Loadout",
-            "increment": {
-              "value": 1
-            },
-            "max": 1,
-            "statType": "numeric",
-            "value": 0,
-            "visibility": "normal"
           },
           "Custodian Guard": {
             "max": 5,
@@ -11656,8 +10273,6 @@
                 }
               }
             },
-            "Ranged Weapon§Pallas Grav-attack—Twin arachnus blaze cannon",
-            "Melee Weapon§Pallas Grav-attack—Armoured hull",
             "Ability§Aegis of the Emperor",
             {
               "item": "Ability§Deadly Demise",
@@ -11668,7 +10283,8 @@
               }
             },
             "Ability§Deep Strike",
-            "Ability§Mobile Hunter"
+            "Ability§Mobile Hunter",
+            "Melee Weapon§Pallas Grav-attack—Armoured hull"
           ]
         },
         "keywords": {
@@ -11711,6 +10327,32 @@
           },
           "W": {
             "value": 10
+          },
+          "Loadout Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Twin Arachnus Blaze Cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Pallas Grav-attack—Twin arachnus blaze cannon"
+                  }
+                ]
+              },
+              "Twin Iliastus Accelerator Fusil": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Pallas Grav-attack—Twin Iliastus Accelerator Fusil"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Twin Arachnus Blaze Cannon",
+            "visibility": "active"
           }
         }
       },
@@ -11954,9 +10596,8 @@
                 }
               }
             },
-            "Ranged Weapon§Telemon Heavy Dreadnought—Spiculus bolt launcher",
-            "Melee Weapon§Telemon Heavy Dreadnought—Armoured feet",
-            "Ability§Aegis of the Emperor"
+            "Ability§Aegis of the Emperor",
+            "Ranged Weapon§Telemon Heavy Dreadnought—Spiculus bolt launcher"
           ]
         },
         "keywords": {
@@ -11977,137 +10618,9 @@
             "Vehicle—Walker"
           ]
         },
-        "rules": {
-          "moreAttackif2Caestus": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "A",
-                    "value"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Loadout 1",
-                    "value"
-                  ]
-                ],
-                "value": "Telemon caestus & Twin plasma projector"
-              },
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Loadout 2",
-                    "value"
-                  ]
-                ],
-                "value": "Telemon caestus & Twin plasma projector"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "Ld": {
             "value": 5
-          },
-          "Loadout 1": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Iliastus accelerator culverin": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Telemon Heavy Dreadnought—Iliastus accelerator culverin"
-                  }
-                ]
-              },
-              "Arachnus storm cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Telemon Heavy Dreadnought—Arachnus storm cannon"
-                  }
-                ]
-              },
-              "Telemon caestus & Twin plasma projector": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Telemon Heavy Dreadnought—Twin plasma projector"
-                  },
-                  {
-                    "trait": "Melee Weapon§Telemon Heavy Dreadnought—Telemon caestus"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Iliastus accelerator culverin",
-            "visibility": "active"
-          },
-          "Loadout 2": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Iliastus accelerator culverin": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Telemon Heavy Dreadnought—Iliastus accelerator culverin"
-                  }
-                ]
-              },
-              "Arachnus storm cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Telemon Heavy Dreadnought—Arachnus storm cannon"
-                  }
-                ]
-              },
-              "Telemon caestus & Twin plasma projector": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Telemon Heavy Dreadnought—Twin plasma projector"
-                  },
-                  {
-                    "trait": "Melee Weapon§Telemon Heavy Dreadnought—Telemon caestus"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Iliastus accelerator culverin",
-            "visibility": "active"
           },
           "M": {
             "value": 10
@@ -12132,6 +10645,72 @@
           },
           "W": {
             "value": 14
+          },
+          "Loadout": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Dual Caestus Fists & 2 Twin Neutronium Cascade Projectors": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Telemon Heavy Dreadnought—Dual Caestus Fists"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Telemon Heavy Dreadnought—Twin Neutronium Cascade Projectors"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Telemon Heavy Dreadnought—Twin Neutronium Cascade Projectors"
+                  }
+                ]
+              },
+              "Adrathic Desolator & Caestus Fist & Twin Neutronium Cascade Projectors": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Telemon Heavy Dreadnought—Adrathic Desolator"
+                  },
+                  {
+                    "trait": "Melee Weapon§Telemon Heavy Dreadnought—Caestus Fist"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Telemon Heavy Dreadnought—Twin Neutronium Cascade Projectors"
+                  }
+                ]
+              },
+              "Arachnus Storm Cannon & Caestus Fist & Twin Neutronium Cascade Projectors": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Telemon Heavy Dreadnought—Arachnus storm cannon"
+                  },
+                  {
+                    "trait": "Melee Weapon§Telemon Heavy Dreadnought—Caestus Fist"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Telemon Heavy Dreadnought—Twin Neutronium Cascade Projectors"
+                  }
+                ]
+              },
+              "Caestus Fist & Iliastus Accelerator Culverin & Twin Neutronium Cascade Projectors": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Telemon Heavy Dreadnought—Caestus Fist"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Telemon Heavy Dreadnought—Iliastus accelerator culverin"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Telemon Heavy Dreadnought—Twin Neutronium Cascade Projectors"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Dual Caestus Fists & 2 Twin Neutronium Cascade Projectors",
+            "visibility": "active"
           }
         }
       },
@@ -12221,7 +10800,8 @@
           "unitDiscountThreshold": {
             "value": 3
           }
-        }
+        },
+        "text": "WARNING: loadout — Whether the costed Venatari Lance option (5 pts in the MFM) still exists couldn’t be determined; it is not offered."
       },
       "Unit§Venerable Contemptor Dreadnought": {
         "aspects": {
@@ -12240,7 +10820,7 @@
               }
             },
             "Ranged Weapon§Venerable Contemptor Dreadnought—Combi-bolter",
-            "Melee Weapon§Venerable Contemptor Dreadnought—Contemptor combat weapon",
+            "Melee Weapon§Venerable Contemptor Dreadnought—Contemptor Fist",
             "Ability§Aegis of the Emperor",
             {
               "item": "Ability§Damaged:",
@@ -12778,35 +11358,10 @@
             "failState": "pass"
           }
         },
-        "text": "Add 1 to the bearer’s Wounds characteristic."
-      },
-      "Wargear§Tarsis Buckler": {
-        "rules": {
-          "Ability": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "W",
-                    "value"
-                  ]
-                ],
-                "value": 1
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "text": "The bearer has a Wounds characteristic of 4."
+        "text": "Attacks allocated to this model have -1 **D**."
       },
       "Wargear§Vexilla": {
-        "text": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
+        "text": "- This unit has +1 **OC**.\n\n- This unit can ignore modifiers to this unit’s **Ld**."
       },
       "Weapon§Allarus Custodians—Castellan axe": {
         "aspects": {
@@ -12840,38 +11395,6 @@
           ]
         }
       },
-      "Weapon§Contemptor-Achillus Dreadnought—Achillus dreadspear": {
-        "aspects": {
-          "Label": "Achillus dreadspear"
-        },
-        "assets": {
-          "traits": [
-            "Melee Weapon§Contemptor-Achillus Dreadnought—Achillus dreadspear",
-            "Ranged Weapon§Contemptor-Achillus Dreadnought—Achillus dreadspear"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Weapon§Contemptor-Galatus Dreadnought—Galatus warblade": {
-        "aspects": {
-          "Label": "Galatus warblade"
-        },
-        "assets": {
-          "traits": [
-            "Melee Weapon§Contemptor-Galatus Dreadnought—Galatus warblade",
-            "Ranged Weapon§Contemptor-Galatus Dreadnought—Galatus warblade"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
       "Weapon§Custodian Guard Sodality with Adrasite Spears—Adrasite spear": {
         "aspects": {
           "Label": "Adrasite spear"
@@ -12888,22 +11411,6 @@
           ]
         }
       },
-      "Weapon§Custodian Guard Sodality with Adrasite Spears—Pyrithite spear": {
-        "aspects": {
-          "Label": "Pyrithite spear"
-        },
-        "assets": {
-          "traits": [
-            "Melee Weapon§Custodian Guard Sodality with Adrasite Spears—Pyrithite spear",
-            "Ranged Weapon§Custodian Guard Sodality with Adrasite Spears—Pyrithite spear"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
       "Weapon§Custodian Guard Sodality—Guardian spear": {
         "aspects": {
           "Label": "Guardian spear"
@@ -12912,22 +11419,6 @@
           "traits": [
             "Melee Weapon§Custodian Guard Sodality—Guardian spear",
             "Ranged Weapon§Custodian Guard Sodality—Guardian spear"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Weapon§Custodian Guard Sodality—Sentinel blade": {
-        "aspects": {
-          "Label": "Sentinel blade"
-        },
-        "assets": {
-          "traits": [
-            "Melee Weapon§Custodian Guard Sodality—Sentinel blade",
-            "Ranged Weapon§Custodian Guard Sodality—Sentinel blade"
           ]
         },
         "keywords": {
@@ -13048,22 +11539,6 @@
           ]
         }
       },
-      "Weapon§Shield-captain—Sentinel blade": {
-        "aspects": {
-          "Label": "Sentinel blade"
-        },
-        "assets": {
-          "traits": [
-            "Melee Weapon§Shield-captain—Sentinel blade",
-            "Ranged Weapon§Shield-captain—Sentinel blade"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
       "Weapon§Trajann Valoris—Eagle’s Scream": {
         "aspects": {
           "Label": "Eagle’s Scream"
@@ -13094,27 +11569,6 @@
           "Tags": [
             "Multi-weapon"
           ]
-        }
-      },
-      "Weapon§Venatari with Verutum Lances—Venatari lance": {
-        "aspects": {
-          "Label": "Venatari lance"
-        },
-        "assets": {
-          "traits": [
-            "Melee Weapon§Venatari with Verutum Lances—Venatari lance",
-            "Ranged Weapon§Venatari with Verutum Lances—Venatari lance"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 5
-          }
         }
       },
       "Detachment§Shadowkeepers": {
@@ -16288,6 +14742,32 @@
           },
           "OC": {
             "value": 2
+          },
+          "Ranged Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Lastrum Storm Bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Aquilon Terminators with Solarite Power Talons—Lastrum Storm Bolter"
+                  }
+                ]
+              },
+              "Infernus Firepike": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Aquilon Terminators with Solarite Power Talons—Infernus Firepike"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Lastrum Storm Bolter",
+            "visibility": "active"
           }
         },
         "assets": {
@@ -16296,8 +14776,6 @@
             "Ability§Martial Ka’tah",
             "Ability§Aegis of the Emperor",
             "Ability§Reap a Terrible Tally",
-            "Ranged Weapon§Aquilon Terminators with Solarite Power Talons—Lastrum Storm Bolter",
-            "Melee Weapon§Aquilon Terminators with Solarite Power Talons—Solarite Power Talon",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -16305,7 +14783,8 @@
                   "value": "4+"
                 }
               }
-            }
+            },
+            "Melee Weapon§Aquilon Terminators with Solarite Power Talons—Solarite Power Talon"
           ]
         },
         "aspects": {
@@ -16470,6 +14949,32 @@
           },
           "OC": {
             "value": 4
+          },
+          "Loadout Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Twin Lastrum Bolt Cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Caladius Annihilator Grav-Tank—Twin Lastrum Bolt Cannon"
+                  }
+                ]
+              },
+              "Twin Neutronium Cascade Projectors": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Caladius Annihilator Grav-Tank—Twin Neutronium Cascade Projectors"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Twin Lastrum Bolt Cannon",
+            "visibility": "active"
           }
         },
         "assets": {
@@ -16493,9 +14998,6 @@
             },
             "Ability§Aegis of the Emperor",
             "Ability§Advanced Firepower (Caladius Annihilator Grav-Tank)",
-            "Ranged Weapon§Caladius Annihilator Grav-Tank—Arachnus Blaze Carronade",
-            "Melee Weapon§Caladius Annihilator Grav-Tank—Armoured Hull",
-            "Ranged Weapon§Caladius Annihilator Grav-Tank—Twin Lastrum Bolt Cannon",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -16503,7 +15005,9 @@
                   "value": "5+"
                 }
               }
-            }
+            },
+            "Melee Weapon§Caladius Annihilator Grav-Tank—Armoured Hull",
+            "Ranged Weapon§Caladius Annihilator Grav-Tank—Arachnus Blaze Carronade"
           ]
         },
         "aspects": {
@@ -16702,7 +15206,9 @@
                   "value": "4+"
                 }
               }
-            }
+            },
+            "Ranged Weapon§Custodian Guard Sodality with Pyrithite Spears—Pyrithite Spear",
+            "Melee Weapon§Custodian Guard Sodality with Pyrithite Spears—Pyrithite Spear"
           ]
         },
         "aspects": {
@@ -16820,6 +15326,48 @@
           },
           "OC": {
             "value": 2
+          },
+          "Ranged Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Lastrum Bolt Cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Gyrfalcon Jetbike Sodality—Lastrum Bolt Cannon"
+                  }
+                ]
+              },
+              "Adrathic Devastator": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Gyrfalcon Jetbike Sodality—Adrathic Devastator"
+                  }
+                ]
+              },
+              "Arachnus Volley Cannon": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Gyrfalcon Jetbike Sodality—Arachnus Volley Cannon"
+                  }
+                ]
+              },
+              "Twin Corvae Las-pulser": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Gyrfalcon Jetbike Sodality—Twin Corvae Las-pulser"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Lastrum Bolt Cannon",
+            "visibility": "active"
           }
         },
         "assets": {
@@ -16828,8 +15376,6 @@
             "Ability§Martial Ka’tah",
             "Ability§Aegis of the Emperor",
             "Ability§Death Blow",
-            "Ranged Weapon§Gyrfalcon Jetbike Sodality—Lastrum Bolt Cannon",
-            "Melee Weapon§Gyrfalcon Jetbike Sodality—Solarite Power Lance",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -16837,7 +15383,8 @@
                   "value": "4+"
                 }
               }
-            }
+            },
+            "Melee Weapon§Gyrfalcon Jetbike Sodality—Solarite Power Lance"
           ]
         },
         "aspects": {
@@ -17051,6 +15598,27 @@
           },
           "OC": {
             "value": 3
+          },
+          "Vexilla": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Vexilla"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
           }
         },
         "assets": {
@@ -17059,7 +15627,6 @@
             "Ability§Aegis of the Emperor",
             "Ability§Martial Ka’tah",
             "Ability§Stand Vigil (Sentinel Guard Sodality)",
-            "Ranged Weapon§Sentinel Guard Sodality—Sentinel Blade",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -17067,7 +15634,11 @@
                   "value": "4+"
                 }
               }
-            }
+            },
+            "Wargear§Sentinel Guard Sodality—Praesidium Shield",
+            "Ranged Weapon§Sentinel Guard Sodality—Sentinel Blade",
+            "Melee Weapon§Sentinel Guard Sodality—Sentinel Blade",
+            "Wargear§Sentinel Guard Sodality—Praesidium Shield"
           ]
         },
         "aspects": {
@@ -17336,6 +15907,9 @@
       },
       "Ability§Dread Foe (Aquilon Terminators with Solarite Power Gauntlets)": {
         "text": "This unit’s melee attacks that target a unit (excluding **MONSTER**/**VEHICLE** units) have +1 **AP**."
+      },
+      "Wargear§Sentinel Guard Sodality—Praesidium Shield": {
+        "text": "Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to wound rolls."
       }
     },
     "gameModes": {},

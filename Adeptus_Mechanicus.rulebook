@@ -1,6 +1,6 @@
 {
   "name": "Adeptus Mechanicus 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1486,8 +1486,8 @@
                 }
               }
             },
-            "Melee Weapon§Tech-priest Dominus—Omnissian axe",
-            "Ability§Doctrina Imperatives"
+            "Ability§Doctrina Imperatives",
+            "Melee Weapon§Tech-priest Dominus—Omnissian axe"
           ]
         },
         "keywords": {
@@ -1513,30 +1513,48 @@
           "Ld": {
             "value": 7
           },
+          "M": {
+            "value": 6
+          },
+          "OC": {
+            "value": 1
+          },
+          "Points": {
+            "value": 60
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
           "Loadout Option 1": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Eradication ray": {
+              "Volkite Blaster": {
                 "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Tech-priest Dominus—Eradication ray"
-                  }
-                ]
-              },
-              "Volkite blaster": {
-                "order": 1,
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Tech-priest Dominus—Volkite blaster"
                   }
                 ]
+              },
+              "Eradication Ray": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Tech-priest Dominus—Eradication ray"
+                  }
+                ]
               }
             },
             "statType": "rank",
-            "value": "Eradication ray",
+            "value": "Volkite Blaster",
             "visibility": "active"
           },
           "Loadout Option 2": {
@@ -1563,25 +1581,7 @@
             },
             "statType": "rank",
             "value": "Macrostubber",
-            "visibility": "normal"
-          },
-          "M": {
-            "value": 6
-          },
-          "OC": {
-            "value": 1
-          },
-          "Points": {
-            "value": 60
-          },
-          "Sv": {
-            "value": 2
-          },
-          "T": {
-            "value": 4
-          },
-          "W": {
-            "value": 4
+            "visibility": "active"
           }
         }
       },
@@ -7385,7 +7385,7 @@
                     "trait": "Ranged Weapon§Serberys Sulphurhounds—Phosphor blast carbine"
                   },
                   {
-                    "trait": "Ranged Weapon§Serberys Sulphurhounds—Phosphor blast pistol"
+                    "trait": "Ranged Weapon§Serberys Sulphurhounds—Phosphor pistol"
                   }
                 ]
               },
@@ -7644,38 +7644,6 @@
           "Ld": {
             "value": 7
           },
-          "Loadout Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Flechette blaster & Taser Goad": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Sicarian Infiltrators—Flechette blaster"
-                  },
-                  {
-                    "trait": "Melee Weapon§Sicarian Infiltrators—Taser goad"
-                  }
-                ]
-              },
-              "Stubcarbine & Power Weapon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Sicarian Infiltrators—Stubcarbine"
-                  },
-                  {
-                    "trait": "Melee Weapon§Sicarian Infiltrators—Power weapon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Flechette blaster & Taser Goad",
-            "visibility": "active"
-          },
           "M": {
             "value": 8
           },
@@ -7690,6 +7658,38 @@
           },
           "W": {
             "value": 2
+          },
+          "Loadout Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Stubcarbine & Power Weapon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Sicarian Infiltrators—Stubcarbine"
+                  },
+                  {
+                    "trait": "Melee Weapon§Sicarian Infiltrators—Power weapon"
+                  }
+                ]
+              },
+              "Flechette Blaster & Taser Goad": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Sicarian Infiltrators—Flechette blaster"
+                  },
+                  {
+                    "trait": "Melee Weapon§Sicarian Infiltrators—Taser goad"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Stubcarbine & Power Weapon",
+            "visibility": "active"
           }
         }
       },
@@ -7698,38 +7698,6 @@
           "Ld": {
             "value": 7
           },
-          "Loadout Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Flechette blaster & Taser Goad": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Sicarian Infiltrators—Flechette blaster"
-                  },
-                  {
-                    "trait": "Melee Weapon§Sicarian Infiltrators—Taser goad"
-                  }
-                ]
-              },
-              "Stubcarbine & Power Weapon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Sicarian Infiltrators—Stubcarbine"
-                  },
-                  {
-                    "trait": "Melee Weapon§Sicarian Infiltrators—Power weapon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Flechette blaster & Taser Goad",
-            "visibility": "active"
-          },
           "M": {
             "value": 8
           },
@@ -7744,6 +7712,38 @@
           },
           "W": {
             "value": 2
+          },
+          "Loadout Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Stubcarbine & Power Weapon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Sicarian Infiltrators—Stubcarbine"
+                  },
+                  {
+                    "trait": "Melee Weapon§Sicarian Infiltrators—Power weapon"
+                  }
+                ]
+              },
+              "Flechette Blaster & Taser Goad": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Sicarian Infiltrators—Flechette blaster"
+                  },
+                  {
+                    "trait": "Melee Weapon§Sicarian Infiltrators—Taser goad"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Stubcarbine & Power Weapon",
+            "visibility": "active"
           }
         }
       },
@@ -7772,25 +7772,25 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Transonic blades": {
+              "Transonic Razor and Chordclaw": {
                 "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Sicarian Ruststalkers—Transonic blades"
-                  }
-                ]
-              },
-              "Transonic razor and chordclaw": {
-                "order": 1,
                 "traits": [
                   {
                     "trait": "Melee Weapon§Sicarian Ruststalkers—Transonic razor and chordclaw"
                   }
                 ]
+              },
+              "Transonic Blades": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Sicarian Ruststalkers—Transonic blades"
+                  }
+                ]
               }
             },
             "statType": "rank",
-            "value": "Transonic blades",
+            "value": "Transonic Razor and Chordclaw",
             "visibility": "active"
           }
         }
@@ -7820,25 +7820,25 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Transonic blades and chordclaw": {
+              "Transonic Razor and Chordclaw": {
                 "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Sicarian Ruststalkers—Transonic blades and chordclaw"
-                  }
-                ]
-              },
-              "Transonic razor and chordclaw": {
-                "order": 1,
                 "traits": [
                   {
                     "trait": "Melee Weapon§Sicarian Ruststalkers—Transonic razor and chordclaw"
                   }
                 ]
+              },
+              "Transonic Blades and Chordclaw": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Sicarian Ruststalkers—Transonic blades and chordclaw"
+                  }
+                ]
               }
             },
             "statType": "rank",
-            "value": "Transonic blades and chordclaw",
+            "value": "Transonic Razor and Chordclaw",
             "visibility": "active"
           }
         }
@@ -8084,57 +8084,29 @@
         }
       },
       "Model§Skitarii Vanguard Alpha": {
-        "assets": {
-          "traits": [
-            "Melee Weapon§Skitarii Vanguard—Close combat weapon"
-          ]
-        },
         "stats": {
-          "Optional Alpha Combat Weapon": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Skitarii Vanguard—Alpha combat weapon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
           "Ranged Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
             "ranks": {
-              "Mechanicus pistol": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Skitarii Vanguard—Mechanicus pistol"
-                  }
-                ]
-              },
               "Radium carbine": {
-                "order": 1,
+                "order": 0,
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Skitarii Vanguard—Radium carbine"
                   }
                 ]
+              },
+              "Mechanicus pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Skitarii Vanguard—Mechanicus pistol"
+                  }
+                ]
               }
             },
-            "statType": "rank",
-            "value": "Mechanicus pistol",
+            "value": "Radium carbine"
+          },
+          "Optional Alpha Combat Weapon": {
             "visibility": "active"
           }
         }
@@ -9919,38 +9891,6 @@
           }
         }
       },
-      "Ranged Weapon§Serberys Sulphurhounds—Phosphor blast pistol": {
-        "aspects": {
-          "Label": "Phosphor blast pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
       "Ranged Weapon§Serberys Sulphurhounds—Phosphor pistol": {
         "aspects": {
           "Label": "Phosphor pistol"
@@ -10014,38 +9954,6 @@
           },
           "S": {
             "value": 3
-          }
-        }
-      },
-      "Ranged Weapon§Serberys Sulphurhounds—Twin phosphor pistols": {
-        "aspects": {
-          "Label": "Twin phosphor pistols"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Pistol",
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
           }
         }
       },
@@ -12146,11 +12054,11 @@
             "Ability§Doctrina Imperatives",
             "Ability§Strafing Run",
             "Ranged Weapon§Archaeopter Stratoraptor—Cognis heavy stubber",
-            "Ranged Weapon§Archaeopter Stratoraptor—Heavy phosphor blaster",
-            "Melee Weapon§Archaeopter Stratoraptor—Armoured hull",
-            "Ranged Weapon§Archaeopter Stratoraptor—Twin cognis lascannon",
             "Ranged Weapon§Archaeopter Stratoraptor—Cognis heavy stubber",
-            "Ranged Weapon§Archaeopter Stratoraptor—Heavy phosphor blaster"
+            "Ranged Weapon§Archaeopter Stratoraptor—Heavy phosphor blaster",
+            "Ranged Weapon§Archaeopter Stratoraptor—Heavy phosphor blaster",
+            "Ranged Weapon§Archaeopter Stratoraptor—Twin cognis lascannon",
+            "Melee Weapon§Archaeopter Stratoraptor—Armoured hull"
           ]
         },
         "keywords": {
@@ -12200,25 +12108,25 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Chaff Launcher": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Wargear§Chaff Launcher"
-                  }
-                ]
-              },
               "Command Uplink": {
-                "order": 1,
+                "order": 0,
                 "traits": [
                   {
                     "trait": "Wargear§Command Uplink"
                   }
                 ]
+              },
+              "Chaff Launcher": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Chaff Launcher"
+                  }
+                ]
               }
             },
             "statType": "rank",
-            "value": "Chaff Launcher",
+            "value": "Command Uplink",
             "visibility": "active"
           }
         }
@@ -15215,7 +15123,7 @@
         "text": "Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
       },
       "Wargear§Chaff Launcher": {
-        "text": "The bearer has the Smoke keyword."
+        "text": "The bearer has the **SMOKE** keyword."
       },
       "Wargear§Command Uplink": {
         "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."

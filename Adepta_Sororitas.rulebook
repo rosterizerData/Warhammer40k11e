@@ -1,6 +1,6 @@
 {
   "name": "Adepta Sororitas 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -674,7 +674,7 @@
                   "value": [
                     "{self}",
                     "tally",
-                    "Chainsword"
+                    "Hallowed chainsword"
                   ]
                 },
                 "max": 0,
@@ -767,7 +767,7 @@
                   "value": [
                     "{self}",
                     "tally",
-                    "Chainsword"
+                    "Hallowed chainsword"
                   ]
                 },
                 "max": 0,
@@ -798,12 +798,12 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Chainsword": {
+              "Hallowed Chainsword": {
                 "order": 0,
                 "tracking": {},
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Canoness—Chainsword"
+                    "trait": "Melee Weapon§Canoness—Hallowed chainsword"
                   }
                 ]
               },
@@ -825,7 +825,7 @@
               }
             },
             "statType": "rank",
-            "value": "Chainsword",
+            "value": "Hallowed Chainsword",
             "visibility": "active"
           },
           "OC": {
@@ -4676,124 +4676,6 @@
           }
         }
       },
-      "Melee Weapon§Canoness—Blessed Halberd": {
-        "aspects": {
-          "Label": "Blessed Halberd"
-        },
-        "assets": {},
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Canoness—Chainsword": {
-        "aspects": {
-          "Label": "Chainsword"
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 3
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Canoness—Holy Eviscerator": {
-        "aspects": {
-          "Label": "Holy Eviscerator"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Canoness—Power Weapon": {
-        "aspects": {
-          "Label": "Blessed blade"
-        },
-        "assets": {},
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Canoness—Power weapon": {
         "aspects": {
           "Label": "Power weapon"
@@ -7118,32 +7000,6 @@
           "M": {
             "value": 6
           },
-          "Melee Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Anointed halberd": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Celestian Sacresants—Anointed halberd"
-                  }
-                ]
-              },
-              "Hallowed mace": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Celestian Sacresants—Hallowed mace"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Anointed halberd",
-            "visibility": "active"
-          },
           "OC": {
             "value": 1
           },
@@ -7156,6 +7012,32 @@
           },
           "W": {
             "value": 1
+          },
+          "Melee Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Hallowed Mace": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Celestian Sacresants—Hallowed mace"
+                  }
+                ]
+              },
+              "Anointed Halberd": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Celestian Sacresants—Anointed halberd"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Hallowed Mace",
+            "visibility": "active"
           }
         }
       },
@@ -8466,84 +8348,8 @@
           "M": {
             "value": 6
           },
-          "Melee Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Anointed halberd": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Celestian Sacresants—Anointed halberd"
-                  }
-                ]
-              },
-              "Hallowed mace": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Celestian Sacresants—Hallowed mace"
-                  }
-                ]
-              },
-              "Spear of the faithful": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Celestian Sacresants—Spear of the faithful"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Anointed halberd",
-            "visibility": "active"
-          },
           "OC": {
             "value": 1
-          },
-          "Pistol Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Bolt pistol": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Celestian Sacresants—Bolt pistol"
-                  }
-                ]
-              },
-              "Inferno pistol": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Celestian Sacresants—Inferno pistol"
-                  }
-                ]
-              },
-              "Plasma Pistol": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Celestian Sacresants—Plasma pistol"
-                  }
-                ]
-              },
-              "Ministorum hand flamer": {
-                "order": 3,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Celestian Sacresants—Ministorum hand flamer"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Bolt pistol",
-            "visibility": "normal"
           },
           "Points": {},
           "Sv": {
@@ -8554,6 +8360,82 @@
           },
           "W": {
             "value": 1
+          },
+          "Melee Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Hallowed Mace": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Celestian Sacresants—Hallowed mace"
+                  }
+                ]
+              },
+              "Anointed Halberd": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Celestian Sacresants—Anointed halberd"
+                  }
+                ]
+              },
+              "Spear of the Faithful": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Celestian Sacresants—Spear of the faithful"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Hallowed Mace",
+            "visibility": "active"
+          },
+          "Pistol Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Bolt Pistol": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Celestian Sacresants—Bolt pistol"
+                  }
+                ]
+              },
+              "Inferno Pistol": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Celestian Sacresants—Inferno pistol"
+                  }
+                ]
+              },
+              "Ministorum Hand Flamer": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Celestian Sacresants—Ministorum hand flamer"
+                  }
+                ]
+              },
+              "Plasma Pistol": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Celestian Sacresants—Plasma pistol"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Bolt Pistol",
+            "visibility": "active"
           }
         }
       },
@@ -9149,33 +9031,22 @@
           "OC": {
             "value": 1
           },
-          "Optional Banner": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Sacred Banner": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Wargear§Sacred Banner"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Sacred Banner",
-            "visibility": "normal"
+          "Points": {},
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 1
           },
           "Pistol Options": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Bolt pistol": {
+              "Bolt Pistol": {
                 "order": 0,
                 "traits": [
                   {
@@ -9193,18 +9064,29 @@
               }
             },
             "statType": "rank",
-            "value": "Bolt pistol",
+            "value": "Bolt Pistol",
             "visibility": "active"
           },
-          "Points": {},
-          "Sv": {
-            "value": 3
-          },
-          "T": {
-            "value": 3
-          },
-          "W": {
-            "value": 1
+          "Optional Banner": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Wargear§Sacred Banner"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
           }
         }
       },
@@ -9926,36 +9808,6 @@
           },
           "S": {
             "value": 8
-          }
-        }
-      },
-      "Ranged Weapon§Canoness—Ministorum hand flamer": {
-        "aspects": {
-          "Label": "Ministorum hand flamer"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Torrent",
-            "Ability§Pistol",
-            "Ability§Ignores Cover"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "D6",
-            "value": 0
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
           }
         }
       },
