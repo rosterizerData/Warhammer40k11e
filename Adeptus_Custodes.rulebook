@@ -1,6 +1,6 @@
 {
   "name": "Adeptus Custodes 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -8371,10 +8371,6 @@
               }
             },
             "value": "Imperium"
-          },
-          "Legends": {
-            "dynamic": false,
-            "visibility": "hidden"
           }
         }
       },
