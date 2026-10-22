@@ -1,6 +1,6 @@
 {
   "name": "Chaos 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -40689,11 +40689,20 @@
             "Ability§Dark Pacts",
             "Ability§Stabilisation Talons",
             "Model§Havoc Champion",
+            "Ability§Deep Strike",
             {
               "item": "Model§Havoc",
-              "quantity": 4
+              "quantity": 2
             },
-            "Ability§Deep Strike"
+            {
+              "item": "Model§Havoc",
+              "quantity": 2,
+              "stats": {
+                "Loadout Options": {
+                  "value": "Havoc lascannon"
+                }
+              }
+            }
           ]
         },
         "keywords": {
@@ -48507,8 +48516,8 @@
               "item": "Ability§Transport",
               "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Phobos, Gravis, Centurion, Terminator, Obliterator, Possessed or Tacticus models (excluding Tacticus Character models that began the battle attached to a non-Tacticus unit)."
             },
-            "Ranged Weapon§Terrax-pattern Termite—Terrax melta cutter",
-            "Melee Weapon§Terrax-pattern Termite—Termite drill"
+            "Melee Weapon§Terrax-pattern Termite—Termite drill",
+            "Ranged Weapon§Terrax-pattern Termite—Terrax melta cutter"
           ]
         },
         "keywords": {
@@ -48536,49 +48545,6 @@
           "Ld": {
             "value": 6
           },
-          "Loadout": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "2 Combi-bolters": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Terrax-pattern Termite—Combi-bolter"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Terrax-pattern Termite—Combi-bolter"
-                  }
-                ]
-              },
-              "2 Heavy flamers": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Terrax-pattern Termite—Heavy flamer"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Terrax-pattern Termite—Heavy flamer"
-                  }
-                ]
-              },
-              "2 Twin volkite chargers": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Terrax-pattern Termite—Twin volkite charger"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Terrax-pattern Termite—Twin volkite charger"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "2 Combi-bolters",
-            "visibility": "active"
-          },
           "M": {
             "value": 8
           },
@@ -48596,6 +48562,49 @@
           },
           "W": {
             "value": 14
+          },
+          "Loadout": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "2 Combi-weapon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Adeptus Astartes Armoury—Combi-weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Adeptus Astartes Armoury—Combi-weapon"
+                  }
+                ]
+              },
+              "2 Heavy Flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Heavy flamer"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Heavy flamer"
+                  }
+                ]
+              },
+              "2 Twin Volkite Charger": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Twin volkite charger"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Twin volkite charger"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "2 Combi-weapon",
+            "visibility": "active"
           }
         },
         "text": ""
@@ -55403,11 +55412,11 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Berzerker chainblade": {
+              "Chainblade": {
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Khorne Berzerkers—Berzerker chainblade"
+                    "trait": "Melee Weapon§Khorne Berzerkers—Chainblade"
                   }
                 ]
               },
@@ -55424,7 +55433,7 @@
               }
             },
             "statType": "rank",
-            "value": "Berzerker chainblade",
+            "value": "Chainblade",
             "visibility": "active"
           },
           "OC": {
@@ -55473,7 +55482,7 @@
       "Model§Khorne Berzerker Champion": {
         "assets": {
           "traits": [
-            "Melee Weapon§Khorne Berzerkers—Berzerker chainblade"
+            "Melee Weapon§Khorne Berzerkers—Chainblade"
           ]
         },
         "stats": {
@@ -56820,7 +56829,7 @@
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Plague Marines—Plague boltgun"
+                    "trait": "Ranged Weapon§Plague Marines—Boltgun"
                   }
                 ]
               },
@@ -56828,7 +56837,7 @@
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Plague Marines—Plague bolt pistol"
+                    "trait": "Ranged Weapon§Plague Marines—Bolt pistol"
                   }
                 ]
               },
@@ -56937,11 +56946,11 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Plague boltgun": {
+              "Boltgun": {
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Plague Marines—Plague boltgun"
+                    "trait": "Ranged Weapon§Plague Marines—Boltgun"
                   }
                 ]
               },
@@ -57029,7 +57038,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Plague Marines—Plague boltgun"
+                    "trait": "Ranged Weapon§Plague Marines—Boltgun"
                   },
                   {
                     "trait": "Wargear§Icon of Despair (Aura)"
@@ -57038,7 +57047,7 @@
               }
             },
             "statType": "rank",
-            "value": "Plague boltgun",
+            "value": "Boltgun",
             "visibility": "active"
           }
         }
@@ -57207,37 +57216,6 @@
             "format": "{t}",
             "statType": "term",
             "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Plague Marines—Plague bolt pistol": {
-        "aspects": {
-          "Label": "Bolt pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits",
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 2
           },
           "D": {
             "value": 1

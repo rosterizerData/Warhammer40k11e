@@ -1,6 +1,6 @@
 {
   "name": "Chaos Knights 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -3546,6 +3546,11 @@
         }
       },
       "Character§Knight Ruinator": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Knight Ruinator—Fellbore"
+          ]
+        },
         "stats": {
           "Points": {
             "value": 345
@@ -3553,14 +3558,16 @@
           "unitDiscount": {
             "value": 20
           }
+        },
+        "removed": {
+          "assets": {
+            "traits": [
+              "Melee Weapon§Knight Ruinator—Felbore"
+            ]
+          }
         }
       },
       "Character§Knight Tyrant": {
-        "stats": {
-          "Points": {
-            "value": 410
-          }
-        },
         "assets": {
           "traits": [
             {
@@ -3572,6 +3579,21 @@
               }
             }
           ]
+        },
+        "stats": {
+          "Points": {
+            "value": 410
+          },
+          "Weapons": {
+            "value": "Brimstone + Ectoplasma"
+          }
+        },
+        "removed": {
+          "assets": {
+            "traits": [
+              "Ability§Deadly Demise"
+            ]
+          }
         }
       },
       "Unit§War Dog Brigand": {

@@ -1,6 +1,6 @@
 {
   "name": "Chaos Space Marines 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2708,7 +2708,8 @@
                 }
               }
             },
-            "Melee Weapon§Chaos Lord on Juggernaut—Close combat weapon"
+            "Melee Weapon§Chaos Lord on Juggernaut—Close combat weapon",
+            "Melee Weapon§Chaos Lord on Juggernaut—Bladed horn"
           ]
         },
         "keywords": {
@@ -2847,7 +2848,7 @@
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Chaos Lord on Juggernaut—Plasma pistol – supercharge"
+                    "trait": "Ranged Weapon§Chaos Lord on Juggernaut—Plasma pistol"
                   }
                 ]
               },
@@ -12775,7 +12776,16 @@
             "Model§Havoc Champion",
             {
               "item": "Model§Havoc",
-              "quantity": 4
+              "quantity": 2
+            },
+            {
+              "item": "Model§Havoc",
+              "quantity": 2,
+              "stats": {
+                "Loadout Options": {
+                  "value": "Havoc lascannon"
+                }
+              }
             }
           ]
         },
@@ -18725,11 +18735,11 @@
                   }
                 ]
               },
-              "Cultist firearm": {
+              "Autogun": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Cultist Mob with firearms—Cultist firearm"
+                    "trait": "Ranged Weapon§Cultist Mob with firearms—Autogun"
                   },
                   {
                     "trait": "Melee Weapon§Cultist Mob with firearms—Close combat weapon"
@@ -18764,14 +18774,14 @@
                   }
                 ]
               },
-              "Cultist grenade launcher": {
+              "Grenade launcher": {
                 "order": 4,
                 "tracking": {
                   "grenade": 1
                 },
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Cultist Mob with firearms—Cultist grenade launcher"
+                    "trait": "Ranged Weapon§Cultist Mob with firearms—Grenade launcher"
                   },
                   {
                     "trait": "Melee Weapon§Cultist Mob with firearms—Close combat weapon"
@@ -19352,11 +19362,11 @@
                   }
                 ]
               },
-              "Cultist firearm": {
+              "Autogun": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Cultist Mob with firearms—Cultist firearm"
+                    "trait": "Ranged Weapon§Cultist Mob with firearms—Autogun"
                   },
                   {
                     "trait": "Melee Weapon§Cultist Mob with firearms—Close combat weapon"
@@ -29233,7 +29243,8 @@
                   "value": "5+"
                 }
               }
-            }
+            },
+            "Melee Weapon§Decimator—Armoured feet"
           ]
         },
         "keywords": {
@@ -30665,81 +30676,6 @@
           ]
         }
       },
-      "Ranged Weapon§Havocs—Plasma gun – standard": {
-        "aspects": {
-          "Label": "Plasma gun – Standard"
-        },
-        "stats": {
-          "Range": {
-            "value": 24
-          },
-          "A": {
-            "value": 1
-          },
-          "BS": {
-            "value": 3
-          },
-          "S": {
-            "value": 7
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        }
-      },
-      "Ranged Weapon§Havocs—Plasma gun – supercharge": {
-        "aspects": {
-          "Label": "Plasma gun – Supercharge"
-        },
-        "stats": {
-          "Range": {
-            "value": 24
-          },
-          "A": {
-            "value": 1
-          },
-          "BS": {
-            "value": 3
-          },
-          "S": {
-            "value": 8
-          },
-          "AP": {
-            "value": -3
-          },
-          "D": {
-            "value": 2
-          }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            },
-            "Ability§Hazardous"
-          ]
-        }
-      },
       "Ranged Weapon§Havocs—Plasma pistol – standard": {
         "aspects": {
           "Label": "Plasma pistol – Standard"
@@ -31456,7 +31392,8 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Terrax-pattern Termite—Combi-weapon – damnatus",
-            "Ranged Weapon§Terrax-pattern Termite—Combi-weapon – infernus"
+            "Ranged Weapon§Terrax-pattern Termite—Combi-weapon – infernus",
+            "Ranged Weapon§Terrax-pattern Termite—Combi-weapon – Purgatus"
           ]
         },
         "keywords": {
@@ -31922,6 +31859,45 @@
             "Chaos"
           ]
         },
+        "stats": {
+          "Loadout": {
+            "ranks": {
+              "2 Combi-weapon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Combi-weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Combi-weapon"
+                  }
+                ]
+              },
+              "2 Heavy Flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Heavy flamer"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Heavy flamer"
+                  }
+                ]
+              },
+              "2 Twin Volkite Charger": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Twin volkite charger"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Twin volkite charger"
+                  }
+                ]
+              }
+            }
+          }
+        },
         "assets": {
           "traits": [
             "Ability§Combat Doctrines"
@@ -31948,6 +31924,63 @@
           "Keywords": [
             "Chaos"
           ]
+        },
+        "stats": {
+          "Pintle Mount weapon": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Combi-weapon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Combi-weapon"
+                  }
+                ]
+              },
+              "Havoc launcher": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Havoc launcher"
+                  }
+                ]
+              },
+              "Heavy bolter": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy flamer": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Heavy Flamer"
+                  }
+                ]
+              },
+              "Multi-melta": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Adeptus Astartes Armoury—Multi-melta"
+                  }
+                ]
+              },
+              "Twin boltgun": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Twin boltgun"
+                  }
+                ]
+              }
+            }
+          }
         },
         "assets": {
           "traits": [
@@ -31983,8 +32016,16 @@
         },
         "assets": {
           "traits": [
+            "Melee Weapon§Rapier Carrier—Armoured Hull",
             "Ability§Combat Doctrines"
           ]
+        },
+        "removed": {
+          "assets": {
+            "traits": [
+              "Melee Weapon§Rapier Carrier—Close combat weapon"
+            ]
+          }
         }
       },
       "Vehicle§Typhon": {
@@ -32027,6 +32068,23 @@
           "OC": {
             "value": 0
           }
+        }
+      },
+      "Ranged Weapon§Kratos—Combi-weapon": {
+        "aspects": {
+          "Label": "Combi-weapon"
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Kratos—Combi-weapon – Damnatus",
+            "Ranged Weapon§Kratos—Combi-weapon – infernus",
+            "Ranged Weapon§Kratos—Combi-weapon – purgatus"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
         }
       }
     },

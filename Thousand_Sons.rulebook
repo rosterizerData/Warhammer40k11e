@@ -1,6 +1,6 @@
 {
   "name": "Thousand Sons 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1533,20 +1533,14 @@
         }
       },
       "Character§Sorcerer in Terminator Armour": {
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Scarab Occult Terminators"
-            },
-            "Ability§Empyric Guidance (psychic)",
-            "Ability§Marked By Fate (psychic)",
-            "Ability§Cabal of Sorcerers",
-            "Ranged Weapon§Sorcerer in Terminator Armour—Coruscating Flames"
+        "keywords": {
+          "Keywords": [
+            "Tzeentch",
+            "Sorcerer"
+          ],
+          "Faction": [
+            "Thousand Sons"
           ]
-        },
-        "aspects": {
-          "Label": "Sorcerer in Terminator Armour"
         },
         "stats": {
           "Points": {
@@ -1585,14 +1579,20 @@
             "value": 3
           }
         },
-        "keywords": {
-          "Keywords": [
-            "Tzeentch",
-            "Sorcerer"
-          ],
-          "Faction": [
-            "Thousand Sons"
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Leader",
+              "text": "This model can be attached to the following units:\n\n* Scarab Occult Terminators"
+            },
+            "Ability§Empyric Guidance (psychic)",
+            "Ability§Marked By Fate (psychic)",
+            "Ability§Cabal of Sorcerers",
+            "Ranged Weapon§Sorcerer in Terminator Armour—Gaze of Hate"
           ]
+        },
+        "aspects": {
+          "Label": "Sorcerer in Terminator Armour"
         }
       },
       "Character§Tzaangor Shaman": {
@@ -1614,7 +1614,7 @@
             },
             "Ability§Cabal of Sorcerers",
             "Ranged Weapon§Tzaangor Shaman—Baleful Devolution",
-            "Melee Weapon§Tzaangor Shaman—Shaman’s stave"
+            "Melee Weapon§Tzaangor Shaman—Force stave"
           ]
         },
         "keywords": {
@@ -4845,38 +4845,6 @@
           },
           "WS": {
             "value": 4
-          }
-        }
-      },
-      "Melee Weapon§Tzaangor Shaman—Shaman’s stave": {
-        "aspects": {
-          "Label": "Shaman’s stave"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Psychic"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 3
           }
         }
       },
@@ -9107,7 +9075,37 @@
         }
       },
       "Vehicle§Chaos Rhino": {
+        "keywords": {
+          "Keywords": [
+            "Tzeentch",
+            "Frame"
+          ],
+          "Faction": [
+            "Thousand Sons"
+          ]
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Transport",
+              "text": "This model has a transport capacity of 12 Thousand Sons Infantry models (excluding Terminator models)."
+            },
+            "Ability§Sorcerous Support"
+          ]
+        },
+        "aspects": {
+          "Label": "Chaos Rhino"
+        },
         "stats": {
+          "Points": {
+            "value": 90
+          },
+          "unitDiscount": {
+            "value": 10
+          },
+          "unitDiscountThreshold": {
+            "value": 4
+          },
           "Additional": {
             "dynamic": true,
             "group": "Loadout",
@@ -9116,7 +9114,7 @@
               "-": {
                 "order": 0
               },
-              "Inferno combi-bolter": {
+              "Inferno Combi-bolter": {
                 "order": 1,
                 "traits": [
                   {
@@ -9124,7 +9122,7 @@
                   }
                 ]
               },
-              "Inferno combi-weapon": {
+              "Inferno Combi-weapon": {
                 "order": 2,
                 "traits": [
                   {
@@ -9142,12 +9140,28 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "-": {
-                "order": 0
+              "Inferno Combi-bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chaos Rhino—Inferno combi-bolter"
+                  }
+                ]
               },
-              "✓": {
+              "Havoc Launcher": {
                 "order": 1,
                 "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chaos Rhino—Havoc launcher"
+                  }
+                ]
+              },
+              "Inferno Combi-bolter & Havoc Launcher": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chaos Rhino—Inferno combi-bolter"
+                  },
                   {
                     "trait": "Ranged Weapon§Chaos Rhino—Havoc launcher"
                   }
@@ -9155,51 +9169,20 @@
               }
             },
             "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
-          "Points": {
-            "value": 90
-          },
-          "unitDiscount": {
-            "value": 10
-          },
-          "unitDiscountThreshold": {
-            "value": 4
+            "value": "Inferno Combi-bolter",
+            "visibility": "active"
           }
         },
-        "keywords": {
-          "Faction": [
-            "Thousand Sons"
-          ],
-          "Keywords": [
-            "Tzeentch",
-            "Frame"
-          ]
-        },
-        "aspects": {
-          "Label": "Chaos Rhino"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Transport",
-              "text": "This model has a transport capacity of 12 Thousand Sons Infantry models (excluding Terminator models)."
-            },
-            "Ranged Weapon§Chaos Rhino—Inferno combi-bolter",
-            "Ability§Sorcerous Support"
-          ]
-        },
         "removed": {
-          "stats": {
-            "Loadout Options 1": {},
-            "Loadout Options 2": {}
-          },
           "assets": {
             "traits": [
               "Ability§Self Repair",
               "Ability§Transport"
             ]
+          },
+          "stats": {
+            "Loadout Options 1": {},
+            "Loadout Options 2": {}
           }
         }
       },
@@ -9416,9 +9399,7 @@
         "removed": {
           "stats": {
             "Combi Option": {},
-            "Havoc Launcher": {},
-            "unitDiscount": {},
-            "unitDiscountThreshold": {}
+            "Havoc Launcher": {}
           },
           "keywords": {
             "Source": [
@@ -9557,7 +9538,62 @@
         }
       },
       "Vehicle§Chaos Predator Annihilator": {
+        "keywords": {
+          "Keywords": [
+            "Tzeentch",
+            "Frame"
+          ],
+          "Faction": [
+            "Thousand Sons"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Ensorcelled Annihilation"
+          ]
+        },
+        "aspects": {
+          "Label": "Chaos Predator Annihilator"
+        },
         "stats": {
+          "Points": {
+            "value": 150
+          },
+          "Sponsons": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "2 Lascannon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chaos Predator Annihilator—Lascannon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Chaos Predator Annihilator—Lascannon"
+                  }
+                ]
+              },
+              "2 Inferno Heavy Bolter": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chaos Predator Annihilator—Inferno heavy bolter"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Chaos Predator Annihilator—Inferno heavy bolter"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
+          },
           "Additional": {
             "dynamic": true,
             "group": "Loadout",
@@ -9566,7 +9602,7 @@
               "-": {
                 "order": 0
               },
-              "Inferno combi-bolter": {
+              "Inferno Combi-bolter": {
                 "order": 1,
                 "traits": [
                   {
@@ -9574,7 +9610,7 @@
                   }
                 ]
               },
-              "Inferno combi-weapon": {
+              "Inferno Combi-weapon": {
                 "order": 2,
                 "traits": [
                   {
@@ -9604,85 +9640,21 @@
                 ]
               }
             },
-            "statOrder": 3,
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
-          "Points": {
-            "value": 150
-          },
-          "Sponsons": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "2 lascannons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chaos Predator Annihilator—Lascannon"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Chaos Predator Annihilator—Lascannon"
-                  }
-                ]
-              },
-              "2 inferno heavy bolters": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chaos Predator Annihilator—Inferno heavy bolter"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Chaos Predator Annihilator—Twin inferno heavy bolter"
-                  }
-                ]
-              }
-            },
             "statType": "rank",
             "value": "-",
             "visibility": "active"
-          },
-          "unitDiscount": {
-            "value": 10
-          },
-          "unitDiscountThreshold": {
-            "value": 3
           }
         },
-        "keywords": {
-          "Faction": [
-            "Thousand Sons"
-          ],
-          "Keywords": [
-            "Tzeentch",
-            "Frame"
-          ]
-        },
-        "aspects": {
-          "Label": "Chaos Predator Annihilator"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ensorcelled Annihilation"
-          ]
-        },
         "removed": {
-          "stats": {
-            "Combi Option": {},
-            "Havoc Launcher": {},
-            "Side Weapons": {},
-            "unitDiscount": {},
-            "unitDiscountThreshold": {}
-          },
           "assets": {
             "traits": [
               "Ability§Annihilator"
             ]
+          },
+          "stats": {
+            "Combi Option": {},
+            "Havoc Launcher": {},
+            "Side Weapons": {}
           }
         }
       },
@@ -9810,7 +9782,62 @@
         }
       },
       "Vehicle§Chaos Predator Destructor": {
+        "keywords": {
+          "Keywords": [
+            "Tzeentch",
+            "Frame"
+          ],
+          "Faction": [
+            "Thousand Sons"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Ensorcelled Destruction"
+          ]
+        },
+        "aspects": {
+          "Label": "Chaos Predator Destructor"
+        },
         "stats": {
+          "Points": {
+            "value": 150
+          },
+          "Sponsons": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "2 Lascannon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chaos Predator Destructor—Lascannon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Chaos Predator Destructor—Lascannon"
+                  }
+                ]
+              },
+              "2 Inferno Heavy Bolter": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chaos Predator Destructor—Inferno heavy bolter"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Chaos Predator Destructor—Inferno heavy bolter"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
+          },
           "Additional": {
             "dynamic": true,
             "group": "Loadout",
@@ -9819,7 +9846,7 @@
               "-": {
                 "order": 0
               },
-              "Inferno combi-bolter": {
+              "Inferno Combi-bolter": {
                 "order": 1,
                 "traits": [
                   {
@@ -9827,7 +9854,7 @@
                   }
                 ]
               },
-              "Inferno combi-weapon": {
+              "Inferno Combi-weapon": {
                 "order": 2,
                 "traits": [
                   {
@@ -9836,7 +9863,6 @@
                 ]
               }
             },
-            "statOrder": 2,
             "statType": "rank",
             "value": "-",
             "visibility": "active"
@@ -9858,85 +9884,21 @@
                 ]
               }
             },
-            "statOrder": 3,
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
-          "Points": {
-            "value": 150
-          },
-          "Sponsons": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "2 lascannons": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chaos Predator Destructor—Lascannon"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Chaos Predator Destructor—Lascannon"
-                  }
-                ]
-              },
-              "2 inferno heavy bolters": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chaos Predator Destructor—Inferno heavy bolter"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Chaos Predator Destructor—Inferno heavy bolter"
-                  }
-                ]
-              }
-            },
             "statType": "rank",
             "value": "-",
             "visibility": "active"
-          },
-          "unitDiscount": {
-            "value": 10
-          },
-          "unitDiscountThreshold": {
-            "value": 3
           }
         },
-        "keywords": {
-          "Faction": [
-            "Thousand Sons"
-          ],
-          "Keywords": [
-            "Tzeentch",
-            "Frame"
-          ]
-        },
-        "aspects": {
-          "Label": "Chaos Predator Destructor"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ensorcelled Destruction"
-          ]
-        },
         "removed": {
-          "stats": {
-            "Combi Option": {},
-            "Havoc Launcher": {},
-            "Side Weapons": {},
-            "unitDiscount": {},
-            "unitDiscountThreshold": {}
-          },
           "assets": {
             "traits": [
               "Ability§Destructor"
             ]
+          },
+          "stats": {
+            "Combi Option": {},
+            "Havoc Launcher": {},
+            "Side Weapons": {}
           }
         }
       },
@@ -10103,9 +10065,7 @@
         "removed": {
           "stats": {
             "Combi Option": {},
-            "Havoc Launcher": {},
-            "unitDiscount": {},
-            "unitDiscountThreshold": {}
+            "Havoc Launcher": {}
           }
         }
       },
@@ -10214,13 +10174,48 @@
         }
       },
       "Vehicle§Defiler": {
+        "keywords": {
+          "Keywords": [
+            "Tzeentch"
+          ],
+          "Faction": [
+            "Thousand Sons"
+          ]
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Deadly Demise",
+              "stats": {
+                "x": {
+                  "value": "D6"
+                }
+              }
+            },
+            "Ability§Destroyer of Futures",
+            {
+              "item": "Ability§Feel No Pain",
+              "stats": {
+                "x": {
+                  "value": "6+"
+                }
+              }
+            }
+          ]
+        },
         "stats": {
-          "Loadout 2": {
+          "Points": {
+            "value": 350
+          },
+          "unitDiscount": {
+            "value": 50
+          },
+          "Loadout 2 (11e)": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "2 Excruciator cannons": {
+              "2 Excruciator Cannon": {
                 "order": 0,
                 "traits": [
                   {
@@ -10231,7 +10226,7 @@
                   }
                 ]
               },
-              "2 Pyraflux magma cutters": {
+              "2 Pyraflux Magma Cutters": {
                 "order": 1,
                 "traits": [
                   {
@@ -10244,56 +10239,20 @@
               }
             },
             "statType": "rank",
-            "value": "2 Excruciator cannons",
-            "visibility": "normal"
-          },
-          "Points": {
-            "value": 350
-          },
-          "unitDiscount": {
-            "value": 50
-          },
-          "unitDiscountThreshold": {
-            "value": 2
+            "value": "2 Excruciator Cannon",
+            "visibility": "active",
+            "label": "Loadout 2"
           }
         },
-        "keywords": {
-          "Faction": [
-            "Thousand Sons"
-          ],
-          "Keywords": [
-            "Tzeentch"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Destroyer of Futures",
-            {
-              "item": "Ability§Feel No Pain",
-              "stats": {
-                "x": {
-                  "value": "6+"
-                }
-              }
-            },
-            {
-              "item": "Ability§Deadly Demise",
-              "stats": {
-                "x": {
-                  "value": "D6"
-                }
-              }
-            }
-          ]
-        },
         "removed": {
-          "stats": {
-            "Loadout 2": {}
-          },
           "assets": {
             "traits": [
+              "Ability§Deadly Demise",
               "Ability§Daemonforge"
             ]
+          },
+          "stats": {
+            "Loadout 2": {}
           }
         }
       },
@@ -11076,9 +11035,7 @@
         "removed": {
           "stats": {
             "Cannon Option": {},
-            "Jaw Option": {},
-            "unitDiscount": {},
-            "unitDiscountThreshold": {}
+            "Jaw Option": {}
           },
           "assets": {
             "traits": [
@@ -11883,44 +11840,6 @@
           }
         }
       },
-      "Ranged Weapon§Chaos Predator Annihilator—Twin inferno heavy bolter": {
-        "aspects": {
-          "Label": "Twin inferno heavy bolter"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
       "Ranged Weapon§Terrax-pattern Termite—Combi-weapon – damnatus": {
         "aspects": {
           "Label": "Combi-weapon – Damnatus"
@@ -12001,7 +11920,8 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Terrax-pattern Termite—Combi-weapon – damnatus",
-            "Ranged Weapon§Terrax-pattern Termite—Combi-weapon – infernus"
+            "Ranged Weapon§Terrax-pattern Termite—Combi-weapon – infernus",
+            "Ranged Weapon§Terrax-pattern Termite—Combi-weapon – Purgatus"
           ]
         },
         "keywords": {
@@ -12362,6 +12282,45 @@
           "traits": [
             "Ability§Combat Doctrines"
           ]
+        },
+        "stats": {
+          "Loadout": {
+            "ranks": {
+              "2 Combi-weapon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Combi-weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Combi-weapon"
+                  }
+                ]
+              },
+              "2 Heavy Flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Heavy flamer"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Heavy flamer"
+                  }
+                ]
+              },
+              "2 Twin Volkite Charger": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Twin volkite charger"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Twin volkite charger"
+                  }
+                ]
+              }
+            }
+          }
         }
       },
       "Ability§Combat Doctrines": {
@@ -12391,6 +12350,63 @@
           "traits": [
             "Ability§Combat Doctrines"
           ]
+        },
+        "stats": {
+          "Pintle Mount weapon": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Combi-weapon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Combi-weapon"
+                  }
+                ]
+              },
+              "Havoc launcher": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Havoc launcher"
+                  }
+                ]
+              },
+              "Heavy bolter": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy flamer": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Heavy Flamer"
+                  }
+                ]
+              },
+              "Multi-melta": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Multi-melta"
+                  }
+                ]
+              },
+              "Twin boltgun": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Twin boltgun"
+                  }
+                ]
+              }
+            }
+          }
         }
       },
       "Vehicle§Mastodon": {
@@ -12423,8 +12439,16 @@
         },
         "assets": {
           "traits": [
+            "Melee Weapon§Rapier Carrier—Armoured Hull",
             "Ability§Combat Doctrines"
           ]
+        },
+        "removed": {
+          "assets": {
+            "traits": [
+              "Melee Weapon§Rapier Carrier—Close combat weapon"
+            ]
+          }
         }
       },
       "Vehicle§Typhon": {

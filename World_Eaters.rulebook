@@ -1,6 +1,6 @@
 {
   "name": "World Eaters 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1088,7 +1088,7 @@
               }
             },
             "Ranged Weapon§Lord Invocatus—Bolt pistol",
-            "Melee Weapon§Lord Invocatus—Juggernaut’s bladed horn",
+            "Melee Weapon§Lord Invocatus—Bladed horn",
             "Melee Weapon§Lord Invocatus—Coward’s Bane",
             "Ability§Deep Strike",
             {
@@ -1281,7 +1281,7 @@
               }
             },
             "Melee Weapon§Lord on Juggernaut—Exalted chainblade",
-            "Melee Weapon§Lord on Juggernaut—Juggernaut’s bladed horn",
+            "Melee Weapon§Lord On Juggernaut—Bladed horn",
             "Ranged Weapon§Lord on Juggernaut—Plasma pistol"
           ]
         },
@@ -3740,38 +3740,6 @@
           }
         }
       },
-      "Melee Weapon§Lord Invocatus—Juggernaut’s bladed horn": {
-        "aspects": {
-          "Label": "Juggernaut’s bladed horn"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Extra Attacks",
-            "Ability§Lance"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
       "Melee Weapon§Slaughterbound—Lacerator and daemonic claw": {
         "aspects": {
           "Label": "Lacerator and daemonic claw"
@@ -3925,38 +3893,6 @@
           },
           "WS": {
             "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Lord on Juggernaut—Juggernaut’s bladed horn": {
-        "aspects": {
-          "Label": "Juggernaut’s bladed horn"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Extra Attacks",
-            "Ability§Lance"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 4
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 3
           }
         }
       },
@@ -5777,6 +5713,11 @@
             "Summoned"
           ]
         },
+        "assets": {
+          "traits": [
+            "Ability§Pact of Blood"
+          ]
+        },
         "stats": {
           "model2ndCost": {
             "value": 210
@@ -5802,11 +5743,6 @@
               "Ability§The Shadow of Chaos"
             ]
           }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Pact of Blood"
-          ]
         }
       },
       "Unit§Bloodletters": {
@@ -7283,7 +7219,35 @@
         }
       },
       "Vehicle§Chaos Rhino": {
+        "keywords": {
+          "Faction": [
+            "World Eaters"
+          ],
+          "Keywords": [
+            "Khorne",
+            "Frame"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Blessings of Khorne",
+            "Ability§Meet Any Challenge",
+            {
+              "item": "Ability§Transport",
+              "text": "This model has a transport capacity of 12 World Eaters Infantry models. It cannot transport Possessed or Terminator models."
+            }
+          ]
+        },
+        "aspects": {
+          "Label": "Chaos Rhino"
+        },
         "stats": {
+          "unitDiscount": {
+            "value": 10
+          },
+          "unitDiscountThreshold": {
+            "value": 4
+          },
           "Additional": {
             "dynamic": true,
             "group": "Loadout",
@@ -7318,12 +7282,28 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "-": {
-                "order": 0
+              "Combi-bolter": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chaos Rhino—Combi-bolter"
+                  }
+                ]
               },
-              "✓": {
+              "Havoc Launcher": {
                 "order": 1,
                 "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chaos Rhino—Havoc launcher"
+                  }
+                ]
+              },
+              "Combi-bolter & Havoc Launcher": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chaos Rhino—Combi-bolter"
+                  },
                   {
                     "trait": "Ranged Weapon§Chaos Rhino—Havoc launcher"
                   }
@@ -7331,52 +7311,20 @@
               }
             },
             "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
-          "Points": {
-            "value": 85
-          },
-          "unitDiscount": {
-            "value": 10
-          },
-          "unitDiscountThreshold": {
-            "value": 4
+            "value": "Combi-bolter",
+            "visibility": "active"
           }
         },
-        "keywords": {
-          "Faction": [
-            "World Eaters"
-          ],
-          "Keywords": [
-            "Khorne",
-            "Frame"
-          ]
-        },
-        "aspects": {
-          "Label": "Chaos Rhino"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blessings of Khorne",
-            "Ability§Meet Any Challenge",
-            {
-              "item": "Ability§Transport",
-              "text": "This model has a transport capacity of 12 World Eaters Infantry models. It cannot transport Possessed or Terminator models."
-            },
-            "Ranged Weapon§Chaos Rhino—Combi-bolter"
-          ]
-        },
         "removed": {
-          "stats": {
-            "Loadout Options 1": {},
-            "Loadout Options 2": {}
-          },
           "assets": {
             "traits": [
               "Ability§Self Repair",
               "Ability§Transport"
             ]
+          },
+          "stats": {
+            "Loadout Options 1": {},
+            "Loadout Options 2": {}
           }
         }
       },
@@ -7654,9 +7602,7 @@
         "removed": {
           "stats": {
             "Combi Option": {},
-            "Havoc Launcher": {},
-            "unitDiscount": {},
-            "unitDiscountThreshold": {}
+            "Havoc Launcher": {}
           },
           "keywords": {
             "Source": [
@@ -8004,9 +7950,7 @@
           "stats": {
             "Combi Option": {},
             "Havoc Launcher": {},
-            "Side Weapons": {},
-            "unitDiscount": {},
-            "unitDiscountThreshold": {}
+            "Side Weapons": {}
           },
           "assets": {
             "traits": [
@@ -8352,9 +8296,7 @@
           "stats": {
             "Combi Option": {},
             "Havoc Launcher": {},
-            "Side Weapons": {},
-            "unitDiscount": {},
-            "unitDiscountThreshold": {}
+            "Side Weapons": {}
           },
           "assets": {
             "traits": [
@@ -9198,6 +9140,23 @@
         }
       },
       "Vehicle§Helbrute": {
+        "keywords": {
+          "Faction": [
+            "World Eaters"
+          ],
+          "Keywords": [
+            "Khorne"
+          ]
+        },
+        "aspects": {
+          "Label": "Helbrute"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Blessings of Khorne",
+            "Ability§Frenzy (HB)"
+          ]
+        },
         "stats": {
           "M": {
             "value": 9
@@ -9218,15 +9177,15 @@
                   }
                 ]
               },
-              "Helbrute plasma cannon": {
+              "Plasma Cannon": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Helbrute—Helbrute plasma cannon"
+                    "trait": "Ranged Weapon§Helbrute—Plasma cannon"
                   }
                 ]
               },
-              "Twin autocannon": {
+              "Twin Autocannon": {
                 "order": 2,
                 "traits": [
                   {
@@ -9234,7 +9193,7 @@
                   }
                 ]
               },
-              "Twin inferno heavy bolter": {
+              "Twin Heavy Bolter": {
                 "order": 3,
                 "traits": [
                   {
@@ -9242,7 +9201,7 @@
                   }
                 ]
               },
-              "Twin lascannon": {
+              "Twin Lascannon": {
                 "order": 4,
                 "traits": [
                   {
@@ -9250,22 +9209,19 @@
                   }
                 ]
               },
-              "Helbrute fist": {
+              "Helbrute Fist": {
                 "order": 5,
-                "tracking": {
-                  "hbfist": 1
-                },
                 "traits": [
                   {
                     "trait": "Melee Weapon§Helbrute—Helbrute fist"
                   }
-                ]
+                ],
+                "tracking": {
+                  "hbfist": 1
+                }
               },
               "Helbrute fist with combi-bolter": {
                 "order": 6,
-                "tracking": {
-                  "hbfist": 1
-                },
                 "traits": [
                   {
                     "trait": "Melee Weapon§Helbrute—Helbrute fist"
@@ -9273,13 +9229,13 @@
                   {
                     "trait": "Ranged Weapon§Helbrute—Combi-bolter"
                   }
-                ]
+                ],
+                "tracking": {
+                  "hbfist": 1
+                }
               },
               "Helbrute fist with heavy flamer": {
                 "order": 7,
-                "tracking": {
-                  "hbfist": 1
-                },
                 "traits": [
                   {
                     "trait": "Melee Weapon§Helbrute—Helbrute fist"
@@ -9287,7 +9243,10 @@
                   {
                     "trait": "Ranged Weapon§Helbrute—Heavy flamer"
                   }
-                ]
+                ],
+                "tracking": {
+                  "hbfist": 1
+                }
               }
             },
             "statType": "rank",
@@ -9299,7 +9258,7 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Missile launcher": {
+              "Missile Launcher": {
                 "order": 0,
                 "traits": [
                   {
@@ -9307,7 +9266,7 @@
                   }
                 ]
               },
-              "Helbrute hammer": {
+              "Helbrute Hammer": {
                 "order": 1,
                 "traits": [
                   {
@@ -9315,7 +9274,7 @@
                   }
                 ]
               },
-              "Power scourge": {
+              "Power Scourge": {
                 "order": 2,
                 "traits": [
                   {
@@ -9323,36 +9282,33 @@
                   }
                 ]
               },
-              "Helbrute fist": {
+              "Helbrute Fist": {
                 "order": 3,
-                "tracking": {
-                  "hbfist": 1
-                },
                 "traits": [
                   {
                     "trait": "Melee Weapon§Helbrute—Helbrute fist"
                   }
-                ]
-              },
-              "Helbrute fist with inferno combi-bolter": {
-                "order": 4,
+                ],
                 "tracking": {
                   "hbfist": 1
-                },
+                }
+              },
+              "Helbrute fist with combi-bolter": {
+                "order": 4,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Helbrute—Combi-bolter"
+                    "trait": "Melee Weapon§Helbrute—Helbrute fist"
                   },
                   {
-                    "trait": "Melee Weapon§Helbrute—Helbrute fist"
+                    "trait": "Ranged Weapon§Helbrute—Combi-bolter"
                   }
-                ]
+                ],
+                "tracking": {
+                  "hbfist": 1
+                }
               },
               "Helbrute fist with heavy flamer": {
                 "order": 5,
-                "tracking": {
-                  "hbfist": 1
-                },
                 "traits": [
                   {
                     "trait": "Melee Weapon§Helbrute—Helbrute fist"
@@ -9360,30 +9316,16 @@
                   {
                     "trait": "Ranged Weapon§Helbrute—Heavy flamer"
                   }
-                ]
+                ],
+                "tracking": {
+                  "hbfist": 1
+                }
               }
             },
             "statType": "rank",
-            "value": "Missile launcher",
+            "value": "Missile Launcher",
             "visibility": "active"
           }
-        },
-        "keywords": {
-          "Faction": [
-            "World Eaters"
-          ],
-          "Keywords": [
-            "Khorne"
-          ]
-        },
-        "aspects": {
-          "Label": "Helbrute"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blessings of Khorne",
-            "Ability§Frenzy (HB)"
-          ]
         },
         "rules": {
           "Helbrute fists": {
@@ -9438,15 +9380,15 @@
           }
         },
         "removed": {
-          "stats": {
-            "1 per Helbrute fist": {},
-            "Loadout 1": {},
-            "Loadout 2": {}
-          },
           "assets": {
             "traits": [
               "Ability§Dark Ascension (aura)"
             ]
+          },
+          "stats": {
+            "1 per Helbrute fist": {},
+            "Loadout 1": {},
+            "Loadout 2": {}
           },
           "rules": {
             "Maximum 1 Combi-Bolter or Heavy Flamer per Helbrute Fist": {},
@@ -9631,49 +9573,6 @@
         }
       },
       "Vehicle§Maulerfiend": {
-        "stats": {
-          "M": {
-            "value": 12
-          },
-          "Points": {
-            "value": 150
-          },
-          "Weapon": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Lasher tendrils": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Melee Weapon§Maulerfiend—Lasher tendrils"
-                  }
-                ]
-              },
-              "Magma cutter": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Maulerfiend—Magma cutter"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Maulerfiend—Magma cutter"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Lasher tendrils",
-            "visibility": "active"
-          },
-          "unitDiscount": {
-            "value": 10
-          },
-          "unitDiscountThreshold": {
-            "value": 3
-          }
-        },
         "keywords": {
           "Faction": [
             "World Eaters"
@@ -9682,9 +9581,6 @@
             "Khorne"
           ]
         },
-        "aspects": {
-          "Label": "Maulerfiend"
-        },
         "assets": {
           "traits": [
             "Ability§Blessings of Khorne",
@@ -9692,15 +9588,60 @@
             "Ability§Savage Exaltation"
           ]
         },
-        "removed": {
-          "stats": {
-            "Loadout Option": {}
+        "aspects": {
+          "Label": "Maulerfiend"
+        },
+        "stats": {
+          "M": {
+            "value": 12
           },
+          "Points": {
+            "value": 150
+          },
+          "unitDiscount": {
+            "value": 10
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          },
+          "Weapon": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Lasher Tendrils": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Maulerfiend—Lasher tendrils"
+                  }
+                ]
+              },
+              "2 Magma cutters": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Maulerfiend—Magma cutters"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Maulerfiend—Magma cutters"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Lasher Tendrils",
+            "visibility": "active"
+          }
+        },
+        "removed": {
           "assets": {
             "traits": [
-              "Ability§Siege Crawler",
-              "Melee Weapon§Maulerfiend—Maulerfiend fists"
+              "Ability§Siege Crawler"
             ]
+          },
+          "stats": {
+            "Loadout Option": {}
           }
         }
       },
@@ -9932,9 +9873,7 @@
         "removed": {
           "stats": {
             "Cannon Option": {},
-            "Jaw Option": {},
-            "unitDiscount": {},
-            "unitDiscountThreshold": {}
+            "Jaw Option": {}
           },
           "assets": {
             "traits": [
@@ -10616,38 +10555,6 @@
           "Label": "Lasher tendrils"
         }
       },
-      "Melee Weapon§Lord on Juggernaut—Bladed horn": {
-        "aspects": {
-          "Label": "Bladed horn"
-        },
-        "stats": {
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "A": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          },
-          "S": {
-            "value": 6
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 2
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lance",
-            "Ability§Extra Attacks"
-          ]
-        }
-      },
       "Ranged Weapon§Daemon Prince of Khorne—Infernal cannon": {
         "aspects": {
           "Label": "Infernal cannon"
@@ -11151,7 +11058,8 @@
         "assets": {
           "traits": [
             "Ranged Weapon§Kratos—Combi-weapon – infernus",
-            "Ranged Weapon§Kratos—Combi-weapon – purgatus"
+            "Ranged Weapon§Kratos—Combi-weapon – purgatus",
+            "Ranged Weapon§Kratos—Combi-weapon – Damnatus"
           ]
         },
         "keywords": {
@@ -11311,6 +11219,45 @@
           "traits": [
             "Ability§Combat Doctrines"
           ]
+        },
+        "stats": {
+          "Loadout": {
+            "ranks": {
+              "2 Combi-weapon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Combi-weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Combi-weapon"
+                  }
+                ]
+              },
+              "2 Heavy Flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Heavy flamer"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Heavy flamer"
+                  }
+                ]
+              },
+              "2 Twin Volkite Charger": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Twin volkite charger"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Twin volkite charger"
+                  }
+                ]
+              }
+            }
+          }
         }
       },
       "Ability§Combat Doctrines": {
@@ -11340,6 +11287,63 @@
           "traits": [
             "Ability§Combat Doctrines"
           ]
+        },
+        "stats": {
+          "Pintle Mount weapon": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Combi-weapon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Combi-weapon"
+                  }
+                ]
+              },
+              "Havoc launcher": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Havoc launcher"
+                  }
+                ]
+              },
+              "Heavy bolter": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy flamer": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Heavy Flamer"
+                  }
+                ]
+              },
+              "Multi-melta": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Multi-melta"
+                  }
+                ]
+              },
+              "Twin boltgun": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Twin boltgun"
+                  }
+                ]
+              }
+            }
+          }
         }
       },
       "Vehicle§Mastodon": {
@@ -11372,8 +11376,16 @@
         },
         "assets": {
           "traits": [
+            "Melee Weapon§Rapier Carrier—Armoured Hull",
             "Ability§Combat Doctrines"
           ]
+        },
+        "removed": {
+          "assets": {
+            "traits": [
+              "Melee Weapon§Rapier Carrier—Close combat weapon"
+            ]
+          }
         }
       },
       "Vehicle§Typhon": {
@@ -11412,6 +11424,51 @@
       },
       "Ability§Pact of Blood": {
         "text": "When mustering your army, unless specifically stated otherwise, you cannot select Blood Legions as your Army Faction."
+      },
+      "Model§Bloodcrusher": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Bloodcrushers—Bladed horn"
+          ]
+        },
+        "removed": {
+          "assets": {
+            "traits": [
+              "Melee Weapon§Bloodcrushers—Juggernaut’s bladed horn"
+            ]
+          }
+        }
+      },
+      "Model§Bloodhunter": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Bloodcrushers—Bladed horn"
+          ]
+        },
+        "removed": {
+          "assets": {
+            "traits": [
+              "Melee Weapon§Bloodcrushers—Juggernaut’s bladed horn"
+            ]
+          }
+        }
+      },
+      "Ranged Weapon§Terrax-pattern Termite—Combi-weapon": {
+        "aspects": {
+          "Label": "Combi-weapon"
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Terrax-pattern Termite—Combi-weapon – Damnatus",
+            "Ranged Weapon§Terrax-pattern Termite—Combi-weapon – Infernus",
+            "Ranged Weapon§Terrax-pattern Termite—Combi-weapon – Purgatus"
+          ]
+        },
+        "keywords": {
+          "Tags": [
+            "Multi-weapon"
+          ]
+        }
       }
     },
     "gameModes": {},

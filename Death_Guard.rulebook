@@ -1,6 +1,6 @@
 {
   "name": "Death Guard 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1782,7 +1782,7 @@
             "Ability§Nurgle’s Gift (Aura)",
             "Ability§Unclean Icon",
             "Ability§Blessed Icon of Disease",
-            "Ranged Weapon§Icon Bearer—Plague boltgun",
+            "Ranged Weapon§Icon Bearer—Boltgun",
             "Melee Weapon§Icon Bearer—Plague knife"
           ]
         },
@@ -1883,7 +1883,7 @@
                 }
               }
             },
-            "Melee Weapon§Lord of Contagion—Plagueblade"
+            "Melee Weapon§Lord of Contagion—Manreaper"
           ]
         },
         "keywords": {
@@ -2014,8 +2014,8 @@
                 }
               }
             },
-            "Melee Weapon§Lord of Virulence—Heavy plague fist",
-            "Ranged Weapon§Lord of Virulence—Twin plague spewer"
+            "Ranged Weapon§Lord of Virulence—Twin plague spewer",
+            "Melee Weapon§Lord of Virulence—Power fist"
           ]
         },
         "keywords": {
@@ -2071,7 +2071,7 @@
             "Ability§Nurgle’s Gift (Aura)",
             "Ability§Gift of Contagion",
             "Ability§Pestilent Fallout (psychic)",
-            "Ranged Weapon§Malignant Plaguecaster—Plague bolt pistol",
+            "Ranged Weapon§Malignant Plaguecaster—Bolt pistol",
             "Melee Weapon§Malignant Plaguecaster—Corrupted staff",
             "Ranged Weapon§Malignant Plaguecaster—Plague Wind"
           ]
@@ -2160,7 +2160,7 @@
               }
             },
             "Ranged Weapon§Mortarion—Rotwind",
-            "Ranged Weapon§Mortarion—The Lantern",
+            "Ranged Weapon§Mortarion—Lantern",
             "Melee Weapon§Mortarion—Silence",
             "Ability§Host of Plagues",
             "Ability§Deep Strike",
@@ -2344,7 +2344,7 @@
             "Ability§Nurgle’s Gift (Aura)",
             "Ability§Tainted Narthecium",
             "Ability§Inflamed Infections",
-            "Ranged Weapon§Plague Surgeon—Plague bolt pistol",
+            "Ranged Weapon§Plague Surgeon—Bolt pistol",
             "Melee Weapon§Plague Surgeon—Balesword"
           ]
         },
@@ -2593,8 +2593,8 @@
                 }
               }
             },
-            "Melee Weapon§Typhus—Master-crafted manreaper",
-            "Ability§Eater Plague"
+            "Ability§Eater Plague",
+            "Melee Weapon§Typhus—Lakrimae"
           ]
         },
         "keywords": {
@@ -5817,84 +5817,6 @@
           }
         }
       },
-      "Melee Weapon§Lord of Contagion—Plagueblade": {
-        "aspects": {
-          "Label": "Plagueblade"
-        },
-        "assets": {
-          "traits": [
-            "Melee Weapon§Lord of Contagion—Plagueblade – strike",
-            "Melee Weapon§Lord of Contagion—Plagueblade – sweep"
-          ]
-        },
-        "keywords": {
-          "Tags": [
-            "Multi-weapon"
-          ]
-        }
-      },
-      "Melee Weapon§Lord of Contagion—Plagueblade – strike": {
-        "aspects": {
-          "Label": "Strike"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 9
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Lord of Contagion—Plagueblade – sweep": {
-        "aspects": {
-          "Label": "Sweep"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 10
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Lord of Poxes—Great plague blade": {
         "aspects": {
           "Label": "Great plague blade"
@@ -5908,37 +5830,6 @@
         "stats": {
           "A": {
             "value": 6
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Lord of Virulence—Heavy plague fist": {
-        "aspects": {
-          "Label": "Heavy plague fist"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 5
           },
           "AP": {
             "value": -2
@@ -6359,11 +6250,11 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Plague combi-bolter": {
+              "Combi-bolter": {
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Blightlord Terminators—Plague combi-bolter"
+                    "trait": "Ranged Weapon§Blightlord Terminators—Combi-bolter"
                   }
                 ]
               },
@@ -6380,7 +6271,7 @@
               }
             },
             "statType": "rank",
-            "value": "Plague combi-bolter",
+            "value": "Combi-bolter",
             "visibility": "active"
           },
           "M": {
@@ -6615,11 +6506,11 @@
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "Plague combi-bolter": {
+              "Combi-bolter": {
                 "order": 0,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Blightlord Terminators—Plague combi-bolter"
+                    "trait": "Ranged Weapon§Blightlord Terminators—Combi-bolter"
                   },
                   {
                     "trait": "Melee Weapon§Blightlord Terminators—Bubotic blade"
@@ -6713,7 +6604,7 @@
               }
             },
             "statType": "rank",
-            "value": "Plague combi-bolter",
+            "value": "Combi-bolter",
             "visibility": "active"
           },
           "M": {
@@ -7015,13 +6906,6 @@
             "Melee Weapon§Death Guard Possessed—Hideous mutations"
           ]
         },
-        "removed": {
-          "assets": {
-            "traits": [
-              "Melee Weapon§Possessed—Hideous mutations"
-            ]
-          }
-        },
         "stats": {
           "Diseased Icon": {
             "dynamic": true,
@@ -7046,6 +6930,16 @@
             "statType": "rank",
             "value": "-",
             "visibility": "active"
+          }
+        },
+        "removed": {
+          "assets": {
+            "traits": [
+              "Melee Weapon§Possessed—Hideous mutations"
+            ]
+          },
+          "stats": {
+            "Chaos Icon": {}
           }
         }
       },
@@ -7055,13 +6949,6 @@
             "Melee Weapon§Death Guard Possessed—Hideous mutations"
           ]
         },
-        "removed": {
-          "assets": {
-            "traits": [
-              "Melee Weapon§Possessed—Hideous mutations"
-            ]
-          }
-        },
         "stats": {
           "Diseased Icon": {
             "dynamic": true,
@@ -7086,6 +6973,16 @@
             "statType": "rank",
             "value": "-",
             "visibility": "active"
+          }
+        },
+        "removed": {
+          "assets": {
+            "traits": [
+              "Melee Weapon§Possessed—Hideous mutations"
+            ]
+          },
+          "stats": {
+            "Chaos Icon": {}
           }
         }
       },
@@ -7269,44 +7166,6 @@
           },
           "S": {
             "value": 5
-          }
-        }
-      },
-      "Ranged Weapon§Blightlord Terminators—Plague combi-bolter": {
-        "aspects": {
-          "Label": "Plague combi-bolter"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits",
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
           }
         }
       },
@@ -8293,36 +8152,6 @@
           }
         }
       },
-      "Ranged Weapon§Icon Bearer—Plague boltgun": {
-        "aspects": {
-          "Label": "Boltgun"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
       "Ranged Weapon§Lord of Poxes—Plasma pistol": {
         "aspects": {
           "Label": "Plasma pistol"
@@ -8446,37 +8275,6 @@
           }
         }
       },
-      "Ranged Weapon§Malignant Plaguecaster—Plague bolt pistol": {
-        "aspects": {
-          "Label": "Plague bolt pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits",
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
       "Ranged Weapon§Malignant Plaguecaster—Plague Wind": {
         "aspects": {
           "Label": "Plague Wind"
@@ -8564,40 +8362,6 @@
           }
         }
       },
-      "Ranged Weapon§Miasmic Malignifier—Noxious stink": {
-        "aspects": {
-          "Label": "Noxious stink"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Ignores Cover",
-            "Ability§Torrent"
-          ]
-        },
-        "stats": {
-          "A": {
-            "format": "2D6",
-            "value": 0
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "format": "{t}",
-            "statType": "term",
-            "value": "N/A"
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 9
-          },
-          "S": {
-            "value": 3
-          }
-        }
-      },
       "Ranged Weapon§Mortarion—Rotwind": {
         "aspects": {
           "Label": "Rotwind"
@@ -8629,44 +8393,6 @@
           },
           "S": {
             "value": 7
-          }
-        }
-      },
-      "Ranged Weapon§Mortarion—The Lantern": {
-        "aspects": {
-          "Label": "The Lantern"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Pistol",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "D3"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -3
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 10
           }
         }
       },
@@ -8886,37 +8612,6 @@
           },
           "S": {
             "value": 8
-          }
-        }
-      },
-      "Ranged Weapon§Plague Surgeon—Plague bolt pistol": {
-        "aspects": {
-          "Label": "Plague bolt pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits",
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
           }
         }
       },
@@ -11082,7 +10777,7 @@
             "Ability§Putrescent Fog",
             "Ability§Diseased Cover",
             "Ability§Fortification",
-            "Ranged Weapon§Miasmic Malignifier—Noxious stink"
+            "Ranged Weapon§Miasmic Malignifier—Miasmic gouts"
           ]
         },
         "keywords": {
@@ -11582,99 +11277,18 @@
       "Wargear§Icon of Despair (Aura)": {
         "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1."
       },
-      "Ranged Weapon§Chaos Rhino—Plague combi-bolter": {
-        "aspects": {
-          "Label": "Plague combi-bolter"
-        },
+      "Vehicle§Chaos Rhino": {
         "assets": {
           "traits": [
-            "Ability§Lethal Hits",
+            "Ability§Nurgle’s Gift (Aura)",
+            "Ability§Fire Support (Rhino)",
             {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
+              "item": "Ability§Transport",
+              "text": "This model has a transport capacity of 12 Death Guard Infantry models. It cannot transport Terminator, Cultist or Poxwalker models."
             }
           ]
         },
         "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Vehicle§Chaos Rhino": {
-        "stats": {
-          "Havoc Launcher": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "✓": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chaos Rhino—Havoc launcher"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
-          "Loadout Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Combi-weapon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chaos Rhino—Combi-weapon"
-                  }
-                ]
-              },
-              "Plague combi-bolter": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chaos Rhino—Plague combi-bolter"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "-",
-            "visibility": "active"
-          },
-          "Points": {
-            "value": 85
-          },
           "unitDiscount": {
             "value": 10
           },
@@ -11694,22 +11308,7 @@
         "aspects": {
           "Label": "Chaos Rhino"
         },
-        "assets": {
-          "traits": [
-            "Ability§Nurgle’s Gift (Aura)",
-            "Ability§Fire Support (Rhino)",
-            {
-              "item": "Ability§Transport",
-              "text": "This model has a transport capacity of 12 Death Guard Infantry models. It cannot transport Terminator, Cultist or Poxwalker models."
-            },
-            "Ranged Weapon§Chaos Rhino—Plague combi-bolter"
-          ]
-        },
         "removed": {
-          "stats": {
-            "Loadout Options 1": {},
-            "Loadout Options 2": {}
-          },
           "assets": {
             "traits": [
               "Ability§Self Repair",
@@ -11756,98 +11355,7 @@
           }
         }
       },
-      "Ranged Weapon§Chaos Land Raider—Twin plague heavy bolter": {
-        "aspects": {
-          "Label": "Twin plague heavy bolter"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            },
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
       "Vehicle§Chaos Land Raider": {
-        "stats": {
-          "Loadout Options": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "Combi-weapon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chaos Land Raider—Combi-weapon"
-                  }
-                ]
-              },
-              "Combi-bolter": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Chaos Land Raider—Combi-bolter"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Combi-weapon",
-            "visibility": "active"
-          },
-          "Points": {
-            "value": 240
-          },
-          "unitDiscount": {
-            "value": 20
-          },
-          "unitDiscountThreshold": {
-            "value": 3
-          }
-        },
-        "keywords": {
-          "Faction": [
-            "Death Guard"
-          ],
-          "Keywords": [
-            "Nurgle",
-            "Frame"
-          ]
-        },
-        "aspects": {
-          "Label": "Chaos Land Raider"
-        },
         "assets": {
           "traits": [
             "Ability§Nurgle’s Gift (Aura)",
@@ -11865,103 +11373,78 @@
             {
               "item": "Ability§Transport",
               "text": "This model has a transport capacity of 14 Death Guard Infantry models (excluding Cultist and Poxwalker models). Each Terminator model takes up the space of 2 models."
-            },
-            "Ranged Weapon§Chaos Land Raider—Twin plague heavy bolter"
+            }
           ]
         },
-        "removed": {
-          "stats": {
-            "Combi Option": {},
-            "unitDiscount": {},
-            "unitDiscountThreshold": {}
+        "stats": {
+          "Loadout Options": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Combi-bolter": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chaos Land Raider—Combi-bolter"
+                  }
+                ]
+              },
+              "Combi-weapon": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Chaos Land Raider—Combi-weapon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active"
           },
+          "Havoc Launcher": {
+            "visibility": "active"
+          }
+        },
+        "keywords": {
+          "Faction": [
+            "Death Guard"
+          ],
+          "Keywords": [
+            "Nurgle",
+            "Frame"
+          ]
+        },
+        "aspects": {
+          "Label": "Chaos Land Raider"
+        },
+        "removed": {
           "assets": {
             "traits": [
               "Ability§Damaged:",
-              "Ability§Transport",
-              "Ranged Weapon§Chaos Land Raider—Twin heavy bolter"
+              "Ability§Transport"
             ]
-          }
-        }
-      },
-      "Ranged Weapon§Chaos Predator Annihilator—Plague combi-bolter": {
-        "aspects": {
-          "Label": "Plague combi-bolter"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits",
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
           },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Chaos Predator Annihilator—Plague heavy bolter": {
-        "aspects": {
-          "Label": "Plague heavy bolter"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 5
+          "stats": {
+            "Combi Option": {}
           }
         }
       },
       "Vehicle§Chaos Predator Annihilator": {
+        "assets": {
+          "traits": [
+            "Ability§Nurgle’s Gift (Aura)",
+            "Ability§Metalophagic Infection"
+          ]
+        },
         "stats": {
+          "Points": {
+            "value": 140
+          },
           "Loadout 1": {
             "dynamic": true,
             "group": "Loadout",
@@ -11970,7 +11453,7 @@
               "-": {
                 "order": 0
               },
-              "2 Lascannons": {
+              "2 Lascannon": {
                 "order": 1,
                 "traits": [
                   {
@@ -11981,14 +11464,14 @@
                   }
                 ]
               },
-              "2 Plague heavy bolters": {
+              "2 Heavy Bolter": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Chaos Predator Annihilator—Plague heavy bolter"
+                    "trait": "Ranged Weapon§Chaos Predator Annihilator—Heavy bolter"
                   },
                   {
-                    "trait": "Ranged Weapon§Chaos Predator Annihilator—Plague heavy bolter"
+                    "trait": "Ranged Weapon§Chaos Predator Annihilator—Heavy bolter"
                   }
                 ]
               }
@@ -12013,27 +11496,21 @@
                   }
                 ]
               },
-              "Plague combi-bolter": {
+              "Combi-bolter": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Chaos Predator Annihilator—Plague combi-bolter"
+                    "trait": "Ranged Weapon§Chaos Predator Annihilator—Combi-bolter"
                   }
                 ]
               }
             },
             "statType": "rank",
             "value": "-",
-            "visibility": "normal"
+            "visibility": "active"
           },
-          "Points": {
-            "value": 140
-          },
-          "unitDiscount": {
-            "value": 10
-          },
-          "unitDiscountThreshold": {
-            "value": 3
+          "Havoc Launcher": {
+            "visibility": "active"
           }
         },
         "keywords": {
@@ -12048,99 +11525,15 @@
         "aspects": {
           "Label": "Chaos Predator Annihilator"
         },
-        "assets": {
-          "traits": [
-            "Ability§Nurgle’s Gift (Aura)",
-            "Ability§Metalophagic Infection"
-          ]
-        },
         "removed": {
-          "stats": {
-            "Combi Option": {},
-            "Side Weapons": {},
-            "unitDiscount": {},
-            "unitDiscountThreshold": {}
-          },
           "assets": {
             "traits": [
               "Ability§Annihilator"
             ]
-          }
-        }
-      },
-      "Ranged Weapon§Chaos Predator Destructor—Plague combi-bolter": {
-        "aspects": {
-          "Label": "Plague combi-bolter"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits",
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
           },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Chaos Predator Destructor—Plague heavy bolter": {
-        "aspects": {
-          "Label": "Plague heavy bolter"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 5
+          "stats": {
+            "Combi Option": {},
+            "Side Weapons": {}
           }
         }
       },
@@ -12183,7 +11576,27 @@
         }
       },
       "Vehicle§Chaos Predator Destructor": {
+        "assets": {
+          "traits": [
+            "Ability§Nurgle’s Gift (Aura)",
+            "Ability§Hail of Corrosive Disease",
+            {
+              "item": "Ability§Damaged:",
+              "stats": {
+                "keyword": {
+                  "value": "1-4 wounds remaining"
+                },
+                "x": {
+                  "value": "1-4 wounds remaining"
+                }
+              }
+            }
+          ]
+        },
         "stats": {
+          "Points": {
+            "value": 150
+          },
           "Loadout 1": {
             "dynamic": true,
             "group": "Loadout",
@@ -12192,7 +11605,7 @@
               "-": {
                 "order": 0
               },
-              "2 Lascannons": {
+              "2 Lascannon": {
                 "order": 1,
                 "traits": [
                   {
@@ -12203,14 +11616,14 @@
                   }
                 ]
               },
-              "2 Plague heavy bolters": {
+              "2 Heavy Bolter": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Chaos Predator Destructor—Plague heavy bolter"
+                    "trait": "Ranged Weapon§Chaos Predator Destructor—Heavy bolter"
                   },
                   {
-                    "trait": "Ranged Weapon§Chaos Predator Destructor—Plague heavy bolter"
+                    "trait": "Ranged Weapon§Chaos Predator Destructor—Heavy bolter"
                   }
                 ]
               }
@@ -12235,27 +11648,21 @@
                   }
                 ]
               },
-              "Plague combi-bolter": {
+              "Combi-bolter": {
                 "order": 2,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Chaos Predator Destructor—Plague combi-bolter"
+                    "trait": "Ranged Weapon§Chaos Predator Destructor—Combi-bolter"
                   }
                 ]
               }
             },
             "statType": "rank",
             "value": "-",
-            "visibility": "normal"
+            "visibility": "active"
           },
-          "Points": {
-            "value": 150
-          },
-          "unitDiscount": {
-            "value": 10
-          },
-          "unitDiscountThreshold": {
-            "value": 3
+          "Havoc Launcher": {
+            "visibility": "active"
           }
         },
         "keywords": {
@@ -12270,35 +11677,16 @@
         "aspects": {
           "Label": "Chaos Predator Destructor"
         },
-        "assets": {
-          "traits": [
-            "Ability§Nurgle’s Gift (Aura)",
-            "Ability§Hail of Corrosive Disease",
-            {
-              "item": "Ability§Damaged:",
-              "stats": {
-                "keyword": {
-                  "value": "1-4 wounds remaining"
-                },
-                "x": {
-                  "value": "1-4 wounds remaining"
-                }
-              }
-            }
-          ]
-        },
         "removed": {
-          "stats": {
-            "Combi Option": {},
-            "Side Weapons": {},
-            "unitDiscount": {},
-            "unitDiscountThreshold": {}
-          },
           "assets": {
             "traits": [
               "Ability§Destructor",
               "Ability§Damaged:"
             ]
+          },
+          "stats": {
+            "Combi Option": {},
+            "Side Weapons": {}
           }
         }
       },
@@ -12675,44 +12063,6 @@
           }
         }
       },
-      "Ranged Weapon§Helbrute—Plague combi-bolter": {
-        "aspects": {
-          "Label": "Plague combi-bolter"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lethal Hits",
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
       "Ranged Weapon§Helbrute—Twin autocannon": {
         "assets": {
           "traits": [
@@ -12744,125 +12094,22 @@
           "Label": "Twin autocannon"
         }
       },
-      "Ranged Weapon§Helbrute—Twin plague heavy bolter": {
-        "aspects": {
-          "Label": "Twin plague heavy bolter"
-        },
+      "Vehicle§Helbrute": {
         "assets": {
           "traits": [
-            "Ability§Lethal Hits",
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            },
-            "Ability§Twin-linked"
+            "Ability§Nurgle’s Gift (Aura)",
+            "Ability§Diseased Malice",
+            "Ability§Froth-spattered Frenzy"
           ]
         },
         "stats": {
-          "A": {
-            "value": 3
+          "M": {
+            "value": 7
           },
-          "AP": {
-            "value": -1
+          "Points": {
+            "value": 105
           },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
-      "Vehicle§Helbrute": {
-        "stats": {
-          "1 per Helbrute fist": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "-": {
-                "order": 0
-              },
-              "1 Plague combi-bolter": {
-                "order": 1,
-                "tracking": {
-                  "special": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Helbrute—Plague combi-bolter"
-                  }
-                ]
-              },
-              "2 Plague combi-bolters": {
-                "order": 2,
-                "tracking": {
-                  "special": 2
-                },
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Ranged Weapon§Helbrute—Plague combi-bolter",
-                      "quantity": 2
-                    }
-                  }
-                ]
-              },
-              "1 Heavy flamer": {
-                "order": 3,
-                "tracking": {
-                  "special": 1
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Helbrute—Heavy flamer"
-                  }
-                ]
-              },
-              "2 Heavy flamer": {
-                "order": 4,
-                "tracking": {
-                  "special": 2
-                },
-                "traits": [
-                  {
-                    "trait": {
-                      "item": "Ranged Weapon§Helbrute—Heavy flamer",
-                      "quantity": 2
-                    }
-                  }
-                ]
-              },
-              "Heavy flamer & Plague combi-bolter": {
-                "order": 5,
-                "tracking": {
-                  "special": 2
-                },
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Helbrute—Heavy flamer"
-                  },
-                  {
-                    "trait": "Ranged Weapon§Helbrute—Plague combi-bolter"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "-",
-            "visibility": "normal"
-          },
-          "Loadout 1": {
+          "Loadout 1 (11e)": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
@@ -12875,15 +12122,15 @@
                   }
                 ]
               },
-              "Helbrute plasma cannon": {
+              "Plasma Cannon": {
                 "order": 1,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Helbrute—Helbrute plasma cannon"
+                    "trait": "Ranged Weapon§Helbrute—Plasma cannon"
                   }
                 ]
               },
-              "Twin autocannon": {
+              "Twin Autocannon": {
                 "order": 2,
                 "traits": [
                   {
@@ -12891,7 +12138,7 @@
                   }
                 ]
               },
-              "Twin lascannon": {
+              "Twin Lascannon": {
                 "order": 3,
                 "traits": [
                   {
@@ -12899,101 +12146,155 @@
                   }
                 ]
               },
-              "Twin plague heavy bolter": {
+              "Twin Heavy Bolter": {
                 "order": 4,
                 "traits": [
                   {
-                    "trait": "Ranged Weapon§Helbrute—Twin plague heavy bolter"
+                    "trait": "Ranged Weapon§Helbrute—Twin heavy bolter"
                   }
                 ]
               },
-              "Helbrute fist": {
+              "Helbrute Fist": {
                 "order": 5,
-                "tracking": {
-                  "hbfist": 1,
-                  "mweapon": 1
-                },
                 "traits": [
                   {
                     "trait": "Melee Weapon§Helbrute—Helbrute fist"
                   }
-                ]
+                ],
+                "tracking": {
+                  "hbfist": 1
+                }
               }
             },
             "statType": "rank",
             "value": "Multi-melta",
-            "visibility": "active"
+            "visibility": "active",
+            "label": "Loadout 1"
           },
-          "Loadout 2": {
+          "Loadout 2 (11e)": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
             "ranks": {
-              "Missile launcher": {
+              "Helbrute Fist": {
                 "order": 0,
+                "traits": [
+                  {
+                    "trait": "Melee Weapon§Helbrute—Helbrute fist"
+                  }
+                ],
+                "tracking": {
+                  "hbfist": 1
+                }
+              },
+              "Missile Launcher": {
+                "order": 1,
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Helbrute—Missile launcher"
                   }
                 ]
               },
-              "Helbrute hammer": {
-                "order": 1,
-                "tracking": {
-                  "mweapon": 1
-                },
+              "Helbrute Hammer": {
+                "order": 2,
                 "traits": [
                   {
                     "trait": "Melee Weapon§Helbrute—Helbrute hammer"
                   }
                 ]
               },
-              "Power scourge": {
-                "order": 2,
-                "tracking": {
-                  "mweapon": 1
-                },
+              "Power Scourge": {
+                "order": 3,
                 "traits": [
                   {
                     "trait": "Melee Weapon§Helbrute—Power scourge"
                   }
                 ]
+              }
+            },
+            "statType": "rank",
+            "value": "Helbrute Fist",
+            "visibility": "active",
+            "label": "Loadout 2"
+          },
+          "1 per Helbrute fist (11e)": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "-": {
+                "order": 0
               },
-              "Helbrute fist": {
-                "order": 3,
-                "tracking": {
-                  "hbfist": 1,
-                  "mweapon": 1
-                },
+              "1 Combi-bolter": {
+                "order": 1,
                 "traits": [
                   {
-                    "trait": "Melee Weapon§Helbrute—Helbrute fist"
+                    "trait": "Ranged Weapon§Helbrute—Combi-bolter"
                   }
-                ]
+                ],
+                "tracking": {
+                  "special": 1
+                }
+              },
+              "2 Combi-bolters": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Helbrute—Combi-bolter"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Helbrute—Combi-bolter"
+                  }
+                ],
+                "tracking": {
+                  "special": 2
+                }
+              },
+              "1 Heavy flamer": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Helbrute—Heavy flamer"
+                  }
+                ],
+                "tracking": {
+                  "special": 1
+                }
+              },
+              "2 Heavy flamers": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Helbrute—Heavy flamer"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Helbrute—Heavy flamer"
+                  }
+                ],
+                "tracking": {
+                  "special": 2
+                }
+              },
+              "Heavy flamer & Combi-bolter": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Helbrute—Heavy flamer"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Helbrute—Combi-bolter"
+                  }
+                ],
+                "tracking": {
+                  "special": 2
+                }
               }
-            }
-          },
-          "M": {
-            "value": 7
-          },
-          "Points": {
-            "value": 105
+            },
+            "statType": "rank",
+            "value": "-",
+            "visibility": "active",
+            "label": "1 per Helbrute fist"
           }
-        },
-        "keywords": {
-          "Faction": [
-            "Death Guard"
-          ],
-          "Keywords": [
-            "Nurgle"
-          ]
-        },
-        "aspects": {
-          "Label": "Helbrute"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Nurgle’s Gift (Aura)",
-            "Ability§Diseased Malice",
-            "Ability§Froth-spattered Frenzy"
-          ]
         },
         "rules": {
           "helbfistsbuff": {
@@ -13104,16 +12405,28 @@
             "failState": "error"
           }
         },
+        "keywords": {
+          "Faction": [
+            "Death Guard"
+          ],
+          "Keywords": [
+            "Nurgle"
+          ]
+        },
+        "aspects": {
+          "Label": "Helbrute"
+        },
         "removed": {
-          "stats": {
-            "1 per Helbrute fist": {},
-            "Loadout 1": {}
-          },
           "assets": {
             "traits": [
               "Ability§Dark Ascension (aura)",
               "Ability§Devoted to Destruction"
             ]
+          },
+          "stats": {
+            "1 per Helbrute fist": {},
+            "Loadout 1": {},
+            "Loadout 2": {}
           },
           "rules": {
             "Maximum 1 Combi-Bolter or Heavy Flamer per Helbrute Fist": {},
@@ -14525,15 +13838,54 @@
         }
       },
       "Vehicle§Terrax-pattern Termite": {
+        "assets": {
+          "traits": [
+            "Ability§Combat Doctrines"
+          ]
+        },
+        "stats": {
+          "Loadout": {
+            "ranks": {
+              "2 Combi-weapon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Combi-weapon"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Combi-weapon"
+                  }
+                ]
+              },
+              "2 Heavy Flamer": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Heavy flamer"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Heavy flamer"
+                  }
+                ]
+              },
+              "2 Twin Volkite Charger": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Twin volkite charger"
+                  },
+                  {
+                    "trait": "Ranged Weapon§Terrax-pattern Termite—Twin volkite charger"
+                  }
+                ]
+              }
+            }
+          }
+        },
         "keywords": {
           "Keywords": [
             "Chaos",
             "Nurgle"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines"
           ]
         }
       },
@@ -14554,15 +13906,72 @@
         }
       },
       "Vehicle§Kratos": {
+        "assets": {
+          "traits": [
+            "Ability§Combat Doctrines"
+          ]
+        },
+        "stats": {
+          "Pintle Mount weapon": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Combi-weapon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Combi-weapon"
+                  }
+                ]
+              },
+              "Havoc launcher": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Havoc launcher"
+                  }
+                ]
+              },
+              "Heavy bolter": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Heavy Bolter"
+                  }
+                ]
+              },
+              "Heavy flamer": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Heavy Flamer"
+                  }
+                ]
+              },
+              "Multi-melta": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Multi-melta"
+                  }
+                ]
+              },
+              "Twin boltgun": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Kratos—Twin boltgun"
+                  }
+                ]
+              }
+            }
+          }
+        },
         "keywords": {
           "Keywords": [
             "Nurgle",
             "Chaos"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines"
           ]
         }
       },
@@ -14588,16 +13997,24 @@
         }
       },
       "Vehicle§Rapier Carrier": {
+        "assets": {
+          "traits": [
+            "Melee Weapon§Rapier Carrier—Armoured Hull",
+            "Ability§Combat Doctrines"
+          ]
+        },
         "keywords": {
           "Keywords": [
             "Nurgle",
             "Chaos"
           ]
         },
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines"
-          ]
+        "removed": {
+          "assets": {
+            "traits": [
+              "Melee Weapon§Rapier Carrier—Close combat weapon"
+            ]
+          }
         }
       },
       "Vehicle§Typhon": {
