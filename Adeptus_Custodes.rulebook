@@ -1,6 +1,6 @@
 {
   "name": "Adeptus Custodes 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -14712,7 +14712,7 @@
             "Adeptus Custodes"
           ],
           "Source": [
-            "11th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Imperium",
@@ -14768,15 +14768,6 @@
             "statType": "rank",
             "value": "Lastrum Storm Bolter",
             "visibility": "active"
-          },
-          "Points": {
-            "value": 305
-          },
-          "unitDiscount": {
-            "value": 30
-          },
-          "unitDiscountThreshold": {
-            "value": 3
           }
         },
         "assets": {
@@ -14925,7 +14916,7 @@
             "Adeptus Custodes"
           ],
           "Source": [
-            "11th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Caladius",
@@ -14984,15 +14975,6 @@
             "statType": "rank",
             "value": "Twin Lastrum Bolt Cannon",
             "visibility": "active"
-          },
-          "Points": {
-            "value": 280
-          },
-          "unitDiscount": {
-            "value": 30
-          },
-          "unitDiscountThreshold": {
-            "value": 3
           }
         },
         "assets": {
@@ -15314,7 +15296,7 @@
             "Adeptus Custodes"
           ],
           "Source": [
-            "11th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Fly",
@@ -15386,15 +15368,6 @@
             "statType": "rank",
             "value": "Lastrum Bolt Cannon",
             "visibility": "active"
-          },
-          "Points": {
-            "value": 280
-          },
-          "unitDiscount": {
-            "value": 20
-          },
-          "unitDiscountThreshold": {
-            "value": 2
           }
         },
         "assets": {
@@ -15594,7 +15567,7 @@
             "Adeptus Custodes"
           ],
           "Source": [
-            "11th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Battleline",
@@ -15646,15 +15619,6 @@
             "statType": "rank",
             "value": "-",
             "visibility": "active"
-          },
-          "Points": {
-            "value": 270
-          },
-          "unitDiscount": {
-            "value": 30
-          },
-          "unitDiscountThreshold": {
-            "value": 4
           }
         },
         "assets": {
@@ -15761,7 +15725,7 @@
             "Adeptus Custodes"
           ],
           "Source": [
-            "11th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Explosives",
@@ -15793,15 +15757,6 @@
           },
           "OC": {
             "value": 2
-          },
-          "Points": {
-            "value": 280
-          },
-          "unitDiscount": {
-            "value": 25
-          },
-          "unitDiscountThreshold": {
-            "value": 3
           }
         },
         "assets": {
