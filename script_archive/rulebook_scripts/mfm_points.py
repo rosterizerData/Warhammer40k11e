@@ -282,6 +282,9 @@ for slug, b in SLUG_TO_FILE.items():
                 users = lambda x: [u for L in chain(b) + [b] for u, a in cat[L].items() if u != x and f'"{x}"' in json.dumps(a, ensure_ascii=False)]
                 umodels = set(re.findall(r'"(Model§[^"]+)"', json.dumps(resolve(chain(b) + [b], k), ensure_ascii=False)))   # wargear held by the unit's models
                 wk = [x for x in shared if all(u.endswith("§" + uname) or ("§" + uname + "—") in u or u in umodels for u in users(x))]
+                if len(wk) > 1:   # several shared assets by that name: the one this unit's loadout uses
+                    utxt = json.dumps(resolve(chain(b) + [b], k), ensure_ascii=False) + "".join(json.dumps(resolve(chain(b) + [b], mk) or {}, ensure_ascii=False) for mk in umodels)
+                    wk = [x for x in wk if f'"{x}"' in utxt] or wk
             if len(wk) != 1:
                 absent["wargear"].append(f"{b}: {uname} — {w['item']} ({w['points']} pts) " + (f"ambiguous {wk}" if wk else "no matching asset"))
                 continue

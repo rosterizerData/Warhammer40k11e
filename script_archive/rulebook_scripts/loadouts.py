@@ -12,7 +12,7 @@ Weapon names resolve to `<Kind> Weapon§<Unit>—<name>` (multi-profile parent p
 armoury, a generic `<Kind> Weapon§<name>`, then `Wargear§<name>`. Ranks replace a holder's weapon traits; non-weapon
 traits stay. Re-running is idempotent. --prune deletes per-unit weapons of the specced units that nothing references.
 """
-import importlib.util, json, re, sys
+import copy, importlib.util, json, re, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 import waha_lib as W
@@ -27,6 +27,11 @@ SPEC = mod.SPEC
 raw = W.load_books()
 own = raw[book]["rulebook"]["assetCatalog"]
 res = W.resolved(raw, book)
+base = {}   # what the dependency chain alone gives (hub assets the book overrides)
+for b in W.chain(raw, book):
+    for k, v in raw[b]["rulebook"]["assetCatalog"].items():
+        base[k] = W.merge_entry(base[k], v) if k in base else v
+targets = {}   # inherited holders being edited: key -> resolved copy, written back as an overlay at the end
 
 UNITCLS = ("Unit", "Character", "Vehicle", "Infantry/Mounted", "Titan")
 WEP = ("Ranged Weapon", "Melee Weapon", "Weapon")
@@ -46,13 +51,22 @@ def waha_wargear(unit):
 
 KIND = {"R": ("Ranged Weapon",), "M": ("Melee Weapon",), "W": ("Weapon",)}
 def resolve_weapon(unit, name):
+    if name.startswith("U:"):   # unit-specific wargear (its own points), text from Waha or the shared asset
+        nm = name[2:]; k = f"Wargear§{unit}—{nm}"
+        text = waha_wargear(unit).get(nm) or (res.get(f"Wargear§{nm}") or {}).get("text")
+        if (res.get(k) or {}).get("text") != text:
+            own.setdefault(k, {})["text"] = text; res[k] = {**(res.get(k) or {}), "text": text}
+            log.append(f"WARGEAR {k}: unit-specific")
+        return k
     m = re.match(r"^([RMW]):(.*)$", name)
     kinds, name = (KIND[m.group(1)], m.group(2)) if m else (WEP, name)
     want = n(name)
     def pick(pred):
         hits = [k for k in res if pred(k)]
         parents = [k for k in hits if " – " not in k.split("§", 1)[1]]
-        return (parents or hits or [None])[0]
+        # name-equal duplicates (old 10e "Termite drill" beside 11e "Termite Drill"): the most complete profile wins
+        full = lambda k: len((res[k].get("stats") or {})) + len((res[k].get("assets") or {}).get("traits") or [])
+        return max(parents or hits or [None], key=lambda k: full(k) if k else 0)
     for cmp in (lambda a: n(a) == want, lambda a: sing(n(a)) == sing(want)):
         k = pick(lambda k: k.split("§")[0] in kinds and "—" in k and n(k.split("§", 1)[1].split("—")[0]) == n(unit) and cmp(k.split("—", 1)[1]))
         if k: return k
@@ -77,7 +91,7 @@ def resolve_weapon(unit, name):
 
 def parse_rank(unit, r):
     label, body = r if isinstance(r, tuple) else (None, r)
-    tags = re.findall(r"@(\w+)(?:=(\d+))?", body); body = re.sub(r"\s*@\w+(=\d+)?", "", body).strip()
+    tags = re.findall(r"@(\w+)(?:=([\d.]+))?", body); body = re.sub(r"\s*@\w+(=[\d.]+)?", "", body).strip()
     traits = []
     if body != "-":
         for part in [p.strip() for p in body.split(" + ")]:
@@ -86,10 +100,10 @@ def parse_rank(unit, r):
             k = resolve_weapon(unit, nm)
             traits += [{"trait": k}] * q if k else []
     if label is None:
-        label = re.sub(r"\b(\d+)x ", r"\1 ", re.sub(r"\b[RMW]:", "", body).replace(" + ", " & "))
+        label = re.sub(r"\b(\d+)x ", r"\1 ", re.sub(r"\b[RMWU]:", "", body).replace(" + ", " & "))
     out = {"traits": traits} if traits else {}
     if tags:
-        out["tracking"] = {t: int(q or 1) for t, q in tags}
+        out["tracking"] = {t: (float(q) if "." in q else int(q)) if q else 1 for t, q in tags}
     return label, out
 
 def limit_rule(tag, cap):
@@ -108,20 +122,46 @@ def is_wep_trait(t):
     return isinstance(k, str) and k.split("§")[0] in WEP
 
 def holder_asset(key):
+    """the asset to edit: the book's own, or (for a hub asset) a resolved copy that becomes an override"""
+    if key in base:
+        if key not in targets:
+            targets[key] = copy.deepcopy(res[key])
+        return targets[key]
     if key not in own:
-        errors.append(f"{key}: not defined in {book} (hub override not supported yet)")
+        errors.append(f"{key}: not in {book} or its dependencies")
         return None
     return own[key]
 
+
 def referenced(keys):
-    everything = json.dumps(raw, ensure_ascii=False)
-    return {k for k in keys if everything.count(f'"{k}"') > 1}
-ORPHANABLE = lambda k: k.split("§")[0] in ("Wargear", "Model") or k.split("§")[0] in WEP
+    """keys that occur anywhere (all books) besides their own catalog entry"""
+    from collections import Counter
+    seen = Counter(re.findall(r'"((?:[^"\\]|\\.)*)"', json.dumps(raw, ensure_ascii=False)))
+    return {k for k in keys if seen[k] > 1}
+LEGENDS_UNITS = {k.split("§", 1)[1] for k, v in res.items() if k.split("§")[0] in UNITCLS
+                 and "Legends" in ((v.get("keywords") or {}).get("Source") or [])}
+ORPHANABLE = lambda k: k.split("§")[0] in ("Wargear", "Model") or (
+    k.split("§")[0] in WEP and k.split("§", 1)[1].split("—")[0] not in LEGENDS_UNITS)   # Legends units keep their weapons
 was_referenced = referenced([k for k in own if ORPHANABLE(k)])
+
+REFPAT = re.compile(r'"((?:Ranged Weapon|Melee Weapon|Weapon|Wargear|Model)§[^"]+)"')
+def dangling():
+    """asset keys any book referencing this one's chain uses but nothing defines"""
+    out = set()
+    for b in raw:
+        if b == book or book in W.chain(raw, b):
+            cat = W.resolved(raw, b)
+            out |= {(b, k) for k in REFPAT.findall(json.dumps(raw[b], ensure_ascii=False)) if k not in cat}
+    return out
+dangling_before = dangling()
+
+CORE_STATS = set()
+for cls in raw["Warhammer_40k_11e"]["rulebook"]["assetTaxonomy"].values():
+    CORE_STATS |= set((cls.get("stats") or {}).keys())
 
 touched_units = []
 for uname, uspec in SPEC.items():
-    uk = next((k for k in own if k.split("§")[0] in UNITCLS and n(k.split("§", 1)[1]) == n(uname)), None)
+    uk = next((k for k in res if k.split("§")[0] in UNITCLS and n(k.split("§", 1)[1]) == n(uname)), None)
     if not uk:
         errors.append(f"unit '{uname}' not in {book}"); continue
     touched_units.append(uk)
@@ -133,6 +173,17 @@ for uname, uspec in SPEC.items():
         a = holder_asset(key)
         if a is None: continue
         st = a.setdefault("stats", {})
+        for sn in hs.get("drop_stats", []):
+            if st.pop(sn, None) is not None: log.append(f"{key}: dropped stat '{sn}'")
+        for rn in hs.get("drop_rules", []):
+            if (a.get("rules") or {}).pop(rn, None) is not None: log.append(f"{key}: dropped rule '{rn}'")
+        for sn, labels in (hs.get("drop_ranks") or {}).items():
+            for lb in labels:
+                if ((st.get(sn) or {}).get("ranks") or {}).pop(lb, None) is not None: log.append(f"{key}: dropped rank '{sn}/{lb}'")
+        if a.get("rules") == {}:
+            del a["rules"]
+        if "static" not in hs and "slots" not in hs:
+            continue
         keep = set(hs.get("keep", []))
         for sn in [s for s, v in st.items() if isinstance(v, dict) and v.get("group") == "Loadout" and v.get("statType") == "rank" and s not in keep]:
             del st[sn]
@@ -155,7 +206,34 @@ for uname, uspec in SPEC.items():
         if not a["assets"]:
             del a["assets"]
         log.append(f"{key}: static {hs.get('static', [])} slots {list((hs.get('slots') or {}).keys())}")
-    ua = own[uk]
+    if "_rename" in uspec:   # 11e renames: swap weapon keys (and matching rank labels) through the unit tree
+        tree, todo = [], [uk]
+        while todo:
+            k = todo.pop()
+            if k in tree or k not in res: continue
+            tree.append(k)
+            todo += [m for m in re.findall(r'"(Model§[^"]+)"', json.dumps(res[k], ensure_ascii=False)) if m in res]
+        for old, new in uspec["_rename"].items():
+            nk = resolve_weapon(wunit, new)
+            if not nk: continue
+            pat = re.compile(r'"((?:Ranged Weapon|Melee Weapon|Weapon|Wargear)§(?:' + re.escape(wunit) + r'—)?)([^"—]+)"')
+            for k in tree:
+                a = holder_asset(k)
+                txt = json.dumps(a, ensure_ascii=False)
+                hits = {m.group(0) for m in pat.finditer(txt) if n(m.group(2)) == n(old.split(":")[-1]) and (m.group(1).startswith(("Wargear", "Weapon")) or ":" not in old or m.group(1).startswith(KIND[old[0]][0]))}
+                hits = {h for h in hits if h != f'"{nk}"' and h[1:-1] in res}
+                if not hits: continue
+                for h in hits:
+                    txt = txt.replace(h, f'"{nk}"')
+                lab = re.sub(r"^[RMWU]:", "", new)
+                txt = re.sub(r'"' + re.escape(old.split(":")[-1]) + r'"(?=\s*:\s*\{)', f'"{lab}"', txt, flags=re.I)   # rank labels
+                a.clear(); a.update(json.loads(txt))
+                for st in (a.get("stats") or {}).values():   # a renamed rank that was the stat's default
+                    if isinstance(st, dict) and st.get("ranks") and isinstance(st.get("value"), str) and st["value"] not in st["ranks"] \
+                            and n(st["value"]) == n(old.split(":")[-1]):
+                        st["value"] = lab
+                log.append(f"{k}: {sorted(hits)} -> {nk}")
+    ua = holder_asset(uk)
     rules = ua.setdefault("rules", {})
     for rn in uspec.get("_drop_rules", []):
         if rules.pop(rn, None) is not None: log.append(f"{uk}: dropped rule '{rn}'")
@@ -174,28 +252,52 @@ for uname, uspec in SPEC.items():
     if not rules:
         del ua["rules"]
 
-# stale per-unit weapons: nothing in the book references them any more
-blob = json.dumps({k: v for k, v in own.items()}, ensure_ascii=False)
-others = json.dumps({b: d for b, d in raw.items() if b != book}, ensure_ascii=False)
-for uk in touched_units:
-    if "Legends" in ((res[uk].get("keywords") or {}).get("Source") or []):
-        continue   # Legends units keep their old weapons
-    uname = uk.split("§", 1)[1]
-    for k in [k for k in own if k.split("§")[0] in WEP and k.split("§", 1)[1].split("—")[0] == uname and "—" in k]:
-        refs = blob.count(f'"{k}"') - 1
-        if refs == 0:
-            parent_ref = any(f'"{k}"' in json.dumps(v, ensure_ascii=False) for kk, v in own.items() if kk != k)
-            if not parent_ref and f'"{k}"' not in others:
-                log.append(f"STALE {k}" + (" (pruned)" if PRUNE else ""))
-                if PRUNE: del own[k]
+# inherited holders → overrides in this book, verified with the merge simulator
+from rzmerge import make_overlay, canon_unordered_traits as canon
+for k, t in targets.items():
+    ov = make_overlay(base[k], t)
+    if canon(W.merge_entry(base[k], ov)) != canon(t):
+        got, want = canon(W.merge_entry(base[k], ov)), canon(t)
+        diff = {f: (got.get(f), want.get(f)) for f in set(got) | set(want) if got.get(f) != want.get(f)}
+        errors.append(f"{k}: override does not reproduce the edited asset: {json.dumps(diff, ensure_ascii=False)[:800]}"); continue
+    if ov: own[k] = ov
+    elif k in own: del own[k]
+    log.append(f"OVERRIDE {k}: {sorted(ov)}")
+
+# stale per-unit weapons: nothing in any book references them any more (repeat: a pruned parent frees its profiles)
+from collections import Counter
+while True:
+    seen = Counter(re.findall(r'"((?:[^"\\]|\\.)*)"', json.dumps(raw, ensure_ascii=False)))
+    stale = [k for uk in touched_units if "Legends" not in ((res[uk].get("keywords") or {}).get("Source") or [])
+             for k in own if k.split("§")[0] in WEP and "—" in k and k.split("§", 1)[1].split("—")[0] == uk.split("§", 1)[1]
+             and seen[k] <= 1]
+    for k in stale:
+        log.append(f"STALE {k}" + (" (pruned)" if PRUNE else ""))
+        if PRUNE: del own[k]
+    if not (PRUNE and stale):
+        break
 
 # assets this run left unreferenced (dropped wargear options, removed models and their weapons)
 while PRUNE:
-    gone = [k for k in was_referenced if k in own and k not in referenced([k])]
+    alive = referenced([k for k in was_referenced if k in own])
+    gone = [k for k in was_referenced if k in own and k not in alive]
     if not gone:
         break
     for k in gone:
         log.append(f"ORPHANED {k} (pruned)"); del own[k]
+
+# rules in touched units must not read stats that are gone
+for uk in touched_units:
+    for k in [uk] + [m for m in re.findall(r'"(Model§[^"]+)"', json.dumps(own.get(uk) or res[uk], ensure_ascii=False))]:
+        a = own.get(k) if k not in base else W.merge_entry(base[k], own.get(k) or {})
+        a = a or res.get(k) or {}
+        for rn, r in (a.get("rules") or {}).items():
+            for sn in set(re.findall(r'\["\{self\}", "stats", "([^"]+)"', json.dumps(r, ensure_ascii=False))):
+                if sn not in (a.get("stats") or {}) and sn not in CORE_STATS:
+                    errors.append(f"{k}: rule '{rn}' reads missing stat '{sn}'")
+
+for b, k in sorted(dangling() - dangling_before):
+    errors.append(f"{b}: now references missing {k}")
 
 print("\n".join(log))
 print("\n".join("ERROR " + e for e in errors) or "no errors")
