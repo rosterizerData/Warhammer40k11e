@@ -204,11 +204,50 @@ def find_unit(b, name, keys):
     return hit
 
 absent = defaultdict(list)
+# Units the MFM doesn't list anywhere yet (a codex newer than the MFM, e.g. 11e Custodes): price them from the
+# datasheet's own cost table (Wahapedia export), in MFM's shape, until the MFM catches up. Needs WAHA_DIR.
+MFM_ALL = set()
+for _y in MFM.glob("*.yaml"):
+    MFM_ALL |= {norm(u["name"]) for u in yaml.safe_load(open(_y)).get("units") or []}
+def datasheet_pricing(b):
+    if not os.environ.get("WAHA_DIR"):
+        return []
+    import waha_lib as WL
+    rows = defaultdict(list)
+    for r in WL.rd("Datasheets_models_cost"):
+        rows[r["datasheet_id"]].append(r)
+    out = []
+    for d in WL.datasheets_for(b):
+        if WL.is_legends(d) or norm(d["name"]) in MFM_ALL or norm(d["name"]) in {norm(v) for v in ALIASES.values()}:
+            continue
+        tiers, seen = [], set()
+        for r in sorted(rows[d["id"]], key=lambda r: int(r["line"])):
+            if r["line"] in seen:
+                continue
+            seen.add(r["line"])
+            t = WL.html(r["description"]).upper()
+            if not r["cost"].strip():
+                m1 = re.search(r"1ST TO (\d+)", t); m2 = re.search(r"(\d+)(?:ST|ND|RD|TH)\+", t)
+                rng = f"[1,{m1.group(1)}]" if m1 else f"[{m2.group(1)},)" if m2 else "[1,1]" if "1ST UNIT" in t else "[1,)"
+                tiers.append({"range": rng, "costs": []})
+            elif tiers:
+                mm = re.findall(r"(\d+)", t)
+                if mm:
+                    tiers[-1]["costs"].append({"models": int(mm[-1]), "points": int(r["cost"].strip())})
+        tiers = [x for x in tiers if x["costs"]]
+        if tiers:
+            out.append({"name": d["name"], "pricing": tiers, "fromDatasheet": True})
+    return out
+
 for slug, b in SLUG_TO_FILE.items():
     yml = MFM / f"{slug}.yaml"
     if not yml.exists() or b not in cat:
         continue
     m = yaml.safe_load(open(yml))
+    extra = datasheet_pricing(b)
+    m["units"] = (m.get("units") or []) + extra
+    for mu in extra:
+        log.append(f"{b} {mu['name']}: not in the MFM — priced from its datasheet {[(c['models'], c['points']) for c in mu['pricing'][-1]['costs']]}")
     for mu in m.get("units") or []:   # model counts the MFM transcription got wrong (points are right; Waha has the size)
         for t in mu.get("pricing") or []:
             for c in t["costs"]:

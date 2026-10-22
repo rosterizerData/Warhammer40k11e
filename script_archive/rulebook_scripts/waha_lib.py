@@ -10,7 +10,7 @@ from rzmerge import merge_entry
 
 RZ = Path(__file__).resolve().parents[2]
 W = Path(os.environ["WAHA_DIR"])
-UNITCLS = ("Unit", "Character", "Vehicle", "Infantry/Mounted")
+UNITCLS = ("Unit", "Character", "Vehicle", "Infantry/Mounted", "Titan")
 
 
 def rd(name):

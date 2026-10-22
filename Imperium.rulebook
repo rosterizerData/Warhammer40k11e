@@ -1,6 +1,6 @@
 {
   "name": "Imperium 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -29565,7 +29565,8 @@
             "Titanic",
             "Towering",
             "Imperium",
-            "Reaver Titan"
+            "Reaver Titan",
+            "Frame"
           ],
           "Category": [
             "Vehicle—Walker"
@@ -29754,7 +29755,8 @@
             "Titanic",
             "Towering",
             "Imperium",
-            "Warbringer Nemesis Titan"
+            "Warbringer Nemesis Titan",
+            "Frame"
           ],
           "Category": [
             "Vehicle—Walker"
@@ -29956,7 +29958,8 @@
             "Titanic",
             "Towering",
             "Imperium",
-            "Warhound Titan"
+            "Warhound Titan",
+            "Frame"
           ],
           "Category": [
             "Vehicle—Walker"
@@ -30136,7 +30139,8 @@
             "Titanic",
             "Towering",
             "Imperium",
-            "Warlord Titan"
+            "Warlord Titan",
+            "Frame"
           ],
           "Category": [
             "Vehicle—Walker"
