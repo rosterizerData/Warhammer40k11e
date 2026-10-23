@@ -1,6 +1,6 @@
 {
   "name": "World Eaters 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2196,19 +2196,6 @@
           }
         }
       },
-      "Enhancement§Avenger's crown": {
-        "keywords": {
-          "Keywords": [
-            "Vessels of Wrath"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "**World Eaters** model only. If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
-      },
       "Enhancement§Battle-lust": {
         "keywords": {
           "Keywords": [
@@ -3340,19 +3327,6 @@
           }
         },
         "text": "**WORLD EATERS DAEMON** model only. The bearer’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 2+ instead of on a 6. In addition, the bearer has the Deadly Demise D3+1 ability, instead of the Deadly Demise D3 ability."
-      },
-      "Enhancement§Vox‑diabolus": {
-        "keywords": {
-          "Keywords": [
-            "Vessels of Wrath"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "**World Eaters** model only. Each time the bearer’s unit destroys an enemy unit with a melee attack, roll one D6, adding 1 to the result if the bearer is a **Vessel of Wrath**: on a 4+, you gain 1CP."
       },
       "Melee Weapon§Angron—Samni’arius and Spinegrinder": {
         "aspects": {

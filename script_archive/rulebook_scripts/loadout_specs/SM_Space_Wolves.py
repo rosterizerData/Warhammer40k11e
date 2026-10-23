@@ -1,4 +1,11 @@
 # Space Wolves 11e wargear options (Waha Datasheets_options). See loadouts.py for the format.
+def _headtakers(u):
+    """MFM v1.6: Hunting Wolves add 30 pts per 3 (both unit tiers); the unit's own WolfCost rules price them"""
+    u["rules"]["WolfCost1"]["actions"][0]["value"] = 30
+    u["rules"]["WolfCost2"]["actions"][0]["value"] = 60
+    return "Hunting Wolves 30/60"
+
+
 SPEC = {
     "Logan Grimnar": {"_rename": {"The Axe Morkai": "Axe Morkai"}},
     "Ulrik the Slayer": {"_rename": {"Artificer crozius": "Artificer Crozius Arcanum"}},
@@ -9,14 +16,15 @@ SPEC = {
                          "Melee Options": ["Chainsword", "Power Fist", "Power Weapon"], "Ranged Options": ["Bolt Pistol", "Plasma Pistol"]}}},
     "Thunderwolf Cavalry": {
         "Model§Thunderwolf Cavalry Pack Leader": {"static": ["Teeth and Claws", "Wolf Guard Weapon"], "slots": {
-            "Pistol Options": ["Bolt Pistol", "Plasma Pistol @plasma", "Boltgun + Storm Shield"]}},
+            "Pistol Options": ["Bolt Pistol", "Plasma Pistol @plasma", "Boltgun + U:Storm Shield"]}},
         "Model§Thunderwolf Cavalry": {"static": ["Teeth and Claws", "Wolf Guard Weapon"], "slots": {
-            "Pistol Options": ["Bolt Pistol", "Plasma Pistol @plasma", "Boltgun + Storm Shield"]}}},
+            "Pistol Options": ["Bolt Pistol", "Plasma Pistol @plasma", "Boltgun + U:Storm Shield"]}}},
+    "Wolf Guard Terminators": {"_rename": {"Storm Shield - Terminator": "U:Storm Shield"}},
     "Venerable Dreadnought (SW)": {"_unit": {"drop_ranks": {"Cannon Options": ["Twin lascannon"]}}},
     "Wolf Guard Battle Leader": {"_unit": {"slots": {
         "Loadout Options 1": ["Master-crafted Power Weapon", "Thunder Hammer"],
         "Loadout Options 2": ["Plasma Pistol", "Storm Shield - Battle Leader"]}}},
-    "Wolf Guard Headtakers": {"Model§Wolf Guard Headtaker": {"static": ["Heavy Bolt Pistol"], "slots": {
+    "Wolf Guard Headtakers": {"_patch": lambda u, own, res: _headtakers(u), "Model§Wolf Guard Headtaker": {"static": ["Heavy Bolt Pistol"], "slots": {
         "Loadout Options": ["Paired Master-crafted Power Weapons", "Master-crafted Power Weapon + Storm Shield - Headtakers"]}}},
     "Wulfen with Storm Shields": {"Model§Wulfen with Storm Shield": {"static": ["Thunder Hammer"], "slots": {
         "Wargear Options": ["Stormfrag Auto-launcher", "Death Totem"]}}},

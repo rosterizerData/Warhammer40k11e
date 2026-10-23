@@ -1,6 +1,6 @@
 {
   "name": "Blood Angels 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2623,19 +2623,6 @@
             "failState": "error"
           }
         }
-      },
-      "Enhancement§Troubling Visions": {
-        "keywords": {
-          "Keywords": [
-            "Angelic Inheritors"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "**Adeptus Astartes** model only. Once per battle,\nin your Command phase, the bearer can use this\nEnhancement. When it does, until the start of your\nnext Command phase, all Angelic Legacy abilities are active for the bearer’s unit, instead of\nonly two of them."
       },
       "Infantry/Mounted§Death Company Marines": {
         "allowed": {
@@ -9552,7 +9539,100 @@
             "value": "Imperium"
           }
         },
-        "rules": {}
+        "rules": {
+          "removeOtherChapterDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Forgefather's Seekers"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Shadowmark Talon"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Spearpoint Task Force"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Blade of Ultramar"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Ceramite Sentinels"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Medusa's Wrath"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          }
+        }
       },
       "Stratagem§Armour of Contempt": {
         "keywords": {

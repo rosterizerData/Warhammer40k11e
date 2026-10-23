@@ -1,6 +1,6 @@
 {
   "name": "Aeldari 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -5927,7 +5927,8 @@
             "evals": [],
             "evaluate": "AND",
             "failState": "pass",
-            "order": 10
+            "order": 10,
+            "note": "codex: this detachment has the ACROBATIC tag and cannot be taken with another ACROBATIC detachment"
           }
         },
         "stats": {
@@ -6423,7 +6424,8 @@
             "evals": [],
             "evaluate": "AND",
             "failState": "pass",
-            "order": 10
+            "order": 10,
+            "note": "codex: this detachment has the ACROBATIC tag and cannot be taken with another ACROBATIC detachment"
           }
         },
         "text": "**BOONS OF THE BROOD**\n\nWeapons equipped by **HARLEQUINS MOUNTED** and **HARLEQUINS VEHICLE** models from your army have the **[SUSTAINED HITS 1]** ability.\n\nEach time a **HARLEQUINS** unit from your army disembarks from a **TRANSPORT**, until the end of the turn, that unit’s weapons have the **[SUSTAINED HITS 1]** ability.",
@@ -6924,9 +6926,6 @@
         "keywords": {
           "Keywords": [
             "Eldritch Raiders"
-          ],
-          "Tags": [
-            "Upgrade"
           ]
         },
         "stats": {
@@ -6935,16 +6934,6 @@
           }
         },
         "text": "**ANHRATHE INFANTRY** unit only. This unit can perform the Fade Back Agile Manoeuvre without spending a Battle Focus token to do so. It can do so even if other units have done so in the same phase, and doing so does not prevent other units from performing the same Agile Manoeuvre in the same phase.",
-        "removed": {
-          "keywords": {
-            "Tags": [
-              "Character Only"
-            ]
-          }
-        },
-        "aspects": {
-          "Unique": false
-        },
         "rules": {
           "ANHRATHE INFANTRY unit only.": {
             "evals": [
@@ -6986,9 +6975,6 @@
         "keywords": {
           "Keywords": [
             "Eldritch Raiders"
-          ],
-          "Tags": [
-            "Upgrade"
           ]
         },
         "stats": {
@@ -6997,16 +6983,6 @@
           }
         },
         "text": "**ANHRATHE** unit only. Melee weapons equipped by models in this unit have the **[LANCE]** ability.",
-        "removed": {
-          "keywords": {
-            "Tags": [
-              "Character Only"
-            ]
-          }
-        },
-        "aspects": {
-          "Unique": false
-        },
         "rules": {
           "ANHRATHE unit only.": {
             "evals": [
@@ -7034,9 +7010,6 @@
         "keywords": {
           "Keywords": [
             "Corsair Coterie"
-          ],
-          "Tags": [
-            "Upgrade"
           ]
         },
         "stats": {
@@ -7045,16 +7018,6 @@
           }
         },
         "text": "**ANHRATHE CHARACTER** unit only. At the start of the battle, select one **CHARACTER** model in this unit. That model has the following ability:\n\n**Lord of Deceit (Aura):** Once per turn, when your opponent targets a unit from their army within 12” of this model with a stratagem, you can use this ability. If you do, increase the CP cost of that use of that stratagem by 1CP.",
-        "removed": {
-          "keywords": {
-            "Tags": [
-              "Character Only"
-            ]
-          }
-        },
-        "aspects": {
-          "Unique": false
-        },
         "rules": {
           "ANHRATHE CHARACTER unit only.": {
             "evals": [
@@ -7660,9 +7623,6 @@
         "keywords": {
           "Keywords": [
             "Eldritch Raiders"
-          ],
-          "Tags": [
-            "Upgrade"
           ]
         },
         "stats": {
@@ -7671,16 +7631,6 @@
           }
         },
         "text": "**ANHRATHE** unit only. Ranged weapons equipped by models in this unit have the **[ANTI-MONSTER 5+]** and **[ANTI-VEHICLE 5+]** abilities.",
-        "removed": {
-          "keywords": {
-            "Tags": [
-              "Character Only"
-            ]
-          }
-        },
-        "aspects": {
-          "Unique": false
-        },
         "rules": {
           "ANHRATHE unit only.": {
             "evals": [
@@ -9254,9 +9204,6 @@
         "keywords": {
           "Keywords": [
             "Corsair Coterie"
-          ],
-          "Tags": [
-            "Upgrade"
           ]
         },
         "stats": {
@@ -9265,16 +9212,6 @@
           }
         },
         "text": "**ANHRATHE INFANTRY** unit only. Models in this unit have a 5+ invulnerable save.",
-        "removed": {
-          "keywords": {
-            "Tags": [
-              "Character Only"
-            ]
-          }
-        },
-        "aspects": {
-          "Unique": false
-        },
         "rules": {
           "ANHRATHE INFANTRY unit only.": {
             "evals": [
@@ -9415,9 +9352,6 @@
         "keywords": {
           "Keywords": [
             "Corsair Coterie"
-          ],
-          "Tags": [
-            "Upgrade"
           ]
         },
         "stats": {
@@ -9426,16 +9360,6 @@
           }
         },
         "text": "**ANHRATHE** unit only. Models in this unit have the Deep Strike ability. In addition, once per battle, at the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, it can use this ability. If it does, remove this unit from the battlefield and place it into Strategic Reserves.",
-        "removed": {
-          "keywords": {
-            "Tags": [
-              "Character Only"
-            ]
-          }
-        },
-        "aspects": {
-          "Unique": false
-        },
         "rules": {
           "ANHRATHE unit only.": {
             "evals": [
@@ -34983,25 +34907,12 @@
         "keywords": {
           "Keywords": [
             "Corsair Coterie"
-          ],
-          "Tags": [
-            "Upgrade"
           ]
         },
         "stats": {
           "Points": {
             "value": 25
           }
-        },
-        "removed": {
-          "keywords": {
-            "Tags": [
-              "Character Only"
-            ]
-          }
-        },
-        "aspects": {
-          "Unique": false
         },
         "rules": {
           "ANHRATHE unit only.": {

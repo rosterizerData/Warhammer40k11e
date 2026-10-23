@@ -1,6 +1,6 @@
 {
   "name": "Deathwatch 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -962,108 +962,6 @@
           }
         },
         "text": "**WATCH MASTER/CAPTAIN** model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, the **assault doctrine**, **devastator doctrine** and **tactical doctrine** are active for this unit until the start of your next Command phase."
-      },
-      "Enhancement§Thief of Secrets": {
-        "keywords": {
-          "Keywords": [
-            "Black Spear Task Force"
-          ]
-        },
-        "rules": {
-          "Ability": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "D",
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "S",
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "D",
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "S",
-                    "value"
-                  ]
-                ],
-                "value": 1
-              },
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "AP",
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "AP",
-                    "value"
-                  ]
-                ],
-                "value": -1
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "stats": {
-          "Points": {
-            "group": "Cost",
-            "statType": "numeric",
-            "value": 25,
-            "visibility": "normal"
-          }
-        },
-        "text": "**Adeptus Astartes** model only. Improve the Strength, Damage and Armour Penetration characteristics of the bearer’s melee weapons by 1. At the end of the Fight phase, if one or more enemy models were destroyed as a result of a melee attack made by the bearer this phase, until the end of the battle, improve the Strength, Damage and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead."
       },
       "Infantry/Mounted§Deathwatch Terminator Squad": {
         "allowed": {
@@ -12501,6 +12399,112 @@
             "evals": [],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "removeOtherChapterDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Forgefather's Seekers"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Shadowmark Talon"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Spearpoint Task Force"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Blade of Ultramar"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Ceramite Sentinels"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Medusa's Wrath"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Deathwatch Support"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
           }
         },
         "stats": {

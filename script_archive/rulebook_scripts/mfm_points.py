@@ -256,11 +256,20 @@ for slug, b in SLUG_TO_FILE.items():
                 if c["models"] in seen and seen[c["models"]] == c["points"]:
                     t["costs"].remove(c)
                 seen.setdefault(c["models"], c["points"])
+        rep = []
         dup = [c["models"] for c in mu["pricing"][-1]["costs"] if not c.get("addon")]
         if len(dup) != len(set(dup)):
-            problems.append(f"{b} {k}: composite rows with duplicate model counts — skipped: {mu['pricing'][-1]['costs']}")
-            continue
-        rep = []
+            # composite rows ("3 Wolf Guard Headtakers, 3 Hunting Wolves"): the single-component rows are the unit's
+            # cost table; the rest price an attached model type the book handles with its own rules
+            for t in mu["pricing"]:
+                extra = [c for c in t["costs"] if "," in c.get("desc", "")]
+                if extra and extra != t["costs"]:
+                    t["costs"] = [c for c in t["costs"] if c not in extra]
+                    rep.append(f"composite rows left to the unit's own rules: {[(c['desc'], c['points']) for c in extra]}")
+            dup = [c["models"] for c in mu["pricing"][-1]["costs"] if not c.get("addon")]
+            if len(dup) != len(set(dup)):
+                problems.append(f"{b} {k}: composite rows with duplicate model counts — skipped: {mu['pricing'][-1]['costs']}")
+                continue
         if set_target(b, k, cost_mutator(mu, rep), "unit"):
             log.append(f"{b} {k}: cost -> {[ (c['models'], c['points']) for c in mu['pricing'][-1]['costs']]}" + (f" (discount {len(mu['pricing'])==2})" if len(mu['pricing']) == 2 else ""))
         for r in rep:

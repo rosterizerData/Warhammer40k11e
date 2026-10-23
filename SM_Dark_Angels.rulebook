@@ -1,6 +1,6 @@
 {
   "name": "Dark Angels 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2289,41 +2289,6 @@
         },
         "text": "**DEATHWING** model with the **Deep Strike** ability only. In your first Movement phase, this unit can make an **ingress move**."
       },
-      "Enhancement§Eye of the Unseen": {
-        "keywords": {
-          "Keywords": [
-            "Inner Circle Task Force"
-          ]
-        },
-        "rules": {
-          "Deathwing model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Deathwing"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "Deathwing model only. Each time you target the bearer’s unit with a Stratagem, roll one D6, adding 1 if the bearer is within range of your Vowed objective marker: on a 5+, you gain 1CP."
-      },
       "Enhancement§Lord of the Ravenwing": {
         "keywords": {
           "Keywords": [
@@ -3097,7 +3062,7 @@
         "rules": {},
         "stats": {
           "Points": {
-            "value": 85
+            "value": 80
           }
         }
       },
@@ -7581,7 +7546,100 @@
             "value": "Imperium"
           }
         },
-        "rules": {}
+        "rules": {
+          "removeOtherChapterDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Forgefather's Seekers"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Shadowmark Talon"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Spearpoint Task Force"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Blade of Ultramar"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Ceramite Sentinels"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Medusa's Wrath"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          }
+        }
       },
       "Stratagem§Armour of Contempt": {
         "keywords": {

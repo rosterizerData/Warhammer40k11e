@@ -1,6 +1,6 @@
 {
   "name": "Orks 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -4368,152 +4368,6 @@
         },
         "text": "**GET STUCK IN**\n\nFriendly **ORKS** units’ melee attacks have **[SUSTAINED HITS 1]**."
       },
-      "Enhancement§’eadstompa": {
-        "keywords": {
-          "Keywords": [
-            "Bully Boyz"
-          ]
-        },
-        "rules": {
-          "Infantry Warboss model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Infantry"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Warboss"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "INFANTRY WARBOSS model only. Each time the bearer makes an attack that targets a unit that is below its Starting Strength, re-roll a Wound roll of 1. If that unit is Below Half-strength, you can re-roll the Wound roll instead."
-      },
-      "Enhancement§Big Gob": {
-        "keywords": {
-          "Keywords": [
-            "Bully Boyz"
-          ]
-        },
-        "rules": {
-          "Infantry Warboss model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Infantry"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Warboss"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "INFANTRY WARBOSS model only. At the start of the Fight phase, select one enemy unit within Engagement range of the bearer. That unit must take a Battle-shock test, and when doing so, subtract 1 from the result."
-      },
-      "Enhancement§Blitzkaptin": {
-        "keywords": {
-          "Keywords": [
-            "Blitz Brigade"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "**ORKS CHARACTER** model only. After both players have deployed their armies, if the bearer's unit (or any **TRANSPORT** it is embarked within) is on the battlefield, select up to three **ORKS VEHICLE** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
-      },
-      "Enhancement§Bloodthirsty Belligerence": {
-        "keywords": {
-          "Keywords": [
-            "Green Tide"
-          ]
-        },
-        "rules": {
-          "Ork Infantry models only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Infantry"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "ORKS INFANTRY model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit. While that unit contains 10 or more models, you can re-roll Charge rolls made for that unit as well."
-      },
       "Enhancement§Brutal But Kunnin’": {
         "keywords": {
           "Keywords": [
@@ -4585,75 +4439,6 @@
           }
         }
       },
-      "Enhancement§Da Biggest Boss": {
-        "keywords": {
-          "Keywords": [
-            "Bully Boyz"
-          ]
-        },
-        "rules": {
-          "apply": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "W",
-                    "value"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          },
-          "Infantry Warboss model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Infantry"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Warboss"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "INFANTRY WARBOSS model only. Add 2 to the bearer’s Wounds characteristic."
-      },
       "Enhancement§Da Gobshot Thunderbuss": {
         "keywords": {
           "Keywords": [
@@ -4693,41 +4478,6 @@
             "Ranged Weapon§Brute Bosses—Da Gobshot Thunderbuss"
           ]
         }
-      },
-      "Enhancement§Fasta Than Yooz": {
-        "keywords": {
-          "Keywords": [
-            "Kult of Speed"
-          ]
-        },
-        "rules": {
-          "Orks Infantry model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Infantry"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 35
-          }
-        },
-        "text": "ORKS INFANTRY model only. Each time the bearer’s unit disembarks from a TRANSPORT after that TRANSPORT has made a Normal move, the bearer’s unit is still eligible to declare a charge this turn."
       },
       "Enhancement§Ferocious Show Off": {
         "keywords": {
@@ -4837,41 +4587,6 @@
             "failState": "error"
           }
         }
-      },
-      "Enhancement§Gitfinder Gogglez": {
-        "keywords": {
-          "Keywords": [
-            "Dread Mob"
-          ]
-        },
-        "rules": {
-          "Mek model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Mek"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "**MEK** model only. Ranged weapons equipped by models in the bearer’s unit have the **[IGNORES COVER]** ability."
       },
       "Enhancement§Glory Hog": {
         "keywords": {
@@ -5026,76 +4741,6 @@
           }
         }
       },
-      "Enhancement§Mork’s Kunnin’": {
-        "keywords": {
-          "Keywords": [
-            "Taktikal Brigade"
-          ]
-        },
-        "rules": {
-          "Orks model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Faction"
-                  ]
-                ],
-                "value": "Orks"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "**Orks** model only. When both players have deployed their armies, you can redeploy up to three friendly **Orks Infantry** units. When doing so, you can set those units up in **strategic reserves**, regardless of how many units are already in **strategic reserves**."
-      },
-      "Enhancement§Press It Fasta!": {
-        "keywords": {
-          "Keywords": [
-            "Dread Mob"
-          ]
-        },
-        "rules": {
-          "Mek model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Mek"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 35
-          }
-        },
-        "text": "MEK model only. Each time the bearer’s unit is selected to shoot, when rolling to determine which ability that unit’s weapons gain from the Try Dat Button! Detachment rule, roll one additional D6: until the end of the phase, ranged weapons equipped by models in that unit gain both Button Effects generated by those rolls. If a duplicate Button Effect is rolled, it has no additional effect."
-      },
       "Enhancement§Proper Killy": {
         "keywords": {
           "Keywords": [
@@ -5130,174 +4775,6 @@
           }
         },
         "text": "**WARBOSS** model only. This model can re-roll **hit rolls** of 1."
-      },
-      "Enhancement§Raucous Warcaller": {
-        "keywords": {
-          "Keywords": [
-            "Green Tide"
-          ]
-        },
-        "rules": {
-          "Ork Infantry model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Infantry"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "ORKS INFANTRY model only. While the bearer is leading a unit, that unit always counts as containing 10 or more models for the purposes of your Detachment rule and any Stratagems you use."
-      },
-      "Enhancement§Runnin’ Boots": {
-        "keywords": {
-          "Keywords": [
-            "Blitz Brigade"
-          ]
-        },
-        "rules": {
-          "Orks Infantry Character model only": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Infantry"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "**ORKS INFANTRY CHARACTER** model only. Each time you make a Charge roll for the bearer's unit, if that unit disembarked from a **TRANSPORT** this turn, add 1 to the result."
-      },
-      "Enhancement§Skrag Every Stash!": {
-        "keywords": {
-          "Keywords": [
-            "Da Big Hunt"
-          ]
-        },
-        "rules": {
-          "Beast Snagga model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Beast Snagga"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "BEAST SNAGGA model only. At the end of your\nCommand phase, if the bearer is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
-      },
-      "Enhancement§Slippery Git": {
-        "keywords": {
-          "Keywords": [
-            "Taktikal Brigade"
-          ]
-        },
-        "rules": {
-          "Infantry Warboss model only (excluding Mega Armour models).": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Infantry"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Warboss"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Mega Armour"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "**INFANTRY WARBOSS** model only (excluding **MEGA ARMOUR** models). This model has **Infiltrators** and **Stealth**."
       },
       "Enhancement§Smoky Gubbinz": {
         "keywords": {
@@ -5369,97 +4846,6 @@
           "Unique": false
         }
       },
-      "Enhancement§Speed Makes Right": {
-        "keywords": {
-          "Keywords": [
-            "Kult of Speed"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "ORKS model only. In your Command phase, if the bearer (or a TRANSPORT the bearer is embarked within) is within 9″ of one or more enemy units, roll one D6: on a 3+, you gain 1CP."
-      },
-      "Enhancement§Squig-hide Tyres": {
-        "keywords": {
-          "Keywords": [
-            "Kult of Speed"
-          ]
-        },
-        "rules": {
-          "Deffkilla Wartrike model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Deffkilla Wartrike"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "DEFFKILLA WARTRIKE model only. Each time a model in the bearer’s unit makes a Consolidation move, it can move up to 6″ instead of up to 3″."
-      },
-      "Enhancement§Supa-Cybork Body": {
-        "keywords": {
-          "Keywords": [
-            "War Horde"
-          ]
-        },
-        "rules": {
-          "Add Ability": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits"
-                  ]
-                ],
-                "value": {
-                  "item": "Ability§Feel No Pain",
-                  "stats": {
-                    "x": {
-                      "value": "4+"
-                    }
-                  }
-                }
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "stats": {
-          "Points": {
-            "group": "Cost",
-            "statType": "numeric",
-            "value": 15,
-            "visibility": "normal"
-          }
-        },
-        "text": "Orks model only. The bearer has the Feel No Pain 4+ ability."
-      },
       "Enhancement§Supa-glowy Fing": {
         "keywords": {
           "Keywords": [
@@ -5494,41 +4880,6 @@
           }
         },
         "text": "**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n\n- **[ANTI-INFANTRY 4+]**.\n\n- **[DEVASTATING WOUNDS]**.\n\n- **[SUPA-HAZARDOUS]**.\n**[SUPA-HAZARDOUS]****:** Each time a unit is selected to shoot, after that unit has resolved all of its attacks, make two **hazard rolls** for that unit for each **[SUPA-HAZARDOUS]** weapon you selected in the Select Weapons step."
-      },
-      "Enhancement§Supercharged Squig Oil": {
-        "keywords": {
-          "Keywords": [
-            "Blitz Brigade"
-          ]
-        },
-        "rules": {
-          "Mek model only": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Mek"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "**MEK** model only. Each time the bearer uses its Mekaniak ability, until the end of the turn, you can re-roll Charge rolls for the selected **VEHICLE** model's unit."
       },
       "Enhancement§Surly as a Squiggoth": {
         "keywords": {
@@ -5718,146 +5069,6 @@
             "failState": "error"
           }
         }
-      },
-      "Enhancement§Tellyporta": {
-        "keywords": {
-          "Keywords": [
-            "Bully Boyz"
-          ]
-        },
-        "rules": {
-          "apply": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "traits"
-                  ],
-                  [
-                    "{parent}",
-                    "traits"
-                  ]
-                ],
-                "value": "Ability§Deep Strike"
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "classIdentity"
-                  ]
-                ],
-                "value": "Unit"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          },
-          "Warboss in Mega Armour model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Warboss in Mega Armour"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "WARRBOSS IN MEGA ARMOUR model only. Models in the bearer’s unit have the Deep Strike ability."
-      },
-      "Enhancement§Tuff Git": {
-        "keywords": {
-          "Keywords": [
-            "Blitz Brigade"
-          ]
-        },
-        "rules": {
-          "Orks Infantry Character model only": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Infantry"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 5
-          }
-        },
-        "text": "**ORKS INFANTRY CHARACTER** model only. At the end of a phase in which the bearer's unit disembarked from a **TRANSPORT**, if that unit is Battle-shocked, it is no longer Battle-shocked."
-      },
-      "Enhancement§Wazblasta": {
-        "keywords": {
-          "Keywords": [
-            "Kult of Speed"
-          ]
-        },
-        "rules": {
-          "Deffkilla Wartrike model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Deffkilla Wartrike"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "DEFFKILLA WARTRIKE model only. In your Shooting phase, after the bearer’s unit has shot, if it is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6”. If it does, until the end of the turn, it is not eligible to declare a charge."
       },
       "Melee Weapon§Attack Fighta—Armoured hull": {
         "aspects": {
@@ -9682,32 +8893,6 @@
           },
           "WS": {
             "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Warbuggies—Spiked wheels": {
-        "aspects": {
-          "Label": "Spiked wheels"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 6
-          },
-          "WS": {
-            "value": 4
           }
         }
       },
@@ -18183,75 +17368,6 @@
           }
         }
       },
-      "Ranged Weapon§Warbuggies—Rack of rokkits": {
-        "aspects": {
-          "Label": "Rack of rokkits"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Blast"
-          ]
-        },
-        "stats": {
-          "A": {
-            "statType": "term",
-            "value": "D3+1"
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 5
-          },
-          "D": {
-            "value": 3
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 9
-          }
-        }
-      },
-      "Ranged Weapon§Warbuggies—Twin big shoota": {
-        "aspects": {
-          "Label": "Twin big shoota"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Rapid Fire",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            },
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 5
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 5
-          }
-        }
-      },
       "Ranged Weapon§Wartrakks—Kustom shoota": {
         "aspects": {
           "Label": "Kustom shoota"
@@ -19688,7 +18804,6 @@
               "text": "This model has a transport capacity of 11 Orks Infantry models (excluding Ghazghkull Thraka). Each Mega Armour or Jump Pack model takes up the space of 2 models."
             },
             "Ability§Raucous Occupants",
-            "Ranged Weapon§Big’ed Bossbunka—Big shoota",
             "Ranged Weapon§Big’ed Bossbunka—Gaze of Gork"
           ]
         },
@@ -19733,16 +18848,13 @@
           "W": {
             "value": 12
           },
-          "# of Additional Big Shootas": {
+          "Big Shootas": {
             "dynamic": true,
             "group": "Loadout",
             "groupOrder": 2,
             "ranks": {
-              "0": {
-                "order": 0
-              },
               "1": {
-                "order": 1,
+                "order": 0,
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Big’ed Bossbunka—Big shoota"
@@ -19750,7 +18862,7 @@
                 ]
               },
               "2": {
-                "order": 2,
+                "order": 1,
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Big’ed Bossbunka—Big shoota"
@@ -19761,7 +18873,7 @@
                 ]
               },
               "3": {
-                "order": 3,
+                "order": 2,
                 "traits": [
                   {
                     "trait": "Ranged Weapon§Big’ed Bossbunka—Big shoota"
@@ -19776,7 +18888,7 @@
               }
             },
             "statType": "rank",
-            "value": "0",
+            "value": "1",
             "visibility": "active"
           }
         },
@@ -23728,7 +22840,8 @@
                   }
                 ],
                 "tracking": {
-                  "rollagun": 1
+                  "rollagun": 1,
+                  "kannon": 1
                 }
               },
               "Lobba": {
@@ -23739,7 +22852,8 @@
                   }
                 ],
                 "tracking": {
-                  "rollagun": 1
+                  "rollagun": 1,
+                  "lobba": 1
                 }
               },
               "Zzap Gun": {
@@ -23774,7 +22888,8 @@
                   }
                 ],
                 "tracking": {
-                  "rollagun": 1
+                  "rollagun": 1,
+                  "kannon": 1
                 }
               },
               "Lobba": {
@@ -23785,7 +22900,8 @@
                   }
                 ],
                 "tracking": {
-                  "rollagun": 1
+                  "rollagun": 1,
+                  "lobba": 1
                 }
               },
               "Zzap Gun": {
@@ -23820,7 +22936,8 @@
                   }
                 ],
                 "tracking": {
-                  "rollagun": 1
+                  "rollagun": 1,
+                  "kannon": 1
                 }
               },
               "Lobba": {
@@ -23831,7 +22948,8 @@
                   }
                 ],
                 "tracking": {
-                  "rollagun": 1
+                  "rollagun": 1,
+                  "lobba": 1
                 }
               },
               "Zzap Gun": {
@@ -24008,6 +23126,38 @@
               }
             ],
             "evaluate": "OR",
+            "failState": "error"
+          },
+          "At most 1 Kannon and 1 Lobba with the Deff Rolla": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "kannon"
+                  ]
+                ]
+              },
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "lobba"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
             "failState": "error"
           }
         },

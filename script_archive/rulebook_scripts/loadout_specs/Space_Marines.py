@@ -162,6 +162,7 @@ SPEC = {
                      "Venator Neutron Laser"],
         "Hunter-killer missile": OPT("Hunter-killer Missile"),
         "Loadout": ["-", "2x Heavy Bolter", "2x Lascannon"], "Storm Bolter": OPT("Storm Bolter")}}},
+    "Victrix Honour Guard": {"_patch": lambda u, own, res: _victrix(u)},
     "Predator Annihilator": {"_unit": {"static": ["Armoured Tracks", "Predator Twin Lascannon"], "slots": {
         "Loadout": ["2x Lascannon", "2x Heavy Bolter"], "Hunter-killer": OPT("Hunter-killer Missile"), "Storm bolter": OPT("Storm Bolter")}}},
     "Predator Destructor": {"_unit": {"static": ["Armoured Tracks", "Predator Autocannon"], "slots": {
@@ -192,3 +193,16 @@ def _cluster_bombs(u, own):
     if k not in tr:
         tr.append(k)
     return "cluster bombs as an ability"
+
+
+def _victrix(u):
+    """11e: 1–6 models in all, the Chapter Ancient and Champion included; at least one Honour Guard
+    (the unit's own designation is in its tally, so count the characters instead: Models ≥ characters + 1)"""
+    u["stats"]["Models"]["min"] = 1
+    for s in ("Chapter Ancient", "Chapter Champion"):
+        u["stats"][s]["ranks"]["✓"]["tracking"] = {"honourChars": 1}
+    u.setdefault("rules", {})["At least 1 Victrix Honour Guard"] = {"evals": [
+        {"actionable": True, "equation": {"operator": "T-O", "value": ["{self}", "tracked", "honourChars"]}, "min": 1, "not": False,
+         "operator": "AND", "paths": [["{self}", "stats", "Models", "value"]]}],
+        "evaluate": "AND", "failState": "error"}
+    return "1–6 models including the Ancient and Champion"

@@ -1,6 +1,6 @@
 {
   "name": "Genestealer Cults 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2458,7 +2458,8 @@
             "evals": [],
             "evaluate": "AND",
             "failState": "pass",
-            "order": 10
+            "order": 10,
+            "note": "codex: this detachment has the PURESTRAIN tag and cannot be taken with another PURESTRAIN detachment"
           }
         },
         "stats": {
@@ -8771,6 +8772,90 @@
                   ]
                 ],
                 "value": "Grizzled Company"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Steel Hammer",
+                "note": "MFM 1.6: allied-faction detachment, not selectable by a Genestealer Cults army"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Armoured Infantry",
+                "note": "MFM 1.6: allied-faction detachment, not selectable by a Genestealer Cults army"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Abhuman Auxiliaries",
+                "note": "MFM 1.6: allied-faction detachment, not selectable by a Genestealer Cults army"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Designation Force",
+                "note": "MFM 1.6: allied-faction detachment, not selectable by a Genestealer Cults army"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Ambush Predators",
+                "note": "MFM 1.6: allied-faction detachment, not selectable by a Genestealer Cults army"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Talons Of The Norn Queen",
+                "note": "MFM 1.6: allied-faction detachment, not selectable by a Genestealer Cults army"
               }
             ],
             "evals": [],

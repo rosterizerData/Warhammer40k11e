@@ -1,6 +1,6 @@
 {
   "name": "Adepta Sororitas 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -15052,7 +15052,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 220
+            "value": 215
           },
           "Rocket Options": {
             "dynamic": true,

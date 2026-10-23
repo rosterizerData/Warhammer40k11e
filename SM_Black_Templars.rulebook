@@ -1,6 +1,6 @@
 {
   "name": "Black Templars 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -7665,6 +7665,112 @@
             "evals": [],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "removeOtherChapterDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Forgefather's Seekers"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Shadowmark Talon"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Spearpoint Task Force"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Blade of Ultramar"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Ceramite Sentinels"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Medusa's Wrath"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Gladius Task Force"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
           }
         },
         "stats": {

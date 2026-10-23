@@ -94,7 +94,7 @@ def beast_snaggas(u, own, res):
     return nob_sizes("Model§Beast Snagga Nob", "Model§Beast Snagga Boy", [(10, 1), (20, 2)])(u, own, res)
 
 
-KILL_TANK_GUN = ["-", "Kannon @rollagun", "Lobba @rollagun", "Zzap Gun @rollagun"]
+KILL_TANK_GUN = ["-", "Kannon @rollagun @kannon", "Lobba @rollagun @lobba", "Zzap Gun @rollagun"]
 
 SPEC = {
     # ---- characters
@@ -220,8 +220,7 @@ SPEC = {
         "Ranged Options": ["-", "Big Shoota + Rokkit Launcha", "2x Big Shoota", "2x Rokkit Launcha"],
         "Wreckin’ ball": OPT("Wreckin’ Ball")}}},
     "Big Trakk": {"_unit": {"static": ["Armoured Hull", "2x Big Shoota"], "slots": {"Kannon": ["-", "Kannon", "Supa-kannon"]}}},
-    "Kill Tank": {"_warning": "Whether “three of the following: Kannon, Lobba, Zzap Gun” allows the same weapon more than once couldn’t be determined; it is allowed.",
-        "_unit": {"slots": {
+    "Kill Tank": {"_unit": {"slots": {
         "Dual Big Shoota": ["Dual Big Shoota", "Rokkit Launcha", "Skorcha"],
         "Skorcha": ["Skorcha", "Dual Big Shoota", "Rokkit Launcha"],
         "Main Armament": ["Tank Kannon + Crushin' Bulk", "Deff Rolla @rolla=3"],
@@ -231,16 +230,18 @@ SPEC = {
             "A Deff Rolla takes exactly three of Kannon, Lobba and Zzap Gun": {"evals": [{
                 "actionable": True, "equation": {"operator": "T-O", "value": ["{self}", "tracked", "rolla"]}, "max": 0, "min": 0,
                 "not": False, "operator": "AND", "paths": [["{self}", "tracked", "rollagun"]]}], "evaluate": "AND", "failState": "error"},
+            "At most 1 Kannon and 1 Lobba with the Deff Rolla": {"evals": [
+                {"actionable": True, "max": 1, "not": False, "operator": "AND", "paths": [["{self}", "tracked", "kannon"]]},
+                {"actionable": True, "max": 1, "not": False, "operator": "AND", "paths": [["{self}", "tracked", "lobba"]]}],
+                "evaluate": "AND", "failState": "error"},
             "Big Shootas need a Deff Rolla": {"evals": [
                 {"actionable": True, "max": 0, "not": False, "operator": "AND", "paths": [["{self}", "tracked", "rollabs"]]},
                 {"actionable": True, "min": 1, "not": False, "operator": "AND", "paths": [["{self}", "tracked", "rolla"]]}],
                 "evaluate": "OR", "failState": "error"}}},
-    "Gargantuan Squiggoth": {"_warning": "Whether the default Kannon has both profiles couldn’t be determined; it is modelled as a full Kannon, plus the optional extra Kannon or Supa-kannon.",
-        "_unit": {"static": ["Huge Tusks"], "slots": {
+    "Gargantuan Squiggoth": {"_unit": {"static": ["Huge Tusks"], "slots": {
         "Kannon": ["Kannon", "Supa-kannon"], "Extra Kannon": ["-", "Kannon", "Supa-kannon"]}}},
-    "Big’ed Bossbunka": {"_warning": "Whether “up to 3 Big Shootas” counts its default Big Shoota couldn’t be determined; up to 3 more are allowed.",
-        "_unit": {"static": ["Big Shoota", "Gaze of Gork"], "slots": {
-        "# of Additional Big Shootas": UPTO("Big Shoota", 3)}}},
+    "Big’ed Bossbunka": {"_unit": {"static": ["Gaze of Gork"], "slots": {
+        "Big Shootas": [("1", "Big Shoota"), ("2", "2x Big Shoota"), ("3", "3x Big Shoota")]}}},
     "Big Mek Dakkarig": {"_unit": {"static": ["Blitzkannon", "Multi-busta Launcha", "Stompy Feet"]}},
     "Wartrakks": {"Model§Wartrakk": {"static": ["Kustom Choppa", "Kustom Shoota", "Multi-busta Launcha"]}, "_patch": to_multi("Wartrakk", 130)},
     "Rukkatrukk Squigbuggies": {"_patch": to_multi("Rukkatrukk Squigbuggy", 160)},

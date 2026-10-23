@@ -1,6 +1,6 @@
 {
   "name": "Space Marines 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -4044,7 +4044,7 @@
             "value": 2
           },
           "Points": {
-            "value": 45
+            "value": 40
           },
           "Sv": {
             "value": 3
@@ -4782,7 +4782,7 @@
             "value": 3
           },
           "Points": {
-            "value": 60
+            "value": 70
           },
           "Sv": {
             "value": 3
@@ -5451,7 +5451,7 @@
             "value": 1
           },
           "Points": {
-            "value": 100
+            "value": 90
           },
           "Sv": {
             "value": 2
@@ -6239,7 +6239,7 @@
             "value": 1
           },
           "Points": {
-            "value": 70
+            "value": 60
           },
           "Sv": {
             "value": 3
@@ -6440,7 +6440,7 @@
             "value": 1
           },
           "Points": {
-            "value": 85
+            "value": 75
           },
           "Sv": {
             "value": 2
@@ -6507,7 +6507,7 @@
             "value": 2
           },
           "Points": {
-            "value": 80
+            "value": 75
           },
           "Sv": {
             "value": 3
@@ -6575,7 +6575,7 @@
             "value": 1
           },
           "Points": {
-            "value": 80
+            "value": 75
           },
           "Sv": {
             "value": 3
@@ -7455,7 +7455,7 @@
             "value": 1
           },
           "Points": {
-            "value": 85
+            "value": 80
           },
           "Sv": {
             "value": 2
@@ -8316,7 +8316,7 @@
             "value": 1
           },
           "Points": {
-            "value": 80
+            "value": 85
           },
           "Sv": {
             "value": 3
@@ -8925,7 +8925,7 @@
             "value": 1
           },
           "Points": {
-            "value": 65
+            "value": 55
           },
           "Sv": {
             "value": 2
@@ -11108,32 +11108,6 @@
         },
         "text": "**PHOBOS** model only. In your Shooting phase, after this unit has shot, if this unit is **unengaged**, this unit can make a **normal move** of up to 6\". If it does, this unit is __not__ **eligible to declare a charge** until the end of the turn."
       },
-      "Enhancement§Feinting Withdrawal": {
-        "keywords": {
-          "Keywords": [
-            "Stormlance Task Force"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "Adeptus Astartes model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it Fell Back."
-      },
-      "Enhancement§Fire Discipline": {
-        "keywords": {
-          "Keywords": [
-            "Gladius Task Force"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can reroll Advance rolls made for that unit."
-      },
       "Enhancement§Forged in Battle": {
         "keywords": {
           "Keywords": [
@@ -11168,104 +11142,6 @@
             "failState": "error"
           }
         }
-      },
-      "Enhancement§Fury of the Storm": {
-        "keywords": {
-          "Keywords": [
-            "Stormlance Task Force"
-          ]
-        },
-        "rules": {
-          "apply": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "S",
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classIdentity",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "S",
-                    "value"
-                  ]
-                ],
-                "value": 1
-              },
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "AP",
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classIdentity",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "AP",
-                    "value"
-                  ]
-                ],
-                "value": -1
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          },
-          "Mounted model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Mounted"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "Adeptus Astartes Mounted model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the Strength and Armour Penetration characteristics bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead."
       },
       "Enhancement§Gunnery Honours": {
         "keywords": {
@@ -11524,41 +11400,6 @@
           }
         }
       },
-      "Enhancement§Hunter’s Instincts": {
-        "keywords": {
-          "Keywords": [
-            "Stormlance Task Force"
-          ]
-        },
-        "rules": {
-          "Mounted model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Mounted"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "Adeptus Astartes Mounted model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is."
-      },
       "Enhancement§Immolator": {
         "keywords": {
           "Keywords": [
@@ -11777,19 +11618,6 @@
           }
         },
         "text": "**ADEPTUS ASTARTES** model only. This model’s melee attacks have:\n\n- +1 **S** and **AP**. \n- __Or:__ If the **assault doctrine** is active for this unit, +2 **S** and **AP**."
-      },
-      "Enhancement§Portents of Wisdom": {
-        "keywords": {
-          "Keywords": [
-            "Stormlance Task Force"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "Adeptus Astartes model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit."
       },
       "Enhancement§Redoubtable Machine Spirit": {
         "keywords": {
@@ -12216,63 +12044,6 @@
           }
         },
         "text": "**ADEPTUS ASTARTES** model only. This model: \n- Has +1 **T**.\n- Has **Feel No Pain 5+**."
-      },
-      "Enhancement§The Honour Vehement": {
-        "keywords": {
-          "Keywords": [
-            "Gladius Task Force"
-          ]
-        },
-        "rules": {
-          "apply": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    [
-                      "A",
-                      "S"
-                    ],
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classIdentity",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    [
-                      "A",
-                      "S"
-                    ],
-                    "value"
-                  ]
-                ],
-                "value": 1
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 999
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "Adeptus Astartes model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead."
       },
       "Enhancement§Umbral Raptor": {
         "keywords": {
@@ -12728,7 +12499,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 175
+            "value": 170
           },
           "model2ndTally": {
             "value": 10
@@ -12746,7 +12517,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 90
+            "value": 85
           }
         }
       },
@@ -12959,7 +12730,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 110
+            "value": 105
           },
           "Special Weapon Selection": {
             "max": 2,
@@ -13749,7 +13520,7 @@
             "value": 3
           },
           "model2ndCost": {
-            "value": 180
+            "value": 200
           },
           "model2ndTally": {
             "value": 6
@@ -13767,10 +13538,10 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 95
+            "value": 110
           },
           "unitDiscount": {
-            "value": 10
+            "value": 20
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -14111,10 +13882,10 @@
             "value": 4
           },
           "Points": {
-            "value": 150
+            "value": 145
           },
           "unitDiscount": {
-            "value": 15
+            "value": 20
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -14261,7 +14032,7 @@
             "value": 5
           },
           "Points": {
-            "value": 145
+            "value": 150
           },
           "Rocket launcher": {
             "dynamic": true,
@@ -14687,7 +14458,7 @@
             "value": 3
           },
           "model2ndCost": {
-            "value": 205
+            "value": 220
           },
           "model2ndTally": {
             "value": 6
@@ -14716,10 +14487,10 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 105
+            "value": 120
           },
           "unitDiscount": {
-            "value": 15
+            "value": 20
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -14916,7 +14687,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 220
+            "value": 230
           },
           "model2ndTally": {
             "value": 10
@@ -14934,7 +14705,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 110
+            "value": 115
           }
         }
       },
@@ -15003,7 +14774,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 235
+            "value": 245
           },
           "model2ndTally": {
             "value": 10
@@ -15021,7 +14792,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 125
+            "value": 130
           },
           "unitDiscount": {
             "value": 15
@@ -15097,7 +14868,7 @@
             "value": 3
           },
           "model2ndCost": {
-            "value": 265
+            "value": 280
           },
           "model2ndTally": {
             "value": 6
@@ -15115,10 +14886,10 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 140
+            "value": 150
           },
           "unitDiscount": {
-            "value": 15
+            "value": 20
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -15188,7 +14959,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 170
+            "value": 180
           },
           "model2ndTally": {
             "value": 10
@@ -15206,7 +14977,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 105
+            "value": 100
           },
           "unitDiscount": {
             "value": 10
@@ -15292,7 +15063,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 210
+            "value": 200
           },
           "model2ndTally": {
             "value": 10
@@ -15310,7 +15081,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 110
+            "value": 105
           },
           "unitDiscount": {
             "value": 10
@@ -15413,7 +15184,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 80
+            "value": 85
           },
           "unitDiscount": {
             "value": 0
@@ -15639,7 +15410,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 175
+            "value": 170
           },
           "model2ndTally": {
             "value": 10
@@ -15657,7 +15428,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 95
+            "value": 85
           }
         }
       },
@@ -15864,7 +15635,7 @@
             "visibility": "hidden"
           },
           "Points": {
-            "value": 85
+            "value": 80
           }
         },
         "rules": {
@@ -16680,7 +16451,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 220
+            "value": 225
           },
           "model2ndTally": {
             "value": 10
@@ -16698,7 +16469,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 115
+            "value": 120
           },
           "Sternguard Veteran": {
             "max": 9,
@@ -16709,7 +16480,7 @@
             "visibility": "hidden"
           },
           "unitDiscount": {
-            "value": 10
+            "value": 15
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -16945,7 +16716,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 390
+            "value": 380
           },
           "model2ndTally": {
             "value": 10
@@ -16963,7 +16734,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 215
+            "value": 210
           },
           "unitDiscount": {
             "value": 40
@@ -17060,7 +16831,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 430
+            "value": 420
           },
           "model2ndTally": {
             "value": 10
@@ -17078,7 +16849,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 235
+            "value": 230
           },
           "Terminator": {
             "max": 9,
@@ -17370,7 +17141,7 @@
             "value": 5
           },
           "model2ndCost": {
-            "value": 250
+            "value": 240
           },
           "model2ndTally": {
             "value": 10
@@ -17391,7 +17162,7 @@
             "value": 130
           },
           "unitDiscount": {
-            "value": 10
+            "value": 20
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -17489,7 +17260,10 @@
                   {
                     "trait": "Model§Chapter Ancient (Victrix)"
                   }
-                ]
+                ],
+                "tracking": {
+                  "honourChars": 1
+                }
               }
             },
             "statType": "rank",
@@ -17510,7 +17284,10 @@
                   {
                     "trait": "Model§Chapter Champion (Victrix)"
                   }
-                ]
+                ],
+                "tracking": {
+                  "honourChars": 1
+                }
               }
             },
             "statType": "rank",
@@ -17535,7 +17312,7 @@
               "value": 1
             },
             "max": 6,
-            "min": 3,
+            "min": 1,
             "tracked": true,
             "value": 3,
             "visibility": "normal"
@@ -17548,6 +17325,36 @@
           },
           "unitDiscountThreshold": {
             "value": 3
+          }
+        },
+        "rules": {
+          "At least 1 Victrix Honour Guard": {
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{self}",
+                    "tracked",
+                    "honourChars"
+                  ]
+                },
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Models",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         }
       },
@@ -64217,7 +64024,7 @@
             "value": 4
           },
           "Points": {
-            "value": 160
+            "value": 170
           },
           "Sv": {
             "value": 2
@@ -64226,7 +64033,7 @@
             "value": 10
           },
           "unitDiscount": {
-            "value": 10
+            "value": 20
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -64347,7 +64154,7 @@
             "value": 4
           },
           "Points": {
-            "value": 170
+            "value": 180
           },
           "Sv": {
             "value": 2
@@ -64356,7 +64163,7 @@
             "value": 10
           },
           "unitDiscount": {
-            "value": 10
+            "value": 20
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -66331,7 +66138,7 @@
             "value": 3
           },
           "Points": {
-            "value": 175
+            "value": 180
           },
           "Sv": {
             "value": 3
@@ -66340,7 +66147,7 @@
             "value": 10
           },
           "unitDiscount": {
-            "value": 10
+            "value": 20
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -66405,7 +66212,7 @@
             "value": 3
           },
           "Points": {
-            "value": 175
+            "value": 185
           },
           "Sv": {
             "value": 3
@@ -66414,7 +66221,7 @@
             "value": 10
           },
           "unitDiscount": {
-            "value": 10
+            "value": 20
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -66481,7 +66288,7 @@
             "value": 3
           },
           "Points": {
-            "value": 175
+            "value": 185
           },
           "Sv": {
             "value": 3
@@ -66490,7 +66297,7 @@
             "value": 10
           },
           "unitDiscount": {
-            "value": 10
+            "value": 20
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -66867,7 +66674,7 @@
             "value": 4
           },
           "Points": {
-            "value": 140
+            "value": 150
           },
           "Sv": {
             "value": 3
@@ -66877,6 +66684,12 @@
           },
           "W": {
             "value": 12
+          },
+          "unitDiscount": {
+            "value": 15
+          },
+          "unitDiscountThreshold": {
+            "value": 3
           }
         }
       },
@@ -67556,6 +67369,12 @@
           },
           "Points": {
             "value": 265
+          },
+          "unitDiscount": {
+            "value": 20
+          },
+          "unitDiscountThreshold": {
+            "value": 2
           }
         },
         "assets": {
@@ -67742,7 +67561,13 @@
       "Vehicle§Land Raider Crusader": {
         "stats": {
           "Points": {
-            "value": 265
+            "value": 250
+          },
+          "unitDiscount": {
+            "value": 20
+          },
+          "unitDiscountThreshold": {
+            "value": 2
           }
         },
         "assets": {
@@ -68379,6 +68204,12 @@
         "stats": {
           "Points": {
             "value": 265
+          },
+          "unitDiscount": {
+            "value": 20
+          },
+          "unitDiscountThreshold": {
+            "value": 2
           }
         },
         "assets": {
@@ -68461,7 +68292,7 @@
             "value": 3
           },
           "Points": {
-            "value": 110
+            "value": 105
           },
           "Sv": {
             "value": 3
@@ -70079,7 +69910,7 @@
             "value": 4
           },
           "Points": {
-            "value": 195
+            "value": 190
           },
           "Sv": {
             "value": 2
@@ -70088,7 +69919,7 @@
             "value": 10
           },
           "unitDiscount": {
-            "value": 15
+            "value": 20
           },
           "unitDiscountThreshold": {
             "value": 3
@@ -71091,7 +70922,7 @@
             "value": 5
           },
           "Points": {
-            "value": 295
+            "value": 280
           },
           "Sv": {
             "value": 3
@@ -72727,7 +72558,7 @@
             "value": 3
           },
           "Points": {
-            "value": 165
+            "value": 150
           },
           "Sv": {
             "value": 3
@@ -72832,6 +72663,26 @@
         }
       },
       "Vehicle§Stormraven Gunship": {
+        "keywords": {
+          "Source": [
+            "Legends"
+          ],
+          "Faction": [
+            "Adeptus Astartes"
+          ],
+          "Keywords": [
+            "Ravenwing"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Combat Doctrines",
+            {
+              "item": "Ability§Transport",
+              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models and 1 Dreadnought model. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
+            }
+          ]
+        },
         "stats": {
           "Hurricane bolters": {
             "dynamic": true,
@@ -72935,26 +72786,6 @@
             "visibility": "active",
             "label": "Loadout 2"
           }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines",
-            {
-              "item": "Ability§Transport",
-              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models and 1 Dreadnought model. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
-            }
-          ]
-        },
-        "keywords": {
-          "Keywords": [
-            "Ravenwing"
-          ],
-          "Source": [
-            "Legends"
-          ],
-          "Faction": [
-            "Adeptus Astartes"
-          ]
         },
         "removed": {
           "stats": {
@@ -73351,6 +73182,7 @@
             "Ability§Hover",
             "Ability§Aerial Assault",
             "Ability§Thunderhawk",
+            "Ability§Thunderhawk Cluster Bombs",
             "Melee Weapon§Thunderhawk Gunship—Armoured hull",
             "Ranged Weapon§Thunderhawk Gunship—Lascannon",
             "Ranged Weapon§Thunderhawk Gunship—Lascannon",
@@ -73358,8 +73190,7 @@
             "Ranged Weapon§Thunderhawk Gunship—Twin heavy bolter",
             "Ranged Weapon§Thunderhawk Gunship—Twin heavy bolter",
             "Ranged Weapon§Thunderhawk Gunship—Twin heavy bolter",
-            "Ranged Weapon§Thunderhawk Gunship—Hellstrike missile battery",
-            "Ability§Thunderhawk Cluster Bombs"
+            "Ranged Weapon§Thunderhawk Gunship—Hellstrike missile battery"
           ]
         },
         "keywords": {
@@ -73668,6 +73499,29 @@
         "text": ""
       },
       "Vehicle§Venerable Dreadnought": {
+        "keywords": {
+          "Source": [
+            "Legends"
+          ],
+          "Category": [
+            "Vehicle—Walker"
+          ],
+          "Faction": [
+            "Adeptus Astartes"
+          ],
+          "Keywords": [
+            "Venerable",
+            "Dreadnought",
+            "Deathwing"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Combat Doctrines",
+            "Ability§Wisdom of the Ancients (aura)",
+            "Melee Weapon§Venerable Dreadnought—Armoured feet"
+          ]
+        },
         "stats": {
           "M": {
             "value": 6
@@ -73797,29 +73651,6 @@
             "value": "Dreadnought Fist & Storm Bolter",
             "visibility": "active"
           }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines",
-            "Ability§Wisdom of the Ancients (aura)",
-            "Melee Weapon§Venerable Dreadnought—Armoured feet"
-          ]
-        },
-        "keywords": {
-          "Keywords": [
-            "Venerable",
-            "Dreadnought",
-            "Deathwing"
-          ],
-          "Category": [
-            "Vehicle—Walker"
-          ],
-          "Source": [
-            "Legends"
-          ],
-          "Faction": [
-            "Adeptus Astartes"
-          ]
         }
       },
       "Vehicle§Vindicator": {
@@ -74701,6 +74532,23 @@
         }
       },
       "Vehicle§Terrax-pattern Termite": {
+        "keywords": {
+          "Faction": [
+            "Adeptus Astartes"
+          ],
+          "Keywords": [
+            "Frame"
+          ]
+        },
+        "assets": {
+          "traits": [
+            "Ability§Combat Doctrines",
+            {
+              "item": "Ability§Transport",
+              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Phobos, Gravis, Centurion, Terminator, Obliterator, Possessed or Tacticus models (excluding Tacticus Character models that began the battle attached to a non-Tacticus unit)."
+            }
+          ]
+        },
         "stats": {
           "Loadout": {
             "dynamic": true,
@@ -74745,23 +74593,6 @@
             "value": "2 Combi-weapon",
             "visibility": "active"
           }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines",
-            {
-              "item": "Ability§Transport",
-              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Phobos, Gravis, Centurion, Terminator, Obliterator, Possessed or Tacticus models (excluding Tacticus Character models that began the battle attached to a non-Tacticus unit)."
-            }
-          ]
-        },
-        "keywords": {
-          "Keywords": [
-            "Frame"
-          ],
-          "Faction": [
-            "Adeptus Astartes"
-          ]
         },
         "removed": {
           "text": ""
@@ -82632,10 +82463,10 @@
             "value": 1
           },
           "Points": {
-            "value": 110
+            "value": 130
           },
           "unitDiscount": {
-            "value": 15
+            "value": 30
           },
           "unitDiscountThreshold": {
             "value": 3

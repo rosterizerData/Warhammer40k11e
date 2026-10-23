@@ -1,6 +1,6 @@
 {
   "name": "Space Wolves 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -5461,95 +5461,6 @@
         },
         "text": "**ADEPTUS ASTARTES** model only. When both players have deployed their armies, you can redeploy up to three friendly **ADEPTUS ASTARTES** units. When doing so, you can set those units up in **strategic reserves**, regardless of how many units are already in **strategic reserves**."
       },
-      "Enhancement§Elder’s Guidance": {
-        "keywords": {
-          "Keywords": [
-            "Saga of the Beastslayer"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "Space Wolves model only. Once per battle, at the start of the Fight phase, if the bearer is leading a Blood Claws unit, the bearer can use this Enhancement. If it does, until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
-      },
-      "Enhancement§Fangrune Pendant": {
-        "keywords": {
-          "Keywords": [
-            "Champions of Fenris"
-          ]
-        },
-        "rules": {
-          "AdeAst Terminator model only": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Terminator"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "group": "Cost",
-            "statType": "numeric",
-            "value": 15,
-            "visibility": "normal"
-          }
-        },
-        "text": "**Adeptus Astartes Terminator** model only. The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
-      },
-      "Enhancement§Foes' Fate": {
-        "keywords": {
-          "Keywords": [
-            "Champions of Fenris"
-          ]
-        },
-        "rules": {
-          "AdeAst Terminator model only": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Terminator"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "group": "Cost",
-            "statType": "numeric",
-            "value": 15,
-            "visibility": "normal"
-          }
-        },
-        "text": "**Adeptus Astartes Terminator** model only. Each time an enemy unit (excluding **Monsters** and **Vehicles**) within Engagement Range of the bearer’s unit Falls Back, all models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is Battle‑shocked, subtract 1 from each of those tests."
-      },
       "Enhancement§Grimnar's Mark": {
         "keywords": {
           "Keywords": [
@@ -5612,19 +5523,6 @@
           }
         },
         "text": "**ADEPTUS ASTARTES TERMINATOR CAPTAIN** model only. **(Once per battle round, per army)** You can target this unit with the **Rapid Ingress/Heroic Intervention stratagem**, regardless of any other uses of that **stratagem** this phase. If you do: \n- That use is -1CP.\n- That use does not prevent any uses of that **stratagem** on other units this phase."
-      },
-      "Enhancement§Helm of the Beastslayer": {
-        "keywords": {
-          "Keywords": [
-            "Saga of the Beastslayer"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "Adeptus Astartes model only. Each time an attack made by a Character, Monster, or Vehicle model targets the bearer’s unit, reduce the Armour Penetration characteristic of that attack by 1."
       },
       "Enhancement§Howlmaw": {
         "keywords": {
@@ -5695,22 +5593,6 @@
             "failState": "error"
           }
         }
-      },
-      "Enhancement§Longstrider": {
-        "keywords": {
-          "Keywords": [
-            "Champions of Fenris"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "group": "Cost",
-            "statType": "numeric",
-            "value": 20,
-            "visibility": "normal"
-          }
-        },
-        "text": "**Adeptus Astartes** model only. You can re‑roll Charge rolls made for the bearer’s unit."
       },
       "Enhancement§Preyslayer": {
         "keywords": {
@@ -5900,44 +5782,6 @@
           }
         },
         "text": "**ADEPTUS ASTARTES** model only. This unit has:\n- **WULFEN**.\n- +2”**M**."
-      },
-      "Enhancement§Wolves' Wisdom": {
-        "keywords": {
-          "Keywords": [
-            "Champions of Fenris"
-          ]
-        },
-        "rules": {
-          "AdeAst Infantry model only": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Infantry"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "group": "Cost",
-            "statType": "numeric",
-            "value": 30,
-            "visibility": "normal"
-          }
-        },
-        "text": "**Adeptus Astartes Infantry** model only. The bearer’s unit can declare a charge against one or more units within 6\" instead of within 3\" when using The Great Wolf Watches Detachment rule."
       },
       "Infantry/Mounted§Blood Claws": {
         "allowed": {
@@ -7291,7 +7135,7 @@
                     "value"
                   ]
                 ],
-                "value": 25
+                "value": 30
               }
             ],
             "evals": [
@@ -7341,7 +7185,7 @@
                     "value"
                   ]
                 ],
-                "value": 50
+                "value": 60
               }
             ],
             "evals": [
@@ -7397,12 +7241,6 @@
           "model2ndTally": {
             "value": 6
           },
-          "model3rdCost": {
-            "value": 240
-          },
-          "model3rdTally": {
-            "value": 12
-          },
           "Models": {
             "dynamic": true,
             "group": "Loadout",
@@ -7419,7 +7257,7 @@
             "visibility": "normal"
           },
           "Points": {
-            "value": 125
+            "value": 95
           },
           "unitDiscount": {
             "value": 10
@@ -11898,7 +11736,7 @@
                     "trait": "Ranged Weapon§Thunderwolf Cavalry—Boltgun"
                   },
                   {
-                    "trait": "Wargear§Storm Shield"
+                    "trait": "Wargear§Thunderwolf Cavalry—Storm Shield"
                   }
                 ]
               }
@@ -11966,7 +11804,7 @@
                     "trait": "Ranged Weapon§Thunderwolf Cavalry—Boltgun"
                   },
                   {
-                    "trait": "Wargear§Storm Shield"
+                    "trait": "Wargear§Thunderwolf Cavalry—Storm Shield"
                   }
                 ]
               }
@@ -12293,7 +12131,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Wargear§Storm Shield - Terminator"
+                    "trait": "Wargear§Wolf Guard Terminators—Storm Shield"
                   }
                 ]
               }
@@ -12449,7 +12287,7 @@
                 },
                 "traits": [
                   {
-                    "trait": "Wargear§Storm Shield - Terminator"
+                    "trait": "Wargear§Wolf Guard Terminators—Storm Shield"
                   }
                 ]
               }
@@ -19152,6 +18990,98 @@
             ],
             "evaluate": "AND",
             "failState": "error"
+          },
+          "removeOtherChapterDetachments": {
+            "actions": [
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Forgefather's Seekers"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Shadowmark Talon"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Spearpoint Task Force"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Blade of Ultramar"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Ceramite Sentinels"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "note": "MFM 1.6: these Codex Space Marines detachments are not offered to this chapter",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Detachment",
+                    "ranks"
+                  ]
+                ],
+                "value": "Medusa's Wrath"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
           }
         },
         "stats": {
@@ -22039,6 +21969,22 @@
       },
       "Wargear§Haywire Mine": {
         "text": "In your Shooting phase, select up to one visible enemy unit within 6\" of this unit and roll one D6. On a 2+:\n\n- That enemy unit suffers D3 mortal wounds.\n\n- Or: If that enemy unit is a **VEHICLE** unit, that enemy unit suffers 2D3 **mortal wounds**."
+      },
+      "Wargear§Thunderwolf Cavalry—Storm Shield": {
+        "text": "This model has a 4+ InSv.",
+        "stats": {
+          "Points": {
+            "value": 5
+          }
+        }
+      },
+      "Wargear§Wolf Guard Terminators—Storm Shield": {
+        "text": "This model has +1 **W**.",
+        "stats": {
+          "Points": {
+            "value": 5
+          }
+        }
       }
     },
     "gameModes": {},
