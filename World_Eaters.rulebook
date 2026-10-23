@@ -1,6 +1,6 @@
 {
   "name": "World Eaters 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -4979,6 +4979,19 @@
                   "maxUnits": 3,
                   "maxEnhancements": 4
                 }
+              },
+              "Onslaught": {
+                "order": 3,
+                "tracking": {
+                  "maxBlood": 1500,
+                  "maxDaemons": 750,
+                  "maxDamned": 750,
+                  "maxPoints": 3000,
+                  "maxDP": 3,
+                  "maxUnits": 3,
+                  "maxEnhancements": 4
+                },
+                "format": "Onslaught"
               }
             }
           },

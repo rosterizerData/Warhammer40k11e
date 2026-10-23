@@ -1,6 +1,6 @@
 {
   "name": "Imperium 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -29488,6 +29488,18 @@
                   "maxDP": 3,
                   "maxUnits": 3,
                   "maxEnhancements": 4
+                }
+              },
+              "Onslaught": {
+                "order": 3,
+                "tracking": {
+                  "maxAgents": 3,
+                  "maxPoints": 3000,
+                  "maxRequisitioned": 2,
+                  "maxDP": 3,
+                  "maxUnits": 3,
+                  "maxEnhancements": 4,
+                  "maxMechanicus": 750
                 }
               }
             }

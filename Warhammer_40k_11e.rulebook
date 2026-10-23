@@ -1,6 +1,6 @@
 {
   "name": "40k 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -13780,6 +13780,15 @@
                 "tracking": {
                   "maxDP": 3,
                   "maxPoints": 2000,
+                  "maxUnits": 3,
+                  "maxEnhancements": 4
+                }
+              },
+              "Onslaught": {
+                "order": 3,
+                "tracking": {
+                  "maxDP": 3,
+                  "maxPoints": 3000,
                   "maxUnits": 3,
                   "maxEnhancements": 4
                 }

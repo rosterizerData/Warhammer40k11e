@@ -1,6 +1,6 @@
 {
   "name": "Death Guard 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -9093,6 +9093,19 @@
                   "maxUnits": 3,
                   "maxEnhancements": 4
                 }
+              },
+              "Onslaught": {
+                "order": 3,
+                "tracking": {
+                  "maxDaemons": 750,
+                  "maxDamned": 750,
+                  "maxPlague": 1500,
+                  "maxPoints": 3000,
+                  "maxDP": 3,
+                  "maxUnits": 3,
+                  "maxEnhancements": 4
+                },
+                "format": "Onslaught"
               }
             }
           },

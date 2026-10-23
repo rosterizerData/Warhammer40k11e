@@ -1,6 +1,6 @@
 {
   "name": "Chaos Space Marines 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -26996,6 +26996,18 @@
                   "maxUnits": 3,
                   "maxEnhancements": 4
                 }
+              },
+              "Onslaught": {
+                "order": 4,
+                "tracking": {
+                  "maxDaemons": 750,
+                  "maxLostAndDamned": 750,
+                  "maxPoints": 3000,
+                  "maxDP": 3,
+                  "maxUnits": 3,
+                  "maxEnhancements": 4
+                },
+                "format": "Onslaught"
               }
             }
           },
