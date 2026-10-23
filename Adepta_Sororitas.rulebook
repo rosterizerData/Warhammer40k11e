@@ -1,6 +1,6 @@
 {
   "name": "Adepta Sororitas 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -15891,16 +15891,7 @@
         "allowed": {
           "items": [
             "Model§Sanctifier",
-            "Character§Ministorum Priest",
-            "Character§Canoness",
-            "Character§Imagifier",
-            "Character§Hospitaller",
-            "Character§Dialogus",
-            "Character§Triumph of Saint Katherine",
-            "Character§Junith Eruita",
-            "Character§Palatine",
-            "Character§Aestred Thurga and Agathae Dolan",
-            "Character§Dogmata"
+            "Character§Ministorum Priest"
           ]
         },
         "assets": {

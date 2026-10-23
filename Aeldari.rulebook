@@ -1,6 +1,6 @@
 {
   "name": "Aeldari 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.5",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -33639,8 +33639,7 @@
           "items": [
             "Model§Incubi",
             "Character§Ynnari Archon",
-            "Character§Yvraine",
-            "Character§The Visarch"
+            "Character§Yvraine"
           ]
         },
         "assets": {

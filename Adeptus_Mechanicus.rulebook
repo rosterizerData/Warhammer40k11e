@@ -1,6 +1,6 @@
 {
   "name": "Adeptus Mechanicus 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -12411,7 +12411,6 @@
             "Model§Hastarii Exterminator",
             "Character§Skitarii Marshal",
             "Character§Tech-priest Dominus",
-            "Character§Tech-Priest Enginseer",
             "Character§Technoarcheologist",
             "Character§Tech-priest Manipulus"
           ]
@@ -12492,7 +12491,6 @@
           "items": [
             "Character§Skitarii Marshal",
             "Character§Tech-priest Dominus",
-            "Character§Tech-Priest Enginseer",
             "Character§Technoarcheologist",
             "Character§Tech-priest Manipulus",
             "Model§Hastarii Fusilier"
@@ -13975,7 +13973,6 @@
           "items": [
             "Model§Combat Servitor",
             "Character§Tech-priest Dominus",
-            "Character§Tech-Priest Enginseer",
             "Character§Tech-priest Manipulus",
             "Character§Technoarcheologist"
           ]

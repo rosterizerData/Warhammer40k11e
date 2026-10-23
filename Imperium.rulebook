@@ -1,6 +1,6 @@
 {
   "name": "Imperium 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.5",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -30587,9 +30587,7 @@
             "Model§Deathwatch Veteran w/ Stalker bolt rifle (Aquila)",
             "Model§Deathwatch Veteran w/ Xenophase blade (Aquila)",
             "Character§Inquisitor",
-            "Character§Inquisitor Coteaz",
             "Character§Inquisitor Draxus",
-            "Character§Inquisitor Greyfax",
             "Character§Watch Captain Artemis (Agents)",
             "Character§Watch Master (Agents)",
             "Character§Inquisitor Eisenhorn",
@@ -31600,9 +31598,7 @@
           "items": [
             "Model§Deathwatch Veteran (Agents)",
             "Character§Watch Captain Artemis (Agents)",
-            "Character§Watch Master (Agents)",
-            "Character§Inquisitor Draxus",
-            "Character§Inquisitor"
+            "Character§Watch Master (Agents)"
           ]
         },
         "assets": {

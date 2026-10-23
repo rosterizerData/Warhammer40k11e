@@ -1,6 +1,6 @@
 {
   "name": "Agents of the Imperium 11e",
-  "revision": "11.2.0",
+  "revision": "11.2.1",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2765,8 +2765,6 @@
         },
         "allowed": {
           "items": [
-            "Character§Inquisitor Greyfax",
-            "Character§Inquisitor Coteaz",
             "Character§Inquisitor Eisenhorn",
             "Character§Inquisitor in Terminator Armour"
           ]

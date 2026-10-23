@@ -1,6 +1,6 @@
 {
   "name": "Space Marines 11e",
-  "revision": "11.2.6",
+  "revision": "11.2.7",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -13775,7 +13775,6 @@
             "Character§Gabriel Seth",
             "Character§Blood Angels Captain",
             "Character§Vulkan He’stan",
-            "Character§Captain Titus",
             "Character§Ferren Areios",
             "Character§Apothecary"
           ]
@@ -17213,7 +17212,6 @@
             "Character§Captain",
             "Character§Captain Sicarius",
             "Character§Imperial Space Marine",
-            "Character§Lieutenant",
             "Character§Uriel Ventris",
             "Character§Cato Sicarius",
             "Character§Marneus Calgar",

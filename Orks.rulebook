@@ -1,6 +1,6 @@
 {
   "name": "Orks 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -19059,7 +19059,6 @@
             "Character§Weirdboy",
             "Character§Big Mek",
             "Character§Ufthak Blackhawk",
-            "Character§Ghazghkull Thraka",
             "Character§Bigboss"
           ]
         },
@@ -19349,13 +19348,9 @@
           "items": [
             "Model§Breaka Boy",
             "Character§Big Mek with Kustom Force Field",
-            "Character§Big Mek with Shokk Attack Gun",
             "Character§Mad Dok Grotsnik",
-            "Character§Mek",
-            "Character§Bannernob",
             "Character§Painboy",
             "Character§Warboss",
-            "Character§Weirdboy",
             "Character§Big Mek",
             "Character§Ufthak Blackhawk",
             "Character§Bigboss"
@@ -21344,7 +21339,6 @@
           "items": [
             "Model§Flash Git",
             "Character§Kaptin Badrukk",
-            "Character§Bannernob",
             "Character§Mek",
             "Character§Painboy",
             "Character§Big Mek"
@@ -24469,7 +24463,6 @@
           "items": [
             "Model§Meganob",
             "Character§Big Mek in Mega Armour",
-            "Character§Ghazghkull Thraka",
             "Character§Warboss in Mega Armour",
             "Character§Nazdreg"
           ]
@@ -25138,7 +25131,6 @@
             "Character§Big Mek with Shokk Attack Gun",
             "Character§Big Mek",
             "Character§Ufthak Blackhawk",
-            "Character§Ghazghkull Thraka",
             "Character§Bigboss"
           ]
         },
@@ -25724,8 +25716,6 @@
           "items": [
             "Model§Squighog Boy",
             "Model§Nob on Smasha Squig",
-            "Character§Beastboss on Squigosaur",
-            "Character§Mozrog Skragbad",
             "Character§Painboss"
           ]
         },
@@ -26089,8 +26079,7 @@
             "Character§Mek",
             "Character§Painboy",
             "Character§Big Mek with Shokk Attack Gun",
-            "Character§Big Mek",
-            "Character§Bannernob"
+            "Character§Big Mek"
           ]
         },
         "assets": {

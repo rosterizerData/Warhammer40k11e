@@ -1,6 +1,6 @@
 {
   "name": "Harlequins 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1925,9 +1925,7 @@
           "items": [
             "Model§Player",
             "Character§Shadowseer",
-            "Character§The Visarch",
-            "Character§Troupe Master",
-            "Character§Yvraine"
+            "Character§Troupe Master"
           ]
         },
         "assets": {
