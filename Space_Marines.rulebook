@@ -1,6 +1,6 @@
 {
   "name": "Space Marines 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.5",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -19031,110 +19031,6 @@
           }
         }
       },
-      "Melee Weapon§Captain on Bike—Astartes chainsword": {
-        "aspects": {
-          "Label": "Astartes chainsword"
-        },
-        "stats": {
-          "A": {
-            "value": 7
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Captain on Bike—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 6
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Captain on Bike—Power fist": {
-        "aspects": {
-          "Label": "Power fist"
-        },
-        "stats": {
-          "A": {
-            "value": 5
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 8
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
-      "Melee Weapon§Captain on Bike—Relic weapon": {
-        "aspects": {
-          "Label": "Relic weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 6
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 2
-          }
-        }
-      },
       "Melee Weapon§Captain on Bike—Thunder hammer": {
         "aspects": {
           "Label": "Thunder hammer"
@@ -19163,37 +19059,6 @@
           },
           "WS": {
             "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Captain on Bike—Twin lightning claws": {
-        "aspects": {
-          "Label": "Twin lightning claws"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 7
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 5
-          },
-          "WS": {
-            "value": 2
           }
         }
       },
@@ -21618,32 +21483,6 @@
         }
       },
       "Melee Weapon§Land Speeder Typhoon—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "S": {
-            "value": 4
-          },
-          "WS": {
-            "value": 3
-          }
-        }
-      },
-      "Melee Weapon§Land Speeder—Close combat weapon": {
         "aspects": {
           "Label": "Close combat weapon"
         },
@@ -37621,77 +37460,6 @@
           }
         }
       },
-      "Ranged Weapon§Captain on Bike—Bolt pistol": {
-        "aspects": {
-          "Label": "Bolt pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
-      "Ranged Weapon§Captain on Bike—Grav-pistol": {
-        "aspects": {
-          "Label": "Grav-pistol"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Anti-",
-              "stats": {
-                "keyword": {
-                  "value": "vehicle"
-                },
-                "x": {
-                  "value": "2+"
-                }
-              }
-            },
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 4
-          }
-        }
-      },
       "Ranged Weapon§Captain on Bike—Hand flamer": {
         "aspects": {
           "Label": "Hand flamer"
@@ -37724,70 +37492,6 @@
           },
           "S": {
             "value": 3
-          }
-        }
-      },
-      "Ranged Weapon§Captain on Bike—Inferno pistol": {
-        "aspects": {
-          "Label": "Inferno pistol"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Melta",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            },
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -4
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "statType": "term",
-            "value": "D3"
-          },
-          "Range": {
-            "value": 6
-          },
-          "S": {
-            "value": 8
-          }
-        }
-      },
-      "Ranged Weapon§Captain on Bike—Master-crafted boltgun": {
-        "aspects": {
-          "Label": "Master-crafted boltgun"
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
           }
         }
       },
@@ -37865,36 +37569,6 @@
           },
           "S": {
             "value": 8
-          }
-        }
-      },
-      "Ranged Weapon§Captain on Bike—Twin boltgun": {
-        "aspects": {
-          "Label": "Twin boltgun"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Twin-linked"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 2
-          },
-          "AP": {
-            "value": 0
-          },
-          "BS": {
-            "value": 2
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 24
-          },
-          "S": {
-            "value": 4
           }
         }
       },
@@ -47884,43 +47558,6 @@
           },
           "S": {
             "value": 9
-          }
-        }
-      },
-      "Ranged Weapon§Land Speeder—Heavy bolter": {
-        "aspects": {
-          "Label": "Heavy bolter"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 3
-          },
-          "AP": {
-            "value": -1
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 36
-          },
-          "S": {
-            "value": 5
           }
         }
       },
@@ -73195,15 +72832,6 @@
         }
       },
       "Vehicle§Stormraven Gunship": {
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines",
-            {
-              "item": "Ability§Transport",
-              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models and 1 Dreadnought model. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
-            }
-          ]
-        },
         "stats": {
           "Hurricane bolters": {
             "dynamic": true,
@@ -73308,15 +72936,24 @@
             "label": "Loadout 2"
           }
         },
+        "assets": {
+          "traits": [
+            "Ability§Combat Doctrines",
+            {
+              "item": "Ability§Transport",
+              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models and 1 Dreadnought model. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
+            }
+          ]
+        },
         "keywords": {
-          "Faction": [
-            "Adeptus Astartes"
-          ],
           "Keywords": [
             "Ravenwing"
           ],
           "Source": [
             "Legends"
+          ],
+          "Faction": [
+            "Adeptus Astartes"
           ]
         },
         "removed": {
@@ -73711,18 +73348,18 @@
                 }
               }
             },
-            "Melee Weapon§Thunderhawk Gunship—Armoured hull",
-            {
-              "item": "Ranged Weapon§Thunderhawk Gunship—Lascannon",
-              "quantity": 2
-            },
-            {
-              "item": "Ranged Weapon§Thunderhawk Gunship—Twin heavy bolter",
-              "quantity": 4
-            },
             "Ability§Hover",
             "Ability§Aerial Assault",
-            "Ability§Thunderhawk"
+            "Ability§Thunderhawk",
+            "Melee Weapon§Thunderhawk Gunship—Armoured hull",
+            "Ranged Weapon§Thunderhawk Gunship—Lascannon",
+            "Ranged Weapon§Thunderhawk Gunship—Lascannon",
+            "Ranged Weapon§Thunderhawk Gunship—Twin heavy bolter",
+            "Ranged Weapon§Thunderhawk Gunship—Twin heavy bolter",
+            "Ranged Weapon§Thunderhawk Gunship—Twin heavy bolter",
+            "Ranged Weapon§Thunderhawk Gunship—Twin heavy bolter",
+            "Ranged Weapon§Thunderhawk Gunship—Hellstrike missile battery",
+            "Ability§Thunderhawk Cluster Bombs"
           ]
         },
         "keywords": {
@@ -73750,62 +73387,6 @@
           "Ld": {
             "value": 6
           },
-          "Loadout 1": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "label": "Loadout",
-            "ranks": {
-              "Thunderhawk heavy cannon": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Thunderhawk Gunship—Thunderhawk heavy cannon"
-                  }
-                ]
-              },
-              "Turbo-laser destructor": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Thunderhawk Gunship—Turbo-laser destructor"
-                  }
-                ]
-              }
-            },
-            "statOrder": 1,
-            "statType": "rank",
-            "value": "Thunderhawk heavy cannon",
-            "visibility": "active"
-          },
-          "Loadout 2": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "label": "Loadout",
-            "ranks": {
-              "Thunderhawk cluster bombs": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Wargear§Thunderhawk Cluster Bombs"
-                  }
-                ]
-              },
-              "Hellstrike missile battery": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Thunderhawk Gunship—Hellstrike missile battery"
-                  }
-                ]
-              }
-            },
-            "statOrder": 2,
-            "statType": "rank",
-            "value": "Thunderhawk cluster bombs",
-            "visibility": "active"
-          },
           "M": {
             "value": 14
           },
@@ -73829,9 +73410,35 @@
           },
           "unitDiscountThreshold": {
             "value": 2
+          },
+          "Loadout 1": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Thunderhawk Heavy Cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Thunderhawk Gunship—Thunderhawk heavy cannon"
+                  }
+                ]
+              },
+              "Turbo-laser Destructor": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Thunderhawk Gunship—Turbo-laser destructor"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Thunderhawk Heavy Cannon",
+            "visibility": "active",
+            "statOrder": 1
           }
-        },
-        "text": "WARNING: loadout — Whether the default is a Hellstrike Missile Battery or Thunderhawk cluster bombs couldn’t be determined; cluster bombs are left as the default."
+        }
       },
       "Vehicle§Thunderhawk Transporter": {
         "assets": {
@@ -74061,13 +73668,6 @@
         "text": ""
       },
       "Vehicle§Venerable Dreadnought": {
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines",
-            "Ability§Wisdom of the Ancients (aura)",
-            "Melee Weapon§Venerable Dreadnought—Armoured feet"
-          ]
-        },
         "stats": {
           "M": {
             "value": 6
@@ -74198,13 +73798,14 @@
             "visibility": "active"
           }
         },
+        "assets": {
+          "traits": [
+            "Ability§Combat Doctrines",
+            "Ability§Wisdom of the Ancients (aura)",
+            "Melee Weapon§Venerable Dreadnought—Armoured feet"
+          ]
+        },
         "keywords": {
-          "Faction": [
-            "Adeptus Astartes"
-          ],
-          "Source": [
-            "Legends"
-          ],
           "Keywords": [
             "Venerable",
             "Dreadnought",
@@ -74212,6 +73813,12 @@
           ],
           "Category": [
             "Vehicle—Walker"
+          ],
+          "Source": [
+            "Legends"
+          ],
+          "Faction": [
+            "Adeptus Astartes"
           ]
         }
       },
@@ -75094,15 +74701,6 @@
         }
       },
       "Vehicle§Terrax-pattern Termite": {
-        "assets": {
-          "traits": [
-            "Ability§Combat Doctrines",
-            {
-              "item": "Ability§Transport",
-              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Phobos, Gravis, Centurion, Terminator, Obliterator, Possessed or Tacticus models (excluding Tacticus Character models that began the battle attached to a non-Tacticus unit)."
-            }
-          ]
-        },
         "stats": {
           "Loadout": {
             "dynamic": true,
@@ -75148,12 +74746,21 @@
             "visibility": "active"
           }
         },
+        "assets": {
+          "traits": [
+            "Ability§Combat Doctrines",
+            {
+              "item": "Ability§Transport",
+              "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Phobos, Gravis, Centurion, Terminator, Obliterator, Possessed or Tacticus models (excluding Tacticus Character models that began the battle attached to a non-Tacticus unit)."
+            }
+          ]
+        },
         "keywords": {
-          "Faction": [
-            "Adeptus Astartes"
-          ],
           "Keywords": [
             "Frame"
+          ],
+          "Faction": [
+            "Adeptus Astartes"
           ]
         },
         "removed": {
@@ -80920,8 +80527,8 @@
             "value": -3
           },
           "D": {
-            "format": "D3",
-            "value": 3
+            "statType": "term",
+            "value": "D3+3"
           }
         },
         "assets": {
@@ -83614,104 +83221,6 @@
           }
         }
       },
-      "Ranged Weapon§Captain on Bike—Combi-weapon – purgatus": {
-        "aspects": {
-          "Label": "Combi-weapon – Purgatus"
-        },
-        "stats": {
-          "Range": {
-            "value": 24
-          },
-          "A": {
-            "value": 2
-          },
-          "BS": {
-            "value": 3
-          },
-          "S": {
-            "value": 7
-          },
-          "AP": {
-            "value": -2
-          },
-          "D": {
-            "value": 2
-          }
-        }
-      },
-      "Ranged Weapon§Captain on Bike—Combi-weapon – damnatus": {
-        "aspects": {
-          "Label": "Combi-weapon – Damnatus"
-        },
-        "stats": {
-          "Range": {
-            "value": 12
-          },
-          "A": {
-            "value": 1
-          },
-          "BS": {
-            "value": 3
-          },
-          "S": {
-            "value": 9
-          },
-          "AP": {
-            "value": -3
-          },
-          "D": {
-            "format": "D3",
-            "value": 2
-          }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Melta",
-              "stats": {
-                "x": {
-                  "value": "2"
-                }
-              }
-            }
-          ]
-        }
-      },
-      "Ranged Weapon§Captain on Bike—Combi-weapon – infernus": {
-        "aspects": {
-          "Label": "Combi-weapon – Infernus"
-        },
-        "stats": {
-          "Range": {
-            "value": 12
-          },
-          "A": {
-            "value": 3
-          },
-          "S": {
-            "value": 4
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Torrent",
-            {
-              "item": "Ability§Blast",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        }
-      },
       "Ranged Weapon§Cato Sicarius—Artisan plasma pistol": {
         "aspects": {
           "Label": "Artisan plasma pistol"
@@ -84842,6 +84351,14 @@
             "value": 10
           }
         }
+      },
+      "Ability§Thunderhawk Cluster Bombs": {
+        "keywords": {
+          "Keywords": [
+            "Model Ability"
+          ]
+        },
+        "text": "In your Movement phase, when this unit ends a normal/advance move, you can select one enemy unit this unit moved over during that move and roll six D6: for each 3+, that enemy unit suffers 1 mortal wound."
       }
     },
     "gameModes": {},

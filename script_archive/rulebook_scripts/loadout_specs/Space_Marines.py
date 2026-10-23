@@ -170,7 +170,9 @@ SPEC = {
         "Hurricane bolters": [("0", "-"), ("1", "Hurricane Bolter"), ("2", "2x Hurricane Bolter")],
         "Loadout 1": ["Twin Assault Cannon", "Twin Heavy Plasma Cannon", "Twin Lascannon"],
         "Loadout 2": ["Typhoon Missile Launcher", "Twin Heavy Bolter", "Twin Multi-melta"]}}},
-    "Thunderhawk Gunship": {"_warning": "Whether the default is a Hellstrike Missile Battery or Thunderhawk cluster bombs couldn’t be determined; cluster bombs are left as the default."},
+    "Thunderhawk Gunship": {"_unit": {"static": ["Armoured Hull", "2x Lascannon", "4x Twin Heavy Bolter", "Hellstrike Missile Battery"], "slots": {
+        "Loadout 1": ["Thunderhawk Heavy Cannon", "Turbo-laser Destructor"]}},
+        "_patch": lambda u, own, res: _cluster_bombs(u, own)},
 
 }
 
@@ -180,3 +182,13 @@ def _strip_wargear(own, models, gear):
         a = own[m]
         a.setdefault("assets", {})["traits"] = [t for t in a["assets"].get("traits", []) if t not in gear]
     return f"removed {gear} (not 11e wargear)"
+
+
+def _cluster_bombs(u, own):
+    """11e: Thunderhawk cluster bombs are a datasheet ability, not wargear"""
+    k = "Ability§Thunderhawk Cluster Bombs"
+    own.setdefault(k, {"keywords": {"Keywords": ["Model Ability"]}, "text": "In your Movement phase, when this unit ends a normal/advance move, you can select one enemy unit this unit moved over during that move and roll six D6: for each 3+, that enemy unit suffers 1 mortal wound."})
+    tr = u["assets"]["traits"]
+    if k not in tr:
+        tr.append(k)
+    return "cluster bombs as an ability"

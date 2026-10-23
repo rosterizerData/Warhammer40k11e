@@ -1,6 +1,6 @@
 {
   "name": "Adeptus Titanicus 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -106,10 +106,6 @@
         "stats": {
           "Range": {
             "value": 72
-          },
-          "A": {
-            "format": "D3",
-            "value": 3
           },
           "BS": {
             "value": 3

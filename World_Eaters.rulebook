@@ -1,6 +1,6 @@
 {
   "name": "World Eaters 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -9720,10 +9720,6 @@
           },
           "Range": {
             "value": 36
-          },
-          "A": {
-            "format": "D3",
-            "value": 0
           },
           "S": {
             "value": 10

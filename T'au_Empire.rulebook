@@ -1,6 +1,6 @@
 {
   "name": "T'au Empire 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -13786,7 +13786,8 @@
           },
           "BS": {
             "format": "{t}",
-            "statType": "term"
+            "statType": "term",
+            "value": "N/A"
           },
           "D": {
             "value": 1

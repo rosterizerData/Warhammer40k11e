@@ -1,6 +1,6 @@
 {
   "name": "Thousand Sons 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -4737,10 +4737,6 @@
           },
           "AP": {
             "value": -1
-          },
-          "D": {
-            "format": "D3",
-            "value": 0
           },
           "Range": {
             "statType": "term",

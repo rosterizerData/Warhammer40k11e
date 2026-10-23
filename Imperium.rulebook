@@ -1,6 +1,6 @@
 {
   "name": "Imperium 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1613,7 +1613,7 @@
         "text": "At the start of the Declare Battle Formations step, you can select up to three AGENTS OF THE IMPERIUM INFANTRY units from your army, or one IMPERIUM BATTLELINE unit from your army – those units gain the Scouts 6\" ability."
       },
       "Ability§Using Sir Hekhtur": {
-        "text": "When your Canis Rex model is destroyed, Sir Hekhtur is treated as a model disembarking from a destroyed Transport – set him up within 3″ of your Canis Rex model before it is removed. Sir Hekhtur then uses the profile, wargear, abilities and keywords shown on this side of the card, but cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed."
+        "text": "If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed **TRANSPORT** and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed."
       },
       "Ability§Warden’s Duty (bondsman)": {
         "keywords": {
@@ -1758,6 +1758,7 @@
         "assets": {
           "traits": [
             "Model§Canis Rex",
+            "Model§Sir Hekhtur",
             "Ability§Code Chivalric",
             "Ability§Super-heavy Walker"
           ]
@@ -46424,6 +46425,75 @@
               }
             }
           ]
+        }
+      },
+      "Ranged Weapon§Sir Hekhtur—Hekhtur’s pistol": {
+        "aspects": {
+          "Label": "Hekhtur’s pistol"
+        },
+        "stats": {
+          "Range": {
+            "value": 12
+          },
+          "A": {
+            "value": 1
+          },
+          "BS": {
+            "value": 2
+          },
+          "S": {
+            "value": 5
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 2
+          }
+        },
+        "assets": {
+          "traits": [
+            "Ability§Pistol"
+          ]
+        }
+      },
+      "Model§Sir Hekhtur": {
+        "assets": {
+          "traits": [
+            "Ability§Lone Operative",
+            "Ability§Using Sir Hekhtur",
+            "Ranged Weapon§Sir Hekhtur—Hekhtur’s pistol",
+            "Melee Weapon§Sir Hekhtur—Close combat weapon"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Infantry",
+            "Sir Hekhtur"
+          ],
+          "Category": [
+            "Infantry"
+          ]
+        },
+        "stats": {
+          "Ld": {
+            "value": 5
+          },
+          "M": {
+            "value": 6
+          },
+          "OC": {
+            "value": 1
+          },
+          "Sv": {
+            "value": 4
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 3
+          }
         }
       }
     },

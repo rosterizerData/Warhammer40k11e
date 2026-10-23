@@ -1,6 +1,6 @@
 {
   "name": "Imperial Knights 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2355,6 +2355,10 @@
               }
             },
             "value": "Imperial Knights"
+          },
+          "Legends": {
+            "dynamic": false,
+            "visibility": "hidden"
           }
         }
       },
@@ -3672,109 +3676,6 @@
               }
             }
           ]
-        }
-      },
-      "Character§Sir Hekhtur": {
-        "keywords": {
-          "Faction": [
-            "Imperial Knights"
-          ],
-          "Source": [
-            "Legends"
-          ],
-          "Keywords": [
-            "Infantry",
-            "Character",
-            "Epic Hero",
-            "Imperium",
-            "Sir Hekhtur"
-          ],
-          "Category": [
-            "Epic Hero"
-          ]
-        },
-        "stats": {
-          "M": {
-            "value": 6
-          },
-          "T": {
-            "value": 3
-          },
-          "Sv": {
-            "value": 4
-          },
-          "W": {
-            "value": 3
-          },
-          "Ld": {
-            "value": 5
-          },
-          "OC": {
-            "value": 1
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Lone Operative",
-            "Ranged Weapon§Sir Hekhtur—Hekhtur’s pistol",
-            "Melee Weapon§Sir Hekhtur—Close combat weapon"
-          ]
-        }
-      },
-      "Ranged Weapon§Sir Hekhtur—Hekhtur’s pistol": {
-        "aspects": {
-          "Label": "Hekhtur’s pistol"
-        },
-        "stats": {
-          "Range": {
-            "value": 12
-          },
-          "A": {
-            "value": 1
-          },
-          "BS": {
-            "value": 2
-          },
-          "S": {
-            "value": 5
-          },
-          "AP": {
-            "value": -1
-          },
-          "D": {
-            "value": 2
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Pistol"
-          ]
-        }
-      },
-      "Melee Weapon§Sir Hekhtur—Close combat weapon": {
-        "aspects": {
-          "Label": "Close combat weapon"
-        },
-        "stats": {
-          "Range": {
-            "statType": "term",
-            "value": "Melee"
-          },
-          "A": {
-            "value": 2
-          },
-          "WS": {
-            "value": 2
-          },
-          "S": {
-            "value": 3
-          },
-          "AP": {
-            "value": 0
-          },
-          "D": {
-            "value": 1
-          }
         }
       },
       "Ranged Weapon§Tech-priest Dominus (Knights)—Phosphor serpenta": {

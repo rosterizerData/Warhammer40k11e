@@ -1,6 +1,6 @@
 {
   "name": "Deathwatch 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2934,7 +2934,7 @@
         },
         "stats": {
           "Kill Team Intercessor": {
-            "max": 9,
+            "max": 2,
             "min": 2,
             "statType": "numeric",
             "tracked": true,
@@ -2942,31 +2942,31 @@
             "visibility": "hidden"
           },
           "Kill Team Intercessor with heavy bolt pistol": {
-            "max": 4,
-            "min": 0,
+            "max": 2,
+            "min": 2,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
           },
           "Kill Team Intercessor with plasma incinerator": {
-            "max": 4,
-            "min": 0,
+            "max": 2,
+            "min": 2,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
           },
           "Kill Team Intercessor with pyreblaster": {
-            "max": 4,
-            "min": 0,
+            "max": 2,
+            "min": 2,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
           },
           "Kill Team Intercessor with superfrag": {
-            "max": 2,
+            "max": 1,
             "min": 0,
             "statType": "numeric",
             "tracked": true,
@@ -2981,7 +2981,7 @@
               "value": 1
             },
             "max": 10,
-            "min": 3,
+            "min": 10,
             "value": 10,
             "visibility": "normal"
           },
@@ -3001,12 +3001,12 @@
             "increment": {
               "value": 1
             },
-            "max": 4,
-            "min": 0,
+            "max": 2,
+            "min": 2,
             "statOrder": 3,
             "statType": "numeric",
-            "value": 0,
-            "visibility": "normal"
+            "value": 2,
+            "visibility": "hidden"
           },
           "w/plasma": {
             "dynamic": true,
@@ -3015,12 +3015,12 @@
             "increment": {
               "value": 1
             },
-            "max": 4,
-            "min": 0,
+            "max": 2,
+            "min": 2,
             "statOrder": 2,
             "statType": "numeric",
-            "value": 0,
-            "visibility": "normal"
+            "value": 2,
+            "visibility": "hidden"
           },
           "w/pyre": {
             "dynamic": true,
@@ -3029,12 +3029,12 @@
             "increment": {
               "value": 1
             },
-            "max": 4,
-            "min": 0,
+            "max": 2,
+            "min": 2,
             "statOrder": 4,
             "statType": "numeric",
-            "value": 0,
-            "visibility": "normal"
+            "value": 2,
+            "visibility": "hidden"
           },
           "w/super": {
             "dynamic": true,
@@ -3043,12 +3043,12 @@
             "increment": {
               "value": 1
             },
-            "max": 2,
-            "min": 0,
+            "max": 1,
+            "min": 1,
             "statOrder": 4,
             "statType": "numeric",
-            "value": 0,
-            "visibility": "normal"
+            "value": 1,
+            "visibility": "hidden"
           }
         }
       },
@@ -3866,8 +3866,8 @@
         },
         "stats": {
           "Kill Team Heavy Intercessor": {
-            "max": 10,
-            "min": 3,
+            "max": 4,
+            "min": 4,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
@@ -3875,7 +3875,7 @@
           },
           "Kill Team Heavy Intercessor with melta rifle": {
             "max": 3,
-            "min": 0,
+            "min": 3,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
@@ -3883,7 +3883,7 @@
           },
           "Kill Team Heavy Intercessor with power fist": {
             "max": 3,
-            "min": 0,
+            "min": 3,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
@@ -3897,7 +3897,7 @@
               "value": 1
             },
             "max": 10,
-            "min": 3,
+            "min": 10,
             "value": 10,
             "visibility": "normal"
           },
@@ -3918,11 +3918,11 @@
               "value": 1
             },
             "max": 3,
-            "min": 0,
+            "min": 3,
             "statOrder": 3,
             "statType": "numeric",
-            "value": 0,
-            "visibility": "normal"
+            "value": 3,
+            "visibility": "hidden"
           },
           "w/power": {
             "dynamic": true,
@@ -3932,11 +3932,11 @@
               "value": 1
             },
             "max": 3,
-            "min": 0,
+            "min": 3,
             "statOrder": 4,
             "statType": "numeric",
-            "value": 0,
-            "visibility": "normal"
+            "value": 3,
+            "visibility": "hidden"
           }
         }
       },
@@ -5013,32 +5013,32 @@
         },
         "stats": {
           "Kill Team Infiltrator": {
-            "max": 10,
-            "min": 3,
+            "max": 4,
+            "min": 4,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
           },
           "Kill Team Infiltrator with bolt sniper rifle": {
-            "max": 3,
-            "min": 0,
+            "max": 2,
+            "min": 2,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
           },
           "Kill Team Infiltrator with combat knife": {
-            "max": 4,
-            "min": 0,
+            "max": 2,
+            "min": 2,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
             "visibility": "hidden"
           },
           "Kill Team Infiltrator with occulus bolt carbine": {
-            "max": 4,
-            "min": 0,
+            "max": 2,
+            "min": 2,
             "statType": "numeric",
             "tracked": true,
             "value": 0,
@@ -5052,7 +5052,7 @@
               "value": 1
             },
             "max": 10,
-            "min": 3,
+            "min": 10,
             "value": 10,
             "visibility": "normal"
           },
@@ -5072,12 +5072,12 @@
             "increment": {
               "value": 1
             },
-            "max": 4,
-            "min": 0,
+            "max": 2,
+            "min": 2,
             "statOrder": 5,
             "statType": "numeric",
-            "value": 0,
-            "visibility": "normal"
+            "value": 2,
+            "visibility": "hidden"
           },
           "w/occulus": {
             "dynamic": true,
@@ -5086,12 +5086,12 @@
             "increment": {
               "value": 1
             },
-            "max": 4,
-            "min": 0,
+            "max": 2,
+            "min": 2,
             "statOrder": 4,
             "statType": "numeric",
-            "value": 0,
-            "visibility": "normal"
+            "value": 2,
+            "visibility": "hidden"
           },
           "w/sniper": {
             "dynamic": true,
@@ -5100,12 +5100,12 @@
             "increment": {
               "value": 1
             },
-            "max": 3,
-            "min": 0,
+            "max": 2,
+            "min": 2,
             "statOrder": 2,
             "statType": "numeric",
-            "value": 0,
-            "visibility": "normal"
+            "value": 2,
+            "visibility": "hidden"
           }
         }
       },

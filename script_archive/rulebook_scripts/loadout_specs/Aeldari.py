@@ -46,8 +46,6 @@ SPEC = {
     "Rangers": {"_rename": {"Ranger long rifle": "Long rifle"}},
     "Shroud Runners": {"_rename": {"Ranger long rifle": "Long rifle"}},
     "Prince Yriel": {"_rename": {"The Eye of Wrath": "Eye of Wrath", "The Spear of Twilight": "Spear of Twilight"}},
-    "Vypers": {"_unit": {"static": ["Wraithbone Hull"], "slots": {
-        "Bright lance": ["Bright Lance", "Scatter Laser", "Starcannon"], "Shuriken cannon": ["Shuriken Cannon", "Missile Launcher"]}}},
     "Ynnari Venom": {"_unit": {"static": ["Splinter Cannon", "Bladevanes"], "slots": {"Cannon Options": ["Twin Splinter Rifle", "Splinter Cannon"]}}},
     "Dragon Knights": {"_patch": dragon_knights},   # also gives the model its melee Laser Lance profile
     "Corsair Cloud Dancer Band": {"_patch": current_corsair},
