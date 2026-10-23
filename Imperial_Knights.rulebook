@@ -1,6 +1,6 @@
 {
   "name": "Imperial Knights 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2355,10 +2355,6 @@
               }
             },
             "value": "Imperial Knights"
-          },
-          "Legends": {
-            "dynamic": false,
-            "visibility": "hidden"
           }
         }
       },
@@ -3684,7 +3680,7 @@
             "Imperial Knights"
           ],
           "Source": [
-            "11th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Infantry",

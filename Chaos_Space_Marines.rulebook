@@ -1,6 +1,6 @@
 {
   "name": "Chaos Space Marines 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -12889,6 +12889,9 @@
         "keywords": {
           "Faction": [
             "Heretic Astartes"
+          ],
+          "Source": [
+            "Legends"
           ]
         }
       },
@@ -13577,6 +13580,9 @@
         "keywords": {
           "Faction": [
             "Heretic Astartes"
+          ],
+          "Source": [
+            "Legends"
           ]
         }
       },
@@ -13718,6 +13724,9 @@
         "keywords": {
           "Faction": [
             "Heretic Astartes"
+          ],
+          "Source": [
+            "Legends"
           ]
         }
       },
@@ -14647,6 +14656,9 @@
           ],
           "Faction": [
             "Heretic Astartes"
+          ],
+          "Source": [
+            "Legends"
           ]
         }
       },
