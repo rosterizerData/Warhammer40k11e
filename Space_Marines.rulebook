@@ -1,6 +1,6 @@
 {
   "name": "Space Marines 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -5546,7 +5546,7 @@
             "Adeptus Astartes"
           ],
           "Source": [
-            "Legends"
+            "11th Edition Codex"
           ],
           "Keywords": [
             "Mounted",
@@ -13800,7 +13800,7 @@
             "Adeptus Astartes"
           ],
           "Source": [
-            "10th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Infantry",
@@ -13869,7 +13869,7 @@
             "Adeptus Astartes"
           ],
           "Source": [
-            "10th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Infantry",
@@ -64290,7 +64290,7 @@
             "Adeptus Astartes"
           ],
           "Source": [
-            "10th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Fortification",
@@ -65727,7 +65727,7 @@
             "Adeptus Astartes"
           ],
           "Source": [
-            "10th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Vehicle",
@@ -68798,7 +68798,7 @@
             "Adeptus Astartes"
           ],
           "Source": [
-            "Legends"
+            "11th Edition Codex"
           ],
           "Keywords": [
             "Vehicle",
@@ -69832,7 +69832,7 @@
             "Adeptus Astartes"
           ],
           "Source": [
-            "10th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Vehicle",
@@ -69979,7 +69979,7 @@
             "Adeptus Astartes"
           ],
           "Source": [
-            "10th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Vehicle",
@@ -70279,6 +70279,9 @@
         "keywords": {
           "Faction": [
             "Adeptus Astartes"
+          ],
+          "Source": [
+            "Legends"
           ]
         }
       },
@@ -73185,6 +73188,9 @@
           ],
           "Keywords": [
             "Ravenwing"
+          ],
+          "Source": [
+            "Legends"
           ]
         }
       },
@@ -73308,6 +73314,9 @@
           ],
           "Keywords": [
             "Ravenwing"
+          ],
+          "Source": [
+            "Legends"
           ]
         },
         "removed": {
@@ -73337,6 +73346,9 @@
           ],
           "Keywords": [
             "Ravenwing"
+          ],
+          "Source": [
+            "Legends"
           ]
         }
       },
@@ -74234,7 +74246,7 @@
             "Adeptus Astartes"
           ],
           "Source": [
-            "10th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Vehicle",
@@ -74439,7 +74451,7 @@
             "Adeptus Astartes"
           ],
           "Source": [
-            "10th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Vehicle",

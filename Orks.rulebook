@@ -1,6 +1,6 @@
 {
   "name": "Orks 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -20377,7 +20377,7 @@
             "Orks"
           ],
           "Source": [
-            "10th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Infantry",
@@ -24512,7 +24512,7 @@
             "Orks"
           ],
           "Source": [
-            "10th Edition Codex"
+            "Legends"
           ],
           "Keywords": [
             "Infantry",
@@ -27289,7 +27289,7 @@
             "Orks"
           ],
           "Source": [
-            "Legends"
+            "11th Edition Codex"
           ],
           "Keywords": [
             "Speed Freeks",
