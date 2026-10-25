@@ -1,6 +1,6 @@
 {
   "name": "Dark Angels 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -993,40 +993,6 @@
           ]
         },
         "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Captain"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          },
           "noDups": {
             "actions": [
               {
@@ -3059,7 +3025,6 @@
           "Keywords": [],
           "Category": []
         },
-        "rules": {},
         "stats": {
           "Points": {
             "value": 80

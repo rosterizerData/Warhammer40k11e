@@ -1,6 +1,6 @@
 {
   "name": "Chaos Knights 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -5021,36 +5021,9 @@
           ]
         }
       },
-      "Character§Cultist Firebrand (CK)": {
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Accursed Cultists\n\n* Cultist Mob\n\n* Cultist Mob with Firearms"
-            }
-          ]
-        }
-      },
-      "Character§Dark Commune (CK)": {
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Accursed Cultists\n\n* Cultist Mob\n\n* Cultist Mob with Firearms"
-            }
-          ]
-        }
-      },
-      "Character§Traitor Enforcer (CK)": {
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Traitor Guardsmen Squad"
-            }
-          ]
-        }
-      },
+      "Character§Cultist Firebrand (CK)": {},
+      "Character§Dark Commune (CK)": {},
+      "Character§Traitor Enforcer (CK)": {},
       "Unit§Accursed Cultists (CK)": {
         "assets": {
           "traits": [

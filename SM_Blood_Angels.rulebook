@@ -1,6 +1,6 @@
 {
   "name": "Blood Angels 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1523,68 +1523,6 @@
             "Character"
           ]
         },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Captain"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Chapter Master"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Lieutenant"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "Ld": {
             "value": 6
@@ -1822,68 +1760,6 @@
           "Category": [
             "Character"
           ]
-        },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Captain"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Chapter Master"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Lieutenant"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
         },
         "stats": {
           "Ld": {

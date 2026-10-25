@@ -1,6 +1,6 @@
 {
   "name": "Orks 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.5",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -17739,8 +17739,7 @@
             "dynamic": false,
             "value": "Xenos"
           }
-        },
-        "rules": {}
+        }
       },
       "Stratagem§’Ere We Go": {
         "keywords": {
@@ -19094,85 +19093,6 @@
           ]
         },
         "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Models",
-                    "value"
-                  ]
-                ],
-                "value": 20
-              },
-              {
-                "actionable": false,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Warboss"
-                  ]
-                ]
-              },
-              {
-                "actionable": false,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Ghazghkull Thraka"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "OR",
-                "paths": [
-                  [
-                    "{this}",
-                    "evals",
-                    [
-                      "1",
-                      "2"
-                    ],
-                    "result",
-                    "truthy"
-                  ]
-                ],
-                "value": true
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          },
           "Maximum 1 Big Shoota for every 10 models": {
             "evals": [
               {

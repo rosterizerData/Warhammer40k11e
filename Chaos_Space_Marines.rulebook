@@ -1,6 +1,6 @@
 {
   "name": "Chaos Space Marines 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -3686,55 +3686,6 @@
             "Character"
           ]
         },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Character"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Exalted Champion"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "Ld": {
             "value": 6
@@ -4761,55 +4712,6 @@
             "Ability§Trophy Taker"
           ]
         },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Character"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Master of Executions"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "M": {
             "value": 6
@@ -4928,42 +4830,6 @@
             "Infantry",
             "Masters of the Maelstrom"
           ]
-        },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Huron Blackheart"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
         },
         "stats": {
           "Models": {
@@ -31558,26 +31424,8 @@
       "Ability§Lord of the Traitor Legions": {
         "text": "_Aura_\n\nWhile a friendly **HERETIC** **ASTARTES** unit (excluding DAMNED units) is within 6\" of this model, you can re-roll Leadership and Battle-shock tests taken for that unit."
       },
-      "Character§Chaos Lord on Disc of Tzeentch": {
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Chosen\n\n* Legionaries\n\n* Nemesis Claw\n\n* Red Corsairs Raiders"
-            }
-          ]
-        }
-      },
-      "Character§Chaos Lord on Palanquin of Nurgle": {
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Chosen\n\n* Legionaries\n\n* Nemesis Claw\n\n* Red Corsairs Raiders"
-            }
-          ]
-        }
-      },
+      "Character§Chaos Lord on Disc of Tzeentch": {},
+      "Character§Chaos Lord on Palanquin of Nurgle": {},
       "Ability§Khorne": {
         "text": "Add 2 to the Strength characteristic of this model's hellforged weapons."
       },
@@ -31590,16 +31438,7 @@
       "Ability§Slaanesh": {
         "text": "Add 2\" to its Move characteristic."
       },
-      "Character§Sorcerer on Palanquin of Nurgle": {
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Chosen\n\n* Legionaries\n\n* Nemesis Claw\n\n* Red Corsairs Raiders"
-            }
-          ]
-        }
-      },
+      "Character§Sorcerer on Palanquin of Nurgle": {},
       "Unit§Blood Slaughterer": {
         "keywords": {
           "Keywords": [

@@ -1,6 +1,6 @@
 {
   "name": "Aeldari 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.7",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -3791,43 +3791,6 @@
             "Character"
           ]
         },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "note": "Warlock Skyrunners is itself a leader unit, so if this Farseer is leading them it'll look like two leaders in one unit when really that's not the case. As a workaround, permit two leaders when this is leading warlocks.",
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Warlock Skyrunners"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "Ld": {
             "value": 6
@@ -4517,43 +4480,6 @@
             "Epic Hero"
           ]
         },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "prepend": " ",
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Yvraine"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "Ld": {
             "value": 6
@@ -4696,27 +4622,6 @@
           "Tags": [
             "WarlockLeaderTag"
           ]
-        },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
         },
         "stats": {
           "Ld": {
@@ -28525,115 +28430,6 @@
             ],
             "evaluate": "AND",
             "failState": "error"
-          },
-          "allow3LeadersConclave": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "note": "This is a workaround for the fact this unit has a Leader rule that actually isn't a Leader rule, so you can end up with both a real leader and this under a unit.",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 1
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Warlock Conclave"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "WarlockLeaderTag"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          },
-          "allow3LeadersConclaveYvraine": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "note": "This is a workaround for the fact this unit has a Leader rule that actually isn't a Leader rule, so you can end up with both a real leader and this under a unit.",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 1
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Warlock Conclave"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Yvraine"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "The Visarch"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
           }
         },
         "stats": {
@@ -30721,115 +30517,6 @@
           ]
         },
         "rules": {
-          "allow3LeadersConclave": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "note": "This is a workaround for the fact this unit has a Leader rule that actually isn't a Leader rule, so you can end up with both a real leader and this under a unit.",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 1
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Warlock Conclave"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "WarlockLeaderTag"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          },
-          "allow3LeadersConclaveYvraine": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "note": "This is a workaround for the fact this unit has a Leader rule that actually isn't a Leader rule, so you can end up with both a real leader and this under a unit.",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 1
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Warlock Conclave"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Yvraine"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "The Visarch"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          },
           "Up to 2 Storm Guardians can replace their close combat weapon with 1 power sword": {
             "evals": [
               {
@@ -31577,95 +31264,6 @@
             "Infantry"
           ]
         },
-        "rules": {
-          "allowTwoLeadersOnParent": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "note": "This is a workaround for the fact this unit has a Leader rule that actually isn't a Leader rule, so you can end up with both a real leader and this under a unit.",
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "classification"
-                  ]
-                ],
-                "value": "Unit"
-              },
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Warlock Conclave"
-                  ]
-                ],
-                "value": 1
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          },
-          "allowTwoLeadersOnSelf": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "note": "This is a workaround for the fact this unit has a Leader rule, so if you add a Farseer underneath it then it'll look like two leaders in a unit.",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "SUM",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Farseer"
-                  ],
-                  [
-                    "{self}",
-                    "tally",
-                    "Eldrad Ulthran"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "model1stTally": {
             "value": 2
@@ -31748,90 +31346,6 @@
           "Category": [
             "Mounted"
           ]
-        },
-        "rules": {
-          "allowTwoLeadersOnParent": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "note": "This is a workaround for the fact this unit has a Leader rule that actually isn't a Leader rule, so you can end up with both a Farseer Skyrunner and this under a unit.",
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "classification"
-                  ]
-                ],
-                "value": "Unit"
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Farseer Skyrunner"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          },
-          "allowTwoLeadersOnSelf": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "note": "This is a workaround for the fact this unit has a Leader rule, so if you add a Farseer Skyrunner underneath it then it'll look like two leaders in a unit.",
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{self}",
-                    "tally",
-                    "Farseer Skyrunner"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
         },
         "stats": {
           "model1stTally": {
@@ -34729,10 +34243,6 @@
         },
         "assets": {
           "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Troupe"
-            },
             "Ability§Battle Focus",
             "Ability§Disparate Paths"
           ]

@@ -1,6 +1,6 @@
 {
   "name": "Necrons 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -3264,55 +3264,6 @@
             "Character"
           ]
         },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Royal Warden"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Noble"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "Ld": {
             "value": 6
@@ -3372,55 +3323,6 @@
             "Geomancer",
             "Infantry"
           ]
-        },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Royal Warden"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Noble"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
         },
         "stats": {
           "Ld": {
@@ -4032,55 +3934,6 @@
             "Epic Hero"
           ]
         },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Royal Warden"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Noble"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "Ld": {
             "value": 6
@@ -4368,55 +4221,6 @@
             "Character"
           ]
         },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Royal Warden"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Noble"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "Ld": {
             "value": 6
@@ -4470,55 +4274,6 @@
           "Category": [
             "Character"
           ]
-        },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Royal Warden"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Noble"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
         },
         "stats": {
           "Ld": {
@@ -4698,55 +4453,6 @@
           "Category": [
             "Character"
           ]
-        },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Royal Warden"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Noble"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
         },
         "stats": {
           "Ld": {
@@ -5112,42 +4818,6 @@
           "Category": [
             "Epic Hero"
           ]
-        },
-        "rules": {
-          "allowtwoleaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Nemesor Zahndrekh"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
         },
         "stats": {
           "Ld": {

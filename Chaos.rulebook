@@ -1,6 +1,6 @@
 {
   "name": "Chaos 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2297,7 +2297,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Bloodletters"
+              "text": "This model can be attached to the following units:\n\n* Bloodletters"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Bloodmaster",
@@ -3056,7 +3056,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Chaos Terminator Squad"
+              "text": "This model can be attached to the following units:\n\n* Chaos Terminator Squad"
             },
             "Ability§Dark Pacts",
             "Ability§Lord of Chaos",
@@ -3224,7 +3224,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Chosen\n\n* Legionaries\n\n* Rubric Marines"
+              "text": "This model can be attached to the following units:\n\n* Chosen\n\n* Legionaries"
             },
             "Ability§Dark Pacts",
             "Ability§Lord of Chaos",
@@ -3499,7 +3499,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Chosen\n\n* Legionaries\n\n* Plague Marines"
+              "text": "This model can be attached to the following units:\n\n* Chosen\n\n* Legionaries"
             },
             "Ability§Dark Pacts",
             "Ability§Lord of Chaos",
@@ -3778,7 +3778,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "\n\nThis model can be attached to the following units: \n\n- Raptors"
+              "text": "This model can be attached to the following units:\n\n* Raptors"
             },
             "Ability§Lord of Chaos",
             "Ability§Cruel Hunter",
@@ -4172,7 +4172,7 @@
             "Ability§Fights First",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Daemonettes"
+              "text": "This model can be attached to the following units:\n\n* Daemonettes"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Swallow Energy (psychic)",
@@ -4245,7 +4245,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units: Accursed Cultists, Cultist Mob"
+              "text": "This model can be attached to the following units:\n\n* Accursed Cultists\n\n* Cultist Mob\n\n* Cultist Mob with Firearms"
             },
             "Ability§Fiery Faith",
             "Ability§Cursed Flames",
@@ -4979,7 +4979,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Accursed Cultists\n\n* Chosen\n\n* Cultist Mob\n\n* Legionaries"
+              "text": "This model can be attached to the following units:\n\n* Accursed Cultists\n\n* Chosen\n\n* Cultist Mob\n\n* Cultist Mob with Firearms\n\n* Legionaries"
             },
             "Ability§Dark Pacts",
             "Ability§Dark Zealotry",
@@ -5048,7 +5048,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This unit can be attached to the following units:\n\n* Accursed Cultists\n\n* Cultist Mob"
+              "text": "This model can be attached to the following units:\n\n* Accursed Cultists\n\n* Cultist Mob\n\n* Cultist Mob with Firearms"
             },
             "Ability§Faithful Flock",
             "Ability§Dark Ritual",
@@ -5148,7 +5148,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Plaguebearers"
+              "text": "This model can be attached to the following units:\n\n* Plaguebearers"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Blessed By the Plague God",
@@ -5219,7 +5219,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Flamers"
+              "text": "This model can be attached to the following units:\n\n* Flamers"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Blazing Warpfire (psychic)",
@@ -5301,7 +5301,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Screamers"
+              "text": "This model can be attached to the following units:\n\n* Screamers"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Fateskimmer",
@@ -5375,7 +5375,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Pink Horrors\n\n* Blue Horrors"
+              "text": "This model can be attached to the following units:\n\n* Blue Horrors\n\n* Pink Horrors"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Fluxmaster",
@@ -5602,7 +5602,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Beasts of Nurgle"
+              "text": "This model can be attached to the following units:\n\n* Beasts Of Nurgle\n\n* Plague Toads\n\n* Pox Riders"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Beast Handler",
@@ -5674,7 +5674,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Daemonettes"
+              "text": "This model can be attached to the following units:\n\n* Daemonettes"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Harmonic Alignment",
@@ -5839,7 +5839,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Flesh Hounds"
+              "text": "This model can be attached to the following units:\n\n* Flesh Hounds"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Pack Leader",
@@ -7051,7 +7051,7 @@
             },
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Plaguebearers"
+              "text": "This model can be attached to the following units:\n\n* Plaguebearers"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Poxbringer",
@@ -7546,7 +7546,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Bloodletters"
+              "text": "This model can be attached to the following units:\n\n* Bloodletters"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Lord of Decapitations",
@@ -7617,7 +7617,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Plaguebearers"
+              "text": "This model can be attached to the following units:\n\n* Plaguebearers"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Jolly Gutpipes",
@@ -7755,7 +7755,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Chaos Terminator Squad"
+              "text": "This model can be attached to the following units:\n\n* Chaos Terminator Squad"
             },
             "Ability§Dark Pacts",
             "Ability§Warptime (psychic)",
@@ -7870,7 +7870,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Chosen\n\n* Legionaries\n\n* Plague Marines"
+              "text": "This model can be attached to the following units:\n\n* Chosen\n\n* Legionaries"
             },
             "Ability§Dark Pacts",
             "Ability§Gift of Poxes (psychic)",
@@ -8000,7 +8000,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Plaguebearers"
+              "text": "This model can be attached to the following units:\n\n* Plaguebearers"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Keep Counting!",
@@ -8074,7 +8074,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Daemonettes"
+              "text": "This model can be attached to the following units:\n\n* Daemonettes"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Prince of Slaanesh",
@@ -8381,7 +8381,7 @@
             "Melee Weapon§Tormentbringer—Slashing claws",
             {
               "item": "Ability§Leader",
-              "text": "\n\nThis model can be attached to the following unit:\n\n■ Hellflayers"
+              "text": "This model can be attached to the following units:\n\n* Hellflayers"
             }
           ]
         },
@@ -8512,7 +8512,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This unit can be attached to the following unit:\n\n* Traitor Guardsmen Squad"
+              "text": "This model can be attached to the following units:\n\n* Traitor Guardsmen Squad"
             },
             "Ability§Brutal Example",
             "Ability§Mutated Bodyguard",
@@ -8598,7 +8598,7 @@
             "Ability§Fights First",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Daemonettes"
+              "text": "This model can be attached to the following units:\n\n* Daemonettes"
             },
             "Ability§The Shadow of Chaos",
             "Ability§Tranceweaver",

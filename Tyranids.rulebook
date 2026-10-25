@@ -1,6 +1,6 @@
 {
   "name": "Tyranids 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -3347,7 +3347,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Gargoyles\n\n* Tyranid Warriors With Melee Bio-weapons\n\n* Tyranid Warriors With Ranged Bio-weapons"
+              "text": "This model can be attached to the following units:\n\n* Gargoyles"
             },
             "Ability§Deep Strike",
             "Ability§Shadow in the Warp",

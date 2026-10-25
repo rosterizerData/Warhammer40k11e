@@ -1,6 +1,6 @@
 {
   "name": "Imperium 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.7",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2385,7 +2385,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Deathwatch Killteam\n\n* Exaction Squad\n\n* Grey Knights Terminator Squad\n\n* Imperium Battleline Infantry\n\n* Imperial Navy Breachers\n\n* Inquisitorial Agents\n\n* Sisters of Battle Squad\n\n* Subductor Squad\n\n* Vigilant Squad"
+              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Exaction Squad\n\n* Fortis Kill Team\n\n* Grey Knights Terminator Squad\n\n* Imperial Navy Breachers\n\n* Indomitor Kill Team\n\n* Inquisitorial Agents\n\n* Proteus Kill Team\n\n* Sanctifiers\n\n* Sisters of Battle Squad\n\n* Spectrus Kill Team\n\n* Subductor Squad\n\n* Vigilant Squad"
             },
             "Ability§Assigned Agents",
             "Ability§Authority of the Inquisition",
@@ -2593,7 +2593,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Exaction Squad\n\n* Grey Knights Terminator Squad\n\n* Imperium Battleline Infantry\n\n* Imperial Navy Breachers\n\n* Inquisitorial Agents\n\n* Subductor Squad\n\n* Vigilant Squad "
+              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Exaction Squad\n\n* Fortis Kill Team\n\n* Grey Knights Terminator Squad\n\n* Imperial Navy Breachers\n\n* Indomitor Kill Team\n\n* Inquisitorial Agents\n\n* Proteus Kill Team\n\n* Spectrus Kill Team\n\n* Subductor Squad\n\n* Vigilant Squad"
             },
             "Ability§Assigned Agents",
             "Ability§Authority of the Inquisition",
@@ -2703,7 +2703,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Deathwatch Kill Team\n\n* Exaction Squad\n\n* Imperium Battleline Infantry\n\n* Imperial Navy Breachers\n\n* Inquisitorial Agents\n\n* Subductor Squad\n\n* Vigilant Squad"
+              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Exaction Squad\n\n* Fortis Kill Team\n\n* Imperial Navy Breachers\n\n* Indomitor Kill Team\n\n* Inquisitorial Agents\n\n* Proteus Kill Team\n\n* Spectrus Kill Team\n\n* Subductor Squad\n\n* Vigilant Squad"
             },
             "Ability§Assigned Agents",
             "Ability§Authority of the Inquisition",
@@ -2856,7 +2856,7 @@
             },
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Imperium Battleline Infantry\n\n* Inquisitorial Henchmen"
+              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Daemonhost\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Exaction Squad\n\n* Fortis Kill Team\n\n* Imperial Navy Breachers\n\n* Indomitor Kill Team\n\n* Inquisitorial Agents\n\n* Proteus Kill Team\n\n* Spectrus Kill Team\n\n* Subductor Squad\n\n* Vigilant Squad"
             },
             "Ability§Assigned Agents",
             "Ability§Authority of the Inquisition",
@@ -2928,7 +2928,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Exaction Squad\n\n* Imperium Battleline Infantry\n\n* Imperial Navy Breachers\n\n* Inquisitorial Agents\n\n* Sisters of Battle Squad\n\n* Subductor Squad\n\n* Vigilant Squad"
+              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Exaction Squad\n\n* Fortis Kill Team\n\n* Imperial Navy Breachers\n\n* Indomitor Kill Team\n\n* Inquisitorial Agents\n\n* Proteus Kill Team\n\n* Sanctifiers\n\n* Sisters of Battle Squad\n\n* Spectrus Kill Team\n\n* Subductor Squad\n\n* Vigilant Squad"
             },
             "Ability§Assigned Agents",
             "Ability§Authority of the Inquisition",
@@ -2998,7 +2998,7 @@
             "Ability§Deep Strike",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Imperium Battleline Infantry\n\n* Inquisitorial Henchmen"
+              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Exaction Squad\n\n* Fortis Kill Team\n\n* Imperial Navy Breachers\n\n* Indomitor Kill Team\n\n* Inquisitorial Agents\n\n* Proteus Kill Team\n\n* Sanctifiers\n\n* Sisters of Battle Squad\n\n* Spectrus Kill Team\n\n* Subductor Squad\n\n* Vigilant Squad"
             },
             "Ability§Assigned Agents",
             "Ability§Authority of the Inquisition",
@@ -3394,7 +3394,7 @@
             "Ability§Infiltrators",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Imperial Navy Breachers\n\n* Voidsmen-at-Arms"
+              "text": "This model can be attached to the following units:\n\n* Imperial Navy Breachers\n\n* Voidsmen-at-arms"
             },
             "Ability§Backroom Deals",
             {
@@ -3461,7 +3461,7 @@
             "Ability§Assigned Agents",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n■ Inquisitorial Agents\n\nYou can attach this model to an Inquisitorial Agents unit,\neven if one Inquisitor unit has already been attached to it.\nIf you do, and that Bodyguard unit is destroyed, the Leader\nunits attached to it become separate units, with their original\nStarting Strengths."
+              "text": "This model can be attached to the following units:\n\n* Inquisitorial Agents"
             },
             "Ranged Weapon§Jokaero Weaponsmith—Jokaero weapons",
             "Melee Weapon§Jokaero Weaponsmith—Close combat weapon",
@@ -3493,40 +3493,6 @@
           ]
         },
         "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Inquisitor"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          },
           "InquisitorialAgent": {
             "actions": [
               {
@@ -5294,10 +5260,6 @@
       "Character§Ministorum Priest (Agents)": {
         "assets": {
           "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Inquisitorial Agents\n\n* Imperial Navy Breachers\n\n* Subductor Squad\n\n* Exaction Squad\n\n* Vigilant Squad\n\n* Sisters of Battle Squad\n\nYou can attach this model to an Inquisitorial Agents unit, even if one inquisitor has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
-            },
             "Ability§Assigned Agents",
             {
               "item": "Ability§Invulnerable",
@@ -5328,54 +5290,6 @@
           "Category": [
             "Character"
           ]
-        },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Inquisitor"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "designation"
-                  ]
-                ],
-                "value": "Inquisitorial Agents"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
         },
         "stats": {
           "Ld": {
@@ -5435,7 +5349,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Imperial Navy Breachers\n\n* Voidsmen-at-Arms"
+              "text": "This model can be attached to the following units:\n\n* Imperial Navy Breachers\n\n* Voidsmen-at-arms"
             },
             "Ability§Assigned Agents",
             {
@@ -5541,7 +5455,7 @@
             "Ability§Infiltrators",
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Imperial Navy Breachers\n\n* Voidsmen-at-Arms"
+              "text": "This model can be attached to the following units:\n\n* Imperial Navy Breachers\n\n* Voidsmen-at-arms"
             },
             "Ability§Backroom Deals",
             "Ability§Warrant of Trade",
@@ -5843,7 +5757,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This unit can be attached to the following units:\n\n* Imperial Navy Breachers\n\n* Voidsmen-at-Arms"
+              "text": "This model can be attached to the following units:\n\n* Imperial Navy Breachers\n\n* Voidsmen-at-arms"
             },
             "Ability§Assigned Agents",
             "Ability§Backroom Deals",
@@ -6000,7 +5914,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Corpuscarii Electro-Priests\n\n* Fulgurite Electro-Priests\n\n* Kataphron Breachers\n\n* Kataphron Destroyers\n\n* Skitarii Rangers\n\n* Skitarii Vanguard"
+              "text": "This model can be attached to the following units:\n\n* Skitarii Rangers\n\n* Skitarii Vanguard"
             },
             "Ability§Lord of the Machine Cult",
             "Ability§Data-spike",
@@ -6118,7 +6032,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Corpuscarii Electro-Priests\n\n* Fulgurite Electro-Priests\n\n* Kataphron Breachers\n\n* Kataphron Destroyers\n\n* Skitarii Rangers\n\n* Skitarii Vanguard"
+              "text": "This model can be attached to the following units:\n\n* Skitarii Rangers\n\n* Skitarii Vanguard"
             },
             "Ability§Galvanic Field",
             "Ability§Defend the Divine Work",
@@ -6405,7 +6319,7 @@
             },
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Deathwatch Kill Team"
+              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Fortis Kill Team\n\n* Indomitor Kill Team\n\n* Proteus Kill Team\n\n* Spectrus Kill Team"
             },
             "Ability§Tactical Instinct",
             "Ability§Unstoppable Champion",
@@ -6475,7 +6389,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Deathwatch Kill Team"
+              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Fortis Kill Team\n\n* Indomitor Kill Team\n\n* Proteus Kill Team\n\n* Spectrus Kill Team"
             },
             "Ability§Strategic Knowledge",
             {
@@ -44592,7 +44506,6 @@
             "Infantry"
           ]
         },
-        "rules": {},
         "stats": {
           "model1stTally": {
             "value": 4

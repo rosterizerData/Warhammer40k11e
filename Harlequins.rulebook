@@ -1,6 +1,6 @@
 {
   "name": "Harlequins 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -190,7 +190,7 @@
           "traits": [
             {
               "item": "Ability§Leader",
-              "text": "This model can be attached to the following unit:\n\n* Troupe"
+              "text": "This model can be attached to the following units:\n\n* Troupe"
             },
             "Ability§Stealth",
             "Ability§Fog of Dreams (Psychic)",

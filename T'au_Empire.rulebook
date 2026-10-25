@@ -1,6 +1,6 @@
 {
   "name": "T'au Empire 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -22244,66 +22244,6 @@
             "failState": "pass",
             "order": 100
           },
-          "Increase leaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{self}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Kroot War Shaper"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Kroot Trail Shaper"
-                  ]
-                ]
-              },
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Kroot Flesh Shaper"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          },
           "Kroot Detatchment": {
             "actions": [
               {
@@ -22416,6 +22356,42 @@
             ],
             "evaluate": "OR",
             "failState": "error"
+          },
+          "Two Leaders at 20 models": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Models",
+                    "value"
+                  ]
+                ],
+                "value": 20
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Leader",
+                    "max"
+                  ]
+                ],
+                "value": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Bodyguard: at a Starting Strength of 20, up to two (different) Leader units may be attached"
           }
         },
         "stats": {
@@ -22428,9 +22404,6 @@
             "visibility": "hidden"
           },
           "Ld": {},
-          "Leader": {
-            "max": 2
-          },
           "M": {},
           "model1stTally": {
             "value": 10

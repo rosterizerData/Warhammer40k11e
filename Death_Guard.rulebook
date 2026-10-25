@@ -1,6 +1,6 @@
 {
   "name": "Death Guard 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -822,56 +822,6 @@
             "Character"
           ]
         },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              },
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "included",
-                    "classification",
-                    "Character",
-                    "aspects",
-                    "Unique"
-                  ]
-                ],
-                "value": true
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "classIdentity"
-                  ]
-                ],
-                "value": "Unit"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "Ld": {
             "value": 6
@@ -1651,56 +1601,6 @@
             "Character"
           ]
         },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              },
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "included",
-                    "classification",
-                    "Character",
-                    "aspects",
-                    "Unique"
-                  ]
-                ],
-                "value": true
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "classIdentity"
-                  ]
-                ],
-                "value": "Unit"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "Ld": {
             "value": 6
@@ -1804,41 +1704,6 @@
           "Category": [
             "Character"
           ]
-        },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "classIdentity"
-                  ]
-                ],
-                "value": "Unit"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
         },
         "stats": {
           "Ld": {
@@ -2260,56 +2125,6 @@
             "Character"
           ]
         },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              },
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "included",
-                    "classification",
-                    "Character",
-                    "aspects",
-                    "Unique"
-                  ]
-                ],
-                "value": true
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "classIdentity"
-                  ]
-                ],
-                "value": "Unit"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "Ld": {
             "value": 6
@@ -2365,41 +2180,6 @@
           "Category": [
             "Character"
           ]
-        },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "classIdentity"
-                  ]
-                ],
-                "value": "Unit"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
         },
         "stats": {
           "Ld": {
@@ -2497,56 +2277,6 @@
           "Category": [
             "Character"
           ]
-        },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              },
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "included",
-                    "classification",
-                    "Character",
-                    "aspects",
-                    "Unique"
-                  ]
-                ],
-                "value": true
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "classIdentity"
-                  ]
-                ],
-                "value": "Unit"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
         },
         "stats": {
           "Ld": {

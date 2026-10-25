@@ -1,6 +1,6 @@
 {
   "name": "Chaos Daemons 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -712,14 +712,6 @@
           "Points": {
             "value": 80
           }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Plaguebearers"
-            }
-          ]
         }
       },
       "Character§Herald of Slaanesh on Steed of Slaanesh": {
@@ -808,14 +800,6 @@
           "Points": {
             "value": 120
           }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Beasts Of Nurgle\n\n* Plague Toads\n\n* Pox Riders"
-            }
-          ]
         }
       },
       "Character§Kairos Fateweaver": {
@@ -840,14 +824,6 @@
           "Points": {
             "value": 70
           }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Flesh Hounds"
-            }
-          ]
         }
       },
       "Character§Rotigus": {
@@ -990,14 +966,6 @@
           "Points": {
             "value": 85
           }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Bloodletters"
-            }
-          ]
         }
       },
       "Character§Syll’esske": {
@@ -1010,14 +978,6 @@
           "Points": {
             "value": 120
           }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Daemonettes"
-            }
-          ]
         }
       },
       "Character§The Archivist": {
@@ -6404,14 +6364,6 @@
           "Keywords": [
             "Shadow Legion"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Daemonettes"
-            }
-          ]
         }
       },
       "Unit§Daemonettes": {
@@ -6469,14 +6421,6 @@
           "Keywords": [
             "Shadow Legion"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Blue Horrors\n\n* Pink Horrors"
-            }
-          ]
         }
       },
       "Character§Keeper of Secrets": {
@@ -6533,14 +6477,6 @@
         "keywords": {
           "Keywords": [
             "Shadow Legion"
-          ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Plaguebearers"
-            }
           ]
         }
       },
@@ -10481,14 +10417,6 @@
           "Keywords": [
             "Shadow Legion"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Flamers"
-            }
-          ]
         }
       },
       "Unit§Screamers": {
@@ -10552,14 +10480,6 @@
           "Keywords": [
             "Shadow Legion"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Daemonettes"
-            }
-          ]
         }
       },
       "Unit§Hellflayers": {
@@ -10616,14 +10536,6 @@
           "Keywords": [
             "Shadow Legion"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Bloodletters"
-            }
-          ]
         }
       },
       "Character§Skullmaster": {
@@ -10645,14 +10557,6 @@
           "Keywords": [
             "Shadow Legion"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Screamers"
-            }
-          ]
         }
       },
       "Character§Sloppity Bilepiper": {
@@ -10660,28 +10564,12 @@
           "Keywords": [
             "Shadow Legion"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Plaguebearers"
-            }
-          ]
         }
       },
       "Character§Spoilpox Scrivener": {
         "keywords": {
           "Keywords": [
             "Shadow Legion"
-          ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Plaguebearers"
-            }
           ]
         }
       },
@@ -10705,14 +10593,6 @@
         "keywords": {
           "Keywords": [
             "Shadow Legion"
-          ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Daemonettes"
-            }
           ]
         }
       },
@@ -10746,14 +10626,6 @@
             "Undivided",
             "Shadow Legion"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Chaos Terminator Squad"
-            }
-          ]
         }
       },
       "Character§Chaos Lord with Jump Pack (SL)": {
@@ -10762,14 +10634,6 @@
             "Chaos",
             "Undivided",
             "Shadow Legion"
-          ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Raptors"
-            }
           ]
         }
       },
@@ -10792,14 +10656,6 @@
           "Keywords": [
             "Undivided",
             "Shadow Legion"
-          ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Chosen\n\n* Legionaries"
-            }
           ]
         }
       },
@@ -10841,14 +10697,6 @@
             "Shadow Legion",
             "Undivided"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Chosen\n\n* Legionaries"
-            }
-          ]
         }
       },
       "Unit§Chaos Terminator Squad (SL)": {
@@ -10865,14 +10713,6 @@
             "Undivided",
             "Shadow Legion"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Accursed Cultists\n\n* Cultist Mob\n\n* Cultist Mob with Firearms"
-            }
-          ]
         }
       },
       "Character§Dark Commune (CK)": {
@@ -10881,14 +10721,6 @@
             "Undivided",
             "Shadow Legion"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Accursed Cultists\n\n* Cultist Mob\n\n* Cultist Mob with Firearms"
-            }
-          ]
         }
       },
       "Character§Traitor Enforcer (CK)": {
@@ -10896,14 +10728,6 @@
           "Keywords": [
             "Undivided",
             "Shadow Legion"
-          ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Traitor Guardsmen Squad"
-            }
           ]
         }
       },
@@ -10989,14 +10813,6 @@
           "Keywords": [
             "Undivided",
             "Shadow Legion"
-          ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Accursed Cultists\n\n* Chosen\n\n* Cultist Mob\n\n* Cultist Mob with Firearms\n\n* Legionaries"
-            }
           ]
         }
       },
@@ -11085,14 +10901,6 @@
             "Shadow Legion",
             "Undivided"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Chosen\n\n* Legionaries"
-            }
-          ]
         }
       },
       "Character§Sorcerer in Terminator Armour (SL)": {
@@ -11100,14 +10908,6 @@
           "Keywords": [
             "Undivided",
             "Shadow Legion"
-          ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Chaos Terminator Squad"
-            }
           ]
         }
       },
@@ -11125,14 +10925,6 @@
           "Keywords": [
             "Tormentbringer on Exalted Seeker Chariot",
             "Shadow Legion"
-          ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Hellflayers"
-            }
           ]
         }
       },

@@ -1,6 +1,6 @@
 {
   "name": "40k 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -7260,6 +7260,12 @@
           },
           "Enhancement": {
             "max": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Support": {
             "statType": "numeric",
             "tracked": true,
             "value": 0,

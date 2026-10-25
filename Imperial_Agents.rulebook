@@ -1,6 +1,6 @@
 {
   "name": "Agents of the Imperium 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2863,14 +2863,6 @@
           "Points": {
             "value": 55
           }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Exaction Squad\n\n* Fortis Kill Team\n\n* Grey Knights Terminator Squad\n\n* Imperial Navy Breachers\n\n* Indomitor Kill Team\n\n* Inquisitorial Agents\n\n* Proteus Kill Team\n\n* Sanctifiers\n\n* Sisters of Battle Squad\n\n* Spectrus Kill Team\n\n* Subductor Squad\n\n* Vigilant Squad"
-            }
-          ]
         }
       },
       "Character§Inquisitor Coteaz": {
@@ -2878,14 +2870,6 @@
           "Points": {
             "value": 75
           }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Exaction Squad\n\n* Fortis Kill Team\n\n* Grey Knights Terminator Squad\n\n* Imperial Navy Breachers\n\n* Indomitor Kill Team\n\n* Inquisitorial Agents\n\n* Proteus Kill Team\n\n* Spectrus Kill Team\n\n* Subductor Squad\n\n* Vigilant Squad"
-            }
-          ]
         }
       },
       "Character§Inquisitor Draxus": {
@@ -2893,14 +2877,6 @@
           "Points": {
             "value": 75
           }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Exaction Squad\n\n* Fortis Kill Team\n\n* Imperial Navy Breachers\n\n* Indomitor Kill Team\n\n* Inquisitorial Agents\n\n* Proteus Kill Team\n\n* Spectrus Kill Team\n\n* Subductor Squad\n\n* Vigilant Squad"
-            }
-          ]
         }
       },
       "Unit§Inquisitorial Agents": {
@@ -2946,14 +2922,6 @@
           "Points": {
             "value": 60
           }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Imperial Navy Breachers\n\n* Voidsmen-at-arms"
-            }
-          ]
         }
       },
       "Character§Rogue Trader Entourage": {
@@ -2961,14 +2929,6 @@
           "Points": {
             "value": 75
           }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Imperial Navy Breachers\n\n* Voidsmen-at-arms"
-            }
-          ]
         }
       },
       "Unit§Sisters of Battle Immolator": {
@@ -3058,14 +3018,6 @@
               "Ability§Assigned Agents"
             ]
           }
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Fortis Kill Team\n\n* Indomitor Kill Team\n\n* Proteus Kill Team\n\n* Spectrus Kill Team"
-            }
-          ]
         }
       },
       "Character§Watch Master (Agents)": {
@@ -3081,10 +3033,6 @@
         },
         "assets": {
           "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Fortis Kill Team\n\n* Indomitor Kill Team\n\n* Proteus Kill Team\n\n* Spectrus Kill Team"
-            },
             "Ability§Watch Master",
             "Ability§Strategic Acumen",
             "Ability§Purgatus Quarry"
@@ -3496,14 +3444,6 @@
           "Keywords": [
             "Ordo Hereticus"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Exaction Squad\n\n* Fortis Kill Team\n\n* Imperial Navy Breachers\n\n* Indomitor Kill Team\n\n* Inquisitorial Agents\n\n* Proteus Kill Team\n\n* Sanctifiers\n\n* Sisters of Battle Squad\n\n* Spectrus Kill Team\n\n* Subductor Squad\n\n* Vigilant Squad"
-            }
-          ]
         }
       },
       "Unit§Deathwatch Terminator Squad (Agents)": {
@@ -3581,14 +3521,6 @@
           "Keywords": [
             "Ordo Xenos"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Daemonhost\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Exaction Squad\n\n* Fortis Kill Team\n\n* Imperial Navy Breachers\n\n* Indomitor Kill Team\n\n* Inquisitorial Agents\n\n* Proteus Kill Team\n\n* Spectrus Kill Team\n\n* Subductor Squad\n\n* Vigilant Squad"
-            }
-          ]
         }
       },
       "Unit§Daemonhost": {
@@ -3616,16 +3548,7 @@
           ]
         }
       },
-      "Character§Inquisitor in Terminator Armour": {
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Aquila Kill Team\n\n* Deathwatch Kill Team\n\n* Deathwatch Terminator Squad\n\n* Exaction Squad\n\n* Fortis Kill Team\n\n* Imperial Navy Breachers\n\n* Indomitor Kill Team\n\n* Inquisitorial Agents\n\n* Proteus Kill Team\n\n* Sanctifiers\n\n* Sisters of Battle Squad\n\n* Spectrus Kill Team\n\n* Subductor Squad\n\n* Vigilant Squad"
-            }
-          ]
-        }
-      },
+      "Character§Inquisitor in Terminator Armour": {},
       "Model§Rogue Trader": {
         "assets": {
           "traits": [
@@ -3645,28 +3568,12 @@
           "Keywords": [
             "Voidfarers"
           ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Imperial Navy Breachers\n\n* Voidsmen-at-arms"
-            }
-          ]
         }
       },
       "Character§Neyam Shai Murad": {
         "keywords": {
           "Keywords": [
             "Voidfarers"
-          ]
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Imperial Navy Breachers\n\n* Voidsmen-at-arms"
-            }
           ]
         }
       },
@@ -3735,10 +3642,6 @@
       "Character§Jokaero Weaponsmith": {
         "assets": {
           "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Inquisitorial Agents"
-            },
             "Ability§Inconceivable Augmentation",
             "Ability§A Weaponsmith, Not a Warlord"
           ]

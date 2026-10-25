@@ -1,6 +1,6 @@
 {
   "name": "Astra Militarum 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1513,42 +1513,6 @@
         "text": "Each time this model Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6″ to the Move characteristic of this model."
       },
       "Ability§Unit Composition": {
-        "rules": {
-          "twoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "max": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Command Squad"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
         "text": "This unit can have up to two Leader units attached to it, provided no more than one of those units is a Command Squad unit. If it does, and this Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
       },
       "Ability§Unstable Payload": {
@@ -2564,42 +2528,6 @@
           "Category": [
             "Character"
           ]
-        },
-        "rules": {
-          "allowTwoLeaders": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "Leader",
-                    "max"
-                  ]
-                ],
-                "value": 2
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "min": 1,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "tally",
-                    "Death Rider Squadron Commander"
-                  ]
-                ]
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "pass"
-          }
         },
         "stats": {
           "Ld": {
@@ -3838,8 +3766,8 @@
         "assets": {
           "traits": [
             {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Cadian Shock Troops\n\n* Catachan Jungle Fighters\n\n* Death Korps Grenadier Squad\n\n* Death Korps Of Krieg\n\n* Kasrkin\n\n* Krieg Combat Engineers\n\n* Tempestus Scions"
+              "text": "This model can be attached to the following units:\n\n* Cadian Shock Troops\n\n* Catachan Jungle Fighters\n\n* Death Korps Grenadier Squad\n\n* Death Korps Of Krieg\n\n* Kasrkin\n\n* Krieg Combat Engineers\n\n* Tempestus Scions",
+              "item": "Ability§Support"
             },
             "Ability§War Hymns",
             "Ability§Holy Piety"

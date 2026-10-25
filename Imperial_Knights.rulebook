@@ -1,6 +1,6 @@
 {
   "name": "Imperial Knights 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -4303,10 +4303,6 @@
       "Character§Tech-priest Dominus (Knights)": {
         "assets": {
           "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Skitarii Rangers\n\n* Skitarii Vanguard"
-            },
             "Ability§Doctrina Imperatives"
           ]
         }
@@ -4314,10 +4310,6 @@
       "Character§Tech-priest Manipulus (Knights)": {
         "assets": {
           "traits": [
-            {
-              "item": "Ability§Leader",
-              "text": "This model can be attached to the following units:\n\n* Skitarii Rangers\n\n* Skitarii Vanguard"
-            },
             "Ability§Doctrina Imperatives"
           ]
         }
