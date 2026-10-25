@@ -1,6 +1,6 @@
 {
   "name": "Death Guard 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.5",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -4068,35 +4068,56 @@
             "evals": [
               {
                 "actionable": true,
-                "contains": true,
                 "not": false,
                 "operator": "AND",
                 "paths": [
                   [
                     "{parent}",
-                    "keywords",
-                    "Keywords"
+                    "designation"
                   ]
                 ],
-                "value": "Contagion"
+                "value": "Foetid Bloat-drone"
               },
               {
                 "actionable": true,
-                "contains": true,
                 "not": false,
                 "operator": "AND",
                 "paths": [
                   [
                     "{parent}",
-                    "keywords",
-                    "Keywords"
+                    "designation"
                   ]
                 ],
-                "value": "Engine"
+                "value": "Foetid Bloat-drone with Heavy blight launcher"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "designation"
+                  ]
+                ],
+                "value": "Myphitic Blight-haulers"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "designation"
+                  ]
+                ],
+                "value": "Helbrute"
               }
             ],
-            "evaluate": "AND",
-            "failState": "error"
+            "evaluate": "OR",
+            "failState": "error",
+            "note": "Contagion Engines detachment, Warped and Rusted Animus: these units have the CONTAGION ENGINE keyword (no other source grants it)"
           }
         }
       },
@@ -10398,7 +10419,8 @@
           "W": {
             "value": 10
           }
-        }
+        },
+        "rules": {}
       },
       "Unit§Foetid Bloat-drone with Heavy blight launcher": {
         "aspects": {
@@ -10476,7 +10498,8 @@
           "W": {
             "value": 10
           }
-        }
+        },
+        "rules": {}
       },
       "Unit§Hell Blade": {
         "keywords": {
@@ -10649,7 +10672,8 @@
           "Points": {
             "value": 95
           }
-        }
+        },
+        "rules": {}
       },
       "Unit§Nurglings": {
         "keywords": {

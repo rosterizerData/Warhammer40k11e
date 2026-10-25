@@ -1,6 +1,6 @@
 {
   "name": "Grey Knights 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2579,14 +2579,6 @@
             "failState": "error"
           }
         }
-      },
-      "Enhancement§Doomseer's Amulet": {
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "GREY KNIGHTS model only. Each time the bearer's unit is set up in your Reinforcements step, the bearer can use this Enhancement. If it does, select one enemy unit within 12\" of and visible to the bearer. That enemy unit must take a Battle-shock test, subtracting 1 from that test."
       },
       "Enhancement§Doomseer’s Amulet": {
         "keywords": {

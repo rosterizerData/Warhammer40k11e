@@ -1,6 +1,6 @@
 {
   "name": "Astra Militarum 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -7285,31 +7285,15 @@
             "evals": [
               {
                 "actionable": true,
-                "contains": true,
                 "not": false,
                 "operator": "AND",
                 "paths": [
                   [
                     "{parent}",
-                    "keywords",
-                    "Keywords"
+                    "designation"
                   ]
                 ],
-                "value": "Scout"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Sentinel"
+                "value": "Scout Sentinels"
               }
             ],
             "evaluate": "AND",
@@ -7958,78 +7942,6 @@
           }
         },
         "text": "**ASTRA MILITARUM INFANTRY OFFICER** model only. Each time you select an Order for the bearer to issue, you can select the Order below:\n\n**Move to the Shadows (Order):** Each time a ranged attack targets this unit, until those attacks are resolved, models in this unit have the Stealth ability."
-      },
-      "Enhancement§Stalwart's Honours": {
-        "rules": {
-          "Officer model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Officer"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Cadian Command Squad"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Catachan Command Squad"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Krieg Command Squad"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "**Officer** model only. While the bearer is leading a unit, when that unit is issued an order, it is also affected by the Take Cover! Order."
       },
       "Enhancement§Stalwart’s Honours": {
         "keywords": {

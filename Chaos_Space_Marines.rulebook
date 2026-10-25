@@ -1,6 +1,6 @@
 {
   "name": "Chaos Space Marines 11e",
-  "revision": "11.2.6",
+  "revision": "11.2.8",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -7692,34 +7692,6 @@
         },
         "text": "**WARP PORTALS**\n\nAt the end of your opponent’s turn, you can select a number of **HERETIC ASTARTES TERMINATOR**, **OBLITERATORS** and **MUTILATORS** units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows:\n\nBattle Size - Number of Units\nIncursion - Up to 1 unit\nStrike Force - Up to 2 units\nOnslaught Up - to 3 units\n\nOnce you have made your selections, remove those units from the battlefield and place them into Strategic Reserves."
       },
-      "Enhancement§Akshur's Binding Runes": {
-        "rules": {
-          "Heretic Astartes model with the Deep Strike ability only": {
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits"
-                  ]
-                ],
-                "value": "Ability§Deep Strike"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "**HERETIC ASTARTES** model with the Deep Strike ability only. The bearer's unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules."
-      },
       "Enhancement§Akshur’s Binding Runes": {
         "keywords": {
           "Keywords": [
@@ -9587,45 +9559,15 @@
             "evals": [
               {
                 "actionable": true,
-                "contains": true,
                 "not": false,
                 "operator": "AND",
                 "paths": [
                   [
                     "{parent}",
-                    "keywords",
-                    "Keywords"
+                    "designation"
                   ]
                 ],
-                "value": "Chaos Lord"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "With"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Jump Pack"
+                "value": "Chaos Lord with Jump Pack"
               }
             ],
             "evaluate": "AND",
@@ -9805,45 +9747,15 @@
             "evals": [
               {
                 "actionable": true,
-                "contains": true,
                 "not": false,
                 "operator": "AND",
                 "paths": [
                   [
                     "{parent}",
-                    "keywords",
-                    "Keywords"
+                    "designation"
                   ]
                 ],
-                "value": "Chaos Lord"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "With"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Jump Pack"
+                "value": "Chaos Lord with Jump Pack"
               }
             ],
             "evaluate": "AND",

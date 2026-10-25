@@ -1,6 +1,6 @@
 {
   "name": "Dark Angels 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.5",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2330,21 +2330,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Landspeeder"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Vengeance"
+                "value": "Land Speeder Vengeance"
               }
             ],
             "evaluate": "AND",
@@ -7603,6 +7589,20 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 1
+          }
+        },
+        "removed": {
+          "rules": {
+            "detectChapterBlackTemplars": {},
+            "detectChapterBloodAngels": {},
+            "detectChapterDeathwatch": {},
+            "detectChapterImperialFists": {},
+            "detectChapterIron Hands": {},
+            "detectChapterRavenGuard": {},
+            "detectChapterSalamanders": {},
+            "detectChapterSpaceWolves": {},
+            "detectChapterUltramarines": {},
+            "detectChapterWhiteScars": {}
           }
         }
       },

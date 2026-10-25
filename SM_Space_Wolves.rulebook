@@ -1,6 +1,6 @@
 {
   "name": "Space Wolves 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.5",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -18946,6 +18946,20 @@
           "Faction Group": {
             "dynamic": false,
             "value": "Imperium"
+          }
+        },
+        "removed": {
+          "rules": {
+            "detectChapterBlackTemplars": {},
+            "detectChapterBloodAngels": {},
+            "detectChapterDarkAngels": {},
+            "detectChapterDeathwatch": {},
+            "detectChapterImperialFists": {},
+            "detectChapterIron Hands": {},
+            "detectChapterRavenGuard": {},
+            "detectChapterSalamanders": {},
+            "detectChapterUltramarines": {},
+            "detectChapterWhiteScars": {}
           }
         }
       },

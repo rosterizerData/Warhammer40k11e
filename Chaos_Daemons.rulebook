@@ -1,6 +1,6 @@
 {
   "name": "Chaos Daemons 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2481,50 +2481,6 @@
           }
         },
         "text": "**LEGIONES DAEMONICA NURGLE MONSTER** model only. While a friendly **LEGIONES DAEMONICA NURGLE** unit is within 6\" of the bearer, improve the Armour Penetration characteristic of weapons equipped by models in that unit by 1."
-      },
-      "Enhancement§Fury's Cage": {
-        "rules": {
-          "Khorne Monster model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Khorne"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Monster"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "**Legiones Daemonica Khorne Monster** model only.\nEach time the bearer is selected to fight, it can use\nthis Enhancement. If it does, the bearer suffers D3+1\nmortal wounds, and until the end of the phase, each\ntime it makes an attack, you can re‑roll the Hit roll\nand you can re‑roll the Wound roll."
       },
       "Enhancement§Fury’s Cage": {
         "keywords": {

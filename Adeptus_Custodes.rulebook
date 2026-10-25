@@ -1,6 +1,6 @@
 {
   "name": "Adeptus Custodes 11e",
-  "revision": "11.2.7",
+  "revision": "11.2.9",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -11349,21 +11349,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Trusted"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Sentinel"
+                "value": "Trusted Sentinel"
               }
             ],
             "evaluate": "AND",
@@ -11375,7 +11361,7 @@
         "text": "**GRAV-ASSAULT** unit only. When this unit makes a **fall-back move**, that **fall-back move** does not prevent this unit from being **eligible to shoot**.",
         "keywords": {
           "Keywords": [
-            "Grav‑Assault Force"
+            "Grav-Assault Force"
           ],
           "Tags": [
             "Upgrade"
@@ -11411,7 +11397,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Grav-Assault"
+                "value": "Grav-assault"
               }
             ],
             "evaluate": "AND",
@@ -11724,7 +11710,7 @@
         "text": "**GRAV-ASSAULT TRANSPORT** model only. When a friendly **ADEPTUS CUSTODES** unit is selected to make a **disembark move** from this unit, until the end of the turn:\n\n- That unit can re-roll **charge rolls**.\n\n- Enemy units cannot target that unit with **snap shooting** attacks.",
         "keywords": {
           "Keywords": [
-            "Grav‑Assault Force"
+            "Grav-Assault Force"
           ],
           "Tags": [
             "Upgrade"
@@ -11760,7 +11746,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Grav-Assault"
+                "value": "Grav-assault"
               },
               {
                 "actionable": true,
@@ -11799,73 +11785,15 @@
             "evals": [
               {
                 "actionable": true,
-                "contains": true,
                 "not": false,
                 "operator": "AND",
                 "paths": [
                   [
                     "{parent}",
-                    "keywords",
-                    "Keywords"
+                    "designation"
                   ]
                 ],
-                "value": "Shield-captain"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "In"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Allarus"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Terminator"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Armour"
+                "value": "Shield-captain in Allarus Terminator Armour"
               }
             ],
             "evaluate": "AND",
@@ -11890,73 +11818,15 @@
             "evals": [
               {
                 "actionable": true,
-                "contains": true,
                 "not": false,
                 "operator": "AND",
                 "paths": [
                   [
                     "{parent}",
-                    "keywords",
-                    "Keywords"
+                    "designation"
                   ]
                 ],
-                "value": "Shield-captain"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "In"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Allarus"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Terminator"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Armour"
+                "value": "Shield-captain in Allarus Terminator Armour"
               }
             ],
             "evaluate": "AND",

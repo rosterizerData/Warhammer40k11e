@@ -1,6 +1,6 @@
 {
   "name": "Necrons 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -2754,6 +2754,34 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 90
+          },
+          "Epic Hero: only Singularity Matrix": {
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{self}",
+                    "tally",
+                    "Singularity Matrix"
+                  ]
+                },
+                "max": 0,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Enhancement"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "note": "this Epic Hero may take only the enhancement(s) written for it"
           }
         },
         "stats": {
@@ -2777,6 +2805,11 @@
           },
           "W": {
             "value": 16
+          }
+        },
+        "removed": {
+          "rules": {
+            "noEpicHeroEnhancements": {}
           }
         }
       },
@@ -2906,6 +2939,34 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 90
+          },
+          "Epic Hero: only Quantum Goad": {
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{self}",
+                    "tally",
+                    "Quantum Goad"
+                  ]
+                },
+                "max": 0,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Enhancement"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "note": "this Epic Hero may take only the enhancement(s) written for it"
           }
         },
         "stats": {
@@ -2929,6 +2990,11 @@
           },
           "W": {
             "value": 16
+          }
+        },
+        "removed": {
+          "rules": {
+            "noEpicHeroEnhancements": {}
           }
         }
       },
@@ -3060,6 +3126,34 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 90
+          },
+          "Epic Hero: only Animus Damper": {
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{self}",
+                    "tally",
+                    "Animus Damper"
+                  ]
+                },
+                "max": 0,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Enhancement"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "note": "this Epic Hero may take only the enhancement(s) written for it"
           }
         },
         "stats": {
@@ -3083,6 +3177,11 @@
           },
           "W": {
             "value": 16
+          }
+        },
+        "removed": {
+          "rules": {
+            "noEpicHeroEnhancements": {}
           }
         }
       },
@@ -6226,63 +6325,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "C'Tan"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Shard"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Of"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "The"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Voiddragon"
+                "value": "C’tan Shard of the Void Dragon"
               }
             ],
             "evaluate": "AND",
@@ -7793,63 +7836,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "C'Tan"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Shard"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Of"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "The"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Nightbringer"
+                "value": "C’tan Shard of the Nightbringer"
               }
             ],
             "evaluate": "AND",

@@ -1,6 +1,6 @@
 {
   "name": "Agents of the Imperium 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -164,6 +164,34 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 90
+          },
+          "Epic Hero: only Decoy Targets": {
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{self}",
+                    "tally",
+                    "Decoy Targets"
+                  ]
+                },
+                "max": 0,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Enhancement"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "note": "this Epic Hero may take only the enhancement(s) written for it"
           }
         },
         "stats": {
@@ -181,6 +209,9 @@
             "traits": [
               "Ability§Shadow Assignment"
             ]
+          },
+          "rules": {
+            "noEpicHeroEnhancements": {}
           }
         }
       },
@@ -234,6 +265,34 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 90
+          },
+          "Epic Hero: only Esoteric Explosives": {
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{self}",
+                    "tally",
+                    "Esoteric Explosives"
+                  ]
+                },
+                "max": 0,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Enhancement"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "note": "this Epic Hero may take only the enhancement(s) written for it"
           }
         },
         "stats": {
@@ -246,6 +305,9 @@
             "traits": [
               "Ability§Shadow Assignment"
             ]
+          },
+          "rules": {
+            "noEpicHeroEnhancements": {}
           }
         }
       },
@@ -299,6 +361,34 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 90
+          },
+          "Epic Hero: only Intraneural Biotech": {
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{self}",
+                    "tally",
+                    "Intraneural Biotech"
+                  ]
+                },
+                "max": 0,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Enhancement"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "note": "this Epic Hero may take only the enhancement(s) written for it"
           }
         },
         "stats": {
@@ -323,6 +413,9 @@
             "traits": [
               "Ability§Shadow Assignment"
             ]
+          },
+          "rules": {
+            "noEpicHeroEnhancements": {}
           }
         }
       },
@@ -424,6 +517,34 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 90
+          },
+          "Epic Hero: only Micromelta Rounds": {
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{self}",
+                    "tally",
+                    "Micromelta Rounds"
+                  ]
+                },
+                "max": 0,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Enhancement"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "note": "this Epic Hero may take only the enhancement(s) written for it"
           }
         },
         "stats": {
@@ -436,6 +557,9 @@
             "traits": [
               "Ability§Shadow Assignment"
             ]
+          },
+          "rules": {
+            "noEpicHeroEnhancements": {}
           }
         }
       },
@@ -1330,21 +1454,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Callidus"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Assassin"
+                "value": "Callidus Assassin"
               }
             ],
             "evaluate": "AND",
@@ -1414,21 +1524,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Culexus"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Assassin"
+                "value": "Culexus Assassin"
               }
             ],
             "evaluate": "AND",
@@ -1776,21 +1872,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Eversor"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Assassin"
+                "value": "Eversor Assassin"
               }
             ],
             "evaluate": "AND",
@@ -1874,21 +1956,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Vindicare"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Assassin"
+                "value": "Vindicare Assassin"
               }
             ],
             "evaluate": "AND",

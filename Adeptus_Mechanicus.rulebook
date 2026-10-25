@@ -1,6 +1,6 @@
 {
   "name": "Adeptus Mechanicus 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -4198,128 +4198,6 @@
           }
         },
         "text": "**SKITARII MARSHAL** model only. The Conqueror Imperative and Protector Imperative are both active for the bearer’s unit."
-      },
-      "Enhancement§Omnissiah's Fury": {
-        "rules": {
-          "apply": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "A",
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classIdentity",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "A",
-                    "value"
-                  ]
-                ],
-                "value": 2
-              },
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "AP",
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classIdentity",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "AP",
-                    "value"
-                  ]
-                ],
-                "value": -1
-              },
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "D",
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classIdentity",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "D",
-                    "value"
-                  ]
-                ],
-                "value": 1
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 90
-          },
-          "Skitarii Marshal model only": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Marshal"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 10
-          }
-        },
-        "text": "**SKITARII MARSHAL** model only. Add 2 to the Attacks characteristic of melee weapons equipped by the bearer, and improve the Armour Penetration and Damage characteristics of those weapons by 1."
       },
       "Enhancement§Omnissiah’s Fury": {
         "keywords": {

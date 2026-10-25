@@ -1,6 +1,6 @@
 {
   "name": "Aeldari 11e",
-  "revision": "11.2.7",
+  "revision": "11.2.10",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -4212,6 +4212,41 @@
               "text": "This model can be attached to the following units:\n\n* Corsair Reaver Band\n\n* Corsair Voidreavers\n\n* Corsair Voidscarred"
             }
           ]
+        },
+        "removed": {
+          "rules": {
+            "noEpicHeroEnhancements": {}
+          }
+        },
+        "rules": {
+          "Epic Hero: only Archraider": {
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{self}",
+                    "tally",
+                    "Archraider"
+                  ]
+                },
+                "max": 0,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Enhancement"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "note": "this Epic Hero may take only the enhancement(s) written for it"
+          }
         }
       },
       "Character§Lhykhis": {
@@ -4373,6 +4408,41 @@
         },
         "aspects": {
           "Unique": true
+        },
+        "removed": {
+          "rules": {
+            "noEpicHeroEnhancements": {}
+          }
+        },
+        "rules": {
+          "Epic Hero: only Archraider, Pirate Prince": {
+            "evals": [
+              {
+                "actionable": true,
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{self}",
+                    "tally",
+                    "Archraider"
+                  ]
+                },
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Enhancement"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "note": "this Epic Hero may take only the enhancement(s) written for it"
+          }
         }
       },
       "Character§Spiritseer": {
@@ -6805,21 +6875,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Troupe"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Master"
+                "value": "Troupe Master"
               }
             ],
             "evaluate": "AND",
@@ -7333,77 +7389,13 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Troupe"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Master"
+                "value": "Troupe Master"
               }
             ],
             "evaluate": "AND",
             "failState": "error"
           }
         }
-      },
-      "Enhancement§Craftworld's Champion": {
-        "rules": {
-          "applyEffects": {
-            "actions": [
-              {
-                "actionType": "set",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "stats",
-                    "OC",
-                    "value"
-                  ]
-                ],
-                "value": 5
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          },
-          "ASURYANI model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Faction"
-                  ]
-                ],
-                "value": "Asuryani"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "ASURYANI model only. The bearer has an Objective Control characteristic of 5."
       },
       "Enhancement§Craftworld’s Champion": {
         "keywords": {
@@ -8325,21 +8317,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Death"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Jester"
+                "value": "Death Jester"
               }
             ],
             "evaluate": "AND",
@@ -8441,7 +8419,7 @@
                   [
                     "{parent}",
                     "keywords",
-                    "Keywords"
+                    "Faction"
                   ]
                 ],
                 "value": "Harlequins"

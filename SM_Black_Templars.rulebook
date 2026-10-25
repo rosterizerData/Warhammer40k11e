@@ -1,6 +1,6 @@
 {
   "name": "Black Templars 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1175,31 +1175,15 @@
             "evals": [
               {
                 "actionable": true,
-                "contains": true,
                 "not": false,
                 "operator": "AND",
                 "paths": [
                   [
                     "{parent}",
-                    "keywords",
-                    "Keywords"
+                    "designation"
                   ]
                 ],
-                "value": "Sword Brethren"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Squad"
+                "value": "Sword Brethren Squad"
               }
             ],
             "evaluate": "AND",
@@ -1286,31 +1270,15 @@
             "evals": [
               {
                 "actionable": true,
-                "contains": true,
                 "not": false,
                 "operator": "AND",
                 "paths": [
                   [
                     "{parent}",
-                    "keywords",
-                    "Keywords"
+                    "designation"
                   ]
                 ],
-                "value": "Sword Brethren"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Squad"
+                "value": "Sword Brethren Squad"
               }
             ],
             "evaluate": "AND",
@@ -1352,254 +1320,6 @@
           }
         },
         "text": "**ADEPTUS ASTARTES INFANTRY** unit only. When this unit is selected to make an **advance/fall-back move**, that **advance/fall-back move** does not prevent this unit from being **eligible to start an action**."
-      },
-      "Enhancement§Perdition’s Edge": {
-        "keywords": {
-          "Keywords": [
-            "Righteous Crusaders"
-          ]
-        },
-        "rules": {
-          "Ability": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "AP",
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "AP",
-                    "value"
-                  ]
-                ],
-                "value": -1
-              },
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "S",
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "S",
-                    "value"
-                  ]
-                ],
-                "value": 1
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "stats": {
-          "Points": {
-            "group": "Cost",
-            "statType": "numeric",
-            "value": 15,
-            "visibility": "normal"
-          }
-        },
-        "text": "Adeptus Astartes model only.\n* Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1.\n* If the Suffer Not the Unclean to Live vow is active for your army, add 1 to the Attacks characteristic of the bearer’s melee weapons as well."
-      },
-      "Enhancement§Sigismund’s Seal": {
-        "keywords": {
-          "Keywords": [
-            "Righteous Crusaders"
-          ]
-        },
-        "rules": {
-          "Ability": {
-            "actions": [
-              {
-                "actionType": "modify",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "A",
-                    "value"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Melee Weapon",
-                    "stats",
-                    "A",
-                    "value"
-                  ]
-                ],
-                "value": 1
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 999
-          }
-        },
-        "stats": {
-          "Points": {
-            "group": "Cost",
-            "statType": "numeric",
-            "value": 20,
-            "visibility": "normal"
-          }
-        },
-        "text": "Adeptus Astartes model only.\n* Improve the Attacks characteristic of the bearer’s melee weapons by 1.\n* While the bearer is leading a unit, if the Accept Any Challenge, No Matter the Odds vow is active for your army, each time a model in that unit makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit."
-      },
-      "Enhancement§Täanhauser’s Bones": {
-        "keywords": {
-          "Keywords": [
-            "Righteous Crusaders"
-          ]
-        },
-        "stats": {
-          "Points": {
-            "group": "Cost",
-            "statType": "numeric",
-            "value": 35,
-            "visibility": "normal"
-          }
-        },
-        "text": "Adeptus Astartes model only.\n* Each time an attack is allocated to the bearer, halve the Damage characteristic of that attack.\n* While the bearer is leading a unit, if the Uphold the Honour of the Emperor vow is active for your army, models in that unit have the Feel No Pain 5+ ability."
-      },
-      "Enhancement§Witchseeker Bolts": {
-        "keywords": {
-          "Keywords": [
-            "Righteous Crusaders"
-          ]
-        },
-        "rules": {
-          "Ability": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Ranged Weapon",
-                    "traits"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Ranged Weapon",
-                    "traits"
-                  ]
-                ],
-                "value": "Ability§Precision"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Ranged Weapon",
-                    "traits"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Ranged Weapon",
-                    "traits"
-                  ]
-                ],
-                "value": "Ability§Devastating Wounds"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Ranged Weapon",
-                    "traits"
-                  ],
-                  [
-                    "{parent}",
-                    "assets",
-                    "classification",
-                    "Weapon",
-                    "assets",
-                    "classification",
-                    "Ranged Weapon",
-                    "traits"
-                  ]
-                ],
-                "value": "Ability§Anti-Psyker 4+"
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "stats": {
-          "Points": {
-            "group": "Cost",
-            "statType": "numeric",
-            "value": 10,
-            "visibility": "normal"
-          }
-        },
-        "text": "Adeptus Astartes model only.\n* The bearer’s ranged weapons have the [PRECISION], [ANTI-PSYKER 4+] and [DEVASTATING WOUNDS] abilities.\n* If the Abhor the Witch, Destroy the Witch vow is active for your army, each time the bearer makes a ranged attack that targets a Psyker unit, you can re-roll the Hit roll and you can re-roll the Wound roll."
       },
       "Enhancement§Zealous Vanguard": {
         "keywords": {
@@ -7710,6 +7430,20 @@
             "value": "Imperium"
           },
           "Legends": {}
+        },
+        "removed": {
+          "rules": {
+            "detectChapterBloodAngels": {},
+            "detectChapterDarkAngels": {},
+            "detectChapterDeathwatch": {},
+            "detectChapterImperialFists": {},
+            "detectChapterIron Hands": {},
+            "detectChapterRavenGuard": {},
+            "detectChapterSalamanders": {},
+            "detectChapterSpaceWolves": {},
+            "detectChapterUltramarines": {},
+            "detectChapterWhiteScars": {}
+          }
         }
       },
       "Stratagem§Armour of Contempt": {

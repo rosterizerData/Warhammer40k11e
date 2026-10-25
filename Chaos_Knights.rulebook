@@ -1,6 +1,6 @@
 {
   "name": "Chaos Knights 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1712,57 +1712,13 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Knight"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Tyrant"
+                "value": "Knight Tyrant"
               }
             ],
             "evaluate": "AND",
             "failState": "error"
           }
         }
-      },
-      "Enhancement§Hunter's Helm": {
-        "rules": {
-          "Chaos Knights model only": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Faction"
-                  ]
-                ],
-                "value": "Chaos Knights"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "**CHAOS KNIGHTS** model only. You can re-roll Advance and Charge rolls made for the bearer's unit."
       },
       "Enhancement§Hunter’s Helm": {
         "keywords": {
@@ -2042,14 +1998,6 @@
           }
         }
       },
-      "Enhancement§Nightmare's Master": {
-        "stats": {
-          "Points": {
-            "value": 20
-          }
-        },
-        "text": "Chaos Knight's model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test."
-      },
       "Enhancement§Nightmare’s Master": {
         "keywords": {
           "Keywords": [
@@ -2155,55 +2103,6 @@
         },
         "text": "**WAR DOG** model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1."
       },
-      "Enhancement§Preyslayer's Mantle": {
-        "rules": {
-          "apply": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits"
-                  ]
-                ],
-                "value": "Ability§Super-heavy Walker"
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass",
-            "order": 90
-          },
-          "Wardog model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "War Dog"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 15
-          }
-        },
-        "text": "War Dog model only. The bearer has the Super-heavy Walker ability."
-      },
       "Enhancement§Preyslayer’s Mantle": {
         "keywords": {
           "Keywords": [
@@ -2231,21 +2130,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "War"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Dog"
+                "value": "War Dog"
               }
             ],
             "evaluate": "AND",
@@ -2280,21 +2165,7 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Knight"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Tyrant"
+                "value": "Knight Tyrant"
               }
             ],
             "evaluate": "AND",
@@ -2537,14 +2408,6 @@
           }
         },
         "text": "**TITANIC CHAOS KNIGHTS** model only. In your Command phase, select one other **CHAOS KNIGHTS CHARACTER** model within 9” of the bearer. If the bearer has one or more Aura abilities that affect friendly **WAR DOG** units, until the start of your next Command phase, the selected **CHAOS KNIGHTS CHARACTER** model is affected by those Aura abilities as well."
-      },
-      "Enhancement§Tyrant's Shadow": {
-        "stats": {
-          "Points": {
-            "value": 25
-          }
-        },
-        "text": "Chaos Knight's model only. At the end of your Command phase, select one objective marker the bearer is within range of and that you control. That objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase. In addition, until you lose control of that objective marker, it has the Deathly Terror ability as if it were a Chaos Knight's model from your army."
       },
       "Enhancement§Tyrant’s Shadow": {
         "keywords": {

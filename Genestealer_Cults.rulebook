@@ -1,6 +1,6 @@
 {
   "name": "Genestealer Cults 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -3493,64 +3493,6 @@
           }
         },
         "text": "**GENESTEALER CULTS INFANTRY** model only. Each time you target the bearer’s unit with the Fire Overwatch Stratagem, while resolving that Stratagem, hits are scored on unmodified Hit rolls of 5+."
-      },
-      "Enhancement§Gene-sire's Reliquant": {
-        "rules": {
-          "Magus, Primus or Acolyte Iconward model only.": {
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Magus"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Primus"
-              },
-              {
-                "actionable": true,
-                "contains": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Acolyte Iconward"
-              }
-            ],
-            "evaluate": "OR",
-            "failState": "error"
-          }
-        },
-        "stats": {
-          "Points": {
-            "value": 5
-          }
-        },
-        "text": "**Magus**, **Primus** or **Acolyte Iconward** model only. You can re-roll Battle-shock tests taken for the beare's unit."
       },
       "Enhancement§Gene-sire’s Reliquant": {
         "keywords": {

@@ -213,7 +213,9 @@ def split_kw(phrase):
             if hit:
                 out.append(hit); i = j; break
         else:
-            out.append(words[i].title()); i += 1
+            # not a known keyword: keep the whole remaining phrase as one keyword (the engine matches keyword list
+            # entries exactly, so splitting "TROUPE MASTER" into 'Troupe','Master' can never match)
+            out.append(" ".join(words[i:]).title()); break
     return out
 
 def eligibility(desc):
