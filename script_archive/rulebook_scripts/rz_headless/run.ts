@@ -24,6 +24,7 @@ function chain(b: any): any[] {
 const [host, rosterPath] = process.argv.slice(2);
 const TRAITS = process.argv.includes('--traits');
 const STATS = process.argv.includes('--stats'); // also dump each asset's rank stats as the engine sees them // also list each asset's weapon/wargear traits
+const JSON_OUT = process.argv.includes('--json') ? process.argv[process.argv.indexOf('--json') + 1] : ''; // dump the processed tree (stats, tracked, errors, both divisions) for scripted probes
 const fixture = books[host];
 const imports = chain(fixture).map((b) => b.rulebook);
 const roster = JSON.parse(fs.readFileSync(rosterPath, 'utf8'));
@@ -61,3 +62,15 @@ const walk = (a: any, depth: number) => {
   for (const c of a.assets?.included ?? []) walk(c, depth + 1);
 };
 walk(r, 0);
+if (JSON_OUT) {
+  const prune = (a: any): any => ({
+    item: a.item, quantity: a.quantity, designation: a.designation, claimed: a.claimed?.source,
+    stats: Object.fromEntries(Object.entries<any>(a.stats ?? {}).map(([n, st]) => [n, {
+      value: st.value, current: st.processed?.numeric?.current ?? st.processed?.rank?.current ?? st.processed?.term?.current, max: st.max, min: st.min, visibility: st.visibility,
+      ...(st.ranks ? { ranks: Object.keys(st.ranks) } : {}) }])),
+    tracked: a.tracked, tally: a.tally, allowed: a.allowed, constraints: a.constraints,
+    errors: (a.errors ?? []).map((e: any) => `${e.type}: ${e.message}`),
+    traits: (a.assets?.traits ?? []).map(prune), included: (a.assets?.included ?? []).map(prune),
+  });
+  fs.writeFileSync(JSON_OUT, JSON.stringify(prune(r)));
+}
