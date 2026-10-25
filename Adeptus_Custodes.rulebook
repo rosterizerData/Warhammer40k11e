@@ -1,6 +1,6 @@
 {
   "name": "Adeptus Custodes 11e",
-  "revision": "11.2.6",
+  "revision": "11.2.7",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -14678,6 +14678,9 @@
       },
       "Wargear§Sentinel Guard Sodality—Praesidium Shield": {
         "text": "Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to wound rolls."
+      },
+      "Ability§Earning of a Name": {
+        "text": "Earned Name: Each time this model’s unit is selected to fight, both Ka’tah Stances are active for that unit, instead of only one."
       }
     },
     "gameModes": {},
