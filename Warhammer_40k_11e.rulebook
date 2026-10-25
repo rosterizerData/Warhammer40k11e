@@ -1,6 +1,6 @@
 {
   "name": "40k 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -19487,197 +19487,61 @@
         },
         "text": "Each time a **^^Beast^^** or **^^Monster^^** model makes an attack that targets the bearer's unit, subtract 1 from the Wound roll. If the attacking model is an **^^Unbound Adversaries^^** unit, subtract 1 from the Hit roll as well."
       },
-      "Mighty Champion§Warp Terrors (Psychic)": {
+      "Mighty Champion§Front-line Champions": {
         "keywords": {
           "Tags": [
             "Character"
           ]
         },
-        "text": "Once per turn, at the start of your Command phase, Movement phase, Shooting phase, or Charge phase, or the Fight phase, you can select one enemy unit within 18\" of this model. That unit must take a Battle-shock test, subtracting 1 from the test when it does so if it has one or more Warp counters."
+        "text": "At the Declare Battle Formations step, select one of the following:\n• While this model is leading a unit, weapons equipped by models in that unit the **[ANTI-UNBOUND ADVERSARIES 4+]** ability.\n• Select one Armageddon Battle Trait (this must be a Battle Trait they could have if they were not an **Epic Hero**). Until the end of the battle, this **Epic Hero** model, and any unit they join, have this Battle Trait."
       },
-      "Mighty Champion§Fortune's Favoured": {
+      "Mighty Champion§Inspirational Champions": {
         "keywords": {
           "Tags": [
             "Character"
           ]
         },
-        "text": "Models in this unit have a 6+ invulnerable save. While this unit has one or more Warp counters, models in this unit have a 5+ invulnerable save (excluding against Psychic Attacks)."
+        "text": "While an **Epic Hero** model with this Crusade ability is leading a unit, you can ignore any and/or all Battle Scars that Bodyguard unit has. If your Crusade army includes one or more **Epic Hero** models with this Crusade Ability, at the end of the battle, you can select one additional unit from your Crusade army to be Marked for Greatness."
       },
-      "Mighty Champion§Warp-hardened Veterans": {
+      "Mighty Champion§Logistical Champions": {
         "keywords": {
           "Tags": [
             "Character"
           ]
         },
-        "text": "Each time this unit is Marked for Greatness, it gains an additional 2XP. In addition, once per battle, in your Command phase, you can add or remove one Warp counter to/from this unit."
+        "text": "If your Crusade army includes one or more **Epic Hero** models with this Crusade Ability, during the Determine Victor step, if you were the victor of that battle and if that **Epic Hero** is on the battlefield, you gain the Victor bonus a second time."
       },
-      "Mighty Champion§Adaptive Camouflage": {
+      "Mighty Champion§Nemesis Champions": {
         "keywords": {
           "Tags": [
             "Character"
           ]
         },
-        "text": "This unit has the Stealth ability and if this unit is in Strategic Reserves, it counts the battle round number as one higher than the current battle round number for the purpose of determining when and where it is set up."
+        "text": "During the battle, if one or more enemy **Character** models are destroyed by an attack made by an **Epic Hero** model (or a model in a unit it is attached to) with this Crusade Ability from your Crusade army, then at the Update Crusade Cards step, all units in your Crusade army gain an additional 1XP. If one of those destroyed enemy **Character** models was the enemy **Warlord**, you also gain 1 strategic point."
       },
-      "Mighty Champion§Stalwarts": {
+      "Mighty Champion§Restorative Champions": {
         "keywords": {
           "Tags": [
             "Character"
           ]
         },
-        "text": "Once per battle, in your Command phase, this unit can use this Battle Trait. When it does, if it is Battle-shocked, it is no longer Battle-shocked and, until the end of the turn, this unit is eligible to perform an Action in a turn in which it Fell Back and/or while within Engagement Range of one or more enemy units."
+        "text": "If your Crusade army includes one or more **Epic Hero** models with Crusade Ability, you can re-roll failed Out of Action tests for units in your Crusade army."
       },
-      "Mighty Champion§Footsloggers": {
+      "Mighty Champion§Strategic Champions": {
         "keywords": {
           "Tags": [
             "Character"
           ]
         },
-        "text": "Add 1\" to the Move characteristic of models in this unit."
+        "text": "If your Crusade army includes one or more **Epic Hero** models with this Crusade ability, then at the Select Crusade Blessings step, select one of the following:\n• If you are the Underdog, roll one D6: on a 4+, you can select one additional Crusade Blessing.\n• If you are not the Underdog, roll one D6: on a 6 you can select one Crusade Blessing, instead."
       },
-      "Mighty Champion§Warp Hunters": {
+      "Mighty Champion§Subtle Champions": {
         "keywords": {
           "Tags": [
             "Character"
           ]
         },
-        "text": "Each time a model in this unit makes an attack that targets the closest eligible target, you can re-roll a Wound roll of 1. If the target of that is an **^^Unbound Adversaries^^** unit, and it is the closest eligible target, you can re-roll the Wound roll instead."
-      },
-      "Mighty Champion§Warding Inscriptions": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "Models in this unit have the Feel No Pain 6+ ability against Psychic Attacks and mortal wounds. While this unit has one or more Warp counters, models in this unit have the Feel No Pain 5+ ability against Psychic Attacks and mortal wounds."
-      },
-      "Mighty Champion§Advanced Suspensors": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "Ranged Weapons equipped by models in this unit have the **[ASSAULT]** ability."
-      },
-      "Mighty Champion§Extra Armour": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "Add 1 to the Toughness characteristic of models in this unit."
-      },
-      "Mighty Champion§Juggernaut": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "You can ignore any or all modifiers to this unit's Move characteristic. In addition, each time this unit makes a Normal move, its models can move through sections of terrain features more than 2\" in height, but if any do so, just after this unit has moved, roll one D6: on a 1-3 this unit is Battle-shocked."
-      },
-      "Mighty Champion§Endless Rage": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "This unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
-      },
-      "Mighty Champion§Daemon Hunter": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "Each time this unit targets an **^^Unbound Adversaries^^** unit, you can re-roll the Hit roll. In addition, at the Update Crusade Cards step, if this unit would gain XP from Dealers in Death, it gains 1 additional XP."
-      },
-      "Mighty Champion§Tip of the Spear": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "This unit has the Scouts 6\" ability."
-      },
-      "Mighty Champion§Skilled Riders": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "Each time this unit makes a Normal, Advance or Charge move, its models can move through sections of terrain features more than 2\" in height, but if any do so, just after this unit has moved, roll one D6: on a 1, this unit suffers D3 mortal wounds and is Battle-shocked; on a 2-3 this unit is Battle-shocked."
-      },
-      "Mighty Champion§Reactive Redeployment": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "After both players have deployed their armies, you can redeploy this unit. When doing so, you can set this unit up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
-      },
-      "Mighty Champion§War Beasts": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "Add 1 to Advance and Charge rolls made for this unit."
-      },
-      "Mighty Champion§Leaping Frenzy": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit, adding 1 to the result if this unit has 1 or more Warp counters: for each 5+, that enemy unit suffers 1 mortal wound."
-      },
-      "Mighty Champion§Fearsome Predators (Aura)": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "While an enemy unit is within 6\" of this unit, worsen the Leadership and Objective characteristics of models in that unit by 1 (to a minimum of 1)."
-      },
-      "Mighty Champion§Ritual of Shrouding (Psychic)": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "At the start of the Deploy Crusade Armies step, you can spend 1RP; if you do, until the end of the battle, each model in this unit has the Infiltrators ability."
-      },
-      "Mighty Champion§Warp Focus (Psychic)": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "Add 1 to the Strength characteristic of Psychic weapons equipped by models in this unit. While this unit has one or more Warp counters, add 2 to the Strength characteristic of Psychic weapons equipped by models in this unit instead."
-      },
-      "Mighty Champion§Scrier's Gaze (Aura, Psychic)": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this unit."
-      },
-      "Mighty Champion§Warp Alacrity (Psychic)": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "You can re-roll Advance and Charge rolls for this unit. In addition, each time this unit is selected to Advance, you can remove one Warp counter from it. If you do, then until the end of the turn, this unit is not eligible to declare a charge (even if another rule would let it Advance and Charge in the same turn), but you do not make an Advance roll; instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit."
-      },
-      "Mighty Champion§Force Shield (Psychic)": {
-        "keywords": {
-          "Tags": [
-            "Character"
-          ]
-        },
-        "text": "Each time an attack targets this unit (excluding Psychic Attacks), if the Strength characteristic of that attack is greater than the Toughness characteristic of this unit, subtract 1 from the Wound roll."
+        "text": "If your Crusade army includes one or more **Epic Hero** models with this Crusade Ability, select one of the following:\n• At the Determine Attacker and Defender step, you can re-roll your dice when determining who will be the Attacker and who will be the Defender.\n• At the end of the Set Warp Events step, roll one D6: on a 4+ you can choose to increase or decrease the intensity of the Warp Events used in that battle by 1 (to a minimum of 1 and a maximum of 3)."
       }
     },
     "gameModes": {},

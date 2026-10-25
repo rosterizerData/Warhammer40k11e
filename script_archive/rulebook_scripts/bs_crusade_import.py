@@ -4,7 +4,7 @@ as Battle Honour§ items, plus the Crusade: Armageddon traits/relics/Mighty Cham
 Unit-type gates become Tags (any-of) and not-Tags (none-of); each book gets the Unit taxonomy rules that grant those tags
 from keywords, mirroring the Necron bloc (allowCanoptekTraits). Items already present by name are left alone.
 Dry-run unless --apply. Needs BS_CRUSADE_JSON (extract output) and WAHA_DIR (waha_lib)."""
-import json, os, re, sys, unicodedata
+import json, re, os, os, re, sys, unicodedata
 from collections import defaultdict, Counter
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import waha_lib as W
@@ -131,8 +131,25 @@ for it in src['honours'].get('Armageddon Crusade Relics', []):
     a = {'keywords': {'Tags': [tag]}, 'text': it['text']}
     if pts: a['stats'] = {'Crusade Pts': {'value': pts}}
     ARM['assets']['Armageddon Relic§' + it['name']] = a
-for it in F['Aeldari - Aeldari Library']['honours'].get('Mighty Champions', []):
-    if it['path'] and it['path'][-1] == 'Armageddon Crusade Abilities' and it['text']: ARM['assets'].setdefault('Mighty Champion§' + it['name'], {'keywords': {'Tags': ['Character']}, 'text': it['text']})
+# The seven Mighty Champion abilities live in the game-system catalogue (Warhammer 40,000.json), nested as
+# 'Mighty Champions' > 'Armageddon Crusade Abilities' (the faction libraries' 'Mighty Champions' groups only nest the
+# Armageddon Battle Traits). Read them straight from the catalogue.
+def _champions():
+    bs = json.load(open(os.path.join(os.environ.get('BSDATA_DIR', ''), 'Warhammer 40,000.json'), encoding='utf-8'))
+    out = {}
+    def walk(o, path):
+        if isinstance(o, dict):
+            n = o.get('name')
+            if isinstance(n, str) and n.endswith(' Champions') and path and path[-1] == 'Armageddon Crusade Abilities' and o.get('profiles'):
+                out[n] = o['profiles'][0]['characteristics'][0]['$text']
+            for v in o.values():
+                if isinstance(v, (dict, list)): walk(v, path + ([n] if isinstance(n, str) else []))
+        elif isinstance(o, list):
+            for v in o: walk(v, path)
+    walk(bs, [])
+    return out
+for n, t in _champions().items():
+    ARM['assets'].setdefault('Mighty Champion§' + n, {'keywords': {'Tags': ['Character']}, 'text': re.sub(r'\^\^', '', t).replace('\n- ', '\n• ')})
 T = core['assetTaxonomy']
 ARM['tax'] = {'Armageddon Trait': json.loads(json.dumps(T['Tyrannic Trait'])), 'Armageddon Relic': json.loads(json.dumps(T.get('Tyrannic Relic') or T['Tyrannic Trait'])),
               'Mighty Champion': {'aspects': {'Lock Qty': True, 'Unique': True}, 'keywords': {'Tags': [], 'Keywords': []}, 'templateClass': 'Battle Honour'}}
