@@ -1,6 +1,6 @@
 {
   "name": "Space Marines 11e",
-  "revision": "11.2.8",
+  "revision": "11.2.9",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1624,6 +1624,202 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "crusadeTagPsyker": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Psyker"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Psyker"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagTacticus": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Tacticus"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Tacticus"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagWolfPriest": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Wolf Priest"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Wolf Priest"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeNotFactionBlackTemplars": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "notFaction:BlackTemplars"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Chapter",
+                    "value"
+                  ]
+                ],
+                "value": "Black Templars"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
           }
         },
         "stats": {}
@@ -83677,6 +83873,432 @@
           ]
         },
         "text": "In your Movement phase, when this unit ends a normal/advance move, you can select one enemy unit this unit moved over during that move and roll six D6: for each 3+, that enemy unit suffers 1 mortal wound."
+      },
+      "Crusade Relic§Adamantine Cuirass": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Add 1 to the bearer's Toughness and Wounds characteristics."
+      },
+      "Crusade Honour§Master of the Codex": {
+        "keywords": {
+          "Keywords": [
+            "Chapter Command"
+          ],
+          "Tags": [
+            "notFaction:BlackTemplars"
+          ]
+        },
+        "text": "Once per battle, after you have selected your Oath of Moment target, select a second enemy unit. Until the start of your next Command phase, that second enemy unit also counts as your Oath of Moment target."
+      },
+      "Crusade Honour§Master of Combat": {
+        "keywords": {
+          "Keywords": [
+            "Chapter Command"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Once per battle, in your Command phase, this model can use this ability. If it does, until the end of the turn, add 2 to the Damage characteristic of weapons equipped by this model."
+      },
+      "Crusade Honour§Battlefield Chirurgy": {
+        "keywords": {
+          "Keywords": [
+            "Chapter Command"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "At the end of the battle, if your Crusade army included this model and it was not destroyed during the battle, you can ignore up to two failed Out of Action tests taken for **^^Infantry^^** units from your Crusade army - those tests are treated as having been passed instead."
+      },
+      "Crusade Honour§Selfless Healer": {
+        "keywords": {
+          "Keywords": [
+            "Chapter Command"
+          ],
+          "Tags": [
+            "Tacticus"
+          ]
+        },
+        "text": "**^^Tacticus Apothecary^^** model only. While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability."
+      },
+      "Crusade Honour§Wise Orator": {
+        "keywords": {
+          "Keywords": [
+            "Chapter Command"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Once per battle, at the start of the battle round, this model can use this ability. If it does, until the end of the turn, this model has the following ability: **Wise Orator (Aura):** Each time a friendly **^^Adeptus Astartes^^** unit within 6\" of this model makes a melee attack, add 1 to the Wound roll."
+      },
+      "Crusade Honour§Mantra of Strength": {
+        "keywords": {
+          "Keywords": [
+            "Chapter Command"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 2 to the Attacks, Strength and Damage characteristics of melee weapons equipped by this model."
+      },
+      "Crusade Honour§Liturgy of Resanctification": {
+        "keywords": {
+          "Keywords": [
+            "Chapter Command"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Each time this model uses its Blessing of the Omnissiah ability, the selected **^^Vehicle^^** regains up to D3+3 lost wounds instead of up to D3."
+      },
+      "Crusade Honour§Shielded by the Machine God": {
+        "keywords": {
+          "Keywords": [
+            "Chapter Command"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Each time this model uses its Blessing of the Omnissiah ability, until the start of your next Command phase, the selected **^^Vehicle^^** has a 4+ invulnerable save (in addition to that ability's other effects)."
+      },
+      "Crusade Honour§Roused to Fury": {
+        "keywords": {
+          "Keywords": [
+            "Chapter Command"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Once per battle, at the start of either player's Command phase, this unit can use this ability. If it does, until the end of the turn, add 1 to the Attacks characteristic of weapons equipped by models in this unit."
+      },
+      "Crusade Honour§Ardent Protectors": {
+        "keywords": {
+          "Keywords": [
+            "Chapter Command"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "While a **^^Character^^** model is leading this unit, add 1 to the Toughness characteristic of models in that unit."
+      },
+      "Crusade Honour§Empyric Castellan": {
+        "keywords": {
+          "Keywords": [
+            "Chapter Command"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Once per battle, at the start of any phase, this unit can use this ability. If it does, until the start of your next turn, this model has the following ability: **Empyric Castellan (Aura, Psychic):** While an **^^Adeptus Astartes^^** unit from your army is within 6\" of this model, models in that unit have a 4+ invulnerable save."
+      },
+      "Crusade Honour§Psychic Scourge": {
+        "keywords": {
+          "Keywords": [
+            "Chapter Command"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "At the start of your Shooting phase, you can select one enemy unit within 12\" of and visible to this model and roll one D6: one a 3-5, that unit suffers D6 mortal wounds; on a 6, that unit suffers D6 mortal wounds and, until the start of your next turn, halve that unit's Move characteristic and halve the result of Charge rolls and Advance rolls made for that unit."
+      },
+      "Crusade Honour§Steadfast Example": {
+        "keywords": {
+          "Keywords": [
+            "Chapter Command"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Once per battle, at the start of your Command phase, this model can use this ability. If it does, until the end of the turn, this model has the following ability: **Steadfast Example (Aura):** While an **^^Adeptus Astartes^^** unit from your army is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit."
+      },
+      "Crusade Honour§Pennant of the Fallen": {
+        "keywords": {
+          "Keywords": [
+            "Chapter Command"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "While this model is leading a unit, each time a Bodyguard model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 2+, do not remove it from play. The destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play."
+      },
+      "Crusade Honour§Storm Speaker": {
+        "keywords": {
+          "Keywords": [
+            "Deeds of Making"
+          ],
+          "Tags": [
+            "Psyker"
+          ]
+        },
+        "text": "**^^Psyker^^** model only. Psychic weapons equipped by this model have the **[SUSTAINED HITS 2]** ability."
+      },
+      "Crusade Honour§Cunning Trickster": {
+        "keywords": {
+          "Keywords": [
+            "Deeds of Making"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Each time your opponent targets a unit from their Crusade army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that usage of that Stratagem by 1CP."
+      },
+      "Crusade Honour§Elder's Wisdom": {
+        "keywords": {
+          "Keywords": [
+            "Deeds of Making"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "If your Crusade army includes this model, after both players have deployed their armies, you can select this model's unit and/or one other **^^Space Wolves^^** unit from your Crusade army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+      },
+      "Crusade Honour§Void Sailor": {
+        "keywords": {
+          "Keywords": [
+            "Deeds of Making"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "At the end of the battle, in the Determine Victor step, if this model is wholly within your opponent's deployment zone, roll one D6, adding 2 to the result if you won the battle: on a 4+, you gain 1RP."
+      },
+      "Crusade Honour§Red Axe": {
+        "keywords": {
+          "Keywords": [
+            "Deeds of Making"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Each time this model would gain 1XP as a result of Dealers of Death, it gains 2XP instead."
+      },
+      "Crusade Honour§Beast Slayer": {
+        "keywords": {
+          "Keywords": [
+            "Deeds of Making"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Each time this model makes a melee attack that targets a **^^Monster^^** or **^^Beasts^^** unit, you can re-roll the Wound roll."
+      },
+      "Crusade Honour§Murk Stalker": {
+        "keywords": {
+          "Keywords": [
+            "Deeds of Making"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "While this model is leading a unit, you can ignore any or all modifiers to that unit's Move characteristic, and you can ignore any or all modifiers to Advance and Charge rolls made for it."
+      },
+      "Crusade Honour§Fire Eye": {
+        "keywords": {
+          "Keywords": [
+            "Deeds of Making"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "In the Select Crusade Blessings step, if your Crusade army includes this model and you are the Underdog, you can select one additional Crusade Blessing."
+      },
+      "Crusade Honour§Black Howl": {
+        "keywords": {
+          "Keywords": [
+            "Deeds of Making"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "At the start of the Fight phase, each enemy unit within 6\" of this model must take a Battle-shock test, subtracting 1 from that test."
+      },
+      "Crusade Honour§Scar Struck": {
+        "keywords": {
+          "Keywords": [
+            "Deeds of Making"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Model with one or more Battle Scars only. This model automatically passes Out of Action tests. If this model loses all of its Battle Scars, this Battle Honour is also lost."
+      },
+      "Crusade Honour§Savage Orator": {
+        "keywords": {
+          "Keywords": [
+            "Deeds of Making"
+          ],
+          "Tags": [
+            "Wolf Priest"
+          ]
+        },
+        "text": "**^^Wolf Priest^^** model only. While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+      },
+      "Crusade Honour§Death Cheat": {
+        "keywords": {
+          "Keywords": [
+            "Deeds of Making"
+          ],
+          "Tags": [
+            "Wolf Priest"
+          ]
+        },
+        "text": "**^^Wolf Priest^^** model only. At the end of the battle, if your Crusade army included this model and it was not destroyed during the battle, you can re-roll up to two failed Out of Action tests taken for **^^Adeptus Astartes Infantry^^** or *^^Adeptus Astartes Mounted^^** units from your Crusade army."
+      },
+      "Crusade Honour§Sceptre of Fallen Empires": {
+        "keywords": {
+          "Keywords": [
+            "Reclaimed Relics"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "When selecting Agendas for a battle, if your Crusade force is embarking on an Oathsworn Campaign, you can select on additional **^^Black Templars^^** Agenda for that battle in addition to any others being used in that battle. In addition, if you are using the Oaths of Crusade Bonus Agenda, if you are randomly generating that Bonus Agenda, you re-roll each D6 when determining Deeds, Foes, Passions and Conditions."
+      },
+      "Crusade Honour§Penitent's Roar": {
+        "keywords": {
+          "Keywords": [
+            "Reclaimed Relics"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Select one Pistol weapon equipped by the bearer that has the word 'bolt' in its name, e.g. bolt pistol (excluding a weapon that has been upgraded with a Weapon Modification - if you cannot do so, you cannot select this Reclaimed Relic Battle Honour). That weapon is now a Crusade Relic; it has the **[PRECISION]** and **[IGNORES COVER]** abilities and improve its Damage and Armour Penetration characteristics by 1."
+      },
+      "Crusade Honour§Crux Obsidian": {
+        "keywords": {
+          "Keywords": [
+            "Reclaimed Relics"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Once per turn, the first time a saving throw is failed for the bearer, change the Damage characteristic of that attack to 0."
+      },
+      "Crusade Honour§Holy Orb": {
+        "keywords": {
+          "Keywords": [
+            "Reclaimed Relics"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Once per battle, when you target the bearer's unit with the Grenade Stratagem, the bearer can use this Reclaimed Relic. If it does, when resolving that Stratagem, 1 mortal wound is inflicted for each roll of 3+ (instead of each roll of 4+), and after resolving that Stratagem, the enemy unit you selected for that Stratagem must take a Battle-shock test."
+      },
+      "Crusade Honour§Fist of Balthus": {
+        "keywords": {
+          "Keywords": [
+            "Reclaimed Relics"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Select one power fist equipped by the bearer (excluding a weapon that has been upgraded with a Weapon Modification - if you cannot do so, you cannot select this Reclaimed Relic Battle Honour). That weapon is now a Crusade Relic. Each time the bearer's unit ends a Charge move, select one enemy unit within Engagement Range of the bearer and roll one D6: on a 2+, that enemy unit suffers D3+1 mortal wounds."
+      },
+      "Crusade Honour§Sigismund's Seal": {
+        "keywords": {
+          "Keywords": [
+            "Reclaimed Relics"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "At the start of the battle, select one unit from your opponent's army. Each time a model in the bearer's unit makes a melee attack that targets that unit, that attack has the **[LETHAL HITS]** and **[PRECISION]** abilities. If that unit is destroyed during the battle by the bearer's unit and your Crusade force is embarked on an Oathsworn Campaign, you gain 1 additional Honour point."
+      },
+      "Crusade Honour§Sword of the Lost Crusader": {
+        "keywords": {
+          "Keywords": [
+            "Reclaimed Relics"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Select one power weapon or master-crafted power weapon equipped by the bearer (excluding a weapon that has been upgraded with a Weapon Modification - if you cannot do so, you cannot select this Reclaimed Relic Battle Honour). That weapon is now a Crusade Relic. Each time the bearer's unit has fought, select one enemy unit (excluding **^^Vehicles^^**) hit by one or more of the bearer's melee attacks this phase. Until the end of the battle, that enemy unit is set ablaze. While a unit is set ablaze, at the start of each player's Command phase, roll one D6: on a 4+, that unit suffers D3 mortal wounds."
+      },
+      "Crusade Honour§Light of the Emperor's Grace": {
+        "keywords": {
+          "Keywords": [
+            "Reclaimed Relics"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Enemy units that are set up on the battle as Reinforcements cannot be set up within 12\" of the bearer. Models in the bearer's unit can ignore any or all modifiers to their Leadership characteristic, and each time the bearer's unit takes a Battle-shock test, you can ignore any or all modifiers to that test."
+      },
+      "Crusade Honour§Vortimaran Incensors": {
+        "keywords": {
+          "Keywords": [
+            "Reclaimed Relics"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Models in the bearer's unit have a 5+ invulnerable save."
+      },
+      "Crusade Honour§Icon of Heinmann": {
+        "keywords": {
+          "Keywords": [
+            "Reclaimed Relics"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Each time a model in the bearer's unit is destroyed, if that model has not fought this phase, roll one D6: on a 5+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+      },
+      "Crusade Honour§Hands of the Pious": {
+        "keywords": {
+          "Keywords": [
+            "Reclaimed Relics"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Add 1 to Charge rolls made for the bearer's unit. Each time the bearer's unit is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in that unit."
+      },
+      "Crusade Honour§Beastpyre": {
+        "keywords": {
+          "Keywords": [
+            "Reclaimed Relics"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Select one Torrent weapon equipped by the bearer (excluding a weapon that has been upgraded with a Weapon Modification - if you cannot do so, you cannot select this Reclaimed Relic Battle Honour). That weapon is now a Crusade Relic; it has the **[DEVASTATING WOUNDS]** ability and add 3 to its Attacks characteristic."
       }
     },
     "gameModes": {},

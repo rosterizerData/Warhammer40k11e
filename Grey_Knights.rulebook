@@ -1,6 +1,6 @@
 {
   "name": "Grey Knights 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -16,7 +16,110 @@
     }
   ],
   "rulebook": {
-    "assetTaxonomy": {},
+    "assetTaxonomy": {
+      "Unit": {
+        "rules": {
+          "crusadeTagPsyker": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Psyker"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Psyker"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeNotVenerableDreadnought": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "notVenerableDreadnought"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Venerable Dreadnought"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          }
+        }
+      }
+    },
     "assetCatalog": {
       "Ability§Aerial Assault": {
         "keywords": {
@@ -12828,6 +12931,362 @@
             "10th Edition Codex"
           ]
         }
+      },
+      "Battle Trait§Tide of Shadows (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Psyker"
+          ]
+        },
+        "text": "This unit has the Stealth ability."
+      },
+      "Battle Trait§Fires of Purgation (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Psyker",
+            "notVenerableDreadnought"
+          ]
+        },
+        "text": "Psychic melee weapons equipped by models in this unit have the **[LANCE]** ability."
+      },
+      "Battle Trait§Fortress of Minds (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Psyker"
+          ]
+        },
+        "text": "Models in this unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks."
+      },
+      "Battle Trait§Astral Aim (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Psyker"
+          ]
+        },
+        "text": "Ranged weapons equipped by models in this unit have the **[IGNORES COVER]** ability and the Range characteristic of ranged Psychic weapons equipped by models in this unit is increased by 6\"."
+      },
+      "Battle Trait§Focused Might (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Psyker",
+            "notVenerableDreadnought"
+          ]
+        },
+        "text": "Each time a model in this unit makes a Psychic Attack, you can re-roll the Hit roll."
+      },
+      "Battle Trait§Channelled Fury (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Psyker",
+            "notVenerableDreadnought"
+          ]
+        },
+        "text": "Psychic weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability."
+      },
+      "Battle Trait§Strike Specialists": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Ranged weapons equipped by models in this unit have the **[ASSAULT]** ability."
+      },
+      "Battle Trait§Heroism in Extremis": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add D3 to the Attacks characteristic of melee weapons equipped by this model."
+      },
+      "Battle Trait§Sigils of Swiftness": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "You can re-roll Advance and Charge rolls made for this unit."
+      },
+      "Battle Trait§Force Acuity": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Improve the Armour Penetration characteristic of melee weapons equipped by models in this unit by 1 (this is not cumulative with any other rule that improves the Armour Penetration characteristic of melee weapons equipped by models in this unit)."
+      },
+      "Battle Trait§No Matter The Odds": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "This unit is eligible to shoot and declare a charge in a turn in which it Fell Back, and each time a **^^Walker^^** model in this unit takes a Desperate Escape test, add 1 to the result."
+      },
+      "Battle Trait§Unyielding Wards": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Once per battle round, when an attack is allocated to a model in this unit, you can change the Damage characteristic of that attack to 0."
+      },
+      "Battle Trait§Indefatigable Will": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Each time a model in this unit makes a melee attack, add 1 to the Hit roll if this unit is below its Starting Strength, and add 1 to the Wound roll as well if this unit is Below Half-strength."
+      },
+      "Battle Trait§Mighty Destiny": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "At the end of the battle, if this model is on the battlefield and it is Marked for Greatness, it gains an additional 2XP."
+      },
+      "Battle Trait§Shield of Humanity": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Add 2 to this model's Wounds characteristic and, at the start of your Command phase, this model regains 1 lost wound."
+      },
+      "Crusade Relic§Gyrotemporal Vault": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "Once per battle, at the start of the Fight phase, the bearer can use this Crusade Relic. If it does, until the end of the phase, models in the bearer's unit have the Fights First ability.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Domina Liber Daemonica": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "At the end of the battle, if the bearer is wholly within your opponent's deployment zone, roll one D6: on a 5+: - If you are not combating a Chaos Incursion, you can select one Vision on your Augurium Vision tracker and change it to the Sanctic state. - If you are combating a Chaos Incursion, you gain 1 Banishment point.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Kantu Vambrace": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Helm of Janus": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "At the start of each battle round, select one Psychic Fortitude Battle Trait. Until the end of the battle round, the bearer has that Psychic Fortitude Battle Trait. The bearer can use this Crusade Relic to be given a Psychic Fortitude Battle Trait even if this means they would have two Psychic Fortitude Battle Traits. If they do, both apply to the bearer's unit, even though normally only one Psychic Fortitude can be in effect at any time.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Crusade Relic§Cuirass of Sacrifice": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "The first time the bearer is destroyed, remove it from play without resolving its Deadly Demise ability (if it has this ability). Then, at the end of the phase, roll one D6: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining."
+      },
+      "Crusade Relic§Soul Glaive": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "**^^Infantry^^** model only. Improve the Strength and Damage characteristics of the bearer's melee weapons by 1. The bearer's melee weapons have the **[ANTI-CHAOS 4+]** ability.",
+        "rules": {
+          "Infantry only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Infantry"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Honour§Fate-woven Knot": {
+        "keywords": {
+          "Keywords": [
+            "Gifts of the Prescient"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Model with the Battle-ready rank or higher. Once per battle, at the start of any phase, the bearer can use this Battle Honour. If it does, until the end of the phase, the bearer has a 3+ invulnerable save."
+      },
+      "Crusade Honour§Scrolls of Prophecy": {
+        "keywords": {
+          "Keywords": [
+            "Gifts of the Prescient"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Model with the Heroic rank or higher. If the bearer is in your Crusade army, then at the Select Crusade Blessings step, if you are the Underdog, you can select one additional Crusade Blessing."
+      },
+      "Crusade Honour§Hour of Need": {
+        "keywords": {
+          "Keywords": [
+            "Gifts of the Prescient"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Model with the Battle-ready rank or higher. If your Crusade army includes the bearer, then at the Determine Attacker and Defender step, do not roll off to determine the Attacker and Defender for that battle. Instead, you choose whether you will be the Attacker. If your opponent has the same or a similar rule to become the Attacker, ignore both rules and instead determine the Attacker and Defender normally."
+      },
+      "Crusade Honour§Augury of Aggression": {
+        "keywords": {
+          "Keywords": [
+            "Gifts of the Prescient"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Model with the Blooded rank or higher. Once per turn, you can target the bearer's unit with the Fire Overwatch or the Heroic Intervention Stratagem for 0CP."
+      },
+      "Crusade Honour§Words of the Righteous": {
+        "keywords": {
+          "Keywords": [
+            "Gifts of the Prescient"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Model with the Blooded rank or higher. At the start of the Fight phase, each enemy unit within 3\" of the bearer must take a Battle-shock test, subtracting 1 from that test if it is a **^^Chaos^^** unit."
+      },
+      "Crusade Honour§Gem of Inoktu (Psychic)": {
+        "keywords": {
+          "Keywords": [
+            "Gifts of the Prescient"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Model with the Blooded rank or higher. At the start of your Shooting phase, select one enemy unit within 12\" of and visible to the bearer. Roll one D6, adding 1 to the result if it is a **^^Chaos^^** unit. On a 4+, that enemy unit suffers 3 mortal wounds."
+      },
+      "Crusade Honour§Conjunction Signature": {
+        "keywords": {
+          "Keywords": [
+            "Gifts of the Prescient"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Model with the Heroic rank or higher. You can target the bearer's unit with the Rapid Ingress Stratagem for 0CP."
+      },
+      "Crusade Honour§Duty's End": {
+        "keywords": {
+          "Keywords": [
+            "Gifts of the Prescient"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Model with the Battle-hardened rank or higher. If the bearer is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 the result if the attacking unit contains an **^^Epic Hero^^**, **^^Monster^^** or **^^Warlord^^** model: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy suffers 3 mortal wounds; on a 6+, that enemy unit suffers D3+3 mortal wounds."
+      },
+      "Crusade Honour§Sigil Abnegatos": {
+        "keywords": {
+          "Keywords": [
+            "Gifts of the Prescient"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Model with the Battle-hardened rank or higher. While the bearer is within range of an objective marker that you control, enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of that objective marker."
+      },
+      "Crusade Honour§Portents of Doom": {
+        "keywords": {
+          "Keywords": [
+            "Gifts of the Prescient"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Model with the Heroic rank or higher. Each time your opponent targets a unit from their army with a Stratagem, if that unit is a **^^Chaos^^** unit within 12\" of the bearer, or if that unit is a non-**^^Chaos^^** unit within 9\" of the bearer, increase the cost of that use of that Stratagem by 1CP."
+      },
+      "Crusade Honour§Periclaen Eye": {
+        "keywords": {
+          "Keywords": [
+            "Gifts of the Prescient"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Model with the Battle-hardened rank or higher. Each time a melee attack targets the bearer's unit, if the attacking unit made a Charge move this turn, subtract 1 from the Hit roll."
+      },
+      "Crusade Honour§Mirror of Sight Denied": {
+        "keywords": {
+          "Keywords": [
+            "Gifts of the Prescient"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Model with the Battle-hardened rank or higher. If your army includes one or more models with this ability, after both players have deployed their armies, select up to three **^^Grey Knights^^** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+      },
+      "Crusade Honour§Prism of Potential": {
+        "keywords": {
+          "Keywords": [
+            "Gifts of the Prescient"
+          ],
+          "Tags": [
+            "Grey Knights"
+          ]
+        },
+        "text": "Model with the Battle-hardened rank or higher. When selecting Agendas for a battle, if the bearer is in your Crusade army, at the Select Agendas step, you can select one additional Grey Knights Agenda."
       }
     },
     "gameModes": {},

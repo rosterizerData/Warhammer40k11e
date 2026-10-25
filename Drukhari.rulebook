@@ -1,6 +1,6 @@
 {
   "name": "Drukhari 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.5",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -16205,6 +16205,188 @@
             "value": 2
           }
         }
+      },
+      "Battle Trait§Fuelled by Anguish": {
+        "keywords": {
+          "Tags": [
+            "Drukhari"
+          ]
+        },
+        "text": "Once per battle, after you spend 1 Pain token to Empower this unit, you can this Battle Trait. If you do, you gain 1 Pain token."
+      },
+      "Battle Trait§Razor's Edge (Pain)": {
+        "keywords": {
+          "Tags": [
+            "Drukhari"
+          ]
+        },
+        "text": "In your Shooting phase, when you select this unit to shoot, you can spend 1 Pain token to Empower this unit. While Empowered, ranged weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability."
+      },
+      "Battle Trait§Illusive": {
+        "keywords": {
+          "Tags": [
+            "Drukhari"
+          ]
+        },
+        "text": "This unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+      },
+      "Battle Trait§Fleet Raiders": {
+        "keywords": {
+          "Tags": [
+            "Drukhari"
+          ]
+        },
+        "text": "Add 1\" to the Move characteristic of models in this unit. Add 1 to the Advance and Charge rolls made for this unit."
+      },
+      "Battle Trait§Drawn to Suffering (Pain)": {
+        "keywords": {
+          "Tags": [
+            "Drukhari"
+          ]
+        },
+        "text": "In your Shooting phase or the Fight phase, when you select this unit to shoot or fight, you can spend 1 Pain token to Empower this unit. While Empowered, each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll."
+      },
+      "Battle Trait§Clone Generator": {
+        "keywords": {
+          "Tags": [
+            "Drukhari"
+          ]
+        },
+        "text": "After both players have deployed their armies, you can redeploy this unit. When doing so, you can set this unit up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+      },
+      "Crusade Relic§Nightmare Doll": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "**^^Haemonculus^^** model only. - The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining. - You can re-roll Out of Action tests taken for the bearer, but you cannot target the bearer's unit with the Postmortality Stratagem.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "Haemonculus only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Haemonculus"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Armour of Misery": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "**^^Archon^^** model only. The bearer has a Save characteristic of 3+ and each time a melee attack targets the bearer's unit, subtract 1 from the Hit roll.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "Archon only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Archon"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Blood Glaive": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "**^^Succubus^^** model only. The bearer's melee weapons have the **[TWIN-LINKED]** ability and add 1 to the Damage characteristic of those weapons.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "Succubus only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Succubus"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Delirium Cowl": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "- The bearer has a 4+ invulnerable save. While the bearer is leading a unit, models in that unit have a 5+ invulnerable save. - Once per battle, in your opponent's Shooting phase or the Fight phase, just after an enemy unit has shot or fought, if the bearer's unit was the target of one or more of those attacks, the bearer can use this Crusade Relic. If it does, remove the bearer's unit from the battlefield and set it back up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units. **Designer's Note:** *If an **^^Archon^^** has this Crusade Relic, it will have a 4+ invulnerable save after the first time you fail an invulnerable saving throw for it.*",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Crusade Relic§Mask of Screaming Skulls": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer."
+      },
+      "Crusade Relic§Helm of Spite": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Models in the bearer's unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks."
       }
     },
     "gameModes": {},

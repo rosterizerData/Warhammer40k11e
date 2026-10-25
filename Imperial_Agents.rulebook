@@ -1,6 +1,6 @@
 {
   "name": "Agents of the Imperium 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.5",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -16,7 +16,404 @@
     }
   ],
   "rulebook": {
-    "assetTaxonomy": {},
+    "assetTaxonomy": {
+      "Unit": {
+        "rules": {
+          "crusadeTagAdeptusArbites": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Adeptus Arbites"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Adeptus Arbites"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagDeathwatch": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Deathwatch"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Deathwatch"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagInquisitorialAgents": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Inquisitorial Agents"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Inquisitorial Agents"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagPuritan": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Puritan"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Puritan"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagRadical": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Radical"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Radical"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagVoidfarers": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Voidfarers"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Voidfarers"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeNotPuritan": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "notPuritan"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Puritan"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          },
+          "crusadeNotRadical": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "notRadical"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Radical"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          }
+        }
+      }
+    },
     "assetCatalog": {
       "Ability§Assigned Agent": {
         "keywords": {
@@ -3753,6 +4150,364 @@
             }
           ]
         }
+      },
+      "Battle Trait§Extreme Methods": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "This model's weapons have the **[DEVASTATING WOUNDS]** ability and, if this model is an **^^Inquisitor^^**, it gains the **^^Radical^^** keyword. In addition, if this model is your **^^Warlord^^**, at the end of the battle, you gain 1 additional Intrigue point. If this model gains the **^^Puritan^^** keyword for any reason, it immediately loses this Battle Trait and the **^^Radical^^** keyword."
+      },
+      "Battle Trait§Brotherhood of Veterans": {
+        "keywords": {
+          "Tags": [
+            "Deathwatch"
+          ]
+        },
+        "text": "At the end of the battle, you can remove one or more Battle Honours that this unit has (except for this one). For each Battle Honour removed, you can immediately select a new Battle Honour for this unit."
+      },
+      "Battle Trait§Unwavering Enmity": {
+        "keywords": {
+          "Tags": [
+            "Deathwatch"
+          ]
+        },
+        "text": "Each time a model in this unit makes an attack that targets a unit that does not have either the **^^Imperium^^** or **^^Chaos^^** keywords, that attack has the **[LETHAL HITS]** ability."
+      },
+      "Battle Trait§Tenacious Hunters": {
+        "keywords": {
+          "Tags": [
+            "Deathwatch"
+          ]
+        },
+        "text": "This unit has the Infiltrators ability. At the end of a battle, if one or more units with this Battle Trait are wholly within 6\" of your opponent's battlefield edge, you gain 1 Influence points."
+      },
+      "Battle Trait§Ruthless Interrogators": {
+        "keywords": {
+          "Tags": [
+            "Inquisitorial Agents"
+          ]
+        },
+        "text": "Each time a model in this unit makes a melee attack re-roll a Hit roll of 1. At the end of the battle, if one or more enemy **^^Character^^** models were destroyed by melee attacks during that battle, and one or more units with this Battle Trait were on the battlefield at the end of the battle, you gain 1 Investigation point."
+      },
+      "Battle Trait§Artful Operatives": {
+        "keywords": {
+          "Tags": [
+            "Inquisitorial Agents"
+          ]
+        },
+        "text": "During the Declare Battle Formations step, select either the Infiltrators, Scouts 6\" or Deep Strike ability. Until the end of the battle, this unit has the selected ability."
+      },
+      "Battle Trait§Devotion to the Throne": {
+        "keywords": {
+          "Tags": [
+            "Inquisitorial Agents"
+          ]
+        },
+        "text": "Each time this unit is Marked for Greatness, it gains an additional 2XP. For each unit from your Crusade army with this Battle Trait that is on the battlefield at the end of the battle, roll one D6: for each 6, you gain either 1 Intrigue point or 1 Influence point."
+      },
+      "Battle Trait§Response Officers": {
+        "keywords": {
+          "Tags": [
+            "Adeptus Arbites"
+          ]
+        },
+        "text": "Models in this unit have the Scouts 6\" ability."
+      },
+      "Battle Trait§Judicious Efficiency": {
+        "keywords": {
+          "Tags": [
+            "Adeptus Arbites"
+          ]
+        },
+        "text": "This unit is eligible to shoot or declare a charge in a turn in which it Fell Back."
+      },
+      "Battle Trait§Repress and Detain": {
+        "keywords": {
+          "Tags": [
+            "Adeptus Arbites"
+          ]
+        },
+        "text": "While an enemy unit (excluding **^^Monsters^^** or **^^Vehicles^^**) is within Engagement Range of one or more units with this Battle Trait, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll."
+      },
+      "Battle Trait§Bridgehead Specialists": {
+        "keywords": {
+          "Tags": [
+            "Voidfarers"
+          ]
+        },
+        "text": "Add 1 to the Objective Control characteristic of models in this unit. At the end of the battle, if one or more units with this Battle Trait are within range of an objective marker you control, roll one D6, adding 1 to the result if that objective marker is within your opponent's deployment zone. On a 4+, you gain 1RP (you cannot gain more than 1RP per battle as a result of this battle trait, no matter how many units have it)."
+      },
+      "Battle Trait§Deck Gunners": {
+        "keywords": {
+          "Tags": [
+            "Voidfarers"
+          ]
+        },
+        "text": "Ranged weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability."
+      },
+      "Battle Trait§Repulse Boarders!": {
+        "keywords": {
+          "Tags": [
+            "Voidfarers"
+          ]
+        },
+        "text": "Once per turn, you can target this unit with the Fire Overwatch or Heroic Intervention Stratagem for 0CP."
+      },
+      "Battle Trait§Esoteric Lore": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "If this model is your **^^Warlord^^**, you can use one Crusade Blessing even if you are not the Underdog."
+      },
+      "Battle Trait§Quarry Seeker": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "At the start of the battle, select one unit from your opponent's Crusade army. Each time a model in this **^^Character^^**'s unit makes an attack that targets that unit, you can re-roll the Hit roll."
+      },
+      "Battle Trait§Duellist": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Improve the Attacks, Damage and Weapon Skill characteristics of this model's melee weapons by 1. This model's melee weapons gain the **[PRECISION]** ability."
+      },
+      "Battle Trait§Clandestine Investigator": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "While this model is leading a unit, models in this unit have the Stealth ability. At the end of the battle, if this model's unit is wholly within your opponent's deployment zone, roll one D6: on a 4+, you gain 1 Investigation point."
+      },
+      "Battle Trait§Intolerant Zeal": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "This model has the Feel No Pain 4+ ability and, if this model is an **^^Inquisitor^^**, it has the **^^Puritan^^** keyword. In addition, if this model is your **^^Warlord^^**, at the end of the battle, you gain 1 additional Influence point. If this model gains the **^^Radical^^** keyword for any reason, it immediately loses this Battle Trait and the **^^Puritan^^** keyword."
+      },
+      "Crusade Relic§Icon of Intolerance": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "**^^Puritan^^** model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining. All enemy units within 6\" of the bearer must then take a Battle-shock test.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "Puritan only (not Radical).": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Puritan"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Radical"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Tainted Blade": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "**^^Radical^^** model only. Improve the Attacks, Damage and Strength characteristics of the bearer's melee weapons by 1. Each time the bearer is selected to fight, it can unleash the full power of the blade. If it does, until that fight has been resolved, the bearer's melee weapons have the **[HAZARDOUS]** and **[DEVASTATING WOUNDS]** abilities as well.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "Radical only (not Puritan).": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Radical"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Puritan"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Archeotech Curiosity": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "At the start of the battle, roll three D6 (re-rolling any duplicates), then consult the table below to determine the three effects this Crusade Relic confers upon the bearer until the end of the battle.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Crusade Relic§Truesilver Weave": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Each time an attack is allocated to the bearer, change the Damage characteristic of that attack to 1."
+      },
+      "Crusade Relic§Blade of the Ordo": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Each time the bearer is selected to fight, select one of the following abilities to apply to the bearer's melee weapons until the end of the phase: - **[LANCE]** - **[LETHAL HITS]** - **[PRECISION]** - **[SUSTAINED HITS 1]**"
+      },
+      "Crusade Relic§Digital Arsenal": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Each time the bearer is selected to shoot, after selecting targets for all of its ranged weapons, select one enemy unit targeted by one or more of the bearer's attacks and roll three D6: for each 4+, that unit suffers 1 mortal wound. Mortal wounds inflicted by this Crusade Relic can be allocated as if they had the **[PRECISION]** ability."
+      },
+      "Crusade Honour§Void Trader": {
+        "keywords": {
+          "Keywords": [
+            "Vermillion-level Assets"
+          ],
+          "Tags": [
+            "Agents of the Imperium"
+          ]
+        },
+        "text": "If the bearer is on the battlefield at the end of the battle, increase your Crusade force's Supply Limit by 50 points. At the end of battle, you can select one model from your Crusade force that has one Crusade Relic or one weapon that has a Weapon Modification. If you do, you can remove that Battle Honour from that model - you can either replace that Battle Honour with a different Crusade Relic that model can have or you can gain 1RP."
+      },
+      "Crusade Honour§Highly Placed Ally": {
+        "keywords": {
+          "Keywords": [
+            "Vermillion-level Assets"
+          ],
+          "Tags": [
+            "Agents of the Imperium"
+          ]
+        },
+        "text": "If the bearer is your **^^Warlord^^**, start the battle with 1CP. If the bearer is on the battlefield at the end of the battle and you won that battle, roll one D6: on a 4+, you gain 1RP."
+      },
+      "Crusade Honour§Secret Forces": {
+        "keywords": {
+          "Keywords": [
+            "Vermillion-level Assets"
+          ],
+          "Tags": [
+            "Agents of the Imperium"
+          ]
+        },
+        "text": "If the bearer is included in a Crusade army whose Army Faction is not **^^Agents of the Imperium^^**, the maximum number of **^^Requisitioned^^**, **^^Retinue^^** and **^^Agents of the Imperium Character^^** units that can be included in that army is increased by 1. Each time you start a Shadow Operation, you start with 1 Influence point."
+      },
+      "Crusade Honour§Trained By A Legend": {
+        "keywords": {
+          "Keywords": [
+            "Vermillion-level Assets"
+          ],
+          "Tags": [
+            "Agents of the Imperium"
+          ]
+        },
+        "text": "The bearer's unit has the Lone Operative, Infiltrators and Stealth abilities. Each time you start a Shadow Operation, you start with 1 Intrigue point."
+      },
+      "Crusade Honour§Master of Spies": {
+        "keywords": {
+          "Keywords": [
+            "Vermillion-level Assets"
+          ],
+          "Tags": [
+            "Agents of the Imperium"
+          ]
+        },
+        "text": "Each time you start a Shadow Operation, you start with 1 Investigation point. Each time you roll on the Plot Twist table, you can re-roll the result."
+      },
+      "Crusade Honour§Bound Entity": {
+        "keywords": {
+          "Keywords": [
+            "Vermillion-level Assets"
+          ],
+          "Tags": [
+            "Radical",
+            "notPuritan"
+          ]
+        },
+        "text": "**^^Radical^^** model only. The bearer's unit has the Deep Strike ability. Once per Shadow Operation, when you attempt to Thwart a Threat through Intrigue, you can re-roll that test. If the bearer loses the **^^Radical^^** keyword or gains the **^^Puritan^^** keyword by any means, it immediately loses this Battle Honour."
+      },
+      "Crusade Honour§Upholder of the Creed": {
+        "keywords": {
+          "Keywords": [
+            "Vermillion-level Assets"
+          ],
+          "Tags": [
+            "Puritan",
+            "notRadical"
+          ]
+        },
+        "text": "**^^Puritan^^** model only. Improve the bearer's Leadership and Wounds characteristics by 1. Once per Shadow Operation when you attempt to Thwart a Threat through Influence, you can re-roll that test. If the bearer loses the **^^Puritan^^** keyword or gains the **^^Radical^^** keyword by any means, it immediately loses this Battle Honour."
       }
     },
     "gameModes": {},

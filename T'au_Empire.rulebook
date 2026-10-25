@@ -1,6 +1,6 @@
 {
   "name": "T'au Empire 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -29547,6 +29547,233 @@
             "value": 5
           }
         }
+      },
+      "Battle Trait§Totemic Infusions - Imperium": {
+        "keywords": {
+          "Tags": [
+            "T’au Empire"
+          ]
+        },
+        "text": "While that **^^Shaper^^** model is leading a unit, re-roll Battle-shock tests taken for that unit."
+      },
+      "Battle Trait§Totemic Infusions - Aeldari": {
+        "keywords": {
+          "Tags": [
+            "T’au Empire"
+          ]
+        },
+        "text": "While that **^^Shaper^^** model is leading a unit, add 2\" to that unit’s Move characteristic."
+      },
+      "Battle Trait§Totemic Infusions - Orks": {
+        "keywords": {
+          "Tags": [
+            "T’au Empire"
+          ]
+        },
+        "text": "While that **^^Shaper^^** model is leading a unit, add 1 to the Strength characteristic of melee weapons equipped by that unit."
+      },
+      "Battle Trait§Totemic Infusions - Leagues of Votann": {
+        "keywords": {
+          "Tags": [
+            "T’au Empire"
+          ]
+        },
+        "text": "While that **^^Shaper^^** model is leading a unit, add 1 to the Toughness characteristic of models in that unit."
+      },
+      "Battle Trait§Totemic Infusions - Other": {
+        "keywords": {
+          "Tags": [
+            "T’au Empire"
+          ]
+        },
+        "text": "While that **^^Shaper^^** model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+      },
+      "Crusade Relic§Onager Gauntlet": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "Melee",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "Battlesuit only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battlesuit"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§The Be'gel Hunter's Plate": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "**BATTLESUIT** model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "Battlesuit only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battlesuit"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§The Tidecrystal": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "Once per battle, at the start of your Command phase, if the bearer is on the battlefield, you can do one of the following: ■ Select one objective marker you do not control. Until the start of your next Command phase, each time a T’au Empire unit from your Crusade army makes a ranged attack that targets a unit within range of that objective marker, that T’au Empire unit is considered to be a Guided unit and that target unit is considered to be that T’au Empire unit’s Spotted unit. ■ Select one objective marker you control. Until the start of your next Command phase, each time an enemy unit makes an attack that targets a T’au Empire unit from your Crusade army that is within range of that objective marker, subtract 1 from the Wound roll.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Crusade Relic§Krep'chak": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Once per battle, when the bearers unit destroys an enemy unit, select one melee weapon equipped by the bearer (excluding Extra Attacks weapons). Until the end of the battle, add 1 to the Attacks, Strength, and Armour Penetration characteristics of that weapon."
+      },
+      "Crusade Relic§Serenity": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "**^^Ethereal^^** model only. While a friendly **^^T'au Empire^^** unit is within 6\" of this model, add 1 to that unit’s Leadership characteristic.",
+        "rules": {
+          "Ethereal only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Ethereal"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Honour§Blade-sharp Senses": {
+        "keywords": {
+          "Keywords": [
+            "Strains"
+          ],
+          "Tags": [
+            "T’au Empire"
+          ]
+        },
+        "text": "If this unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is."
+      },
+      "Crusade Honour§Great Endurance": {
+        "keywords": {
+          "Keywords": [
+            "Strains"
+          ],
+          "Tags": [
+            "T’au Empire"
+          ]
+        },
+        "text": "Add 2\" to the Move characteristic of models in this unit."
+      },
+      "Crusade Honour§Predatory Swiftness": {
+        "keywords": {
+          "Keywords": [
+            "Strains"
+          ],
+          "Tags": [
+            "T’au Empire"
+          ]
+        },
+        "text": "You can re-roll Advance and Charge rolls made for this unit."
+      },
+      "Crusade Honour§Leathery Resilience": {
+        "keywords": {
+          "Keywords": [
+            "Strains"
+          ],
+          "Tags": [
+            "T’au Empire"
+          ]
+        },
+        "text": "Add 1 to the Toughness characteristic of models in this unit."
+      },
+      "Crusade Honour§Lethal Instincts": {
+        "keywords": {
+          "Keywords": [
+            "Strains"
+          ],
+          "Tags": [
+            "T’au Empire"
+          ]
+        },
+        "text": "Each time a model in this unit makes an attack that targets a unit below Starting Strength, you can re-roll the Hit roll."
+      },
+      "Crusade Honour§Corded Muscle": {
+        "keywords": {
+          "Keywords": [
+            "Strains"
+          ],
+          "Tags": [
+            "T’au Empire"
+          ]
+        },
+        "text": "Add 1 to the Attacks and Strength characteristics of melee weapons equipped by models in this unit."
       }
     },
     "gameModes": {},

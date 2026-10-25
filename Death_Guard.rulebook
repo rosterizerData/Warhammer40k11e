@@ -1,6 +1,6 @@
 {
   "name": "Death Guard 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -292,6 +292,55 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 250
+          },
+          "crusadeTagDaemon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Daemon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Daemon"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
           }
         }
       }
@@ -13880,6 +13929,264 @@
             "Ability§Lethal Hits"
           ]
         }
+      },
+      "Battle Trait§Skittering Limbs": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        },
+        "text": "Each time a model in this unit makes a Normal, Advance or Fall Back move, it can move through enemy models. When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+      },
+      "Battle Trait§Spatterfilth": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Each time a model in this unit makes a melee attack, you can ignore any or all modifiers to the Hit roll, to the Wound roll and to the Armour Penetration characteristic."
+      },
+      "Battle Trait§Choking Mist": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Once per battle, when this unit is selected to make a Normal, Advance or Fall Back move, is set up on the battlefield, or declares a charge it can use this Battle Trait. Until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at this unit."
+      },
+      "Battle Trait§Bone Horns": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 5+, that enemy unit suffers 1 mortal wound."
+      },
+      "Battle Trait§Stolid Bulk": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Add 1 to the Ballistic Skill characteristic of ranged weapons equipped by models in this unit."
+      },
+      "Battle Trait§Cackling Plague Mites": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Ranged weapons equipped by models in this unit have the **[IGNORES COVER]** ability."
+      },
+      "Battle Trait§Quivering Cilia": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Each time you target this unit with the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ while resolving that Stratagem."
+      },
+      "Battle Trait§Infectious Buboes": {
+        "keywords": {
+          "Tags": [
+            "Daemon"
+          ]
+        },
+        "text": "Each time a melee attack is allocated to this unit, after the attacking unit has finished making its attacks, roll one D6 (to a maximum of six D6 per attacking unit): for each 5+, the attacking unit suffers 1 mortal wound."
+      },
+      "Battle Trait§Sporebelch": {
+        "keywords": {
+          "Tags": [
+            "Daemon"
+          ]
+        },
+        "text": "Each time this unit ends a Fall Back move, select one enemy unit that was within Engagement Range of this unit at the start of the phase. Roll three D6: for each 4+, that enemy unit suffers 1 mortal wound."
+      },
+      "Battle Trait§Lambent Taint": {
+        "keywords": {
+          "Tags": [
+            "Daemon"
+          ]
+        },
+        "text": "In your Shooting phase, after this unit has shot, select one visible enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly **^^Nurgle Daemon^^** model makes an attack that targets that unit, re-roll a Hit roll of 1."
+      },
+      "Battle Trait§Plated Growths": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        },
+        "text": "Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit's Toughness characteristic, subtract 1 from the Wound roll."
+      },
+      "Battle Trait§Masterwork Maladies": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        },
+        "text": "Add 6\" to the Range characteristic of ranged Lethal Hits weapons equipped by models in this unit."
+      },
+      "Crusade Relic§Casket of Corruption": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "The bearer has the Deadly Demise D3 ability. In addition, at the end of the battle, if the bearer's unit is wholly within your opponent's deployment zone, when you next follow the Path of Contagion, you can skip the Counteragents step.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Orb of Decay": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "Once per battle, when you target the bearer's unit with the Grenade Stratagem, the bearer can use this Crusade Relic. If they do, until that Stratagem has been resolved, add 2 to the result of each dice you roll for that Stratagem.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Putrid Heart": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "The bearer has the Feel No Pain 5+ ability. In addition, add 6\" to the Contagion Range of models in the bearer's unit.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Crusade Relic§Bountiful Censer": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Each time a friendly model with the Deadly Demise ability within 9\" of the bearer is destroyed, the bearer can use this Crusade Relic. If it does, add 2 to the roll to determine whether mortal wounds are inflicted by that model's Deadly Demise ability. You cannot target that model with the Putrid Detonation Stratagem."
+      },
+      "Crusade Relic§Gnawing Tome": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Each time an enemy unit within 9\" of the bearer's unit fails a Battle-shock test, roll one D6: on a 4+, you gain 1 Requisition point."
+      },
+      "Crusade Relic§Foulforged Armour": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "The bearer has a Save characteristic of 2+."
+      },
+      "Crusade Honour§Slitherswift Limbs": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Nurgle"
+          ],
+          "Tags": [
+            "Death Guard"
+          ]
+        },
+        "text": "Add 1 to Advance and Charge rolls made for this model's unit."
+      },
+      "Crusade Honour§Veil of Flies": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Nurgle"
+          ],
+          "Tags": [
+            "Death Guard"
+          ]
+        },
+        "text": "Models in this model's unit have the Stealth ability."
+      },
+      "Crusade Honour§Febrile Vitality": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Nurgle"
+          ],
+          "Tags": [
+            "Death Guard"
+          ]
+        },
+        "text": "Add 1\" to the Move characteristic of models in this model's unit."
+      },
+      "Crusade Honour§Billowing Miasma": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Nurgle"
+          ],
+          "Tags": [
+            "Death Guard"
+          ]
+        },
+        "text": "Add 6\" to this model's Contagion Range."
+      },
+      "Crusade Honour§Grossly Swollen": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Nurgle"
+          ],
+          "Tags": [
+            "Death Guard"
+          ]
+        },
+        "text": "Add 2 to this model's Wounds characteristic."
+      },
+      "Crusade Honour§Leprous Insensibility": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Nurgle"
+          ],
+          "Tags": [
+            "Death Guard"
+          ]
+        },
+        "text": "This model has the Feel No Pain 5+ ability."
+      },
+      "Crusade Honour§Writhing Tentacles": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Nurgle"
+          ],
+          "Tags": [
+            "Death Guard"
+          ]
+        },
+        "text": "Add 1 to the Attacks characteristic of melee weapons equipped by this model."
+      },
+      "Crusade Honour§Touch of Rot": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Nurgle"
+          ],
+          "Tags": [
+            "Death Guard"
+          ]
+        },
+        "text": "Improve the Armour Penetration characteristic of melee weapons equipped by this model by 1."
+      },
+      "Crusade Honour§Plaguesight": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Nurgle"
+          ],
+          "Tags": [
+            "Death Guard"
+          ]
+        },
+        "text": "Each time this model makes an attack that targets an Afflicted unit, you can re-roll the Hit roll."
       }
     },
     "gameModes": {},

@@ -1,6 +1,6 @@
 {
   "name": "Space Wolves 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -21809,6 +21809,54 @@
         "stats": {
           "Points": {
             "value": 5
+          }
+        }
+      },
+      "Battle Scar§Vengeance Before Death": {
+        "keywords": {
+          "Keywords": [
+            "Lone Wolf Battle Scars"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "- This model has the Feel No Pain 5+ ability. - This model can never Fall Back.",
+        "stats": {
+          "Crusade Pts": {
+            "value": -1
+          }
+        }
+      },
+      "Battle Scar§Pack of One": {
+        "keywords": {
+          "Keywords": [
+            "Lone Wolf Battle Scars"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "- This model has the Infiltrators and Scouts 6\" abilities. - This model has an Objective Control characteristic of 0.",
+        "stats": {
+          "Crusade Pts": {
+            "value": -1
+          }
+        }
+      },
+      "Battle Scar§An Honourable End": {
+        "keywords": {
+          "Keywords": [
+            "Lone Wolf Battle Scars"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "- This model is eligible to shoot and declare a charge in a turn in which it Advanced. - Each time this model fails an Out of Action test, subtract an additional 1 from the result.",
+        "stats": {
+          "Crusade Pts": {
+            "value": -1
           }
         }
       }

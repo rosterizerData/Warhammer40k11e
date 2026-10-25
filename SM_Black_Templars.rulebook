@@ -1,6 +1,6 @@
 {
   "name": "Black Templars 11e",
-  "revision": "11.2.6",
+  "revision": "11.2.7",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -11066,6 +11066,72 @@
             "visibility": "active"
           }
         }
+      },
+      "Crusade Honour§Master of Arms": {
+        "keywords": {
+          "Keywords": [
+            "Champion's Virtue Battle Honours"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "At the start of the Fight phase, if this model is not leading a unit, until the end of the phase, it has the Fights First ability."
+      },
+      "Crusade Honour§Epitome of Piety": {
+        "keywords": {
+          "Keywords": [
+            "Champion's Virtue Battle Honours"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "This model has the Feel No Pain 6+ (this is improved to Feel No Pain 4+ against Psychic Attacks and mortal wounds)."
+      },
+      "Crusade Honour§Instrument of the Emperor": {
+        "keywords": {
+          "Keywords": [
+            "Champion's Virtue Battle Honours"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Each time a **^^Character^^** model is destroyed by an attack made by this model, you gain 1CP."
+      },
+      "Crusade Honour§Adaptable Executioner": {
+        "keywords": {
+          "Keywords": [
+            "Champion's Virtue Battle Honours"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Each time this model's unit is selected to fight, select the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, this model's Black Sword has that ability."
+      },
+      "Crusade Honour§Inspirational Fighter": {
+        "keywords": {
+          "Keywords": [
+            "Champion's Virtue Battle Honours"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "Each time this model's unit has fought, if one or more **^^Character^^** models were destroyed as a result of attacks made by this model this phase, until the end of the phase, while a friendly **^^Adeptus Astartes^^** unit is within 6\" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit."
+      },
+      "Crusade Honour§Front-line Crusader": {
+        "keywords": {
+          "Keywords": [
+            "Champion's Virtue Battle Honours"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "This model has the Scouts 6\" ability, and you can re-roll Charge rolls made for this model's unit."
       }
     },
     "gameModes": {},

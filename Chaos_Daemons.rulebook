@@ -1,6 +1,6 @@
 {
   "name": "Chaos Daemons 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -10913,6 +10913,27 @@
       },
       "Ability§Infernal Speed": {
         "text": "While this model is leading a unit, change the Move characteristic of models in that unit to 14\"."
+      },
+      "Battle Trait§PLACEHOLDER_NAME": {
+        "keywords": {
+          "Tags": [
+            "Legiones Daemonica"
+          ]
+        },
+        "text": "Each time a ranged attack targets this unit, unless the attacking model is within 18\", subtract 1 from the Hit roll."
+      },
+      "Crusade Relic§PLACEHOLDER_NAME": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "BATTLESUIT model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
       }
     },
     "gameModes": {},

@@ -1,6 +1,6 @@
 {
   "name": "Imperial Knights 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -125,6 +125,59 @@
             ],
             "evaluate": "OR",
             "failState": "pass"
+          }
+        }
+      },
+      "Unit": {
+        "rules": {
+          "crusadeTagTitanic": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Titanic"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Titanic"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
           }
         }
       }
@@ -4233,6 +4286,205 @@
               }
             }
           ]
+        }
+      },
+      "Crusade Relic§Sanctuary": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "The bearer has a 5+ invulnerable save against melee attacks.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Armour of the Sainted Ion": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "The bearer has a Save characteristic of 2+.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Helm of the Nameless Warrior": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "Melee weapons equipped by the bearer have the **[DEVASTATING WOUNDS]** ability.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Crusade Relic§Oathbreaker Guidance System": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "If the bearer is equipped with one or more Questoris heavy stubbers or Questoris multi-lasers, those weapons have the **[PRECISION]** and **[IGNORES COVER]** abilities, and each time an attack is made with one of those weapons, you can re-roll the Hit roll."
+      },
+      "Crusade Relic§Equerry's Vox": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Each time the bearer uses its Bondsman ability, you can select one other friendly **^^Armiger^^** model within 9\" of the **^^Armiger^^** you selected with that ability; that other model is also affected by that Bondsman ability."
+      },
+      "Crusade Relic§Heart of Sol": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "In your Command phase, the bearer can activate this Crusade Relic. If it does, the bearer suffers D3 mortal wounds, then select one of the following effects (if you select the third effect, you must also select one weapon equipped by the bearer): - Until the start of your next Command phase, add 2\" to the bearer's Move characteristic. - Until the start of your next Command phase, add 2 to Advance and Charge rolls made for the bearer. - Until the start of your next Command phase, each time the bearer makes an attack with the selected weapon, add 1 to the Wound roll."
+      },
+      "Crusade Honour§Master of Obduracy": {
+        "keywords": {
+          "Keywords": [
+            "Pilot and Knight"
+          ],
+          "Tags": [
+            "Imperial Knights"
+          ]
+        },
+        "text": "While this unit is not Battle-shocked, add 3 to its Objective Control characteristic."
+      },
+      "Crusade Honour§Master of Execution": {
+        "keywords": {
+          "Keywords": [
+            "Pilot and Knight"
+          ],
+          "Tags": [
+            "Imperial Knights"
+          ]
+        },
+        "text": "At the start of the first battle round, select one enemy unit. Until the end of the battle, each time this unit makes an attack that targets that enemy unit, add 1 to the Damage characteristic of that attack and that attack has the **[SUSTAINED HITS 1]** ability."
+      },
+      "Crusade Honour§Master of the Clarion": {
+        "keywords": {
+          "Keywords": [
+            "Pilot and Knight"
+          ],
+          "Tags": [
+            "Titanic"
+          ]
+        },
+        "text": "Pilot of a **^^Titanic^^** unit only. Each time this unit its Bondsman ability, it can select a friendly **^^Armiger^^** that is within 24\" of and visible to this unit."
+      },
+      "Crusade Honour§Master of Tuition": {
+        "keywords": {
+          "Keywords": [
+            "Pilot and Knight"
+          ],
+          "Tags": [
+            "Imperial Knights"
+          ]
+        },
+        "text": "At the end of each battle, if this unit gains any XP, you can select up to two other **^^Imperial Knights^^** units from your Crusade army that survived that battle. The selected unit gains 1XP."
+      },
+      "Crusade Honour§Master of Ambush": {
+        "keywords": {
+          "Keywords": [
+            "Pilot and Knight"
+          ],
+          "Tags": [
+            "Imperial Knights"
+          ]
+        },
+        "text": "After both players have deployed their armies, you can redeploy this unit and one friendly **^^Imperial Knights Armiger^^** unit."
+      },
+      "Crusade Honour§Master of Condemnation": {
+        "keywords": {
+          "Keywords": [
+            "Pilot and Knight"
+          ],
+          "Tags": [
+            "Imperial Knights"
+          ]
+        },
+        "text": "Once per battle, at the start of your Shooting phase, select one enemy unit within 18\" of and visible to this unit. Until the end of the phase, each time an **^^Imperial Knights^^** unit from your Crusade army makes an attack that targets that unit, you can re-roll a Hit roll of 1 and you can re-roll a Wound roll of 1."
+      },
+      "Crusade Honour§Master of the Joust": {
+        "keywords": {
+          "Keywords": [
+            "Pilot and Knight"
+          ],
+          "Tags": [
+            "Imperial Knights"
+          ]
+        },
+        "text": "Add 2\" to this unit's Move characteristic. This unit is eligible to shoot in a turn in which it Advanced."
+      },
+      "Crusade Honour§Master of Mechanisms": {
+        "keywords": {
+          "Keywords": [
+            "Pilot and Knight"
+          ],
+          "Tags": [
+            "Imperial Knights"
+          ]
+        },
+        "text": "In your Command phase, you can select one friendly **^^Imperial Knights^^** model within 6\" of this unit. That friendly model regains up to 3 lost wounds."
+      },
+      "Crusade Honour§Desperate For Redemption": {
+        "keywords": {
+          "Keywords": [
+            "Burdens"
+          ],
+          "Tags": [
+            "Imperial Knights"
+          ]
+        },
+        "text": "This unit is not eligible to Fall Back.",
+        "stats": {
+          "Crusade Pts": {
+            "value": -1
+          }
+        }
+      },
+      "Crusade Honour§Stain of Dishonour": {
+        "keywords": {
+          "Keywords": [
+            "Burdens"
+          ],
+          "Tags": [
+            "Imperial Knights"
+          ]
+        },
+        "text": "This unit cannot use or be affected by Bondsman abilities.",
+        "stats": {
+          "Crusade Pts": {
+            "value": -1
+          }
+        }
+      },
+      "Crusade Honour§Bonded In Shame": {
+        "keywords": {
+          "Keywords": [
+            "Burdens"
+          ],
+          "Tags": [
+            "Imperial Knights"
+          ]
+        },
+        "text": "Subtract 2 from this unit's Objective Control characteristic and worsen its Leadership characteristic by 1.",
+        "stats": {
+          "Crusade Pts": {
+            "value": -1
+          }
         }
       }
     },

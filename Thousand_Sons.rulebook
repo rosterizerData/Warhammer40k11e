@@ -1,6 +1,6 @@
 {
   "name": "Thousand Sons 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -281,6 +281,153 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 250
+          },
+          "crusadeTagMutant": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Mutant"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Mutant"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagRubricae": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Rubricae"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Rubricae"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeNotTzaangorShaman": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "notTzaangorShaman"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Tzaangor Shaman"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
           }
         }
       }
@@ -12496,6 +12643,334 @@
       },
       "Ability§Sullen Malevolence": {
         "text": "_Aura_\n\nWhile an enemy unit is within 6\" of this unit, if this unit contains one or more **BLUE** **HORROR** models, worsen the Leadership characteristic of models in that enemy unit by 1."
+      },
+      "Battle Trait§Aspiring Magister": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Improve this model's Leadership and Objective Control characteristics by 1 and, if this model is your **^^Warlord^^** and it passes its Plots and Schemes test after the battle, it gains 1 additional Lore point."
+      },
+      "Battle Trait§Enthralling Soul-mark": {
+        "keywords": {
+          "Tags": [
+            "Mutant"
+          ]
+        },
+        "text": "At the start of the battle, select one unit from your opponent's army. Each time a model in this unit makes a melee attack that targets that unit, that attack has the **[SUSTAINED HITS 1]** and **[PRECISION]** abilities and, if that enemy unit is destroyed by a melee attack made by this unit, at the end of the battle, you can select one **^^Thousand Sons Character^^** model from your Crusade army. That model gains 1 Arcana point."
+      },
+      "Battle Trait§Inhuman Savagery": {
+        "keywords": {
+          "Tags": [
+            "Mutant"
+          ]
+        },
+        "text": "Each time this unit makes a Charge move, until the end of the turn, add 1 to the Attacks and Strength characteristics of melee weapons equipped by models in this unit."
+      },
+      "Battle Trait§Mutated Beyond Reason": {
+        "keywords": {
+          "Tags": [
+            "Mutant"
+          ]
+        },
+        "text": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this Battle Trait must take a Battle-shock test, subtracting 1 from that test."
+      },
+      "Battle Trait§Dark Runes": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        },
+        "text": "**^^Vehicle^^** models in this unit have a 5+ invulnerable save against ranged attacks. **^^Daemon^^** and **^^Sekhetar Robot^^** models in this unit have a 4+ invulnerable save against ranged attacks instead."
+      },
+      "Battle Trait§Mutated Hull": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        },
+        "text": "At the start of your Command phase, one **^^Vehicle^^** model in this unit regains up to D3 lost wounds. In addition, you can re-roll failed Out of Action tests for this unit."
+      },
+      "Battle Trait§Spirit of Change": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        },
+        "text": "Each time this unit is selected to shoot or fight, you can re-roll one Hit roll, one Wound roll or one Damage roll made for an attack made by a **^^Vehicle^^** model in this unit while resolving those attacks."
+      },
+      "Battle Trait§Recurrent Rebinding": {
+        "keywords": {
+          "Tags": [
+            "Rubricae"
+          ]
+        },
+        "text": "Models in this unit have the Feel No Pain 6+ ability against mortal wounds and attacks with an unmodified Damage characteristic of 1. While a **^^Character^^** model is leading this unit, that **^^Character^^** has the Feel No Pain 5+ ability."
+      },
+      "Battle Trait§Wrath of the Wronged": {
+        "keywords": {
+          "Tags": [
+            "Rubricae"
+          ]
+        },
+        "text": "While there are one or more **^^Psyker^^** models in this unit, each time a model in this unit makes an attack, add 1 to the Hit roll if this unit is below its Starting Strength, and add 1 to the Wound roll as well if this unit is Below Half-strength."
+      },
+      "Battle Trait§Relentless Purpose": {
+        "keywords": {
+          "Tags": [
+            "Rubricae"
+          ]
+        },
+        "text": "Ranged weapons equipped by models in this unit have the **[ASSAULT]** ability."
+      },
+      "Battle Trait§Occult Apparitions": {
+        "keywords": {
+          "Tags": [
+            "Rubricae"
+          ]
+        },
+        "text": "While there are one or more **^^Psyker^^** models in this unit, this unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+      },
+      "Battle Trait§Loyalty of Ambition": {
+        "keywords": {
+          "Tags": [
+            "Rubricae"
+          ]
+        },
+        "text": "Add 1 to the Wounds characteristic of the Aspiring Sorcerer or Scarab Occult Sorcerer model in this unit, and improve the Attacks, Ballistic Skill and Weapon Skill characteristics of Psychic weapons equipped by that model by 1."
+      },
+      "Battle Trait§Fated Emergence": {
+        "keywords": {
+          "Tags": [
+            "Rubricae"
+          ]
+        },
+        "text": "Models in this unit have the Deep Strike. If this unit has the **^^Terminator^^** keyword, you can target this unit with the Rapid Ingress Stratagem for 0CP."
+      },
+      "Battle Trait§Malefic Surge (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Each time this model makes a Psychic Attack, add 1 to the Wound roll."
+      },
+      "Battle Trait§Eye of Tzeentch": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Each time this model is Marked for Greatness, it earns 5XP rather than 3XP. In addition, each time this model gains a Boon of Tzeentch, you can re-roll the result when determining which Boon is gained."
+      },
+      "Crusade Relic§Prism of Echoes": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "Once per battle, at the start of any phase, the bearer can use this Crusade Relic. If it does, until the end of the phase, the bearer has the following ability: **Prism of Echoes (Aura):** While a friendly **^^Rubricae^^** unit is within 6\" of the bearer, add 1 to the Attacks characteristic of weapons equipped by non-**^^Psyker^^** models in that unit.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Helm of the Daemon's Eye": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Hourglass of Manat": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Athenaean Scrolls": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "You can select the bearer to attempt up to two Rituals per turn instead of only one, and each time you select the bearer to attempt a Ritual, you can first discard either 1 Lore point or 1 Arcana point the bearer has. If you discard 1 Lore point, until the end of the phase, the bearer can attempt a Ritual even if another model from your Crusade army has already manifested that Ritual this turn. If you discard 1 Arcana point, until the end of the phase, each time you take a Psychic test for the bearer, after rolling all of the dice but before the bearer suffers any mortal wounds, you can re-roll all of those dice.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Crusade Relic§Pentakairic Armour": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "The bearer has a Save characteristic of 2+ and a 4+ invulnerable save."
+      },
+      "Crusade Relic§Perfidious Tome": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Each time the bearer Channels the Warp, before rolling the additional D6, the bearer can use this Crusade Relic. If it does, take a Battle-shock test for the bearer: if that test is passed, the bearer gains 1 Lore point and that additional D6 is automatically an unmodified 6; otherwise the Ritual being attempted fails."
+      },
+      "Crusade Relic§Seer's Bane": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Each time the bearer makes an attack with a Psychic melee weapon, improve the Strength, Armour Penetration and Damage characteristics of that attack by 1. Each time the bearer makes an attack with a Psychic melee weapon that targets a **^^Psyker^^** unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 2 instead."
+      },
+      "Crusade Honour§Crystalline Body": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Tzeentch"
+          ],
+          "Tags": [
+            "Thousand Sons"
+          ]
+        },
+        "text": "Each time a ranged attack is allocated to this model, on an unmodified saving throw of 6, the attacking unit suffers 1 mortal wound after it has finished making its attacks."
+      },
+      "Crusade Honour§Warp Strider": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Tzeentch"
+          ],
+          "Tags": [
+            "Thousand Sons"
+          ]
+        },
+        "text": "Add 1\" to the Move characteristic of models in this model's unit, and each time a model in this model's unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through models and terrain features. If this model is wholly within your opponent's deployment zone at the end of the battle, roll one D6: on a 4+, this model gains 1 Arcana point."
+      },
+      "Crusade Honour§Forewarned by Fate": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Tzeentch"
+          ],
+          "Tags": [
+            "Thousand Sons"
+          ]
+        },
+        "text": "Once per battle round, when an attack is allocated to the bearer's unit, you can change the Damage characteristic of that attack to 0. If this model is within range of an objective marker that you control at the end of the battle, and that objective marker is not within your deployment zone, roll one D6: on a 4+ this model gains 1 Lore point."
+      },
+      "Crusade Honour§Flesh Sigils": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Tzeentch"
+          ],
+          "Tags": [
+            "Thousand Sons"
+          ]
+        },
+        "text": "This model has the Feel Not Pain 5+ ability (if this model is a **^^Chaos Spawn^^** model, it has the Feel No Pain 4+ ability instead)."
+      },
+      "Crusade Honour§Flame-wreathed": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Tzeentch"
+          ],
+          "Tags": [
+            "Thousand Sons"
+          ]
+        },
+        "text": "Each time this model makes a melee attack, you can re-roll the Hit roll."
+      },
+      "Crusade Honour§Raptorial Talons": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Tzeentch"
+          ],
+          "Tags": [
+            "Thousand Sons"
+          ]
+        },
+        "text": "Improve the Strength and Armour Penetration characteristics of this model's melee weapons by 1."
+      },
+      "Crusade Honour§Immaterial Edge": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Tzeentch"
+          ],
+          "Tags": [
+            "Thousand Sons"
+          ]
+        },
+        "text": "This model's melee weapons have the **[DEVASTATING WOUNDS]** ability."
+      },
+      "Crusade Honour§Temporal Distortion": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Tzeentch"
+          ],
+          "Tags": [
+            "Thousand Sons"
+          ]
+        },
+        "text": "Add 1 to Advance and Charge rolls made for this model's unit."
+      },
+      "Crusade Honour§Aura of Illusion": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Tzeentch"
+          ],
+          "Tags": [
+            "Thousand Sons"
+          ]
+        },
+        "text": "This model has the Stealth ability, and while this model is leading a unit, each time a ranged attack targets that unit, if the attacking model is not within 12\", subtract 1 from the Hit roll."
+      },
+      "Crusade Honour§Aelementus": {
+        "keywords": {
+          "Keywords": [
+            "Brotherhood of Sorcerers"
+          ],
+          "Tags": [
+            "Thousand Sons"
+          ]
+        },
+        "text": "At the end of the battle, this model gains 1XP and 1 Lore or Arcana point (your choice) for each different Agenda your opponent selected at the start of the battle that one or more of their units subsequently gained XP from."
+      },
+      "Crusade Honour§Esoterist": {
+        "keywords": {
+          "Keywords": [
+            "Brotherhood of Sorcerers"
+          ],
+          "Tags": [
+            "notTzaangorShaman"
+          ]
+        },
+        "text": "In the Determine Victor step, if you are not the victor, roll one D6 for each model from your Crusade army with this reward that is on the battlefield. If one or more of those results are a 4+, you gain that battle's Victor Bonus anyway."
+      },
+      "Crusade Honour§Magister Templi": {
+        "keywords": {
+          "Keywords": [
+            "Brotherhood of Sorcerers"
+          ],
+          "Tags": [
+            "notTzaangorShaman"
+          ]
+        },
+        "text": "8"
       }
     },
     "gameModes": {},

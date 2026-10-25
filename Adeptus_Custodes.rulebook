@@ -1,6 +1,6 @@
 {
   "name": "Adeptus Custodes 11e",
-  "revision": "11.2.9",
+  "revision": "11.2.10",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1173,6 +1173,55 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "crusadeNotAnathemaPsykana": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "notAnathemaPsykana"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Anathema Psykana"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
           }
         },
         "stats": {
@@ -14551,6 +14600,15 @@
       },
       "Ability§Earning of a Name": {
         "text": "Earned Name: Each time this model’s unit is selected to fight, both Ka’tah Stances are active for that unit, instead of only one."
+      },
+      "Battle Trait§Genalchemic Warding": {
+        "keywords": {
+          "Tags": [
+            "Infantry",
+            "notAnathemaPsykana"
+          ]
+        },
+        "text": "Each time a Psychic Attack targets this unit, subtract 1 from the Hit roll."
       }
     },
     "gameModes": {},

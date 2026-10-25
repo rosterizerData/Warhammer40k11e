@@ -1,6 +1,6 @@
 {
   "name": "Adepta Sororitas 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -16,7 +16,159 @@
     }
   ],
   "rulebook": {
-    "assetTaxonomy": {},
+    "assetTaxonomy": {
+      "Unit": {
+        "rules": {
+          "crusadeTagParagonWarsuits": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Paragon Warsuits"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Paragon Warsuits"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagPenitent": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Penitent"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Penitent"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeNotWalker": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "notWalker"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Walker"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          }
+        }
+      }
+    },
     "assetCatalog": {
       "Ability§Abbess Sanctorum": {
         "keywords": {
@@ -16685,6 +16837,307 @@
       },
       "Ability§Petals of the Bloody Rose": {
         "text": "_Aura_\n\nWhile a friendly **ADEPTA** **SORORITAS** unit is within 6\" of this model, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+      },
+      "Battle Trait§Exemplars of the Order": {
+        "keywords": {
+          "Tags": [
+            "Paragon Warsuits",
+            "Infantry"
+          ]
+        },
+        "text": "This unit can perform 1 additional Act of Faith per phase."
+      },
+      "Battle Trait§Pure of Soul": {
+        "keywords": {
+          "Tags": [
+            "Paragon Warsuits",
+            "Infantry"
+          ]
+        },
+        "text": "Each time a Psychic Attack targets this unit, subtract 1 from the Wound roll."
+      },
+      "Battle Trait§Valour of Saints": {
+        "keywords": {
+          "Tags": [
+            "Paragon Warsuits",
+            "Infantry"
+          ]
+        },
+        "text": "Each time this unit takes a Battle-shock or Leadership test, you can first discard 1 Miracle dice. If you do, that test is automatically passed."
+      },
+      "Battle Trait§Armour of Faith": {
+        "keywords": {
+          "Tags": [
+            "Paragon Warsuits",
+            "Infantry"
+          ]
+        },
+        "text": "Once per phase, when this unit is selected as the target of an attack, you can discard 1 Miracle dice. If you do, until the end of the phase, each time an attack targets this unit, worsen the Armour Penetration characteristic of that attack by 1."
+      },
+      "Battle Trait§Veterans of the Convent": {
+        "keywords": {
+          "Tags": [
+            "Paragon Warsuits",
+            "Infantry"
+          ]
+        },
+        "text": "You can re-roll failed Out of Action tests taken for this unit, and each time this unit is Marked for Greatness, it gains an additional 2XP."
+      },
+      "Battle Trait§Thrice-blessed Hull": {
+        "keywords": {
+          "Tags": [
+            "Vehicle",
+            "notWalker"
+          ]
+        },
+        "text": "This unit has the Feel No Pain 4+ ability against mortal wounds."
+      },
+      "Battle Trait§Zealous Devotion": {
+        "keywords": {
+          "Tags": [
+            "Paragon Warsuits",
+            "Infantry"
+          ]
+        },
+        "text": "Each time this unit makes a Charge move, until the end of the turn, improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1."
+      },
+      "Battle Trait§Unquenchable Fanaticism": {
+        "keywords": {
+          "Tags": [
+            "Penitent"
+          ]
+        },
+        "text": "Add 1 to Advance and Charge rolls made for this unit."
+      },
+      "Battle Trait§Faithful Devotee": {
+        "keywords": {
+          "Tags": [
+            "Penitent"
+          ]
+        },
+        "text": "Each time this unit is selected as the target of an attack, if this unit is Below Half-strength, models in this unit have the Feel No Pain 4+ ability against that attack."
+      },
+      "Battle Trait§Blood Begets Absolution": {
+        "keywords": {
+          "Tags": [
+            "Penitent"
+          ]
+        },
+        "text": "Each time this unit destroys an enemy unit in the Fight phase, you gain 1 Miracle dice."
+      },
+      "Battle Trait§Deeds, Not Words": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Each time this model makes an attack, you can re-roll the Hit roll and you can re-roll the Wound roll."
+      },
+      "Battle Trait§Aegis of Belief": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "This model has the Feel No Pain 5+ ability and, at the start of your Command phase, this model regains 1 lost wound."
+      },
+      "Battle Trait§Beacon of Faith": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "At the end of your Command phase, if this model is your **^^Warlord^^** and is on the battlefield, you can spend 1CP. If you do, you gain D3 Miracle dice."
+      },
+      "Battle Trait§Mobile Shrine (Aura)": {
+        "keywords": {
+          "Tags": [
+            "Vehicle",
+            "notWalker"
+          ]
+        },
+        "text": "While a friendly **^^Adepta Sororitas^^** unit is within 6\" of this unit, improve that unit's Leadership characteristic by 1."
+      },
+      "Battle Trait§Pious Machine Spirit": {
+        "keywords": {
+          "Tags": [
+            "Vehicle",
+            "notWalker"
+          ]
+        },
+        "text": "Each time this unit performs an Act of Faith, the result of one of the Miracle dice used in that Act of Faith is first improved by 1 (to a maximum of 6)."
+      },
+      "Crusade Relic§Battle-psalms of Vespania": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "When selecting Agendas for a battle, you can select one **^^Adepta Soroitas^^** Agenda to be used in that battle in addition to any others being used in that battle.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Blessings of Sebastian Thor": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "If the bearer is in your Crusade army, you can use one Crusade Blessing even if you are not the Underdog.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Icon of Sanctity": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "Each time an enemy unit selects the bearer's unit as a target of a charge, that enemy unit must take a Battle-shock test; if that test is failed, subtract 2 from the Charge roll made for that charge.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Weapon of the Matriarch": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "**^^Living Saint^^** model only. Improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 1, and those weapons have the **[ANTI-CHARACTER 4+]**, **[DEVASTATING WOUNDS]** and **[PRECISION]** abilities.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        },
+        "rules": {
+          "Living Saint only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Living Saint"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Tears of the Emperor": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Improve the Attacks, Strength and Damage characteristics of the bearer's ranged weapons by 1, and those weapons have the **[DEVASTATING WOUNDS]** and **[ANTI-CHAOS 4+]** abilities."
+      },
+      "Crusade Relic§Phial of Dolan": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Improve the bearer's Wounds, Leadership and Objective Control characteristics by 1."
+      },
+      "Crusade Relic§The Sigil Ecclesiasticus": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "**^^Saint Potentia^^** model only. When the bearer is destroyed, the Miracle dice you gain as a result is automatically a 6. At the end of the battle, the bearer gains 1 Saint point (whether destroyed or not)."
+      },
+      "Crusade Relic§Praesidium Rosarius": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "The bearer has a 4+ invulnerable save. Each time the bearer's unit is selected as the target of an attack, you can discard 1 Miracle dice. If you do, until the end of the phase, the bearer has a 3+ invulnerable save."
+      },
+      "Crusade Honour§Trial of Valour": {
+        "keywords": {
+          "Keywords": [
+            "Trials of a Living Saint"
+          ],
+          "Tags": [
+            "Adepta Sororitas"
+          ]
+        },
+        "text": "Gain 3 Saint points at the end of a battle if this model is wholly within your opponent's deployment zone."
+      },
+      "Crusade Honour§Trial of Faith": {
+        "keywords": {
+          "Keywords": [
+            "Trials of a Living Saint"
+          ],
+          "Tags": [
+            "Adepta Sororitas"
+          ]
+        },
+        "text": "Gain 1 Saint point at the end of a battle for each Miracle dice remaining in your Miracle Dice pool (to a maximum of 2 Saint points)."
+      },
+      "Crusade Honour§Trial of Suffering": {
+        "keywords": {
+          "Keywords": [
+            "Trials of a Living Saint"
+          ],
+          "Tags": [
+            "Adepta Sororitas"
+          ]
+        },
+        "text": "Gain 1 Saint point at the end of a battle if this model is below its Starting Strength. Gain 2 Saint points instead if this model was destroyed while within range of an objective marker."
+      },
+      "Crusade Honour§Trial of Purity": {
+        "keywords": {
+          "Keywords": [
+            "Trials of a Living Saint"
+          ],
+          "Tags": [
+            "Adepta Sororitas"
+          ]
+        },
+        "text": "Gain 2 Saint points at the end of a battle if this model is within 6\" of the centre of the battlefield."
+      },
+      "Crusade Honour§Trial of Righteousness": {
+        "keywords": {
+          "Keywords": [
+            "Trials of a Living Saint"
+          ],
+          "Tags": [
+            "Adepta Sororitas"
+          ]
+        },
+        "text": "Gain 2 Saint points at the end of a battle if this model destroyed one or more enemy **^^Character^^** units during that battle. Gain an additional 2 Saint points if one of those destroyed units contained the enemy **^^Warlord^^**."
+      },
+      "Crusade Honour§Lead Army in Prayer": {
+        "keywords": {
+          "Keywords": [
+            "Hymns of Battle"
+          ],
+          "Tags": [
+            "Adepta Sororitas"
+          ]
+        },
+        "text": "Once per battle, at the start of the battle round, if you have one or more **^^Adepta Sororitas Character^^** units on the battlefield and if your Crusade army was led in prayer before this battle, you can discard two Miracle dice. If you do, you intone the Hymns of Battle that battle round and, until the start of the next battle round, all **^^Adepta Sororitas Character^^** units in your army gain bonus depending on which Hymns of Battle you select. While a unit is Battle-shocked, it loses the bonus of any Hymns that would apply to it (if a rule would cause such a unit to no longer be Battle-shocked, any bonuses from Hymns that would apply to it apply once again). When you intone Hymns of Battle, you can either select one Hymn to apply to units from your army from the list, or you can randomly select two by rolling two D6 and consulting the table (if a double is rolled, roll both dice again until two different results are rolled)."
       }
     },
     "gameModes": {},

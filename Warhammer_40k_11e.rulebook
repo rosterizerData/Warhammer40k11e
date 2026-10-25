@@ -1,6 +1,6 @@
 {
   "name": "40k 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.5",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1572,6 +1572,12 @@
                 "tracking": {
                   "Pariah Nexus": 1
                 }
+              },
+              "Armageddon": {
+                "order": 3,
+                "tracking": {
+                  "Armageddon": 1
+                }
               }
             },
             "statOrder": -1,
@@ -2416,6 +2422,120 @@
                     "1",
                     "result",
                     "truthy"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "allowArmageddonRelics": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Armageddon Relic"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Armageddon"
+                  ]
+                ]
+              },
+              {
+                "actionable": true,
+                "min": 6,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "allowMightyChampion": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Mighty Champion"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Armageddon"
+                  ]
+                ]
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: Armageddon — the Campaign Master gives each named character one Mighty Champion ability"
+          },
+          "One Mighty Champion ability per character.": {
+            "evals": [
+              {
+                "actionable": true,
+                "max": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Mighty Champion"
                   ]
                 ]
               }
@@ -6989,6 +7109,347 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "crusadeNotCharacter": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "notCharacter"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Character"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          },
+          "crusadeNotInfantry": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "notInfantry"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Infantry"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          },
+          "crusadeNotMounted": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "notMounted"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Mounted"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          },
+          "crusadeNotVehicle": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "notVehicle"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Vehicle"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          },
+          "crusadeNotMonster": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "notMonster"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Monster"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          },
+          "allowArmageddonTraits": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Armageddon Trait"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Armageddon"
+                  ]
+                ]
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honour",
+                    "max"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "allowCrusadeHonours": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Crusade Honour"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honour",
+                    "max"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: the faction mechanic honours (Boons, Archeotech, Chapter Command…)"
           }
         },
         "stats": {
@@ -8108,6 +8569,48 @@
             "visibility": "hidden"
           }
         }
+      },
+      "Armageddon Trait": {
+        "aspects": {
+          "Lock Qty": true,
+          "Rename": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Armageddon Relic": {
+        "aspects": {
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Mighty Champion": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Crusade Honour": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
       }
     },
     "assetCatalog": {
@@ -18649,6 +19152,532 @@
           ]
         },
         "text": "Each time a unit with this ability makes a **normal**, **advance** or **fall-back move**:\n\n- Models in that unit can move through models (including **MONSTER**/**VEHICLE** models, but excluding **TITANIC** models) and can move horizontally through sections of **terrain features** that are 4\" or less in height.\n\n- Before moving that unit, you can select for all models in that unit to have the **MOBILE** keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is **battle-shocked**.\n\n**Designer’s Note:** Gaining the **MOBILE** keyword for the duration of a move will enable models in that unit to move horizontally through **dense terrain features** (13.06)."
+      },
+      "Armageddon Trait§Warp Terrors (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Psyker"
+          ]
+        },
+        "text": "Once per turn, at the start of your Command phase, Movement phase, Shooting phase, or Charge phase, or the Fight phase, you can select one enemy unit within 18\" of this model. That unit must take a Battle-shock test, subtracting 1 from the test when it does so if it has one or more Warp counters."
+      },
+      "Armageddon Trait§Fortune's Favoured": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Models in this unit have a 6+ invulnerable save. While this unit has one or more Warp counters, models in this unit have a 5+ invulnerable save (excluding against Psychic Attacks)."
+      },
+      "Armageddon Trait§Warp-hardened Veterans": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Each time this unit is Marked for Greatness, it gains an additional 2XP. In addition, once per battle, in your Command phase, you can add or remove one Warp counter to/from this unit."
+      },
+      "Armageddon Trait§Adaptive Camouflage": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "This unit has the Stealth ability and if this unit is in Strategic Reserves, it counts the battle round number as one higher than the current battle round number for the purpose of determining when and where it is set up."
+      },
+      "Armageddon Trait§Stalwarts": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Once per battle, in your Command phase, this unit can use this Battle Trait. When it does, if it is Battle-shocked, it is no longer Battle-shocked and, until the end of the turn, this unit is eligible to perform an Action in a turn in which it Fell Back and/or while within Engagement Range of one or more enemy units."
+      },
+      "Armageddon Trait§Footsloggers": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Add 1\" to the Move characteristic of models in this unit."
+      },
+      "Armageddon Trait§Warp Hunters": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Each time a model in this unit makes an attack that targets the closest eligible target, you can re-roll a Wound roll of 1. If the target of that is an **^^Unbound Adversaries^^** unit, and it is the closest eligible target, you can re-roll the Wound roll instead."
+      },
+      "Armageddon Trait§Warding Inscriptions": {
+        "keywords": {
+          "Tags": [
+            "Monster",
+            "Vehicle"
+          ]
+        },
+        "text": "Models in this unit have the Feel No Pain 6+ ability against Psychic Attacks and mortal wounds. While this unit has one or more Warp counters, models in this unit have the Feel No Pain 5+ ability against Psychic Attacks and mortal wounds."
+      },
+      "Armageddon Trait§Advanced Suspensors": {
+        "keywords": {
+          "Tags": [
+            "Monster",
+            "Vehicle"
+          ]
+        },
+        "text": "Ranged Weapons equipped by models in this unit have the **[ASSAULT]** ability."
+      },
+      "Armageddon Trait§Extra Armour": {
+        "keywords": {
+          "Tags": [
+            "Monster",
+            "Vehicle"
+          ]
+        },
+        "text": "Add 1 to the Toughness characteristic of models in this unit."
+      },
+      "Armageddon Trait§Juggernaut": {
+        "keywords": {
+          "Tags": [
+            "Monster",
+            "Vehicle"
+          ]
+        },
+        "text": "You can ignore any or all modifiers to this unit's Move characteristic. In addition, each time this unit makes a Normal move, its models can move through sections of terrain features more than 2\" in height, but if any do so, just after this unit has moved, roll one D6: on a 1-3 this unit is Battle-shocked."
+      },
+      "Armageddon Trait§Endless Rage": {
+        "keywords": {
+          "Tags": [
+            "Monster",
+            "Vehicle"
+          ]
+        },
+        "text": "This unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+      },
+      "Armageddon Trait§Daemon Hunter": {
+        "keywords": {
+          "Tags": [
+            "Monster",
+            "Vehicle"
+          ]
+        },
+        "text": "Each time this unit targets an **^^Unbound Adversaries^^** unit, you can re-roll the Hit roll. In addition, at the Update Crusade Cards step, if this unit would gain XP from Dealers in Death, it gains 1 additional XP."
+      },
+      "Armageddon Trait§Tip of the Spear": {
+        "keywords": {
+          "Tags": [
+            "Mounted"
+          ]
+        },
+        "text": "This unit has the Scouts 6\" ability."
+      },
+      "Armageddon Trait§Skilled Riders": {
+        "keywords": {
+          "Tags": [
+            "Mounted"
+          ]
+        },
+        "text": "Each time this unit makes a Normal, Advance or Charge move, its models can move through sections of terrain features more than 2\" in height, but if any do so, just after this unit has moved, roll one D6: on a 1, this unit suffers D3 mortal wounds and is Battle-shocked; on a 2-3 this unit is Battle-shocked."
+      },
+      "Armageddon Trait§Reactive Redeployment": {
+        "keywords": {
+          "Tags": [
+            "Mounted"
+          ]
+        },
+        "text": "After both players have deployed their armies, you can redeploy this unit. When doing so, you can set this unit up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+      },
+      "Armageddon Trait§War Beasts": {
+        "keywords": {
+          "Tags": [
+            "Beast"
+          ]
+        },
+        "text": "Add 1 to Advance and Charge rolls made for this unit."
+      },
+      "Armageddon Trait§Leaping Frenzy": {
+        "keywords": {
+          "Tags": [
+            "Beast"
+          ]
+        },
+        "text": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit, adding 1 to the result if this unit has 1 or more Warp counters: for each 5+, that enemy unit suffers 1 mortal wound."
+      },
+      "Armageddon Trait§Fearsome Predators (Aura)": {
+        "keywords": {
+          "Tags": [
+            "Beast"
+          ]
+        },
+        "text": "While an enemy unit is within 6\" of this unit, worsen the Leadership and Objective characteristics of models in that unit by 1 (to a minimum of 1)."
+      },
+      "Armageddon Trait§Ritual of Shrouding (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Psyker"
+          ]
+        },
+        "text": "At the start of the Deploy Crusade Armies step, you can spend 1RP; if you do, until the end of the battle, each model in this unit has the Infiltrators ability."
+      },
+      "Armageddon Trait§Warp Focus (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Psyker"
+          ]
+        },
+        "text": "Add 1 to the Strength characteristic of Psychic weapons equipped by models in this unit. While this unit has one or more Warp counters, add 2 to the Strength characteristic of Psychic weapons equipped by models in this unit instead."
+      },
+      "Armageddon Trait§Scrier's Gaze (Aura, Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Psyker"
+          ]
+        },
+        "text": "Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this unit."
+      },
+      "Armageddon Trait§Warp Alacrity (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Psyker"
+          ]
+        },
+        "text": "You can re-roll Advance and Charge rolls for this unit. In addition, each time this unit is selected to Advance, you can remove one Warp counter from it. If you do, then until the end of the turn, this unit is not eligible to declare a charge (even if another rule would let it Advance and Charge in the same turn), but you do not make an Advance roll; instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit."
+      },
+      "Armageddon Trait§Force Shield (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Psyker"
+          ]
+        },
+        "text": "Each time an attack targets this unit (excluding Psychic Attacks), if the Strength characteristic of that attack is greater than the Toughness characteristic of this unit, subtract 1 from the Wound roll."
+      },
+      "Armageddon Relic§Sanguiflamme of Armageddon": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "At the start of your Command phase, if the bearer is within range of an objective marker you control, you can choose one of the following: - Remove 1 Warp counter that the bearer's unit has. If you do, gain 1CP. - Take a Leadership test for this model. If that test is passed, gain 1CP.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Armageddon Relic§Riftwalker's Astrolabe": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "The bearer has the Deep Strike ability. While the bearer is leading a unit, models in that unit have the Deep Strike ability.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Armageddon Relic§Weapon of Renown": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "Select one melee weapon that the bearer is equipped with (excluding a weapon that has been replaced by an Enhancement or upgraded via the Weapon Modifications Battle Trait). That weapon is now a Crusade Relic and it has the **[ANTI-UNBOUND ADVERSARIES 4+** and **[DEVASTATING WOUNDS]** abilities.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Armageddon Relic§Exorcist's Thurible": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "The bearer has the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks. In addition, once per battle, just after rolling to generate an Anomaly, you can remove one Warp counter the bearer has. If you do, you can change one of the dice that were part of that roll to a dice result of your choosing (changing the anomaly generated).",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Armageddon Relic§Beast-ward Barbute": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "Each time a **^^Beast^^** or **^^Monster^^** unit targets the bearer's unit, before making any attacks, that **^^Beast^^** or **^^Monster^^** unit must take a Battle-shock test. Each time a model in that **^^Beast^^** or **^^Monster^^** unit makes an attack that targets the bearer's unit, subtract 1 from the Hit roll and, if that test was failed, subtract 1 from the Wound roll as well. In addition, once per battle, in your Command phase, you can select one **^^Unbound Adversaries^^** unit within 18\" of the bearer. If you do, until the start of your next Command phase, that **^^Unbound Adversaries^^** unit loses the **^^Unbound Adversaries^^** keyword and is part of your Crusade army.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Armageddon Relic§Vengeance Totem": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "When the bearer's unit is destroyed, roll on D6 for every enemy unit within 6\": on a 4+, that enemy unit suffers D3 mortal wounds. Then, if the bearer's unit had one or more Warp counters when it was destroyed, you can set up one unit of **^^Unbound Adversaries^^** on the battlefield as close as possible to where the bearer's model was destroyed and not within Engagement Range of any enemy units. The Power Level of this unit is equal to the number of Warp counters the bearer's unit had.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Armageddon Relic§Empyromancer's Focus": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "**^^Psyker^^** model only. The bearer's Psychic weapons gain the **[SUSTAINED HITS 2]** ability. In addition, at the end of the Set Warp Events step, if the bearer is in your Crusade army, you can choose to increase or decrease the intensity of the Warp Events use in that battle by 1 (to a minimum of 1 and a maximum of 3).",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Armageddon Relic§Warp-touched Weapon": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "**^^Infantry^^** or **^^Mounted^^** model only. Select one melee weapon that the bearer is equipped with (excluding a weapon that has been replaced by an Enhancement or upgraded via the Weapon Modifications Battle Trait). That weapon is now a Crusade Relic and you add 1 to the Attacks, Strength and Damage characteristic of that weapon. In addition, each time the bearer is selected to fight, you can first remove up to 3 Warp counters from the bearer's unit. For each Warp counter removed this way, until the end of the phase, add an additional 1 to the Attacks and Strength characteristics of that weapon.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Armageddon Relic§Cowl of Vehemence": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "**^^Psyker^^** model only. Each time the bearer makes a Psychic Attack, re-roll a Wound roll of 1. While the bearer's unit has one or more Warp counters, each time the bearer makes a Psychic Attack, you can re-roll the Wound roll instead."
+      },
+      "Armageddon Relic§Periapt of the Righteous": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Add 2 to the bearer's Wounds characteristic. In addition, in your Command phase, you can remove one Warp counter the bearer's unit has. If you do, the bearer regains up to D3 lost wounds."
+      },
+      "Armageddon Relic§Tartarine Cuirass": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. This is not cumulative with any other modifiers that worsen the Damage characteristic of an attack."
+      },
+      "Armageddon Relic§Grimoire Abjuratis": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Each time a **^^Beast^^** or **^^Monster^^** model makes an attack that targets the bearer's unit, subtract 1 from the Wound roll. If the attacking model is an **^^Unbound Adversaries^^** unit, subtract 1 from the Hit roll as well."
+      },
+      "Mighty Champion§Warp Terrors (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Once per turn, at the start of your Command phase, Movement phase, Shooting phase, or Charge phase, or the Fight phase, you can select one enemy unit within 18\" of this model. That unit must take a Battle-shock test, subtracting 1 from the test when it does so if it has one or more Warp counters."
+      },
+      "Mighty Champion§Fortune's Favoured": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Models in this unit have a 6+ invulnerable save. While this unit has one or more Warp counters, models in this unit have a 5+ invulnerable save (excluding against Psychic Attacks)."
+      },
+      "Mighty Champion§Warp-hardened Veterans": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Each time this unit is Marked for Greatness, it gains an additional 2XP. In addition, once per battle, in your Command phase, you can add or remove one Warp counter to/from this unit."
+      },
+      "Mighty Champion§Adaptive Camouflage": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "This unit has the Stealth ability and if this unit is in Strategic Reserves, it counts the battle round number as one higher than the current battle round number for the purpose of determining when and where it is set up."
+      },
+      "Mighty Champion§Stalwarts": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Once per battle, in your Command phase, this unit can use this Battle Trait. When it does, if it is Battle-shocked, it is no longer Battle-shocked and, until the end of the turn, this unit is eligible to perform an Action in a turn in which it Fell Back and/or while within Engagement Range of one or more enemy units."
+      },
+      "Mighty Champion§Footsloggers": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Add 1\" to the Move characteristic of models in this unit."
+      },
+      "Mighty Champion§Warp Hunters": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Each time a model in this unit makes an attack that targets the closest eligible target, you can re-roll a Wound roll of 1. If the target of that is an **^^Unbound Adversaries^^** unit, and it is the closest eligible target, you can re-roll the Wound roll instead."
+      },
+      "Mighty Champion§Warding Inscriptions": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Models in this unit have the Feel No Pain 6+ ability against Psychic Attacks and mortal wounds. While this unit has one or more Warp counters, models in this unit have the Feel No Pain 5+ ability against Psychic Attacks and mortal wounds."
+      },
+      "Mighty Champion§Advanced Suspensors": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Ranged Weapons equipped by models in this unit have the **[ASSAULT]** ability."
+      },
+      "Mighty Champion§Extra Armour": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Add 1 to the Toughness characteristic of models in this unit."
+      },
+      "Mighty Champion§Juggernaut": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "You can ignore any or all modifiers to this unit's Move characteristic. In addition, each time this unit makes a Normal move, its models can move through sections of terrain features more than 2\" in height, but if any do so, just after this unit has moved, roll one D6: on a 1-3 this unit is Battle-shocked."
+      },
+      "Mighty Champion§Endless Rage": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "This unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+      },
+      "Mighty Champion§Daemon Hunter": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Each time this unit targets an **^^Unbound Adversaries^^** unit, you can re-roll the Hit roll. In addition, at the Update Crusade Cards step, if this unit would gain XP from Dealers in Death, it gains 1 additional XP."
+      },
+      "Mighty Champion§Tip of the Spear": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "This unit has the Scouts 6\" ability."
+      },
+      "Mighty Champion§Skilled Riders": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Each time this unit makes a Normal, Advance or Charge move, its models can move through sections of terrain features more than 2\" in height, but if any do so, just after this unit has moved, roll one D6: on a 1, this unit suffers D3 mortal wounds and is Battle-shocked; on a 2-3 this unit is Battle-shocked."
+      },
+      "Mighty Champion§Reactive Redeployment": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "After both players have deployed their armies, you can redeploy this unit. When doing so, you can set this unit up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+      },
+      "Mighty Champion§War Beasts": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Add 1 to Advance and Charge rolls made for this unit."
+      },
+      "Mighty Champion§Leaping Frenzy": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit, adding 1 to the result if this unit has 1 or more Warp counters: for each 5+, that enemy unit suffers 1 mortal wound."
+      },
+      "Mighty Champion§Fearsome Predators (Aura)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "While an enemy unit is within 6\" of this unit, worsen the Leadership and Objective characteristics of models in that unit by 1 (to a minimum of 1)."
+      },
+      "Mighty Champion§Ritual of Shrouding (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "At the start of the Deploy Crusade Armies step, you can spend 1RP; if you do, until the end of the battle, each model in this unit has the Infiltrators ability."
+      },
+      "Mighty Champion§Warp Focus (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Add 1 to the Strength characteristic of Psychic weapons equipped by models in this unit. While this unit has one or more Warp counters, add 2 to the Strength characteristic of Psychic weapons equipped by models in this unit instead."
+      },
+      "Mighty Champion§Scrier's Gaze (Aura, Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this unit."
+      },
+      "Mighty Champion§Warp Alacrity (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "You can re-roll Advance and Charge rolls for this unit. In addition, each time this unit is selected to Advance, you can remove one Warp counter from it. If you do, then until the end of the turn, this unit is not eligible to declare a charge (even if another rule would let it Advance and Charge in the same turn), but you do not make an Advance roll; instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit."
+      },
+      "Mighty Champion§Force Shield (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Each time an attack targets this unit (excluding Psychic Attacks), if the Strength characteristic of that attack is greater than the Toughness characteristic of this unit, subtract 1 from the Wound roll."
       }
     },
     "gameModes": {},

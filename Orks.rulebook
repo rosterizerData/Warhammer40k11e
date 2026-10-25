@@ -1,6 +1,6 @@
 {
   "name": "Orks 11e",
-  "revision": "11.2.6",
+  "revision": "11.2.7",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -147,6 +147,402 @@
             "Requisition§Kustom Job",
             "Requisition§Bestest Bossloot"
           ]
+        }
+      },
+      "Unit": {
+        "rules": {
+          "crusadeTagBigMek": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Big Mek"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Big Mek"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagMek": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Mek"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Mek"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagMob": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Mob"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Mob"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagPainboss": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Painboss"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Painboss"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagPainboy": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Painboy"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Painboy"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagSpeedFreeks": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Speed Freeks"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Speed Freeks"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagWalker": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Walker"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Walker"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeNotKillaKans": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "none"
+                  ]
+                ],
+                "value": "notKillaKans"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Killa Kans"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          }
         }
       }
     },
@@ -36044,6 +36440,292 @@
             "value": 11
           }
         }
+      },
+      "Battle Trait§Fungus-fuel Injecta": {
+        "keywords": {
+          "Tags": [
+            "Speed Freeks",
+            "Vehicle"
+          ]
+        },
+        "text": "- Add 2\" to the Move characteristic of models in this unit. - Once per battle, you can target this unit with the Smokescreen Stratagem for 0CP."
+      },
+      "Battle Trait§Fortress on Wheels": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        },
+        "text": "**^^Trukk^^** or **^^Battlewagon^^** model only. Add 1 to the Toughness characteristic of this model, and this model has a 5+ invulnerable save."
+      },
+      "Battle Trait§Shootier Gunz": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        },
+        "text": "Each time this unit is selected to shoot, you can roll one D6; on a 1, until the end of the phase, ranged weapons equipped by models in this unit have the [HAZARDOUS] ability; on a 2-5, until the end of the phase, improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1; on a 6, until the end of the phase, improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1 and those weapons have the [IGNORES COVER] ability."
+      },
+      "Battle Trait§Shokka Hull": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        },
+        "text": "In the Fight phase, each time an enemy unit is selected to fight, if this unit was selected as the target of one or more of the attack unit's attacks, after those attacks have been resolved, roll one D6: on a 4+, that enemy unit suffers D3 mortal wounds."
+      },
+      "Battle Trait§Stompamatic Pistons": {
+        "keywords": {
+          "Tags": [
+            "Vehicle",
+            "Walker",
+            "notKillaKans"
+          ]
+        },
+        "text": "**^^Walker^^** model only (excluding **^^Killa Kans^^**). - Add 2\" to this model's Move characteristic. - Add 1 to Advance and Charge rolls made for this model."
+      },
+      "Battle Trait§Bad Reputation": {
+        "keywords": {
+          "Tags": [
+            "Painboy",
+            "Painboss"
+          ]
+        },
+        "text": "This model has a 5+ invulnerable save."
+      },
+      "Battle Trait§Bionik Targeters": {
+        "keywords": {
+          "Tags": [
+            "Mob"
+          ]
+        },
+        "text": "Each time a model in this unit makes a ranged attack, add 1 to the Hit roll."
+      },
+      "Battle Trait§Boss Mek": {
+        "keywords": {
+          "Tags": [
+            "Big Mek",
+            "Mek"
+          ]
+        },
+        "text": "At the end of the battle, if this model part of your Crusade army and is not destroyed, you can ignore one failed Out of Action test taken for an ORKS VEHICLE unit from your Crusade army - that test is treated as having been passed instead."
+      },
+      "Battle Trait§Dakkaladz": {
+        "keywords": {
+          "Tags": [
+            "Mob"
+          ]
+        },
+        "text": "Once per battle, in your Shooting phase, when this unit is selected to shoot, it can use this ability. If it does, after it has shot, select one enemy unit hit by one or more of those attacks; that enemy unit must take a Battle-shock test."
+      },
+      "Battle Trait§Ded Choppy": {
+        "keywords": {
+          "Tags": [
+            "Mob"
+          ]
+        },
+        "text": "While the Waaagh! is active for your army, each time a model in this unit makes a melee attack, re-roll a Wound roll of 1."
+      },
+      "Battle Trait§Ded Keen": {
+        "keywords": {
+          "Tags": [
+            "Mob"
+          ]
+        },
+        "text": "You can target this unit with the Heroic Intervention Stratagem for 0CP."
+      },
+      "Battle Trait§Gnarly Scars": {
+        "keywords": {
+          "Tags": [
+            "Mob"
+          ]
+        },
+        "text": "While an enemy unit is within Engagement Range of one or more units with this ability, worsen that unit's Leadership characteristic by 1."
+      },
+      "Battle Trait§High-speed Dakka": {
+        "keywords": {
+          "Tags": [
+            "Mounted"
+          ]
+        },
+        "text": "Each time a model in this unit makes a ranged attack, add 1 to the Hit roll."
+      },
+      "Battle Trait§Mekanikal Mekaniak": {
+        "keywords": {
+          "Tags": [
+            "Big Mek",
+            "Mek"
+          ]
+        },
+        "text": "This model has a 5+ invulnerable save."
+      },
+      "Battle Trait§Opportunistic": {
+        "keywords": {
+          "Tags": [
+            "Mob"
+          ]
+        },
+        "text": "Once per battle, at the start of your Command phase, this unit can use this ability. If it does, until the end of the turn, add 1 to the Objective Control characteristics of models in that unit."
+      },
+      "Battle Trait§Recykler": {
+        "keywords": {
+          "Tags": [
+            "Painboy",
+            "Painboss"
+          ]
+        },
+        "text": "At the end of the battle, if this model was part of your Crusade army and is not destroyed, you can ignore one failed Out of Action test taken for an ORKS unit from your Crusade army (excluding VEHICLES) - that test is treated as having been passed instead."
+      },
+      "Battle Trait§Ride 'Em Down": {
+        "keywords": {
+          "Tags": [
+            "Mounted"
+          ]
+        },
+        "text": "Add 1 to Advance and Charge rolls made for this unit."
+      },
+      "Battle Trait§Smog-belchas": {
+        "keywords": {
+          "Tags": [
+            "Mounted"
+          ]
+        },
+        "text": "This unit gains the SMOKE keyword and, once per battle, you can target this unit with the Smokescreen Stratagem for 0CP."
+      },
+      "Crusade Relic§Glowy Gizmo Upgrade": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "**^^Mek^^** model only. ■ Add 1 to the Ballistic Skill and Strength characteristics of the bearer's ranged weapons. ■ Add 6\" to the Range characteristic of the bearer's ranged weapons. Each time the bearer's unit is selected to shoot, if that unit is not within Engagement Range of one or more enemy units, the bearer can use this Crusade Relic. If it does, roll one D6: ■ On a 1, the bearer's unit cannot make ranged attacks this phase. ■ On a 2-3, until the end of the phase, the bearer's ranged weapons have the **[HAZARDOUS]** ability. ■ On a 4+, until the end of the phase, the bearer's ranged weapons have the **[SUSTAINED HITS 1]** ability, and ranged attacks made by the bearer score a Critical Hit on a successful unmodified Hit roll of 5+.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "Mek only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Mek"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Wazgit's Kopper Skullkap": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "**^^Weirdboy^^** or **^^Wurrboy^^** model only. Each time the bearer makes a Psychic Attack, add 1 to the Hit roll and if that attack destroys one or more enemy models, the bearer regains up to 2 lost wounds.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Choppa of Da Great Waaagh!": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "**^^Infantry Waaagh!boss**^^ or **^^Mounted Waaagh!boss**^^ model only. Select one melee weapon equipped by the bearer (excluding Extra Attacks weapons). Add 1 to the Strength and Armour Penetration characteristics of that weapon. In addition, each time you call a Waaagh!, if the bearer is on the battlefield, melee weapons equipped by friendly **^^Orks^^** models have the **[LETHAL HITS]** ability.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Crusade Relic§Ded 'Ard Armour": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "**^^Infantry^^** or **^^Mounted^^** model only. - Add 1 to the bearer's Wounds characteristic. - Each time an attack is allocated to the bearer, worsen the Armour Penetration of that attack by 1."
+      },
+      "Crusade Honour§'Elmet Rack": {
+        "keywords": {
+          "Keywords": [
+            "Bosspole"
+          ],
+          "Tags": [
+            "Orks"
+          ]
+        },
+        "text": "Each time this model's unit takes a Battle-shock or Leadership test, you can ignore any or all modifiers to that test."
+      },
+      "Crusade Honour§Da Shootiest Blasta": {
+        "keywords": {
+          "Keywords": [
+            "Bestest Bossloot"
+          ],
+          "Tags": [
+            "Orks"
+          ]
+        },
+        "text": "Select one ranged weapon equipped by the bearer. That weapon gains the **[MELTA 3]** ability."
+      },
+      "Crusade Honour§Rezmekka's Redder Paint": {
+        "keywords": {
+          "Keywords": [
+            "Bestest Bossloot"
+          ],
+          "Tags": [
+            "Mounted"
+          ]
+        },
+        "text": "**^^Mounted Waaagh!boss**^^ model only. Add 2\" to the Move characteristic of models in the bearer's unit, and models in the bearer's unit have the Fights First ability."
+      },
+      "Crusade Honour§Da Irongob": {
+        "keywords": {
+          "Keywords": [
+            "Bestest Bossloot"
+          ],
+          "Tags": [
+            "Orks"
+          ]
+        },
+        "text": "At the start of the Fight phase, you can select one enemy **^^Infantry^^** unit within Engagement Rage of the bearer and roll one D6: on a 2+, that enemy unit suffers 3 mortal wounds and must take a Battle-shock test."
+      },
+      "Crusade Honour§Frazzle Field Generator": {
+        "keywords": {
+          "Keywords": [
+            "Bestest Bossloot"
+          ],
+          "Tags": [
+            "Orks"
+          ]
+        },
+        "text": "Select one melee weapon equipped by the bearer. That weapon gains the **[DEVASTATING WOUNDS]** ability."
+      },
+      "Crusade Honour§Da Krushin' Armour": {
+        "keywords": {
+          "Keywords": [
+            "Bestest Bossloot"
+          ],
+          "Tags": [
+            "Orks"
+          ]
+        },
+        "text": "- The bearer has a 4+ invulnerable save. - Add 1 to the bearer's Wounds characteristic. - Each time the bearer's unit ends a Charge move, select one enemy unit within Engagement Range of the bearer and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds."
       }
     },
     "gameModes": {},

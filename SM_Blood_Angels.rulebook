@@ -1,6 +1,6 @@
 {
   "name": "Blood Angels 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.5",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -16,7 +16,159 @@
     }
   ],
   "rulebook": {
-    "assetTaxonomy": {},
+    "assetTaxonomy": {
+      "Unit": {
+        "rules": {
+          "crusadeTagCaptain": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Captain"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Captain"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagChaplain": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Chaplain"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Chaplain"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagSanguinaryPriest": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Sanguinary Priest"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Sanguinary Priest"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          }
+        }
+      }
+    },
     "assetCatalog": {
       "Ability§An Honourable Death in Combat": {
         "keywords": {
@@ -11334,6 +11486,39 @@
       },
       "Ability§Death Visions of Sanguinius": {
         "text": "In the Fight phase, when an enemy unit has fought, if this model was destroyed by those attacks, you can use this ability. If you do, roll one D6, with +2 to that roll if this model was engaged with an enemy **WARLORD** unit:\n\n- On a 2-3, that enemy unit suffers D3 mortal wounds.\n\n- On a 4-5, that enemy unit suffers 3 **mortal wounds**.\n\n- On a 6+, that enemy unit suffers D3+3 **mortal wounds**."
+      },
+      "Crusade Honour§Shield of Baal": {
+        "keywords": {
+          "Keywords": [
+            "Angels Ascendant"
+          ],
+          "Tags": [
+            "Captain"
+          ]
+        },
+        "text": "**^^Captain^^** model only. Once per battle, after selecting your Oath of Moment target, you can use this ability. If you do, until the start of your next Command phase, each time this model's unit makes a melee attack that targets your Oath of Moment target, you can re-roll the Wound roll."
+      },
+      "Crusade Honour§Sanguinary High Priest": {
+        "keywords": {
+          "Keywords": [
+            "Angels Ascendant"
+          ],
+          "Tags": [
+            "Sanguinary Priest"
+          ]
+        },
+        "text": "**^^Sanguinary Priest^^** model only. Once per battle, when this model's unit is select to fight, you can use this ability. If you do, until the end of the phase, add 1 to the Attacks characteristic of melee weapon equipped by models in that unit."
+      },
+      "Crusade Honour§Custodian of the Lost": {
+        "keywords": {
+          "Keywords": [
+            "Angels Ascendant"
+          ],
+          "Tags": [
+            "Chaplain"
+          ]
+        },
+        "text": "**^^Chaplain^^** model only. During the Declare Battle Formations step, if this model is attached to a **^^Death Company^^** unit, select one of the **^^Death Company^^** Battle Scars; until the end of the battle, that unit has that Battle Scar in addition to any others it has."
       }
     },
     "gameModes": {},

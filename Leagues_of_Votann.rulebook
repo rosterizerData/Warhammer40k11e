@@ -1,6 +1,6 @@
 {
   "name": "Leagues of Votann 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -11004,6 +11004,187 @@
       },
       "Ability§Brôkhyr Guild Support": {
         "text": "While this unit is within 3\" of one or more friendly Leagues of Votann Vehicle or Ironkin Steeljacks units, if this unit is not an Attached unit, it has the Lone Operative ability."
+      },
+      "Battle Trait§Warrior Pride": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Each time this unit is select to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll."
+      },
+      "Battle Trait§Grim Demeanour": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "Improve the Objective Control and Leadership characteristics of models in this unit by 1."
+      },
+      "Battle Trait§Dour Survivalist": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "**^^Character^^** models in this unit have the Feel No Pain 5+ ability and you can re-roll Out of Action tests taken for this unit."
+      },
+      "Battle Trait§Personal Grudge": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "At the start of the battle, select one unit from your opponent's Crusade army. Each time a model in this unit makes an attack that targets that unit, that attack has the **[LETHAL HITS]** and **[PRECISION]** abilities."
+      },
+      "Battle Trait§Refined Power Cores": {
+        "keywords": {
+          "Tags": [
+            "Mounted"
+          ]
+        },
+        "text": "Add 2\" to the Move characteristic of models in this unit."
+      },
+      "Battle Trait§KV-Ceramide Undersuits": {
+        "keywords": {
+          "Tags": [
+            "Mounted"
+          ]
+        },
+        "text": "Models in this unit have a 5+ invulnerable save."
+      },
+      "Battle Trait§Frontier Weaponsmiths": {
+        "keywords": {
+          "Tags": [
+            "Mounted"
+          ]
+        },
+        "text": "Add 6\" to the Range characteristic of ranged weapons equipped by models in this unit."
+      },
+      "Battle Trait§Ruthless Efficiency": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "This unit always has Hostile Acquisition, even while units from your Crusade army have Fortify Takeover."
+      },
+      "Battle Trait§Vengeful": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Each time a model in this unit makes an attack, add 1 to the Hit roll if this unit is below its Starting Strength. In addition, add 1 to the Wound roll if this unit is Below Half-strength."
+      },
+      "Battle Trait§Ancestral Fury": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Melee weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability."
+      },
+      "Battle Trait§Guardians of Need": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "At the start of the battle, you can select one objective marker on the battlefield. While this unit is within range of that objective marker, it has Fortify Takeover, even while units from your Crusade army have Hostile Acquisition."
+      },
+      "Battle Trait§War-wrought": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "While units from your Crusade army have Fortify Takeover, each time an attack with an unmodified Damage characteristic of 1 is allocated to a model in this unit, add 1 to any armour saving throw made against that attack."
+      },
+      "Crusade Relic§Wayfarer's Grace": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "The first time the bearer is destroyed, roll one D6 at the end of the phase: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Thyrikite Plate": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "While units from your Crusade army have Hostile Acquisition, each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. While units from your Crusade army have Fortify Takeover, each time an attack is allocated to the bearer, change the Damage characteristic of that attack to 1.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§First Knife": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "Each time the bearer makes a melee attack, you can re-roll the Hit roll and you can re-roll the Wound roll. At the end of the Fight phase, you can select one enemy unit within Engagement Range of the bearer and spend up to 4 Yield points. Roll one D6 for each point spent: for each 2+, that enemy unit suffers 1 mortal wound.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Crusade Relic§Murmuring Stave": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "**^^Grimnyr^^** only. When selecting Agendas for a battle, you can select one additional **^^Leagues of Votann^^** Agenda for that battle.",
+        "rules": {
+          "Grimnyr only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Grimnyr"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Grey Crest": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Models in the bearer's unit have the Stealth ability."
+      },
+      "Crusade Relic§Flâyre": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "While units from your Crusade army have Hostile Acquisition, add 2 to the Attacks characteristic of the bearer's melee weapons. While units from your Crusade army have Fortify Takeover, add 1 to the Attacks characteristic of the bearer's melee weapons."
       }
     },
     "gameModes": {},

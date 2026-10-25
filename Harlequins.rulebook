@@ -1,6 +1,6 @@
 {
   "name": "Harlequins 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -6172,6 +6172,106 @@
       },
       "Wargear§Channeller Stones": {
         "text": "Once per turn, the first time a saving throw is failed for the bearer’s unit, change the Damage characteristic of that attack to 0."
+      },
+      "Crusade Relic§Mask of Secrets": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "**^^Harlequins^^** model only. The bearer has the Twisted Phantasm (Aura) ability.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "HARLEQUINS only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Harlequins"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Raiment of the Laughing God": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "**^^Harlequins^^** model only. The bearer's unit is eligible to declare a charge in a turn in which it Advanced or Fell Back. In addition, add 2 to Advance and Charge rolls made for the bearer's unit.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        },
+        "rules": {
+          "HARLEQUINS only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Harlequins"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Serpent's Tail": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "**^^Harlequins^^** model only. Each time the bearer is selected to fight, after resolving those attacks, each enemy unit within 6\" of the bearer's unit must take a Battle-shock test, subtracting 1 from that test.",
+        "rules": {
+          "HARLEQUINS only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Harlequins"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       }
     }
   }

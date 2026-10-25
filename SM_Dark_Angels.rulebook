@@ -1,6 +1,6 @@
 {
   "name": "Dark Angels 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -346,6 +346,153 @@
             "evaluate": "OR",
             "failState": "pass",
             "order": 220
+          },
+          "crusadeTagCaptain": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Captain"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Captain"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagRavenwing": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Ravenwing"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Ravenwing"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagTerminator": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Terminator"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Terminator"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
           }
         }
       }
@@ -9174,6 +9321,51 @@
       },
       "Ability§Emnity for the Unworthy": {
         "text": "This unit’s attacks that target a **CHARACTER** unit have +1 to hit rolls."
+      },
+      "Crusade Honour§Master of Watchers": {
+        "keywords": {
+          "Keywords": [
+            "Inner Circle Advancement"
+          ],
+          "Tags": [
+            "Adeptus Astartes"
+          ]
+        },
+        "text": "At the end of each battle, if your Crusade army for this battle included this model, your Crusade force gains D3 Honour points."
+      },
+      "Crusade Honour§Master of the Ravenwing": {
+        "keywords": {
+          "Keywords": [
+            "Inner Circle Advancement"
+          ],
+          "Tags": [
+            "Ravenwing"
+          ]
+        },
+        "text": "**^^Ravenwing^^** model only. This model's unit can declare a charge in a turn in which it Advanced, and you can re-roll Charge rolls made for that unit."
+      },
+      "Crusade Honour§Keeper of the Unseen Ritual": {
+        "keywords": {
+          "Keywords": [
+            "Inner Circle Advancement"
+          ],
+          "Tags": [
+            "Captain"
+          ]
+        },
+        "text": "**^^Captain^^** model only. Once per battle, when you target another unit with a Stratagem, you can use this ability. If you do, that Stratagem costs 0CP."
+      },
+      "Crusade Honour§Master of the Deathwing": {
+        "keywords": {
+          "Keywords": [
+            "Inner Circle Advancement"
+          ],
+          "Tags": [
+            "Terminator",
+            "Captain"
+          ]
+        },
+        "text": "**^^Terminator Captain^^** model only. Once per battle, after selecting your Oath of Moment target, you can use this ability. If you do, until the start of your next Command phase, each time this model's unit makes an attack that targets your Oath of Moment target, add 1 to the Wound roll."
       }
     },
     "gameModes": {},

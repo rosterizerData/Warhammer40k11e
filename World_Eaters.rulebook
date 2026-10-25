@@ -1,6 +1,6 @@
 {
   "name": "World Eaters 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.5",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -291,6 +291,153 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 250
+          },
+          "crusadeTagGoremongers": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Goremongers"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Goremongers"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagJakhals": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Jakhals"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Jakhals"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeTagPossessed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Possessed"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Possessed"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
           }
         }
       }
@@ -11452,6 +11599,323 @@
             "Multi-weapon"
           ]
         }
+      },
+      "Battle Trait§Iron Rule": {
+        "keywords": {
+          "Tags": [
+            "Jakhals",
+            "Goremongers"
+          ]
+        },
+        "text": "While this unit is within 12\" of one or more friendly **^^World Eaters Character^^** or **^^World Eaters Titanic^^** models, improve the Leadership and Objective Control characteristic of models in this unit by 1."
+      },
+      "Battle Trait§Gore Frenzy": {
+        "keywords": {
+          "Tags": [
+            "Possessed"
+          ]
+        },
+        "text": "At the start of the Fight phase, if this unit is below its Starting Strength, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in this unit."
+      },
+      "Battle Trait§Skull Tithe": {
+        "keywords": {
+          "Tags": [
+            "Possessed"
+          ]
+        },
+        "text": "This unit can gain up to 8 Skull points a battle, rather than a maximum of 5. If this unit gains 1 or more Skull points in a battle, and/or it gains 1 or more Legendary Skull points, it is Marked for Greatness at the end of the battle in addition to any other units from your army."
+      },
+      "Battle Trait§Desperation To Slay": {
+        "keywords": {
+          "Tags": [
+            "Possessed"
+          ]
+        },
+        "text": "Add 2\" to the Move characteristic of models in this unit and you can ignore any or all modifiers to Charge rolls made for this unit."
+      },
+      "Battle Trait§Untrammelled Rage": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        },
+        "text": "Each time this model makes a ranged attack that targets the closest eligible target within 12\", add 1 to the Hit roll. Each time this model declares a charge that targets the closest eligible target, add 2 to the Charge roll."
+      },
+      "Battle Trait§Blazing Runes": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        },
+        "text": "At the start of your Command phases, this model regains D3 lost wounds. In addition, you can re-roll failed Out of Action tests for this model."
+      },
+      "Battle Trait§Brazen Resistance": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        },
+        "text": "Add 2 to this model's Wounds characteristic."
+      },
+      "Battle Trait§Peerless Fighters": {
+        "keywords": {
+          "Tags": [
+            "Infantry",
+            "Monster"
+          ]
+        },
+        "text": "Each time a model in this unit makes a melee attack, re-roll a Hit roll of 1. If this unit made a Charge move this turn then, until the end of the turn, each time a model in this unit makes a melee attack, you can also re-roll a Wound roll of 1."
+      },
+      "Battle Trait§Aspiring Champions": {
+        "keywords": {
+          "Tags": [
+            "Infantry",
+            "Monster"
+          ]
+        },
+        "text": "This unit gains 2XP from Dealers of Death, instead of just 1XP."
+      },
+      "Battle Trait§Slayers of Champions": {
+        "keywords": {
+          "Tags": [
+            "Infantry",
+            "Monster"
+          ]
+        },
+        "text": "Melee weapons equipped by models in this unit have the **[PRECISION]** ability."
+      },
+      "Battle Trait§Red Haze": {
+        "keywords": {
+          "Tags": [
+            "Infantry",
+            "Monster"
+          ]
+        },
+        "text": "Each time a melee attack with a Damage characteristic of 1 is allocated to a model in this unit, that model has the Feel No Pain 5+ ability against that attack."
+      },
+      "Battle Trait§Mindless Onslaught": {
+        "keywords": {
+          "Tags": [
+            "Infantry",
+            "Monster"
+          ]
+        },
+        "text": "This unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+      },
+      "Battle Trait§Bloody Destiny": {
+        "keywords": {
+          "Tags": [
+            "Infantry",
+            "Monster"
+          ]
+        },
+        "text": "Each time the bearer makes an offering to Khorne, you can re-roll the Judgement roll."
+      },
+      "Battle Trait§Refined Stimms": {
+        "keywords": {
+          "Tags": [
+            "Jakhals",
+            "Goremongers"
+          ]
+        },
+        "text": "Each time this unit is selected to fight, you can choose to use this Battle Trait. If you do, until the end of the phase, add 2 to the Attacks characteristic of melee weapons equipped by models in this unit and those weapons have the **[HAZARDOUS]** ability."
+      },
+      "Battle Trait§Scarified Dedications": {
+        "keywords": {
+          "Tags": [
+            "Jakhals",
+            "Goremongers"
+          ]
+        },
+        "text": "Each time this unit is destroyed, it gains 1 Skull point and 1XP. Each time this unit gains a Battle Scar, it gains an additional D3 Skull points and D3XP."
+      },
+      "Crusade Relic§Mighty Skull Rack": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "While a friendly **^^World Eaters^^** unit is within 6\" of this model, each time a model in that unit makes a melee attack, if this model's unit (excluding Bodyguard units) has 3 or more Skull points, re-roll a Hit roll of 1. While this model's unit (excluding Bodyguard units) has 1 or more Legendary Skull points, this ability has a range of 9\".",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Talisman of Rage": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "The first Blessing of Khorne activated for your army is active for the bearer's unit until the end of the battle round, and its effects will apply to the bearer's unit in addition to any other Blessings of Khorne active during the battle. Duplicated Blessings of Khorne have no additional effect on the bearer's unit.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§Skull of An'gr'antk": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "If the bearer is in your Crusade army, then during the Select Crusade Blessings step, roll one D6 if you are not the Underdog: on a 4+, you can select one Crusade Blessing to use in that battle.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Crusade Relic§G'rmakht the Destroyer": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "Improve the Attacks, Strength, Armour Penetration and Damage characteristics of the bearer's melee weapons by 1.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Crusade Relic§Gorefather": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "The bearer's melee weapons have the **[DEVASTATING WOUNDS]** ability. At the end of the Fight phase, you can select one enemy unit within Engagement Range of the bearer and roll eight D6: for each 4+, that enemy unit suffers 1 mortal wound.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Crusade Relic§Burning Plate": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Add 1 to the bearer's Toughness characteristic. Each time the bearer's unit is selected to fight, select one enemy unit within Engagement Range of this model and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds."
+      },
+      "Crusade Relic§Bloodstep Blade": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Each time the bearer's unit destroys one or more units in the Fight phase, if there are no enemy units within 3\" of the bearer's unit at the Consolidate step, you can choose to remove the bearer's unit from the battlefield and place it into Strategic Reserves. If you do, until after the bearer's unit has been set back up on the battlefield, models in the bearer's unit have the Deep Strike."
+      },
+      "Crusade Relic§Brass Collar of Bhorghaster": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "At the start of your Shooting phase, select one enemy **^^Psyker^^** unit within 18\" of and visible to the bearer. That unit must take a Battle-shock test, subtracting 2 from the result. If the test is failed, that enemy unit suffers 3 mortal wounds."
+      },
+      "Crusade Honour§Collar of Khorne": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Khorne"
+          ],
+          "Tags": [
+            "World Eaters"
+          ]
+        },
+        "text": "This model has the Feel No Pain 4+ ability against Psychic Attacks. While this model is leading a unit, Bodyguard models in that unit have the Feel No Pain 5+ ability against Psychic Attacks."
+      },
+      "Crusade Honour§Bestial Limbs": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Khorne"
+          ],
+          "Tags": [
+            "World Eaters"
+          ]
+        },
+        "text": "Add 1 to Advance and Charge rolls for this model's unit."
+      },
+      "Crusade Honour§Muscular Bulk": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Khorne"
+          ],
+          "Tags": [
+            "World Eaters"
+          ]
+        },
+        "text": "Add 2 to this model's Wounds characteristic."
+      },
+      "Crusade Honour§Jagged Horns": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Khorne"
+          ],
+          "Tags": [
+            "World Eaters"
+          ]
+        },
+        "text": "This model's melee weapons have the **[LANCE]** ability."
+      },
+      "Crusade Honour§Daemonic Visage": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Khorne"
+          ],
+          "Tags": [
+            "World Eaters"
+          ]
+        },
+        "text": "Improve this model's Leadership characteristic by 1 and its Objective Control characteristic by 2. If this model is within range of an objective marker you control that is wholly within your opponent's deployment zone at the end of the battle, you gain 1RP."
+      },
+      "Crusade Honour§Brazen Flesh": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Khorne"
+          ],
+          "Tags": [
+            "World Eaters"
+          ]
+        },
+        "text": "This model has a Save characteristic of 2+."
+      },
+      "Crusade Honour§Steel Sinews": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Khorne"
+          ],
+          "Tags": [
+            "World Eaters"
+          ]
+        },
+        "text": "Add 1\" to the Move characteristic of models in this model's unit and add 1 to Advance rolls made for this model's unit."
+      },
+      "Crusade Honour§Tearing Claws": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Khorne"
+          ],
+          "Tags": [
+            "World Eaters"
+          ]
+        },
+        "text": "Add 1 to the Attacks characteristic of melee weapons equipped by this model. If this model destroys eight or more models during a battle, at the end of the battle, it gains 1 bonus Skull point."
+      },
+      "Crusade Honour§Warp Strength": {
+        "keywords": {
+          "Keywords": [
+            "Boons of Khorne"
+          ],
+          "Tags": [
+            "World Eaters"
+          ]
+        },
+        "text": "Improve the Strength characteristic of melee weapons equipped by this model by 2. If this model destroys one or more **^^Monster^^** models and/or one or more **^^Character^^** models during a battle, at the end of the battle, it gains 1 bonus Skull point."
       }
     },
     "gameModes": {},
