@@ -1,6 +1,6 @@
 {
   "name": "40k 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -7269,7 +7269,8 @@
             "statType": "numeric",
             "tracked": true,
             "value": 0,
-            "visibility": "hidden"
+            "visibility": "hidden",
+            "max": 1
           }
         }
       },
