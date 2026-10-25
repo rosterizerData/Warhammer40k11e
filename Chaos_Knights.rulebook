@@ -1,6 +1,6 @@
 {
   "name": "Chaos Knights 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.5",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1627,7 +1627,14 @@
             "value": 20
           }
         },
-        "text": "**WAR DOG** model only. While a friendly **WAR DOG** model is within 6\" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1."
+        "text": "**WAR DOG** model only. While a friendly **WAR DOG** model is within 6\" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1.",
+        "removed": {
+          "keywords": {
+            "Tags": [
+              "Character Only"
+            ]
+          }
+        }
       },
       "Enhancement§Fleshmetal Fusion": {
         "keywords": {
@@ -1926,7 +1933,14 @@
             "value": 10
           }
         },
-        "text": "**WAR DOG** model only. The bearer’s ranged weapons have the **[ASSAULT]** ability."
+        "text": "**WAR DOG** model only. The bearer’s ranged weapons have the **[ASSAULT]** ability.",
+        "removed": {
+          "keywords": {
+            "Tags": [
+              "Character Only"
+            ]
+          }
+        }
       },
       "Enhancement§Malevolent Heraldry": {
         "keywords": {
@@ -2101,7 +2115,14 @@
             "value": 15
           }
         },
-        "text": "**WAR DOG** model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1."
+        "text": "**WAR DOG** model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.",
+        "removed": {
+          "keywords": {
+            "Tags": [
+              "Character Only"
+            ]
+          }
+        }
       },
       "Enhancement§Preyslayer’s Mantle": {
         "keywords": {
@@ -2135,6 +2156,13 @@
             ],
             "evaluate": "AND",
             "failState": "error"
+          }
+        },
+        "removed": {
+          "keywords": {
+            "Tags": [
+              "Character Only"
+            ]
           }
         }
       },
@@ -2646,6 +2674,74 @@
               }
             ],
             "evaluate": "AND",
+            "failState": "error"
+          },
+          "Houndpack Lance: your army must include three or more War Dog units": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Houndpack Lance"
+              },
+              {
+                "actionable": true,
+                "min": 3,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "War Dog"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Houndpack Lance: select three War Dog units to be Characters": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Houndpack Lance"
+              },
+              {
+                "actionable": true,
+                "min": 3,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "characterWarDog"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "OR",
             "failState": "error"
           }
         },
@@ -3463,6 +3559,262 @@
         "stats": {
           "Points": {
             "value": 135
+          },
+          "Houndpack Alpha": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "statOrder": 9,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "characterWarDog": 1
+                }
+              }
+            }
+          },
+          "Warlord": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "number": 1,
+                "order": 1,
+                "tracking": {}
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
+          "Enhancement": {
+            "max": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        },
+        "rules": {
+          "houndpackOffer": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Houndpack Lance"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battleline"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3,
+            "note": "Houndpack Lance: War Dog units have the BATTLELINE keyword; three of them are selected to be CHARACTERS"
+          },
+          "houndpackReset": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Houndpack Lance"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3
+          },
+          "houndpackCharacter": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Character"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Enhancement"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4,
+            "note": "a selected War Dog has the CHARACTER keyword: it can be given Enhancements and can be the WARLORD"
+          },
+          "houndpackNotCharacter": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4
           }
         }
       },
@@ -3470,6 +3822,262 @@
         "stats": {
           "Points": {
             "value": 135
+          },
+          "Houndpack Alpha": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "statOrder": 9,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "characterWarDog": 1
+                }
+              }
+            }
+          },
+          "Warlord": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "number": 1,
+                "order": 1,
+                "tracking": {}
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
+          "Enhancement": {
+            "max": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        },
+        "rules": {
+          "houndpackOffer": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Houndpack Lance"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battleline"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3,
+            "note": "Houndpack Lance: War Dog units have the BATTLELINE keyword; three of them are selected to be CHARACTERS"
+          },
+          "houndpackReset": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Houndpack Lance"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3
+          },
+          "houndpackCharacter": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Character"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Enhancement"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4,
+            "note": "a selected War Dog has the CHARACTER keyword: it can be given Enhancements and can be the WARLORD"
+          },
+          "houndpackNotCharacter": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4
           }
         }
       },
@@ -3477,6 +4085,262 @@
         "stats": {
           "Points": {
             "value": 145
+          },
+          "Houndpack Alpha": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "statOrder": 9,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "characterWarDog": 1
+                }
+              }
+            }
+          },
+          "Warlord": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "number": 1,
+                "order": 1,
+                "tracking": {}
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
+          "Enhancement": {
+            "max": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        },
+        "rules": {
+          "houndpackOffer": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Houndpack Lance"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battleline"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3,
+            "note": "Houndpack Lance: War Dog units have the BATTLELINE keyword; three of them are selected to be CHARACTERS"
+          },
+          "houndpackReset": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Houndpack Lance"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3
+          },
+          "houndpackCharacter": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Character"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Enhancement"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4,
+            "note": "a selected War Dog has the CHARACTER keyword: it can be given Enhancements and can be the WARLORD"
+          },
+          "houndpackNotCharacter": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4
           }
         }
       },
@@ -3484,6 +4348,50 @@
         "stats": {
           "Points": {
             "value": 135
+          },
+          "Houndpack Alpha": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "statOrder": 9,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "characterWarDog": 1
+                }
+              }
+            }
+          },
+          "Warlord": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "number": 1,
+                "order": 1,
+                "tracking": {}
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
+          "Enhancement": {
+            "max": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
           }
         },
         "assets": {
@@ -3497,6 +4405,218 @@
               }
             }
           ]
+        },
+        "rules": {
+          "houndpackOffer": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Houndpack Lance"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battleline"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3,
+            "note": "Houndpack Lance: War Dog units have the BATTLELINE keyword; three of them are selected to be CHARACTERS"
+          },
+          "houndpackReset": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Houndpack Lance"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3
+          },
+          "houndpackCharacter": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Character"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Enhancement"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4,
+            "note": "a selected War Dog has the CHARACTER keyword: it can be given Enhancements and can be the WARLORD"
+          },
+          "houndpackNotCharacter": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4
+          }
         }
       },
       "Stratagem§Pitiless Focus": {
@@ -4943,6 +6063,526 @@
       },
       "Ability§Wall of Muscle": {
         "text": "Each time an attack is allocated to a model in this unit, subtract 1 from the Damage characteristic of that attack."
+      },
+      "Unit§War Dog Executioner": {
+        "stats": {
+          "Houndpack Alpha": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "statOrder": 9,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "characterWarDog": 1
+                }
+              }
+            }
+          },
+          "Warlord": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "number": 1,
+                "order": 1,
+                "tracking": {}
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
+          "Enhancement": {
+            "max": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        },
+        "rules": {
+          "houndpackOffer": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Houndpack Lance"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battleline"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3,
+            "note": "Houndpack Lance: War Dog units have the BATTLELINE keyword; three of them are selected to be CHARACTERS"
+          },
+          "houndpackReset": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Houndpack Lance"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3
+          },
+          "houndpackCharacter": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Character"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Enhancement"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4,
+            "note": "a selected War Dog has the CHARACTER keyword: it can be given Enhancements and can be the WARLORD"
+          },
+          "houndpackNotCharacter": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4
+          }
+        }
+      },
+      "Unit§War Dog Moirax": {
+        "stats": {
+          "Houndpack Alpha": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "statOrder": 9,
+            "statType": "rank",
+            "value": "-",
+            "visibility": "hidden",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "characterWarDog": 1
+                }
+              }
+            }
+          },
+          "Warlord": {
+            "dynamic": true,
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "✓": {
+                "number": 1,
+                "order": 1,
+                "tracking": {}
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "-",
+            "visibility": "hidden"
+          },
+          "Enhancement": {
+            "max": 1,
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        },
+        "rules": {
+          "houndpackOffer": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Houndpack Lance"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battleline"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3,
+            "note": "Houndpack Lance: War Dog units have the BATTLELINE keyword; three of them are selected to be CHARACTERS"
+          },
+          "houndpackReset": {
+            "evals": [
+              {
+                "actionable": true,
+                "contains": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Detachment",
+                    "value"
+                  ]
+                ],
+                "value": "Houndpack Lance"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3
+          },
+          "houndpackCharacter": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Character"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Enhancement"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4,
+            "note": "a selected War Dog has the CHARACTER keyword: it can be given Enhancements and can be the WARLORD"
+          },
+          "houndpackNotCharacter": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Houndpack Alpha",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4
+          }
+        }
       }
     },
     "gameModes": {},
