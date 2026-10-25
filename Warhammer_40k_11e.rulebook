@@ -1,6 +1,6 @@
 {
   "name": "40k 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -13959,7 +13959,7 @@
             "statOrder": 2,
             "statType": "rank",
             "value": "Matched",
-            "visibility": "hidden"
+            "visibility": "normal"
           },
           "Points": {
             "group": "Cost",
