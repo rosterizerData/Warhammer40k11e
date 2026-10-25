@@ -1,6 +1,6 @@
 {
   "name": "Orks 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -18577,83 +18577,6 @@
           }
         }
       },
-      "Unit§Big Mek Dakkarig": {
-        "aspects": {
-          "Type": "game piece"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Waaagh!",
-            {
-              "item": "Ability§Invulnerable",
-              "stats": {
-                "x": {
-                  "value": "5+"
-                }
-              }
-            },
-            {
-              "item": "Ability§Deadly Demise",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            },
-            "Ability§Even More Dakka",
-            "Ability§Blitz Dem Gitz!",
-            "Ranged Weapon§Big Mek Dakkarig—Blitzkannon",
-            "Ranged Weapon§Big Mek Dakkarig—Multi-busta Launcha",
-            "Melee Weapon§Big Mek Dakkarig—Stompy feet"
-          ]
-        },
-        "keywords": {
-          "Faction": [
-            "Orks"
-          ],
-          "Source": [
-            "11th Edition Codex"
-          ],
-          "Keywords": [
-            "Vehicle",
-            "Walker",
-            "Big Mek",
-            "Character"
-          ],
-          "Category": [
-            "Vehicle—Walker"
-          ]
-        },
-        "stats": {
-          "Ld": {
-            "value": 7
-          },
-          "M": {
-            "value": 8
-          },
-          "OC": {
-            "value": 3
-          },
-          "Points": {
-            "value": 180
-          },
-          "Sv": {
-            "value": 3
-          },
-          "T": {
-            "value": 8
-          },
-          "unitDiscount": {
-            "value": 20
-          },
-          "unitDiscountThreshold": {
-            "value": 3
-          },
-          "W": {
-            "value": 11
-          }
-        }
-      },
       "Unit§Big Trakk": {
         "aspects": {
           "Type": "game piece"
@@ -36043,6 +35966,83 @@
             "Melee Weapon§Rukkatrukk Squigbuggies—Saw blades",
             "Ranged Weapon§Rukkatrukk Squigbuggies—Squig launchas"
           ]
+        }
+      },
+      "Character§Big Mek Dakkarig": {
+        "aspects": {
+          "Type": "game piece"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Waaagh!",
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "5+"
+                }
+              }
+            },
+            {
+              "item": "Ability§Deadly Demise",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Even More Dakka",
+            "Ability§Blitz Dem Gitz!",
+            "Ranged Weapon§Big Mek Dakkarig—Blitzkannon",
+            "Ranged Weapon§Big Mek Dakkarig—Multi-busta Launcha",
+            "Melee Weapon§Big Mek Dakkarig—Stompy feet"
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Orks"
+          ],
+          "Source": [
+            "11th Edition Codex"
+          ],
+          "Keywords": [
+            "Vehicle",
+            "Walker",
+            "Big Mek",
+            "Character"
+          ],
+          "Category": [
+            "Character"
+          ]
+        },
+        "stats": {
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 8
+          },
+          "OC": {
+            "value": 3
+          },
+          "Points": {
+            "value": 180
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 8
+          },
+          "unitDiscount": {
+            "value": 20
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          },
+          "W": {
+            "value": 11
+          }
         }
       }
     },

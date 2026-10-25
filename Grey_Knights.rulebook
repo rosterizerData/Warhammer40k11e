@@ -1,6 +1,6 @@
 {
   "name": "Grey Knights 11e",
-  "revision": "11.2.1",
+  "revision": "11.2.2",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1457,115 +1457,6 @@
           "W": {
             "value": 7
           }
-        }
-      },
-      "Vehicle§Venerable Dreadnought": {
-        "aspects": {
-          "Label": "Venerable Dreadnought",
-          "Type": "game piece"
-        },
-        "stats": {
-          "M": {
-            "value": 8
-          },
-          "Points": {
-            "value": 140
-          },
-          "Primary": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Assault cannon": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Venerable Dreadnought—Assault cannon"
-                  }
-                ]
-              },
-              "Heavy plasma cannon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Venerable Dreadnought—Heavy plasma cannon"
-                  }
-                ]
-              },
-              "Twin lascannon": {
-                "order": 2,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Venerable Dreadnought—Twin lascannon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Assault cannon",
-            "visibility": "active"
-          },
-          "Secondary": {
-            "dynamic": true,
-            "group": "Loadout",
-            "groupOrder": 2,
-            "ranks": {
-              "Storm bolter + Dreadnought combat weapon": {
-                "order": 0,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Venerable Dreadnought—Storm bolter"
-                  },
-                  {
-                    "trait": "Melee Weapon§Venerable Dreadnought—Dreadnought combat weapon"
-                  }
-                ]
-              },
-              "Heavy Flamer + Dreadnought combat weapon": {
-                "order": 1,
-                "traits": [
-                  {
-                    "trait": "Ranged Weapon§Venerable Dreadnought—Heavy flamer"
-                  },
-                  {
-                    "trait": "Melee Weapon§Venerable Dreadnought—Dreadnought combat weapon"
-                  }
-                ]
-              }
-            },
-            "statType": "rank",
-            "value": "Storm bolter + Dreadnought combat weapon",
-            "visibility": "active"
-          },
-          "unitDiscount": {
-            "value": 10
-          },
-          "unitDiscountThreshold": {
-            "value": 3
-          }
-        },
-        "assets": {
-          "traits": [
-            "Ability§Guidance of the Ancients (aura)",
-            "Ability§Deep Strike",
-            "Ability§Gate of Infinity"
-          ]
-        },
-        "keywords": {
-          "Category": [
-            "Character"
-          ],
-          "Faction": [
-            "Grey Knights"
-          ],
-          "Keywords": [
-            "Character",
-            "Psyker",
-            "Venerable Dreadnought"
-          ],
-          "Source": [
-            "10th Edition Codex"
-          ]
         }
       },
       "Character§Kaldor Draigo": {
@@ -12809,6 +12700,142 @@
       },
       "Ability§Wisdom of the Ancients": {
         "text": "_Aura_\n\nWhile a friendly Grey Knights Infantry unit is within 6\" of this model, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+      },
+      "Character§Venerable Dreadnought": {
+        "aspects": {
+          "Label": "Venerable Dreadnought",
+          "Type": "game piece"
+        },
+        "stats": {
+          "M": {
+            "value": 8
+          },
+          "Points": {
+            "value": 140
+          },
+          "Primary": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Assault cannon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Venerable Dreadnought—Assault cannon"
+                  }
+                ]
+              },
+              "Heavy plasma cannon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Venerable Dreadnought—Heavy plasma cannon"
+                  }
+                ]
+              },
+              "Twin lascannon": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Venerable Dreadnought—Twin lascannon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Assault cannon",
+            "visibility": "active"
+          },
+          "Secondary": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 2,
+            "ranks": {
+              "Storm bolter + Dreadnought combat weapon": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Venerable Dreadnought—Storm bolter"
+                  },
+                  {
+                    "trait": "Melee Weapon§Venerable Dreadnought—Dreadnought combat weapon"
+                  }
+                ]
+              },
+              "Heavy Flamer + Dreadnought combat weapon": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ranged Weapon§Venerable Dreadnought—Heavy flamer"
+                  },
+                  {
+                    "trait": "Melee Weapon§Venerable Dreadnought—Dreadnought combat weapon"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "value": "Storm bolter + Dreadnought combat weapon",
+            "visibility": "active"
+          },
+          "unitDiscount": {
+            "value": 10
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          },
+          "Ld": {
+            "value": 6
+          },
+          "OC": {
+            "value": 3
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 9
+          },
+          "W": {
+            "value": 8
+          }
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Deadly Demise",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            },
+            "Ability§Guidance of the Ancients (aura)",
+            "Ability§Deep Strike",
+            "Ability§Gate of Infinity"
+          ]
+        },
+        "keywords": {
+          "Category": [
+            "Character"
+          ],
+          "Faction": [
+            "Grey Knights"
+          ],
+          "Keywords": [
+            "Vehicle",
+            "Walker",
+            "Smoke",
+            "Imperium",
+            "Character",
+            "Psyker",
+            "Venerable Dreadnought"
+          ],
+          "Source": [
+            "10th Edition Codex"
+          ]
+        }
       }
     },
     "gameModes": {},
