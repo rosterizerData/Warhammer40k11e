@@ -1,6 +1,6 @@
 {
   "name": "Adepta Sororitas 11e",
-  "revision": "11.2.6",
+  "revision": "11.2.8",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -167,6 +167,601 @@
             "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
           }
         }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Test of Faith": {
+                "order": 100,
+                "tracking": {
+                  "Adepta Sororitas Agenda": 1
+                }
+              },
+              "Atonement in Battle": {
+                "order": 101,
+                "tracking": {
+                  "Adepta Sororitas Agenda": 1
+                }
+              },
+              "Defend the Shrine": {
+                "order": 102,
+                "tracking": {
+                  "Adepta Sororitas Agenda": 1
+                }
+              },
+              "Pious Purgation": {
+                "order": 103,
+                "tracking": {
+                  "Adepta Sororitas Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Test of Faith": {
+                "order": 100,
+                "tracking": {
+                  "Adepta Sororitas Agenda": 1
+                }
+              },
+              "Atonement in Battle": {
+                "order": 101,
+                "tracking": {
+                  "Adepta Sororitas Agenda": 1
+                }
+              },
+              "Defend the Shrine": {
+                "order": 102,
+                "tracking": {
+                  "Adepta Sororitas Agenda": 1
+                }
+              },
+              "Pious Purgation": {
+                "order": 103,
+                "tracking": {
+                  "Adepta Sororitas Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Divine Calling",
+            "Requisition§Ascension to the Order",
+            "Requisition§The Penitent Path",
+            "Requisition§Glorious Redemption",
+            "Requisition§In Suffering, Enlightenment",
+            "Requisition§Saintly Benedictions",
+            "Crusade Badge§Warrior of the Faith",
+            "Crusade Badge§Zealous Champion",
+            "Crusade Badge§Living Saint"
+          ]
+        }
+      },
+      "Character": {
+        "stats": {
+          "Saint Potentia": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Saint Potentia": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "statOrder": 20
+          },
+          "Trial": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Trial of Faith": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ability§Trial of Faith"
+                  }
+                ]
+              },
+              "Trial of Suffering": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ability§Trial of Suffering"
+                  }
+                ]
+              },
+              "Trial of Purity": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ability§Trial of Purity"
+                  }
+                ]
+              },
+              "Trial of Righteousness": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Ability§Trial of Righteousness"
+                  }
+                ]
+              },
+              "Trial of Valour": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Ability§Trial of Valour"
+                  }
+                ]
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "label": "Trial undertaken",
+            "statOrder": 21
+          },
+          "Saint Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 10,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "icons": [
+              "halo"
+            ],
+            "statOrder": 22
+          },
+          "Martyr Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 12,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "statOrder": 23
+          }
+        },
+        "rules": {
+          "crusadeShowSaintPotentia": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Saint Potentia",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeShowTrial": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Trial",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Saint Potentia",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeShowSaintPoints": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Saint Points",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Saint Potentia",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeShowMartyrPoints": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Martyr Points",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Saint Potentia",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "saintPotentiaKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Saint Potentia"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Saint Potentia",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "Trial complete: 10 Saint points — take the Saintly Reward and reset to 0.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Saint Points",
+                    "value"
+                  ]
+                ],
+                "max": 9
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "warning",
+            "order": 5
+          },
+          "livingSaint": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": " (Living Saint)",
+                "append": ""
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Saint Potentia",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Saintly Reward"
+                  ]
+                ],
+                "min": 5
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5,
+            "note": "five Saintly Rewards: the SAINT POTENTIA keyword becomes LIVING SAINT"
+          },
+          "allowSaintlyReward": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Saintly Reward"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Saint Potentia",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Saintly Rewards: the Battle Honour gained when the Saint Potentia completes the matching Trial (10 Saint points)"
+          }
+        }
+      },
+      "Saintly Reward": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Trials of a Living Saint": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": ""
       }
     },
     "assetCatalog": {
@@ -12836,6 +13431,157 @@
             },
             "value": "Imperium"
           }
+        },
+        "rules": {
+          "One Saint Potentia only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Saint Potentia"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "useCrusadeAdepta_Sororitas": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Trials of a Living Saint§Trials of a Living Saint"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
+          },
+          "Only one Boundless Faith in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Boundless Faith"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Miraculous Recovery in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Miraculous Recovery"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Blazing Soulfire in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Blazing Soulfire"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Righteous Judgement in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Righteous Judgement"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Voice of the Emperor in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Voice of the Emperor"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
         }
       },
       "Stratagem§Angelic Descent": {
@@ -17073,71 +17819,135 @@
         },
         "text": "The bearer has a 4+ invulnerable save. Each time the bearer's unit is selected as the target of an attack, you can discard 1 Miracle dice. If you do, until the end of the phase, the bearer has a 3+ invulnerable save."
       },
-      "Crusade Honour§Trial of Valour": {
-        "keywords": {
-          "Keywords": [
-            "Trials of a Living Saint"
-          ],
-          "Tags": [
-            "Adepta Sororitas"
-          ]
+      "Requisition§Divine Calling": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
         },
-        "text": "Gain 3 Saint points at the end of a battle if this model is wholly within your opponent's deployment zone."
+        "text": "Purchase this Requisition at the end of a battle, when your SAINT POTENTIA model abandons its current Trial and starts a new one. After resetting its Saint points to 0, it gains a number of Saint points towards its new Trial equal to half the number of Saint points it had gained towards that abandoned Trial (rounding up)."
       },
-      "Crusade Honour§Trial of Faith": {
+      "Requisition§Ascension to the Order": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition before a battle. Select one SISTERS NOVITIATES SQUAD unit on your Order of Battle with the Blooded rank or higher. Remove that unit from your Order of Battle and add one BATTLE SISTERS SQUAD, DOMINION SQUAD or RETRIBUTOR SQUAD unit to your Order of Battle. The new unit has the same Battle Honours and Battle Scars as the unit it replaced, and has 5 more XP than the unit it replaced.*"
+      },
+      "Requisition§The Penitent Path": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition before a battle. Select one of the following:\n\nSelect one BATTLE SISTERS SQUAD, DOMINION SQUAD or RETRIBUTOR SQUAD unit on your Order of Battle that has suffered a Devastating Blow result. Remove that unit from your Order of Battle and add one REPENTIA SQUAD unit to your Order of Battle.\n\nSelect one REPENTIA SQUAD unit on your Order of Battle that has suffered a Devastating Blow result. Remove that unit from your Order of Battle and add one MORTIFIERS unit to your Order of Battle.\n\nIn either case, the new unit has the same Battle Honours, Battle Scars and XP as the unit it replaced, and until it is removed from your Order of Battle, it will gain 2XP from Dealers of Death, instead of just 1XP.*"
+      },
+      "Requisition§Glorious Redemption": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a battle. Select one REPENTIA SQUAD unit on your Order of Battle that has 3 Redemption points (see the Atonement in Battle Agenda). Remove that unit from your Order of Battle and add a SERAPHIM SQUAD, ZEPHYRIM SQUAD, CELESTIAN SACRESANTS or PARAGON WARSUITS unit to your Order of Battle. The new unit has the same Battle Honours and Battle Scars as the unit it replaced, and gains one Battle Trait of your choice (this must be a Battle Trait it can have, but does not count towards the maximum number of Battle Traits a unit can have). If the Legendary Veterans Requisition is used on this unit, that Requisition only costs you 1RP.*"
+      },
+      "Requisition§In Suffering, Enlightenment": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after a battle, before an ADEPTA SORORITAS unit from your Crusade army takes an Out of Action test. That test is automatically failed and that unit gains 1 Battle Scar and 1 Battle Honour of your choice. If that unit was a SAINT POTENTIA, it also gains 3 Saint points and 1 Martyr point. You cannot use this Requisition on the same unit more than once."
+      },
+      "Requisition§Saintly Benedictions": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a battle. During the first battle round of that battle, each of the Miracle dice you gain at the start of each player’s turn is automatically a 6.\n\n* You cannot purchase this Requisition if doing so would cause your Crusade force to exceed its current Supply Limit."
+      },
+      "Crusade Badge§Warrior of the Faith": {
+        "text": "You have shown yourself to possess the faith, fury and tactical acumen to lead the forces of the Adepta Sororitas to battle. By your hand have heretics and xenos been purged with holy fire. Priesthood and penitents flock to join your holy war, convinced that you are destined for greatness, and that by fighting as well they may earn the Emperor’s favour.\nYou have completed one Trial of a Living Saint.\nYou have used the Ascension to the Order Requisition to add one or more new units to your Order of Battle.\nYou have won two or more battles."
+      },
+      "Crusade Badge§Zealous Champion": {
+        "text": "You have borne the Emperor's light into the darkness and with it burned away the taint of witchery, mutation and xenos infestation. The thronging faithful look upon you and see a divine instrument of the Emperor's wrath.\nYou have completed three or more different Trials of a Living Saint.\nOne or more ADEPTA SORORITAS units from your Crusade force have one or more Battle Scars, or your SAINT POTENTIA model has 2 or more Martyr points.\nYou have used The Penitent Path Requisition to add one or more new units to your Order of Battle.\nYou have won six or more battles."
+      },
+      "Crusade Badge§Living Saint": {
+        "text": "You are an arch-protector of the faith, a paragon of the Imperial Creed and a radiant instrument of the Emperor’s divine will in whose presence miracles are wrought. Enemies quiver before your holy aspect.\nYour Order of Battle contained a LIVING SAINT (even if that model was subsequently Martyred).\nOne or more ADEPTA SORORITAS units from your Crusade force have been removed from your Order of Battle because they received too many Battle Scars, or your SAINT POTENTIA or LIVING SAINT model has been Martyred.\nYou have used the Glorious Redemption Requisition to add one or more new units to your Order of Battle.\nYou have won ten or more battles."
+      },
+      "Ability§Trial of Faith": {
+        "text": "**Beacon of Divine Grace:** gain 2 Saint points at the end of a battle if this model performed 3 or more Acts of Faith during that battle. **Miraculous Feat:** gain 1 Saint point at the end of a battle for each Miracle dice remaining in your Miracle Dice pool (to a maximum of 2 Saint points)."
+      },
+      "Ability§Trial of Suffering": {
+        "text": "**Scars of the Penitent:** gain 3 Saint points each time this model gains a Martyr point. **Martyr’s Wounds:** gain 1 Saint point at the end of a battle if this model is below its Starting Strength, or 2 Saint points instead if this model was destroyed while within range of an objective marker."
+      },
+      "Ability§Trial of Purity": {
+        "text": "**Consecrate Ground:** gain 2 Saint points at the end of a battle if this model is within 6\" of the centre of the battlefield. **Divine Will:** gain 2 Saint points at the end of a battle if this model’s unit did not fail a Battle-shock test during that battle."
+      },
+      "Ability§Trial of Righteousness": {
+        "text": "**Slay the Demagogue:** gain 2 Saint points at the end of a battle if this model destroyed one or more enemy CHARACTER units during that battle, and 2 more if one of them contained the enemy WARLORD. **Smite the Unbelievers:** gain 2 Saint points at the end of a battle if this model destroyed 5 or more enemy models during that battle."
+      },
+      "Ability§Trial of Valour": {
+        "text": "**Holy Crusader:** gain 3 Saint points at the end of a battle if this model is wholly within your opponent’s deployment zone. **Pious Reputation:** gain 2 Saint points at the end of a battle if this model gained more XP than any other unit from your Crusade army during that battle."
+      },
+      "Saintly Reward§Boundless Faith": {
         "keywords": {
-          "Keywords": [
-            "Trials of a Living Saint"
-          ],
           "Tags": [
             "Adepta Sororitas"
+          ],
+          "Keywords": [
+            "Trial of Faith"
           ]
         },
         "text": "Gain 1 Saint point at the end of a battle for each Miracle dice remaining in your Miracle Dice pool (to a maximum of 2 Saint points)."
       },
-      "Crusade Honour§Trial of Suffering": {
+      "Saintly Reward§Miraculous Recovery": {
         "keywords": {
-          "Keywords": [
-            "Trials of a Living Saint"
-          ],
           "Tags": [
             "Adepta Sororitas"
+          ],
+          "Keywords": [
+            "Trial of Suffering"
           ]
         },
         "text": "Gain 1 Saint point at the end of a battle if this model is below its Starting Strength. Gain 2 Saint points instead if this model was destroyed while within range of an objective marker."
       },
-      "Crusade Honour§Trial of Purity": {
+      "Saintly Reward§Blazing Soulfire": {
         "keywords": {
-          "Keywords": [
-            "Trials of a Living Saint"
-          ],
           "Tags": [
             "Adepta Sororitas"
+          ],
+          "Keywords": [
+            "Trial of Purity"
           ]
         },
         "text": "Gain 2 Saint points at the end of a battle if this model is within 6\" of the centre of the battlefield."
       },
-      "Crusade Honour§Trial of Righteousness": {
+      "Saintly Reward§Righteous Judgement": {
         "keywords": {
-          "Keywords": [
-            "Trials of a Living Saint"
-          ],
           "Tags": [
             "Adepta Sororitas"
+          ],
+          "Keywords": [
+            "Trial of Righteousness"
           ]
         },
         "text": "Gain 2 Saint points at the end of a battle if this model destroyed one or more enemy **^^Character^^** units during that battle. Gain an additional 2 Saint points if one of those destroyed units contained the enemy **^^Warlord^^**."
       },
-      "Crusade Honour§Lead Army in Prayer": {
+      "Saintly Reward§Voice of the Emperor": {
         "keywords": {
-          "Keywords": [
-            "Hymns of Battle"
-          ],
           "Tags": [
             "Adepta Sororitas"
+          ],
+          "Keywords": [
+            "Trial of Valour"
           ]
         },
-        "text": "Once per battle, at the start of the battle round, if you have one or more **^^Adepta Sororitas Character^^** units on the battlefield and if your Crusade army was led in prayer before this battle, you can discard two Miracle dice. If you do, you intone the Hymns of Battle that battle round and, until the start of the next battle round, all **^^Adepta Sororitas Character^^** units in your army gain bonus depending on which Hymns of Battle you select. While a unit is Battle-shocked, it loses the bonus of any Hymns that would apply to it (if a rule would cause such a unit to no longer be Battle-shocked, any bonuses from Hymns that would apply to it apply once again). When you intone Hymns of Battle, you can either select one Hymn to apply to units from your army from the list, or you can randomly select two by rolling two D6 and consulting the table (if a double is rolled, roll both dice again until two different results are rolled)."
+        "text": "Gain 3 Saint points at the end of a battle if this model is wholly within your opponent's deployment zone."
+      },
+      "Trials of a Living Saint§Trials of a Living Saint": {
+        "text": "**Trials of a Living Saint.** When you start a Crusade force, if there are any ADEPTA SORORITAS CHARACTER models on your Order of Battle (excluding EPIC HEROES), you can select one of them: tick **Saint Potentia** on its card. Select a Trial for it; it accrues Saint points by accomplishing that Trial’s Saintly Deeds. At 10 or more Saint points the Trial is complete: reset Saint points to 0 and the model gains that Trial’s Saintly Reward Battle Honour (each is unique; if the model already has its maximum Battle Honours you must replace one, never a Saintly Reward). With 4 or fewer Saintly Rewards you can then select a new Trial. At the end of a battle a SAINT POTENTIA can abandon its Trial for a new one (Saint points reset to 0). When the model has 5 Saintly Rewards it is a **LIVING SAINT**.\n\n**Martyr points.** Each time a SAINT POTENTIA or LIVING SAINT fails an Out of Action test it gains 1 Martyr point and takes a Martyrdom test: roll one D6 and add its Martyr points; if the result is greater than its Leadership characteristic it is Martyred — remove it from your Order of Battle, and every other ADEPTA SORORITAS unit that was in your Crusade army gains XP equal to the number of Saintly Rewards the martyr had. You can then select another ADEPTA SORORITAS CHARACTER (not an EPIC HERO) as your new SAINT POTENTIA.\n\n**Hymns of Battle (Lead Army in Prayer).** Once per battle, at the start of the battle round, if you have one or more ADEPTA SORORITAS CHARACTER units on the battlefield and your Crusade army was led in prayer before this battle, you can discard two Miracle dice to intone the Hymns of Battle: until the start of the next battle round all ADEPTA SORORITAS CHARACTER units gain the bonus of one Hymn you choose, or of two determined randomly (2D6, re-rolling doubles). A Battle-shocked unit loses the bonus. Hymns: 1 Add 2\" to Move and +1 to Advance and Charge rolls. 2 Attacks with an unmodified Damage of 1 allocated to the unit give +1 to armour saves. 3 Each Act of Faith adds 1 to the substituted dice (max 6), and a used Miracle dice of 6 grants a new Miracle dice. 4 Improve the AP of ranged weapons by 1. 5 Improve the Attacks and Strength of melee weapons by 1. 6 Improve Leadership and Objective Control by 1."
       }
     },
     "gameModes": {},

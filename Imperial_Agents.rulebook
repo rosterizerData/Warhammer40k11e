@@ -1,6 +1,6 @@
 {
   "name": "Agents of the Imperium 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.7",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -410,6 +410,647 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          }
+        }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Aggressive Negotiation": {
+                "order": 100,
+                "tracking": {
+                  "Agents of the Imperium Agenda": 1
+                }
+              },
+              "Strategic Excruciation": {
+                "order": 101,
+                "tracking": {
+                  "Agents of the Imperium Agenda": 1
+                }
+              },
+              "Execution Order": {
+                "order": 102,
+                "tracking": {
+                  "Agents of the Imperium Agenda": 1
+                }
+              },
+              "Clandestine Infiltration": {
+                "order": 103,
+                "tracking": {
+                  "Agents of the Imperium Agenda": 1
+                }
+              },
+              "Long Vigil": {
+                "order": 104,
+                "tracking": {
+                  "Agents of the Imperium Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Aggressive Negotiation": {
+                "order": 100,
+                "tracking": {
+                  "Agents of the Imperium Agenda": 1
+                }
+              },
+              "Strategic Excruciation": {
+                "order": 101,
+                "tracking": {
+                  "Agents of the Imperium Agenda": 1
+                }
+              },
+              "Execution Order": {
+                "order": 102,
+                "tracking": {
+                  "Agents of the Imperium Agenda": 1
+                }
+              },
+              "Clandestine Infiltration": {
+                "order": 103,
+                "tracking": {
+                  "Agents of the Imperium Agenda": 1
+                }
+              },
+              "Long Vigil": {
+                "order": 104,
+                "tracking": {
+                  "Agents of the Imperium Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Inquisitorial Mandate",
+            "Requisition§Forge Killteam",
+            "Requisition§Privateering",
+            "Requisition§Crafted for Battle",
+            "Requisition§Investigation Chamber",
+            "Crusade Badge§Elite Operative",
+            "Crusade Badge§Champion of the Imperium",
+            "Crusade Badge§Hand of the High Lords"
+          ]
+        }
+      },
+      "Vermilion-level Asset": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Character": {
+        "rules": {
+          "allowVermilionlevelAsset": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Vermilion-level Asset"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Vermilion-level Assets: unique Battle Honours awarded by a Shadow Operation's outcome to AGENTS OF THE IMPERIUM CHARACTERS"
+          },
+          "crusadeShowAlignment": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Alignment",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Inquisitor",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "alignmentPuritan": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Puritan"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Alignment",
+                    "value"
+                  ]
+                ],
+                "value": "Puritan"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "PURITAN keyword (gained from Battle Traits such as Intolerant Zeal); the crusadeTag rules then admit PURITAN-only honours"
+          },
+          "alignmentRadical": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Radical"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Alignment",
+                    "value"
+                  ]
+                ],
+                "value": "Radical"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "RADICAL keyword (gained from Battle Traits such as Extreme Methods)"
+          }
+        },
+        "stats": {
+          "Alignment": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Puritan": {
+                "order": 1
+              },
+              "Radical": {
+                "order": 2
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "label": "Inquisitorial alignment",
+            "statOrder": 20
+          }
+        }
+      },
+      "Threat": {
+        "aspects": {
+          "Visibility": "always",
+          "Rename": true,
+          "Describe": true
+        },
+        "templateClass": "",
+        "stats": {
+          "Level": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Minoris": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ability§Threat Minoris"
+                  }
+                ]
+              },
+              "Majoris": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ability§Threat Majoris"
+                  }
+                ]
+              },
+              "Extremis": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ability§Threat Extremis"
+                  }
+                ]
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 1
+          },
+          "State": {
+            "statType": "rank",
+            "ranks": {
+              "Active": {
+                "order": 0
+              },
+              "Uncovered": {
+                "order": 1
+              },
+              "Thwarted": {
+                "order": 2,
+                "tracking": {
+                  "Threat Thwarted": 1
+                }
+              },
+              "Fulfilled": {
+                "order": 3,
+                "tracking": {
+                  "Threat Fulfilled": 1
+                }
+              }
+            },
+            "value": "Active",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 2
+          },
+          "Plot": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Compromised Agent (Minoris)": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Ability§Plot: Compromised Agent (Minoris)"
+                  }
+                ]
+              },
+              "Enemy Sympathiser (Minoris)": {
+                "order": 2,
+                "traits": [
+                  {
+                    "trait": "Ability§Plot: Enemy Sympathiser (Minoris)"
+                  }
+                ]
+              },
+              "Spy Network (Minoris)": {
+                "order": 3,
+                "traits": [
+                  {
+                    "trait": "Ability§Plot: Spy Network (Minoris)"
+                  }
+                ]
+              },
+              "Ancient Artefact (Majoris)": {
+                "order": 4,
+                "traits": [
+                  {
+                    "trait": "Ability§Plot: Ancient Artefact (Majoris)"
+                  }
+                ]
+              },
+              "Agent Provocateur (Majoris)": {
+                "order": 5,
+                "traits": [
+                  {
+                    "trait": "Ability§Plot: Agent Provocateur (Majoris)"
+                  }
+                ]
+              },
+              "Saboteur Matrix (Majoris)": {
+                "order": 6,
+                "traits": [
+                  {
+                    "trait": "Ability§Plot: Saboteur Matrix (Majoris)"
+                  }
+                ]
+              },
+              "Arch-nemesis (Extremis)": {
+                "order": 7,
+                "traits": [
+                  {
+                    "trait": "Ability§Plot: Arch-nemesis (Extremis)"
+                  }
+                ]
+              },
+              "Diabolical Ritual (Extremis)": {
+                "order": 8,
+                "traits": [
+                  {
+                    "trait": "Ability§Plot: Diabolical Ritual (Extremis)"
+                  }
+                ]
+              },
+              "Cult Uprising (Extremis)": {
+                "order": 9,
+                "traits": [
+                  {
+                    "trait": "Ability§Plot: Cult Uprising (Extremis)"
+                  }
+                ]
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "label": "Plot (once uncovered)",
+            "statOrder": 3
+          },
+          "Investigation": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "label": "Investigation points",
+            "statOrder": 4
+          },
+          "Influence": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "label": "Influence points",
+            "statOrder": 5
+          },
+          "Intrigue": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "label": "Intrigue points",
+            "statOrder": 6
+          },
+          "Time": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "label": "Time tally",
+            "statOrder": 7
+          }
+        }
+      },
+      "Shadow Operation": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Sub-sector Control": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": -9,
+            "max": 9,
+            "icons": [
+              "aquila"
+            ],
+            "statOrder": 1
+          },
+          "Threats resolved": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "min": 0,
+            "max": 3,
+            "label": "Threats thwarted or fulfilled",
+            "statOrder": 2
+          }
+        },
+        "rules": {
+          "resolved": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Threats resolved",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Threat Thwarted"
+                  ],
+                  [
+                    "{self}",
+                    "tracked",
+                    "Threat Fulfilled"
+                  ]
+                ],
+                "min": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "operationOver": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": " — OPERATION COMPLETE: apply the Sub-sector Control result",
+                "append": ""
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Threats resolved",
+                    "value"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
           }
         }
       }
@@ -2617,6 +3258,176 @@
             },
             "value": "Agents of the Imperium"
           }
+        },
+        "rules": {
+          "useCrusadeImperial_Agents": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Shadow Operation§Shadow Operation"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
+          },
+          "Only one Void Trader in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Void Trader"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Highly Placed Ally in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Highly Placed Ally"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Secret Forces in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Secret Forces"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Trained By A Legend in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Trained By A Legend"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Master of Spies in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Master of Spies"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Bound Entity in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Bound Entity"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Upholder of the Creed in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Upholder of the Creed"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
         }
       },
       "Stratagem§Adaptive Tactics": {
@@ -4430,7 +5241,56 @@
         },
         "text": "Each time the bearer is selected to shoot, after selecting targets for all of its ranged weapons, select one enemy unit targeted by one or more of the bearer's attacks and roll three D6: for each 4+, that unit suffers 1 mortal wound. Mortal wounds inflicted by this Crusade Relic can be allocated as if they had the **[PRECISION]** ability."
       },
-      "Crusade Honour§Void Trader": {
+      "Requisition§Inquisitorial Mandate": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition when you are selecting Agendas, if your Crusade force contains one or more INQUISITOR models. You can select one additional Agents of the Imperium Agenda to use in that battle. If one or more units from your army gain XP in that battle due to that Agenda, you gain 1 RP."
+      },
+      "Requisition§Forge Killteam": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition just after you have won a battle, if your Crusade force contains one or more WATCH MASTER models. You may select a second unit to be Marked for Greatness if it has the DEATHWATCH keyword (excluding CHARACTERS)."
+      },
+      "Requisition§Privateering": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition once per Shadow Operation, if your Order of Battle contains one or more VOIDFARERS CHARACTER models. When purchased, you can do one of the following:\n\nGain either D3 Influence or D3 Intrigue points.\n\nLose 3 Influence and/or Intrigue points (in any combination) and gain D3+1RP."
+      },
+      "Requisition§Crafted for Battle": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition when you add a RETINUE unit to your Order of Battle, if your Crusade force contains one or more AGENTS OF THE IMPERIUM CHARACTER units that have the Battle-hardened rank or higher. That RETINUE unit gains 6 experience points and gains the Blooded rank. Select one Battle Honour for them."
+      },
+      "Requisition§Investigation Chamber": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "You can purchase this Requisition once per Shadow Operation, just before rolling on the Plot Twists table. Select the result instead of rolling randomly."
+      },
+      "Crusade Badge§Elite Operative": {
+        "text": "You have completed one Shadow Operation (with a final Sub-sector Control of 1 or better).\nOne or more models in your Crusade force have Vermilion-level Assets.\nYou have won two or more battles."
+      },
+      "Crusade Badge§Champion of the Imperium": {
+        "text": "You have halted profane rituals, exposed debased cults and brought stability to entire Imperial systems. Your battles may have cost many lives, but they have preserved vital Imperial infrastructure and institutions. Your star might be veiled amidst the shadows, but it is rising nonetheless.\nYou have completed two or more Shadow Operations (with at least one Shadow Operation having a final Sub-sector Control of 6 or better).\nTwo or more models in your Crusade force have Vermilion-level Assets.\nYou have won six or more battles."
+      },
+      "Crusade Badge§Hand of the High Lords": {
+        "text": "You have completed three or more Shadow Operations (with at least one Shadow Operation having a final Sub-sector Control of 9).\nThree or more models in your Crusade force have Vermilion-level Assets.\nOne model from your Crusade force has acquired the Archeotech Curiosity Crusade Relic.\nYou have won ten or more battles."
+      },
+      "Vermilion-level Asset§Void Trader": {
         "keywords": {
           "Keywords": [
             "Vermillion-level Assets"
@@ -4441,7 +5301,7 @@
         },
         "text": "If the bearer is on the battlefield at the end of the battle, increase your Crusade force's Supply Limit by 50 points. At the end of battle, you can select one model from your Crusade force that has one Crusade Relic or one weapon that has a Weapon Modification. If you do, you can remove that Battle Honour from that model - you can either replace that Battle Honour with a different Crusade Relic that model can have or you can gain 1RP."
       },
-      "Crusade Honour§Highly Placed Ally": {
+      "Vermilion-level Asset§Highly Placed Ally": {
         "keywords": {
           "Keywords": [
             "Vermillion-level Assets"
@@ -4452,7 +5312,7 @@
         },
         "text": "If the bearer is your **^^Warlord^^**, start the battle with 1CP. If the bearer is on the battlefield at the end of the battle and you won that battle, roll one D6: on a 4+, you gain 1RP."
       },
-      "Crusade Honour§Secret Forces": {
+      "Vermilion-level Asset§Secret Forces": {
         "keywords": {
           "Keywords": [
             "Vermillion-level Assets"
@@ -4463,7 +5323,7 @@
         },
         "text": "If the bearer is included in a Crusade army whose Army Faction is not **^^Agents of the Imperium^^**, the maximum number of **^^Requisitioned^^**, **^^Retinue^^** and **^^Agents of the Imperium Character^^** units that can be included in that army is increased by 1. Each time you start a Shadow Operation, you start with 1 Influence point."
       },
-      "Crusade Honour§Trained By A Legend": {
+      "Vermilion-level Asset§Trained By A Legend": {
         "keywords": {
           "Keywords": [
             "Vermillion-level Assets"
@@ -4474,7 +5334,7 @@
         },
         "text": "The bearer's unit has the Lone Operative, Infiltrators and Stealth abilities. Each time you start a Shadow Operation, you start with 1 Intrigue point."
       },
-      "Crusade Honour§Master of Spies": {
+      "Vermilion-level Asset§Master of Spies": {
         "keywords": {
           "Keywords": [
             "Vermillion-level Assets"
@@ -4485,7 +5345,7 @@
         },
         "text": "Each time you start a Shadow Operation, you start with 1 Investigation point. Each time you roll on the Plot Twist table, you can re-roll the result."
       },
-      "Crusade Honour§Bound Entity": {
+      "Vermilion-level Asset§Bound Entity": {
         "keywords": {
           "Keywords": [
             "Vermillion-level Assets"
@@ -4497,7 +5357,7 @@
         },
         "text": "**^^Radical^^** model only. The bearer's unit has the Deep Strike ability. Once per Shadow Operation, when you attempt to Thwart a Threat through Intrigue, you can re-roll that test. If the bearer loses the **^^Radical^^** keyword or gains the **^^Puritan^^** keyword by any means, it immediately loses this Battle Honour."
       },
-      "Crusade Honour§Upholder of the Creed": {
+      "Vermilion-level Asset§Upholder of the Creed": {
         "keywords": {
           "Keywords": [
             "Vermillion-level Assets"
@@ -4508,6 +5368,55 @@
           ]
         },
         "text": "**^^Puritan^^** model only. Improve the bearer's Leadership and Wounds characteristics by 1. Once per Shadow Operation when you attempt to Thwart a Threat through Influence, you can re-roll that test. If the bearer loses the **^^Puritan^^** keyword or gains the **^^Radical^^** keyword by any means, it immediately loses this Battle Honour."
+      },
+      "Ability§Threat Minoris": {
+        "text": "Threat Score 1 · Covert Level 4+ · Time Remaining 3"
+      },
+      "Ability§Threat Majoris": {
+        "text": "Threat Score 2 · Covert Level 5+ · Time Remaining 5"
+      },
+      "Ability§Threat Extremis": {
+        "text": "Threat Score 3 · Covert Level 6+ · Time Remaining 7"
+      },
+      "Ability§Plot: Compromised Agent (Minoris)": {
+        "text": "Influence goal 4+ · Intrigue goal 6+"
+      },
+      "Ability§Plot: Enemy Sympathiser (Minoris)": {
+        "text": "Influence goal 5+ · Intrigue goal 5+"
+      },
+      "Ability§Plot: Spy Network (Minoris)": {
+        "text": "Influence goal 6+ · Intrigue goal 4+"
+      },
+      "Ability§Plot: Ancient Artefact (Majoris)": {
+        "text": "Influence goal 6+ · Intrigue goal 6+"
+      },
+      "Ability§Plot: Agent Provocateur (Majoris)": {
+        "text": "Influence goal 7+ · Intrigue goal 5+"
+      },
+      "Ability§Plot: Saboteur Matrix (Majoris)": {
+        "text": "Influence goal 5+ · Intrigue goal 7+"
+      },
+      "Ability§Plot: Arch-nemesis (Extremis)": {
+        "text": "Influence goal 7+ · Intrigue goal 7+"
+      },
+      "Ability§Plot: Diabolical Ritual (Extremis)": {
+        "text": "Influence goal 6+ · Intrigue goal 8+"
+      },
+      "Ability§Plot: Cult Uprising (Extremis)": {
+        "text": "Influence goal 8+ · Intrigue goal 6+"
+      },
+      "Threat§Threat 1": {},
+      "Threat§Threat 2": {},
+      "Threat§Threat 3": {},
+      "Shadow Operation§Shadow Operation": {
+        "assets": {
+          "traits": [
+            "Threat§Threat 1",
+            "Threat§Threat 2",
+            "Threat§Threat 3"
+          ]
+        },
+        "text": "**Shadow Operations.** With any AGENTS OF THE IMPERIUM CHARACTERS in your Crusade force you can run a Shadow Operation: name a sub-sector and set three Threats (choose or roll each Level). Sub-sector Control and all tallies start at 0.\n\n**After each battle** (Update Order of Battle step), if your Crusade army included an AGENTS OF THE IMPERIUM CHARACTER: gain 1 Investigation point and allocate it to an active Threat; then you may try to uncover one Threat — roll a D6 and add its Investigation points; equal to or above its Covert Level uncovers it (roll on the matching plot table and set its Plot). Allocate any Influence and Intrigue points from Agendas to uncovered Threats, then you may attempt to Thwart one uncovered Threat: D6 + Intrigue points against its Intrigue goal, else D6 + Influence points against its Influence goal. A Thwarted Threat adds its Threat Score to Sub-sector Control. Then add 1 to the Time tally of every active Threat and roll a Plot Twist; a Threat whose Time tally reaches its Time Remaining is Fulfilled and subtracts its Threat Score from Sub-sector Control.\n\n**Plot Twist (D6):** 1 Plans Within Plans — a random active Threat's Threat Score +1. 2 Escalating Threat — a random active Threat's Time tally +1. 3 Counter-agents — all uncovered Threats' Intrigue goals +1. 4 Fierce Resistance — all uncovered Threats' Influence goals +1. 5 Delaying Action — one active Threat's Time tally −1. 6 A Promising Lead — one active uncovered Threat's Investigation tally +1.\n\n**Cease Shadow Operations** when all three Threats are Thwarted or Fulfilled, and apply the Sub-sector Control result: −9 to −7 Total Collapse (each AGENTS OF THE IMPERIUM unit gains a Battle Scar or suffers a Devastating Blow); −6 to −2 Shameful Losses (one CHARACTER gains the Disgraced or Mark of Shame Battle Scar or suffers a Devastating Blow); −1 to 1 Ongoing Unrest (gain 1RP); 2 to 6 Purgation Complete (gain D3RP and one CHARACTER gains a Vermilion-level Asset); 7 to 9 Masterful Execution (gain D6RP and up to two CHARACTERS each gain a Vermilion-level Asset). Then you may start a new Shadow Operation."
       }
     },
     "gameModes": {},

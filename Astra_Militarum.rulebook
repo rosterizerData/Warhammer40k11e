@@ -1,6 +1,6 @@
 {
   "name": "Astra Militarum 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.7",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -655,6 +655,135 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "allowPersonalCommendation": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Personal Commendation"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Personal Commendations: bought with Commendation points at the end of a Tour of Duty; an OFFICER may hold two, other units one; not EPIC HEROES"
+          },
+          "Personal Commendations: one per unit (two for an OFFICER).": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Personal Commendation"
+                  ]
+                ],
+                "max": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Officer",
+                "contains": true
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "No unit can have more than two Personal Commendations.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Personal Commendation"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
           }
         },
         "stats": {
@@ -693,6 +822,908 @@
             "tracked": true,
             "value": "-",
             "visibility": "normal"
+          }
+        }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Advance, for the Emperor!": {
+                "order": 100,
+                "tracking": {
+                  "Astra Militarum Agenda": 1
+                }
+              },
+              "Propaganda Targets": {
+                "order": 101,
+                "tracking": {
+                  "Astra Militarum Agenda": 1
+                }
+              },
+              "Inspired Command": {
+                "order": 102,
+                "tracking": {
+                  "Astra Militarum Agenda": 1
+                }
+              },
+              "Hold the Line": {
+                "order": 103,
+                "tracking": {
+                  "Astra Militarum Agenda": 1
+                }
+              },
+              "Arming the Assault": {
+                "order": 104,
+                "tracking": {
+                  "Astra Militarum Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Advance, for the Emperor!": {
+                "order": 100,
+                "tracking": {
+                  "Astra Militarum Agenda": 1
+                }
+              },
+              "Propaganda Targets": {
+                "order": 101,
+                "tracking": {
+                  "Astra Militarum Agenda": 1
+                }
+              },
+              "Inspired Command": {
+                "order": 102,
+                "tracking": {
+                  "Astra Militarum Agenda": 1
+                }
+              },
+              "Hold the Line": {
+                "order": 103,
+                "tracking": {
+                  "Astra Militarum Agenda": 1
+                }
+              },
+              "Arming the Assault": {
+                "order": 104,
+                "tracking": {
+                  "Astra Militarum Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Decorated Officer",
+            "Requisition§Uplifting Primers",
+            "Requisition§Commit Everything",
+            "Requisition§Last-Minute Transfer",
+            "Requisition§Above and Beyond the Call of Duty",
+            "Crusade Badge§Junior Officer",
+            "Crusade Badge§Senior Officer",
+            "Crusade Badge§Regimental Commander"
+          ]
+        }
+      },
+      "Personal Commendation": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour",
+        "stats": {
+          "Commendation Pts": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 1,
+            "visibility": "always",
+            "group": "Cost",
+            "groupOrder": -1
+          }
+        }
+      },
+      "Character": {
+        "rules": {
+          "allowPersonalCommendation": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Personal Commendation"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Personal Commendations: bought with Commendation points at the end of a Tour of Duty; an OFFICER may hold two, other units one; not EPIC HEROES"
+          },
+          "Personal Commendations: one per unit (two for an OFFICER).": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Personal Commendation"
+                  ]
+                ],
+                "max": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Officer",
+                "contains": true
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "No unit can have more than two Personal Commendations.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Personal Commendation"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
+      },
+      "Regimental Commendations": {
+        "aspects": {
+          "Visibility": "always"
+        },
+        "templateClass": "",
+        "stats": {
+          "Expert Bombardiers": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Regimental Commendation": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 1
+          },
+          "Paragons of Drill Discipline": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Regimental Commendation": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 2
+          },
+          "Veteran Crew": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Regimental Commendation": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 3
+          },
+          "Vanguard Honours": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Regimental Commendation": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 4
+          },
+          "Preservation Commendation": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Regimental Commendation": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 5
+          },
+          "Mechanised Assault Merit": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Regimental Commendation": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 6
+          },
+          "Cavalry Aquila": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Regimental Commendation": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 7
+          },
+          "Veteran Guerrillas": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Regimental Commendation": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 8
+          },
+          "Commendation Pts": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Crusade Pts": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Tour of Duty": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Battles remaining": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 10,
+            "statOrder": 1
+          },
+          "Victories remaining": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 5,
+            "statOrder": 2
+          },
+          "Commendation Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 99,
+            "label": "Commendation points earned",
+            "icons": [
+              "medal"
+            ],
+            "statOrder": 3
+          },
+          "Commendation Pts spent": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "min": 0,
+            "max": 999,
+            "label": "Commendation points spent",
+            "statOrder": 4
+          },
+          "Lexmechanicus": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 2,
+            "group": "Logistics (4 points, max 2 each)",
+            "groupOrder": 2,
+            "statOrder": 10
+          },
+          "Materiel": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 2,
+            "group": "Logistics (4 points, max 2 each)",
+            "groupOrder": 2,
+            "statOrder": 11
+          },
+          "Tithe Pool": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 2,
+            "group": "Logistics (4 points, max 2 each)",
+            "groupOrder": 2,
+            "statOrder": 12
+          },
+          "Morale": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 2,
+            "group": "Logistics (4 points, max 2 each)",
+            "groupOrder": 2,
+            "statOrder": 13
+          }
+        },
+        "rules": {
+          "Logistics: no more than 4 Logistics points in total.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lexmechanicus",
+                    "value"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Materiel",
+                    "value"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Tithe Pool",
+                    "value"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Morale",
+                    "value"
+                  ]
+                ],
+                "max": 4
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          },
+          "surplusLexmechanicus": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Surplus: Lexmechanicus"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lexmechanicus",
+                    "value"
+                  ]
+                ],
+                "value": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "deficiencyLexmechanicus": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Deficiency: Lexmechanicus"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lexmechanicus",
+                    "value"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "surplusMateriel": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Surplus: Materiel"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Materiel",
+                    "value"
+                  ]
+                ],
+                "value": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "deficiencyMateriel": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Deficiency: Materiel"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Materiel",
+                    "value"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "surplusTithePool": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Surplus: Tithe Pool"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Tithe Pool",
+                    "value"
+                  ]
+                ],
+                "value": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "deficiencyTithePool": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Deficiency: Tithe Pool"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Tithe Pool",
+                    "value"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "surplusMorale": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Surplus: Morale"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Morale",
+                    "value"
+                  ]
+                ],
+                "value": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "deficiencyMorale": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Deficiency: Morale"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Morale",
+                    "value"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "commendationSpent": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Commendation Pts spent",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{roster}",
+                  "tracked",
+                  "Commendation Pts"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "Commendation points spent exceed the points earned.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Commendation Pts"
+                  ]
+                ],
+                "max": [
+                  "{self}",
+                  "stats",
+                  "Commendation Points",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
           }
         }
       }
@@ -47968,6 +48999,41 @@
             ],
             "evaluate": "AND",
             "failState": "error"
+          },
+          "useCrusadeAstra_Militarum": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Tour of Duty§Tour of Duty"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
           }
         },
         "stats": {
@@ -61778,206 +62844,960 @@
         },
         "text": "**^^Officer^^** model only. In your Command phase, instead of issuing any Orders, the bearer can take a Leadership test. If it do, and that test is passed, you gain 1CP."
       },
-      "Crusade Honour§Sacrificus Tempestus": {
+      "Requisition§Decorated Officer": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition when you add an OFFICER unit (excluding EPIC HEROES) to your Order of Battle. That unit gains 6XP."
+      },
+      "Requisition§Uplifting Primers": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before the battle. Until the end of the battle, once per battle, you can target one REGIMENT unit from your army with the Insane Bravery Stratagem for 0CP (even if the Morale deficiency effect is currently applying to your Tour of Duty). In addition, at the end of the battle, every REGIMENT unit from your army that did not suffer a Devastating Blow gains 1XP."
+      },
+      "Requisition§Commit Everything": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition at the start of a Tour of Duty. You gain 1 additional Logistics point to use during that Tour of Duty, however, until this Tour of Duty ends, at the end of each battle, if you are not the victor of that battle, you lose 1 Commendation point (to a minimum of 0)."
+      },
+      "Requisition§Last-Minute Transfer": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition at any time. Select one REGIMENT unit from your Order of Battle and replace it with a new REGIMENT unit, or select one SQUADRON unit from your Order of Battle and replace it with a new SQUADRON unit. The newly added unit starts with the same Personal Commendations as the unit that it replaced (if any), it starts with the same number of XP as the unit it replaced, and immediately gains the appropriate number of Battle Honours for its rank. You cannot purchase this Requisition if doing so would cause your Crusade forces total points to exceed its Supply Limit."
+      },
+      "Requisition§Above and Beyond the Call of Duty": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition at the end of a Tour of Duty, when you award a Personal Commendation to an ASTRA MILITARUM unit from your Crusade force. The Personal Commendation just awarded does not count towards the maximum number of Battle Honours that unit can have. You can only purchase this Requisition once per Tour of Duty and you cannot select the same unit for it more than once."
+      },
+      "Crusade Badge§Junior Officer": {
+        "text": "You have not only survived your first fifteen minutes of combat but endured an entire tour of duty. By your gifted command have the forces of the Astra Militarum achieved victories over xenos and heretic, defending the sanctity of the Imperium and earning glory for your regiment.\nYou have completed one Tour of Duty.\nThree or more ASTRA MILITARUM units in your Crusade force have at least one Personal Commendation each.\nYou have won two or more battles."
+      },
+      "Crusade Badge§Senior Officer": {
+        "text": "You have wielded the resources entrusted to you by high command with intelligence and precision. Your loyal troops count amongst their ranks many grizzled veterans and your record of victories continues to grow with each passing campaign.\nYou have completed three Tours of Duty.\nFive or more ASTRA MILITARUM units in your Crusade force have at least one Personal Commendation each, and one or more OFFICER units in your Crusade force have two or more Personal Commendations each.\nYou have gained one or more Regimental Commendations.\nYou have won six or more battles."
+      },
+      "Crusade Badge§Regimental Commander": {
+        "text": "You have completed five Tours of Duty.\nFive or more ASTRA MILITARUM units in your Crusade force have at least one Personal Commendation each, and three or more OFFICER units in your Crusade force have two or more Personal Commendations each.\nYou have gained two Regimental Commendations.\nYou have won ten or more battles.\nOne or more OFFICER units from your Crusade force have an Antiquity or Legendary Relic from this publication."
+      },
+      "Personal Commendation§Sacrificus Tempestus": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Tempestus Scions"
           ]
         },
-        "text": "**^^Tempestus Scions^^** unit only. If this unit is destroyed while within range of an objective marker that you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+        "text": "**^^Tempestus Scions^^** unit only. If this unit is destroyed while within range of an objective marker that you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+        "stats": {
+          "Commendation Pts": {
+            "value": 1
+          }
+        }
       },
-      "Crusade Honour§Steel Armorial": {
+      "Personal Commendation§Steel Armorial": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Astra Militarum"
           ]
         },
-        "text": "**^^Astra Militarum Vehicle^^** or **^^Astra Militarum Tech-Priest Enginseer^^** unit only. At the end of the battle, if this unit is part of your Crusade army and was not destroyed during the battle, you can re-roll one failed Out of Action test taken for a friendly **^^Astra Militarum Vehicle^^** unit."
+        "text": "**^^Astra Militarum Vehicle^^** or **^^Astra Militarum Tech-Priest Enginseer^^** unit only. At the end of the battle, if this unit is part of your Crusade army and was not destroyed during the battle, you can re-roll one failed Out of Action test taken for a friendly **^^Astra Militarum Vehicle^^** unit.",
+        "stats": {
+          "Commendation Pts": {
+            "value": 1
+          }
+        }
       },
-      "Crusade Honour§Bastion Honour": {
+      "Personal Commendation§Bastion Honour": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Regiment"
           ]
         },
-        "text": "**^^Regiment^^** unit only. Once per battle, at the start of your opponent's Fight phase, this unit can use this ability. If it does, until the end of the phase, this unit has the Fights First ability."
+        "text": "**^^Regiment^^** unit only. Once per battle, at the start of your opponent's Fight phase, this unit can use this ability. If it does, until the end of the phase, this unit has the Fights First ability.",
+        "stats": {
+          "Commendation Pts": {
+            "value": 1
+          }
+        }
       },
-      "Crusade Honour§Honourifica Imperialis": {
+      "Personal Commendation§Honourifica Imperialis": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Astra Militarum"
           ]
         },
-        "text": "In an Order is issued to this unit, instead of applying until the start of your next Command phase, that Order will apply to it until the end of the battle, until a new Order is issued to it or until that unit becomes Battle-shocked (whichever happens first)."
+        "text": "In an Order is issued to this unit, instead of applying until the start of your next Command phase, that Order will apply to it until the end of the battle, until a new Order is issued to it or until that unit becomes Battle-shocked (whichever happens first).",
+        "stats": {
+          "Commendation Pts": {
+            "value": 2
+          }
+        }
       },
-      "Crusade Honour§Celeris Heart": {
+      "Personal Commendation§Celeris Heart": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Regiment"
           ]
         },
-        "text": "**^^Regiment^^** unit only. Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D6\"."
+        "text": "**^^Regiment^^** unit only. Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D6\".",
+        "stats": {
+          "Commendation Pts": {
+            "value": 2
+          }
+        }
       },
-      "Crusade Honour§Order of the Adamantine Chain": {
+      "Personal Commendation§Order of the Adamantine Chain": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Astra Militarum"
           ]
         },
-        "text": "Each time this unit is Marked for Greatness, it gains an additional 2XP."
+        "text": "Each time this unit is Marked for Greatness, it gains an additional 2XP.",
+        "stats": {
+          "Commendation Pts": {
+            "value": 2
+          }
+        }
       },
-      "Crusade Honour§Merit of the Strategium": {
+      "Personal Commendation§Merit of the Strategium": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Astra Militarum"
           ]
         },
-        "text": "After both players have deployed their armies, you can redeploy this unit. When doing so, this unit can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        "text": "After both players have deployed their armies, you can redeploy this unit. When doing so, this unit can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+        "stats": {
+          "Commendation Pts": {
+            "value": 2
+          }
+        }
       },
-      "Crusade Honour§Diamantine Star": {
+      "Personal Commendation§Diamantine Star": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Regiment"
           ]
         },
-        "text": "**^^Regiment^^** unit only. When this unit arrives from Strategic Reserves, it can be set up within your opponent's deployment zone (all other restrictions still apply)."
+        "text": "**^^Regiment^^** unit only. When this unit arrives from Strategic Reserves, it can be set up within your opponent's deployment zone (all other restrictions still apply).",
+        "stats": {
+          "Commendation Pts": {
+            "value": 1
+          }
+        }
       },
-      "Crusade Honour§Star of Fidelity": {
+      "Personal Commendation§Star of Fidelity": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Astra Militarum"
           ]
         },
-        "text": "Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        "text": "Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+        "stats": {
+          "Commendation Pts": {
+            "value": 2
+          }
+        }
       },
-      "Crusade Honour§Decree of Dispensation": {
+      "Personal Commendation§Decree of Dispensation": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Officer"
           ]
         },
-        "text": "**^^Officer^^** unit only. Once per Tour of Duty, if this unit is your **^^Warlord^^**, you can select on deficiency effect that current applies to your Crusade force. Until the end of your next battle, that effect does not apply to your Crusade force."
+        "text": "**^^Officer^^** unit only. Once per Tour of Duty, if this unit is your **^^Warlord^^**, you can select on deficiency effect that current applies to your Crusade force. Until the end of your next battle, that effect does not apply to your Crusade force.",
+        "stats": {
+          "Commendation Pts": {
+            "value": 3
+          }
+        }
       },
-      "Crusade Honour§Auxila Golden Star": {
+      "Personal Commendation§Auxila Golden Star": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Mounted",
             "Ogryn"
           ]
         },
-        "text": "**^^Cavalry^^** or **^^Ogryn^^** unit only. You can target this unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase."
+        "text": "**^^Cavalry^^** or **^^Ogryn^^** unit only. You can target this unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase.",
+        "stats": {
+          "Commendation Pts": {
+            "value": 3
+          }
+        }
       },
-      "Crusade Honour§Departmento Salvage Award": {
+      "Personal Commendation§Departmento Salvage Award": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Regiment",
             "Ratlings"
           ]
         },
-        "text": "**^^Regiment^^** or **^^Ratlings^^** unit only. At the end of the battle, if this unit is on the battlefield, roll one D6, adding 1 to the result if this unit is within range of an objective marker that you control. On a 6+, you gain 1 Requisition point."
+        "text": "**^^Regiment^^** or **^^Ratlings^^** unit only. At the end of the battle, if this unit is on the battlefield, roll one D6, adding 1 to the result if this unit is within range of an objective marker that you control. On a 6+, you gain 1 Requisition point.",
+        "stats": {
+          "Commendation Pts": {
+            "value": 3
+          }
+        }
       },
-      "Crusade Honour§Laurels of Purity": {
+      "Personal Commendation§Laurels of Purity": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Officer",
             "Ministorum Priest"
           ]
         },
-        "text": "**^^Officer^^** or **^^Ministorum Priest^^** unit only. While the bearer is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks."
+        "text": "**^^Officer^^** or **^^Ministorum Priest^^** unit only. While the bearer is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
+        "stats": {
+          "Commendation Pts": {
+            "value": 3
+          }
+        }
       },
-      "Crusade Honour§Auramite Aquila": {
+      "Personal Commendation§Auramite Aquila": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Astra Militarum"
           ]
         },
-        "text": "Unit with the Battle-hardened rank or higher only. This unit gains one Battle Trait of your choice. This must be a Battle Trait it can have, and does not count towards the maximum number of Battle Traits that a unit can have. If the Legendary Veterans Requisition is used on this unit, that Requisition only costs you 1RP."
+        "text": "Unit with the Battle-hardened rank or higher only. This unit gains one Battle Trait of your choice. This must be a Battle Trait it can have, and does not count towards the maximum number of Battle Traits that a unit can have. If the Legendary Veterans Requisition is used on this unit, that Requisition only costs you 1RP.",
+        "stats": {
+          "Commendation Pts": {
+            "value": 5
+          }
+        }
       },
-      "Crusade Honour§Lord Commander's Sigilum": {
+      "Personal Commendation§Lord Commander's Sigilum": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Astra Militarum"
           ]
         },
-        "text": "At the end of the battle, if this unit destroyed one or more enemy units during that battle, you gain 1 Commendation point."
+        "text": "At the end of the battle, if this unit destroyed one or more enemy units during that battle, you gain 1 Commendation point.",
+        "stats": {
+          "Commendation Pts": {
+            "value": 3
+          }
+        }
       },
-      "Crusade Honour§Medal of Laudable Service": {
+      "Personal Commendation§Medal of Laudable Service": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Astra Militarum"
           ]
         },
-        "text": "At the start of every Tour of Duty, you can select one Battle Honour this unit has (excluding Personal Commendations), and replace it with a new Battle Honour of your choosing (excluding Personal Commendations)."
+        "text": "At the start of every Tour of Duty, you can select one Battle Honour this unit has (excluding Personal Commendations), and replace it with a new Battle Honour of your choosing (excluding Personal Commendations).",
+        "stats": {
+          "Commendation Pts": {
+            "value": 3
+          }
+        }
       },
-      "Crusade Honour§Oculus Laureate": {
+      "Personal Commendation§Oculus Laureate": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Officer"
           ]
         },
-        "text": "**^^Officer^^** unit only. If this unit is your **^^Warlord^^**, you can use one Crusade Blessing even if you are not the Underdog."
+        "text": "**^^Officer^^** unit only. If this unit is your **^^Warlord^^**, you can use one Crusade Blessing even if you are not the Underdog.",
+        "stats": {
+          "Commendation Pts": {
+            "value": 4
+          }
+        }
       },
-      "Crusade Honour§Medallion Resolute": {
+      "Personal Commendation§Medallion Resolute": {
         "keywords": {
           "Keywords": [
-            "Personal Commendations"
+            "Personal Commendation"
           ],
           "Tags": [
             "Astra Militarum"
           ]
         },
-        "text": "While the unit is within range of an Objective marker that you control, models in this unit have a 5+ invulnerable save."
+        "text": "While the unit is within range of an Objective marker that you control, models in this unit have a 5+ invulnerable save.",
+        "stats": {
+          "Commendation Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Ability§Expert Bombardiers": {
+        "text": "While a unit from your Crusade army is under the effects of the Take Aim! Order, each time a model in that unit makes an attack with a Blast weapon, if a Critical Wound is scored, the improve the Armour Penetration characteristic of that attack by 1.\n\nIn addition:\n\nWhile you have a surplus in Morale, ARTILLERY units from your Crusade army gain 2XP from Dealers of Death instead of just 1XP.\n\nWhile you have a deficiency in Lexmechanicus, each time you gain a CP, roll one D6: on a 1, that CP is lost."
+      },
+      "Ability§Paragons of Drill Discipline": {
+        "text": "While a unit in your Crusade army is under the effects of the First Rank, Fire! Second Rank, Fire! Order, if that unit Remains Stationary, its Rapid Fire weapons have the [sustained hits 1] ability.\n\nIn addition:\n\nWhile you have a surplus in Materiel, each time an ARTILLERY unit from your Crusade army makes a ranged attack, re-roll a Hit roll of 1.\n\nWhile you have a deficiency in Tithe Pool, the cost to use the following Requisitions is increased by 1RP: Increase Supply Limit; Repair and Recuperate; Fresh Recruits."
+      },
+      "Ability§Veteran Crew": {
+        "text": "While a SQUADRON unit from your Crusade army is under the effects of the Duty and Honour! Order, ignore all Damaged effects that currently apply to that unit.\n\nIn addition:\n\nWhile you have a surplus in Materiel, add 3 to the Objective Control characteristic of SQUADRON models from your Crusade army.\n\nWhile you have a deficiency in Tithe Pool, each time an ASTRA MILITARUM unit from your Crusade army takes an Out of Action test, subtract 1 from the result."
+      },
+      "Ability§Vanguard Honours": {
+        "text": "While a SQUADRON unit from your Crusade army is under the effects of the Move! Move! Move! Order, if that unit Advances, its ranged weapons have the [ASSAULT] ability.\n\nIn addition:\n\nWhile you have a surplus in Lexmechanicus, at the start of your Command phase, if one or more SQUADRON units from your Crusade army are wholly within your opponent’s deployment zone, you gain 1CP.\n\nWhile you have a deficiency in Morale, each time you gain a Commendation point, roll one D6: on a 1, you lose 1 Commendation point."
+      },
+      "Ability§Preservation Commendation": {
+        "text": "While an INFANTRY unit in your Crusade army is under the effects of the Take Cover! Order, if that unit is within 3\" of one or more friendly TRANSPORT models, each time a ranged attack targets that INFANTRY unit, models in that unit have the Benefit of Cover against that attack.\n\nIn addition:\n\nWhile you have a surplus in Tithe Pool, add 1 to the Wounds characteristic of TRANSPORT models in your Crusade force.\n\nWhile you have a deficiency in Lexmechanicus, if you are the Underdog, you can use 1 fewer Crusade Blessing and, if your opponent is the Underdog, they can use one extra Crusade Blessing."
+      },
+      "Ability§Mechanised Assault Merit": {
+        "text": "While a TRANSPORT unit from your Crusade army is under the effects of the First Rank, Fire! Second Rank, Fire! Order, any units that disembark from that TRANSPORT are also considered to have had that Order issued to them that turn.\n\nIn addition:\n\nWhile you have a surplus in Morale, REGIMENT units from your Crusade army can disembark from TRANSPORT models even after that model has Advanced. Units that do so make a shock disembark move (Core Rules, 18.07) for that disembarkation.\n\nWhile you have a deficiency in Materiel, while a TRANSPORT model from your Crusade force is Below Half-strength, subtract 4\" from its Move characteristic."
+      },
+      "Ability§Cavalry Aquila": {
+        "text": "While a REGIMENT unit in your Crusade army is under the effects of the Move! Move! Move! Order, if that unit Advances, add 2 to the Advance roll.\n\nIn addition:\n\nWhile you have a surplus in Lexmechanicus, at the start of the battle, you can select up to 3 REGIMENT units from Crusade army; until the end of the battle, the selected units have the Infiltrators ability.\n\nWhile you have a deficiency in Morale, units from your Crusade army cannot be Marked for Greatness and units from your Crusade army cannot be given Crusade Relics."
+      },
+      "Ability§Veteran Guerrillas": {
+        "text": "While a REGIMENT unit in your Crusade army is under the effects of the Fix Bayonets! Order, melee weapons equipped by models in that unit have the [precision] ability.\n\nIn addition:\n\nWhile you have a surplus in Tithe Pool, REGIMENT units in your Crusade army gain 2XP from Battle Experience instead of just 1XP.\n\nWhile you have a deficiency in Morale, at the end of the battle, unless you are the victor, you do not receive a Requisition point for playing a battle.\n\n### Agendas\n\nIf your Crusade army includes any ASTRA MILITARUM units, you can select Agendas from those presented here.\n\nADVANCE, FOR THE EMPEROR!\n\nAt full pace, and with the correct motivation, the grand armies of the Imperial Guard can overwhelm enemy positions by sheer weight of numbers.\n\nAt the end of the battle, select up to six ASTRA MILITARUM units from your army that are wholly within your opponent’s deployment zone; each of those units earns 1XP. If your WARLORD is one of these units, your Crusade force also gains 1 Commendation point.\n\nPROPAGANDA TARGETS\n\nAmid long campaigns, the tireless Imperial propaganda machine demands visible and significant victories. The enemy’s most brutal weapons of war must be ostentatiously humbled in order to give fresh hope to wearied soldiers.\n\nAt the start of the battle, your opponent must select three different units from their Crusade army to be Extermination Targets (if your opponent’s army has fewer than three units, they select as many as possible). Each time an ASTRA MILITARUM unit from your Crusade army destroys an Extermination Target, that ASTRA MILITARUM unit gains 3XP. At the end of the battle, if all the Extermination Targets have been destroyed, your Crusade force also gains 1 Commendation point.\n\nINSPIRED COMMAND\n\nThe central nervous system of the Astra Militarum is its command structure - those who efficiently coordinate their platoons with decisive and well-timed orders can clinch a lasting victory.\n\nEach time a unit from your Crusade army destroys an enemy unit while being affected by an Order, the OFFICER that issued that Order gains 1XP (to a maximum of 3 per battle). At the end of the battle, if 5 or More OFFICERS from your Crusade army gained XP as the result of this agenda, your Crusade force also gains 1 Commendation point.\n\nHOLD THE LINE\n\nThe battle lines have been drawn and your orders are clear. The enemy must not break through, no matter the cost to your forces in lives and materiel.\n\nFrom the second battle round onwards, at the end of your turn, if there are no enemy units within your deployment zone and your ASTRA MILITARUM WARLORD is on the battlefield, that WARLORD gains 1XP. If, at the end of any of your turns, one or more enemy units are within your deployment zone, you cannot score any XP from this Agenda for the rest of the battle. If your WARLORD earns 4XP as the result of this Agenda in the battle, your Crusade force also gains 1 Commendation point.\n\nARMING THE ASSAULT\n\nAir-dropped caches of arms and fuel are vital to maintaining assaults far from supply lines, but the sealed canisters must be cracked and emptied before the enemy can reach them.\n\nAt the start of the battle, all objective markers on the battlefield are Unsecured Munitions objectives and will remain so until secured.\n\nAt the start of your Shooting phase, one ASTRA MILITARUM unit from your Crusade army (excluding Battle-shocked units) that is within range of an Unsecured Munitions objective, is not within Engagement Range of any enemy units, and is eligible to shoot, can attempt to secure that Unsecured Munitions objective. If attempted, until the end of your turn, that unit is not eligible to shoot or declare a charge. At the end of your turn, if that unit is still within range of an Unsecured Munitions objective, that Unsecured Munitions objective is secured and that unit gains 2XP.\n\nAt the end of the battle, if you control all the objective markers in No Man’s Land, and all of those objective markers have been secured, your Crusade force gains 1 additional Requisition point. At the end of the battle, if you control one or more objective markers in your opponent’s deployment zone, and those objective markers have been secured, your Crusade force gains 1 Commendation point.\n\n### Requisitions\n\nIf your Crusade army includes any ASTRA MILITARUM units, you can spend Requisition points (RP) on any of the following Requisitions.\n\nDECORATED OFFICER1RP\n\nThe regiment has been honed by a highly decorated and respected officer, who instils wisdom and discipline in the soldiers under their command.\n\nPurchase this Requisition when you add an OFFICER unit (excluding EPIC HEROES) to your Order of Battle. That unit gains 6XP.\n\nUPLIFTING PRIMERS1RP\n\nThe Imperial Infantryman’s Uplifting Primer can be requisitioned in bulk. It contains everything a Guardsman needs to effectively defeat the enemies of Mankind, and is a source of great comfort and inspiration to any loyal servant of the Emperor who can read.\n\nPurchase this Requisition before the battle. Until the end of the battle, once per battle, you can target one REGIMENT unit from your army with the Insane Bravery Stratagem for 0CP (even if the Morale deficiency effect is currently applying to your Tour of Duty). In addition, at the end of the battle, every REGIMENT unit from your army that did not suffer a Devastating Blow gains 1XP.\n\nCOMMIT EVERYTHING2RP\n\nThe campaigns senior commander has designated the upcoming battle as so vital that they will funnel all of their resources and assets into securing victory, forgoing frugal logistical management in favour of overwhelming force. Victory with these resources will need no explanation, and defeat will allow none.\n\nPurchase this Requisition at the start of a Tour of Duty. You gain 1 additional Logistics point to use during that Tour of Duty, however, until this Tour of Duty ends, at the end of each battle, if you are not the victor of that battle, you lose 1 Commendation point (to a minimum of 0).\n\nLAST-MINUTE TRANSFER1RP\n\nSkilled armoured crews and elite specialists are worth the resources needed to safely extract them from their current duties and reassign them. Such veterans can bring crucial skills to otherwise green formations.\n\nPurchase this Requisition at any time. Select one REGIMENT unit from your Order of Battle and replace it with a new REGIMENT unit, or select one SQUADRON unit from your Order of Battle and replace it with a new SQUADRON unit. The newly added unit starts with the same Personal Commendations as the unit that it replaced (if any), it starts with the same number of XP as the unit it replaced, and immediately gains the appropriate number of Battle Honours for its rank. You cannot purchase this Requisition if doing so would cause your Crusade forces total points to exceed its Supply Limit.\n\nABOVE AND BEYOND THE CALL OF DUTY1RP\n\nThe standards expected of an Astra Militarum soldier are high, yet there are those units whose achievements go far beyond those of their fellow fighters. On such occasions, the loftiest of commendations may be awarded, often presented to the recipients in person by a general or other high-ranking officer.\n\nPurchase this Requisition at the end of a Tour of Duty, when you award a Personal Commendation to an ASTRA MILITARUM unit from your Crusade force. The Personal Commendation just awarded does not count towards the maximum number of Battle Honours that unit can have. You can only purchase this Requisition once per Tour of Duty and you cannot select the same unit for it more than once.\n\n### Battle Traits\n\nWhen an ASTRA MILITARUM unit gains a Battle Trait, you can use one of the tables presented here to determine which Battle Trait that unit has gained.\n\nINFANTRY AND CAVALRY UNITS\n\nD6\n\nDEAD-EYED KILLERS\n\nThese troops have fought for so long that they are inured to death and no longer fear the enemy.\n\nEach time you take a Battle-shock, Leadership or Desperate Escape test for this unit, add 1 to that test.\n\nSTEALTHY\n\nThese seasoned veterans are experts at moving amongst dense terrain and remaining unseen. There are few troops with such an uncanny ability to utilise cover, camouflage and positioning.\n\nModels in this unit have the Stealth ability.\n\nSHARPSHOOTERS\n\nExpert marksmen who obsessively maintain their weapons, these warriors are capable of hitting distant targets with great accuracy.\n\nRanged weapons equipped by models in this unit have the [heavy] ability.\n\nGRIZZLED\n\nThese hardened soldiers are born survivors, and so far have endured everything the galaxy has thrown at them and lived to tell the tale.\n\nModels in this unit have the Feel No Pain 6+ ability and you can re-roll failed Out of Action tests taken for this unit.\n\nGUERRILLAS\n\nGuerrilla fighters are seasoned hit-and-run troops, outwitting their foes and disappearing suddenly after a lightning-fast ambush.\n\nIn your Shooting phase, after this unit has shot, if it is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D6\". If it does, until the end of the turn, this unit is not eligible to declare a charge unless it has the CAVALRY keyword.\n\nTRENCH FIGHTERS\n\nThese soldiers have fought hard to bloody victory on numerous deadly battlefields, clearing out foes with blades, truncheons and bayonets.\n\nMelee weapons equipped by models in this unit have the [LETHAL HITS] ability.\n\nOFFICER UNITS\n\nD6\n\nBOOMING VOICE\n\nEvery order given by this officer is bellowed to their troops with perfect clarity and at ear-splitting volume.\n\nEach time this OFFICER issues an Order, you can select one eligible unit within 12\" of that OFFICER model to issue it, to instead of within 6\".\n\nEYE FOR TALENT\n\nAlways on the lookout for aptitude, this officer moulds gifted troopers into elite warriors.\n\nIf this OFFICER is part of your Crusade army and was not destroyed during the battle, then at the end of the battle, select one additional unit to be Marked for Greatness (you cannot use this ability to select this OFFICER’s unit to be Marked for Greatness).\n\nOLD GRUDGES\n\nThis officer has learnt their nemesis' weakness and will exploit it ruthlessly in a furry of orders to nearby troops, sealing their old enemy's doom with a storm off repower.\n\nAt the start of the battle, select one unit from your opponent’s army. Each time a model in this OFFICER’s unit makes an attack that targets that unit, you can re-roll the Hit roll.\n\nVEHICLE UNITS\n\nD6\n\nURBAN FIGHTERS\n\nVeterans of operating in confined environments, this crew are not fazed by engaging foes at point-blank range.\n\nEach time a model in this unit makes a ranged attack, that model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units.\n\nBIG-GAME HUNTERS\n\nThe numerous kill markings adorning this vehicle are a testament to its crew's talent.\n\nEach time a model in this unit makes a ranged attack, if the target of that attack is a MONSTER or VEHICLE unit, you can re-roll Hit rolls of 1 and re-roll Wound rolls of 1.\n\nWELL-DRILLED CREW\n\nThis vehicle’s soldiers are experts in its handling - loaders, gunners and driver working like a well-oiled machine.\n\nRanged weapons equipped by models in this unit have the [assault] ability.\n\n### Crusade Relics\n\nWhen an ASTRA MILITARUM CHARACTER model gains a Crusade Relic, you can select one of the Relics presented here.\n\n### Artificer Relics\n\nICONIC ACCOUTREMENTS\n\nMany heroes of the Astra Militarum bear weapons that are synonymous with their achievements. These items may include magnificent plumed caps, gilded bionics, treasured trench clubs or signature swagger sticks such as that once carried to war by General-Boyar Koledin, whose famed fortune was often attributed to it.\n\nOnce per turn, you can change either one Hit roll, one Wound roll or one saving throw made for the bearer’s unit to a 6.\n\nAQUILAN EYE\n\nFitted with a micro-cogitator, these relic magnoculars enable an officer to maintain an overview of each area of the battlefield, monitor the movement of enemy units and adjust the deployment of their assets accordingly.\n\nOFFICER model only. In your Command phase, instead of issuing any Orders, the bearer can take a Leadership test. If it do, and that test is passed, you gain 1CP.\n\nVOICE OF VON RHYNE\n\nUlis ancient laud-hailer, once borne by one General Von Rhyne - a veteran of the Sabbat Worlds Crusade - has become synonymous with victory. Orders, when bellowed through this device, seem louder and more forceful, inspiring resolve in those who hear them.\n\nOFFICER model only. The bearer can issue one additional Order in your Command phase and each time the bearer issues an Order to a unit, that Order does not cease to apply if that unit fails a Battle-shock test.\n\n### Antiquity Relics\n\nTACTICAL AUTO-RELIQUARY OF TYBERIUS\n\nBuilt into the gold-chased skull of Lord Commander Lucellin Tyberius himself, this device houses a web of psycho-circuitry containing Tyberius’ memory engrams and tactical acumen - and with it, his curmudgeonly and overbearing personality. Borne aloft by its own gravitic motors, the device observes and evaluates an officer’s decisions. The moment it considers an order poorly chosen, the skull cuts into the vox-transmission and loudly overrides it.\n\nINFANTRY OFFICER model only. The bearer can issue up to two Orders to REGIMENT units. While the bearer is leading a unit, that unit can be affected by up to two different Orders at the same time (without the most recent Order being replaced).\n\nMAGALLIAN’S MANTLE\n\nThese advanced augmetic implants, crafted by the Tech-Priests of Triplex Phall, include ocular enhancers, spinal stimm injectors and cerebral interfaces that magnify the bearer’s agility, resilience and visual acuity. Borne first by Lord Obscurus Magallian during his legendary campaigns against the awakened Necrons of the Novokh Dynasty, it was harvested from his partially atomised corpse after the battle of Kyloch XII. It has been implanted into many high-ranking commanders since. Those willing to subject themselves to the agonising implantation process believe that its mechanisms contain within their machine spirit lingering traces of the skills, experience and authority of its former bearers.\n\nINFANTRY OFFICER model only. Improve the bearers Save, Wounds, Leadership and Objective Control characteristics by 1, improve the Weapon Skill and Ballistic Skill characteristics of the bearers weapons by 1, and improve the bearer’s invulnerable save (if it has one) by 1 (to a maximum of 4+).\n\n### Legendary Relics\n\nSTAR OF TERRA\n\nThe Star of Terra is one of the highest decorations that can be awarded to a serving officer of the Imperial Guard. In addition to proclaiming the recipient’s lofty status, it contains a powerful force field of ancient provenance.\n\nINFANTRY OFFICER model only. Models in the bearer’s unit have a 5+ invulnerable save, and each time an attack targets the bearer’s unit, subtract 1 from the Wound roll.\n\n### Crusade Badges\n\nWhen your Crusade force accomplishes specific long-term goals, you can earn the Crusade badges shown below, representing your warriors’ successes over many battles."
+      },
+      "Regimental Commendations§Regimental Commendations": {
+        "text": "Tick the Regimental Commendations your Order of Battle holds (at most two, 8 Commendation points each). Each adds 3 Crusade points to every army you muster and its abilities apply to all ASTRA MILITARUM units in your Crusade force.",
+        "rules": {
+          "regimental0": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Expert Bombardiers"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Expert Bombardiers",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "regimental1": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Paragons of Drill Discipline"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Paragons of Drill Discipline",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "regimental2": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Veteran Crew"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran Crew",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "regimental3": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Vanguard Honours"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Vanguard Honours",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "regimental4": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Preservation Commendation"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Preservation Commendation",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "regimental5": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mechanised Assault Merit"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mechanised Assault Merit",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "regimental6": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Cavalry Aquila"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Cavalry Aquila",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "regimental7": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Veteran Guerrillas"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran Guerrillas",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "regimentalCosts": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Commendation Pts",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Expert Bombardiers",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Paragons of Drill Discipline",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran Crew",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Vanguard Honours",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Preservation Commendation",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Mechanised Assault Merit",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Cavalry Aquila",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran Guerrillas",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 0,
+                "equation": {
+                  "operator": "T*O",
+                  "value": 8
+                }
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "each Regimental Commendation costs 8 Commendation points"
+          },
+          "regimentalCrusadePts": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Expert Bombardiers",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Paragons of Drill Discipline",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran Crew",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Vanguard Honours",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Preservation Commendation",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Mechanised Assault Merit",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Cavalry Aquila",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran Guerrillas",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 0,
+                "equation": {
+                  "operator": "T*O",
+                  "value": 3
+                }
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "each Regimental Commendation adds 3 Crusade points to the mustered army"
+          },
+          "No more than two Regimental Commendations.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Expert Bombardiers",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Paragons of Drill Discipline",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran Crew",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Vanguard Honours",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Preservation Commendation",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Mechanised Assault Merit",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Cavalry Aquila",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Veteran Guerrillas",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 0,
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          }
+        }
+      },
+      "Ability§Surplus: Lexmechanicus": {
+        "text": "When selecting Agendas for a battle, you can select one additional Astra Militarum Agenda to be active for that battle in addition to any others selected for that battle."
+      },
+      "Ability§Deficiency: Lexmechanicus": {
+        "text": "Each time an OFFICER from your army issues an Order, roll one D6: on a 1, that Order is not issued."
+      },
+      "Ability§Surplus: Materiel": {
+        "text": "Each time an ASTRA MILITARUM unit from your army is selected to shoot, you can re-roll one Hit roll when resolving that unit’s attacks."
+      },
+      "Ability§Deficiency: Materiel": {
+        "text": "Subtract 2\" from the Move characteristic of ASTRA MILITARUM VEHICLE models from your Crusade force."
+      },
+      "Ability§Surplus: Tithe Pool": {
+        "text": "In your Command phase, 1 destroyed model (excluding CHARACTERS) is returned to each REGIMENT INFANTRY unit from your army that is on the battlefield and not at its Starting Strength."
+      },
+      "Ability§Deficiency: Tithe Pool": {
+        "text": "In your Command phase, if your WARLORD is not on the battlefield, you do not gain a Command point."
+      },
+      "Ability§Surplus: Morale": {
+        "text": "Improve the Leadership characteristic of ASTRA MILITARUM models in your Crusade force by 1."
+      },
+      "Ability§Deficiency: Morale": {
+        "text": "You cannot use the Insane Bravery Stratagem."
+      },
+      "Tour of Duty§Tour of Duty": {
+        "assets": {
+          "traits": [
+            "Regimental Commendations§Regimental Commendations"
+          ]
+        },
+        "text": "**Tours of Duty.** Each time your Crusade force starts a Tour of Duty, roll for its length: D6+4 battles to fight and D3+2 victories required (note both here). After each battle reduce the battles remaining by 1, and the victories remaining by 1 if you won. When both reach 0 the Tour is complete: spend Commendation points on Commendations, then start a new Tour (any unspent Commendation points are lost).\n\n**Logistics points.** At the start of each Tour assign 4 Logistics points across Lexmechanicus, Materiel, Tithe Pool and Morale, no more than 2 in any one category. This book reads 0 points as a **deficiency**, 1 as no effect and 2 as a **surplus** (the codex shows the thresholds as icons); the surplus and deficiency effects attach below as abilities while they apply.\n\n**Commendation points.** Your Crusade force earns 1 Commendation point after each battle (D3 if you won); Agendas can earn more. At the end of a Tour spend them on Personal Commendations (Battle Honours for individual ASTRA MILITARUM units: an OFFICER may hold two, other units one, never the same one twice on a unit, never on EPIC HEROES) and Regimental Commendations (at most two on your Order of Battle, each adding 3 to the Crusade points of every army you muster). You can remove Commendations at any time to buy different ones."
       }
     },
     "gameModes": {},

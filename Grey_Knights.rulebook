@@ -1,6 +1,6 @@
 {
   "name": "Grey Knights 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.7",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -116,6 +116,518 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          }
+        }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Purge Corruption": {
+                "order": 100,
+                "tracking": {
+                  "Grey Knights Agenda": 1
+                }
+              },
+              "Empyric Interdiction": {
+                "order": 101,
+                "tracking": {
+                  "Grey Knights Agenda": 1
+                }
+              },
+              "Unmake Omens": {
+                "order": 102,
+                "tracking": {
+                  "Grey Knights Agenda": 1
+                }
+              },
+              "Destroy the Infernal": {
+                "order": 103,
+                "tracking": {
+                  "Grey Knights Agenda": 1
+                }
+              },
+              "No Witnesses": {
+                "order": 104,
+                "tracking": {
+                  "Grey Knights Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Purge Corruption": {
+                "order": 100,
+                "tracking": {
+                  "Grey Knights Agenda": 1
+                }
+              },
+              "Empyric Interdiction": {
+                "order": 101,
+                "tracking": {
+                  "Grey Knights Agenda": 1
+                }
+              },
+              "Unmake Omens": {
+                "order": 102,
+                "tracking": {
+                  "Grey Knights Agenda": 1
+                }
+              },
+              "Destroy the Infernal": {
+                "order": 103,
+                "tracking": {
+                  "Grey Knights Agenda": 1
+                }
+              },
+              "No Witnesses": {
+                "order": 104,
+                "tracking": {
+                  "Grey Knights Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Unseal the Scrolls",
+            "Requisition§Rites of Banishment",
+            "Requisition§Deeds of Legend",
+            "Requisition§Master Among Masters",
+            "Requisition§Armoured Raiment",
+            "Requisition§Psycho-Reconditioning",
+            "Crusade Badge§Exemplar of the Chapter",
+            "Crusade Badge§Champion of Titan",
+            "Crusade Badge§Bane of Chaos"
+          ]
+        }
+      },
+      "Gift of the Prescient": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour",
+        "stats": {
+          "Purgation Pts": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 1,
+            "visibility": "always",
+            "group": "Cost",
+            "groupOrder": -1
+          }
+        }
+      },
+      "Character": {
+        "rules": {
+          "allowGiftofthePrescient": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Gift of the Prescient"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Gifts of the Prescient: bought with Purgation points after a Chaos Incursion ends; each is unique and needs a minimum rank"
+          },
+          "Gifts of the Prescient: one at Battle-ready or Blooded.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Gift of the Prescient"
+                  ]
+                ],
+                "max": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 16
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Gifts of the Prescient: two at Battle-hardened or Heroic.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Gift of the Prescient"
+                  ]
+                ],
+                "max": 2
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 51
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Gifts of the Prescient: three at most.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Gift of the Prescient"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
+      },
+      "Augurium Vision": {
+        "aspects": {
+          "Visibility": "always",
+          "Rename": true
+        },
+        "templateClass": "",
+        "stats": {
+          "State": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Malefic": {
+                "order": 1,
+                "tracking": {
+                  "Malefic Vision": 1
+                }
+              },
+              "Sanctic": {
+                "order": 2,
+                "tracking": {
+                  "Sanctic Vision": 1
+                }
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 1
+          }
+        }
+      },
+      "Augurium": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Incursion": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Chaos Incursion": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "label": "Chaos Incursion under way",
+            "statOrder": 1
+          },
+          "Banishment total": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 12,
+            "statOrder": 2
+          },
+          "Banishment points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 12,
+            "statOrder": 3
+          },
+          "Purgation Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 30,
+            "label": "Purgation points earned",
+            "icons": [
+              "eye"
+            ],
+            "statOrder": 4
+          },
+          "Purgation Pts spent": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "min": 0,
+            "max": 99,
+            "label": "Purgation points spent",
+            "statOrder": 5
+          }
+        },
+        "rules": {
+          "purgationSpent": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Purgation Pts spent",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{roster}",
+                  "tracked",
+                  "Purgation Pts"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "Purgation points spent exceed the points earned.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Purgation Pts"
+                  ]
+                ],
+                "max": [
+                  "{self}",
+                  "stats",
+                  "Purgation Points",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          },
+          "banished": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": " — INCURSION ENDED: claim Purgation points",
+                "append": ""
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Incursion",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Banishment total",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Banishment points",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Banishment total",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5
           }
         }
       }
@@ -9381,6 +9893,290 @@
             "dynamic": false,
             "value": "Imperium"
           }
+        },
+        "rules": {
+          "useCrusadeGrey_Knights": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Augurium§Augurium Vision Tracker"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
+          },
+          "Only one Fate-woven Knot in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Fate-woven Knot"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Scrolls of Prophecy in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Scrolls of Prophecy"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Hour of Need in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Hour of Need"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Augury of Aggression in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Augury of Aggression"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Words of the Righteous in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Words of the Righteous"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Gem of Inoktu (Psychic) in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Gem of Inoktu (Psychic)"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Conjunction Signature in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Conjunction Signature"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Duty's End in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Duty's End"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Sigil Abnegatos in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Sigil Abnegatos"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Portents of Doom in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Portents of Doom"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Periclaen Eye in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Periclaen Eye"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Mirror of Sight Denied in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Mirror of Sight Denied"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Prism of Potential in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Prism of Potential"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
         }
       },
       "Stratagem§Abominus-class Targets": {
@@ -13145,148 +13941,781 @@
           }
         }
       },
-      "Crusade Honour§Fate-woven Knot": {
-        "keywords": {
-          "Keywords": [
-            "Gifts of the Prescient"
-          ],
-          "Tags": [
-            "Grey Knights"
-          ]
+      "Requisition§Unseal the Scrolls": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
         },
-        "text": "Model with the Battle-ready rank or higher. Once per battle, at the start of any phase, the bearer can use this Battle Honour. If it does, until the end of the phase, the bearer has a 3+ invulnerable save."
+        "text": "Purchase this Requisition at the Select Agenda step, when you consult the Prognosticars. Do not randomly determine a Vision; instead, you can select which Vision on your\n\nAugurium Vision tracker will be changed to the Malefic state for this battle."
       },
-      "Crusade Honour§Scrolls of Prophecy": {
-        "keywords": {
-          "Keywords": [
-            "Gifts of the Prescient"
-          ],
-          "Tags": [
-            "Grey Knights"
-          ]
+      "Requisition§Rites of Banishment": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
         },
-        "text": "Model with the Heroic rank or higher. If the bearer is in your Crusade army, then at the Select Crusade Blessings step, if you are the Underdog, you can select one additional Crusade Blessing."
+        "text": "Purchase this Requisition at the Determine Victor step if you are combating a Chaos Incursion. Roll one D6, adding 2 to the result if you won the battle: on a 4+, you gain 1 Banishment point. If a Chaos Incursion ends as a result of this Requisition, you can select one Vision on your\n\nAugurium Vision tracker that is in the Malefic state and change it into the Sanctic state before gaining Purgation points."
       },
-      "Crusade Honour§Hour of Need": {
-        "keywords": {
-          "Keywords": [
-            "Gifts of the Prescient"
-          ],
-          "Tags": [
-            "Grey Knights"
-          ]
+      "Requisition§Deeds of Legend": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
         },
-        "text": "Model with the Battle-ready rank or higher. If your Crusade army includes the bearer, then at the Determine Attacker and Defender step, do not roll off to determine the Attacker and Defender for that battle. Instead, you choose whether you will be the Attacker. If your opponent has the same or a similar rule to become the Attacker, ignore both rules and instead determine the Attacker and Defender normally."
+        "text": "Cost: 2RP/3RP. Purchase this Requisition at the Determine Victor step if you were the Victor. You can select a second GREY KNIGHTS unit to be Marked for Greatness this battle. If you purchase this Requisition while you are combating a Chaos Incursion, this Requisition costs 2RP; otherwise, it costs 3RP."
       },
-      "Crusade Honour§Augury of Aggression": {
-        "keywords": {
-          "Keywords": [
-            "Gifts of the Prescient"
-          ],
-          "Tags": [
-            "Grey Knights"
-          ]
+      "Requisition§Master Among Masters": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
         },
-        "text": "Model with the Blooded rank or higher. Once per turn, you can target the bearer's unit with the Fire Overwatch or the Heroic Intervention Stratagem for 0CP."
+        "text": "Purchase this Requisition at any time. Select one GREY KNIGHTS CHARACTER unit from your Crusade force with 71XP or more. Each unit can only be selected for this Requisition once. The selected unit gains one additional Battle Trait; this does not count towards the maximum number of Battle Honours a unit can have."
       },
-      "Crusade Honour§Words of the Righteous": {
-        "keywords": {
-          "Keywords": [
-            "Gifts of the Prescient"
-          ],
-          "Tags": [
-            "Grey Knights"
-          ]
+      "Requisition§Armoured Raiment": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
         },
-        "text": "Model with the Blooded rank or higher. At the start of the Fight phase, each enemy unit within 3\" of the bearer must take a Battle-shock test, subtracting 1 from that test if it is a **^^Chaos^^** unit."
+        "text": "Purchase this Requisition before a battle. Do one of the following:\n\nSelect one BROTHER-CAPTAIN unit from your Crusade force with the Heroic rank or higher. Remove that unit from your Crusade force and add one GRAND MASTER or GRAND MASTER IN NEMESIS DREADKNIGHT unit to your Crusade force.\n\nSelect one GREY KNIGHTS INFANTRY CHARACTER or GRAND MASTER IN NEMESIS DREADKNIGHT unit from your Crusade force with the Heroic rank or higher that has one or more Battle Scars. Remove that unit from your Crusade force and add one GREY KNIGHTS VENERABLE DREADNOUGHT unit to your Crusade force.\n\nThe new unit has the same Battle Honours and Battle Scars as the unit it replaced, and until this unit is removed from your Crusade force, each time this unit would gain one or more XP from Dealers of Death, if it destroyed one or more MONSTER or VEHICLE units during the battle, it gains 1 additional XP. You cannot purchase this Requisition if doing so would cause your Crusade force to exceed its current Supply Limit."
       },
-      "Crusade Honour§Gem of Inoktu (Psychic)": {
-        "keywords": {
-          "Keywords": [
-            "Gifts of the Prescient"
-          ],
-          "Tags": [
-            "Grey Knights"
-          ]
+      "Requisition§Psycho-Reconditioning": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
         },
-        "text": "Model with the Blooded rank or higher. At the start of your Shooting phase, select one enemy unit within 12\" of and visible to the bearer. Roll one D6, adding 1 to the result if it is a **^^Chaos^^** unit. On a 4+, that enemy unit suffers 3 mortal wounds."
+        "text": "After fighting forbidden foes alongside other Chapters, the Grey Knights often use a form of psychic adjustment to scour away their allies’ experiences and memories rather than exterminating such valuable warriors. A more nuanced form of this technique is sometimes used on the Grey Knights themselves to rapidly implant new skills and knowledge in place of old.\n\nPurchase this Requisition at any time. Select one GREY KNIGHTS PSYKER unit from your Crusade force. Select one Battle Trait that unit currently has (if that unit has a Psychic Fortitude Battle Trait, you must select that Battle Trait) and replace it with a different Grey Knights Battle Trait."
       },
-      "Crusade Honour§Conjunction Signature": {
-        "keywords": {
-          "Keywords": [
-            "Gifts of the Prescient"
-          ],
-          "Tags": [
-            "Grey Knights"
-          ]
-        },
-        "text": "Model with the Heroic rank or higher. You can target the bearer's unit with the Rapid Ingress Stratagem for 0CP."
+      "Crusade Badge§Exemplar of the Chapter": {
+        "text": "You have won three or more battles.\nYou have ended one or more Chaos Incursions.\nYour Crusade force has 1 or more Gifts of the Prescient."
       },
-      "Crusade Honour§Duty's End": {
-        "keywords": {
-          "Keywords": [
-            "Gifts of the Prescient"
-          ],
-          "Tags": [
-            "Grey Knights"
-          ]
-        },
-        "text": "Model with the Battle-hardened rank or higher. If the bearer is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 the result if the attacking unit contains an **^^Epic Hero^^**, **^^Monster^^** or **^^Warlord^^** model: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy suffers 3 mortal wounds; on a 6+, that enemy unit suffers D3+3 mortal wounds."
+      "Crusade Badge§Champion of Titan": {
+        "text": "You have won six or more battles.\nYou have ended two or more Chaos Incursions.\nYour Crusade force has three or more Gifts of the Prescient.\nYou have used the Armoured Raiment Requisition to add a new unit to your Crusade force."
       },
-      "Crusade Honour§Sigil Abnegatos": {
-        "keywords": {
-          "Keywords": [
-            "Gifts of the Prescient"
-          ],
-          "Tags": [
-            "Grey Knights"
-          ]
-        },
-        "text": "Model with the Battle-hardened rank or higher. While the bearer is within range of an objective marker that you control, enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of that objective marker."
+      "Crusade Badge§Bane of Chaos": {
+        "text": "You are the bane of the Archenemy, a paragon of your Chapters virtues, and though your name may never be known elsewhere, it has found a place upon the honour rolls in the Hall of Champions.\nYou have won ten or more battles.\nYou have ended three or more Chaos Incursions.\nYour Crusade force has five or more Gifts of the Prescient.\nYou have completed the No Witnesses Agenda one or more times, or you have scored XP from the Destroy the Infernal Agenda from destroying a DAEMON PRIMARCH one or more times.\nYou have used the Master Among Masters Requisition one or more times."
       },
-      "Crusade Honour§Portents of Doom": {
+      "Gift of the Prescient§Fate-woven Knot": {
         "keywords": {
-          "Keywords": [
-            "Gifts of the Prescient"
-          ],
           "Tags": [
             "Grey Knights"
+          ],
+          "Keywords": [
+            "Battle-ready rank or higher"
           ]
         },
-        "text": "Model with the Heroic rank or higher. Each time your opponent targets a unit from their army with a Stratagem, if that unit is a **^^Chaos^^** unit within 12\" of the bearer, or if that unit is a non-**^^Chaos^^** unit within 9\" of the bearer, increase the cost of that use of that Stratagem by 1CP."
+        "text": "Model with the Battle-ready rank or higher. Once per battle, at the start of any phase, the bearer can use this Battle Honour. If it does, until the end of the phase, the bearer has a 3+ invulnerable save.",
+        "stats": {
+          "Purgation Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "Battle-ready rank or higher.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 0
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
       },
-      "Crusade Honour§Periclaen Eye": {
+      "Gift of the Prescient§Scrolls of Prophecy": {
         "keywords": {
-          "Keywords": [
-            "Gifts of the Prescient"
-          ],
           "Tags": [
             "Grey Knights"
+          ],
+          "Keywords": [
+            "Heroic rank or higher"
           ]
         },
-        "text": "Model with the Battle-hardened rank or higher. Each time a melee attack targets the bearer's unit, if the attacking unit made a Charge move this turn, subtract 1 from the Hit roll."
+        "text": "Model with the Heroic rank or higher. If the bearer is in your Crusade army, then at the Select Crusade Blessings step, if you are the Underdog, you can select one additional Crusade Blessing.",
+        "stats": {
+          "Purgation Pts": {
+            "value": 4
+          }
+        },
+        "rules": {
+          "Heroic rank or higher.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 31
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
       },
-      "Crusade Honour§Mirror of Sight Denied": {
+      "Gift of the Prescient§Hour of Need": {
         "keywords": {
-          "Keywords": [
-            "Gifts of the Prescient"
-          ],
           "Tags": [
             "Grey Knights"
+          ],
+          "Keywords": [
+            "Battle-ready rank or higher"
           ]
         },
-        "text": "Model with the Battle-hardened rank or higher. If your army includes one or more models with this ability, after both players have deployed their armies, select up to three **^^Grey Knights^^** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+        "text": "Model with the Battle-ready rank or higher. If your Crusade army includes the bearer, then at the Determine Attacker and Defender step, do not roll off to determine the Attacker and Defender for that battle. Instead, you choose whether you will be the Attacker. If your opponent has the same or a similar rule to become the Attacker, ignore both rules and instead determine the Attacker and Defender normally.",
+        "stats": {
+          "Purgation Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "Battle-ready rank or higher.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 0
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
       },
-      "Crusade Honour§Prism of Potential": {
+      "Gift of the Prescient§Augury of Aggression": {
         "keywords": {
-          "Keywords": [
-            "Gifts of the Prescient"
-          ],
           "Tags": [
             "Grey Knights"
+          ],
+          "Keywords": [
+            "Blooded rank or higher"
           ]
         },
-        "text": "Model with the Battle-hardened rank or higher. When selecting Agendas for a battle, if the bearer is in your Crusade army, at the Select Agendas step, you can select one additional Grey Knights Agenda."
+        "text": "Model with the Blooded rank or higher. Once per turn, you can target the bearer's unit with the Fire Overwatch or the Heroic Intervention Stratagem for 0CP.",
+        "stats": {
+          "Purgation Pts": {
+            "value": 1
+          }
+        },
+        "rules": {
+          "Blooded rank or higher.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 6
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
+      },
+      "Gift of the Prescient§Words of the Righteous": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ],
+          "Keywords": [
+            "Blooded rank or higher"
+          ]
+        },
+        "text": "Model with the Blooded rank or higher. At the start of the Fight phase, each enemy unit within 3\" of the bearer must take a Battle-shock test, subtracting 1 from that test if it is a **^^Chaos^^** unit.",
+        "stats": {
+          "Purgation Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "Blooded rank or higher.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 6
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
+      },
+      "Gift of the Prescient§Gem of Inoktu (Psychic)": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ],
+          "Keywords": [
+            "Blooded rank or higher"
+          ]
+        },
+        "text": "Model with the Blooded rank or higher. At the start of your Shooting phase, select one enemy unit within 12\" of and visible to the bearer. Roll one D6, adding 1 to the result if it is a **^^Chaos^^** unit. On a 4+, that enemy unit suffers 3 mortal wounds.",
+        "stats": {
+          "Purgation Pts": {
+            "value": 3
+          }
+        },
+        "rules": {
+          "Blooded rank or higher.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 6
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
+      },
+      "Gift of the Prescient§Conjunction Signature": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ],
+          "Keywords": [
+            "Heroic rank or higher"
+          ]
+        },
+        "text": "Model with the Heroic rank or higher. You can target the bearer's unit with the Rapid Ingress Stratagem for 0CP.",
+        "stats": {
+          "Purgation Pts": {
+            "value": 3
+          }
+        },
+        "rules": {
+          "Heroic rank or higher.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 31
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
+      },
+      "Gift of the Prescient§Duty's End": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ],
+          "Keywords": [
+            "Battle-hardened rank or higher"
+          ]
+        },
+        "text": "Model with the Battle-hardened rank or higher. If the bearer is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 the result if the attacking unit contains an **^^Epic Hero^^**, **^^Monster^^** or **^^Warlord^^** model: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy suffers 3 mortal wounds; on a 6+, that enemy unit suffers D3+3 mortal wounds.",
+        "stats": {
+          "Purgation Pts": {
+            "value": 3
+          }
+        },
+        "rules": {
+          "Battle-hardened rank or higher.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 16
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
+      },
+      "Gift of the Prescient§Sigil Abnegatos": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ],
+          "Keywords": [
+            "Battle-hardened rank or higher"
+          ]
+        },
+        "text": "Model with the Battle-hardened rank or higher. While the bearer is within range of an objective marker that you control, enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of that objective marker.",
+        "stats": {
+          "Purgation Pts": {
+            "value": 3
+          }
+        },
+        "rules": {
+          "Battle-hardened rank or higher.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 16
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
+      },
+      "Gift of the Prescient§Portents of Doom": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ],
+          "Keywords": [
+            "Heroic rank or higher"
+          ]
+        },
+        "text": "Model with the Heroic rank or higher. Each time your opponent targets a unit from their army with a Stratagem, if that unit is a **^^Chaos^^** unit within 12\" of the bearer, or if that unit is a non-**^^Chaos^^** unit within 9\" of the bearer, increase the cost of that use of that Stratagem by 1CP.",
+        "stats": {
+          "Purgation Pts": {
+            "value": 3
+          }
+        },
+        "rules": {
+          "Heroic rank or higher.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 31
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
+      },
+      "Gift of the Prescient§Periclaen Eye": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ],
+          "Keywords": [
+            "Battle-hardened rank or higher"
+          ]
+        },
+        "text": "Model with the Battle-hardened rank or higher. Each time a melee attack targets the bearer's unit, if the attacking unit made a Charge move this turn, subtract 1 from the Hit roll.",
+        "stats": {
+          "Purgation Pts": {
+            "value": 3
+          }
+        },
+        "rules": {
+          "Battle-hardened rank or higher.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 16
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
+      },
+      "Gift of the Prescient§Mirror of Sight Denied": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ],
+          "Keywords": [
+            "Battle-hardened rank or higher"
+          ]
+        },
+        "text": "Model with the Battle-hardened rank or higher. If your army includes one or more models with this ability, after both players have deployed their armies, select up to three **^^Grey Knights^^** units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+        "stats": {
+          "Purgation Pts": {
+            "value": 4
+          }
+        },
+        "rules": {
+          "Battle-hardened rank or higher.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 16
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
+      },
+      "Gift of the Prescient§Prism of Potential": {
+        "keywords": {
+          "Tags": [
+            "Grey Knights"
+          ],
+          "Keywords": [
+            "Battle-hardened rank or higher"
+          ]
+        },
+        "text": "Model with the Battle-hardened rank or higher. When selecting Agendas for a battle, if the bearer is in your Crusade army, at the Select Agendas step, you can select one additional Grey Knights Agenda.",
+        "stats": {
+          "Purgation Pts": {
+            "value": 4
+          }
+        },
+        "rules": {
+          "Battle-hardened rank or higher.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 16
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        }
+      },
+      "Augurium Vision§Sanctify Site": {
+        "text": "Grid position top-left."
+      },
+      "Augurium Vision§Purge and Cleanse": {
+        "text": "Grid position top-centre."
+      },
+      "Augurium Vision§Rites of Exorcism": {
+        "text": "Grid position top-right."
+      },
+      "Augurium Vision§Vision 4": {
+        "text": "Grid position middle-left."
+      },
+      "Augurium Vision§Vision 5": {
+        "text": "Grid position centre."
+      },
+      "Augurium Vision§Vision 6": {
+        "text": "Grid position middle-right."
+      },
+      "Augurium Vision§Vision 7": {
+        "text": "Grid position bottom-left."
+      },
+      "Augurium Vision§Vision 8": {
+        "text": "Grid position bottom-centre."
+      },
+      "Augurium Vision§Vision 9": {
+        "text": "Grid position bottom-right."
+      },
+      "Augurium§Augurium Vision Tracker": {
+        "assets": {
+          "traits": [
+            "Augurium Vision§Sanctify Site",
+            "Augurium Vision§Purge and Cleanse",
+            "Augurium Vision§Rites of Exorcism",
+            "Augurium Vision§Vision 4",
+            "Augurium Vision§Vision 5",
+            "Augurium Vision§Vision 6",
+            "Augurium Vision§Vision 7",
+            "Augurium Vision§Vision 8",
+            "Augurium Vision§Vision 9"
+          ]
+        },
+        "text": "**Visions from the Augurium.** At the start of the Select Agendas step, if there are any GREY KNIGHTS CHARACTER units in your Crusade army, consult the Prognosticars: roll a D33 on the Augurium Vision tracker (a 3×3 grid) and set that Vision to **Malefic** (two Visions if none are Malefic or four or more are Sanctic; a Sanctic Vision rolled turns Malefic; a Malefic one is re-rolled). Grey Knights Agendas can turn one Vision **Sanctic** after each battle. The nine Visions below are the grid; the codex tracker card gives the six names this book lacks — rename them.\n\n**Chaos Incursion.** At the Update Order of Battle step, if any row, column or diagonal of three Visions is Malefic, an Incursion begins: tick Incursion, roll a D3 and add the number of Malefic Visions for your Banishment total, and collect Banishment points from Agendas, Requisitions and Battle Honours (no consulting, no Vision changes meanwhile). When Banishment points reach the total, the Incursion ends: gain 1 Purgation point per Sanctic Vision plus 1 for each full Sanctic row or column, reset Banishment points and the grid to clear.\n\n**Gifts of the Prescient.** After an Incursion ends, spend Purgation points on Gifts for GREY KNIGHTS CHARACTERS (each unique, each with a minimum rank; a model may hold 1 at Battle-ready or Blooded, 2 at Battle-hardened or Heroic, 3 at Legendary). Purgation points unspent when you next consult the Prognosticars are lost."
       }
     },
     "gameModes": {},
