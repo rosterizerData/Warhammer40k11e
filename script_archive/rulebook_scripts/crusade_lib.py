@@ -219,7 +219,9 @@ def rank(values, value="-", *, tracking=None, traits=None, tracked=None, visibil
     s = {"statType": "rank", "ranks": ranks, "value": value, "visibility": visibility}
     if dynamic:
         s["dynamic"] = True
-    if tracked or (tracked is None and tracking):
+    # `tracked` bubbles the rank's own number under the STAT's name; rank `tracking` bubbles under its own keys. A flag
+    # whose tracking key equals its stat name would count twice with both on, so tracked is opt-in only.
+    if tracked:
         s["tracked"] = True
     if group:
         s["group"] = group
@@ -472,6 +474,22 @@ def unit_stat(book, cls, name, stat, *, show_when=None, show_rule=None):
     class_rule(book, cls, show_rule or "crusadeShow" + re.sub(r"\W", "", name),
                rule([set_(["{self}", "stats", name, "visibility"], "normal")], [NARR] + list(show_when or []),
                     note="Crusade: shown in Narrative play"))
+
+
+def tag_grant(book, cls, tag, keyword=None, *, field="Keywords", extra_evals=None):
+    """P5: units with the keyword (default: the tag itself) may take honours tagged `tag` (constraints.any)"""
+    kw = keyword or tag
+    class_rule(book, cls, "crusadeTag" + re.sub(r"\W", "", tag),
+               rule([add(["{self}", "constraints", "any"], tag)], [NARR, ev_kw(kw, field=field)] + list(extra_evals or []),
+                    note=f"Crusade: units with the {kw} keyword may take the honours tagged {tag}"))
+
+
+def tag_block(book, cls, tag, keyword=None, *, field="Keywords"):
+    """P5: units with the keyword cannot take honours tagged not<Tag> (constraints.none)"""
+    kw = keyword or tag
+    class_rule(book, cls, "crusadeNot" + re.sub(r"\W", "", tag),
+               rule([add(["{self}", "constraints", "none"], "not" + re.sub(r"\s", "", tag))], [NARR, ev_kw(kw, field=field)],
+                    note=f"Crusade: units with the {kw} keyword cannot take the honours tagged not{tag}"))
 
 
 def no_xp(book, cls, keyword, *, label=None):

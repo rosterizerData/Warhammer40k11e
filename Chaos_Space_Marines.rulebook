@@ -1,6 +1,6 @@
 {
   "name": "Chaos Space Marines 11e",
-  "revision": "11.2.9",
+  "revision": "11.2.11",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -72,6 +72,437 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 2
+          },
+          "allowChaosBoon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Chaos Boon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Daemon",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Chaos Boons: HERETIC ASTARTES CHARACTER models (not DAEMON models) may take a Chaos Boon instead of another Battle Honour; a duplicate D33 roll means Spawndom"
+          },
+          "No model can have more than three Chaos Boons.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Chaos Boon"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "crusadeShowWarbandChampion": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warband Champion",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeShowChaosPoints": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chaos Points",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warband Champion",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeShowDarkDestiny": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dark Destiny",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warband Champion",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "warbandChampionKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Warband Champion"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warband Champion",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "darkDestinyHonours": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honour",
+                    "max"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Dark Destiny",
+                  "value"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warband Champion",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dark Destiny",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Dark Destiny: up to three extra Battle Honours on the Warband Champion"
+          },
+          "allowDaemonWeapon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Daemon Weapon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Daemon Weapons: a HERETIC ASTARTES CHARACTER that completes a Glory Agenda may claim one Daemon Weapon"
+          },
+          "A model can have only one Daemon Weapon.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Daemon Weapon"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        },
+        "stats": {
+          "Warband Champion": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Warband Champion": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "statOrder": 20
+          },
+          "Chaos Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 99,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "icons": [
+              "skull-shield"
+            ],
+            "statOrder": 21
+          },
+          "Dark Destiny": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 3,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "label": "Dark Destiny honours",
+            "statOrder": 22
           }
         }
       },
@@ -102,6 +533,42 @@
                 "tracking": {
                   "Chaos Astartes Agenda": 1
                 }
+              },
+              "Claim and Despoil": {
+                "order": 100,
+                "tracking": {
+                  "Heretic Astartes Agenda": 1
+                }
+              },
+              "Blasphemous Ritual": {
+                "order": 101,
+                "tracking": {
+                  "Heretic Astartes Agenda": 1
+                }
+              },
+              "Path to Glory": {
+                "order": 102,
+                "tracking": {
+                  "Heretic Astartes Agenda": 1
+                }
+              },
+              "Warlord’s Glory": {
+                "order": 103,
+                "tracking": {
+                  "Heretic Astartes Agenda": 1
+                }
+              },
+              "Glory of the Gods": {
+                "order": 104,
+                "tracking": {
+                  "Heretic Astartes Agenda": 1
+                }
+              },
+              "Glory of Conquest": {
+                "order": 105,
+                "tracking": {
+                  "Heretic Astartes Agenda": 1
+                }
               }
             }
           },
@@ -130,6 +597,42 @@
                 "tracking": {
                   "Chaos Astartes Agenda": 1
                 }
+              },
+              "Claim and Despoil": {
+                "order": 100,
+                "tracking": {
+                  "Heretic Astartes Agenda": 1
+                }
+              },
+              "Blasphemous Ritual": {
+                "order": 101,
+                "tracking": {
+                  "Heretic Astartes Agenda": 1
+                }
+              },
+              "Path to Glory": {
+                "order": 102,
+                "tracking": {
+                  "Heretic Astartes Agenda": 1
+                }
+              },
+              "Warlord’s Glory": {
+                "order": 103,
+                "tracking": {
+                  "Heretic Astartes Agenda": 1
+                }
+              },
+              "Glory of the Gods": {
+                "order": 104,
+                "tracking": {
+                  "Heretic Astartes Agenda": 1
+                }
+              },
+              "Glory of Conquest": {
+                "order": 105,
+                "tracking": {
+                  "Heretic Astartes Agenda": 1
+                }
               }
             }
           }
@@ -141,7 +644,15 @@
             "Requisition§",
             "Requisition§",
             "Requisition§",
-            "Requisition§"
+            "Requisition§",
+            "Requisition§A Fitting Tribute",
+            "Requisition§Ascension to Daemonhood",
+            "Requisition§Mortal Empowerment",
+            "Requisition§Sacrifice to the Dark Gods",
+            "Requisition§Fate Worse Than Death",
+            "Crusade Badge§Infernal Warrior",
+            "Crusade Badge§Champion of Chaos",
+            "Crusade Badge§Chosen of the Dark Gods"
           ]
         }
       },
@@ -1114,6 +1625,74 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          },
+          "allowChaosBoonDamned": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Chaos Boon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Damned",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Mortal Empowerment: a DAMNED unit that destroyed enemy units can gain one Chaos Boon"
+          },
+          "No model can have more than three Chaos Boons.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Chaos Boon"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
@@ -1156,6 +1735,281 @@
             "visibility": "normal"
           }
         }
+      },
+      "Chaos Boon": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Chaos Warband": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Personal Glory": {
+            "statType": "numeric",
+            "value": 4,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 1,
+            "max": 8,
+            "label": "Personal Glory (level)",
+            "statOrder": 1
+          },
+          "Dark God Glory": {
+            "statType": "numeric",
+            "value": 4,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 1,
+            "max": 8,
+            "label": "Dark God Glory (level)",
+            "statOrder": 2
+          },
+          "Warfleet Glory": {
+            "statType": "numeric",
+            "value": 4,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 1,
+            "max": 8,
+            "label": "Warfleet Glory (level)",
+            "statOrder": 3
+          }
+        },
+        "rules": {
+          "favouredPersonalGlory": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Favoured — Personal Glory"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Personal Glory",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "forsakenPersonalGlory": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Forsaken — Personal Glory"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Personal Glory",
+                    "value"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "favouredDarkGodGlory": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Favoured — Dark God Glory"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dark God Glory",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "forsakenDarkGodGlory": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Forsaken — Dark God Glory"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dark God Glory",
+                    "value"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "favouredWarfleetGlory": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Favoured — Warfleet Glory"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warfleet Glory",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "forsakenWarfleetGlory": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Forsaken — Warfleet Glory"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warfleet Glory",
+                    "value"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Daemon Weapon": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
       }
     },
     "assetCatalog": {
@@ -26928,6 +27782,60 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 2
+          },
+          "One Warband Champion only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Warband Champion"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "useCrusadeChaos_Space_Marines": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Chaos Warband§Chaos Warband Tracker"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
           }
         },
         "stats": {
@@ -32115,7 +33023,56 @@
           }
         }
       },
-      "Crusade Honour§Warp Stalker": {
+      "Requisition§A Fitting Tribute": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition at any time. Your WARBAND CHAMPION gains 1 Chaos point. You can only spend this Chaos point on a Glory category that is at Level 5 or lower."
+      },
+      "Requisition§Ascension to Daemonhood": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition when one of the following units from your Crusade force (excluding DAEMON units) reaches Heroic or Legendary rank:\n\nA HERETIC ASTARTES CHARACTER that has three Chaos Boons.\n\nYour WARBAND CHAMPION, if your warband is Favoured in the Personal Glory category.\n\nRemove that unit from your Order of Battle and replace it with one HERETIC ASTARTES DAEMON PRINCE or HERETIC ASTARTES DAEMON PRINCE WITH WINGS.\n\nIf the unit being replaced was your WARBAND CHAMPION, the new unit is now your WARBAND CHAMPION.\n\nThe new unit starts with the same number of Experience points as the one it replaced.\n\nIf the unit being replaced had an Enhancement, Chaos Boon, or similar upgrades (including any campaign-specific upgrades), the new unit retains all such upgrades it is eligible to have, without spending any additional Requisition points.\n\nThe new unit can retain any eligible Battle Honours, or you can replace them with any others it is eligible for. Any Battle Scars the replaced unit had are not retained.\n\nYou cannot purchase this Requisition if doing so would cause you to exceed your Crusade force’s Supply Limit."
+      },
+      "Requisition§Mortal Empowerment": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after a battle in which a DAMNED unit from your Crusade army destroyed one or more enemy units. That unit can gain one Chaos Boon (but cannot have more than one)."
+      },
+      "Requisition§Sacrifice to the Dark Gods": {
+        "stats": {
+          "RP": {
+            "value": 3
+          }
+        },
+        "text": "Purchase this Requisition when a HERETIC ASTARTES unit from your Crusade force reaches Heroic or Legendary rank. Remove that unit from your Order of Battle and halve its current XP total. You can then divide that remaining XP total amongst HERETIC ASTARTES CHARACTER units from your Order of Battle as you see fit."
+      },
+      "Requisition§Fate Worse Than Death": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition when a HERETIC ASTARTES unit from your Crusade force would be removed from your Order of Battle due to receiving a Battle Scar. Instead, that unit suffers Spawndom."
+      },
+      "Crusade Badge§Infernal Warrior": {
+        "text": "You have led your warband to devastating victory after ritual slaughter. The eyes of the Ruinous Powers have fallen upon you and you have taken your first steps upon the long and treacherous Path to Glory. Renegades. Traitors and Daemon Engines rally to your cause, swelling your ranks with infernal might. Yet you remain unsatisfied. Still there is glory to be earned and you look upon a galaxy ripe for conquest.\nYour Chaos Warband is Favoured in one or more categories of glory.\nYou have won two or more battles."
+      },
+      "Crusade Badge§Champion of Chaos": {
+        "text": "You and your vengeful warriors have carved a swathe of destruction across the stars. Your warband’s coffers swell with plunder and your cruel soldiery swell with daemonic power. With each new act of desecration do you take a step towards immortality - or damnation. Across entire sub-sectors your name is spoken in hushed whispers as word of your dread deeds spreads from populace to populace.\nYour Chaos Warband has become Favoured in two or more categories of glory (this does not have to be at the same time).\nYou have won six or more battles.\nTwo or more HERETIC ASTARTES units have Chaos Boons."
+      },
+      "Crusade Badge§Chosen of the Dark Gods": {
+        "text": "Your Chaos Warband has become favoured in all three categories of glory (this does not have to be at the same time).\nYou have won 10 or more battles.\nYou have successfully completed a Glory Agenda.\nYour WARBAND CHAMPION has reached Legendary rank"
+      },
+      "Chaos Boon§Warp Stalker": {
         "keywords": {
           "Keywords": [
             "Chaos Boons"
@@ -32126,7 +33083,7 @@
         },
         "text": "You can re-roll Advance and Charge rolls made for this model's unit."
       },
-      "Crusade Honour§Unholy Speed": {
+      "Chaos Boon§Unholy Speed": {
         "keywords": {
           "Keywords": [
             "Chaos Boons"
@@ -32137,7 +33094,7 @@
         },
         "text": "Add 1 to Advance and Charge rolls made for this model's unit."
       },
-      "Crusade Honour§Mutant Form": {
+      "Chaos Boon§Mutant Form": {
         "keywords": {
           "Keywords": [
             "Chaos Boons"
@@ -32148,7 +33105,7 @@
         },
         "text": "Add 1 to this model's Wounds characteristic."
       },
-      "Crusade Honour§Massive Fangs": {
+      "Chaos Boon§Massive Fangs": {
         "keywords": {
           "Keywords": [
             "Chaos Boons"
@@ -32159,7 +33116,7 @@
         },
         "text": "Melee weapons equipped by this model have the **[LANCE]** ability."
       },
-      "Crusade Honour§Eightfold Eyes": {
+      "Chaos Boon§Eightfold Eyes": {
         "keywords": {
           "Keywords": [
             "Chaos Boons"
@@ -32170,7 +33127,7 @@
         },
         "text": "Once per turn, you can re-roll one Hit roll, one Wound roll, one Damage roll or one saving throw made for this model."
       },
-      "Crusade Honour§Daemonic Flesh": {
+      "Chaos Boon§Daemonic Flesh": {
         "keywords": {
           "Keywords": [
             "Chaos Boons"
@@ -32181,7 +33138,7 @@
         },
         "text": "Add 1 to this model's Toughness characteristic."
       },
-      "Crusade Honour§Scorpion Tail": {
+      "Chaos Boon§Scorpion Tail": {
         "keywords": {
           "Keywords": [
             "Chaos Boons"
@@ -32192,7 +33149,7 @@
         },
         "text": "Add 1 to the Attacks characteristic of melee weapons equipped by this model."
       },
-      "Crusade Honour§Iron-hard Talons": {
+      "Chaos Boon§Iron-hard Talons": {
         "keywords": {
           "Keywords": [
             "Chaos Boons"
@@ -32203,7 +33160,7 @@
         },
         "text": "Improve the Armour Penetration characteristic of melee weapons equipped by this model by 1."
       },
-      "Crusade Honour§Dark Blessing": {
+      "Chaos Boon§Dark Blessing": {
         "keywords": {
           "Keywords": [
             "Chaos Boons"
@@ -32213,6 +33170,71 @@
           ]
         },
         "text": "Once per battle, at the start of your opponent's Shooting phase, this model can use this ability. If it does, until the end of the phase, this model's unit has the Stealth ability."
+      },
+      "Ability§Favoured — Personal Glory": {
+        "text": "**Blessed Champion:** After each battle, you can purchase one of the following Requisitions once, and when you do, reduce the cost by 1RP: Renowned Heroes, Ascension to Daemonhood.\n\n**Dark Destiny:** After each battle, in the Update Crusade Cards step, if your WARBAND CHAMPION model destroyed one or more enemy units during that battle, roll one D6. On a 6, your WARBAND CHAMPION gains one Battle Honour of your choice, and change the Leadership characteristic of that model to 5+. Your WARBAND CHAMPION can gain a maximum of 3 Battle Honours using this Favoured Reward (tick them on the Champion's Dark Destiny counter)."
+      },
+      "Ability§Forsaken — Personal Glory": {
+        "text": "**Failing Champion:** The RP cost of the following Requisitions is increased by 1RP: Renowned Heroes, Ascension to Daemonhood.\n\n**Circling Rivals:** After losing a battle, in the Update Crusade Cards step, roll one D6. On a 1, a rival declares a challenge: select one other HERETIC ASTARTES CHARACTER model from your Order of Battle (excluding EPIC HEROES) to be the rival (if there are no others, nothing happens). Then roll one D6 for your WARBAND CHAMPION and one D6 for that CHARACTER: the model you roll highest for gains 3XP, and the other model is treated as having failed an Out of Action test."
+      },
+      "Ability§Favoured — Dark God Glory": {
+        "text": "**Worthy Offerings:** After each battle, you can purchase one of the following Requisitions once, and when you do, reduce the cost by 1RP: Sacrifice to the Dark Gods, Mortal Empowerment.\n\n**Boon of Power:** After each battle, in the Update Crusade Cards step, you can select one unit from your Crusade army that destroyed one or more enemy units during that battle, then roll one D6. On a 6, that unit gains one Chaos Boon. If that unit is not a CHARACTER unit but it contains a Unit Champion, that Unit Champion gains that Chaos Boon, even though normally only CHARACTER units can gain Chaos Boons."
+      },
+      "Ability§Forsaken — Dark God Glory": {
+        "text": "**Forsaken Faith:** The RP cost of the following Requisitions is increased by 1RP: Sacrifice to the Dark Gods, Mortal Empowerment.\n\n**Anger of the Gods:** During each battle, each time a unit from your Crusade army makes a Dark Pact, subtract 1 from the resulting Leadership test, and if a unit from your Crusade army destroys one or more enemy units in a phase in which it made a Dark Pact, that unit gains 1XP."
+      },
+      "Ability§Favoured — Warfleet Glory": {
+        "text": "**Feared and Respected:** After each battle, you can purchase one of the following Requisitions once, and when you do, reduce the cost by 1RP: Increase Supply Limit, Legendary Veterans, Repair and Recuperate.\n\n**Unrivalled Raiders:** After each battle, in the Update Crusade Cards step, you can select one unit from your Crusade army (excluding your WARBAND CHAMPION) that destroyed one or more enemy units during that battle, then roll one D6. On a 6, that unit gains one Battle Trait or Weapon Enhancement Battle Honour of your choice. No unit from your Crusade force can gain more than 1 Battle Honour using this Favoured Reward."
+      },
+      "Ability§Forsaken — Warfleet Glory": {
+        "text": "**Fading Notoriety:** The RP cost of the following Requisitions is increased by 1RP: Increase Supply Limit, Legendary Veterans, Repair and Recuperate.\n\n**Dwindling Supplies:** After the battle, in the Update Order of Battle step, roll one D6: on a 1, reduce your Requisition points total by D3; on a 6, you gain 1RP."
+      },
+      "Chaos Warband§Chaos Warband Tracker": {
+        "text": "**Chaos Warbands.** Select one HERETIC ASTARTES CHARACTER (not an EPIC HERO) from your Order of Battle as your Warband Champion (tick Warband Champion on its card). After each battle your Champion fought in, it gains Chaos points: D3+3 for a win, 3 for a draw, D3 for a loss. Spend Chaos points one for one to raise a Glory category; all three start at Level 4, drop by 1 after every battle (before the Champion gains Chaos points), and never go below 1 or above 8. Levels 7–8 are **Favoured** (the Glory's rewards apply), levels 1–2 are **Forsaken** (its punishments apply). Some Chaos Space Marines Agendas also raise Glory."
+      },
+      "Daemon Weapon§Zaall, the Wrathful": {
+        "keywords": {
+          "Tags": [
+            "Heretic Astartes"
+          ],
+          "Keywords": [
+            "Relic"
+          ]
+        },
+        "text": "The bearer gains the KHORNE keyword. In the Fight phase, if the bearer’s unit makes a Dark Pact until the end of the phase, add 3 to the Strength characteristic of melee weapons equipped by the bearer and add 1 to the Damage characteristic of melee weapons equipped by the bearer.\n\n**Daemon Weapon:** In the Fight phase, if this model’s unit makes a Dark Pact and fails the resulting Leadership test, until the end of the phase, melee weapons equipped by this model have the [HAZARDOUS] ability. A Daemon Weapon confers the relevant Chaos God’s keyword on the bearer; with the Pactbound Zealots Detachment, the Marks of Chaos keyword for a unit with a Daemon Weapon must match it. Each CHARACTER can have only one Daemon Weapon, gained by completing a Glory Agenda."
+      },
+      "Daemon Weapon§Q’o’ak, the Boundless": {
+        "keywords": {
+          "Tags": [
+            "Heretic Astartes"
+          ],
+          "Keywords": [
+            "Relic"
+          ]
+        },
+        "text": "The bearer gains the TZEENTCH keyword. In the Fight phase, if the bearer’s unit makes a Dark Pact, until the end of the phase, each time the bearer makes an attack, you can re-roll the Hit roll and you can re-roll the Wound roll.\n\n**Daemon Weapon:** In the Fight phase, if this model’s unit makes a Dark Pact and fails the resulting Leadership test, until the end of the phase, melee weapons equipped by this model have the [HAZARDOUS] ability. A Daemon Weapon confers the relevant Chaos God’s keyword on the bearer; with the Pactbound Zealots Detachment, the Marks of Chaos keyword for a unit with a Daemon Weapon must match it. Each CHARACTER can have only one Daemon Weapon, gained by completing a Glory Agenda."
+      },
+      "Daemon Weapon§G’holl'ax, the Decayed": {
+        "keywords": {
+          "Tags": [
+            "Heretic Astartes"
+          ],
+          "Keywords": [
+            "Relic"
+          ]
+        },
+        "text": "The bearer gains the NURGLE keyword. In the Fight phase, if the bearer’s unit makes a Dark Pact, until the end of the phase, melee weapons equipped by the bearer have the [ANTI-INFANTRY 3+] ability.\n\n**Daemon Weapon:** In the Fight phase, if this model’s unit makes a Dark Pact and fails the resulting Leadership test, until the end of the phase, melee weapons equipped by this model have the [HAZARDOUS] ability. A Daemon Weapon confers the relevant Chaos God’s keyword on the bearer; with the Pactbound Zealots Detachment, the Marks of Chaos keyword for a unit with a Daemon Weapon must match it. Each CHARACTER can have only one Daemon Weapon, gained by completing a Glory Agenda."
+      },
+      "Daemon Weapon§Thaa’ris and Rhi'ol, the Rapacious": {
+        "keywords": {
+          "Tags": [
+            "Heretic Astartes"
+          ],
+          "Keywords": [
+            "Relic"
+          ]
+        },
+        "text": "The bearer gains the SLAANESH keyword. In the Fight phase, if the bearer’s unit makes a Dark Pact, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by the bearer and those weapons gain the [LANCE] ability.\n\n**Daemon Weapon:** In the Fight phase, if this model’s unit makes a Dark Pact and fails the resulting Leadership test, until the end of the phase, melee weapons equipped by this model have the [HAZARDOUS] ability. A Daemon Weapon confers the relevant Chaos God’s keyword on the bearer; with the Pactbound Zealots Detachment, the Marks of Chaos keyword for a unit with a Daemon Weapon must match it. Each CHARACTER can have only one Daemon Weapon, gained by completing a Glory Agenda."
       }
     },
     "gameModes": {},

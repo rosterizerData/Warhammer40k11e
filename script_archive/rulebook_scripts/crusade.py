@@ -42,7 +42,7 @@ before = json.dumps(L.load(book), sort_keys=True)
 lists = getattr(spec, "LISTS", {"agendas": True, "requisitions": True, "badges": True})
 if DO_LISTS and cz.sec:
     if lists.get("agendas"):
-        ag = [a["name"] for a in cz.sec.agendas()] + list(getattr(spec, "EXTRA_AGENDAS", []))
+        ag = [a["name"] for blk in getattr(spec, "AGENDA_BLOCKS", ["Agendas"]) for a in cz.sec.agendas(blk)] + list(getattr(spec, "EXTRA_AGENDAS", []))
         L.agendas(book, ag, cz.faction)
         cz.note(f"agendas ({len(ag)}): " + "; ".join(ag))
     if lists.get("requisitions"):

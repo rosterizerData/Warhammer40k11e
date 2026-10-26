@@ -1,6 +1,6 @@
 {
   "name": "Orks 11e",
-  "revision": "11.2.7",
+  "revision": "11.2.9",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -96,15 +96,27 @@
                 }
               },
               "Skrag da Killiest Gitz": {
-                "order": 14,
+                "order": 102,
                 "tracking": {
-                  "Ork Agenda": 1
+                  "Orks Agenda": 1
                 }
               },
               "Overwhelming Aggression": {
-                "order": 15,
+                "order": 103,
                 "tracking": {
-                  "Ork Agenda": 1
+                  "Orks Agenda": 1
+                }
+              },
+              "Scrap ’Em": {
+                "order": 100,
+                "tracking": {
+                  "Orks Agenda": 1
+                }
+              },
+              "Show ’Em How It’s Done": {
+                "order": 101,
+                "tracking": {
+                  "Orks Agenda": 1
                 }
               }
             }
@@ -124,15 +136,27 @@
                 }
               },
               "Skrag da Killiest Gitz": {
-                "order": 14,
+                "order": 102,
                 "tracking": {
-                  "Ork Agenda": 1
+                  "Orks Agenda": 1
                 }
               },
               "Overwhelming Aggression": {
-                "order": 15,
+                "order": 103,
                 "tracking": {
-                  "Ork Agenda": 1
+                  "Orks Agenda": 1
+                }
+              },
+              "Scrap ’Em": {
+                "order": 100,
+                "tracking": {
+                  "Orks Agenda": 1
+                }
+              },
+              "Show ’Em How It’s Done": {
+                "order": 101,
+                "tracking": {
+                  "Orks Agenda": 1
                 }
               }
             }
@@ -145,7 +169,11 @@
             "Requisition§Dok’s Orders",
             "Requisition§Time for New Gear",
             "Requisition§Kustom Job",
-            "Requisition§Bestest Bossloot"
+            "Requisition§Bestest Bossloot",
+            "Requisition§Dok's Orders",
+            "Crusade Badge§Ambitious Boss",
+            "Crusade Badge§Rampaging Bigboss",
+            "Crusade Badge§Grand Warlord"
           ]
         }
       },
@@ -428,7 +456,6 @@
               },
               {
                 "actionable": true,
-                "contains": true,
                 "not": false,
                 "operator": "AND",
                 "paths": [
@@ -438,12 +465,13 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Speed Freeks"
+                "value": "Speed Freeks",
+                "contains": true
               }
             ],
             "evaluate": "AND",
             "failState": "pass",
-            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+            "note": "Crusade: units with the Speed Freeks keyword may take the honours tagged Speed Freeks"
           },
           "crusadeTagWalker": {
             "actions": [
@@ -477,7 +505,6 @@
               },
               {
                 "actionable": true,
-                "contains": true,
                 "not": false,
                 "operator": "AND",
                 "paths": [
@@ -487,12 +514,13 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Walker"
+                "value": "Walker",
+                "contains": true
               }
             ],
             "evaluate": "AND",
             "failState": "pass",
-            "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+            "note": "Crusade: units with the Walker keyword may take the honours tagged Walker"
           },
           "crusadeNotKillaKans": {
             "actions": [
@@ -526,7 +554,6 @@
               },
               {
                 "actionable": true,
-                "contains": true,
                 "not": false,
                 "operator": "AND",
                 "paths": [
@@ -536,14 +563,1133 @@
                     "Keywords"
                   ]
                 ],
-                "value": "Killa Kans"
+                "value": "Killa Kans",
+                "contains": true
               }
             ],
             "evaluate": "AND",
             "failState": "pass",
-            "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+            "note": "Crusade: units with the Killa Kans keyword cannot take the honours tagged notKilla Kans"
+          },
+          "allowKustomJob": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Kustom Job"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Vehicle",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "waaaghStage"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Kustom Jobs: from Stage 2 of the Waaagh!, one Kustom Job per ORKS VEHICLE unit (Kustom Job Requisition, needs a MEK on your Order of Battle)"
+          },
+          "One Kustom Job per vehicle.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Kustom Job"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "crusadeTagTrukk": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Trukk"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Trukk",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Trukk keyword may take the honours tagged Trukk"
+          },
+          "crusadeTagBattlewagon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Battlewagon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battlewagon",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Battlewagon keyword may take the honours tagged Battlewagon"
+          },
+          "crusadeTagVehicle": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Vehicle"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Vehicle",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Vehicle keyword may take the honours tagged Vehicle"
           }
         }
+      },
+      "Character": {
+        "stats": {
+          "Waaagh!boss": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Waaagh!boss": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "statOrder": 20
+          }
+        },
+        "rules": {
+          "crusadeShowWaaaghboss": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Waaagh!boss",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Warboss",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "waaaghBossKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Waaagh!boss"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Waaagh!boss",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "allowKustomJob": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Kustom Job"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Vehicle",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "waaaghStage"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Kustom Jobs: from Stage 2 of the Waaagh!, one Kustom Job per ORKS VEHICLE unit (Kustom Job Requisition, needs a MEK on your Order of Battle)"
+          },
+          "One Kustom Job per vehicle.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Kustom Job"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "crusadeTagTrukk": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Trukk"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Trukk",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Trukk keyword may take the honours tagged Trukk"
+          },
+          "crusadeTagBattlewagon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Battlewagon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battlewagon",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Battlewagon keyword may take the honours tagged Battlewagon"
+          },
+          "crusadeTagWalker": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Walker"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Walker",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Walker keyword may take the honours tagged Walker"
+          },
+          "crusadeTagSpeedFreeks": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Speed Freeks"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Speed Freeks",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Speed Freeks keyword may take the honours tagged Speed Freeks"
+          },
+          "crusadeTagVehicle": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Vehicle"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Vehicle",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Vehicle keyword may take the honours tagged Vehicle"
+          },
+          "allowBestestBossloot": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Bestest Bossloot"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Waaagh!boss",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "waaaghStage"
+                  ]
+                ],
+                "min": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Bestest Bossloot: unique Crusade Relics for your Waaagh!boss — one from Stage 3 (Thunderous), a second from Stage 4 (All-Conquering); Bestest Bossloot Requisition, needs a MEK"
+          },
+          "Bestest Bossloot: one relic at Stage 3, two at Stage 4.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Bestest Bossloot"
+                  ]
+                ],
+                "max": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "waaaghStage"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "No more than two Bestest Bossloot relics.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Bestest Bossloot"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Da Waaagh!": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Stompin’ Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 200,
+            "icons": [
+              "stomp"
+            ],
+            "statOrder": 1
+          }
+        },
+        "rules": {
+          "stage1Ability": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Stage 1: Gathering Waaagh! (0–9)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Stompin’ Points",
+                    "value"
+                  ]
+                ],
+                "min": 0
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Stompin’ Points",
+                    "value"
+                  ]
+                ],
+                "max": 9
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "stage2Ability": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Stage 2: Escalating Waaagh! (10–24)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Stompin’ Points",
+                    "value"
+                  ]
+                ],
+                "min": 10
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Stompin’ Points",
+                    "value"
+                  ]
+                ],
+                "max": 24
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "stage2Tracked": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "waaaghStage"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Stompin’ Points",
+                    "value"
+                  ]
+                ],
+                "min": 10
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "each threshold reached adds 1 to the roster's waaaghStage (0 = Gathering … 3 = All-Conquering)"
+          },
+          "stage3Ability": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Stage 3: Thunderous Waaagh! (25–49)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Stompin’ Points",
+                    "value"
+                  ]
+                ],
+                "min": 25
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Stompin’ Points",
+                    "value"
+                  ]
+                ],
+                "max": 49
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "stage3Tracked": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "waaaghStage"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Stompin’ Points",
+                    "value"
+                  ]
+                ],
+                "min": 25
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "each threshold reached adds 1 to the roster's waaaghStage (0 = Gathering … 3 = All-Conquering)"
+          },
+          "stage4Ability": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Stage 4: All-Conquering Waaagh! (50+)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Stompin’ Points",
+                    "value"
+                  ]
+                ],
+                "min": 50
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "stage4Tracked": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "waaaghStage"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Stompin’ Points",
+                    "value"
+                  ]
+                ],
+                "min": 50
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "each threshold reached adds 1 to the roster's waaaghStage (0 = Gathering … 3 = All-Conquering)"
+          }
+        }
+      },
+      "Kustom Job": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Bestest Bossloot": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
       }
     },
     "assetCatalog": {
@@ -4159,9 +5305,15 @@
           }
         }
       },
-      "Crusade Badge§Ambitious Boss": {},
-      "Crusade Badge§Grand Warlord": {},
-      "Crusade Badge§Rampaging Bigboss": {},
+      "Crusade Badge§Ambitious Boss": {
+        "text": "Your Waaagh! has reached Stage 2.\nYou have won two or more battles."
+      },
+      "Crusade Badge§Grand Warlord": {
+        "text": "Your Waaagh! has reached Stage 4.\nYou have won 10 or more battles.\nYou have given five or more VEHICLE units Kustom Jobs\nYour Waaagh!Boss has reached Legendary rank"
+      },
+      "Crusade Badge§Rampaging Bigboss": {
+        "text": "Your Waaagh! has reached Stage 3\nYou have won six or more battles."
+      },
       "Detachment§Blitz Brigade": {
         "keywords": {
           "Role": [
@@ -18134,6 +19286,95 @@
           "Faction Group": {
             "dynamic": false,
             "value": "Xenos"
+          }
+        },
+        "rules": {
+          "One Waaagh!boss only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Waaagh!boss"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Select your Waaagh!boss (a WARBOSS unit from your Order of Battle).": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Waaagh!boss"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "warning"
+          },
+          "useCrusadeOrks": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Da Waaagh!§Da Waaagh!"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
           }
         }
       },
@@ -36661,21 +37902,100 @@
         },
         "text": "**^^Infantry^^** or **^^Mounted^^** model only. - Add 1 to the bearer's Wounds characteristic. - Each time an attack is allocated to the bearer, worsen the Armour Penetration of that attack by 1."
       },
-      "Crusade Honour§'Elmet Rack": {
+      "Requisition§Dok's Orders": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after your WAAAGH!Boss gains a Battle Scar. During the next battle in which your WAAAGH!BOSS is part of your Crusade army, if its unit destroys one or more enemy units, your WAAAGH!BOSS gains 2XP. If one or more of those destroyed enemy units were MONSTER or VEHICLE units, your WAAAGH!BOSS gains an additional 2XP. At the end of that next battle, if you won that battle and your WAAAGH!BOSS gained 4XP from this Requisition, you can do one of the following:\n\nRemove the Battle Scar your WAAAGH!BOSS gained just before you purchased this Requisition.\n\nYour WAAAGH!BOSS gains an additional 5XP."
+      },
+      "Requisition§Time for New Gear": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition when you add a new WARBOSS unit to your Order of Battle. Remove your WAAAGH!BOSS from your Order of Battle. The new WARBOSS unit starts with the same number of XP as that WAAAGH!BOSS, and gains the appropriate number of Battle Honours for its rank. That new WARBOSS unit is now your WAAAGH!BOSS and gains the WAAAGH!BOSS keyword. Using this Requisition does not cause you to lose 20 Stompin’ points for removing your WAAAGH!BOSS from your Order of Battle."
+      },
+      "Requisition§Kustom Job": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition at any time, if your Order of Battle includes one or more MEK units. Select one VEHICLE unit from your Order of Battle that can gain a Battle Trait; that VEHICLE unit gains one Battle Trait from the Kustom Jobs section. If that unit has the maximum number of Battle Honours, you can replace one of its existing Battle Honours with a Kustom Job Battle Trait. Each VEHICLE unit can only have one Kustom Job Battle Trait at the same time."
+      },
+      "Requisition§Bestest Bossloot": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition at any time, if your Order of Battle includes one or more MEK units. Your WAAAGH!Boss gains one Crusade Relic from the Bestest Bossloot section. If that unit has the maximum number of Battle Honours, you can replace one of its existing Battle Honours with a Bestest Bossloot Crusade Relic."
+      },
+      "Ability§Stage 1: Gathering Waaagh! (0–9)": {
+        "text": "After each battle, gain 1 Stompin’ point. You cannot suffer Orky Ructions."
+      },
+      "Ability§Stage 2: Escalating Waaagh! (10–24)": {
+        "text": "After each battle, gain 1 Stompin’ point and take a Ruction test (−1 if you lost). **Kustom Jobs:** you can apply one Kustom Job to an ORKS VEHICLE unit from your Order of Battle using the Kustom Job Requisition."
+      },
+      "Ability§Stage 3: Thunderous Waaagh! (25–49)": {
+        "text": "After each battle, gain 2 Stompin’ points and take a Ruction test (−1 if you lost). Kustom Jobs as Stage 2. **Bestest Bossloot:** your Waaagh!boss can be given one Bestest Bossloot relic."
+      },
+      "Ability§Stage 4: All-Conquering Waaagh! (50+)": {
+        "text": "You no longer gain Stompin’ points. After each battle take a Ruction test (−2 if you lost). Kustom Jobs as Stage 2. Your Waaagh!boss can be given a second Bestest Bossloot relic. **Massive Waaagh!:** after each battle your Crusade force gains 2 Requisition points instead of 1, and you can select one additional unit to be Marked for Greatness."
+      },
+      "Da Waaagh!§Da Waaagh!": {
+        "text": "**Launching the Waaagh!** Select one WARBOSS unit from your Crusade force as your Waaagh!boss (tick Waaagh!boss on its card); if it leaves your Order of Battle you lose 20 Stompin’ points and must pick another. Gain Stompin’ points: +1 each time you increase your Supply Limit, +2 each battle you win, +2 each time you destroy the enemy WARLORD, +5 each time an ORKS CHARACTER reaches Legendary rank, plus the per-battle gain of your current stage.\n\n**Orky Ructions.** After a battle at Stage 2 or higher, take a Ruction test: a Leadership test on your Waaagh!boss’ Leadership with the stage modifier. Passed: nothing happens. Failed with no double: suffer a Minor Ruction or lose 10 Stompin’ points. Failed on a double: suffer a Major Ruction or lose 15 Stompin’ points.\n\n**Minor Ructions (D6):** 1 Unruly Mobs — the two lowest-XP ORKS INFANTRY units roll off: higher gains 2XP, the other takes an Out of Action test. 2 Reckless Meks — one ORKS VEHICLE unit is treated as having failed an Out of Action test; one MEK unit gains 2XP. 3 Impatient Irritability — next battle, until you call the Waaagh!, ORKS units have −1 Leadership. 4 Thievin’ Gits — one CHARACTER with an Enhancement or Crusade Relic loses its use next battle; gains 3XP if you win. 5 Rowdy Yoofs — your next Increase Supply Limit costs 1 more RP. 6 Confrazzled by Mind Monsters — next battle ORKS PSYKER units take Battle-shock tests each battle round; survivors gain 3XP.\n\n**Major Ructions (D6, each once per stage):** 1 Ruckus in da Ranks — one ORKS INFANTRY unit gains a Battle Scar. 2 External Combustion Test — one ORKS VEHICLE unit gains a Battle Scar. 3 Last Boss Standin’ — two ORKS CHARACTER units roll off (+2 for the Waaagh!boss): higher gains 3XP, the other D3 Battle Scars. 4 Unstable Discharge — lose 10 Stompin’ points or a WEIRDBOY/WURRBOY gains a Battle Scar. 5 Fizzlin’ Momentum — no Waaagh! in battle rounds 1–2 of your next battle. 6 Lost in da Warp — Requisition points to 0 (or −10 Stompin’ points if already 0)."
+      },
+      "Kustom Job§Fortress on Wheels": {
         "keywords": {
-          "Keywords": [
-            "Bosspole"
-          ],
           "Tags": [
-            "Orks"
+            "Trukk",
+            "Battlewagon"
           ]
         },
-        "text": "Each time this model's unit takes a Battle-shock or Leadership test, you can ignore any or all modifiers to that test."
+        "text": "TRUKK or BATTLEWAGON model only. Add 1 to the Toughness characteristic of this model, and this model has a 5+ invulnerable save."
       },
-      "Crusade Honour§Da Shootiest Blasta": {
+      "Kustom Job§Shootier Gunz": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        },
+        "text": "Each time this unit is selected to shoot, you can roll one D6: on a 1, until the end of the phase, ranged weapons equipped by models in this unit have the [hazardous] ability; on a 2-5, until the end of the phase, improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1; on a 6, until the end of the phase, improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1 and those weapons have the [IGNORES COVER] ability."
+      },
+      "Kustom Job§Shokka Hull": {
+        "keywords": {
+          "Tags": [
+            "Vehicle"
+          ]
+        },
+        "text": "In the Fight phase, each time an enemy unit is selected to fight, if this unit was selected as the target of one or more of the attacking unit’s attacks, after those after those attacks have been resolved, roll one D6: on a 4+, that enemy unit suffers D3 mortal wounds."
+      },
+      "Kustom Job§Stompamatic Pistons": {
+        "keywords": {
+          "Tags": [
+            "Walker",
+            "notKillaKans"
+          ]
+        },
+        "text": "WALKER model only (excluding KILLA KANS).\n\nAdd 2\" to this model’s Move characteristic.\n\nAdd 1 to Advance and Charge rolls made for this model."
+      },
+      "Kustom Job§Fungus-Fuel Injecta": {
+        "keywords": {
+          "Tags": [
+            "Speed Freeks"
+          ]
+        },
+        "text": "SPEED FREEKS unit only.\n\nAdd 2\" to the Move characteristic of models in this unit.\n\nOnce per battle, you can target this unit with the Smokescreen Stratagem for 0CP."
+      },
+      "Bestest Bossloot§Da Shootiest Blasta": {
         "keywords": {
           "Keywords": [
-            "Bestest Bossloot"
+            "Bestest Bossloot",
+            "Relic"
           ],
           "Tags": [
             "Orks"
@@ -36683,10 +38003,11 @@
         },
         "text": "Select one ranged weapon equipped by the bearer. That weapon gains the **[MELTA 3]** ability."
       },
-      "Crusade Honour§Rezmekka's Redder Paint": {
+      "Bestest Bossloot§Rezmekka's Redder Paint": {
         "keywords": {
           "Keywords": [
-            "Bestest Bossloot"
+            "Bestest Bossloot",
+            "Relic"
           ],
           "Tags": [
             "Mounted"
@@ -36694,10 +38015,11 @@
         },
         "text": "**^^Mounted Waaagh!boss**^^ model only. Add 2\" to the Move characteristic of models in the bearer's unit, and models in the bearer's unit have the Fights First ability."
       },
-      "Crusade Honour§Da Irongob": {
+      "Bestest Bossloot§Da Irongob": {
         "keywords": {
           "Keywords": [
-            "Bestest Bossloot"
+            "Bestest Bossloot",
+            "Relic"
           ],
           "Tags": [
             "Orks"
@@ -36705,10 +38027,11 @@
         },
         "text": "At the start of the Fight phase, you can select one enemy **^^Infantry^^** unit within Engagement Rage of the bearer and roll one D6: on a 2+, that enemy unit suffers 3 mortal wounds and must take a Battle-shock test."
       },
-      "Crusade Honour§Frazzle Field Generator": {
+      "Bestest Bossloot§Frazzle Field Generator": {
         "keywords": {
           "Keywords": [
-            "Bestest Bossloot"
+            "Bestest Bossloot",
+            "Relic"
           ],
           "Tags": [
             "Orks"
@@ -36716,16 +38039,29 @@
         },
         "text": "Select one melee weapon equipped by the bearer. That weapon gains the **[DEVASTATING WOUNDS]** ability."
       },
-      "Crusade Honour§Da Krushin' Armour": {
+      "Bestest Bossloot§Da Krushin' Armour": {
         "keywords": {
           "Keywords": [
-            "Bestest Bossloot"
+            "Bestest Bossloot",
+            "Relic"
           ],
           "Tags": [
             "Orks"
           ]
         },
         "text": "- The bearer has a 4+ invulnerable save. - Add 1 to the bearer's Wounds characteristic. - Each time the bearer's unit ends a Charge move, select one enemy unit within Engagement Range of the bearer and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds."
+      },
+      "Kustom Job§'Elmet Rack": {
+        "keywords": {
+          "Keywords": [
+            "Bosspole"
+          ],
+          "Tags": [
+            "Orks",
+            "Vehicle"
+          ]
+        },
+        "text": "Each time this model's unit takes a Battle-shock or Leadership test, you can ignore any or all modifiers to that test."
       }
     },
     "gameModes": {},
