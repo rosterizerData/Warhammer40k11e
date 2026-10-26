@@ -1,6 +1,6 @@
 {
   "name": "Dark Angels 11e",
-  "revision": "11.2.6",
+  "revision": "11.2.8",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -82,7 +82,10 @@
           "items": [
             "Requisition§Rite of Honour",
             "Requisition§Penitent’s Hope",
-            "Requisition§Veteran Initiates"
+            "Requisition§Veteran Initiates",
+            "Crusade Badge§Ritesworn Inductee",
+            "Crusade Badge§Illuminated Master",
+            "Crusade Badge§Inner Circle Grand Master"
           ]
         }
       },
@@ -493,6 +496,347 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          }
+        }
+      },
+      "Character": {
+        "rules": {
+          "allowMasteroftheDeathwing": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Master of the Deathwing"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Terminator",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Captain",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Inner Circle Advancement: after an Oathsworn Campaign, spend Honour points to promote a CHARACTER (one such honour per CHARACTER, each unique)"
+          },
+          "allowMasteroftheRavenwing": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Master of the Ravenwing"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Ravenwing",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Inner Circle Advancement: after an Oathsworn Campaign, spend Honour points to promote a CHARACTER (one such honour per CHARACTER, each unique)"
+          },
+          "allowKeeperoftheUnseenRitual": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Keeper of the Unseen Ritual"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Captain",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Inner Circle Advancement: after an Oathsworn Campaign, spend Honour points to promote a CHARACTER (one such honour per CHARACTER, each unique)"
+          },
+          "allowMasterofWatchers": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Master of Watchers"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Inner Circle Advancement: after an Oathsworn Campaign, spend Honour points to promote a CHARACTER (one such honour per CHARACTER, each unique)"
+          },
+          "innerCircleBelial": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Promotion Ability§Master of the Deathwing"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": "Belial"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "Belial automatically holds the Master of the Deathwing honour (early, so the roster's one-holder check sees it)"
+          },
+          "innerCircleSammael": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Promotion Ability§Master of the Ravenwing"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": "Sammael"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "Sammael automatically holds the Master of the Ravenwing honour (early, so the roster's one-holder check sees it)"
+          },
+          "innerCircleLazarus": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Promotion Ability§Keeper of the Unseen Ritual"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": "Lazarus"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "Lazarus automatically holds the Keeper of the Unseen Ritual honour (early, so the roster's one-holder check sees it)"
           }
         }
       }
@@ -1866,9 +2210,15 @@
           }
         }
       },
-      "Crusade Badge§Illuminated Master": {},
-      "Crusade Badge§Inner Circle Grand Master": {},
-      "Crusade Badge§Ritesworn Inductee": {},
+      "Crusade Badge§Illuminated Master": {
+        "text": "You have completed three Oathsworn Campaigns and promoted two or more CHARACTERS to Chapter Command or the Inner Circle.\nYou have won six or more battles.\nYou have successfully completed the Capture the Fallen Bonus Agenda at least once."
+      },
+      "Crusade Badge§Inner Circle Grand Master": {
+        "text": "You have completed five Oathsworn Campaigns and promoted five or more CHARACTERS to Chapter Command or the Inner Circle.\nYou have won ten or more battles.\nYou have successfully completed the Capture the Fallen Bonus Agenda at least twice."
+      },
+      "Crusade Badge§Ritesworn Inductee": {
+        "text": "You have completed one Oathsworn Campaign and promoted one or more CHARACTERS to Chapter Command or the Inner Circle.\nYou have won two or more battles."
+      },
       "Detachment§Darkflight Pursuit": {
         "keywords": {
           "Role": [
@@ -7736,6 +8086,82 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 1
+          },
+          "Only one Master of the Deathwing in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Master of the Deathwing"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Master of the Ravenwing in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Master of the Ravenwing"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Keeper of the Unseen Ritual in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Keeper of the Unseen Ritual"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Master of Watchers in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Master of Watchers"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "removed": {
@@ -9322,50 +9748,331 @@
       "Ability§Emnity for the Unworthy": {
         "text": "This unit’s attacks that target a **CHARACTER** unit have +1 to hit rolls."
       },
-      "Crusade Honour§Master of Watchers": {
-        "keywords": {
-          "Keywords": [
-            "Inner Circle Advancement"
-          ],
-          "Tags": [
-            "Adeptus Astartes"
-          ]
+      "Requisition§Rite of Honour": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
         },
-        "text": "At the end of each battle, if your Crusade army for this battle included this model, your Crusade force gains D3 Honour points."
+        "text": "Purchase this Requisition after you have won a battle, once per Oathsworn Campaign. Select one CHARACTER model from your Crusade army that participated in that battle; that CHARACTER gains 3XP. If that CHARACTER’s unit destroyed one or more enemy CHARACTER units during the battle, that CHARACTER gains 5XP instead. If you were attempting the Capture the Fallen Bonus Agenda during that battle, this Requisition costs 0RP."
       },
-      "Crusade Honour§Master of the Ravenwing": {
-        "keywords": {
-          "Keywords": [
-            "Inner Circle Advancement"
-          ],
-          "Tags": [
-            "Ravenwing"
-          ]
+      "Requisition§Penitent’s Hope": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
         },
-        "text": "**^^Ravenwing^^** model only. This model's unit can declare a charge in a turn in which it Advanced, and you can re-roll Charge rolls made for that unit."
+        "text": "Purchase this Requisition after a battle in which you failed to complete the Capture the Fallen Bonus Agenda. You may re-attempt that Bonus Agenda an additional time in your next battle. After purchasing this Requisition, take note of your Battle tally; you cannot purchase this Requisition again until you have fought at least ten more battles."
       },
-      "Crusade Honour§Keeper of the Unseen Ritual": {
-        "keywords": {
-          "Keywords": [
-            "Inner Circle Advancement"
-          ],
-          "Tags": [
-            "Captain"
-          ]
+      "Requisition§Veteran Initiates": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
         },
-        "text": "**^^Captain^^** model only. Once per battle, when you target another unit with a Stratagem, you can use this ability. If you do, that Stratagem costs 0CP."
+        "text": "Purchase this Requisition when you add a DEATHWING INFANTRY unit or RAVENWING MOUNTED unit to your Order of Battle. That unit gains 6XP (and therefore gains the Blooded rank). Select one Battle Honour for that unit as normal."
       },
-      "Crusade Honour§Master of the Deathwing": {
-        "keywords": {
-          "Keywords": [
-            "Inner Circle Advancement"
-          ],
-          "Tags": [
-            "Terminator",
-            "Captain"
+      "Promotion Ability§Master of the Deathwing": {
+        "text": "TERMINATOR CAPTAIN model only. Once per battle, after selecting your Oath of Moment target, you can use this ability. If you do, until the start of your next Command phase, each time this models unit makes an attack that targets your Oath of Moment target, add 1 to the Wound roll."
+      },
+      "Promotion§Master of the Deathwing": {
+        "stats": {
+          "Honour Points": {
+            "value": 20
+          },
+          "Selection": {
+            "ranks": {
+              "Master of the Deathwing": {
+                "order": 1,
+                "term": "Promotion Ability§Master of the Deathwing"
+              }
+            }
+          }
+        },
+        "rules": {
+          "Belial already holds this seat.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Belial"
+                  ]
+                ],
+                "max": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Promotion Ability§Master of the Ravenwing": {
+        "text": "RAVENWING model only. This models unit can declare a charge in a turn in which it Advanced, and you can re-roll Charge rolls made for that unit."
+      },
+      "Promotion§Master of the Ravenwing": {
+        "stats": {
+          "Honour Points": {
+            "value": 20
+          },
+          "Selection": {
+            "ranks": {
+              "Master of the Ravenwing": {
+                "order": 1,
+                "term": "Promotion Ability§Master of the Ravenwing"
+              }
+            }
+          }
+        },
+        "rules": {
+          "Sammael already holds this seat.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Sammael"
+                  ]
+                ],
+                "max": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Promotion Ability§Keeper of the Unseen Ritual": {
+        "text": "CAPTAIN model only. Once per battle, when you target another unit with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+      },
+      "Promotion§Keeper of the Unseen Ritual": {
+        "stats": {
+          "Honour Points": {
+            "value": 20
+          },
+          "Selection": {
+            "ranks": {
+              "Keeper of the Unseen Ritual": {
+                "order": 1,
+                "term": "Promotion Ability§Keeper of the Unseen Ritual"
+              }
+            }
+          }
+        },
+        "rules": {
+          "Lazarus already holds this seat.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Lazarus"
+                  ]
+                ],
+                "max": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Promotion Ability§Master of Watchers": {
+        "text": "At the end of each battle, if your Crusade army for that battle included this model, your Crusade force gains D3 Honour points.\n\nNamed Сharacters In The Inner Circle\n\nIf Belial is added to your Order of Battle, he automatically gains the Master of the Deathwing Battle Honour, even though he cannot normally gain any Battle Honours. This does not increase his Crusade points. If there is already a model with that Battle Honour in your Order of Battle, you cannot add BELIAL to your Order of Battle.\n\nIf Sammael is added to your Order of Battle, he automatically gains the Master of the Ravenwing Battle Honour, even though he cannot normally gain any Battle Honours. This does not increase his Crusade points. If there is already a model with that Battle Honour in your Order of Battle, you cannot add SAMMAEL to your Order of Battle.\n\nIf Lazarus is added to your Order of Battle, he automatically gains the Keeper of the Unseen Ritual Battle Honour, even though he cannot normally gain any Battle Honours. This does not increase his Crusade points. If there is already a model with that Battle Honour in your Order of Battle, you cannot add LAZARUS to your Order of Battle."
+      },
+      "Promotion§Master of Watchers": {
+        "stats": {
+          "Honour Points": {
+            "value": 15
+          },
+          "Selection": {
+            "ranks": {
+              "Master of Watchers": {
+                "order": 1,
+                "term": "Promotion Ability§Master of Watchers"
+              }
+            }
+          }
+        }
+      },
+      "Requisition§Secret Quest": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a battle. During that battle, do not reveal your chosen Agendas until you have gained XP from them for the first time, or at the end of the battle, whichever comes first."
+      },
+      "Oathsworn Campaign§Secrets of the Unforgiven": {
+        "stats": {
+          "Battle 1": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "None Must Know": {
+                "order": 1
+              },
+              "Enigmatic Goals": {
+                "order": 2
+              },
+              "Interrogation Tactics": {
+                "order": 3
+              }
+            }
+          },
+          "Battle 2": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "None Must Know": {
+                "order": 1
+              },
+              "Enigmatic Goals": {
+                "order": 2
+              },
+              "Interrogation Tactics": {
+                "order": 3
+              }
+            }
+          },
+          "Battle 3": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "None Must Know": {
+                "order": 1
+              },
+              "Enigmatic Goals": {
+                "order": 2
+              },
+              "Interrogation Tactics": {
+                "order": 3
+              }
+            }
+          }
+        },
+        "allowed": {
+          "items": [
+            "Requisition§Secret Quest"
           ]
         },
-        "text": "**^^Terminator Captain^^** model only. Once per battle, after selecting your Oath of Moment target, you can use this ability. If you do, until the start of your next Command phase, each time this model's unit makes an attack that targets your Oath of Moment target, add 1 to the Wound roll."
+        "text": "The Unforgiven toil beneath the weight of doubled duties. Not only must they fight alongside the armies of the Imperium in defence of Humanity, they also pursue secretive quests that may force them to abandon the most loyal or desperate of allies in pursuit of clandestine goals. That these secretive operations all serve the ultimate goal of redemption for the Lions sons is cold comfort at such times, but loyalty to the Chapter must come first.\n\n**Bonus Agendas** (one per battle, in addition to your two Agendas):\n- **None Must Know:** During the Declare Battle Formations step, your opponent must select five units from their army. At the end of the battle, if you have destroyed three or more of the selected units, your Crusade force gains 2 Honour points.\n- **Enigmatic Goals:** At times the Unforgiven focus on seemingly minor locations or assets, enemies and allies alike blind to the wider value of intelligence secured.\n\nAt the start of the battle, select one objective marker on the battlefield that is not in your deployment zone and note it down secretly. This is your Enigmatic Goal objective marker. At the end of the battle, if you control your Enigmatic Goal objective marker, your Crusade force gains 3 Honour points.\n- **Interrogation Tactics:** At the end of the battle, if one or more CHAPLAIN or LIBRARIAN units from your Crusade army either destroyed one or more enemy CHARACTER units with a melee attack or is within Engagement Range of one or more enemy CHARACTER units, your Crusade force gains 3 Honour points.\n\nOathsworn Campaign\n\n**Requisition — Secret Quest (1RP):** Purchase this Requisition before a battle. During that battle, do not reveal your chosen Agendas until you have gained XP from them for the first time, or at the end of the battle, whichever comes first."
+      },
+      "Requisition§Exemplars of Stoicism": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after a battle. Select one INFANTRY unit from your Crusade army that failed a Battle-shock test during that battle but was not destroyed. That unit gains 5XP and your Crusade force gains 2 Honour points."
+      },
+      "Oathsworn Campaign§For the Lion!": {
+        "stats": {
+          "Battle 1": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Slay the Unrighteous": {
+                "order": 1
+              },
+              "Will of the Lion": {
+                "order": 2
+              },
+              "Instruments of Vengeance": {
+                "order": 3
+              }
+            }
+          },
+          "Battle 2": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Slay the Unrighteous": {
+                "order": 1
+              },
+              "Will of the Lion": {
+                "order": 2
+              },
+              "Instruments of Vengeance": {
+                "order": 3
+              }
+            }
+          },
+          "Battle 3": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Slay the Unrighteous": {
+                "order": 1
+              },
+              "Will of the Lion": {
+                "order": 2
+              },
+              "Instruments of Vengeance": {
+                "order": 3
+              }
+            }
+          }
+        },
+        "allowed": {
+          "items": [
+            "Requisition§Exemplars of Stoicism"
+          ]
+        },
+        "text": "The return of Lion El’Jonson has energised and inspired the Unforgiven Chapters. Whether they do so out of a desire to honour their gene-sire or in fear of his judgement, whether they fight on the same battlefields as the Primarch or make war half a galaxy from his shadow, their battle-brothers fight harder than ever before. No challenge is too great nor hardship unendurable if it meets the Lions approval.\n\n**Bonus Agendas** (one per battle, in addition to your two Agendas):\n- **Slay the Unrighteous:** At the end of the battle, the unit from your Crusade army that destroyed the most enemy units during that battle gains 1XP. If that unit destroyed three or more enemy units, your Crusade force gains 2 Honour points as well.\n- **Will of the Lion:** At the end of the battle, for each objective marker you control that is not in your deployment zone, your Crusade force gains 1 Honour point (to a maximum of 3).\n- **Instruments of Vengeance:** Each time a DEATHWING unit from your Crusade army destroys an enemy CHARACTER unit, your Crusade force gains 1 Honour point, or 2 Honour points instead if that DEATHWING unit contains your Warlord (to a maximum of 4).\n\nOathsworn Campaign\n\n**Requisition — Exemplars of Stoicism (1RP):** Purchase this Requisition after a battle. Select one INFANTRY unit from your Crusade army that failed a Battle-shock test during that battle but was not destroyed. That unit gains 5XP and your Crusade force gains 2 Honour points."
+      },
+      "Oathsworn Campaign§Hunt the Fallen": {
+        "stats": {
+          "Battle 1": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "A Trail Uncovered": {
+                "order": 1
+              }
+            }
+          },
+          "Battle 2": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Pursuit Across Worlds": {
+                "order": 1
+              }
+            }
+          },
+          "Battle 3": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Capture the Fallen": {
+                "order": 1
+              }
+            }
+          }
+        },
+        "text": "Underpinning everything the Unforgiven do is the hunt for the Fallen. Never will the sons of the Lion be absolved until every last traitor who brought Caliban to damnation has been apprehended and judged for their sins.\n\n**Bonus Agendas** (one per battle, in addition to your two Agendas):\n- **A Trail Uncovered:** Mark on a tally the first time you achieve each of the following during a battle:\n\nYou score Victory points for holding an objective marker during your Command phase.\n\nYour WARLORD is in your opponent’s deployment zone at the end of one of your turns.\n\nA model from your Crusade army destroys the enemy WARLORD.\n\nYou have destroyed 3 or more CHARACTER units.\n\nAn enemy CHARACTER’s unit fails a Battle-shock test.\n\nYou win the battle.\n\nAt the end of the battle, if you have marked that tally 3 or more times, you have successfully completed this Bonus Agenda - your Crusade force gains 4 Honour points and your Hunt the Fallen Oathsworn Campaign continues.\n- **Pursuit Across Worlds:** Once they have marked their quarry, the Unforgiven pursue with relentless determination.\n\nAt the end of the battle, if there are one or more ADEPTUS ASTARTES units from your Crusade army wholly within three or more different table quarters, and those units are all more than 3\" away from any other table quarter, you have successfully completed this Bonus Agenda and your Crusade force gains 5 Honour points.\n- **Capture the Fallen:** In order to use the Capture the Fallen Agenda, your opponent must add one HERETIC ASTARTES CHARACTER model with a Save characteristic of 3+ or better to their Crusade army. That model is your Quarry of the Unforgiven and gains the FALLEN keyword if it does not already have it. It has a points value of 0, does not require a Crusade card, cannot gain XP and cannot be a WARLORD. That model cannot be set up as Reserves, cannot lead a unit, and has an Objective Control characteristic of 0. Additionally, it gains the Lone Operative ability if it does not already have it.\n\nAt the end of the battle, if an ADEPTUS ASTARTES unit from Crusade army destroyed your Quarry of the Unforgiven, you have successfully completed this Bonus Agenda - your WARLORD gains 3XP and your Crusade force gains 10 Honour points.\n\nDesigner’s Note: To engage with the Capture the Fallen Bonus Agenda, we recommend creating a Fallen miniature to represent your Quarry of the Unforgiven, which you can lend to your opponent when required. We would also recommend checking with your opponent that they are happy to include this model in their army before attempting this Bonus Agenda. If your opponent would prefer not to include it (because it is not suited to their armys narrative, for example), we recommend you wait until a better opportunity arises before attempting this Bonus Agenda. If so, you may temporarily suspend your Oathsworn Campaign and pick a Bonus Agenda from another eligible Oathsworn Campaign to use for the battle.\n\nYou can only embark on this Oathsworn Campaign if your Crusade force has already completed a Secrets of the Unforgiven Oathsworn Campaign and at least one other Dark Angels or Adeptus Astartes Oathsworn Campaign. Its three Bonus Agendas must be completed in order, one per battle (Battle 1: A Trail Uncovered, Battle 2: Pursuit Across Worlds, Battle 3: Capture the Fallen); failing one ends the campaign as the trail is lost (Penitent’s Hope lets you re-attempt Capture the Fallen). After a Hunt the Fallen campaign you cannot start another until two other Oathsworn Campaigns are complete."
       }
     },
     "gameModes": {},

@@ -1,6 +1,6 @@
 {
   "name": "Black Templars 11e",
-  "revision": "11.2.7",
+  "revision": "11.2.8",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -125,6 +125,596 @@
                   ]
                 ],
                 "value": "Adeptus Astartes"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Fulfil Your Vows": {
+                "order": 100,
+                "tracking": {
+                  "Black Templars Agenda": 1
+                }
+              },
+              "Reconsecration": {
+                "order": 101,
+                "tracking": {
+                  "Black Templars Agenda": 1
+                }
+              },
+              "First-Hand Experience": {
+                "order": 102,
+                "tracking": {
+                  "Black Templars Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Fulfil Your Vows": {
+                "order": 100,
+                "tracking": {
+                  "Black Templars Agenda": 1
+                }
+              },
+              "Reconsecration": {
+                "order": 101,
+                "tracking": {
+                  "Black Templars Agenda": 1
+                }
+              },
+              "First-Hand Experience": {
+                "order": 102,
+                "tracking": {
+                  "Black Templars Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§God-Emperor’s Due",
+            "Requisition§Penitent Crusade",
+            "Requisition§Dogmatic Edification",
+            "Requisition§Appointed to the Household",
+            "Crusade Badge§Puritanical Crusader",
+            "Crusade Badge§Blessed Executioner",
+            "Crusade Badge§Disciple of Sigismund"
+          ]
+        }
+      },
+      "Black Templars Crusade": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Relic Fragments gained": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 99,
+            "icons": [
+              "shield"
+            ],
+            "statOrder": 1
+          },
+          "Relic Fragments remaining": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "min": -99,
+            "max": 99,
+            "statOrder": 2
+          }
+        },
+        "rules": {
+          "relicFragmentsRemaining": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Relic Fragments remaining",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Relic Fragments gained",
+                    "value"
+                  ]
+                ],
+                "equation": {
+                  "operator": "T-O",
+                  "value": [
+                    "{roster}",
+                    "tracked",
+                    "Relic Fragments"
+                  ]
+                }
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "gained minus the Relic Fragments spent on Reclaimed Relics"
+          },
+          "Your Reclaimed Relics cost more Relic Fragments than your Crusade force has gained.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Relic Fragments remaining",
+                    "value"
+                  ]
+                ],
+                "min": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          }
+        }
+      },
+      "Reclaimed Relic": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour",
+        "stats": {
+          "Relic Fragments": {
+            "group": "Cost",
+            "groupOrder": -1,
+            "icons": [
+              "shield"
+            ],
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "always"
+          }
+        }
+      },
+      "Infantry/Mounted": {
+        "rules": {
+          "allowReclaimedRelic": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Reclaimed Relic"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Infantry",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Relic Bearers: a BLACK TEMPLARS INFANTRY unit of Blooded rank or higher may bear one Reclaimed Relic"
+          },
+          "One Reclaimed Relic per unit.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Reclaimed Relic"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Champion's Virtue": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Character": {
+        "rules": {
+          "allowChampionsVirtue": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Champion's Virtue"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Emperor’s Champion",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Anoint a Champion: the EMPEROR’S CHAMPION gains one Champion’s Virtue at the end of each battle instead of XP"
+          },
+          "emperorsChampionCrusade": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honour",
+                    "max"
+                  ]
+                ],
+                "value": 6
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Emperor’s Champion",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "the Emperor’s Champion cannot earn XP; its Battle Honours are its Champion’s Virtues"
+          },
+          "noChapterMaster": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "disallowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Chapter Master"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Black Templars have no Chapter Master seat"
+          }
+        }
+      },
+      "Oath of Crusade": {
+        "aspects": {
+          "Visibility": "always",
+          "Describe": true
+        },
+        "stats": {
+          "Deed": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "…bring glory to His name…": {
+                "order": 1
+              },
+              "…shatter the holdings of the enemy…": {
+                "order": 2
+              },
+              "…reclaim our holy relics…": {
+                "order": 3
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 1
+          },
+          "Foe": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "…and lay low the mightiest tyrants…": {
+                "order": 1
+              },
+              "…and strike down the most dire foes…": {
+                "order": 2
+              },
+              "…and slaughter the faithless…": {
+                "order": 3
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 2
+          },
+          "Passion": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "…whilst bearing our artefacts proudly…": {
+                "order": 1
+              },
+              "…ere our blades strike at their heart…": {
+                "order": 2
+              },
+              "…as righteousness courses through us…": {
+                "order": 3
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 3
+          },
+          "Condition": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "…yet with never a backwards step.": {
+                "order": 1
+              },
+              "…in order to keep His domain sanctified.": {
+                "order": 2
+              },
+              "…with the strength to crusade anew.": {
+                "order": 3
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 4
+          },
+          "Completed": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 5
+          }
+        },
+        "templateClass": "",
+        "rules": {
+          "oathDone": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": " ✓",
+                "append": ""
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Completed",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
               }
             ],
             "evaluate": "AND",
@@ -7367,6 +7957,269 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 1
+          },
+          "useCrusadeSM_Black_Templars": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Black Templars Crusade§Relic Fragments"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
+          },
+          "Only one Penitent's Roar in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Penitent's Roar"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Crux Obsidian in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Crux Obsidian"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Holy Orb in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Holy Orb"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Fist of Balthus in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Fist of Balthus"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Sigismund's Seal in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Sigismund's Seal"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Sword of the Lost Crusader in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Sword of the Lost Crusader"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Light of the Emperor’s Grace in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Light of the Emperor’s Grace"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Beastpyre in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Beastpyre"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Vortimaran Incensors in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Vortimaran Incensors"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Icon of Heinmann in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Icon of Heinmann"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Hands of the Pious in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Hands of the Pious"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Sceptre of Fallen Empires in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Sceptre of Fallen Empires"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
@@ -11067,7 +11920,399 @@
           }
         }
       },
-      "Crusade Honour§Master of Arms": {
+      "Requisition§God-Emperor’s Due": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition in the Determine Victor step, if you gained 5 or more Honour points during that battle and you were not the victor. You gain the Victor bonus described in that mission even though you were not the victor."
+      },
+      "Requisition§Penitent Crusade": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition at the end of an Oathsworn Campaign, if one or more of the following applies to your Crusade force:\n\nYou lost more battles during that Oathsworn Campaign than you won.\n\nOne or more ADEPTUS ASTARTES CHARACTER units from your Order of Battle have one or more of the following Battle Scars: Battle-weary; Disgraced; Mark of Shame.\n\nAn EMPEROR’S CHAMPION model from your Crusade army was destroyed in one of the battles fought during that Oathsworn Campaign, and at the end of that battle you lost 5 Honour points as a result of the Recovering Sacred Wargear Agenda.\n\nThe next Oathsworn Campaign you start will be a Penitent Crusade. At the end of that Oathsworn Campaign, if you have 10 or more Honour points, each ADEPTUS ASTARTES unit on your Order of Battle gains 1XP and you can select one of the following rewards:\n\nGain an additional 10 Honour points.\n\nGain 5 Relic Fragments.\n\nRemove all instances of the Battle-weary, Disgraced and Mark of Shame Battle Scars from ADEPTUS ASTARTES units on your Order of Battle.\n\nHowever, at the end of that Oathsworn Campaign, if you have 9 or fewer Honour points, your Penitent Crusade fails and you must halve your Honour points gained during that Oathsworn Campaign."
+      },
+      "Requisition§Dogmatic Edification": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a battle. Select one CRUSADER SQUAD unit from your Order of Battle, and select one Battle Trait that unit has. Replace that Battle Trait with a new Black Templars Battle Trait of your choosing (this must be a Battle Honour that unit can have)."
+      },
+      "Requisition§Appointed to the Household": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after a battle. Select one of the following:\n\nSelect one CRUSADER SQUAD unit on your Order of Battle with the Blooded rank or higher. Remove that unit from your Order of Battle and spend 5 Honour points to add one SWORD BRETHREN unit to your Order of Battle.\n\nSelect one CRUSADER SQUAD unit on your Order of Battle with the Blooded rank or higher. Remove that unit from your Order of Battle and spend 10 Honour points to add one SWORD BRETHREN unit to your Order of Battle and one new CRUSADER SQUAD unit to your Order of Battle.\n\nWhen a unit is replaced in this way, each new unit starts with the same XP, Battle Honours and Battle Scars as the unit it replaced and until it is removed from your Order of Battle, each time it gains XP from Dealers of Death, that new unit gains 2XP instead of 1XP. You cannot purchase this Requisition if doing so would cause your Crusade force to exceed its current Supply Limit."
+      },
+      "Crusade Badge§Puritanical Crusader": {
+        "text": "You have completed one or more Oathsworn Campaign and promoted one or more units to Chapter Command.\nYou have won three or more battles."
+      },
+      "Crusade Badge§Blessed Executioner": {
+        "text": "You have completed two or more Oathsworn Campaigns and promoted two or more units to Chapter Command.\nYour Order of Battle contains one EMPEROR’S CHAMPION model.\nYou have won six or more battles.\nOne or more units on your Order of Battle have the RELIC BEARER keyword."
+      },
+      "Crusade Badge§Disciple of Sigismund": {
+        "text": "You have completed five or more Oathsworn Campaigns and promoted three or more units to Chapter Command.\nYou have added a new unit to your army using the Appointed to the Household Requisition.\nYou have won ten or more battles.\nThree or more units on your Order of Battle have the RELIC BEARER keyword."
+      },
+      "Black Templars Crusade§Relic Fragments": {
+        "text": "**Relic Bearers.** After an Oathsworn Campaign ends, spend Relic Fragments on Reclaimed Relics for BLACK TEMPLARS INFANTRY units of Blooded rank or higher (not CHARACTERS): one per unit, each unique; the bearer gains the RELIC BEARER keyword. Track Relic Fragments gained on this card; the Reclaimed Relics on your units spend them.\n\n**Anoint a Champion.** When your Black Templars Crusade force starts an Oathsworn Campaign you can add one EMPEROR’S CHAMPION to your Order of Battle; its points do not count towards Supply Used (but do count in any Crusade army) and it leaves when the campaign ends. It cannot earn XP or Battle Honours: at the end of each battle it gains one Champion’s Virtue (choose, or roll two D6 and gain both). Each enemy CHARACTER it destroys earns 1 Honour point. When it is destroyed, take its Out of Action test at once: if failed it is slain and removed; place a Sacred Wargear objective marker where it fell and use the Recovering Sacred Wargear Agenda (the player controlling the marker at the end of the battle gives one unit within range 3XP; if you do not control it you lose 5 Honour points). You cannot anoint another Champion until a new Oathsworn Campaign."
+      },
+      "Reclaimed Relic§Penitent's Roar": {
+        "stats": {
+          "Relic Fragments": {
+            "value": 3
+          }
+        },
+        "text": "This ornate pistol of unknown design can only be fired while chained to the bearer’s wrist but delivers each shot with uncanny accuracy, straight to the heart of any who would lay low the Emperor’s chosen crusaders.\n\nSelect one Pistol weapon equipped by the bearer that has the word ‘bolt’ in its name, e.g. bolt pistol (excluding a weapon that has been upgraded with a Weapon Modification - if you cannot do so, you cannot select this Reclaimed Relic Battle Honour). That weapon is now a Crusade Relic; it has the [precision] and [ignores cover] abilities and improve its Damage and Armour Penetration characteristics by 1.",
+        "rules": {
+          "relicBearer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Relic Bearer"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Reclaimed Relic§Crux Obsidian": {
+        "stats": {
+          "Relic Fragments": {
+            "value": 4
+          }
+        },
+        "text": "Once per turn, the first time a saving throw is failed for the bearer, change the Damage characteristic of that attack to 0.",
+        "rules": {
+          "relicBearer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Relic Bearer"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Reclaimed Relic§Holy Orb": {
+        "stats": {
+          "Relic Fragments": {
+            "value": 4
+          }
+        },
+        "text": "Once per battle, when you target the bearer’s unit with the Grenade Stratagem, the bearer can use this Reclaimed Relic. If it does, when resolving that Stratagem, 1 mortal wound is inflicted for each roll of 3+ (instead of each roll of 4+), and after resolving that Stratagem, the enemy unit you selected for that Stratagem must take a Battle-shock test.",
+        "rules": {
+          "relicBearer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Relic Bearer"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Reclaimed Relic§Fist of Balthus": {
+        "stats": {
+          "Relic Fragments": {
+            "value": 5
+          }
+        },
+        "text": "Once worn by Brother Balthus, this power fist was used to crush the unholy life from the Daemon Prince Angorakh, the Red Herald. The act cost Balthus his life and Angorakh’s acidic ichor still marks the metal of this weapon, but its strikes are undiminished.\n\nSelect one power fist equipped by the bearer (excluding a weapon that has been upgraded with a Weapon Modification - if you cannot do so, you cannot select this Reclaimed Relic Battle Honour). That weapon is now a Crusade Relic. Each time the bearer’s unit ends a Charge move, select one enemy unit within Engagement Range of the bearer and roll one D6: on a 2+, that enemy unit suffers D3+1 mortal wounds.",
+        "rules": {
+          "relicBearer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Relic Bearer"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Reclaimed Relic§Sigismund's Seal": {
+        "stats": {
+          "Relic Fragments": {
+            "value": 6
+          }
+        },
+        "text": "At the start of the battle, select one unit from your opponent’s army. Each time a model in the bearer’s unit makes a melee attack that targets that unit, that attack has the [lethal hits] and [precision] abilities. If that unit is destroyed during the battle by the bearer’s unit and your Crusade force is embarked on an Oathsworn Campaign, you gain 1 additional Honour point.\n\nDesigner’s Note: Using components from the Black Templars Upgrades and Transfers kit is a perfect way to distinguish your RELIC BEARER models. Some of these items bestow Crusade Relics on the bearer, and can do so even if the bearer is not a CHARACTER; note that such Crusade Relics are all Artificer Relics, but having one only increases the bearer’s unit’s Crusade points by 1 (not 1 for having a Reclaimed Relic Battle Honour and 1 for having a Crusade Relic).",
+        "rules": {
+          "relicBearer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Relic Bearer"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Reclaimed Relic§Sword of the Lost Crusader": {
+        "stats": {
+          "Relic Fragments": {
+            "value": 8
+          }
+        },
+        "text": "Select one power weapon or master-crafted power weapon equipped by the bearer (excluding a weapon that has been upgraded with a Weapon Modification - if you cannot do so, you cannot select this Reclaimed Relic Battle Honour). That weapon is now a Crusade Relic. Each time the bearer’s unit has fought, select one enemy unit (excluding VEHICLES) hit by one or more of the bearer’s melee attacks this phase. Until the end of the battle, that enemy unit is set ablaze. While a unit is set ablaze, at the start of each player’s Command phase, roll one D6: on a 4+, that unit suffers D3 mortal wounds.",
+        "rules": {
+          "relicBearer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Relic Bearer"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Reclaimed Relic§Light of the Emperor’s Grace": {
+        "stats": {
+          "Relic Fragments": {
+            "value": 9
+          }
+        },
+        "text": "The wan light this elaborate lantern casts over the bearer and his allies is held to fortify them and drive back the darkness.\n\nEnemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of the bearer. Model’s in the bearer’s unit can ignore any or all modifiers to their Leadership characteristic, and each time the bearer’s unit takes a Battle-shock test, you can ignore any or all modifiers to that test.",
+        "rules": {
+          "relicBearer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Relic Bearer"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Reclaimed Relic§Beastpyre": {
+        "stats": {
+          "Relic Fragments": {
+            "value": 10
+          }
+        },
+        "text": "Select one Torrent weapon equipped by the bearer (excluding a weapon that has been upgraded with a Weapon Modification - if you cannot do so, you cannot select this Reclaimed Relic Battle Honour). That weapon is now a Crusade Relic; it has the [devastating wounds] ability and add 3 to its Attacks characteristic.",
+        "rules": {
+          "relicBearer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Relic Bearer"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Reclaimed Relic§Vortimaran Incensors": {
+        "stats": {
+          "Relic Fragments": {
+            "value": 10
+          }
+        },
+        "text": "Models in the bearer’s unit have a 5+ invulnerable save.",
+        "rules": {
+          "relicBearer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Relic Bearer"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Reclaimed Relic§Icon of Heinmann": {
+        "stats": {
+          "Relic Fragments": {
+            "value": 10
+          }
+        },
+        "text": "Each time a model in the bearer’s unit is destroyed, if that model has not fought this phase, roll one D6: on a 5+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+        "rules": {
+          "relicBearer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Relic Bearer"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Reclaimed Relic§Hands of the Pious": {
+        "stats": {
+          "Relic Fragments": {
+            "value": 11
+          }
+        },
+        "text": "Add 1 to Charge rolls made for the bearer’s unit. Each time the bearer’s unit is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in that unit.",
+        "rules": {
+          "relicBearer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Relic Bearer"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Reclaimed Relic§Sceptre of Fallen Empires": {
+        "stats": {
+          "Relic Fragments": {
+            "value": 12
+          }
+        },
+        "text": "When selecting Agendas for a battle, if your Crusade force is embarked on an Oathsworn Campaign, you can select one additional Black Templars Agenda for that battle in addition to any others being used in that battle. In addition, if you are using the Oaths of Crusade Bonus Agenda, if you are randomly generating that Bonus Agenda, you can re-roll each D6 when determining Deeds, Foes, Passions and Conditions.",
+        "rules": {
+          "relicBearer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Relic Bearer"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Champion's Virtue§Master of Arms": {
         "keywords": {
           "Keywords": [
             "Champion's Virtue Battle Honours"
@@ -11078,7 +12323,7 @@
         },
         "text": "At the start of the Fight phase, if this model is not leading a unit, until the end of the phase, it has the Fights First ability."
       },
-      "Crusade Honour§Epitome of Piety": {
+      "Champion's Virtue§Epitome of Piety": {
         "keywords": {
           "Keywords": [
             "Champion's Virtue Battle Honours"
@@ -11089,7 +12334,7 @@
         },
         "text": "This model has the Feel No Pain 6+ (this is improved to Feel No Pain 4+ against Psychic Attacks and mortal wounds)."
       },
-      "Crusade Honour§Instrument of the Emperor": {
+      "Champion's Virtue§Instrument of the Emperor": {
         "keywords": {
           "Keywords": [
             "Champion's Virtue Battle Honours"
@@ -11100,7 +12345,7 @@
         },
         "text": "Each time a **^^Character^^** model is destroyed by an attack made by this model, you gain 1CP."
       },
-      "Crusade Honour§Adaptable Executioner": {
+      "Champion's Virtue§Adaptable Executioner": {
         "keywords": {
           "Keywords": [
             "Champion's Virtue Battle Honours"
@@ -11111,7 +12356,7 @@
         },
         "text": "Each time this model's unit is selected to fight, select the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, this model's Black Sword has that ability."
       },
-      "Crusade Honour§Inspirational Fighter": {
+      "Champion's Virtue§Inspirational Fighter": {
         "keywords": {
           "Keywords": [
             "Champion's Virtue Battle Honours"
@@ -11122,7 +12367,7 @@
         },
         "text": "Each time this model's unit has fought, if one or more **^^Character^^** models were destroyed as a result of attacks made by this model this phase, until the end of the phase, while a friendly **^^Adeptus Astartes^^** unit is within 6\" of this model, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit."
       },
-      "Crusade Honour§Front-line Crusader": {
+      "Champion's Virtue§Front-line Crusader": {
         "keywords": {
           "Keywords": [
             "Champion's Virtue Battle Honours"
@@ -11132,6 +12377,79 @@
           ]
         },
         "text": "This model has the Scouts 6\" ability, and you can re-roll Charge rolls made for this model's unit."
+      },
+      "Oath of Crusade§Oath of Crusade": {
+        "text": "**Oaths of Crusade** (the Bonus Agenda of every battle in this campaign): select one Deed and one Foe, optionally one Passion and one Condition (choose, or roll a D6 on each table; the Devotional Codicil allows two Passions and two Conditions). The oath reads: ‘In the name of the immortal God-Emperor, I hereby vow to [Deed] [Foe] [Passion] [Condition].’ At the end of the battle, if every part was completed you gain all the listed rewards (+1 Honour point if you rolled the parts); otherwise nothing. Add one Oath of Crusade to this campaign per battle and tick it when completed.\n\n**Deeds:**\n- …bring glory to His name… Completed if you are the victor. Reward: 1 Relic Fragment or 1XP for your WARLORD.\n- …shatter the holdings of the enemy… Completed if you control one or more objective markers in your opponent’s deployment zone. Reward: 2RP or 1 Relic Fragment.\n- …reclaim our holy relics… Completed if you control more objective markers than your opponent. Reward: 2 Relic Fragments.\n\n**Foes:**\n- …and lay low the mightiest tyrants… At the start of the battle select CHARACTER or WARLORD; completed if an ADEPTUS ASTARTES unit from your Crusade army destroyed an enemy unit with that keyword. Reward: CHARACTER 1 Honour point; WARLORD 2 Honour points and 1 Relic Fragment.\n- …and strike down the most dire foes… At the start of the battle select MONSTER, VEHICLE or TITANIC; completed if an ADEPTUS ASTARTES unit from your Crusade army destroyed an enemy unit with that keyword. Reward: MONSTER/VEHICLE 1 Honour point; TITANIC 2 Honour points and 1 Relic Fragment.\n- …and slaughter the faithless… At the start of the battle select 3 or more units or 6 or more units; completed if that many enemy units were destroyed by ADEPTUS ASTARTES units from your Crusade army. Reward: 3+ → 1 Honour point; 6+ → 2 Honour points and 1 Relic Fragment.\n\n**Passions:**\n- …whilst bearing our artefacts proudly… Completed if one or more ANCIENT or RELIC BEARER units from your Crusade army are wholly within 6\" of the centre of the battlefield. Reward: 1 Honour point.\n- …ere our blades strike at their heart… Completed if one or more CHARACTER units from your Crusade army are wholly within your opponent’s deployment zone. Reward: 1 Honour point.\n- …as righteousness courses through us… Completed if one or more enemy units were destroyed by a CHAPLAIN or JUDICIAR unit from your Crusade army. Reward: 1 Honour point.\n\n**Conditions:**\n- …yet with never a backwards step. Completed if no ADEPTUS ASTARTES units from your Crusade army made a Fall Back move. Reward: 1 Honour point.\n- …in order to keep His domain sanctified. Completed if no enemy units are wholly within your deployment zone. Reward: 1 Honour point.\n- …with the strength to crusade anew. Completed if half or more (rounding down) of the units from your Crusade army are on the battlefield. Reward: 1 Honour point."
+      },
+      "Requisition§Devotional Codicil": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "When divine portents from the Emperor demand it, the Black Templars commit to ever greater oaths.\n\nPurchase this Requisition at the start of the Select Agendas step. When you are creating your Bonus Agenda for that battle (see below), you can select up to two Passions and up to two Conditions (if you are randomly selecting these and you roll any duplicates, keep rolling until a different result is rolled). You can only purchase this Requisition once per Oathsworn Campaign."
+      },
+      "Oathsworn Campaign§Honouring the Creed": {
+        "stats": {
+          "Battle 1": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Oaths of Crusade": {
+                "order": 1
+              }
+            }
+          },
+          "Battle 2": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Oaths of Crusade": {
+                "order": 1
+              }
+            }
+          },
+          "Battle 3": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Oaths of Crusade": {
+                "order": 1
+              }
+            }
+          }
+        },
+        "allowed": {
+          "items": [
+            "Requisition§Devotional Codicil",
+            "Oath of Crusade§Oath of Crusade"
+          ]
+        },
+        "text": "The Black Templars’ uncompromising loyalty and martial honour is ever expressed through their fierce devotion to the Imperial Creed. On operations to punish the desecrators of shrines, reclaim holy artefacts or uphold vows made in the God-Emperor’s name, their strike forces zealously pursue holy goals declared by fearsome oaths.\n\n**Bonus Agendas** (one per battle, in addition to your two Agendas):\n- **Oaths of Crusade:** Create your oath from a Deed, a Foe and optionally a Passion and a Condition (see the Oaths of Crusade below).\n\n**Requisition — Devotional Codicil (1RP):** When divine portents from the Emperor demand it, the Black Templars commit to ever greater oaths.\n\nPurchase this Requisition at the start of the Select Agendas step. When you are creating your Bonus Agenda for that battle (see below), you can select up to two Passions and up to two Conditions (if you are randomly selecting these and you roll any duplicates, keep rolling until a different result is rolled). You can only purchase this Requisition once per Oathsworn Campaign.\n\n**Oaths of Crusade** (the Bonus Agenda of every battle in this campaign): select one Deed and one Foe, optionally one Passion and one Condition (choose, or roll a D6 on each table; the Devotional Codicil allows two Passions and two Conditions). The oath reads: ‘In the name of the immortal God-Emperor, I hereby vow to [Deed] [Foe] [Passion] [Condition].’ At the end of the battle, if every part was completed you gain all the listed rewards (+1 Honour point if you rolled the parts); otherwise nothing. Add one Oath of Crusade to this campaign per battle and tick it when completed.",
+        "rules": {
+          "Three oaths at most: one per battle of the campaign.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Oath of Crusade"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       }
     },
     "gameModes": {},

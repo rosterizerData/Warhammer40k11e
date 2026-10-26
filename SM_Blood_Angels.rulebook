@@ -1,6 +1,6 @@
 {
   "name": "Blood Angels 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -165,6 +165,722 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          }
+        }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "For Baal and the Angel!": {
+                "order": 100,
+                "tracking": {
+                  "Blood Angels Agenda": 1
+                }
+              },
+              "Search for the Cure": {
+                "order": 101,
+                "tracking": {
+                  "Blood Angels Agenda": 1
+                }
+              },
+              "Against the Darkness": {
+                "order": 102,
+                "tracking": {
+                  "Blood Angels Agenda": 1
+                }
+              },
+              "Liberators From Tyranny": {
+                "order": 103,
+                "tracking": {
+                  "Blood Angels Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "For Baal and the Angel!": {
+                "order": 100,
+                "tracking": {
+                  "Blood Angels Agenda": 1
+                }
+              },
+              "Search for the Cure": {
+                "order": 101,
+                "tracking": {
+                  "Blood Angels Agenda": 1
+                }
+              },
+              "Against the Darkness": {
+                "order": 102,
+                "tracking": {
+                  "Blood Angels Agenda": 1
+                }
+              },
+              "Liberators From Tyranny": {
+                "order": 103,
+                "tracking": {
+                  "Blood Angels Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Noble Heritage",
+            "Requisition§Valour of the Angels",
+            "Requisition§Damned Souls",
+            "Crusade Badge§Sanguinary Initiate",
+            "Crusade Badge§Hero of Baal",
+            "Crusade Badge§Angelic Exemplar"
+          ]
+        }
+      },
+      "Character": {
+        "rules": {
+          "allowShieldofBaal": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Shield of Baal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Captain",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Angels Ascendant: after an Oathsworn Campaign, spend Honour points to promote a CHARACTER (one such honour per unit, each unique)"
+          },
+          "allowSanguinaryHighPriest": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Sanguinary High Priest"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Sanguinary Priest",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Angels Ascendant: after an Oathsworn Campaign, spend Honour points to promote a CHARACTER (one such honour per unit, each unique)"
+          },
+          "allowCustodianoftheLost": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Custodian of the Lost"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Chaplain",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Angels Ascendant: after an Oathsworn Campaign, spend Honour points to promote a CHARACTER (one such honour per unit, each unique)"
+          },
+          "noCrusadeXpDeathCompany": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honour",
+                    "max"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Death Company",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: DEATH COMPANY units never gain Experience points or Battle Honours and automatically pass Out of Action tests"
+          },
+          "crusadeTagDeathCompany": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Death Company"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Death Company",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Death Company keyword may take the honours tagged Death Company"
+          },
+          "No more than three Death Company Battle Scars.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Death Company",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Battle Scar"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "theFlaw": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§The Flaw"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Death Company",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Infantry/Mounted": {
+        "rules": {
+          "allowExemplarsoftheHost": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Exemplars of the Host"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Jump Pack",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Death Company",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 16
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Angels Ascendant: a JUMP PACK unit of Battle-hardened rank or higher can be promoted to the Sanguinary Guard"
+          },
+          "noCrusadeXpDeathCompany": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honour",
+                    "max"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Death Company",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: DEATH COMPANY units never gain Experience points or Battle Honours and automatically pass Out of Action tests"
+          },
+          "crusadeTagDeathCompany": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Death Company"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Death Company",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Death Company keyword may take the honours tagged Death Company"
+          },
+          "No more than three Death Company Battle Scars.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Death Company",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Battle Scar"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "theFlaw": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§The Flaw"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Death Company",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
           }
         }
       }
@@ -9659,6 +10375,63 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 1
+          },
+          "Only one Shield of Baal in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Shield of Baal"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Sanguinary High Priest in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Sanguinary High Priest"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Custodian of the Lost in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Custodian of the Lost"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "removed": {
@@ -11487,38 +12260,400 @@
       "Ability§Death Visions of Sanguinius": {
         "text": "In the Fight phase, when an enemy unit has fought, if this model was destroyed by those attacks, you can use this ability. If you do, roll one D6, with +2 to that roll if this model was engaged with an enemy **WARLORD** unit:\n\n- On a 2-3, that enemy unit suffers D3 mortal wounds.\n\n- On a 4-5, that enemy unit suffers 3 **mortal wounds**.\n\n- On a 6+, that enemy unit suffers D3+3 **mortal wounds**."
       },
-      "Crusade Honour§Shield of Baal": {
-        "keywords": {
-          "Keywords": [
-            "Angels Ascendant"
-          ],
-          "Tags": [
-            "Captain"
-          ]
+      "Requisition§Noble Heritage": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
         },
-        "text": "**^^Captain^^** model only. Once per battle, after selecting your Oath of Moment target, you can use this ability. If you do, until the start of your next Command phase, each time this model's unit makes a melee attack that targets your Oath of Moment target, you can re-roll the Wound roll."
+        "text": "Purchase this Requisition at any time. Select one BLOOD ANGELS CHARACTER unit from your Crusade force with 71+ XP. The selected unit gains one additional Battle Trait; this does not count towards the maximum number of Battle Honours a unit can have.\n\nEach unit can only be selected for this Requisition once."
       },
-      "Crusade Honour§Sanguinary High Priest": {
-        "keywords": {
-          "Keywords": [
-            "Angels Ascendant"
-          ],
-          "Tags": [
-            "Sanguinary Priest"
-          ]
+      "Requisition§Valour of the Angels": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
         },
-        "text": "**^^Sanguinary Priest^^** model only. Once per battle, when this model's unit is select to fight, you can use this ability. If you do, until the end of the phase, add 1 to the Attacks characteristic of melee weapon equipped by models in that unit."
+        "text": "Purchase this Requisition after a battle in which one or more BLOOD ANGELS CHARACTER models from your Crusade army failed an Out of Action test. That model is Marked for Greatness in addition to any other unit from your Crusade army, and, if that model destroyed one or more enemy models during that battle, your Crusade force gains 5 Honour points.\n\nYou can only purchase this Requisition once per Oathsworn Campaign."
       },
-      "Crusade Honour§Custodian of the Lost": {
+      "Requisition§Damned Souls": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a battle. Select one of the following options:\n\nSelect one ADEPTUS ASTARTES INFANTRY unit (excluding DEATH COMPANY and CHARACTER units) from your Order of Battle. Remove that unit from your Order of Battle and add a DEATH COMPANY INFANTRY unit (excluding CHARACTER units) to your Order of Battle. The new unit has the same XP, Battle Honours and Battle Scars as the unit it replaced.\n\nSelect one CAPTAIN unit (excluding DEATH COMPANY units) from your Order of Battle. Remove that unit from your Order of Battle and add a DEATH COMPANY CAPTAIN unit to your Order of Battle. The new unit has the same XP, Battle Honours and Battle Scars as the unit it replaced.\n\nSelect one DREADNOUGHT unit (excluding DEATH COMPANY units) from your Order of Battle. Remove that unit from your Order of Battle and add a DEATH COMPANY DREADNOUGHT unit to your Order of Battle. The new unit has the same XP, Battle Honours and Battle Scars as the unit it replaced.\n\nYou cannot purchase this Requisition if doing so would cause your Crusade forces total Crusade points to exceed your Crusade force’s Supply Limit. Note that while the new units retain the XP of the unit they replaced, they will not be able to gain additional XP as described in the rules for the Flaw."
+      },
+      "Crusade Badge§Sanguinary Initiate": {
+        "text": "You have completed one Oathsworn Campaign and promoted one or more units to Chapter Command or the Angels Ascendant.\nOne or more of your DEATH COMPANY units have gained one or more Battle Scars using the Flaw rules.\nYou have won two or more battles."
+      },
+      "Crusade Badge§Hero of Baal": {
+        "text": "You have taken the fight to the Imperiums foes. By your hand have entire systems been reconquered, their resources and industry bent once more to the Emperors cause.\nYou have completed three Oathsworn Campaigns and promoted two or more units to Chapter Command or the Angels Ascendant.\nOne or more of your DEATH COMPANY units have gained two or more Battle Scars using the Flaw rules.\nYou have won six or more battles.\nYou have completed one or more Bonus Agendas from any of the Oathsworn Campaigns in this book."
+      },
+      "Crusade Badge§Angelic Exemplar": {
+        "text": "You are an exemplar of Sanguinius martial code. The halls of the Arx Angelicum ring to the sound of your storied name.\nYou have completed five Oathsworn Campaigns and promoted five or more units to Chapter Command or the Angels Ascendant.\nOne or more of your DEATH COMPANY units have gained three or more Battle Scars and been removed from your Order of Battle using the Flaw rules.\nYou have won ten or more battles.\nYou have completed all three Bonus Agendas from all of the Oathsworn Campaigns in this book."
+      },
+      "Promotion Ability§Shield of Baal": {
+        "text": "CAPTAIN model only. Once per battle, after selecting your Oath of Moment target, you can use this ability. If you do, until the start of your next Command phase, each time this models unit makes a melee attack that targets your Oath of Moment target, you can re-roll the Wound roll."
+      },
+      "Promotion§Shield of Baal": {
+        "stats": {
+          "Honour Points": {
+            "value": 20
+          },
+          "Selection": {
+            "ranks": {
+              "Shield of Baal": {
+                "order": 1,
+                "term": "Promotion Ability§Shield of Baal"
+              }
+            }
+          }
+        }
+      },
+      "Promotion Ability§Sanguinary High Priest": {
+        "text": "SANGUINARY PRIEST model only. Once per battle, when this model's unit is selected to fight, you can use this ability. If you do, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit."
+      },
+      "Promotion§Sanguinary High Priest": {
+        "stats": {
+          "Honour Points": {
+            "value": 20
+          },
+          "Selection": {
+            "ranks": {
+              "Sanguinary High Priest": {
+                "order": 1,
+                "term": "Promotion Ability§Sanguinary High Priest"
+              }
+            }
+          }
+        }
+      },
+      "Promotion Ability§Custodian of the Lost": {
+        "text": "CHAPLAIN model only. During the Declare Battle Formations step, if this model is attached to a DEATH COMPANY unit, select one of the Death Company Battle Scars; until the end of the battle, that unit has that Battle Scar in addition to any others it has."
+      },
+      "Promotion§Custodian of the Lost": {
+        "stats": {
+          "Honour Points": {
+            "value": 20
+          },
+          "Selection": {
+            "ranks": {
+              "Custodian of the Lost": {
+                "order": 1,
+                "term": "Promotion Ability§Custodian of the Lost"
+              }
+            }
+          }
+        }
+      },
+      "Promotion§Exemplars of the Host": {
+        "rules": {
+          "changeType": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "item"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Selection",
+                  "processed",
+                  "term",
+                  "current"
+                ]
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "item"
+                ]
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 10
+          }
+        },
+        "text": "Select one ADEPTUS ASTARTES JUMP PACK unit with the Battle-hardened rank of higher (excluding CHARACTER and DEATH COMPANY units). You can spend 5 Honour points to replace the selected unit with a SANGUINARY GUARD unit. When a unit is replaced in this way, the new unit starts with the same XP, Battle Honours and Battle Scars as the one it replaced.",
+        "stats": {
+          "Honour Points": {
+            "value": 5
+          },
+          "Selection": {
+            "ranks": {
+              "Sanguinary Guard": {
+                "order": 1,
+                "term": "Infantry/Mounted§Sanguinary Guard"
+              }
+            }
+          }
+        }
+      },
+      "Battle Scar§Consumed by Rage": {
         "keywords": {
-          "Keywords": [
-            "Angels Ascendant"
-          ],
           "Tags": [
-            "Chaplain"
+            "Death Company"
+          ],
+          "Keywords": [
+            "Death Company Battle Scar"
           ]
         },
-        "text": "**^^Chaplain^^** model only. During the Declare Battle Formations step, if this model is attached to a **^^Death Company^^** unit, select one of the **^^Death Company^^** Battle Scars; until the end of the battle, that unit has that Battle Scar in addition to any others it has."
+        "stats": {
+          "Crusade Pts": {
+            "value": 0
+          }
+        },
+        "text": "Each time this unit makes a Charge move, until the end of the turn, add 1 to the Attacks characteristic of melee weapons equipped by DEATH COMPANY models in this unit.\n\nThis unit can never Fall Back, even when within 12\" of one or more friendly CHAPLAINS."
+      },
+      "Battle Scar§Visions of Bloodshed": {
+        "keywords": {
+          "Tags": [
+            "Death Company"
+          ],
+          "Keywords": [
+            "Death Company Battle Scar"
+          ]
+        },
+        "stats": {
+          "Crusade Pts": {
+            "value": 0
+          }
+        },
+        "text": "Unless this unit starts the battle embarked within a TRANSPORT, all DEATH COMPANY models in this unit have the Scouts 6\" ability.\n\nAt the start of every Command phase, this unit must take a Battle-shock test."
+      },
+      "Battle Scar§Inured to Agony": {
+        "keywords": {
+          "Tags": [
+            "Death Company"
+          ],
+          "Keywords": [
+            "Death Company Battle Scar"
+          ]
+        },
+        "stats": {
+          "Crusade Pts": {
+            "value": 0
+          }
+        },
+        "text": "DEATH COMPANY models in this unit have the Feel No Pain 5+ ability.\n\nThis unit fails Out of Action tests on rolls of 1-3."
+      },
+      "Ability§The Flaw": {
+        "text": "**The Flaw.** DEATH COMPANY units cannot gain XP, ranks or Battle Honours. At the end of every battle each DEATH COMPANY unit in your Crusade army takes an Out of Action test even if it survived (a destroyed one fails on 1-2); each failure gives it a Death Company Battle Scar instead of a Devastating Blow. These scars cannot be removed, do not reduce Crusade points, and a fourth one removes the unit from your Order of Battle. While a DEATH COMPANY CHARACTER leads a DEATH COMPANY INFANTRY unit, only the scars of the unit with more apply."
+      },
+      "Requisition§Descent Into Madness": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after a battle. Select one DEATH COMPANY unit from your Crusade army that has no Battle Scars; that unit automatically fails its Out of Action test and it gains two Battle Scars, instead of one. You can only purchase this Requisition once per Oathsworn Campaign."
+      },
+      "Oathsworn Campaign§Legacy of the Black Rage": {
+        "stats": {
+          "Battle 1": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Fallen Heroes": {
+                "order": 1
+              },
+              "Fury of the Lost": {
+                "order": 2
+              },
+              "Of Wrath and Rage": {
+                "order": 3
+              }
+            }
+          },
+          "Battle 2": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Fallen Heroes": {
+                "order": 1
+              },
+              "Fury of the Lost": {
+                "order": 2
+              },
+              "Of Wrath and Rage": {
+                "order": 3
+              }
+            }
+          },
+          "Battle 3": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Fallen Heroes": {
+                "order": 1
+              },
+              "Fury of the Lost": {
+                "order": 2
+              },
+              "Of Wrath and Rage": {
+                "order": 3
+              }
+            }
+          }
+        },
+        "allowed": {
+          "items": [
+            "Requisition§Descent Into Madness"
+          ]
+        },
+        "text": "Just as the Great Angel's blood ennobles his scions, so do its flaws damn them. Each and every one of the Primarch's sons must labour under the creeping shadow of his own doom, cognisant that at any moment the inescapable madness of the Black Rage may claim him. Once a battle-brother is caught in its embrace, the only path to redemption is a glorious death in battle.\n\n**Bonus Agendas** (one per battle, in addition to your two Agendas):\n- **Fallen Heroes:** At the end of the battle, for each DEATH COMPANY unit from your Crusade army that is destroyed, your Crusade force gains 1 Honour point.\n- **Fury of the Lost:** During the Declare Battle Formations step, your opponent must select five units from their Crusade army. At the end of the battle, if DEATH COMPANY units from your Crusade army have destroyed two or more of the selected units, your Crusade force gains 3 Honour points.\n- **Of Wrath and Rage:** Each time a DEATH COMPANY unit from your army destroys an enemy unit with a melee attack, it that DEATH COMPANY unit is being led by a CHAPLAIN, that CHAPLAIN model gains 2XP.\n\nOathsworn Campaign\n\n**Requisition — Descent Into Madness (1RP):** Purchase this Requisition after a battle. Select one DEATH COMPANY unit from your Crusade army that has no Battle Scars; that unit automatically fails its Out of Action test and it gains two Battle Scars, instead of one. You can only purchase this Requisition once per Oathsworn Campaign."
+      },
+      "Requisition§Protectors of the Imperium Nihilus": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a battle. At the start of the Deploy Crusade Armies step, select one objective marker on the battlefield. This is your Protector objective marker. Until the end of the battle, if you control an objective marker at the end of your Command phase and an ADEPTUS ASTARTES unit from your Crusade army is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn. At the end of the battle, if you control your Protector objective marker, your Crusade force gains 2 Honour points."
+      },
+      "Oathsworn Campaign§Angels of Deliverance": {
+        "stats": {
+          "Battle 1": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Purity Through Bloodshed": {
+                "order": 1
+              },
+              "Noble Bearing": {
+                "order": 2
+              },
+              "Decisive Assault": {
+                "order": 3
+              }
+            }
+          },
+          "Battle 2": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Purity Through Bloodshed": {
+                "order": 1
+              },
+              "Noble Bearing": {
+                "order": 2
+              },
+              "Decisive Assault": {
+                "order": 3
+              }
+            }
+          },
+          "Battle 3": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Purity Through Bloodshed": {
+                "order": 1
+              },
+              "Noble Bearing": {
+                "order": 2
+              },
+              "Decisive Assault": {
+                "order": 3
+              }
+            }
+          }
+        },
+        "allowed": {
+          "items": [
+            "Requisition§Protectors of the Imperium Nihilus"
+          ]
+        },
+        "text": "The Blood Angels and many of their successors still possess the compassion and nobility exemplified by their Primarch. The Sons of Sanguinius will gladly sacrifice their lives to defend the Imperiums citizen, from encroaching darkness. As wardens of the Imperium Nihilus, these trails are tested as never tefore.\n\n**Bonus Agendas** (one per battle, in addition to your two Agendas):\n- **Purity Through Bloodshed:** Each time an ADEPTUS ASTARTES unit from your Crusade army destroys an enemy unit with a melee attack, that ADEPTUS ASTARTES unit gains 1XP (each unit can only gain 1XP per battle via this Agenda). At the end of the battle, if five or more units from your Crusade army gained XP via this Agenda, your Crusade force gains 3 Honour points.\n- **Noble Bearing:** At the end of the battle, you can select up to three ADEPTUS ASTARTES CHARACTER models from your Crusade army. Each CHARACTER gains 1XP for each of the following conditions they satisfy:\n\nThat model destroyed one or more enemy CHARACTER models during the battle.\n\nThat model is within range of an objective marker that you control.\n\nThat models unit was the target of one or more Epic Deed Stratagems during the battle.\n\nFor each of your CHARACTER models that satisfy all three of these conditions, your Crusade force gains 1 Honour point.\n- **Decisive Assault:** At the end of the battle, if there are more ADEPTUS ASTARTES units from your army wholly within your opponent’s deployment zone than there are units from their army wholly within it, select up to three of those units from your army. Each of those units gains 2XP. At the end of the battle, if your WARLORD is also wholly within your opponent’s deployment zone, your Crusade force gains 1 Honour point.\n\nOathsworn Campaign\n\n**Requisition — Protectors of the Imperium Nihilus (1RP):** Purchase this Requisition before a battle. At the start of the Deploy Crusade Armies step, select one objective marker on the battlefield. This is your Protector objective marker. Until the end of the battle, if you control an objective marker at the end of your Command phase and an ADEPTUS ASTARTES unit from your Crusade army is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn. At the end of the battle, if you control your Protector objective marker, your Crusade force gains 2 Honour points."
+      },
+      "Requisition§In the Angel’s Name": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a battle. When you select Agendas for the upcoming battle, select one additional Agenda from those section; this Bonus Agenda can only be accomplished by an ADEPTUS ASTARTES WARLORD during the battle. If achieved, you gain 3 Honour points in addition to rewards (such as XP) listed in the Bonus Agenda itself, but if that Agenda has not been achieved, you lose D3 Honour points (to a minimum of 0). You can only purchase this Requisition once per Oathsworn Campaign."
+      },
+      "Oathsworn Campaign§Blade of Sanguinius": {
+        "stats": {
+          "Battle 1": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Death From Above": {
+                "order": 1
+              },
+              "Decapitating Strike": {
+                "order": 2
+              },
+              "Shock Tactics": {
+                "order": 3
+              }
+            }
+          },
+          "Battle 2": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Death From Above": {
+                "order": 1
+              },
+              "Decapitating Strike": {
+                "order": 2
+              },
+              "Shock Tactics": {
+                "order": 3
+              }
+            }
+          },
+          "Battle 3": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Death From Above": {
+                "order": 1
+              },
+              "Decapitating Strike": {
+                "order": 2
+              },
+              "Shock Tactics": {
+                "order": 3
+              }
+            }
+          }
+        },
+        "allowed": {
+          "items": [
+            "Requisition§In the Angel’s Name"
+          ]
+        },
+        "text": "The Blood Angels strive to emulate their fallen Primarch in every aspect, from his nobility and artifice to his martial prowess. Speed, grace and awe are the hallmarks of a Blood Angel's assault. Borne upon wings of fire they descend upon their foe from the heavens, striking with chainsword and power weapon to decimate the enemy before they can offer any responce\n\n**Bonus Agendas** (one per battle, in addition to your two Agendas):\n- **Death From Above:** At the end of your turn, if an ADEPTUS ASTARTES JUMP PACK unit from your Crusade army that arrived using the Deep Strike ability this turn destroyed one or more enemy units this turn, that unit gains 2XP.\n- **Decapitating Strike:** At the end of the battle, if one or more enemy CHARACTER models are destroyed, your Crusade force gains 1 Honour point. At the end of the battle, if the enemy WARLORD is destroyed, your Crusade force gains 3 Honour points instead.\n- **Shock Tactics:** At the end of your turn, if you control one or more objective markers that were controlled by your opponent at the start of your turn, select one of those objective markers, then select one ADEPTUS ASTARTES unit from your Crusade army that is within range of that objective marker. That unit gains 1XP and, if that objective marker is wholly within your opponent’s deployment zone, your Crusade force gains 1 Honour point.\n\n**Requisition — In the Angel’s Name (1RP):** Purchase this Requisition before a battle. When you select Agendas for the upcoming battle, select one additional Agenda from those section; this Bonus Agenda can only be accomplished by an ADEPTUS ASTARTES WARLORD during the battle. If achieved, you gain 3 Honour points in addition to rewards (such as XP) listed in the Bonus Agenda itself, but if that Agenda has not been achieved, you lose D3 Honour points (to a minimum of 0). You can only purchase this Requisition once per Oathsworn Campaign."
       }
     },
     "gameModes": {},

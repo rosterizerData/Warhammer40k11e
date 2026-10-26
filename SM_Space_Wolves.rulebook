@@ -1,6 +1,6 @@
 {
   "name": "Space Wolves 11e",
-  "revision": "11.2.6",
+  "revision": "11.2.7",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -37,6 +37,770 @@
             "evals": [],
             "evaluate": "AND",
             "failState": "pass"
+          }
+        }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Show Them How We Fight": {
+                "order": 100,
+                "tracking": {
+                  "Space Wolves Agenda": 1
+                }
+              },
+              "Savage Fury": {
+                "order": 101,
+                "tracking": {
+                  "Space Wolves Agenda": 1
+                }
+              },
+              "Howls of Vengeance": {
+                "order": 102,
+                "tracking": {
+                  "Space Wolves Agenda": 1
+                }
+              },
+              "Lead By Example": {
+                "order": 103,
+                "tracking": {
+                  "Space Wolves Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Show Them How We Fight": {
+                "order": 100,
+                "tracking": {
+                  "Space Wolves Agenda": 1
+                }
+              },
+              "Savage Fury": {
+                "order": 101,
+                "tracking": {
+                  "Space Wolves Agenda": 1
+                }
+              },
+              "Howls of Vengeance": {
+                "order": 102,
+                "tracking": {
+                  "Space Wolves Agenda": 1
+                }
+              },
+              "Lead By Example": {
+                "order": 103,
+                "tracking": {
+                  "Space Wolves Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Warrior of Legend",
+            "Requisition§A Glorious Death",
+            "Requisition§Tempered By the Grey Beards",
+            "Requisition§Pack Bonded",
+            "Crusade Badge§Restless Greatpack",
+            "Crusade Badge§Savage Slayers",
+            "Crusade Badge§Sagabound Companions"
+          ]
+        }
+      },
+      "Character": {
+        "rules": {
+          "allowCunningTrickster": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Cunning Trickster"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Deeds of Making: after an Oathsworn Campaign, spend Honour points on a saga for a CHARACTER (one per CHARACTER, each unique)"
+          },
+          "allowEldersWisdom": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Elder’s Wisdom"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Deeds of Making: after an Oathsworn Campaign, spend Honour points on a saga for a CHARACTER (one per CHARACTER, each unique)"
+          },
+          "allowVoidSailor": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Void Sailor"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Deeds of Making: after an Oathsworn Campaign, spend Honour points on a saga for a CHARACTER (one per CHARACTER, each unique)"
+          },
+          "allowRedAxe": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Red Axe"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Deeds of Making: after an Oathsworn Campaign, spend Honour points on a saga for a CHARACTER (one per CHARACTER, each unique)"
+          },
+          "allowBeastSlayer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Beast Slayer"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Deeds of Making: after an Oathsworn Campaign, spend Honour points on a saga for a CHARACTER (one per CHARACTER, each unique)"
+          },
+          "allowMurkStalker": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Murk Stalker"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Deeds of Making: after an Oathsworn Campaign, spend Honour points on a saga for a CHARACTER (one per CHARACTER, each unique)"
+          },
+          "allowFireEye": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Fire Eye"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Deeds of Making: after an Oathsworn Campaign, spend Honour points on a saga for a CHARACTER (one per CHARACTER, each unique)"
+          },
+          "allowBlackHowl": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Black Howl"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Deeds of Making: after an Oathsworn Campaign, spend Honour points on a saga for a CHARACTER (one per CHARACTER, each unique)"
+          },
+          "allowScarStruck": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Scar Struck"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Battle Scar"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Deeds of Making: after an Oathsworn Campaign, spend Honour points on a saga for a CHARACTER (one per CHARACTER, each unique)"
+          },
+          "allowSavageOrator": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Savage Orator"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Wolf Priest",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Deeds of Making: after an Oathsworn Campaign, spend Honour points on a saga for a CHARACTER (one per CHARACTER, each unique)"
+          },
+          "allowDeathCheat": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Death Cheat"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Wolf Priest",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Deeds of Making: after an Oathsworn Campaign, spend Honour points on a saga for a CHARACTER (one per CHARACTER, each unique)"
+          },
+          "allowStormSpeaker": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "items"
+                  ]
+                ],
+                "value": "Promotion§Storm Speaker"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Psyker",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Deeds of Making: after an Oathsworn Campaign, spend Honour points on a saga for a CHARACTER (one per CHARACTER, each unique)"
+          },
+          "crusadeShowLoneWolf": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lone Wolf",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battle Leader",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "loneWolf": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Lone Wolf"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Lone Wolf"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Oath of Vengeance"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Lone Wolf"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Leader"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Lone Operative"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lone Wolf",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Lone Wolf: Lone Operative instead of Leader, Oath of Vengeance, Lone Wolf Battle Scars"
+          },
+          "A Lone Wolf cannot survive a fourth Lone Wolf Battle Scar.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lone Wolf",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Battle Scar"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          }
+        },
+        "stats": {
+          "Lone Wolf": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Lone Wolves": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "statOrder": 20
           }
         }
       }
@@ -18894,6 +19658,234 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 1
+          },
+          "Only one Cunning Trickster in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Cunning Trickster"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Elder’s Wisdom in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Elder’s Wisdom"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Void Sailor in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Void Sailor"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Red Axe in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Red Axe"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Beast Slayer in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Beast Slayer"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Murk Stalker in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Murk Stalker"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Fire Eye in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Fire Eye"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Black Howl in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Black Howl"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Scar Struck in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Scar Struck"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Savage Orator in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Savage Orator"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Death Cheat in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Death Cheat"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Storm Speaker in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Storm Speaker"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
@@ -21815,50 +22807,496 @@
       "Battle Scar§Vengeance Before Death": {
         "keywords": {
           "Keywords": [
-            "Lone Wolf Battle Scars"
+            "Lone Wolf Battle Scars",
+            "Lone Wolf Battle Scar"
           ],
           "Tags": [
-            "Adeptus Astartes"
+            "Lone Wolf"
           ]
         },
         "text": "- This model has the Feel No Pain 5+ ability. - This model can never Fall Back.",
         "stats": {
           "Crusade Pts": {
-            "value": -1
+            "value": 0
           }
         }
       },
       "Battle Scar§Pack of One": {
         "keywords": {
           "Keywords": [
-            "Lone Wolf Battle Scars"
+            "Lone Wolf Battle Scars",
+            "Lone Wolf Battle Scar"
           ],
           "Tags": [
-            "Adeptus Astartes"
+            "Lone Wolf"
           ]
         },
         "text": "- This model has the Infiltrators and Scouts 6\" abilities. - This model has an Objective Control characteristic of 0.",
         "stats": {
           "Crusade Pts": {
-            "value": -1
+            "value": 0
           }
         }
       },
       "Battle Scar§An Honourable End": {
         "keywords": {
           "Keywords": [
-            "Lone Wolf Battle Scars"
+            "Lone Wolf Battle Scars",
+            "Lone Wolf Battle Scar"
           ],
           "Tags": [
-            "Adeptus Astartes"
+            "Lone Wolf"
           ]
         },
         "text": "- This model is eligible to shoot and declare a charge in a turn in which it Advanced. - Each time this model fails an Out of Action test, subtract an additional 1 from the result.",
         "stats": {
           "Crusade Pts": {
-            "value": -1
+            "value": 0
           }
         }
+      },
+      "Requisition§Warrior of Legend": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition at the end of an Oathsworn Campaign. Select one ADEPTUS ASTARTES CHARACTER unit from your Order of Battle with the Legendary rank that has already been promoted using the Chapter Command or Deeds of Making rules. The selected unit can be given a Deed of Making (assuming you have enough Honour points); this does not count towards the maximum number of Battle Honours a unit can have. Each unit can only be selected for this Requisition once."
+      },
+      "Requisition§A Glorious Death": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition when a LONE WOLF from your Crusade force that has 2 or more Battle Honours and 3 or more Lone Wolf Battle Scars is removed from your Order of Battle. Each SPACE WOLVES unit on your Order of Battle gains 2XP and you gain 5 Honour points."
+      },
+      "Requisition§Tempered By the Grey Beards": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a battle. Select one BLOOD CLAWS or GREY HUNTERS unit from your Order of Battle, then select one Battle Honour that unit has. Replace that Battle Honour with a new Space Wolves Battle Honour of your choice (this must be a Battle Honour the unit can have)."
+      },
+      "Requisition§Pack Bonded": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after a battle. Select one of the following:\n\nSelect one BLOOD CLAWS unit from your Crusade army with the Blooded rank or higher. Remove that unit from your Order of Battle and spend 5 Honour points to add one GREY HUNTERS unit to your Order of Battle.\n\nSelect one GREY HUNTERS unit from your Crusade army with the Battle-hardened rank or higher. Remove that unit from your Order of Battle and spend 5 Honour points to add one of the following units to your Order of Battle: WOLF GUARD HEADTAKERS; WOLF GUARD TERMINATORS.\n\nWhen a unit is replaced in this way, the new unit starts with the same XP, Battle Honours and Battle Scars as the one it replaced and, until it is removed from your Order of Battle, each time it would gain 1XP as a result of Dealers of Death (see the main Crusade rules), it gains 2XP instead. You cannot purchase this Requisition if doing so would cause your Crusade force to exceed its current Supply Limit."
+      },
+      "Crusade Badge§Restless Greatpack": {
+        "text": "You and your chosen warriors have crossed the Sea of Stars, eager to test themselves in battle and to mete out the fury ofFenris upon the Allfather’s foes. With blade, bolter and reckless savagery, your warriors confronted the enemy upon the battlefield and served Fenris with bold determination. As your tally of victories grows, the opening verses of your great saga are formed.\nYou have completed one Oathsworn Campaign and promoted one or more CHARACTERS using the Chapter Command or Deeds of Making rules.\nYou have won three or more battles."
+      },
+      "Crusade Badge§Savage Slayers": {
+        "text": "You have completed three Oathsworn Campaigns and promoted two or more CHARACTERS using the Chapter Command or Deeds of Making rules.\nYour Order of Battle contains one or more LONE WOLF models.\nYou have won six or more battles.\nYou have completed one or more Bonus Agendas from any of the following Oathsworn Campaigns: Glory Seekers; Worthy of a Saga; Hunters Unleashed."
+      },
+      "Crusade Badge§Sagabound Companions": {
+        "text": "You have journeyed to the farthest reaches of the Imperium, visiting vengeance upon those who defy the Allfather. The bonds of brotherhood that run through your forces have been strengthened by victory and sacrifice, and your saga is sung with pride.\nYou have completed five Oathsworn Campaigns and promoted five or more CHARACTERS using the Chapter Command or Deeds of Making rules.\nYour Order of Battle contained one or more LONE WOLF models that met a glorious death.\nYou have won ten or more battles.\nYou have completed all three Bonus Agendas from all of the following Oathsworn Campaigns: Glory Seekers; Worthy of a Saga; Hunters Unleashed."
+      },
+      "Promotion Ability§Cunning Trickster": {
+        "text": "Cunning Trickster (Aura): Each time your opponent targets a unit from their Crusade army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that usage of that Stratagem by 1CP."
+      },
+      "Promotion§Cunning Trickster": {
+        "stats": {
+          "Honour Points": {
+            "value": 20
+          },
+          "Selection": {
+            "ranks": {
+              "Cunning Trickster": {
+                "order": 1,
+                "term": "Promotion Ability§Cunning Trickster"
+              }
+            }
+          }
+        }
+      },
+      "Promotion Ability§Elder’s Wisdom": {
+        "text": "If your Crusade army includes this model, after both players have deployed their armies, you can select this model’s unit and/or one other SPACE WOLVES unit from your Crusade army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+      },
+      "Promotion§Elder’s Wisdom": {
+        "stats": {
+          "Honour Points": {
+            "value": 20
+          },
+          "Selection": {
+            "ranks": {
+              "Elder’s Wisdom": {
+                "order": 1,
+                "term": "Promotion Ability§Elder’s Wisdom"
+              }
+            }
+          }
+        }
+      },
+      "Promotion Ability§Void Sailor": {
+        "text": "At the end of the battle, in the Determine Victor step, if this model is wholly within your opponent’s deployment zone, roll one D6, adding 2 to the result if you won the battle: on a 4+, you gain 1RP."
+      },
+      "Promotion§Void Sailor": {
+        "stats": {
+          "Honour Points": {
+            "value": 10
+          },
+          "Selection": {
+            "ranks": {
+              "Void Sailor": {
+                "order": 1,
+                "term": "Promotion Ability§Void Sailor"
+              }
+            }
+          }
+        }
+      },
+      "Promotion Ability§Red Axe": {
+        "text": "Each time this model would gain 1XP as a result of Dealers of Death, it gains 2XP instead."
+      },
+      "Promotion§Red Axe": {
+        "stats": {
+          "Honour Points": {
+            "value": 5
+          },
+          "Selection": {
+            "ranks": {
+              "Red Axe": {
+                "order": 1,
+                "term": "Promotion Ability§Red Axe"
+              }
+            }
+          }
+        }
+      },
+      "Promotion Ability§Beast Slayer": {
+        "text": "Each time this model makes a melee attack that targets a MONSTER or BEASTS unit, you can re-roll the Wound roll."
+      },
+      "Promotion§Beast Slayer": {
+        "stats": {
+          "Honour Points": {
+            "value": 15
+          },
+          "Selection": {
+            "ranks": {
+              "Beast Slayer": {
+                "order": 1,
+                "term": "Promotion Ability§Beast Slayer"
+              }
+            }
+          }
+        }
+      },
+      "Promotion Ability§Murk Stalker": {
+        "text": "While this model is leading a unit, you can ignore any or all modifiers to that unit’s Move characteristic, and you can ignore any or all modifiers to Advance and Charge rolls made for it."
+      },
+      "Promotion§Murk Stalker": {
+        "stats": {
+          "Honour Points": {
+            "value": 15
+          },
+          "Selection": {
+            "ranks": {
+              "Murk Stalker": {
+                "order": 1,
+                "term": "Promotion Ability§Murk Stalker"
+              }
+            }
+          }
+        }
+      },
+      "Promotion Ability§Fire Eye": {
+        "text": "At the Feast of a Thousand Blades, Narvun silently stared into the firepit. What he saw in its embers he would never tell, but on the eve of battle, his uncanny advice averted disastrous defeat.\n\nIn the Select Crusade Blessings step, if your Crusade army includes this model and you are the Underdog, you can select one additional Crusade Blessing."
+      },
+      "Promotion§Fire Eye": {
+        "stats": {
+          "Honour Points": {
+            "value": 10
+          },
+          "Selection": {
+            "ranks": {
+              "Fire Eye": {
+                "order": 1,
+                "term": "Promotion Ability§Fire Eye"
+              }
+            }
+          }
+        }
+      },
+      "Promotion Ability§Black Howl": {
+        "text": "At the start of the Fight phase, each enemy unit within 6\" of this model must take a Battle-shock test, subtracting 1 from that test."
+      },
+      "Promotion§Black Howl": {
+        "stats": {
+          "Honour Points": {
+            "value": 10
+          },
+          "Selection": {
+            "ranks": {
+              "Black Howl": {
+                "order": 1,
+                "term": "Promotion Ability§Black Howl"
+              }
+            }
+          }
+        }
+      },
+      "Promotion Ability§Scar Struck": {
+        "text": "Model with one or more Battle Scars only. This model automatically passes Out of Action tests. If this model loses all of its Battle Scars, this Battle Honour is also lost."
+      },
+      "Promotion§Scar Struck": {
+        "stats": {
+          "Honour Points": {
+            "value": 5
+          },
+          "Selection": {
+            "ranks": {
+              "Scar Struck": {
+                "order": 1,
+                "term": "Promotion Ability§Scar Struck"
+              }
+            }
+          }
+        }
+      },
+      "Promotion Ability§Savage Orator": {
+        "text": "WOLF PRIEST model only. While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
+      },
+      "Promotion§Savage Orator": {
+        "stats": {
+          "Honour Points": {
+            "value": 10
+          },
+          "Selection": {
+            "ranks": {
+              "Savage Orator": {
+                "order": 1,
+                "term": "Promotion Ability§Savage Orator"
+              }
+            }
+          }
+        }
+      },
+      "Promotion Ability§Death Cheat": {
+        "text": "WOLF PRIEST model only. At the end of the battle, if your Crusade army included this model and it was not destroyed during the battle, you can re-roll up to two failed Out of Action tests taken for ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED units from your Crusade army."
+      },
+      "Promotion§Death Cheat": {
+        "stats": {
+          "Honour Points": {
+            "value": 10
+          },
+          "Selection": {
+            "ranks": {
+              "Death Cheat": {
+                "order": 1,
+                "term": "Promotion Ability§Death Cheat"
+              }
+            }
+          }
+        }
+      },
+      "Promotion Ability§Storm Speaker": {
+        "text": "PSYKER model only. Psychic weapons equipped by this model have the [sustained hits 2] ability."
+      },
+      "Promotion§Storm Speaker": {
+        "stats": {
+          "Honour Points": {
+            "value": 15
+          },
+          "Selection": {
+            "ranks": {
+              "Storm Speaker": {
+                "order": 1,
+                "term": "Promotion Ability§Storm Speaker"
+              }
+            }
+          }
+        }
+      },
+      "Ability§Oath of Vengeance": {
+        "text": "Each time this model makes a melee attack, you can re-roll the Hit roll. If the target of that attack is a MONSTER or VEHICLE unit, you can re-roll the Wound roll as well."
+      },
+      "Ability§Lone Wolf": {
+        "text": "**Lone Wolves.** When a SPACE WOLVES INFANTRY or MOUNTED unit (not a CHARACTER) of Blooded rank or higher suffers a Devastating Blow, you can instead remove it from your Order of Battle and replace it with one WOLF GUARD BATTLE LEADER model ticked as a Lone Wolf. It keeps the unit's XP, selects one Battle Honour per honour the unit had and one Lone Wolf Battle Scar per scar it had; it has Lone Operative instead of Leader and the Oath of Vengeance ability. It subtracts 1 from Out of Action tests, every failure adds a Lone Wolf Battle Scar (never a Devastating Blow, never removable), and a fourth scar is a glorious death."
+      },
+      "Requisition§Prospective Wolf Guard": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after a battle. Select one SPACE WOLVES unit from your Crusade army. That unit is Marked for Greatness in addition to any other units from your Crusade army Marked for Greatness in this battle. You can only purchase this Requisition once per Oathsworn Campaign."
+      },
+      "Oathsworn Campaign§Worthy of a Saga": {
+        "stats": {
+          "Battle 1": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Heroic Challenge": {
+                "order": 1
+              },
+              "Mighty Trophies": {
+                "order": 2
+              },
+              "Oathkeeper": {
+                "order": 3
+              }
+            }
+          },
+          "Battle 2": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Heroic Challenge": {
+                "order": 1
+              },
+              "Mighty Trophies": {
+                "order": 2
+              },
+              "Oathkeeper": {
+                "order": 3
+              }
+            }
+          },
+          "Battle 3": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Heroic Challenge": {
+                "order": 1
+              },
+              "Mighty Trophies": {
+                "order": 2
+              },
+              "Oathkeeper": {
+                "order": 3
+              }
+            }
+          }
+        },
+        "allowed": {
+          "items": [
+            "Requisition§Prospective Wolf Guard"
+          ]
+        },
+        "text": "A brotherhood of champions, the Space Wolves fight with the unity and aggression of a Fenrisian wolf pack and are directed by leaders with exceptional tactical and strategic acumen.\n\n**Bonus Agendas** (one per battle, in addition to your two Agendas):\n- **Heroic Challenge:** Each time a CHARACTER unit from your opponent’s Crusade army is destroyed by a melee attack made by an ADEPTUS ASTARTES unit from your Crusade army, you gain 1 Honour point (to a maximum of 3 Honour points).\n- **Mighty Trophies:** During the Declare Battle Formations step, your opponent must select five units from their Crusade army. At the end of the battle, if ADEPTUS ASTARTES units from your Crusade army have destroyed three or more of the selected units, you gain 3 Honour points.\n- **Oathkeeper:** At their Wolf Lord’s command, the Space Wolves round upon designated targets, seeking to ensure their destruction and, by doing so, earn the respect of their battle-brothers.\n\nEach time a SPACE WOLVES unit from your Crusade army destroys your Oath of Moment target, that unit gains 1XP. At the end of the battle, if units from your Crusade army gained a combined total of 2 or more XP from this Agenda, you gain 3 Honour points.\n\nOathsworn Campaign\n\n**Requisition — Prospective Wolf Guard (1RP):** Purchase this Requisition after a battle. Select one SPACE WOLVES unit from your Crusade army. That unit is Marked for Greatness in addition to any other units from your Crusade army Marked for Greatness in this battle. You can only purchase this Requisition once per Oathsworn Campaign.\n\n**Wolf Guard Headtakers** split into two Crusade cards (the Space Marines and their Hunting Wolves, bonded, always fielded together; the wolves have a points value of 0). **Wolf Packs:** WOLF GUARD HEADTAKERS can take any Battle Trait a BLADEGUARD VETERAN SQUAD can, and WOLF GUARD TERMINATORS any a TERMINATOR SQUAD can."
+      },
+      "Requisition§Deeds Beyond Counting": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a battle. When you select Agendas for the upcoming battle, select one additional Agenda; this additional Agenda can only be achieved by an ADEPTUS ASTARTES WARLORD unit from your Crusade army. If achieved, you gain 3 Honour points in addition to rewards (such as XP) listed in that Agenda itself, but if it has not been achieved, you lose D3 Honour points (to a minimum of 0). You can only purchase this Requisition once per Oathsworn Campaign."
+      },
+      "Oathsworn Campaign§Glory Seekers": {
+        "stats": {
+          "Battle 1": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Audacious Boasts": {
+                "order": 1
+              }
+            }
+          },
+          "Battle 2": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Audacious Boasts": {
+                "order": 1
+              }
+            }
+          },
+          "Battle 3": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Audacious Boasts": {
+                "order": 1
+              }
+            }
+          }
+        },
+        "allowed": {
+          "items": [
+            "Requisition§Deeds Beyond Counting"
+          ]
+        },
+        "text": "There are those amongst the Space Wolves who seek to forge for themselves an epic. Bold to the point of recklessness, these warriors are known to swear oaths and make outlandish boasts.\n\n**Bonus Agendas** (one per battle, in addition to your two Agendas):\n- **Audacious Boasts:** When you select this Agenda, select one SPACE WOLVES CHARACTER unit from your Crusade army, then select one or more Boasts from the Audacious Boasts section below (make a note of each Boast you select).\n\nAt the end of the battle, if the selected CHARACTER unit has achieved all of the selected Boasts, that unit gains a number of XP equal to the number of Boasts selected. If that unit fails to achieve any of the selected Boasts, it does not gain any XP from this Agenda. If that unit gains 4 or more XP from this Agenda, you gain 4 Honour points.\n\n**Requisition — Deeds Beyond Counting (1RP):** Purchase this Requisition before a battle. When you select Agendas for the upcoming battle, select one additional Agenda; this additional Agenda can only be achieved by an ADEPTUS ASTARTES WARLORD unit from your Crusade army. If achieved, you gain 3 Honour points in addition to rewards (such as XP) listed in that Agenda itself, but if it has not been achieved, you lose D3 Honour points (to a minimum of 0). You can only purchase this Requisition once per Oathsworn Campaign.\n\n**Audacious Boasts** (select one SPACE WOLVES CHARACTER and one or more Boasts; all achieved → XP equal to the number of Boasts, 4+XP → 4 Honour points): Go for the Throat (charges first each Charge phase); Never Back Down from a Fight (never Falls Back); Tear Through Their Armour (destroys a VEHICLE); Slay the Beast (destroys a MONSTER); Bring Back Their Heads (destroys a CHARACTER); Cut Down the Tyrant (destroys the WARLORD or an EPIC HERO); Leave Behind a Trail of Corpses (20+ models); Break Through Their Lines (ends wholly in the enemy deployment zone); Claim the Prize (ends within range of an objective you control outside your deployment zone); Without a Scratch (not destroyed, not Below Half-strength). A destroyed unit counts towards one Boast only."
+      },
+      "Requisition§Pack Rivalry": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a battle. Select two SPACE WOLVES units from your Crusade army. At the end of the battle, if both of those units gained 3 or more XP from that battle and both are on the battlefield, the one that gained the most XP from that battle gains an additional 3XP, and the other unit gains 3 fewer XP from that battle than it otherwise would have (in a tie, if both units gained 3 or more XP, both retain those XP and you instead gain 3 Honour points). You can only purchase this Requisition once per Oathsworn Campaign."
+      },
+      "Oathsworn Campaign§Hunters Unleashed": {
+        "stats": {
+          "Battle 1": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Circling Wolves": {
+                "order": 1
+              },
+              "Warrior Pride": {
+                "order": 2
+              },
+              "First Into the Fray": {
+                "order": 3
+              }
+            }
+          },
+          "Battle 2": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Circling Wolves": {
+                "order": 1
+              },
+              "Warrior Pride": {
+                "order": 2
+              },
+              "First Into the Fray": {
+                "order": 3
+              }
+            }
+          },
+          "Battle 3": {
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Circling Wolves": {
+                "order": 1
+              },
+              "Warrior Pride": {
+                "order": 2
+              },
+              "First Into the Fray": {
+                "order": 3
+              }
+            }
+          }
+        },
+        "allowed": {
+          "items": [
+            "Requisition§Pack Rivalry"
+          ]
+        },
+        "text": "Few victories are won by heroes alone. Like the wolves of their frigid home, the Space Wolves hunt in packs, pursuing, weakening and bringing their foes down with aggressive teamwork.\n\n**Bonus Agendas** (one per battle, in addition to your two Agendas):\n- **Circling Wolves:** At the end of the battle, select three ADEPTUS ASTARTES units from your Crusade army that are on the battlefield (if you have fewer than three units on the battlefield, you cannot achieve this Agenda). Draw imaginary straight lines between one model in each of those three units to form a triangle; if one or more enemy units are wholly within that triangle, the selected units each gain 2XP and you gain 4 Honour points.\n- **Warrior Pride:** At the end of the battle, select up to three ADEPTUS ASTARTES CHARACTER models from your Crusade army. Each of those models gains 1XP for each of the following conditions they satisfy:\n\nThat model destroyed one or more enemy CHARACTER models during the battle.\n\nThat model destroyed one or more enemy MONSTER models during the battle.\n\nThat model is within range of an objective marker you control.\n\nFor each of your CHARACTERS that satisfies all three of these conditions, you gain 1 Honour point.\n- **First Into the Fray:** In your Charge phase, the first ADEPTUS ASTARTES unit from your Crusade army to make a successful Charge move that phase gains 1XP (each unit can only gain 1XP per battle from this Agenda). At the end of the battle, if four or more units from your Crusade army gained XP from this Agenda, you gain 3 Honour points.\n\n**Requisition — Pack Rivalry (1RP):** Purchase this Requisition before a battle. Select two SPACE WOLVES units from your Crusade army. At the end of the battle, if both of those units gained 3 or more XP from that battle and both are on the battlefield, the one that gained the most XP from that battle gains an additional 3XP, and the other unit gains 3 fewer XP from that battle than it otherwise would have (in a tie, if both units gained 3 or more XP, both retain those XP and you instead gain 3 Honour points). You can only purchase this Requisition once per Oathsworn Campaign."
       }
     },
     "gameModes": {},
