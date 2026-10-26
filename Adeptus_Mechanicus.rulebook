@@ -1,6 +1,6 @@
 {
   "name": "Adeptus Mechanicus 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -66,6 +66,126 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 26
+          },
+          "allowArcheotechTreasure": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Archeotech Treasure"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Tech-Priest",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Archeotech Treasures: assembled with the Assemble Archeotech Requisition and added to a TECH-PRIEST's collection; each TECH-PRIEST fields up to one archeotech weapon, one force field and one techno-arcana"
+          },
+          "One archeotech weapon per Tech-Priest.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Archeotech Weapon"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "One archeotech force field per Tech-Priest.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Archeotech Force Field"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "One archeotech techno-arcana per Tech-Priest.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Archeotech Techno-arcana"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         }
       },
@@ -74,27 +194,27 @@
           "Agenda 1": {
             "ranks": {
               "Cold Logic": {
-                "order": 12,
+                "order": 100,
                 "tracking": {
-                  "Admech Agenda": 1
+                  "Adeptus Mechanicus Agenda": 1
                 }
               },
               "Tech Scavengers": {
-                "order": 13,
+                "order": 101,
                 "tracking": {
-                  "Admech Agenda": 1
+                  "Adeptus Mechanicus Agenda": 1
                 }
               },
               "Omnissiah’s Will": {
-                "order": 14,
+                "order": 102,
                 "tracking": {
-                  "Admech Agenda": 1
+                  "Adeptus Mechanicus Agenda": 1
                 }
               },
               "Break the Seals": {
-                "order": 15,
+                "order": 103,
                 "tracking": {
-                  "Admech Agenda": 1
+                  "Adeptus Mechanicus Agenda": 1
                 }
               }
             }
@@ -102,27 +222,27 @@
           "Agenda 2": {
             "ranks": {
               "Cold Logic": {
-                "order": 12,
+                "order": 100,
                 "tracking": {
-                  "Admech Agenda": 1
+                  "Adeptus Mechanicus Agenda": 1
                 }
               },
               "Tech Scavengers": {
-                "order": 13,
+                "order": 101,
                 "tracking": {
-                  "Admech Agenda": 1
+                  "Adeptus Mechanicus Agenda": 1
                 }
               },
               "Omnissiah’s Will": {
-                "order": 14,
+                "order": 102,
                 "tracking": {
-                  "Admech Agenda": 1
+                  "Adeptus Mechanicus Agenda": 1
                 }
               },
               "Break the Seals": {
-                "order": 15,
+                "order": 103,
                 "tracking": {
-                  "Admech Agenda": 1
+                  "Adeptus Mechanicus Agenda": 1
                 }
               }
             }
@@ -135,7 +255,10 @@
             "Requisition§Assemble Archeotech",
             "Requisition§Auto-Sermon of Deployment",
             "Requisition§Battleware Reprogramming",
-            "Requisition§Consecrated Remodulation"
+            "Requisition§Consecrated Remodulation",
+            "Crusade Badge§Archeotech Questors",
+            "Crusade Badge§Archeotech Disciples",
+            "Crusade Badge§Archeotech Masters"
           ]
         }
       },
@@ -218,6 +341,272 @@
                   ]
                 ],
                 "value": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Archeotech Treasure": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Archeotech": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Power Source": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 20,
+            "group": "Archeotech Parts",
+            "groupOrder": 1,
+            "label": "Power Sources",
+            "statOrder": 1
+          },
+          "Weapon Part": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 20,
+            "group": "Archeotech Parts",
+            "groupOrder": 1,
+            "label": "Weapon Parts",
+            "statOrder": 2
+          },
+          "Force Field Part": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 20,
+            "group": "Archeotech Parts",
+            "groupOrder": 1,
+            "label": "Force Field Parts",
+            "statOrder": 3
+          },
+          "Techno-arcana Part": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 20,
+            "group": "Archeotech Parts",
+            "groupOrder": 1,
+            "label": "Techno-arcana Parts",
+            "statOrder": 4
+          },
+          "Location Data": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 20,
+            "group": "Legendary Archeotech",
+            "groupOrder": 2,
+            "statOrder": 5
+          },
+          "The Doom of Thorantus": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Legendary Archeotech": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Legendary Archeotech",
+            "groupOrder": 2,
+            "statOrder": 6
+          },
+          "Syntaxik Charger": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Legendary Archeotech": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Legendary Archeotech",
+            "groupOrder": 2,
+            "statOrder": 7
+          },
+          "Augur of the First Reclamation": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Legendary Archeotech": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Legendary Archeotech",
+            "groupOrder": 2,
+            "statOrder": 8
+          }
+        },
+        "rules": {
+          "legendary0": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§The Doom of Thorantus"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "The Doom of Thorantus",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "legendary1": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Syntaxik Charger"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Syntaxik Charger",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "legendary2": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Augur of the First Reclamation"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Augur of the First Reclamation",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
               }
             ],
             "evaluate": "AND",
@@ -1928,9 +2317,6 @@
           }
         }
       },
-      "Crusade Badge§Archaeotech Disciples": {},
-      "Crusade Badge§Archaeotech Masters": {},
-      "Crusade Badge§Archaeotech Questors": {},
       "Crusade Relic§Autocaduceus of Arkhan Land": {
         "keywords": {
           "Tags": [
@@ -10877,11 +11263,6 @@
         }
       },
       "Requisition§Assemble Archeotech": {
-        "keywords": {
-          "Keywords": [
-            "Adeptus Mechanicus"
-          ]
-        },
         "stats": {
           "RP": {
             "value": 1
@@ -10890,11 +11271,6 @@
         "text": "Purchase this Requisition at any time, if your Crusade force has at least one Power Source and at least one other type of Archeotech Part. You can use one Power Source and one other type of Archeotech Part your Crusade force has to assemble an Archeotech Treasure."
       },
       "Requisition§Auto-Sermon of Deployment": {
-        "keywords": {
-          "Keywords": [
-            "Adeptus Mechanicus"
-          ]
-        },
         "stats": {
           "RP": {
             "value": 2
@@ -10903,11 +11279,6 @@
         "text": "Purchase this Requisition before a battle. Select one TECH-PRIEST model (excluding EPIC HEROES) from your Crusade army, then select one piece of Legendary Archeotech your Crusade force has claimed. Until the end of the battle, that TECH-PRIEST model is equipped with that piece of Legendary Archeotech. You cannot select the same piece of Legendary Archeotech two battles in a row."
       },
       "Requisition§Battleware Reprogramming": {
-        "keywords": {
-          "Keywords": [
-            "Adeptus Mechanicus"
-          ]
-        },
         "stats": {
           "RP": {
             "value": 3
@@ -10916,11 +11287,6 @@
         "text": "Purchase this Requisition at any time. Select one INFANTRY unit from your Crusade force that has one or more Battle Honours. Remove those Battle Honours and select new ones as if that unit had just gained them based on its current rank."
       },
       "Requisition§Consecrated Remodulation": {
-        "keywords": {
-          "Keywords": [
-            "Adeptus Mechanicus"
-          ]
-        },
         "stats": {
           "RP": {
             "value": 1
@@ -11031,6 +11397,43 @@
           "Faction Group": {
             "dynamic": false,
             "value": "Imperium"
+          }
+        },
+        "rules": {
+          "useCrusadeAdeptus_Mechanicus": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Archeotech§The Search for Archeotech"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
           }
         }
       },
@@ -15566,76 +15969,211 @@
         },
         "text": "Add 1 to the Strength characteristic of melee weapons equipped by models in this unit."
       },
-      "Crusade Honour§Digital Cannon": {
+      "Crusade Badge§Archeotech Questors": {
+        "text": "You have assembled at least 1 Archeotech Treasure.\nYou have won at least 1 battle."
+      },
+      "Crusade Badge§Archeotech Disciples": {
+        "text": "You have assembled at least 5 Archeotech Treasures.\nYou have claimed at least 1 piece of Legendary Archeotech.\nYou have won at least 6 battles."
+      },
+      "Crusade Badge§Archeotech Masters": {
+        "text": "You have assembled at least 8 Archeotech Treasures.\nYou have claimed all 3 pieces of Legendary Archeotech.\nYou have won at least 10 battles."
+      },
+      "Archeotech Treasure§Digital Cannon": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Weapon"
           ],
           "Tags": [
             "Adeptus Mechanicus"
           ]
         },
-        "text": "24\""
+        "text": "The bearer is equipped with the Digital Cannon: 24\", A 2, BS 3+, S 6, AP -1, D 3. Archeotech weapons cannot be upgraded by Weapon Modifications.",
+        "rules": {
+          "addWeapon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Archeotech—Digital Cannon"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "the archeotech weapon profile joins the bearer's weapons"
+          }
+        }
       },
-      "Crusade Honour§Electro-fire Implants": {
+      "Archeotech Treasure§Electro-fire Implants": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Weapon"
           ],
           "Tags": [
             "Adeptus Mechanicus"
           ]
         },
-        "text": "12\""
+        "text": "The bearer is equipped with the Electro-fire Implants: 12\", A D6+3, BS 3+, S 4, AP 0, D 1, [ASSAULT], [ANTI INFANTRY 4+], [TORRENT]. Archeotech weapons cannot be upgraded by Weapon Modifications.",
+        "rules": {
+          "addWeapon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Archeotech—Electro-fire Implants"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "the archeotech weapon profile joins the bearer's weapons"
+          }
+        }
       },
-      "Crusade Honour§Neural Jammer": {
+      "Archeotech Treasure§Neural Jammer": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Weapon"
           ],
           "Tags": [
             "Adeptus Mechanicus"
           ]
         },
-        "text": "18\""
+        "text": "The bearer is equipped with the Neural Jammer: 18\", A 4, BS 3+, S 4, AP -2, D 1, [DEVASTATING WOUNDS], [PISTOL], [PRECISION]. Archeotech weapons cannot be upgraded by Weapon Modifications.",
+        "rules": {
+          "addWeapon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Archeotech—Neural Jammer"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "the archeotech weapon profile joins the bearer's weapons"
+          }
+        }
       },
-      "Crusade Honour§Nanoshard Projector": {
+      "Archeotech Treasure§Nanoshard Projector": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Weapon"
           ],
           "Tags": [
             "Adeptus Mechanicus"
           ]
         },
-        "text": "12\""
+        "text": "The bearer is equipped with the Nanoshard Projector: 12\", A 3, BS 3+, S 5, AP -1, D 2, [LETHAL HITS], [PISTOL]. Archeotech weapons cannot be upgraded by Weapon Modifications.",
+        "rules": {
+          "addWeapon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Archeotech—Nanoshard Projector"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "the archeotech weapon profile joins the bearer's weapons"
+          }
+        }
       },
-      "Crusade Honour§Arc Annulus": {
+      "Archeotech Treasure§Arc Annulus": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Weapon"
           ],
           "Tags": [
             "Adeptus Mechanicus"
           ]
         },
-        "text": "12\""
+        "text": "The bearer is equipped with the Arc Annulus: 12\", A 2, BS 3+, S 7, AP -1, D 2, [ANTI VEHICLE 3+], [PISTOL]. Archeotech weapons cannot be upgraded by Weapon Modifications.",
+        "rules": {
+          "addWeapon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Archeotech—Arc Annulus"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "the archeotech weapon profile joins the bearer's weapons"
+          }
+        }
       },
-      "Crusade Honour§Electro-fused Vambraces": {
+      "Archeotech Treasure§Electro-fused Vambraces": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Weapon"
           ],
           "Tags": [
             "Adeptus Mechanicus"
           ]
         },
-        "text": "12\""
+        "text": "The bearer is equipped with the Electro-fused Vambraces: 12\", A 6, BS 3+, S 3, AP -1, D 1, [PISTOL], [SUSTAINED HITS 2]. Archeotech weapons cannot be upgraded by Weapon Modifications.",
+        "rules": {
+          "addWeapon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ranged Weapon§Archeotech—Electro-fused Vambraces"
+              }
+            ],
+            "evals": [],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "the archeotech weapon profile joins the bearer's weapons"
+          }
+        }
       },
-      "Crusade Honour§Technodermis": {
+      "Archeotech Treasure§Technodermis": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Force Field"
           ],
           "Tags": [
             "Adeptus Mechanicus"
@@ -15643,10 +16181,10 @@
         },
         "text": "Improve the Save and Wounds characteristics of this model by 1."
       },
-      "Crusade Honour§Void Shell": {
+      "Archeotech Treasure§Void Shell": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Force Field"
           ],
           "Tags": [
             "Adeptus Mechanicus"
@@ -15654,10 +16192,10 @@
         },
         "text": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 2+ invulnerable save."
       },
-      "Crusade Honour§Time Sink": {
+      "Archeotech Treasure§Time Sink": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Force Field"
           ],
           "Tags": [
             "Adeptus Mechanicus"
@@ -15665,10 +16203,10 @@
         },
         "text": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model and roll one D6: on a 4+, until the end of the turn, reduce the Weapon Skill characteristic of melee weapons equipped by that enemy unit by 1."
       },
-      "Crusade Honour§Arc Implants": {
+      "Archeotech Treasure§Arc Implants": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Force Field"
           ],
           "Tags": [
             "Adeptus Mechanicus"
@@ -15676,10 +16214,10 @@
         },
         "text": "Once per battle, in your opponent's Charge phase, just after this model's unit has been selected as a target of an enemy unit's charge, this model can use this ability. If it does, until the end of the phase, subtract 2 from Charge rolls made for that enemy unit."
       },
-      "Crusade Honour§Conversion Eradicator": {
+      "Archeotech Treasure§Conversion Eradicator": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Force Field"
           ],
           "Tags": [
             "Adeptus Mechanicus"
@@ -15687,10 +16225,10 @@
         },
         "text": "Improve the Strength and Armour Penetration characteristics of ranged weapons equipped by this model by 1."
       },
-      "Crusade Honour§Inverse Power Feeds": {
+      "Archeotech Treasure§Inverse Power Feeds": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Force Field"
           ],
           "Tags": [
             "Adeptus Mechanicus"
@@ -15698,10 +16236,10 @@
         },
         "text": "Melee weapons equipped by this model have the **[DEVASTATING WOUNDS]** ability."
       },
-      "Crusade Honour§Hypercircuit": {
+      "Archeotech Treasure§Hypercircuit": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Techno-arcana"
           ],
           "Tags": [
             "Adeptus Mechanicus"
@@ -15709,10 +16247,10 @@
         },
         "text": "At the start of the battle, select up to two **^^Adeptus Mechanicus^^** units (excluding **^^Vehicles^^**) from your Crusade army. Once per battle per selected unit, you can target that unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase."
       },
-      "Crusade Honour§Hagioscope": {
+      "Archeotech Treasure§Hagioscope": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Techno-arcana"
           ],
           "Tags": [
             "Adeptus Mechanicus"
@@ -15720,10 +16258,10 @@
         },
         "text": "At the start of the battle, select one enemy unit. Each time an **^^Adeptus Mechanicus^^** unit from your Crusade army makes a ranged attack that targets that enemy unit, you can ignore any or all modifiers to the Hit roll, the Wound roll and the Ballistic Skill characteristic of that attack."
       },
-      "Crusade Honour§Exo-gauntlet": {
+      "Archeotech Treasure§Exo-gauntlet": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Techno-arcana"
           ],
           "Tags": [
             "Adeptus Mechanicus"
@@ -15731,10 +16269,10 @@
         },
         "text": "At the start of the battle, select one enemy unit. Each time an **^^Adeptus Mechanicus^^** unit from your Crusade army makes a melee attack that targets that enemy unit, re-roll a Hit roll of 1."
       },
-      "Crusade Honour§Ferrosanctic Orrery": {
+      "Archeotech Treasure§Ferrosanctic Orrery": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Techno-arcana"
           ],
           "Tags": [
             "Adeptus Mechanicus"
@@ -15742,10 +16280,10 @@
         },
         "text": "At the start of the battle, select up to two **^^Adeptus Mechanicus^^** units from your Crusade army, then select one objective marker that is not in your deployment zone. While a unit you selected for this ability is within range of that objective market, improve the Leadership and Objective Control characteristics of models in that unit by 1."
       },
-      "Crusade Honour§Obscuroptikon": {
+      "Archeotech Treasure§Obscuroptikon": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Techno-arcana"
           ],
           "Tags": [
             "Adeptus Mechanicus"
@@ -15753,10 +16291,10 @@
         },
         "text": "At the start of the battle, select up to two **^^Adeptus Mechanicus Infantry^^** units from your Crusade army. Each time an enemy unit makes a ranged attack that targets one of those units, until the end of the phase, models in the targeted unit have a 5+ invulnerable save against ranged attacks."
       },
-      "Crusade Honour§Tri-dimensional Covenant": {
+      "Archeotech Treasure§Tri-dimensional Covenant": {
         "keywords": {
           "Keywords": [
-            "Archeotech"
+            "Archeotech Techno-arcana"
           ],
           "Tags": [
             "Adeptus Mechanicus"
@@ -15764,38 +16302,229 @@
         },
         "text": "At the start of the battle, select up to two **^^Adeptus Mechanicus Infantry^^** units from your Crusade army. Until the end of the battle, add 1 to Advance and Charge rolls made for those units."
       },
-      "Crusade Honour§Augur of the First Reclamation": {
-        "keywords": {
-          "Keywords": [
-            "Archeotech"
-          ],
-          "Tags": [
-            "Adeptus Mechanicus"
+      "Ranged Weapon§Archeotech—Electro-fire Implants": {
+        "aspects": {
+          "Label": "Electro-fire Implants"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Assault",
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "infantry"
+                },
+                "x": {
+                  "value": "4+"
+                }
+              }
+            },
+            "Ability§Torrent"
           ]
         },
-        "text": "Add 2 to the bearer's Objective Control characteristic, and at the end of your Command phase, if the bearer is within range of an objective marker that is not in your deployment zone, you gain 1CP. In addition, at the end of the battle, if the bearer was in your Crusade army and you won that battle, roll one D6: on a 4+, your Crusade force acquires one Archeotech Part."
+        "stats": {
+          "A": {
+            "value": "D6+3"
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 4
+          }
+        }
       },
-      "Crusade Honour§Syntaxik Charger": {
-        "keywords": {
-          "Keywords": [
-            "Archeotech"
-          ],
-          "Tags": [
-            "Adeptus Mechanicus"
+      "Ranged Weapon§Archeotech—Neural Jammer": {
+        "aspects": {
+          "Label": "Neural Jammer"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Devastating Wounds",
+            "Ability§Pistol",
+            "Ability§Precision"
           ]
         },
-        "text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks made with this weapon. Until the start of your next turn, worsen the Weapon Skill characteristic of melee weapons equipped by models in that unit by 1."
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "AP": {
+            "value": -2
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 18
+          },
+          "S": {
+            "value": 4
+          }
+        }
       },
-      "Crusade Honour§The Doom of Thorantus": {
-        "keywords": {
-          "Keywords": [
-            "Archeotech"
-          ],
-          "Tags": [
-            "Adeptus Mechanicus"
+      "Ranged Weapon§Archeotech—Nanoshard Projector": {
+        "aspects": {
+          "Label": "Nanoshard Projector"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Lethal Hits",
+            "Ability§Pistol"
           ]
         },
-        "text": "Once per battle, at the end of your Movement phase, select one enemy **^^Vehicle^^** unit within 18\" of and visible to the bearer. Until the start of your next Movement phase, subtract 2 from the Attacks characteristic of ranged weapons equipped by models in that unit, and each time that unit ends a Normal, Advance, Fall Back or Charge move, it suffers D6 mortal wounds."
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 2
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 5
+          }
+        }
+      },
+      "Ranged Weapon§Archeotech—Arc Annulus": {
+        "aspects": {
+          "Label": "Arc Annulus"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "vehicle"
+                },
+                "x": {
+                  "value": "3+"
+                }
+              }
+            },
+            "Ability§Pistol"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 2
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 7
+          }
+        }
+      },
+      "Ranged Weapon§Archeotech—Electro-fused Vambraces": {
+        "aspects": {
+          "Label": "Electro-fused Vambraces"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Pistol",
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "2"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 6
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 3
+          }
+        }
+      },
+      "Ranged Weapon§Archeotech—Digital Cannon": {
+        "aspects": {
+          "Label": "Digital Cannon"
+        },
+        "assets": {
+          "traits": []
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 3
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 6
+          }
+        }
+      },
+      "Ability§The Doom of Thorantus": {
+        "text": "Once per battle, at the end of your Movement phase, select one enemy VEHICLE unit within 18\" of and visible to the bearer. Until the start of your next Movement phase, subtract 2 from the Attacks characteristic of ranged weapons equipped by models in that unit, and each time that unit ends a Normal, Advance, Fall Back or Charge move, it suffers D6 mortal wounds."
+      },
+      "Ability§Syntaxik Charger": {
+        "text": "The bearer gains the Syntaxik Charger for the battle: 24\", A 8, BS 3+, S 3, AP 0, D 1, [ANTI-INFANTRY 2+], [DEVASTATING WOUNDS], One Shot (the bearer can only shoot with this weapon once per battle), Sonic Devastation (in your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks made with this weapon; until the start of your next turn, worsen the Weapon Skill characteristic of melee weapons equipped by models in that unit by 1)."
+      },
+      "Ability§Augur of the First Reclamation": {
+        "text": "Add 2 to the bearer’s Objective Control characteristic, and at the end of your Command phase, if the bearer is within range of an objective marker that is not in your deployment zone, you gain 1CP. In addition, at the end of the battle, if the bearer was in your Crusade army and you won that battle, roll one D6: on a 4+, your Crusade force acquires one Archeotech Part."
+      },
+      "Archeotech§The Search for Archeotech": {
+        "text": "**The Search for Archeotech.** Each time you win a battle, roll one D6: on a 5+ your Crusade force acquires one Archeotech Part — choose a Power Source or roll one D6 for its type (1–2 Weapon Part, 3–4 Force Field Part, 5–6 Techno-arcana Part). The **Assemble Archeotech** Requisition spends one Power Source plus one other Part to add an Archeotech Treasure of that type (roll one D6 on its table, or spend one more Power Source to re-roll once) to the collection of one TECH-PRIEST (not an EPIC HERO); the treasure is a Battle Honour worth 1 Crusade point. When mustering, each TECH-PRIEST can field up to one archeotech weapon, one force field and one techno-arcana from its collection (leave the ones it does not field off its card for that battle).\n\n**Legendary Archeotech.** Before a battle, just before selecting Agendas, you can either Collect Location Data (at the end of the battle gain 1 Location Data instead of any Archeotech Part) or Scan for Legendary Archeotech (roll one D6 and add your Location Data: on 10+ the scan succeeds and you can select the Claim Legendary Archeotech Agenda; otherwise lose 1 Location Data). Claim Legendary Archeotech: your opponent places a Legendary Archeotech marker in their deployment zone (more than 3\" from edges and 6\" from objectives); if an ADEPTUS MECHANICUS CHARACTER from your Crusade army controls it at the end of the battle, add one piece of Legendary Archeotech (roll one D6: 1–2 The Doom of Thorantus, 3–4 Syntaxik Charger, 5–6 Augur of the First Reclamation, re-rolling duplicates) and tick it below; whether or not you succeed, reduce your Location Data by 10 (to a minimum of 0); an enemy CHARACTER that controls the marker gains 3XP. Bring one piece into a battle with the **Auto-Sermon of Deployment** Requisition."
       }
     },
     "gameModes": {},

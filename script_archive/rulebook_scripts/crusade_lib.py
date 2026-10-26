@@ -538,6 +538,14 @@ def badges(book, items, *, on="Order of Battle"):
     return keys
 
 
+def unique_in_roster(book, names, *, label=None):
+    """roster-wide uniqueness. The `Unique` aspect only stops duplicates under the SAME parent (validate-roster
+    appendUniquenessError), so an honour that may exist once per Crusade force needs a roster rule counting the roster's
+    tally of its designation."""
+    for n in names:
+        roster_rule(book, f"Only one {n} in your Crusade force.", error_rule([ev(["{self}", "tally", n], mx=1)]))
+
+
 def ability(book, name, text, *, aura=False):
     """an Ability§ trait (what a level or a controlled district grants)"""
     put_asset(book, f"Ability§{name}", {"text": text}, keep_text=False)

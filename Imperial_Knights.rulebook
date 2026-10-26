@@ -1,6 +1,6 @@
 {
   "name": "Imperial Knights 11e",
-  "revision": "11.2.6",
+  "revision": "11.2.8",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -125,6 +125,2383 @@
             ],
             "evaluate": "OR",
             "failState": "pass"
+          },
+          "crusadeShowSwornAlignment": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sworn Alignment",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Imperial Knights",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeShowMastery": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Imperial Knights",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeShowChivalricPoints": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Imperial Knights",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "masteryCrusadePt": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Add 1 to an IMPERIAL KNIGHTS unit's Crusade points while its pilot has a Mastery"
+          },
+          "tierObduracyAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Obduracy — Virtue’s Defender (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Obduracy"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierObduracyEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Obduracy — Heraldic Exemplar (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Obduracy"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierObduracyVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Obduracy — Sentinel of Orthodoxy (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Obduracy"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierClarionAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Clarion — Truth’s Voice (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Clarion"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierClarionEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Clarion — Nuncio of Obligation (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Clarion"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierClarionVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Clarion — Emissary of the Court (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Clarion"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierTuitionAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Tuition — Wise Mentor (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Tuition"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierTuitionEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Tuition — Martial Tutor (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Tuition"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierTuitionVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Tuition — Master-At-Arms (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Tuition"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierAmbushAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Ambush — Predator’s Prescience (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Ambush"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierAmbushEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Ambush — Foe Hunter (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Ambush"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierAmbushVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Ambush — Trailmaker (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Ambush"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierCondemnationAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Condemnation — A Duty of Censure (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Condemnation"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierCondemnationEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Condemnation — Noble Orator (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Condemnation"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierCondemnationVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Condemnation — High Denunciator (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Condemnation"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierJoustAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Joust — Landstrider (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Joust"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierJoustEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Joust — Lance of Terra (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Joust"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierJoustVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Joust — Foe’s Bane (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Joust"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierMechanismsAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Mechanisms — Iron Bloodline (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Mechanisms"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierMechanismsEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Mechanisms — Blessed by the Sacristans (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Mechanisms"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierMechanismsVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Mechanisms — Knight of the Cog (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Mechanisms"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierExecutionAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Execution — Harbinger (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Execution"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierExecutionEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Execution — Headsman (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Execution"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierExecutionVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Execution — Master of Judgement (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Execution"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "Mastery of Clarion: pilot of a TITANIC unit only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Clarion"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Titanic",
+                "contains": true
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Mastery of Joust: Questor Imperialis pilots only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Joust"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sworn Alignment",
+                    "value"
+                  ]
+                ],
+                "value": "Questor Imperialis"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Mastery of Mechanisms: Questor Mechanicus pilots only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Mechanisms"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sworn Alignment",
+                    "value"
+                  ]
+                ],
+                "value": "Questor Mechanicus"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Mastery of Execution: Freeblade pilots only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Execution"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sworn Alignment",
+                    "value"
+                  ]
+                ],
+                "value": "Freeblade"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "A Mastery needs Chivalric points (allocate at least 1).": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "An ARMIGER pilot cannot be assigned more than 6 Chivalric points.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Armiger",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "crusadeTagFreeblade": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Freeblade"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sworn Alignment",
+                    "value"
+                  ]
+                ],
+                "value": "Freeblade"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: Freeblade pilots may bear the Burdens"
+          }
+        },
+        "stats": {
+          "Sworn Alignment": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Questor Imperialis": {
+                "order": 1,
+                "tracking": {
+                  "pilotImperialis": 1
+                }
+              },
+              "Questor Mechanicus": {
+                "order": 2,
+                "tracking": {
+                  "pilotMechanicus": 1
+                }
+              },
+              "Freeblade": {
+                "order": 3,
+                "tracking": {
+                  "pilotFreeblade": 1
+                }
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Pilot",
+            "groupOrder": 11,
+            "statOrder": 20
+          },
+          "Mastery": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Mastery of Obduracy": {
+                "order": 1,
+                "tracking": {
+                  "masteryObduracy": 1
+                }
+              },
+              "Mastery of Clarion": {
+                "order": 2,
+                "tracking": {
+                  "masteryClarion": 1
+                }
+              },
+              "Mastery of Tuition": {
+                "order": 3,
+                "tracking": {
+                  "masteryTuition": 1
+                }
+              },
+              "Mastery of Ambush": {
+                "order": 4,
+                "tracking": {
+                  "masteryAmbush": 1
+                }
+              },
+              "Mastery of Condemnation": {
+                "order": 5,
+                "tracking": {
+                  "masteryCondemnation": 1
+                }
+              },
+              "Mastery of Joust": {
+                "order": 6,
+                "tracking": {
+                  "masteryJoust": 1
+                }
+              },
+              "Mastery of Mechanisms": {
+                "order": 7,
+                "tracking": {
+                  "masteryMechanisms": 1
+                }
+              },
+              "Mastery of Execution": {
+                "order": 8,
+                "tracking": {
+                  "masteryExecution": 1
+                }
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Pilot",
+            "groupOrder": 11,
+            "statOrder": 21
+          },
+          "Chivalric Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 12,
+            "group": "Pilot",
+            "groupOrder": 11,
+            "statOrder": 22
           }
         }
       },
@@ -178,6 +2555,2705 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeShowSwornAlignment": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sworn Alignment",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Imperial Knights",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeShowMastery": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Imperial Knights",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeShowChivalricPoints": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Imperial Knights",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "masteryCrusadePt": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Add 1 to an IMPERIAL KNIGHTS unit's Crusade points while its pilot has a Mastery"
+          },
+          "tierObduracyAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Obduracy — Virtue’s Defender (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Obduracy"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierObduracyEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Obduracy — Heraldic Exemplar (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Obduracy"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierObduracyVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Obduracy — Sentinel of Orthodoxy (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Obduracy"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierClarionAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Clarion — Truth’s Voice (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Clarion"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierClarionEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Clarion — Nuncio of Obligation (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Clarion"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierClarionVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Clarion — Emissary of the Court (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Clarion"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierTuitionAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Tuition — Wise Mentor (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Tuition"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierTuitionEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Tuition — Martial Tutor (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Tuition"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierTuitionVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Tuition — Master-At-Arms (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Tuition"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierAmbushAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Ambush — Predator’s Prescience (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Ambush"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierAmbushEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Ambush — Foe Hunter (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Ambush"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierAmbushVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Ambush — Trailmaker (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Ambush"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierCondemnationAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Condemnation — A Duty of Censure (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Condemnation"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierCondemnationEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Condemnation — Noble Orator (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Condemnation"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierCondemnationVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Condemnation — High Denunciator (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Condemnation"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierJoustAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Joust — Landstrider (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Joust"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierJoustEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Joust — Lance of Terra (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Joust"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierJoustVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Joust — Foe’s Bane (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Joust"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierMechanismsAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Mechanisms — Iron Bloodline (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Mechanisms"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierMechanismsEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Mechanisms — Blessed by the Sacristans (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Mechanisms"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierMechanismsVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Mechanisms — Knight of the Cog (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Mechanisms"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierExecutionAspiring": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Execution — Harbinger (Aspiring)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Execution"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierExecutionEsteemed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Execution — Headsman (Esteemed)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Execution"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "tierExecutionVirtuous": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Mastery of Execution — Master of Judgement (Virtuous)"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Execution"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "Mastery of Clarion: pilot of a TITANIC unit only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Clarion"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Titanic",
+                "contains": true
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Mastery of Joust: Questor Imperialis pilots only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Joust"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sworn Alignment",
+                    "value"
+                  ]
+                ],
+                "value": "Questor Imperialis"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Mastery of Mechanisms: Questor Mechanicus pilots only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Mechanisms"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sworn Alignment",
+                    "value"
+                  ]
+                ],
+                "value": "Questor Mechanicus"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Mastery of Execution: Freeblade pilots only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "Mastery of Execution"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sworn Alignment",
+                    "value"
+                  ]
+                ],
+                "value": "Freeblade"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "A Mastery needs Chivalric points (allocate at least 1).": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mastery",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "An ARMIGER pilot cannot be assigned more than 6 Chivalric points.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Armiger",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Chivalric Points",
+                    "value"
+                  ]
+                ],
+                "max": 6
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "crusadeTagFreeblade": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Freeblade"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Sworn Alignment",
+                    "value"
+                  ]
+                ],
+                "value": "Freeblade"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: Freeblade pilots may bear the Burdens"
+          }
+        },
+        "stats": {
+          "Sworn Alignment": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Questor Imperialis": {
+                "order": 1,
+                "tracking": {
+                  "pilotImperialis": 1
+                }
+              },
+              "Questor Mechanicus": {
+                "order": 2,
+                "tracking": {
+                  "pilotMechanicus": 1
+                }
+              },
+              "Freeblade": {
+                "order": 3,
+                "tracking": {
+                  "pilotFreeblade": 1
+                }
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Pilot",
+            "groupOrder": 11,
+            "statOrder": 20
+          },
+          "Mastery": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Mastery of Obduracy": {
+                "order": 1,
+                "tracking": {
+                  "masteryObduracy": 1
+                }
+              },
+              "Mastery of Clarion": {
+                "order": 2,
+                "tracking": {
+                  "masteryClarion": 1
+                }
+              },
+              "Mastery of Tuition": {
+                "order": 3,
+                "tracking": {
+                  "masteryTuition": 1
+                }
+              },
+              "Mastery of Ambush": {
+                "order": 4,
+                "tracking": {
+                  "masteryAmbush": 1
+                }
+              },
+              "Mastery of Condemnation": {
+                "order": 5,
+                "tracking": {
+                  "masteryCondemnation": 1
+                }
+              },
+              "Mastery of Joust": {
+                "order": 6,
+                "tracking": {
+                  "masteryJoust": 1
+                }
+              },
+              "Mastery of Mechanisms": {
+                "order": 7,
+                "tracking": {
+                  "masteryMechanisms": 1
+                }
+              },
+              "Mastery of Execution": {
+                "order": 8,
+                "tracking": {
+                  "masteryExecution": 1
+                }
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Pilot",
+            "groupOrder": 11,
+            "statOrder": 21
+          },
+          "Chivalric Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 12,
+            "group": "Pilot",
+            "groupOrder": 11,
+            "statOrder": 22
+          }
+        }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Sally Forth": {
+                "order": 100,
+                "tracking": {
+                  "Imperial Knights Agenda": 1
+                }
+              },
+              "Break Their Will": {
+                "order": 101,
+                "tracking": {
+                  "Imperial Knights Agenda": 1
+                }
+              },
+              "Petitioned for Aid": {
+                "order": 102,
+                "tracking": {
+                  "Imperial Knights Agenda": 1
+                }
+              },
+              "Honour Must Be Satisfied": {
+                "order": 103,
+                "tracking": {
+                  "Imperial Knights Agenda": 1
+                }
+              },
+              "Death Before Dishonour": {
+                "order": 104,
+                "tracking": {
+                  "Imperial Knights Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Sally Forth": {
+                "order": 100,
+                "tracking": {
+                  "Imperial Knights Agenda": 1
+                }
+              },
+              "Break Their Will": {
+                "order": 101,
+                "tracking": {
+                  "Imperial Knights Agenda": 1
+                }
+              },
+              "Petitioned for Aid": {
+                "order": 102,
+                "tracking": {
+                  "Imperial Knights Agenda": 1
+                }
+              },
+              "Honour Must Be Satisfied": {
+                "order": 103,
+                "tracking": {
+                  "Imperial Knights Agenda": 1
+                }
+              },
+              "Death Before Dishonour": {
+                "order": 104,
+                "tracking": {
+                  "Imperial Knights Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Failure Is Not an Option",
+            "Requisition§Loyal Bondsman",
+            "Requisition§Hand of the Sacristan",
+            "Requisition§Oath of the Freeblade",
+            "Requisition§Autonomy in Exile",
+            "Crusade Badge§Chivalric Champion",
+            "Crusade Badge§Chivalric Paladin",
+            "Crusade Badge§Chivalric Exemplar"
+          ]
+        }
+      },
+      "Chivalric Quest": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Quest": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "To Strike Down the Unclean Behemoths": {
+                "order": 1
+              },
+              "To Raise High the Pennants of Victory": {
+                "order": 2
+              },
+              "To Stamp Out the Champions of Dishonour": {
+                "order": 3
+              },
+              "To Secure the Realm": {
+                "order": 4
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "label": "Chivalric Quest",
+            "statOrder": 1
+          },
+          "Battles fought": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 3,
+            "statOrder": 2
+          },
+          "Tally": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 40,
+            "statOrder": 3
+          },
+          "Dishonoured": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 4
+          }
+        },
+        "rules": {
+          "questBehemoths": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§To Strike Down the Unclean Behemoths"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Quest",
+                    "value"
+                  ]
+                ],
+                "value": "To Strike Down the Unclean Behemoths"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "questVictory": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§To Raise High the Pennants of Victory"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Quest",
+                    "value"
+                  ]
+                ],
+                "value": "To Raise High the Pennants of Victory"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "questDishonour": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§To Stamp Out the Champions of Dishonour"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Quest",
+                    "value"
+                  ]
+                ],
+                "value": "To Stamp Out the Champions of Dishonour"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "questRealm": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§To Secure the Realm"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Quest",
+                    "value"
+                  ]
+                ],
+                "value": "To Secure the Realm"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "Three battles fought: consult the Tally Rewards and allocate the Chivalric points (fewer than four tallies: Dishonoured).": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battles fought",
+                    "value"
+                  ]
+                ],
+                "max": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "info",
+            "order": 5
           }
         }
       }
@@ -2181,6 +7257,351 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 50
+          },
+          "You cannot include Questor Imperialis and Questor Mechanicus pilots in the same Crusade army.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "pilotImperialis"
+                  ]
+                ],
+                "max": 0
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "pilotMechanicus"
+                  ]
+                ],
+                "max": 0
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Only one pilot in your Crusade force can have the Mastery of Obduracy.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "masteryObduracy"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Only one pilot in your Crusade force can have the Mastery of Clarion.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "masteryClarion"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Only one pilot in your Crusade force can have the Mastery of Tuition.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "masteryTuition"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Only one pilot in your Crusade force can have the Mastery of Ambush.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "masteryAmbush"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Only one pilot in your Crusade force can have the Mastery of Condemnation.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "masteryCondemnation"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Only one pilot in your Crusade force can have the Mastery of Joust.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "masteryJoust"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Only one pilot in your Crusade force can have the Mastery of Mechanisms.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "masteryMechanisms"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Only one pilot in your Crusade force can have the Mastery of Execution.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "masteryExecution"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "useCrusadeImperial_Knights": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Chivalric Quest§Chivalric Quest"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
           }
         },
         "stats": {
@@ -4351,101 +9772,136 @@
         },
         "text": "In your Command phase, the bearer can activate this Crusade Relic. If it does, the bearer suffers D3 mortal wounds, then select one of the following effects (if you select the third effect, you must also select one weapon equipped by the bearer): - Until the start of your next Command phase, add 2\" to the bearer's Move characteristic. - Until the start of your next Command phase, add 2 to Advance and Charge rolls made for the bearer. - Until the start of your next Command phase, each time the bearer makes an attack with the selected weapon, add 1 to the Wound roll."
       },
-      "Crusade Honour§Master of Obduracy": {
-        "keywords": {
-          "Keywords": [
-            "Pilot and Knight"
-          ],
-          "Tags": [
-            "Imperial Knights"
-          ]
+      "Requisition§Failure Is Not an Option": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
         },
+        "text": "Purchase this Requisition after the third battle you have fought as part of a Chivalric Quest. Do not end that Chivalric Quest or resolve its rewards; instead, fight one more battle as part of that Chivalric Quest. After that fourth battle, that Chivalric Quest ends and you resolve its rewards."
+      },
+      "Requisition§Loyal Bondsman": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "While most Armigers can operate independently, it is common for their Helms Mechanician to be neurally slaved to the command impulses of a larger Knight, rendering them subordinate. To accept such mental serfdom is to possess the rank of Bondsman.\n\nPurchase this Requisition when mustering your Crusade army. Select one ARMIGER unit and one QUESTORIS unit from your Crusade army. Until the end of the battle, while both of those units are on the battlefield, that ARMIGER unit is always considered to be under the effect of that QUESTORIS unit’s Bondsman ability."
+      },
+      "Requisition§Hand of the Sacristan": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition when you add a new IMPERIAL KNIGHTS unit to your Crusade force. Select one of your pilots with a Level of Honour that is Esteemed or Virtuous. That pilots assigned IMPERIAL KNIGHTS model becomes vacant, and a model in the new IMPERIAL KNIGHTS unit becomes that pilots assigned model. If the vacant IMPERIAL KNIGHTS model is an ARMIGER, the new IMPERIAL KNIGHTS unit must be an ARMIGER unit, or if your pilot has a Virtuous Level of Honour, the new IMPERIAL KNIGHTS unit must be a TITANIC unit. The new IMPERIAL KNIGHTS unit gains 6XP, and gains the Blooded rank."
+      },
+      "Requisition§Oath of the Freeblade": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "When you purchase this Requisition, select one of your pilots with a Level of Honour that is Aspiring or higher. You can change that pilot’s Sworn Alignment to Freeblade. In addition, you can replace their current Mastery with a new one (provided no other pilots from your Crusade force currently have that Mastery). That pilot retains its allocated Chivalric points. Then generate a Burden for that pilot."
+      },
+      "Requisition§Autonomy in Exile": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition when you select a Mastery for a pilot with the Freeblade Sworn Alignment. You can select any Mastery for that pilot, regardless of any Sworn Alignment restrictions (provided no other pilots from your Crusade force currently have that Mastery)."
+      },
+      "Crusade Badge§Chivalric Champion": {
+        "text": "You have completed one Chivalric Quest.\nYou have won two or more battles."
+      },
+      "Crusade Badge§Chivalric Paladin": {
+        "text": "You have upheld the Code Chivalric with glory, and the honour of you, your steed and your Noble companions is vaunted by millions of Imperial souls who inhabit the worlds you have stridden. The list of honours accrued by the warriors of your lance grows with each victory. Your crusade cannot stop now, duty demands it.\nYou have completed two different Chivalric Quests.\nYou have won five or more battles.\nYour Crusade force includes at least one pilot whose Level of Honour is Esteemed."
+      },
+      "Crusade Badge§Chivalric Exemplar": {
+        "text": "You have completed four different Chivalric Quests.\nYou have won ten or more battles.\nYour Crusade force includes at least one pilot whose Level of Honour is Virtuous.\nHeavy\nHeavy weapons are amongst the biggest guns on the battlefield, but require bracing to fire at full effect and are unwieldy to bring to bear at close quarters.\nWeapons with [HEAVY] in their profile are known as Heavy weapons. Each time an attack is made with such a weapon, if the attacking model’s unit Remained Stationary this turn, add 1 to that attack’s Hit roll.\nAdd 1 to Hit rolls if the bearer’s unit Remained Stationary this turn.\nThe BATTLELINE keyword is used in the following Adeptus Mechanicus datasheets:\nBattleline\nSkitarii Rangers\nSkitarii Vanguard\nHit Roll\nWhen a model makes an attack, make one Hit roll for that attack by rolling one D6. If the result of the Hit roll is greater than or equal to the attack’s Ballistic Skill (BS) characteristic (if the attack is being made with a ranged weapon) or its Weapon Skill (WS) characteristic (if the attack is being made with a melee weapon), then that Hit roll is successful and scores one hit against the target unit. Otherwise, the attack fails and the attack sequence ends.\nAn unmodified Hit roll of 6 is called a Critical Hit and is always successful. An unmodified Hit roll of 1 always fails. A Hit roll can never be modified by more than -1 or +1.\nHit Roll (Ranged Attack): A hit is scored if the D6 result equals or exceeds that attack’s BS.\nHit Roll (Melee Attack): A hit is scored if the D6 result equals or exceeds that attack’s WS.\nCritical Hit: Unmodified Hit roll of 6. Always successful.\nAn unmodified Hit roll of 1 always fails.\nA Hit roll can never be modified by more than -1 or +1.\nAssault\nAssault weapons fire so indiscriminately that they can be shot from the hip as warriors dash forward.\nWeapons with [ASSAULT] in their profile are known as Assault weapons. If a unit that Advanced this turn contains any models equipped with Assault weapons, it is still eligible to shoot in this turn’s Shooting phase. When such a unit is selected to shoot, you can only resolve attacks using Assault weapons its models are equipped with.\nCan be shot even if the bearer’s unit Advanced.\nDoctrina Imperatives\nAn Adeptus Mechanicus army marching to war is a sight both terrifying and glorious, each holy warrior a disturbing fusion of Human and machine. While the ruling Tech-Priests and their fanatical followers raise modified voices in praise of the Machine God, their Skitarii soldiery and Servitor creations are controlled by doctrina imperatives loaded by their masters to augment and adapt the warriors’ abilities.\nAt the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n|\nProtector Imperative\nRanged weapons equipped by models in this unit have the [HEAVY] ability.\nImprove the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\nEach time a melee attack targets this unit, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, subtract 1 from the Hit roll.\n|\nConqueror Imperative\nRanged weapons equipped by models in this unit have the [ASSAULT] ability.\nImprove the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\nEach time a model in this unit makes an attack, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, improve the Armour Penetration characteristic of that attack by 1.\nThe ACASTUS keyword is used in the following Imperial Knights datasheets:\nOther\nAcastus Knight Asterius\nAcastus Knight Porphyrion\nThe ADEPTUS MECHANICUS keyword is used in the following Imperial Knights datasheets:\nCharacters\nSkitarii Marshal\nTech-priest Dominus\nTech-priest Manipulus\nBattleline\nSkitarii Rangers\nSkitarii Vanguard\nThe ARMIGER keyword is used in the following Imperial Knights datasheets:\nOther\nArmiger Helverin\nArmiger Warglaive\nArmiger Moirax\nThe BATTLELINE keyword is used in the following Imperial Knights datasheets:\nBattleline\nSkitarii Rangers\nSkitarii Vanguard\nThe CERASTUS keyword is used in the following Imperial Knights datasheets:\nCharacters\nCerastus Knight Acheron\nCerastus Knight Atrapos\nCerastus Knight Castigator\nCerastus Knight Lancer\nThe CHARACTER keyword is used in the following Imperial Knights datasheets:\nCharacters\nKnight Destrier\nCanis Rex\nKnight Castellan\nKnight Crusader\nKnight Defender\nKnight Errant\nKnight Gallant\nKnight Paladin\nKnight Preceptor\nKnight Valiant\nKnight Warden\nSir Hekhtur\nSkitarii Marshal\nTech-priest Dominus\nTech-priest Manipulus\nCerastus Knight Acheron\nCerastus Knight Atrapos\nCerastus Knight Castigator\nCerastus Knight Lancer\nQuestoris Knight Magaera\nQuestoris Knight Styrix\nThe CULT MECHANICUS keyword is used in the following Imperial Knights datasheets:\nCharacters\nTech-priest Dominus\nTech-priest Manipulus\nThe DOMINUS keyword is used in the following Imperial Knights datasheets:\nCharacters\nKnight Castellan\nKnight Valiant\nTech-priest Dominus\nThe EPIC HERO keyword is used in the following Imperial Knights datasheets:\nCharacters\nCanis Rex\nSir Hekhtur\nThe IMPERIAL KNIGHTS keyword is used in the following Imperial Knights datasheets:\nCharacters\nKnight Destrier\nCanis Rex\nKnight Castellan\nKnight Crusader\nKnight Defender\nKnight Errant\nKnight Gallant\nKnight Paladin\nKnight Preceptor\nKnight Valiant\nKnight Warden\nSir Hekhtur\nCerastus Knight Acheron\nCerastus Knight Atrapos\nCerastus Knight Castigator\nCerastus Knight Lancer\nQuestoris Knight Magaera\nQuestoris Knight Styrix\nOther\nArmiger Helverin\nArmiger Warglaive\nAcastus Knight Asterius\nAcastus Knight Porphyrion\nArmiger Moirax\nThe IMPERIUM keyword is used in the following Imperial Knights datasheets:\nCharacters\nKnight Destrier\nCanis Rex\nKnight Castellan\nKnight Crusader\nKnight Defender\nKnight Errant\nKnight Gallant\nKnight Paladin\nKnight Preceptor\nKnight Valiant\nKnight Warden\nSir Hekhtur\nSkitarii Marshal\nTech-priest Dominus\nTech-priest Manipulus\nCerastus Knight Acheron\nCerastus Knight Atrapos\nCerastus Knight Castigator\nCerastus Knight Lancer\nQuestoris Knight Magaera\nQuestoris Knight Styrix\nBattleline\nSkitarii Rangers\nSkitarii Vanguard\nOther\nArmiger Helverin\nArmiger Warglaive\nAcastus Knight Asterius\nAcastus Knight Porphyrion\nArmiger Moirax\nThe INFANTRY keyword is used in the following Imperial Knights datasheets:\nCharacters\nSir Hekhtur\nSkitarii Marshal\nTech-priest Dominus\nTech-priest Manipulus\nBattleline\nSkitarii Rangers\nSkitarii Vanguard\nThe KNIGHT ACHERON keyword is used in the following Imperial Knights datasheets:\nCharacters\nCerastus Knight Acheron\nThe KNIGHT ASTERIUS keyword is used in the following Imperial Knights datasheets:\nOther\nAcastus Knight Asterius\nThe KNIGHT ATRAPOS keyword is used in the following Imperial Knights datasheets:\nCharacters\nCerastus Knight Atrapos\nThe KNIGHT CASTIGATOR keyword is used in the following Imperial Knights datasheets:\nCharacters\nCerastus Knight Castigator\nThe KNIGHT LANCER keyword is used in the following Imperial Knights datasheets:\nCharacters\nCerastus Knight Lancer\nThe KNIGHT MAGAERA keyword is used in the following Imperial Knights datasheets:\nCharacters\nQuestoris Knight Magaera\nThe KNIGHT PORPHYRION keyword is used in the following Imperial Knights datasheets:\nOther\nAcastus Knight Porphyrion\nThe KNIGHT STYRIX keyword is used in the following Imperial Knights datasheets:\nCharacters\nQuestoris Knight Styrix\nThe MANIPULUS keyword is used in the following Imperial Knights datasheets:\nCharacters\nTech-priest Manipulus\nThe MARSHAL keyword is used in the following Imperial Knights datasheets:\nCharacters\nSkitarii Marshal\nThe MOIRAX keyword is used in the following Imperial Knights datasheets:\nOther\nArmiger Moirax\nThe QUESTORIS keyword is used in the following Imperial Knights datasheets:\nCharacters\nCanis Rex\nKnight Crusader\nKnight Defender\nKnight Errant\nKnight Gallant\nKnight Paladin\nKnight Preceptor\nKnight Warden\nQuestoris Knight Magaera\nQuestoris Knight Styrix\nThe RANGERS keyword is used in the following Imperial Knights datasheets:\nBattleline\nSkitarii Rangers\nThe SKITARII keyword is used in the following Imperial Knights datasheets:\nCharacters\nSkitarii Marshal\nBattleline\nSkitarii Rangers\nSkitarii Vanguard\nThe TECH-PRIEST keyword is used in the following Imperial Knights datasheets:\nCharacters\nTech-priest Dominus\nTech-priest Manipulus\nThe TITANIC keyword is used in the following Imperial Knights datasheets:\nCharacters\nKnight Destrier\nCanis Rex\nKnight Castellan\nKnight Crusader\nKnight Defender\nKnight Errant\nKnight Gallant\nKnight Paladin\nKnight Preceptor\nKnight Valiant\nKnight Warden\nCerastus Knight Acheron\nCerastus Knight Atrapos\nCerastus Knight Castigator\nCerastus Knight Lancer\nQuestoris Knight Magaera\nQuestoris Knight Styrix\nOther\nAcastus Knight Asterius\nAcastus Knight Porphyrion\nThe TOWERING keyword is used in the following Imperial Knights datasheets:\nCharacters\nKnight Destrier\nCanis Rex\nKnight Castellan\nKnight Crusader\nKnight Defender\nKnight Errant\nKnight Gallant\nKnight Paladin\nKnight Preceptor\nKnight Valiant\nKnight Warden\nCerastus Knight Acheron\nCerastus Knight Atrapos\nCerastus Knight Castigator\nCerastus Knight Lancer\nQuestoris Knight Magaera\nQuestoris Knight Styrix\nOther\nAcastus Knight Asterius\nAcastus Knight Porphyrion\nThe VANGUARD keyword is used in the following Imperial Knights datasheets:\nBattleline\nSkitarii Vanguard\nThe VEHICLE keyword is used in the following Imperial Knights datasheets:\nCharacters\nKnight Destrier\nCanis Rex\nKnight Castellan\nKnight Crusader\nKnight Defender\nKnight Errant\nKnight Gallant\nKnight Paladin\nKnight Preceptor\nKnight Valiant\nKnight Warden\nCerastus Knight Acheron\nCerastus Knight Atrapos\nCerastus Knight Castigator\nCerastus Knight Lancer\nQuestoris Knight Magaera\nQuestoris Knight Styrix\nOther\nArmiger Helverin\nArmiger Warglaive\nAcastus Knight Asterius\nAcastus Knight Porphyrion\nArmiger Moirax\nThe WALKER keyword is used in the following Imperial Knights datasheets:\nCharacters\nKnight Destrier\nCanis Rex\nKnight Castellan\nKnight Crusader\nKnight Defender\nKnight Errant\nKnight Gallant\nKnight Paladin\nKnight Preceptor\nKnight Valiant\nKnight Warden\nCerastus Knight Acheron\nCerastus Knight Atrapos\nCerastus Knight Castigator\nCerastus Knight Lancer\nQuestoris Knight Magaera\nQuestoris Knight Styrix\nOther\nArmiger Helverin\nArmiger Warglaive\nAcastus Knight Asterius\nAcastus Knight Porphyrion\nArmiger Moirax\nBattle Honours\nEach time a unit gains a rank, it can gain one Battle Honour. Units can also gain additional Battle Honours by other means (such as by winning certain missions, fulfilling certain Agendas, etc.). Each time a unit gains a Battle Honour, increase its Crusade points total by 1 (if the unit is TITANIC, increase its Crusade points total by 2 instead). Make a note of each Battle Honour a unit has on its Crusade card. A unit can never have more than three Battle Honours unless it is a CHARACTER, in which case it can have up to six Battle Honours. Once the maximum is reached, each time a unit gains a new Battle Honour it must first remove one of its existing Battle Honours.\nThere are several categories of Battle Honours that can be bestowed upon a unit, such as Battle Traits, Weapon Modifications and Crusade Relics. Other categories of Battle Honour may be found in other publications. Each time a unit gains a Battle Honour, you can select from any category.\nOnce a unit gains enough XP it will gain a rank.\nOnly CHARACTER units can gain the Heroic or Legendary ranks.\nEach time a unit gains a rank, it can gain a Battle Honour.\nThere are several categories of Battle Honours, which include:\nBattle Traits: New skills and abilities.\nWeapon Modifications: Upgrade an item of wargear.\nCrusade Relic: Gain a rare and powerful artefact.\nEach time a unit gains a Battle Honour, increase its Crusade points total by 1 (or by 2 if TITANIC).\nRENOWNED HEROES1-3RP\nThe greatest warriors, most cunning tacticians and seers lead their armies to war possessed of hard-won skills and powerful artefacts that mark them out as legendary commanders.\nWhen you first start a Crusade force, you can purchase this Requisition the first time you add a CHARACTER unit to your Order of Battle. After that point, you can purchase this Requisition each time a unit from your Order of Battle gains a rank. In either case, you cannot select an EPIC HERO unit, a unit that already has an Enhancement, or a unit that has either the Disgraced or Mark of Shame Battle Scars.\nYou can select one Enhancement that unit has access to (if using this Requisition when that unit gains a rank, this is instead of it gaining a Battle Honour). When doing so, that unit has access to any Enhancements described within any Detachment rules that it could use, even though you have not yet started to muster your army and so have not selected any Detachment rules yet.\nIf the selected Enhancement replaces a weapon that is a Crusade Relic or a weapon upgraded by Weapon Modifications, that Crusade Relic or Weapon Modifications are lost. Recalculate the unit’s points value as a result of gaining this Enhancement and update its Crusade card. You cannot make any changes that would cause you to exceed your Supply Limit.\nThis Requisition costs 1RP plus 1 additional RP for each other Enhancement that your Order of Battle contains (to a maximum of 3RP).\nExample: If this Requisition was used to give a unit an Enhancement and one other unit in your Order of Battle already had an Enhancement, it would cost 2RP.\nObjective Markers\nObjective markers represent objects of tactical or strategic import that both sides are attempting to secure, such as valuable artefacts, vital supplies or communications nodes. If a mission uses objective markers, it will state where they are located on the battlefield. These can be represented using any suitable marker, but we recommend using round markers that are 40mm in diameter.\nWhen setting objective markers up on the battlefield, place them so they are centred on the point specified by the mission. When measuring distances to and from objective markers, measure to and from the closest part of them. Models can move over objective markers as if they were not there, but they cannot end a move on top of an objective marker.\nAt the start of the battle, each objective marker on the battlefield is said to be contested, and so is not controlled by either player. To control an objective marker, a player will first need to move models within range of it. A model is within range of an objective marker if it is within 3\" horizontally and 5\" vertically of that objective marker.\nEvery model has an Objective Control (OC) characteristic listed on its datasheet. To determine a player’s Level of Control over an objective marker, add together the OC characteristics of all the models from that player’s army that are within range of that objective marker. A player will control an objective marker at the end of any phase or turn if their Level of Control over it is greater than their opponent’s. If both players have the same Level of Control over an objective marker, that objective marker is contested.\nA model is within range of an objective marker if within 3\" horizontally and 5\" vertically.\nLevel of Control: Add together the OC characteristics of all of a player’s models within range of the objective marker.\nAn objective marker is controlled by the player with the highest Level of Control over it (in a tie, it is contested).\nModels cannot end a move on top of an objective marker.\nWound Roll\nEach time an attack scores a hit against a target unit, make a Wound roll for that attack by rolling one D6 to see if that attack successfully wounds the target unit. The result required is determined by comparing the attack’s Strength (S) characteristic with the target’s Toughness (T) characteristic, as shown below.\n|\n| WOUND ROLL\n| ATTACK’S STRENGTH VS TARGET’S TOUGHNESS | D6 RESULT REQUIRED\n| Strength is TWICE (or more than twice) the Toughness. |\n+\n| Strength is GREATER than the Toughness. |\n+\n| Strength is EQUAL to the Toughness. |\n+\n| Strength is LESS than the Toughness. |\n+\n| Strength is HALF (or less than half) the Toughness. |\n+\nIf the result of the Wound roll is greater than or equal to the required number shown in the table above, then that Wound roll is successful and scores one wound against the target unit. Otherwise, the attack fails and the attack sequence ends.\nAn unmodified Wound roll of 6 is called a Critical Wound and is always successful. An unmodified Wound roll of 1 always fails. A Wound roll can never be modified by more than -1 or +1.\nCritical Wound: Unmodified Wound roll of 6. Always successful.\nAn unmodified Wound roll of 1 always fails.\nA Wound roll can never be modified by more than -1 or +1.\nAdvance Moves\nWhen a unit Advances, make an Advance roll for that unit by rolling one D6. Add the result in inches to the Move characteristic of each model in that unit until the end of the phase. Each model in that unit can then make an Advance move by moving a distance in inches less than or equal to this total, but no model can be moved within Engagement Range of enemy models. A unit cannot shoot or declare a charge in the same turn that it Advanced.\nAdvance Move: Models move up to M+D6\".\nCannot move within Engagement Range of any enemy models.\nUnits that Advance cannot shoot or charge this turn.\nCharging with a Unit\nOnce you have selected an eligible unit to declare a charge, you must select one or more enemy units within 12\" of it as the targets of that charge. The targets of a charge do not need to be visible to the charging unit.\nYou then make a Charge roll for the charging unit by rolling 2D6. The result is the maximum number of inches each model in that unit can be moved if a Charge move is possible. For a Charge move to be possible, the Charge roll must be sufficient to enable the charging unit to end that move:\nWithin Engagement Range of every unit that you selected as a target of the charge.\nWithout moving within Engagement Range of any enemy units that were not a target of the charge.\nIn Unit Coherency.\nIf any of these conditions cannot be met, the charge fails and no models in the charging unit move this phase. Otherwise, the charge is successful and the models in the charging unit make a Charge move – move each model a distance in inches up to the result of the Charge roll. When doing so, each model in the charging unit must end its Charge move closer to one of the units selected as a target of its charge. If you can also move a charging model so that it ends its Charge move in base-to-base contact with one or more enemy models while still enabling the charging unit to end its move satisfying all of the conditions above, you must do so. The controlling player chooses the order in which to move their models.\nCharge Roll: 2D6\".\nTargets of a charge must be within 12\" but do not need to be visible.\nIf the distance rolled is insufficient to move within Engagement Range of all targets while maintaining Unit Coherency, the charge fails.\nCannot move within Engagement Range of any unit that was not a target of the charge.\nIf the charge is successful, each model makes a Charge move less than or equal to the Charge roll, and must move into base-to-base contact with an enemy model if possible.\nNormal Moves\nWhen a unit makes a Normal move, each model in that unit can move a distance in inches less than or equal to its Move (M) characteristic, but no model can be moved within Engagement Range of any enemy models. A unit cannot make more than one Normal move per phase.\nNormal Move: Models move up to M\".\nCannot move within Engagement Range of any enemy models.\nFall Back Moves\nWhen a unit Falls Back, each model in that unit can make a Fall Back move by moving a distance in inches less than or equal to its Move characteristic, and when doing so you can move it within Engagement Range of enemy models, provided it does not end that move within Engagement Range of any enemy models – if this is not possible, that unit cannot Fall Back.\nA unit cannot shoot or declare a charge in the same turn that it Fell Back."
+      },
+      "Ability§Mastery of Obduracy — Virtue’s Defender (Aspiring)": {
+        "text": "While this unit is not Battle-shocked, add 1 to its Objective Control characteristic."
+      },
+      "Ability§Mastery of Obduracy — Heraldic Exemplar (Esteemed)": {
         "text": "While this unit is not Battle-shocked, add 3 to its Objective Control characteristic."
       },
-      "Crusade Honour§Master of Execution": {
-        "keywords": {
-          "Keywords": [
-            "Pilot and Knight"
-          ],
-          "Tags": [
-            "Imperial Knights"
-          ]
-        },
-        "text": "At the start of the first battle round, select one enemy unit. Until the end of the battle, each time this unit makes an attack that targets that enemy unit, add 1 to the Damage characteristic of that attack and that attack has the **[SUSTAINED HITS 1]** ability."
+      "Ability§Mastery of Obduracy — Sentinel of Orthodoxy (Virtuous)": {
+        "text": "While this unit is not Battle-shocked, add 5 to its Objective Control characteristic."
       },
-      "Crusade Honour§Master of the Clarion": {
-        "keywords": {
-          "Keywords": [
-            "Pilot and Knight"
-          ],
-          "Tags": [
-            "Titanic"
-          ]
-        },
-        "text": "Pilot of a **^^Titanic^^** unit only. Each time this unit its Bondsman ability, it can select a friendly **^^Armiger^^** that is within 24\" of and visible to this unit."
+      "Ability§Mastery of Clarion — Truth’s Voice (Aspiring)": {
+        "text": "Pilot of a TITANIC unit only. Each time this unit uses its Bondsman ability, it can select a friendly ARMIGER unit that is within 18\" of and visible to this unit."
       },
-      "Crusade Honour§Master of Tuition": {
-        "keywords": {
-          "Keywords": [
-            "Pilot and Knight"
-          ],
-          "Tags": [
-            "Imperial Knights"
-          ]
-        },
-        "text": "At the end of each battle, if this unit gains any XP, you can select up to two other **^^Imperial Knights^^** units from your Crusade army that survived that battle. The selected unit gains 1XP."
+      "Ability§Mastery of Clarion — Nuncio of Obligation (Esteemed)": {
+        "text": "Pilot of a TITANIC unit only. Each time this unit uses its Bondsman ability, it can select a friendly ARMIGER unit that is within 24\" of and visible to this unit."
       },
-      "Crusade Honour§Master of Ambush": {
-        "keywords": {
-          "Keywords": [
-            "Pilot and Knight"
-          ],
-          "Tags": [
-            "Imperial Knights"
-          ]
-        },
-        "text": "After both players have deployed their armies, you can redeploy this unit and one friendly **^^Imperial Knights Armiger^^** unit."
+      "Ability§Mastery of Clarion — Emissary of the Court (Virtuous)": {
+        "text": "Pilot of a TITANIC unit only. Each time this unit uses its Bondsman ability, it can select a friendly ARMIGER unit that is anywhere on the battlefield and visible to this unit."
       },
-      "Crusade Honour§Master of Condemnation": {
-        "keywords": {
-          "Keywords": [
-            "Pilot and Knight"
-          ],
-          "Tags": [
-            "Imperial Knights"
-          ]
-        },
-        "text": "Once per battle, at the start of your Shooting phase, select one enemy unit within 18\" of and visible to this unit. Until the end of the phase, each time an **^^Imperial Knights^^** unit from your Crusade army makes an attack that targets that unit, you can re-roll a Hit roll of 1 and you can re-roll a Wound roll of 1."
+      "Ability§Mastery of Tuition — Wise Mentor (Aspiring)": {
+        "text": "At the end of each battle, if this unit gains any XP, you can select one other IMPERIAL KNIGHTS unit from your Crusade army that survived that battle. The selected unit gains 1XP."
       },
-      "Crusade Honour§Master of the Joust": {
-        "keywords": {
-          "Keywords": [
-            "Pilot and Knight"
-          ],
-          "Tags": [
-            "Imperial Knights"
-          ]
-        },
-        "text": "Add 2\" to this unit's Move characteristic. This unit is eligible to shoot in a turn in which it Advanced."
+      "Ability§Mastery of Tuition — Martial Tutor (Esteemed)": {
+        "text": "At the end of each battle, if this unit gains any XP, you can select up to two other IMPERIAL KNIGHTS units from your Crusade army that survived that battle. The selected units gain 1XP."
       },
-      "Crusade Honour§Master of Mechanisms": {
-        "keywords": {
-          "Keywords": [
-            "Pilot and Knight"
-          ],
-          "Tags": [
-            "Imperial Knights"
-          ]
-        },
-        "text": "In your Command phase, you can select one friendly **^^Imperial Knights^^** model within 6\" of this unit. That friendly model regains up to 3 lost wounds."
+      "Ability§Mastery of Tuition — Master-At-Arms (Virtuous)": {
+        "text": "At the end of each battle, if this unit gains any XP, you can select up to three other IMPERIAL KNIGHTS units from your Crusade army that survived that battle. The selected units gain 1XP."
       },
-      "Crusade Honour§Desperate For Redemption": {
+      "Ability§Mastery of Ambush — Predator’s Prescience (Aspiring)": {
+        "text": "After both players have deployed their armies, you can redeploy this unit."
+      },
+      "Ability§Mastery of Ambush — Foe Hunter (Esteemed)": {
+        "text": "After both players have deployed their armies, you can redeploy this unit and one friendly IMPERIAL KNIGHTS ARMIGER unit."
+      },
+      "Ability§Mastery of Ambush — Trailmaker (Virtuous)": {
+        "text": "After both players have deployed their armies, you can redeploy this unit and one friendly IMPERIAL KNIGHTS unit."
+      },
+      "Ability§Mastery of Condemnation — A Duty of Censure (Aspiring)": {
+        "text": "Once per battle, at the start of your Shooting phase, select one enemy unit within 18\" of and visible to this unit. Until the end of the phase, each time an IMPERIAL KNIGHTS unit from your Crusade army makes an attack that targets that unit, you can re-roll a Hit roll of 1."
+      },
+      "Ability§Mastery of Condemnation — Noble Orator (Esteemed)": {
+        "text": "Once per battle, at the start of your Shooting phase, select one enemy unit within 18\" of and visible to this unit. Until the end of the phase, each time an IMPERIAL KNIGHTS unit from your Crusade army makes an attack that targets that unit, you can re-roll a Hit roll of 1 and you can re-roll a Wound roll of 1."
+      },
+      "Ability§Mastery of Condemnation — High Denunciator (Virtuous)": {
+        "text": "Once per turn, at the start of your Shooting phase, select one enemy unit within 18\" of and visible to this unit. Until the end of the phase, each time an IMPERIAL KNIGHTS unit from your Crusade army makes an attack that targets that unit, you can re-roll a Hit roll of 1 and you can re-roll a Wound roll of 1."
+      },
+      "Ability§Mastery of Joust — Landstrider (Aspiring)": {
+        "text": "Add 2\" to this unit’s Move characteristic."
+      },
+      "Ability§Mastery of Joust — Lance of Terra (Esteemed)": {
+        "text": "Add 2\" to this unit’s Move characteristic. This unit is eligible to shoot in a turn in which it Advanced."
+      },
+      "Ability§Mastery of Joust — Foe’s Bane (Virtuous)": {
+        "text": "Add 2\" to this unit’s Move characteristic. This unit is eligible to shoot and declare a charge in a turn in which it Advanced."
+      },
+      "Ability§Mastery of Mechanisms — Iron Bloodline (Aspiring)": {
+        "text": "In your Command phase, you can select one friendly IMPERIAL KNIGHTS model within 6\" of this unit. That friendly model regains up to D3 lost wounds."
+      },
+      "Ability§Mastery of Mechanisms — Blessed by the Sacristans (Esteemed)": {
+        "text": "In your Command phase, you can select one friendly IMPERIAL KNIGHTS model within 6\" of this unit. That friendly model regains up to 3 lost wounds."
+      },
+      "Ability§Mastery of Mechanisms — Knight of the Cog (Virtuous)": {
+        "text": "In your Command phase, you can select one friendly IMPERIAL KNIGHTS model within 6\" of this unit. That friendly model regains up to D3+3 lost wounds."
+      },
+      "Ability§Mastery of Execution — Harbinger (Aspiring)": {
+        "text": "At the start of the first battle round, select one enemy unit. Until the end of the battle, each time this unit makes an attack that targets that enemy unit, add 1 to the Damage characteristic of that attack."
+      },
+      "Ability§Mastery of Execution — Headsman (Esteemed)": {
+        "text": "At the start of the first battle round, select one enemy unit. Until the end of the battle, each time this unit makes an attack that targets that enemy unit, add 1 to the Damage characteristic of that attack and that attack has the [sustained hits 1] ability."
+      },
+      "Ability§Mastery of Execution — Master of Judgement (Virtuous)": {
+        "text": "At the start of the first battle round, select one enemy unit. Until the end of the battle, each time this unit makes an attack that targets that enemy unit, add 1 to the Damage characteristic of that attack and that attack has the [sustained hits D3] ability."
+      },
+      "Battle Scar§Desperate For Redemption": {
         "keywords": {
           "Keywords": [
-            "Burdens"
+            "Burdens",
+            "Burden"
           ],
           "Tags": [
-            "Imperial Knights"
+            "Imperial Knights",
+            "Freeblade"
           ]
         },
         "text": "This unit is not eligible to Fall Back.",
@@ -4455,13 +9911,15 @@
           }
         }
       },
-      "Crusade Honour§Stain of Dishonour": {
+      "Battle Scar§Stain of Dishonour": {
         "keywords": {
           "Keywords": [
-            "Burdens"
+            "Burdens",
+            "Burden"
           ],
           "Tags": [
-            "Imperial Knights"
+            "Imperial Knights",
+            "Freeblade"
           ]
         },
         "text": "This unit cannot use or be affected by Bondsman abilities.",
@@ -4471,13 +9929,15 @@
           }
         }
       },
-      "Crusade Honour§Bonded In Shame": {
+      "Battle Scar§Bonded In Shame": {
         "keywords": {
           "Keywords": [
-            "Burdens"
+            "Burdens",
+            "Burden"
           ],
           "Tags": [
-            "Imperial Knights"
+            "Imperial Knights",
+            "Freeblade"
           ]
         },
         "text": "Subtract 2 from this unit's Objective Control characteristic and worsen its Leadership characteristic by 1.",
@@ -4486,6 +9946,21 @@
             "value": -1
           }
         }
+      },
+      "Ability§To Strike Down the Unclean Behemoths": {
+        "text": "While this Chivalric Quest is active, add 1 to its tally each time a MONSTER or VEHICLE unit is destroyed by an attack made by an IMPERIAL KNIGHTS model from your Crusade force. For each of those detroyed units that was TITANIC, you gain 1 additional tally mark."
+      },
+      "Ability§To Raise High the Pennants of Victory": {
+        "text": "While this Chivalric Quest is active, at the end of each battle, add 1 to its tally for each objective marker you control. For each of those objective markers that is within your opponent’s deployment zone, you gain 1 additional tally mark."
+      },
+      "Ability§To Stamp Out the Champions of Dishonour": {
+        "text": "While this Chivalric Quest is active, add 1 to its tally each time a CHARACTER unit is destroyed by an attack made by an IMPERIAL KNIGHTS model from your Crusade force. For each of those detroyed units that was your opponent’s WARLORD, you gain 1 additional tally mark."
+      },
+      "Ability§To Secure the Realm": {
+        "text": "While this Chivalric Quest is active, al the end of each battle, add 1 to its tally for each of the following conditions you satisfy: one or more IMPERIAL KNIGHTS units from your Crusade army are within 6\" of the centre of the battlefield; no enemy units are within 6\" of the centre of the battlefield; one or more Imperial Knights units from your Crusade army are wholly within your opponent’s deployment zone."
+      },
+      "Chivalric Quest§Chivalric Quest": {
+        "text": "**Chivalric Quests.** When mustering, if you have no active Quest and your WARLORD is an IMPERIAL KNIGHTS model, swear your Knights to one of the four Quests and keep its tally for your next three battles. After three battles consult the Tally Rewards of the Quest (4–6 / 7–10 / 11+ tally marks; see the codex table for the Chivalric points each band awards) and allocate the Chivalric points to your pilots in the Update Crusade Cards step. Fewer than four tally marks, or abandoning a Quest, makes your Crusade force **Dishonoured**: you cannot swear a new Quest until you complete the Death Before Dishonour Agenda.\n\n**Pilots.** Every IMPERIAL KNIGHTS model (not EPIC HEROES) has a pilot with a Sworn Alignment; Questor Imperialis and Questor Mechanicus pilots never fight in the same army. The first time a pilot is allocated Chivalric points, select a Mastery no other pilot has (Clarion: TITANIC only; Joust: Questor Imperialis; Mechanisms: Questor Mechanicus; Execution: Freeblade). Levels of Honour: Aspiring 1–3, Esteemed 4–6, Virtuous 7+ Chivalric points; an ARMIGER pilot holds at most 6 points. A pilot with a Mastery adds 1 to the unit's Crusade points. A Knight without a pilot is vacant and cannot be fielded; an unseated pilot can be assigned to a new or vacant Knight (a Virtuous pilot or one with Mastery of the Clarion never to an ARMIGER)."
       }
     },
     "gameModes": {},

@@ -1,6 +1,6 @@
 {
   "name": "Adeptus Custodes 11e",
-  "revision": "11.2.10",
+  "revision": "11.2.12",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1268,6 +1268,66 @@
             "visibility": "normal"
           }
         }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Pursuit of Excellence": {
+                "order": 100,
+                "tracking": {
+                  "Adeptus Custodes Agenda": 1
+                }
+              },
+              "Judgement Delivered": {
+                "order": 101,
+                "tracking": {
+                  "Adeptus Custodes Agenda": 1
+                }
+              },
+              "Great Tithe": {
+                "order": 102,
+                "tracking": {
+                  "Adeptus Custodes Agenda": 1
+                }
+              },
+              "Unto the Dark Cells": {
+                "order": 103,
+                "tracking": {
+                  "Adeptus Custodes Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Pursuit of Excellence": {
+                "order": 100,
+                "tracking": {
+                  "Adeptus Custodes Agenda": 1
+                }
+              },
+              "Judgement Delivered": {
+                "order": 101,
+                "tracking": {
+                  "Adeptus Custodes Agenda": 1
+                }
+              },
+              "Great Tithe": {
+                "order": 102,
+                "tracking": {
+                  "Adeptus Custodes Agenda": 1
+                }
+              },
+              "Unto the Dark Cells": {
+                "order": 103,
+                "tracking": {
+                  "Adeptus Custodes Agenda": 1
+                }
+              }
+            }
+          }
+        }
       }
     },
     "assetCatalog": {
@@ -1837,14 +1897,6 @@
           ]
         },
         "text": "Each time a model in this unit makes a melee attack, re-roll a Hit roll of 1."
-      },
-      "Battle Trait§Genalchimic Warding": {
-        "keywords": {
-          "Tags": [
-            "Infantry"
-          ]
-        },
-        "text": "Each time a Psychic Attack targets this unit, subtract 1 from the Hit roll."
       },
       "Battle Trait§Heralds of the Host": {
         "keywords": {
