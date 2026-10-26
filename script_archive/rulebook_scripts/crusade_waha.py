@@ -131,9 +131,15 @@ class Section:
             out.append({"name": e["name"], "rp": rp, "cost": e["cost"], "text": text})
         return out
 
-    def badges(self, title="Crusade Badges"):
+    def badges(self, title="Crusade Badges", nth=0):
+        """the three '## Name' headings after the nth 'Crusade Badges' heading (chapter supplements repeat it)"""
         out = []
-        for name, body in self.blocks_after(title, level=2):
+        hits = [h for h in self.heads if h[1].lower() == title.lower()]
+        if len(hits) <= nth:
+            return []
+        start = hits[nth][2]
+        for name, body in [(t, self.lines[i + 1:(self.heads[k + 1][2] if k + 1 < len(self.heads) else len(self.lines))])
+                           for k, (lvl, t, i) in enumerate(self.heads) if i > start and lvl == 2][:3]:
             pars = self.paragraphs(body)
             if len(pars) > 1 and not re.match(r"^(You have|You |At least|One or more|Or:)", pars[0]):
                 pars = pars[1:]   # the first paragraph is the badge's flavour text

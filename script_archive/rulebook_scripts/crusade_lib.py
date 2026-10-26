@@ -22,6 +22,13 @@ _cache = {}
 
 NARR = {"actionable": True, "not": False, "operator": "AND", "paths": [["{roster}", "stats", "Play", "value"]], "value": "Narrative"}
 NARR_SELF = {"actionable": True, "not": False, "operator": "AND", "paths": [["{self}", "stats", "Play", "value"]], "value": "Narrative"}
+NOT_NARR = {"actionable": True, "not": True, "operator": "AND", "paths": [["{roster}", "stats", "Play", "value"]], "value": "Narrative"}
+
+
+def narrative_check(legal_evals, *, note=None):
+    """an error rule that only bites in Narrative play: passes when Play is not Narrative OR the legal condition holds
+    (stored stat values survive a switch back to Matched play, so unguarded validations would fire there)"""
+    return {"evals": [NOT_NARR] + list(legal_evals), "evaluate": "OR", "failState": "error", **({"note": note} if note else {})}
 
 
 # ───────────────────────── books ─────────────────────────
@@ -432,11 +439,17 @@ def honour_class(book, cls, *, parent="Battle Honour", unique=True, lock=True, s
     return cls
 
 
-def honours(book, cls, items, *, tags=None, keywords=None, pts=None, keep_text=True):
-    """items: list of dicts {name, text, tags?, keywords?, stats?, rules?}"""
+def honours(book, cls, items, *, tags=None, keywords=None, pts=None, keep_text=True, faction_tag=False):
+    """items: list of dicts {name, text, tags?, keywords?, stats?, rules?}. With faction_tag, every item that carries
+    any keyword also gets the book's Faction value as a Tag: a child with any keyword at all must match the parent's
+    constraints.any, and the faction value is what every unit of the book grants (opt-in to keep existing books stable)."""
     keys = []
+    fac = faction_value(book) if faction_tag else None
     for it in items:
-        a = {"keywords": {"Tags": list(it.get("tags") or tags or []), "Keywords": list(it.get("keywords") or keywords or [])}, "text": it["text"]}
+        tg = list(it.get("tags") or tags or [])
+        if fac and fac not in tg and (tg or it.get("keywords") or keywords):
+            tg.append(fac)
+        a = {"keywords": {"Tags": tg, "Keywords": list(it.get("keywords") or keywords or [])}, "text": it["text"]}
         if not a["keywords"]["Keywords"]:
             del a["keywords"]["Keywords"]
         st = dict(it.get("stats") or {})
@@ -450,8 +463,9 @@ def honours(book, cls, items, *, tags=None, keywords=None, pts=None, keep_text=T
     return keys
 
 
-def reclass(book, old_prefix, new_cls, names=None, *, patch=None):
-    """move assets from one class to another (e.g. Crusade Honour§Veil of Flies → Boon of Nurgle§Veil of Flies)"""
+def reclass(book, old_prefix, new_cls, names=None, *, patch=None, tags=None, keywords=None):
+    """move assets from one class to another (e.g. Crusade Honour§Veil of Flies → Boon of Nurgle§Veil of Flies).
+    `tags` / `keywords` REPLACE the keyword lists (merge() would keep the old entries); `patch` deep-merges the rest."""
     cat = catalog(book)
     moved = []
     for k in list(cat):
@@ -463,6 +477,12 @@ def reclass(book, old_prefix, new_cls, names=None, *, patch=None):
         a = cat.pop(k)
         if patch:
             a = merge(a, patch)
+        if tags is not None or keywords is not None:
+            kw = a.setdefault("keywords", {})
+            if tags is not None:
+                kw["Tags"] = list(tags)
+            if keywords is not None:
+                kw["Keywords"] = list(keywords)
         cat[f"{new_cls}§{name}"] = a
         moved.append(name)
     return moved
