@@ -1,6 +1,6 @@
 {
   "name": "Death Guard 11e",
-  "revision": "11.2.6",
+  "revision": "11.2.9",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -125,6 +125,88 @@
             ],
             "evaluate": "OR",
             "failState": "pass"
+          },
+          "allowBoonofNurgle": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Boon of Nurgle"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Daemon Prince",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Daemon Prince with Wings",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Boons of Nurgle: DEATH GUARD CHARACTER models (not DAEMON PRINCES) may take a Boon of Nurgle instead of another Battle Honour; a duplicate roll means Spawndom"
+          },
+          "No model can have more than three Boons of Nurgle.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Boon of Nurgle"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         }
       },
@@ -341,6 +423,837 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "noCrusadeXpPoxwalkers": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honour",
+                    "max"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Poxwalkers",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: POXWALKERS units never gain Experience points or Battle Honours and automatically pass Out of Action tests"
+          },
+          "noCrusadeXpPlagueLegions": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honour",
+                    "max"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Legiones Daemonica",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: PLAGUE LEGIONS units never gain Experience points or Battle Honours and automatically pass Out of Action tests"
+          }
+        }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Sow the Seeds of Corruption": {
+                "order": 100,
+                "tracking": {
+                  "Death Guard Agenda": 1
+                }
+              },
+              "Unwitting Vectors": {
+                "order": 101,
+                "tracking": {
+                  "Death Guard Agenda": 1
+                }
+              },
+              "Viral Harvest": {
+                "order": 102,
+                "tracking": {
+                  "Death Guard Agenda": 1
+                }
+              },
+              "Vile Research": {
+                "order": 103,
+                "tracking": {
+                  "Death Guard Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Sow the Seeds of Corruption": {
+                "order": 100,
+                "tracking": {
+                  "Death Guard Agenda": 1
+                }
+              },
+              "Unwitting Vectors": {
+                "order": 101,
+                "tracking": {
+                  "Death Guard Agenda": 1
+                }
+              },
+              "Viral Harvest": {
+                "order": 102,
+                "tracking": {
+                  "Death Guard Agenda": 1
+                }
+              },
+              "Vile Research": {
+                "order": 103,
+                "tracking": {
+                  "Death Guard Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Tainted Tinkering",
+            "Requisition§Fruits of the Cauldron",
+            "Requisition§Remissive Ruse",
+            "Requisition§Careful Cultivation",
+            "Requisition§Putrid Ascension",
+            "Requisition§Wretched Might",
+            "Crusade Badge§Plague Champion",
+            "Crusade Badge§Chosen of Nurgle",
+            "Crusade Badge§Diseased Daemon Lord"
+          ]
+        }
+      },
+      "Boon of Nurgle": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Blessings of Nurgle": {
+        "aspects": {
+          "Visibility": "always"
+        },
+        "templateClass": "",
+        "stats": {
+          "Burgeoning Fortitude": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Blessing of Nurgle": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "tracked": true,
+            "statOrder": 1
+          },
+          "Eye of Nurgle": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Blessing of Nurgle": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "tracked": true,
+            "statOrder": 2
+          },
+          "Fecund Fervour": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Blessing of Nurgle": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "tracked": true,
+            "statOrder": 3
+          },
+          "Seeping Poisons": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Blessing of Nurgle": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "tracked": true,
+            "statOrder": 4
+          },
+          "Endless Harvest": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Blessing of Nurgle": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "tracked": true,
+            "statOrder": 5
+          },
+          "Vile Possession": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Blessing of Nurgle": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "tracked": true,
+            "statOrder": 6
+          },
+          "Crusade Pts": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        }
+      },
+      "Alchemical Pathogen": {
+        "aspects": {
+          "Visibility": "always",
+          "Describe": true
+        },
+        "templateClass": "",
+        "stats": {
+          "Duration": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 1,
+            "max": 5,
+            "statOrder": 1
+          },
+          "Properties": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 7,
+            "label": "Properties added",
+            "statOrder": 2
+          },
+          "Drawbacks suppressed": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 7,
+            "statOrder": 3
+          },
+          "Potency": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "min": 0,
+            "max": 12,
+            "label": "Pathogen Potency (max 7)",
+            "statOrder": 4
+          }
+        }
+      },
+      "Grand Plague": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Fecundity": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 1,
+            "max": 6,
+            "group": "World",
+            "groupOrder": 1,
+            "statOrder": 1
+          },
+          "Population Density": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 6,
+            "group": "World",
+            "groupOrder": 1,
+            "statOrder": 2
+          },
+          "Vulnerability": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 1,
+            "max": 6,
+            "group": "World",
+            "groupOrder": 1,
+            "statOrder": 3
+          },
+          "Suitability Score": {
+            "statType": "numeric",
+            "value": 3,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 3,
+            "max": 18,
+            "group": "World",
+            "groupOrder": 1,
+            "statOrder": 4
+          },
+          "Rate of Reproduction": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 1,
+            "max": 6,
+            "group": "Plague",
+            "groupOrder": 2,
+            "statOrder": 5
+          },
+          "Survival Rate": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 1,
+            "max": 6,
+            "group": "Plague",
+            "groupOrder": 2,
+            "statOrder": 6
+          },
+          "Adaptability": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 1,
+            "max": 6,
+            "group": "Plague",
+            "groupOrder": 2,
+            "statOrder": 7
+          },
+          "Reproduction Total": {
+            "statType": "numeric",
+            "value": 2,
+            "visibility": "normal",
+            "min": 0,
+            "max": 12,
+            "group": "Plague Totals",
+            "groupOrder": 3,
+            "statOrder": 8
+          },
+          "Density Total": {
+            "statType": "numeric",
+            "value": 2,
+            "visibility": "normal",
+            "min": 0,
+            "max": 12,
+            "group": "Plague Totals",
+            "groupOrder": 3,
+            "statOrder": 9
+          },
+          "Vulnerability Total": {
+            "statType": "numeric",
+            "value": 2,
+            "visibility": "normal",
+            "min": 0,
+            "max": 12,
+            "group": "Plague Totals",
+            "groupOrder": 3,
+            "statOrder": 10
+          },
+          "Concocting": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Plague Totals",
+            "groupOrder": 3,
+            "label": "Concocting a Plague",
+            "statOrder": 0
+          }
+        },
+        "rules": {
+          "sumReproduction": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Reproduction Total",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Fecundity",
+                    "value"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Rate of Reproduction",
+                    "value"
+                  ]
+                ],
+                "min": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "Plague Total = world characteristic + plague characteristic"
+          },
+          "sumDensity": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Density Total",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Population Density",
+                    "value"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Survival Rate",
+                    "value"
+                  ]
+                ],
+                "min": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "Plague Total = world characteristic + plague characteristic"
+          },
+          "sumVulnerability": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Vulnerability Total",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Vulnerability",
+                    "value"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Adaptability",
+                    "value"
+                  ]
+                ],
+                "min": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "Plague Total = world characteristic + plague characteristic"
+          },
+          "Quest failed: Population Density is 0.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Concocting",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Population Density",
+                    "value"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error",
+            "order": 5
+          },
+          "concocted": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": " — PLAGUE CONCOCTED",
+                "append": ""
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Concocting",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Reproduction Total",
+                    "value"
+                  ]
+                ],
+                "value": 7
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Density Total",
+                    "value"
+                  ]
+                ],
+                "value": 7
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Vulnerability Total",
+                    "value"
+                  ]
+                ],
+                "value": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5,
+            "note": "all three Plague Totals are exactly 7"
           }
         }
       }
@@ -8833,6 +9746,41 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "useCrusadeDeath_Guard": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Grand Plague§A Grand Plague"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
           }
         },
         "stats": {
@@ -14089,7 +15037,64 @@
         },
         "text": "The bearer has a Save characteristic of 2+."
       },
-      "Crusade Honour§Slitherswift Limbs": {
+      "Requisition§Tainted Tinkering": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition at the end of a battle, if you won that battle. You can Brew Your Batch."
+      },
+      "Requisition§Fruits of the Cauldron": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition at the end of a battle. You can Tailor the Toxins."
+      },
+      "Requisition§Remissive Ruse": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition at the end of a battle, if you won that battle. Add 1 to the Population Density characteristic of your world."
+      },
+      "Requisition§Careful Cultivation": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition at the end of a battle, before following the Path of Contagion. When you next follow the Path of Contagion, resolve the Cultivation step twice."
+      },
+      "Requisition§Putrid Ascension": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition when a DEATH GUARD CHARACTER unit from your Crusade force (excluding DAEMON units) that has three Boons of Nurgle reaches the Heroic or Legendary rank. Remove that unit from your Crusade force and replace it with one DEATH GUARD DAEMON PRINCE or DEATH GUARD DAEMON PRINCE WITH WINGS.\n\nIn either case, the new unit has the same number of Battle Honours and XP as the unit it replaced. The new model can keep any Boons of Nurgle the unit it replaced had, even though Daemon models cannot normally have Boons of Nurgle. Any Battle Scars the replaced unit had are not retained. You cannot purchase this Requisition if doing so would cause you to exceed your Crusade force’s Supply Limit."
+      },
+      "Requisition§Wretched Might": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition before a battle. Select one POXWALKERS unit from your Crusade army. Generate a Battle Trait for that unit, even though POXWALKERS units cannot normally have Battle Traits. Until the end of the battle, that POXWALKERS unit has that Battle Trait."
+      },
+      "Crusade Badge§Plague Champion": {
+        "text": "You have a Pathogen Potency of two or more.\nYou have won two or more battles."
+      },
+      "Crusade Badge§Chosen of Nurgle": {
+        "text": "You have concocted one or more Plagues.\nYou have won four or more battles.\nOne or more CHARACTER units from your Crusade force have reached the Heroic rank."
+      },
+      "Crusade Badge§Diseased Daemon Lord": {
+        "text": "You have concocted two or more Plagues.\nYou have a Pathogen Potency Score of seven.\nYou have won ten or more battles.\nOne or more CHARACTER units from your Crusade force have reached the Legendary rank."
+      },
+      "Boon of Nurgle§Slitherswift Limbs": {
         "keywords": {
           "Keywords": [
             "Boons of Nurgle"
@@ -14100,7 +15105,7 @@
         },
         "text": "Add 1 to Advance and Charge rolls made for this model's unit."
       },
-      "Crusade Honour§Veil of Flies": {
+      "Boon of Nurgle§Veil of Flies": {
         "keywords": {
           "Keywords": [
             "Boons of Nurgle"
@@ -14111,7 +15116,7 @@
         },
         "text": "Models in this model's unit have the Stealth ability."
       },
-      "Crusade Honour§Febrile Vitality": {
+      "Boon of Nurgle§Febrile Vitality": {
         "keywords": {
           "Keywords": [
             "Boons of Nurgle"
@@ -14122,7 +15127,7 @@
         },
         "text": "Add 1\" to the Move characteristic of models in this model's unit."
       },
-      "Crusade Honour§Billowing Miasma": {
+      "Boon of Nurgle§Billowing Miasma": {
         "keywords": {
           "Keywords": [
             "Boons of Nurgle"
@@ -14133,7 +15138,7 @@
         },
         "text": "Add 6\" to this model's Contagion Range."
       },
-      "Crusade Honour§Grossly Swollen": {
+      "Boon of Nurgle§Grossly Swollen": {
         "keywords": {
           "Keywords": [
             "Boons of Nurgle"
@@ -14144,7 +15149,7 @@
         },
         "text": "Add 2 to this model's Wounds characteristic."
       },
-      "Crusade Honour§Leprous Insensibility": {
+      "Boon of Nurgle§Leprous Insensibility": {
         "keywords": {
           "Keywords": [
             "Boons of Nurgle"
@@ -14155,7 +15160,7 @@
         },
         "text": "This model has the Feel No Pain 5+ ability."
       },
-      "Crusade Honour§Writhing Tentacles": {
+      "Boon of Nurgle§Writhing Tentacles": {
         "keywords": {
           "Keywords": [
             "Boons of Nurgle"
@@ -14166,7 +15171,7 @@
         },
         "text": "Add 1 to the Attacks characteristic of melee weapons equipped by this model."
       },
-      "Crusade Honour§Touch of Rot": {
+      "Boon of Nurgle§Touch of Rot": {
         "keywords": {
           "Keywords": [
             "Boons of Nurgle"
@@ -14177,7 +15182,7 @@
         },
         "text": "Improve the Armour Penetration characteristic of melee weapons equipped by this model by 1."
       },
-      "Crusade Honour§Plaguesight": {
+      "Boon of Nurgle§Plaguesight": {
         "keywords": {
           "Keywords": [
             "Boons of Nurgle"
@@ -14187,6 +15192,401 @@
           ]
         },
         "text": "Each time this model makes an attack that targets an Afflicted unit, you can re-roll the Hit roll."
+      },
+      "Ability§Burgeoning Fortitude": {
+        "text": "After each Crusade battle, you can ignore your first failed Out of Action test."
+      },
+      "Ability§Eye of Nurgle": {
+        "text": "After each Crusade battle, roll one D6, adding 1 to the result if you won the battle. On a 6+, select one additional unit to be Marked for Greatness."
+      },
+      "Ability§Fecund Fervour": {
+        "text": "After each Crusade battle, each BATTLELINE unit that was part of your Crusade army and survived the battle gains 2XP."
+      },
+      "Ability§Seeping Poisons": {
+        "text": "When a unit from your Crusade force gains the Weapon Modifications Battle Honour, you can choose for that weapon to gain [LETHAL HITS] instead of randomly generating Weapon Modifications for that weapon."
+      },
+      "Ability§Endless Harvest": {
+        "text": "After each Crusade battle, roll one D6: on a 4+, you gain 1 additional Requisition point."
+      },
+      "Ability§Vile Possession": {
+        "text": "Each time you add a VEHICLE unit to your Crusade force, add the DAEMON keyword to that unit’s keywords (if it does not already have it) and that unit gains 6XP (immediately gaining the Blooded rank); select one Battle Honour for it as normal."
+      },
+      "Blessings of Nurgle§Blessings of Nurgle": {
+        "text": "Tick each Blessing of Nurgle your Crusade force has claimed. Each adds 1 to your Crusade points total when determining Crusade Blessings.",
+        "rules": {
+          "Blessing Burgeoning Fortitude": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Burgeoning Fortitude"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Burgeoning Fortitude",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "Blessing Eye of Nurgle": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Eye of Nurgle"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Eye of Nurgle",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "Blessing Fecund Fervour": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Fecund Fervour"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Fecund Fervour",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "Blessing Seeping Poisons": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Seeping Poisons"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Seeping Poisons",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "Blessing Endless Harvest": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Endless Harvest"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Endless Harvest",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "Blessing Vile Possession": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Vile Possession"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Vile Possession",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "blessingsCrusadePts": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Burgeoning Fortitude",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Eye of Nurgle",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Fecund Fervour",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Seeping Poisons",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Endless Harvest",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Vile Possession",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "each Blessing of Nurgle adds 1 Crusade point when determining Crusade Blessings"
+          }
+        }
+      },
+      "Alchemical Pathogen§Alchemical Pathogen": {
+        "text": "Your Pathogen starts with a Duration of 1 and no Properties. Each time a rule lets you **Brew Your Batch**: add 1 to the Duration (max 5), add a Property (with its Drawback, if any), or suppress a Drawback of a Property you have. Pathogen Potency = Duration + Properties + suppressed Drawbacks and can never exceed 7; at 7 you can only **Tailor the Toxins** (Duration −1, remove a Property, or un-suppress a Drawback) and then Brew Your Batch. In your Command phase you can declare your Pathogen active: it lasts a number of your Command phases equal to its Duration; while active, every DEATH GUARD model equipped with a Lethal Hits weapon has each Property's ability (and its Drawback unless suppressed). Note which Properties and Drawbacks you have in the description.",
+        "rules": {
+          "potency": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Potency",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Duration",
+                    "value"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Properties",
+                    "value"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Drawbacks suppressed",
+                    "value"
+                  ]
+                ],
+                "min": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "Pathogen Potency can never exceed 7 — Tailor the Toxins before you Brew Your Batch.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Potency",
+                    "value"
+                  ]
+                ],
+                "max": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          }
+        }
+      },
+      "Grand Plague§A Grand Plague": {
+        "assets": {
+          "traits": [
+            "Blessings of Nurgle§Blessings of Nurgle",
+            "Alchemical Pathogen§Alchemical Pathogen"
+          ]
+        },
+        "text": "**A Grand Plague.** If your Crusade force includes a DEATH GUARD CHARACTER unit and is not attempting to Concoct a Plague, it can attempt to Concoct a Plague. Create the world (Fecundity, Population Density and Vulnerability each 1–6: roll a D6 each or pick an example world, then note the Suitability Score = their sum, which never changes during the attempt). Your plague starts with Rate of Reproduction 1, Survival Rate 1 and Adaptability 1. Your goal is a total of exactly 7 for each of the three Plague Totals.\n\n**Path of Contagion (after each battle):** Reap the Rewards (apply Agenda results) → Check for a Breakthrough → Cultivation (D6, +2 if you won: on 4+ add or subtract 1 from one plague characteristic) → Counteragents (D6: if higher than Adaptability, Vulnerability −1) → Death Toll (D6: if higher than Survival Rate, Population Density −1; at 0 the quest fails) → Final Check for a Breakthrough.\n\n**Success by Suitability Score:** 15–18 Acceptable Offering (one DEATH GUARD CHARACTER gains 2XP; re-roll 5s and 6s when rolling your next world). 11–14 Foul Bounty (2XP; one unit gains a Death Guard Battle Trait). 7–10 A Mighty Pestilence (3XP; claim a permanent Blessing of Nurgle). 3–6 Malign Masterpiece (5XP; claim a permanent Blessing of Nurgle).\n\nBlessings of Nurgle are permanent; each adds 1 to your Crusade points when determining Crusade Blessings. You cannot gain the same Blessing twice."
       }
     },
     "gameModes": {},
