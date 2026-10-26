@@ -1,6 +1,6 @@
 {
   "name": "40k 11e",
-  "revision": "11.2.7",
+  "revision": "11.2.9",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1504,6 +1504,420 @@
             ],
             "evaluate": "OR",
             "failState": "warning"
+          },
+          "campaignTextArmageddonAgendas": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Armageddon Agendas"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mission",
+                    "value"
+                  ]
+                ],
+                "value": "Armageddon"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "campaignTextNachmundGauntletAgendas": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Nachmund Gauntlet Agendas"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mission",
+                    "value"
+                  ]
+                ],
+                "value": "Nachmund Gauntlet"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "campaignTextCrusadeBlessingsTyrannicWar": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Crusade Blessings — Tyrannic War"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mission",
+                    "value"
+                  ]
+                ],
+                "value": "Tyrannic War"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "campaign reference text for the selected Mission"
+          },
+          "campaignTextCrusadeBlessingsPariahNexus": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Crusade Blessings — Pariah Nexus"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mission",
+                    "value"
+                  ]
+                ],
+                "value": "Pariah Nexus"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "campaign reference text for the selected Mission"
+          },
+          "campaignTextCrusadeBlessingsArmageddon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Crusade Blessings — Armageddon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mission",
+                    "value"
+                  ]
+                ],
+                "value": "Armageddon"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "campaign reference text for the selected Mission"
+          },
+          "campaignTextCrusadeBlessingsNachmundGauntlet": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Crusade Blessings — Nachmund Gauntlet"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mission",
+                    "value"
+                  ]
+                ],
+                "value": "Nachmund Gauntlet"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "campaign reference text for the selected Mission"
+          },
+          "campaignTextArmageddonHellscapes": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Armageddon — Hellscapes"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mission",
+                    "value"
+                  ]
+                ],
+                "value": "Armageddon"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "campaign reference text for the selected Mission"
+          },
+          "campaignTextArmageddonGatebreakersnarrativegoals": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Armageddon — Gatebreakers narrative goals"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mission",
+                    "value"
+                  ]
+                ],
+                "value": "Armageddon"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Alliance",
+                    "value"
+                  ]
+                ],
+                "value": "Gatebreakers"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "campaign reference text for the selected Mission"
+          },
+          "campaignTextArmageddonDesecratorsnarrativegoals": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Armageddon — Desecrators narrative goals"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mission",
+                    "value"
+                  ]
+                ],
+                "value": "Armageddon"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Alliance",
+                    "value"
+                  ]
+                ],
+                "value": "Desecrators"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "campaign reference text for the selected Mission"
+          },
+          "campaignTextArmageddonMaraudersnarrativegoals": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Armageddon — Marauders narrative goals"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mission",
+                    "value"
+                  ]
+                ],
+                "value": "Armageddon"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Alliance",
+                    "value"
+                  ]
+                ],
+                "value": "Marauders"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "campaign reference text for the selected Mission"
+          },
+          "campaignTextNachmundGauntletstrategicgoals": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Nachmund Gauntlet — strategic goals"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Mission",
+                    "value"
+                  ]
+                ],
+                "value": "Nachmund Gauntlet"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "campaign reference text for the selected Mission"
           }
         },
         "stats": {
@@ -3198,6 +3612,70 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "Armageddon Agendas need the Armageddon campaign.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Armageddon Agenda"
+                  ]
+                ],
+                "max": 0
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Armageddon"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "Nachmund Gauntlet Agendas need the Nachmund Gauntlet campaign.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Nachmund Gauntlet Agenda"
+                  ]
+                ],
+                "max": 0
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Nachmund Gauntlet"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
           }
         },
         "stats": {
@@ -3273,6 +3751,174 @@
               },
               "Hold Steady": {
                 "order": 22
+              },
+              "Assassinate": {
+                "order": 200,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Lines of Defence": {
+                "order": 201,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Warp Rites": {
+                "order": 202,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Cleanse and Purge": {
+                "order": 203,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Sacrificial Defiance": {
+                "order": 204,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Storm Site": {
+                "order": 205,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Recover Assets": {
+                "order": 206,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Stalwart Defence": {
+                "order": 207,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Trophy Hunter": {
+                "order": 208,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Strategic Dominance": {
+                "order": 209,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Supply Lines": {
+                "order": 210,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Linebreaker": {
+                "order": 211,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Outflanking Engagement": {
+                "order": 212,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Raise the Standard": {
+                "order": 213,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Duel of Honour": {
+                "order": 214,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Marked for Extermination": {
+                "order": 215,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Centre Ground": {
+                "order": 216,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Extend Control": {
+                "order": 217,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Deploy Explosives": {
+                "order": 218,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Grim Defiance": {
+                "order": 219,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Empyric Masters": {
+                "order": 220,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Revel in Carnage": {
+                "order": 221,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Guerrilla Fieldcraft": {
+                "order": 222,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Cut Off the Head": {
+                "order": 300,
+                "tracking": {
+                  "Nachmund Gauntlet Agenda": 1
+                }
+              },
+              "Drive Deep": {
+                "order": 301,
+                "tracking": {
+                  "Nachmund Gauntlet Agenda": 1
+                }
+              },
+              "Search Drop Site": {
+                "order": 302,
+                "tracking": {
+                  "Nachmund Gauntlet Agenda": 1
+                }
+              },
+              "Strike and Purge": {
+                "order": 303,
+                "tracking": {
+                  "Nachmund Gauntlet Agenda": 1
+                }
+              },
+              "Strategic Dominance (Nachmund)": {
+                "order": 304,
+                "tracking": {
+                  "Nachmund Gauntlet Agenda": 1
+                }
               }
             },
             "statOrder": 1,
@@ -3352,6 +3998,174 @@
               },
               "Hold Steady": {
                 "order": 22
+              },
+              "Assassinate": {
+                "order": 200,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Lines of Defence": {
+                "order": 201,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Warp Rites": {
+                "order": 202,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Cleanse and Purge": {
+                "order": 203,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Sacrificial Defiance": {
+                "order": 204,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Storm Site": {
+                "order": 205,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Recover Assets": {
+                "order": 206,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Stalwart Defence": {
+                "order": 207,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Trophy Hunter": {
+                "order": 208,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Strategic Dominance": {
+                "order": 209,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Supply Lines": {
+                "order": 210,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Linebreaker": {
+                "order": 211,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Outflanking Engagement": {
+                "order": 212,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Raise the Standard": {
+                "order": 213,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Duel of Honour": {
+                "order": 214,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Marked for Extermination": {
+                "order": 215,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Centre Ground": {
+                "order": 216,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Extend Control": {
+                "order": 217,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Deploy Explosives": {
+                "order": 218,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Grim Defiance": {
+                "order": 219,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Empyric Masters": {
+                "order": 220,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Revel in Carnage": {
+                "order": 221,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Guerrilla Fieldcraft": {
+                "order": 222,
+                "tracking": {
+                  "Armageddon Agenda": 1
+                }
+              },
+              "Cut Off the Head": {
+                "order": 300,
+                "tracking": {
+                  "Nachmund Gauntlet Agenda": 1
+                }
+              },
+              "Drive Deep": {
+                "order": 301,
+                "tracking": {
+                  "Nachmund Gauntlet Agenda": 1
+                }
+              },
+              "Search Drop Site": {
+                "order": 302,
+                "tracking": {
+                  "Nachmund Gauntlet Agenda": 1
+                }
+              },
+              "Strike and Purge": {
+                "order": 303,
+                "tracking": {
+                  "Nachmund Gauntlet Agenda": 1
+                }
+              },
+              "Strategic Dominance (Nachmund)": {
+                "order": 304,
+                "tracking": {
+                  "Nachmund Gauntlet Agenda": 1
+                }
               }
             },
             "statOrder": 1,
@@ -20413,6 +21227,39 @@
             "failState": "error"
           }
         }
+      },
+      "Ability§Armageddon Agendas": {
+        "text": "**Assassinate.** Each time a model from your Crusade army destroys an enemy CHARACTER unit, that model’s unit gains 2XP. Each time a model from your Crusade army destroys an enemy WARLORD, EPIC HERO or UNBOUND ADVERSARIES CHARACTER unit, that model’s unit gains an additional 2XP.\n\nAt the end of the battle, if the enemy WARLORD is destroyed, you gain 1 strategic point.\n\n**Lines of Defence.** At the end of the battle, you can select either two or three units from your Crusade army (excluding AIRCRAFT and Battle-shocked units). One of these units must be wholly within your deployment zone, one must be wholly within your opponent’s deployment zone, and - if you are selecting three units - the third must be wholly within 12\" of the centre of the battlefield. If you cannot select two units, then you cannot achieve this Agenda. Each selected unit gains 2XP.\n\nAt the end of the battle, if units from your Crusade army gained XP via this Agenda and you were able to select three units that satisfied the conditions above, you gain 1 strategic point.\n\n**Warp Rites.** At the start of the battle, no objective markers have Warp rites completed.\n\n**Warp Rites (Action):** STARTS: Your Shooting phase.\n\nUNITS: One unit from your Crusade army within range of an objective marker that has not had Warp rites completed.\n\nCOMPLETES: End of your turn, if you control that objective marker.\n\nIF COMPLETED: That objective marker has had Warp rites completed and the unit that performed the Action gains 1 Warp counter and 2XP.\n\nAt the end of the battle, if three or more objective markers on the battlefield have had Warp rites completed by your Crusade army, you gain 1 strategic point. A unit cannot gain more than 6XP per battle from this Agenda.\n\n**Cleanse and Purge.** Each time a unit from your Crusade army destroys an UNBOUND ADVERSARIES unit and/or an enemy unit that has one or more Warp counters, that unit gains 1XP (if your unit had no Warp counters when it destroyed that enemy unit, it gains 2XP instead). A unit cannot gain more than 2XP per battle from this Agenda.\n\nAt the end of the battle, if 5 or more units from your Crusade army gained XP from this Agenda, you gain 1 strategic point.\n\n**Sacrificial Defiance.** At the start of the battle, your opponent selects up to two different objective markers on the battlefield. At the end of the battle, select up to one of those objective markers that you control and up to three units from your Crusade army that are within range of that objective marker. Each of those units gains 2XP.\n\nAt the end of the battle, if you control both of those objective markers, you gain 1 strategic point.\n\n**Storm Site.** At the end of your turn, select one unit from your Crusade army that is within range of an objective marker that you control that was controlled by your opponent at the start of the turn. Your unit gains 2XP.\n\n**Recover Assets.** \n\n**Recover Asset (Action):** STARTS: Your Shooting phase.\n\nUNITS: One unit from your Crusade army within range of an objective marker that is not within your deployment zone.\n\nCOMPLETES: Start of your next turn, or the end of the battle, if you control that objective marker.\n\nIF COMPLETED: The unit that performed the Action gains 1XP and you gain 1CP.\n\n**Stalwart Defence.** At the end of your opponent’s turn, if there are no enemy units within your deployment zone, you can select one unit from your Crusade army that is wholly within your deployment zone. Your unit gains 1XP.\n\n**Trophy Hunter.** At the end of the turn, select one unit from your Crusade army that destroyed one or more MONSTER, VEHICLE or UNBOUND ADVERSARIES units during that turn. Your unit gains 2XP.\n\n**Strategic Dominance.** If you cannot match the foe for savagery, outmatch them with discipline. Seize and hold your objectives.\n\nAt the end of the turn, if you control more objective markers in No Man’s Land than your opponent, select up to two units from your Crusade army that are each within range of one or more objective markers in No Man’s Land that you control. Each of those units gains 1XP.\n\n**Supply Lines.** \n\n**Secure or Sabotage (Action):** STARTS: Your Shooting phase.\n\nUNITS: One unit from your Crusade army that is either wholly within your deployment zone, or wholly within your opponent's deployment zone.\n\nCOMPLETES: End of your turn.\n\nIF COMPLETED: The unit that performed the Action gains 1XP if it is wholly within your deployment zone, or 2XP if it is wholly within your opponent’s deployment zone.\n\n**Linebreaker.** At the end of your turn, select one unit from your Crusade army (excluding AIRCRAFT and Battle-shocked units) that is wholly within your opponent’s deployment zone. That unit gains 1XP. If that unit is also wholly within 6\" of your opponent’s battlefield edge, that unit gains 2XP instead.\n\n**Outflanking Engagement.** At the end of your turn, select two units from your Crusade army (excluding Battle-shocked units). Each unit must be wholly within 6\" of a different battlefield edge (excluding your or your opponent’s battlefield edge). Each of the selected units gains 1XP.\n\n**Raise the Standard.** \n\n**Raise Standard (Action):** STARTS: Your Shooting phase.\n\nUNITS: Select up to 3 units from your Crusade army within range of an objective marker. Each unit must be within range of a different objective marker.\n\nCOMPLETES: End of your turn, if you control that objective marker.\n\nIF COMPLETED: Each unit that performed the Action gains 1XP.\n\n**Duel of Honour.** At the end of the turn, select one unit from your Crusade army that destroyed one or more CHARACTER units during that turn. Your unit scores 1XP (your unit scores 2XP instead if one or more of those destroyed CHARACTER units was destroyed by a melee attack).\n\n**Marked for Extermination.** When this Tactical Agenda is generated, your opponent must select two units from their Crusade army that are on the battlefield (if there are less than two units in their Crusade army on the battlefield, they select one unit instead, and if there are none, then this Tactical agenda is abandoned and you generate a new one).\n\nAt the end of the turn, if one or more of the selected enemy units have been destroyed, select one unit from your Crusade army that destroyed one or more of those enemy units this turn; that unit gains 2XP.\n\n**Centre Ground.** At the end of your turn, select one unit from your Crusade army (excluding AIRCRAFT and Battle-shocked units) that is wholly within 3\" of the centre of the battlefield. That unit gains 1XP (that unit gains 2XP instead if there are no enemy units within 6\" of the centre of the battlefield).\n\n**Extend Control.** At the end of your turn, select one unit from your Crusade army that is within range of an objective marker that you control that is within your deployment zone, and select one unit from your Crusade army that is within range of an objective marker that you control that is within No Man’s Land. Each of those units gains 1XP.\n\n**Deploy Explosives.** \n\n**Deploy Explosives (Action):** STARTS: Your Shooting phase.\n\nUNITS: One unit from your Crusade army that is either within 3\" of the centre of the battlefield or wholly within your opponent’s deployment zone.\n\nCOMPLETES: End of your turn.\n\nIF COMPLETED: The unit that performed the Action gains 1XP if it is within 3\" of the centre of the battlefield, or 2XP if it is wholly within your opponent’s deployment zone.\n\n**Grim Defiance.** When this Tactical Agenda is generated, your opponent must select two units from your Crusade army that are on the battlefield (if there are less than two units in your Crusade army on the battlefield, select one unit instead, and if there are none, then this Tactical Agenda is abandoned and you generate a new one). At the end of your opponent’s turn, each of the selected units that is on the battlefield, is not Battle-shocked and has not made a Fall Back move while this Tactical Agenda has been active, gains 1XP. If you cannot achieve this Tactical Agenda (e.g. the selected units are destroyed, Fell Back and/or became Battle-shocked), it is abandoned.\n\n**Empyric Masters.** At the end of the turn, select one unit from your Crusade army that gained one or more Warp counters this turn. That unit gains 1XP.\n\n**Revel in Carnage.** At the end of the turn, select one unit from your Crusade army that destroyed one or more enemy units. Your unit scores 1XP for each enemy unit it destroyed this turn (to a maximum of 3XP).\n\n**Guerrilla Fieldcraft.** \n\n**Guerrilla Fieldcraft (Action):** STARTS: Your Shooting phase.\n\nUNITS: One unit from your Crusade army that is within a terrain feature and not within your deployment zone.\n\nCOMPLETES: End of your opponent’s turn or the end of the battle, if your unit is on the battlefield.\n\nIF COMPLETED: That unit gains 2XP."
+      },
+      "Ability§Nachmund Gauntlet Agendas": {
+        "text": "**Cut Off the Head.** Each time a model from your Crusade army destroys an enemy CHARACTER model, your model’s unit gains 2XP. Each time a model from your Crusade army destroys an enemy WARLORD or EPIC HERO model, your model’s unit gains an additional 2XP.\n\nAt the end of the battle, if the enemy WARLORD model is destroyed, you gain 1SAP.\n\n**Drive Deep.** At the end of the battle, you can select up to three units from your Crusade army (excluding AIRCRAFT) that are wholly within your opponent’s deployment zone. Each of those units gains 3XP.\n\nAt the end of the battle, if three or more units from your Crusade army (excluding AIRCRAFT) are wholly within your opponent’s deployment zone, you gain 1SAP.\n\n**Search Drop Site.** At the start of the battle, all objective markers on the battlefield are unsearched and will remain so until searched.\n\n**Search Drop Site (Action):** STARTS: Your Shooting phase.\n\nUNITS: One unit from your Crusade army within range of an unsearched objective marker.\n\nCOMPLETES: End of your turn, if you control that objective marker.\n\nIF COMPLETED: That objective marker is searched and the unit that completed this Action gains 3XP.\n\nAt the end of the battle, if three or more objective markers on the battlefield have been searched by units from your Crusade army, you gain 1SAP.\n\n**Strike and Purge.** Each time a unit from your Crusade army with the Deep Strike ability destroys an enemy unit, that unit gains 1XP. Each time a unit from your Crusade army with the Deep Strike ability destroys an enemy unit in the same turn it was set up using the Deep Strike ability, that unit gains 2XP instead. A unit cannot gain more than 3XP per battle from this Agenda.\n\nAt the end of the battle, if four or more enemy units were destroyed by units from your Crusade army with the Deep Strike ability during the battle, you gain 1SAP.\n\n**Strategic Dominance (Nachmund).** At the end of your turn, select one unit from your Crusade army that is within 3\" of the centre of the battlefield. That unit gains 1XP.\n\nAt the end of the battle, if units from your Crusade army gained 4 or more XP as a result of this Agenda, you gain 1SAP."
+      },
+      "Ability§Crusade Blessings — Tyrannic War": {
+        "text": "An Underdog in a Tyrannic War battle can select one or more Crusade Blessings from those presented here. The number they can select depends on the difference in Crusade points between the armies, as shown in the table below. The same Crusade Blessing cannot be selected more than once.\n\nNumber of Blessings by difference in Crusade points: 0–4 none, 5–9 one, 10–14 two, 15–19 three, 20+ four.\n\n**Prepared Positions.** Until the start of the second battle round, each time a ranged attack is made against one of your units, if that unit is wholly within your deployment zone, it receives the Benefit of Cover against that attack.\n\n**High Strategy.** You start the battle with 2CP.\n\n**Secret Orders.** You can select one additional Agenda this battle.\n\n**What Doesn'T Kill You....** At the end of the battle, every unit from your army that is not destroyed gains 1XP.\n\n**Critical Strike.** Once per battle, at the start of your Charge phase, you can use this Crusade Blessing. If you do, until the end of the phase, add 1 to Charge rolls made for units from your Crusade army.\n\n**Outmanoeuvre.** At the start of the first battle round, select up to three units from your Crusade army. Each of those units has the Scouts 6\" ability for this battle.\n\n**Dedication to the Cause.** Once per turn, you can re-roll one Battle-shock test taken for a unit from your Crusade army.\n\n**Mass Devouring.** You can only select this Crusade Blessing if your army contains one or more TYRANIDS units. At the end of the battle, if at least half of your opponents units are destroyed or Below Half-strength, your Crusade force gains 1RP If all of your opponent’s units are destroyed or Below Half-strength, your Crusade force gains 3RP instead.\n\n**Hellfire Shells.** You can only select this Crusade Blessing if your army does not contain any TYRANIDS units. Select one unit from your Crusade army. Until the end of the battle, each time a model in that unit makes an attack against a MONSTER or VEHICLE unit, you can re-roll the Wound roll."
+      },
+      "Ability§Crusade Blessings — Pariah Nexus": {
+        "text": "An Underdog in a Pariah Nexus battle can select one or more Crusade Blessings from those presented here. The number they can select depends on the difference in Crusade points between the armies, as shown in the table below. The same Crusade Blessing cannot be selected more than once.\n\nNumber of Blessings by difference in Crusade points: 0–4 none, 5–9 one, 10–14 two, 15–19 three, 20+ four.\n\n**Prepared Positions.** Until the start of the second battle round, each time a ranged attack targets a unit from your Crusade army, if that unit is wholly within your deployment zone, it has the Benefit of Cover against that attack.\n\n**High Strategy.** You start the battle with 2CP.\n\n**Compartmentalised Plans.** You can select one additional Agenda for this battle.\n\n**Defiance Undimmed.** At the end of the battle, each unit from your Crusade army that is not destroyed gains 1XP.\n\n**Fortune Favoured.** Once per battle round, if your Warlord is on the battlefield, you can use the Command Re-roll Stratagem for 0CP.\n\n**Desperate Offensive.** During the first battle round, add 1\" to the Move characteristic of INFANTRY and WALKER units from your Crusade army.\n\n**Linchpin Leadership.** Until the end of the battle, improve the Leadership characteristic of models from your Crusade army by 1 while they are part of an Attached unit.\n\n**Blackstone Bounty.** After the battle, you gain 1 Blackstone Fragment. If you won that battle, you gain an additional 1 Blackstone Fragment.\n\n**Defend the Dig Site.** At the end of the battle, for each unit from your Crusade army that is on the battlefield, you gain 1 Blackstone Fragment (to a maximum of 3).\n\n**Psychic Shielding.** Once per battle, in your opponent’s Shooting phase or at the start of the Fight phase, you can use this Crusade Blessing. If you do, select up to three units from your Crusade army; until the end of the phase, those units have the Feel No Pain 5+ ability against Psychic Attacks.\n\n**Noctilith Augury.** During the Select Strategic Footing step, after Strategic Footing selections have been revealed, you can change your Strategic Footing. If you are playing in a Pariah Nexus campaign, you cannot select this Crusade Blessing more than once per campaign phase.\n\n**Empowered By Faith.** IMPERIUM only.\n\nOnce per battle, at the start of your Command phase, you can use this Crusade Blessing. If you do, until the start of your next Command phase, each time an Attached unit from your Crusade army takes a Battle-shock or Leadership test, you can re-roll that test.\n\n**Rightful Heirs.** NECRONS only.\n\nAt the start of your Command phase, select one NECRONS INFANTRY unit from your Crusade army. Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in that unit.\n\n**Unexpected Meddlers.** Excluding IMPERIUM and NECRONS\n\nAfter both players have deployed their armies, you can select up to two units from your Crusade army and redeploy them. When doing so, those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.\n\n### Agendas\n\nAgendas offer unique and exciting ways for your units to gain additional Experience points in a Crusade battle. From assassinating key enemy leaders to going on guerrilla recon missions, there are a whole range of different Agendas you can choose from to best suit your Crusade force’s narrative. When playing a Pariah Nexus Crusade mission you can select from the following Agendas.\n\nSome Agendas will award Experience points or tally marks each time’ an enemy model or unit is destroyed. A model or unit can, if it is resurrected for any reason (i.e. it was destroyed and subsequently returned to the battlefield), potentially contribute several Experience points or tally marks to these types of Agendas (assuming it is resurrected and subsequently destroyed several times over)."
+      },
+      "Ability§Crusade Blessings — Armageddon": {
+        "text": "An Underdog in an Armageddon battle can select one or more Crusade Blessings from those presented here. The number they can select depends on the difference in Crusade points between the armies, as shown in the table below. The same Crusade Blessing cannot be selected more than once.\n\nNumber of Blessings by difference in Crusade points: 0–4 none, 5–9 one, 10–14 two, 15–19 three, 20+ four.\n\n**Grand Strategist.** You start the battle with 2CP.\n\n**For Honour and Glory.** Select one additional Armageddon Agenda this battle.\n\n**Tempered in the Fires of War.** At the end of the battle, each unit from your Crusade army that is not destroyed gains 2XP.\n\n**Sorcerous Might.** Each time you select a PSYKER unit from your Crusade army to shoot or fight, if that unit has one or more Warp counters, you can remove one of them. If you do, until the end of the phase, each time a model in that unit makes an attack with a Psychic weapon, add 1 to the Wound roll.\n\n**Front-Line Operatives.** BATTLELINE and PSYKER units in your Crusade army that perform an Action are still eligible to shoot in that turn (but cannot start to perform another Action in that turn).\n\n**Storm-Speaker.** Once per battle, whenever you generate Anomalies, if your WARLORD is on the battlefield, you can re-roll one or more of the results. If your WARLORD is a PSYKER, you can do this up to twice per battle.\n\n**Daemon Hunters.** Each time a model in your Crusade army makes an attack that targets an UNBOUND ADVERSARIES unit, you can re-roll the Hit roll.\n\n**Stygian Darkness.** Until the start of the second battle round, each unit from your Crusade army has the Stealth ability.\n\n**To the Victor the Spoils.** If you are the Victor in this battle, you gain 1RP. If you are the Victor, and the difference in Crusade points between your Crusade army and your opponent’s Crusade army is 10 or more, you gain 2RP instead.\n\n**Ready and Waiting.** Until the start of the second battle round, each time a ranged attack is made against one of your units, if that unit is wholly within your deployment zone, it receives the Benefit of Cover against that attack. In addition, once per battle, you can target one BATTLELINE unit in your Crusade army with the Fire Overwatch Stratagem for 0CP.\n\n**Strategic Gambit.** At the end of the battle, roll one D6, adding 3 to the result if you were the victor: on a 4+, you gain 1 strategic point.\n\n**Faith and Duty.** (Imperium Only) At the start of the battle, select one objective marker on the battlefield. While a model from your Crusade army is within range of that objective marker, unless that unit is Battle-shocked, add 1 to that model’s Objective Control characteristic.\n\n**Slaves to Darkness.** (Chaos Only) Once per battle, at the start of the Unbound Adversaries turn, you can select one UNBOUND ADVERSARIES unit on the battlefield. Until the end of the turn, that unit treats the units in your Crusade army as friendly units.\n\n**Dread Raiders.** (Excluding Imperium & Chaos) After both players have deployed their armies, you can select up to two units from your Crusade army and redeploy them. When doing so, those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.\n\n### Agendas\n\nAgendas offer unique and exciting ways for your units to gain additional Experience points in a Crusade battle. From assassinating key enemy leaders to going on guerrilla recon missions, there are a whole range of different Agendas you can choose from to best suit your Crusade force’s narrative. When playing an Armageddon Crusade mission you can select from the following Agendas.\n\nSome Agendas will award Experience points (XP) or tally marks ‘each time’ an enemy model or unit is destroyed. A model or unit can, if it is resurrected for any reason (i.e. it was destroyed and subsequently returned to the battlefield), potentially contribute several Experience points or tally marks to these types of Agendas (assuming it is resurrected and subsequently destroyed several times over)."
+      },
+      "Ability§Crusade Blessings — Nachmund Gauntlet": {
+        "text": "An Underdog in a Nachmund Gauntlet battle can select one or more Crusade Blessings from those presented here. The number they can select depends on the difference in Crusade points between the armies, as shown in the table below. The same Crusade Blessing cannot be selected more than once.\n\nNumber of Blessings by difference in Crusade points: 0–4 none, 5–9 one, 10–14 two, 15–19 three, 20+ four.\n\n**High Strategy.** You start the battle with 2CP.\n\nASTROPATHIC COMMUNIQUÉ\n\nHurled through the maelstrom of the Warp by a determined and powerful mind, this vital psychic warning races ahead of the incoming foe and provides crucial tactical insight.\n\nSelect one additional Agenda this battle.\n\n**Scars of Experience.** At the end of the battle, every unit from your Crusade army that is not destroyed gains 1XP.\n\n**Tactical Gains.** At the end of the battle, roll one D6, adding 3 to the result if you were the victor: on a 4+, you gain 1 Strategic Asset point (pg 72).\n\n**Stalwarts.** BATTLELINE units from your Crusade army that perform an Action are still eligible to shoot in that turn, and BATTLELINE units from your Crusade army can perform Actions while within Engagement Range of one or more enemy units.\n\n**Teleportarium.** During the Declare Battle-formations step, you can select two BATTLELINE units from your Reinforcement waves, or one other unit. The selected units have the Deep Strike ability.\n\n**Drop Zone Denial.** (Imperium Only) At the start of the battle, select one of your opponent’s Reinforcement waves. That wave cannot be selected to arrive during the second battle round.\n\n**Warp Assault.** (Chaos Only) Each time a unit from your Crusade army performs a Surgical Deep Strike, before any Deep Strike tests are made, select one enemy unit within 6\" of your unit; that unit must take a Battle-shock test.\n\n**Clandestine Goals.** (Excluding Imperium & Chaos) If the foe does not truly understand your enigmatic plans, they have little chance of preventing their fulfilment.\n\nAt the start of the battle, select one objective marker on the battlefield. While a model from your Crusade army is within range of that objective marker, unless that model’s unit is Battle-shocked, add 1 to that model’s Objective Control characteristic."
+      },
+      "Ability§Armageddon — Hellscapes": {
+        "text": "The rules in this section let you play battles in which the barriers between reality and the Warp are breaking down. Science and reason cease to apply as warriors find they can cross into another dimension with one wrong step or that time or gravity don’t work as they used to. The rules also explain Actions - which are used not only in Hellscapes but also in the missions found elsewhere in this book - and Warp counters, a resource used in Hellscapes and Anomalies that represent the growing influence of the Warp on your warriors, and their growing power as a result.\n\n**Folded Space.** HELLSCAPE\nThe empyric energies flowing across Armageddon play havoc with spatial geometry. For those willing to risk mind, body and soul, this provides a great opportunity, enabling them to traverse the Warp to outflank their foes.\nPERILOUS SHORTCUT (ACTION)\nUNITS: One unit from your Crusade army that is within range of an objective marker within your deployment zone that you control.\nCOMPLETES: End of your turn.\nIF COMPLETED: Remove your unit from the battlefield and set it up again anywhere wholly within your opponent’s deployment zone that is more than 3\" horizontally away from all enemy models. Give your unit one Warp counter.\n\n**Fractured Realm.** HELLSCAPE\nThe veil between reality and the Warp has been perforated. Screaming Warp rifts erupt into the combatants’ midst, threatening to ensnare and consume those who stray too close.\nRift: The rift extends in all directions from each objective marker, as detailed on the table below.\nEphemeral: While a model is wholly within the rift, each time that model makes an attack, it must target a unit within the rift, or that is within Engagement Range of that model’s unit. While a model is not wholly within the rift, each time that model makes an attack, it cannot target a unit that is wholly within the rift, unless its unit is within Engagement Range of that unit.\nEmpyric Anomaly: Give one Warp counter to each unit that is wholly within the rift. |\n\n**Fading Reality.** HELLSCAPE\nAs rival armies join battle, the fabric of reality begins to decay around them. The Warp tears at the minds and bodies of the combatants, pulling apart the weak of will and casting the tortured remnants of their souls into the unforgiving depths of the Warp.\nFading: From the second battle round onwards, at the end of your opponent’s turn, or at the end of the battle (whichever happens first), roll one D6 for each unit from your Crusade army not wholly within your deployment zone. On a 4+, give that unit one Warp counter. Then, for each unit from your Crusade army that has two or more Warp counters, remove it from the battlefield. It is destroyed (but does not have to take an Out of Action test). If that unit is a TRANSPORT, and there are one or more units embarked within that TRANSPORT, those embarked units are destroyed, but do not have to take an Out of Action test.\nFORCE OF WILL (ACTION)\nUNITS: One unit from your Crusade army on the battlefield.\nCOMPLETES: End of your turn.\n\n**Scattered Coordinates.** HELLSCAPE\nThe corrupted bedrock of Armageddon shifts and mutates with each passing moment; this unnatural upheaval enables isolated units to infiltrate enemy positions but renders effective navigation almost entirely impossible.\nScattered: Until the end of the battle, each unit has the Infiltrators ability.\nBlind Drop: Until the end of the battle, each time you set up a unit using the Deep Strike ability, that unit must be set up more than 9\" horizontally away from all enemy models and wholly within 6\" of one battlefield edge.\nSIGNAL FLARE (ACTION)\nUNITS: One unit from your Crusade army on the battlefield.\n\n**Staggered Time.** HELLSCAPE\nThe overwhelming influence of the Warp disrupts the flow of time. Opportunistic combatants may exploit such phenomena, bending the laws of time and space to surge towards their objectives.\nDelayed Haste: At the end of your opponent’s Movement phase, for each of your units with one or more Warp counters you can remove one of that units Warp counters. If you do, that unit can make a Normal Move of up to D6\".\nSAVING TIME (ACTION)\nUNITS: One or more units from your Crusade army on the battlefield.\nCOMPLETES: End of your turn.\n\n**Banishing Rifts.** HELLSCAPE\nThe influx of Warp energies spilling from the Red Angel’s Gate empowers the sorcery of psykers, enabling them to unleash baleful powers and cast their foes out of reality.\nBANISHING RITUAL (ACTION)\nUNITS: Two units from your Crusade army that are each within range of a different objective marker that you control.\nCOMPLETES: End of your turn.\nIF COMPLETED: Give one Warp counter to each unit performing this Action. Draw a line from the centre of one of those objective markers to the centre of the other objective marker. Units that line passes over suffer D3 mortal wounds and are then placed into Strategic Reserves.\n\n**Gravitic Nexus.** HELLSCAPE\nAs this battle rages, constant gravitic fluctuations play havoc with the opposing armies.\nGravitic Nexus: Each objective marker within No Man’s Land is a Gravitic Nexus in addition to any other rules. Each Gravitic Nexus begins the game in the enhanced state, but can change state during the battle.\nWhile a Gravitic Nexus is in the enhanced state, each time a unit (excluding AIRCRAFT) is selected to make a Normal, Advance or Fall Back move within 9\" of that Gravitic Nexus, until the end of that move, subtract 2 from the Move characteristic of each model in that unit, and that unit does not have the FLY keyword.\nWhile a Gravitic Nexus is in the inverted state each time a unit (excluding AIRCRAFT, and VEHICLES other than WALKERS) is selected to make a Normal, Advance or Fall Back move within 9\" of that Gravitic Nexus, until the end of that move, add 2 to the Move characteristic of each model in that unit, and that unit has the FLY keyword.\nINVERT NEXUS (ACTION)\n\n**Endless Nightmare.** HELLSCAPE\nThe nightmare vistas of the Fire Wastes are as taxing upon the mind as the body. Khorne’s desire for endless war and the eternal flowing of blood ensures that death itself provides no guarantee of salvation.\nNo Respite: Until the start of the fourth battle round, each time a unit with no Warp counters is destroyed, excluding CHARACTER units, that unit’s player rolls a D6. If the result is greater than the current battle round number, that player places that unit into Strategic Reserves at its Starting Strength with all lost wounds regained, although any [one shot] weapons equipped by models in that unit that were shot before they were destroyed have still been shot. Give that unit one Warp counter.\nDesigner’s Note: This rule is resolved before any other rules that allow you to place a destroyed unit into Reserves, or add a new unit identical to a destroyed unit to your Crusade army (e.g. Cult Ambush). If, when this rule is resolved, the player rolls greater than the battle round number, those other rules are not resolved. Otherwise, those rules are resolved as normal. |\n\n**Anomalies** (Empyric Anomaly 10, Warp Surge Anomaly 11) and the Warp Events/Warp counters rules are on the Armageddon pages."
+      },
+      "Ability§Armageddon — Gatebreakers narrative goals": {
+        "text": "Four campaign phases; each phase your alliance attempts one narrative goal. Success and failure each point to the next goal.\n\n**Stabilising the Front.** Stabilising the front lines on Armageddon’s principal continents will provide a stable foundation for its defenders.\nAt the end of each battle,if you are the victor, gain five strategic points.\nRESURGENT MORALE\nSUCCESS\nIn the next campaign phase, attempt the Reclaim the Lost Hives narrative goal, and each time you purchase the Increase Supply Limit requisition, increase your Crusade force’s supply limit by 250 points, instead of 200.\nGRIM DETERMINATION\nFAILURE\nIn the next campaign phase, attempt the Strengthen the Imperator Line narrative goal, and in each battle, the first time a unit from your Crusade army fails a Battle-shock test, that unit instead passes that test.\nII\n\n**Reclaim the Lost Hives.** Building on early success, the Gatebreakers of Armageddon strike to seize and cleanse the fallen Hives of Hades and Thoraddis.\nAt the end of each battle, if two or more units from your Crusade army (excluding AIRCRAFT and Battle-shocked units) are wholly within your opponent’s deployment zone, gain five strategic points.\nCOMMANDING GRASP\nSUCCESS\nIn the next campaign phase, attempt the Raze the Monoliths narrative goal, and in each battle, in your second Reinforcement step, you can select one unit from your Crusade army in Strategic Reserve. Set up that unit on the battlefield as if it were the third battle round.\nSTAGED WITHDRAWAL\nFAILURE\nIn the next campaign phase, attempt the Light in the Dark narrative goal, and in each battle, at the start of the Declare Battle Formations step, you can select one INFANTRY or BATTLELINE unit from your Crusade army. All models in that unit have the Scouts 6\" ability until the end of the battle.\nIII\n\n**Strengthen the Imperator Line.** Having suffered a series of defeats, the Gatebreakers must reinforce their defences before they can resume their offensive.\nAt the end of each battle, if no enemy units (excluding AIRCRAFT and Battle-shocked units) are wholly within your deployment zone, gain five strategic points.\nIMPENETRABLE WALL\nSUCCESS\nIn the next campaign phase, attempt the Raze the Monoliths narrative goal, and each time you select a unit from your Crusade army to be Marked for Greatness, it gains an additional 1XP.\nDEFENSIVE SWEEP\nFAILURE\nIn the next campaign phase, attempt the Light in the Dark narrative goal, and in each battle, enemy units cannot be set up within your deployment zone (except when disembarking).\nIV\n\n**Raze the Monoliths.** With momentum behind them, the defenders of Armageddon make a bold strike to destroy the monoliths anchoring the Red Angel’s Gate in reality.\nAt the end of each battle, if you control one or more objective markers within your opponent’s deployment zone, gain five strategic points.\nRIGHTEOUS RESOLVE\nSUCCESS\nIn the next campaign phase, attempt the Shatter the Red Angel’s Gate narrative goal, and in each battle, each time an enemy model makes an attack that targets a unit from your Crusade army with one or more Warp counters, subtract 1 from the Wound roll.\nDESPERATION\nFAILURE\nIn the next campaign phase, attempt the Shatter the Red Angel’s Gate narrative goal, and in each battle, at the start of your Command phase, you can select one unit from your Crusade army. Add or remove one Warp counter to/from that unit.\nV\n\n**Light in the Dark.** As the planet descends into chaos, the Gatebreakers’ forces remain as beacons of hatred and defiance, steadfast in the face of the foe.\nAt the end of each battle, if the points value of destroyed units from your opponent’s Crusade army is higher than that of destroyed units from your Crusade army, gain five strategic points.\nFAITH REKINDLED\nSUCCESS\nIn the next campaign phase, attempt the Shatter the Red Angel’s Gate narrative goal, and in each battle, each time a model from your Crusade army makes an attack that targets a unit with one or more Warp counters, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.\nFORLORN HOPE\nFAILURE\nIn the next campaign phase, attempt the Shatter the Red Angel’s Gate narrative goal, and in each battle, once per turn, you can re-roll one charge roll made for a unit from your Crusade army.\nVI\n\n**Shatter the Red Angel’s Gate.** The Gatebreakers throw everything into a final assault upon the Red Angel’s Gate. Only by sealing the portal can Angron’s invasion of Armageddon be foiled.\nIn each battle, at the start of the first battle round, gain a number of Command points equal to your alliance’s campaign points (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).\nAt the end of each battle, if you are the victor, gain five strategic points."
+      },
+      "Ability§Armageddon — Desecrators narrative goals": {
+        "text": "Four campaign phases; each phase your alliance attempts one narrative goal. Success and failure each point to the next goal.\n\n**Planetfall.** The Desecrators make a sudden assault on Armageddon, seeking to slaughter their unsuspecting foes and seize beachheads on the planet’s surface.\nAt the end of each battle, if you are the victor, gain five strategic points.\nREWARDS OF SUCCESS\nSUCCESS\nIn the next campaign phase, attempt the Vile Rituals narrative goal, and each time you win a battle, roll a D6: on a 4+ gain 1 additional RP.\nSCOURGE OF FAILURE\nFAILURE\nIn the next campaign phase, attempt the Corrupt the Fire Wastes narrative goal, and each time a unit from your Crusade army takes a Battle-shock test, if your WARLORD model is within 6\" of that unit, your unit passes that test.\nII\n\n**Vile Rituals.** Having seized territory in Armageddon Prime and Secundus, the forces of the Desecrators set about enacting vile rituals and raising fell idols to their Blood God, seeking to drown the world in empyric energies.\nIn each battle, each time a unit from your Crusade army that is within range of one objective marker within No Man’s Land destroys one or more enemy units in the Fight phase, that objective marker is desecrated. At the end of the battle, if half or more of the objective markers within No Man’s Land are desecrated, gain five strategic points.\nTHE STORM BREAKS\nSUCCESS\nIn the next campaign phase, attempt the Feed the Storm narrative goal, and in each battle, at the start of your Command phase, you can select one unit from your Crusade army. Add or remove one Warp counter to/ from that unit.\nGREATER SACRIFICES\nFAILURE\nIn the next campaign phase, attempt the The Dark Gods Demand narrative goal, and while a unit from your Crusade army is Below Half-strength, weapons equipped by models in that unit have the [LETHAL HITS] ability.\nIII\n\n**Corrupt the Fire Wastes.** Thwarted in their initial invasion, the Desecrators regroup in the Fire Wastes, focusing on fortifying and empowering the Red Angel’s Gate.\nAt the end of each battle, if three or more units from your Crusade army are each wholly within 9\" of a different battlefield edge, gain five strategic points.\nSPREADING CORRUPTION\nSUCCESS\nIn the next campaign phase, attempt the Feed the Storm narrative goal, and while you control more objective markers in No Man’s Land than your opponent, each time Anomalies would be generated, you can re-roll one result on the Anomalies table.\nFULLY COMMITTED\nFAILURE\nIn the next campaign phase, attempt the The Dark Gods Demand narrative goal, and each time you use a Stratagem, if you spent one or more CP to use that Stratagem, roll a D6: on a 5+, gain one CP.\nIV\n\n**Feed the Storm.** The Red Angel’s Gate grows ever larger. To ensure victory, the Desecrators need only feed the storm gathering at Armageddon’s pole with worthy sacrifices.\nAt the end of each battle, gain five strategic points if both of the following from your opponent’s Crusade army are not on the battlefield:\nThe WARLORD model.\nThe unit with the highest points value (or joint highest).\nFAITH REWARDED\nSUCCESS\nIn the next campaign phase, attempt the Warp Made Manifest narrative goal, and at the end of each battle, each CHARACTER unit from your Crusade army on the battlefield gains 1XP.\nALL OR NOTHING\nFAILURE\nIn the next campaign phase, attempt the Warp Made Manifest narrative goal, and in each battle, each time a model in a unit from your Crusade army is destroyed, if that unit is within range of one or more objective markers and if that model has not fought this phase, roll one DO. On a 5+, do not remove the destroyed model from play; it can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.\nV\n\n**The Dark Gods Demand.** The Gods of Chaos brook neither failure nor weakness. No matter the cost in lives, the Desecrators must achieve victory here.\nAt the end of each battle, if you control the objective marker closest to the centre of the battlefield (or each of those objective markers, if those objective markers are the same distance from the centre of the battlefield), gain five strategic points.\nKHORNE’S FAVOUR\nSUCCESS\nIn the next campaign phase, attempt the Warp Made Manifest narrative goal, and for each CHARACTER unit in your Crusade army, once per turn, you can re-roll one Hit roll, one Wound roll or one Damage roll for that unit.\nA NEW CHAMPION RISES\nFAILURE\nAt the start of the next campaign phase, you can select one CHARACTER unit from your Crusade force. Remove that CHARACTER unit from your Crusade force, then add an identical CHARACTER unit to your Army Roster with the same number of battle traits as the one you removed, plus one more.\nIn the next campaign phase, attempt the Warp Made Manifest narrative goal.\nVI\n\n**Warp Made Manifest.** The hour of victory is at hand. The Desecrators need only protect the Red Angel’s Gate and continue to ensure that the blood flows through Armageddon.\nIn each battle, at the start of the first battle round, gain a number of Command points equal to your alliance’s campaign points (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).\nAt the end of each battle, if you are the victor, gain five strategic points."
+      },
+      "Ability§Armageddon — Marauders narrative goals": {
+        "text": "Four campaign phases; each phase your alliance attempts one narrative goal. Success and failure each point to the next goal.\n\n**Drawn to the Fight.** Striking from the equatorial jungle or other hidden haunts, rival forces larger than any had anticipated swarmed over Armageddon, taking both invaders and defenders by surprise.\nAt the end of each battle, if you are the victor, gain five strategic points.\nSPOILS OF VICTORY\nSUCCESS\nIn the next campaign phase, attempt the Forgotten Relics narrative goal, and each time a CHARACTER unit from your Crusade army can gain a Crusade Relic, it can gain an Antiquity Relic (regardless of its rank).\nBLUNTED MOMENTUM\nFAILURE\nIn the next campaign phase, attempt the Escalation narrative goal, and after each battle in which you are not the victor, the first time you purchase the Increase Supply Limit Requisition before your next battle, it costs 1 fewer RP than it normally would.\nII\n\n**Forgotten Relics.** Marauding forces have seized sites of power and uncovered long-buried treasures of incalculable worth. Now, they mean to wield them in anger.\nAt the start of the first battle round, select one unit from your Crusade army with the highest XP (or tied for highest XP). At the end of the battle, if that unit destroyed one or more units in that battle, gain five strategic points.\nALPHA STRIKE\nSUCCESS\nIn the next campaign phase, attempt the Decapitation narrative goal, and each time the enemy WARLORD is destroyed, each enemy unit on the battlefield must take a Battle-shock test.\nGUERRILLA WARFARE\nFAILURE\nIn the next campaign phase, attempt the Bloodied but Unbowed narrative goal, and in each battle in which you are the Attacker, at the start of the Declare Battle Formations step, you can select one INFANTRY unit from your Crusade army. Until the end of the battle, all models in that unit have the Infiltrators ability.\nIII\n\n**Escalation.** Although the Marauders’ initial attacks failed to find purpose, the unfolding carnage acts as a lure to their battle-hungry kin, drawing more and more combatants into the fight.\nAt the end of each battle, if three or more units from your Crusade army are each wholly within a different quarter of the battlefield, gain five strategic points.\nOVERWHELMING NUMBERS\nSUCCESS\nIn the next campaign phase, attempt the Decapitation narrative goal, and at the end of each battle, each BATTLELINE unit from your Crusade army that is on the battlefield gains 1XP.\nSPITEFUL ONSLAUGHT\nFAILURE\nIn the next campaign phase, attempt the Bloodied but Unbowed narrative goal, and each time a CHARACTER unit from your Crusade army declares a charge, you can re-roll the Charge roll.\nIV\n\n**Decapitation.** The rogue forces marauding across Armageddon now aim to eliminate the leaders of the factions warring there, opening a route to victory.\nAt the end of each battle, if there are no CHARACTER models from your opponent’s Crusade army on the battlefield, gain five strategic points.\nEASY PICKINGS\nSUCCESS\nIn the next campaign phase, attempt the Endless War narrative goal, and each time a model from your Crusade army makes an attack that targets a non-CHARACTER unit, re-roll a Hit roll of 1.\nSWORN ENEMIES\nFAILURE\nIn the next campaign phase, attempt the Endless War narrative goal, and each time a model from your Crusade army makes a melee attack that targets a CHARACTER unit, you can re-roll the Hit roll.\nV\n\n**Bloodied but Unbowed.** Reduced in number and fighting in isolated pockets across Armageddon, the Marauders remain capable of causing great pain to their foes.\nAt the end of each battle, if more units from your Crusade army are in your opponent’s deployment zone than units from their Crusade army, gain five strategic points.\nEXPLOITED WEAKNESS\nSUCCESS\nIn the next campaign phase, attempt the Endless War narrative goal, and each time your opponent uses a Stratagem, if they spent one or more CP to do so, and if your WARLORD is on the battlefield, roll a D6: on a 5+, gain one CP.\nCOMMIT THE RESERVES\nFAILURE\nIn the next campaign phase, attempt the Endless War narrative goal, and each time you add a unit to your Crusade force, that unit gains 3XP, or 6XP if it is a BATTLELINE unit.\nVI\n\n**Endless War.** If the Marauders can keep either of the other forces from victory, they may secure a war that will never end.\nIn each battle, at the start of the first battle round, gain a number of Command points equal to your alliance’s campaign points (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).\nAt the end of each battle, if you are the victor, gain five strategic points."
+      },
+      "Ability§Nachmund Gauntlet — strategic goals": {
+        "text": "Three phases; each alliance (Guardians, Despoilers, Marauders) has a strategic goal per phase, resolved with Strategic Asset Points at the four Sangua Terra strategic sites.\n\n**Phase 1.** COUNTER-STRATEGIES\nApply pressure wherever the foe shows their hand.\nREQUIREMENTSGUARDIANS ONLY\nYour alliance has gained more SAP than one or more other alliances.\nREWARDS+1 CONTROL LEVEL\nThis reward is claimed after all other alliances have claimed their rewards from Strategic Goals this phase. Your alliance gains +1 Control Level in each strategic site that one or more opposing alliances have increased their Control Level over this campaign phase.\nBLOODY WINNINGS\nDrive the enemy from your chosen territories and festoon the battlefield with gory trophies.\nREQUIREMENTSDESPOILERS ONLY\nSelect two strategic sites. Your alliance has assigned more SAP to those strategic sites than one or more other alliances (this does not need to be the same alliance for each selected strategic site).\nREWARDS+1 CONTROL LEVEL\nYour alliance gains +1 Control Level in one strategic site where you are Establishing Foothold, and +1 Control Level in one strategic site where one or more opposing alliances are Establishing Foothold.\nUNOPPOSED GAINS\nWhile your enemies battle one another elsewhere, further your own insidious goals in the shadows.\nREQUIREMENTSMARAUDERS ONLY\nYour alliance has assigned 1 or more SAP to a strategic site where one or more one other alliances have not assigned SAP.\nREWARDS+1 CONTROL LEVEL\nYour alliance gains +1 Control Level in each strategic site where your alliance has assigned SAP and where all other alliances have No Presence.\nDECISIVE FIRST STRIKE\nA swift and decisive strike achieves dominance.\nREQUIREMENTS\nSelect one strategic site. Your alliance has assigned more SAP to that strategic site than the combined SAP assigned to that strategic site of all other alliances.\nREWARDS+1 CONTROL LEVEL\nYour alliance gains +1 Control Level in that strategic site.\nRECON IN FORCE\nBroad intelligence gathering allows for more informed strategic decisions as the war rages on.\nREQUIREMENTS\nYour alliance has assigned one or more SAP to each strategic site.\nREWARDS+1 CONTROL LEVEL\nYour alliance gains +1 Control Level in each strategic site that your alliance has No Presence.\n\n**Phase 2.** CONSOLIDATE POSITION\nBuild on your successes by fortifying the ground you have already taken.\nREQUIREMENTSGUARDIANS ONLY\nSelect two strategic sites where your Control Level Securing Positions or better. Your alliance has assigned more SAP to those strategic sites than one or more other alliances (this does not need to be the same alliance for each selected strategic site).\nREWARDS+1 CONTROL LEVEL\nYour alliance gains +1 Control Level in both of those strategic sites.\nWREST CONTROL\nThat which your foes prize must be torn from their grasp without mercy.\nREQUIREMENTSDESPOILERS ONLY\nSelect a strategic site controlled by one other alliance. This Strategic Goal is achieved if your alliance has assigned more SAP to it than that alliance has.\nREWARDS+2 CONTROL LEVEL\nYour alliance gains +2 Control Level at that strategic site.\nDARING RAIDS\nStriking and fading, you must harry your enemies to pillage their supplies and weaken their morale.\nREQUIREMENTSMARAUDERS ONLY\nYour alliance has assigned at least 1SAP per player in your alliance to three or more strategic sites.\nFor example, if your alliance had three players, your alliance would need to assign at least three Strategic Asset points to at least three different strategic sites to achieve this Strategic Goal.\nREWARDS+1 CONTROL LEVEL\nYour alliance gains +1 Control Level at each strategic site where one or more opposing alliances have Establishing Foothold (or better).\nRAID SUPPLY LINES\nSever the foe’s lines of supply, reinforcement and communication to disrupt their plans.\nREQUIREMENTS\nSelect one strategic site. Your alliance has assigned more SAP to that strategic site than each other alliance, but your alliance’s Control Level has not increased in that strategic site.\nREWARDS-1 CONTROL LEVEL\nAll other alliances lose -1 Control Level in that strategic site.\nSHIFTING PRIORITIES\nDraw the enemy in then pivot swiftly to a new disposition, seizing vital territory in the process.\nREQUIREMENTS\nSelect two strategic sites where your alliance has Establishing Foothold (or better). Your alliance has at least 1SAP per player in your alliance assigned to those strategic sites.\nREWARDS\n-1 CONTROL LEVEL+3 CONTROL LEVEL\nYour alliance loses -1 Control Level in both of those strategic sites, but your alliance gains +3 Control Level in one other strategic site.\n\n**Phase 3.** STRATEGIC GAMBIT\nIf this grand gamble pays off it will strengthen your position across the city sprawl.\nREQUIREMENTS\nSelect two strategic sites. This Strategic Goal is achieved if your alliance has assigned the most SAP to each of those strategic sites.\nREWARDS\n-2 CONTROL LEVEL+1 CONTROL LEVEL\nYour alliance loses -2 Control Level from one of the selected strategic sites, but your alliance gains +1 Control Level in all other strategic sites.\nTIP THE SCALES\nA precisely measured application of force will set you ahead of your foes at the crucial moment.\nREQUIREMENTS\nSelect one strategic site. Your alliance has assigned more SAP to that strategic site than one or more other alliances.\nREWARDS+1 CONTROL LEVEL\nYour alliance gains +1 Control Level at all strategic sites where you have the same Control Level as one or more other alliances.\nREINFORCE DEFENCES\nTransform hastily seized and bolstered portions of the cityscape into veritable fortresses.\nREQUIREMENTSGUARDIANS ONLY\nSelect all strategic sites that are Fortified. Your alliance has assigned more SAP to those strategic sites than one or more other alliances (this does not need to be the same alliance for each selected strategic site).\nREWARDS+1 CONTROL LEVEL\nYour alliance gains +1 Control Level in each strategic site your alliance has Fortified.\nRAZE DEFENCES\nShatter the enemy’s strongpoints and cast their banners into the dirt.\nREQUIREMENTSDESPOILERS ONLY\nSelect one strategic site where an opposing alliance has Fortified. This Strategic Goal is achieved if your alliance has assigned the most SAP to that strategic site.\nREWARDS-1 CONTROL LEVEL\nAll opposing alliances lose -1 Control Level in that strategic site.\nCUNNING FEINT\nWith the enemy convinced of your strategic goals, it is time to strike at your true target.\nREQUIREMENTSMARAUDERS ONLY\nSelect a strategic site where your alliance has Establishing Foothold (or better). This Strategic Goal is achieved if your alliance has not assigned any SAP to that strategic site and all opposing alliances have assigned 1 or more SAP to that strategic site.\nREWARDS\n-1 CONTROL LEVEL+2 CONTROL LEVEL\nYour alliance loses -1 Control Level at that strategic site, but your alliance gains +2 Control Level at any other strategic site.\n### Mighty Champions\nAs war spills from the Nachmund Gauntlet to engulf the worlds of the Sanctus Wall, so the scale of the conflict draws some of the galaxy’s greatest champions to join the fighting. The presence of even one such potent exemplar can inspire their followers to great deeds, while the personal intervention of such individuals can change the shape of entire battles.\nIn a Nachmund Gauntlet Campaign, players should inform the Campaign Master whenever an EPIC HERO unit is added to their Crusade force. The Campaign Master then assigns one of the following Crusade Abilities to an EPIC HERO model in that unit that best represents its lore and background. For each EPIC HERO unit in a player’s Crusade force, that player must increase their Crusade points total by 1. If an EPIC HERO unit contains two or more EPIC HERO models, the Campaign Master should select only one of those EPIC HERO models to have a Crusade Ability.\nHISTORICAL REFIGHT\nIf you are recreating the conflict in this very book, then Haarken Worldclaimer would be a Front-line Champion, Junith Eruita would be a Strategic Champion and Saint Celestine would be an Inspirational Champion.\nFRONT-LINE CHAMPIONS\nThese warriors are found where the fighting is thickest, using their hard-won experience to lead their troops to victory.\nCRUSADE ABILITY\nAt the declare Battle-formations step, select one Battle Trait. Until the end of the battle, this EPIC HERO model, and any unit they join, are considered to have this Battle Trait.\nSTRATEGIC CHAMPIONS\nIndividuals of this sort employ their vast and sweeping strategic insights to stack the odds in their armies’ favour.\nCRUSADE ABILITY\nIf your Crusade army includes one or more EPIC HERO models with this Crusade Ability, then at the Select Crusade Blessings step, roll one D6: on a 4+ select one of the following:\nIf you are the Underdog, you can select one additional Crusade Blessing.\nIf you are not the Underdog, you can select one Crusade Blessing, instead.\nNEMESIS CHAMPIONS\nWhether by the subtle arts of assassination or overt and spectacular duels, warriors such as this excel in felling the enemy’s leaders.\nCRUSADE ABILITY\nDuring the battle, if one or more enemy CHARACTER models are destroyed by an attack made by an EPIC HERO model (or a model in a unit it is attached to) with this Crusade Ability from your Crusade army, then at the Update Crusade Cards step, all units in your Crusade army gain an additional 1XP. If one of those destroyed enemy CHARACTER models was the enemy WARLORD, you also gain 1 Strategic Asset Point.\nINSPIRATIONAL CHAMPIONS\nThe mere presence of such iconic figures as these inspires incredible courage - or else terrified obedience - in their followers.\nCRUSADE ABILITY\nWhile an EPIC HERO model with this Crusade Ability is leading a unit, you can ignore any and/or all Battle Scars that Bodyguard unit has. In addition, if your Crusade army includes one or more EPIC HERO models with this Crusade Ability, at the end of the battle you can select one additional unit from your Crusade army to be Marked for Greatness.\nRESTORATIVE CHAMPIONS\nWhether through medical expertise, battlefield repairs or some more esoteric talents, these individuals bolster their armies’ ranks.\nCRUSADE ABILITY\nIf your Crusade army includes one or more EPIC HERO models with this Crusade Ability, during the Update Crusade Cards step you can re-roll failed Out of Action tests for units in your Crusade army.\nSUBTLE CHAMPIONS\nBy cunning sorcery, guileful shadow operations or other devious means, these warriors subtly influence the strategic picture.\nCRUSADE ABILITY\nIf your Crusade army includes one or more EPIC HERO models with this Crusade Ability, at the Determine Attacker and Defender step, you can re-roll your dice when determining who will be the Attacker and who will be the Defender.\nLOGISTICAL CHAMPIONS\nFocusing on the mechanisms and grand logistics of war, these individuals ensure excellent support for their armies.\nCRUSADE ABILITY\nIf your Crusade army includes one or more EPIC HERO models with this Crusade Ability, during the Determine Victor step, if you were the Victor of that battle, after gaining the Victor Bonus for that Crusade Mission, you gain that Victor bonus a second time.\n### Crusade Badges"
       }
     },
     "gameModes": {},
