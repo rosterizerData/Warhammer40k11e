@@ -1,6 +1,6 @@
 {
   "name": "40k 11e",
-  "revision": "11.2.6",
+  "revision": "11.2.7",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -1530,6 +1530,21 @@
               },
               "Interlopers": {
                 "order": 6
+              },
+              "Gatebreakers": {
+                "order": 7
+              },
+              "Desecrators": {
+                "order": 8
+              },
+              "Marauders": {
+                "order": 9
+              },
+              "Guardians": {
+                "order": 10
+              },
+              "Despoilers": {
+                "order": 11
               }
             },
             "statType": "rank",
@@ -1577,6 +1592,12 @@
                 "order": 3,
                 "tracking": {
                   "Armageddon": 1
+                }
+              },
+              "Nachmund Gauntlet": {
+                "order": 4,
+                "tracking": {
+                  "Nachmund Gauntlet": 1
                 }
               }
             },
@@ -2542,6 +2563,101 @@
             ],
             "evaluate": "AND",
             "failState": "error"
+          },
+          "allowNachmundRelics": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Nachmund Relic"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Nachmund Gauntlet"
+                  ]
+                ]
+              },
+              {
+                "actionable": true,
+                "min": 6,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "allowMightyChampionNachmund": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Mighty Champion"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Nachmund Gauntlet"
+                  ]
+                ]
+              },
+              {
+                "actionable": true,
+                "contains": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: Nachmund Gauntlet — the Campaign Master gives each named character one Mighty Champion ability"
           }
         },
         "stats": {
@@ -7450,6 +7566,53 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: the faction mechanic honours (Boons, Archeotech, Chapter Command…)"
+          },
+          "allowNachmundTraits": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Nachmund Trait"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Nachmund Gauntlet"
+                  ]
+                ]
+              },
+              {
+                "actionable": true,
+                "min": 1,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honour",
+                    "max"
+                  ]
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
           }
         },
         "stats": {
@@ -8609,6 +8772,27 @@
         "keywords": {
           "Tags": [],
           "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Nachmund Trait": {
+        "aspects": {
+          "Lock Qty": true,
+          "Rename": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Nachmund Relic": {
+        "aspects": {
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": []
         },
         "templateClass": "Battle Honour"
       }
@@ -19493,7 +19677,28 @@
             "Character"
           ]
         },
-        "text": "At the Declare Battle Formations step, select one of the following:\n• While this model is leading a unit, weapons equipped by models in that unit the **[ANTI-UNBOUND ADVERSARIES 4+]** ability.\n• Select one Armageddon Battle Trait (this must be a Battle Trait they could have if they were not an **Epic Hero**). Until the end of the battle, this **Epic Hero** model, and any unit they join, have this Battle Trait."
+        "text": "At the Declare Battle Formations step, select one of the following:\n• While this model is leading a unit, weapons equipped by models in that unit the **[ANTI-UNBOUND ADVERSARIES 4+]** ability.\n• Select one Armageddon Battle Trait (this must be a Battle Trait they could have if they were not an **Epic Hero**). Until the end of the battle, this **Epic Hero** model, and any unit they join, have this Battle Trait.",
+        "rules": {
+          "Crusade: Armageddon only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Armageddon"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Mighty Champion§Inspirational Champions": {
         "keywords": {
@@ -19501,7 +19706,28 @@
             "Character"
           ]
         },
-        "text": "While an **Epic Hero** model with this Crusade ability is leading a unit, you can ignore any and/or all Battle Scars that Bodyguard unit has. If your Crusade army includes one or more **Epic Hero** models with this Crusade Ability, at the end of the battle, you can select one additional unit from your Crusade army to be Marked for Greatness."
+        "text": "While an **Epic Hero** model with this Crusade ability is leading a unit, you can ignore any and/or all Battle Scars that Bodyguard unit has. If your Crusade army includes one or more **Epic Hero** models with this Crusade Ability, at the end of the battle, you can select one additional unit from your Crusade army to be Marked for Greatness.",
+        "rules": {
+          "Crusade: Armageddon only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Armageddon"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Mighty Champion§Logistical Champions": {
         "keywords": {
@@ -19509,7 +19735,28 @@
             "Character"
           ]
         },
-        "text": "If your Crusade army includes one or more **Epic Hero** models with this Crusade Ability, during the Determine Victor step, if you were the victor of that battle and if that **Epic Hero** is on the battlefield, you gain the Victor bonus a second time."
+        "text": "If your Crusade army includes one or more **Epic Hero** models with this Crusade Ability, during the Determine Victor step, if you were the victor of that battle and if that **Epic Hero** is on the battlefield, you gain the Victor bonus a second time.",
+        "rules": {
+          "Crusade: Armageddon only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Armageddon"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Mighty Champion§Nemesis Champions": {
         "keywords": {
@@ -19517,7 +19764,28 @@
             "Character"
           ]
         },
-        "text": "During the battle, if one or more enemy **Character** models are destroyed by an attack made by an **Epic Hero** model (or a model in a unit it is attached to) with this Crusade Ability from your Crusade army, then at the Update Crusade Cards step, all units in your Crusade army gain an additional 1XP. If one of those destroyed enemy **Character** models was the enemy **Warlord**, you also gain 1 strategic point."
+        "text": "During the battle, if one or more enemy **Character** models are destroyed by an attack made by an **Epic Hero** model (or a model in a unit it is attached to) with this Crusade Ability from your Crusade army, then at the Update Crusade Cards step, all units in your Crusade army gain an additional 1XP. If one of those destroyed enemy **Character** models was the enemy **Warlord**, you also gain 1 strategic point.",
+        "rules": {
+          "Crusade: Armageddon only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Armageddon"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Mighty Champion§Restorative Champions": {
         "keywords": {
@@ -19525,7 +19793,28 @@
             "Character"
           ]
         },
-        "text": "If your Crusade army includes one or more **Epic Hero** models with Crusade Ability, you can re-roll failed Out of Action tests for units in your Crusade army."
+        "text": "If your Crusade army includes one or more **Epic Hero** models with Crusade Ability, you can re-roll failed Out of Action tests for units in your Crusade army.",
+        "rules": {
+          "Crusade: Armageddon only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Armageddon"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Mighty Champion§Strategic Champions": {
         "keywords": {
@@ -19533,7 +19822,28 @@
             "Character"
           ]
         },
-        "text": "If your Crusade army includes one or more **Epic Hero** models with this Crusade ability, then at the Select Crusade Blessings step, select one of the following:\n• If you are the Underdog, roll one D6: on a 4+, you can select one additional Crusade Blessing.\n• If you are not the Underdog, roll one D6: on a 6 you can select one Crusade Blessing, instead."
+        "text": "If your Crusade army includes one or more **Epic Hero** models with this Crusade ability, then at the Select Crusade Blessings step, select one of the following:\n• If you are the Underdog, roll one D6: on a 4+, you can select one additional Crusade Blessing.\n• If you are not the Underdog, roll one D6: on a 6 you can select one Crusade Blessing, instead.",
+        "rules": {
+          "Crusade: Armageddon only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Armageddon"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       },
       "Mighty Champion§Subtle Champions": {
         "keywords": {
@@ -19541,7 +19851,568 @@
             "Character"
           ]
         },
-        "text": "If your Crusade army includes one or more **Epic Hero** models with this Crusade Ability, select one of the following:\n• At the Determine Attacker and Defender step, you can re-roll your dice when determining who will be the Attacker and who will be the Defender.\n• At the end of the Set Warp Events step, roll one D6: on a 4+ you can choose to increase or decrease the intensity of the Warp Events used in that battle by 1 (to a minimum of 1 and a maximum of 3)."
+        "text": "If your Crusade army includes one or more **Epic Hero** models with this Crusade Ability, select one of the following:\n• At the Determine Attacker and Defender step, you can re-roll your dice when determining who will be the Attacker and who will be the Defender.\n• At the end of the Set Warp Events step, roll one D6: on a 4+ you can choose to increase or decrease the intensity of the Warp Events used in that battle by 1 (to a minimum of 1 and a maximum of 3).",
+        "rules": {
+          "Crusade: Armageddon only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Armageddon"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Nachmund Trait§Precision Insertion": {
+        "keywords": {
+          "Tags": []
+        },
+        "text": "Once per battle, when this unit is set up on the battlefield using the Deep Strike ability, it can perform a Precision Insertion. If it does, this unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge. Each time this unit performs a Surgical Deep Strike, add 2 to the Deep Strike test. **Designer's Note:** *Only units that are set up using the Deep Strike ability with benefit from this Battle Trait.*"
+      },
+      "Nachmund Trait§Reinforced Armour": {
+        "keywords": {
+          "Tags": [
+            "Monster",
+            "Vehicle"
+          ]
+        },
+        "text": "Each time an attack with a Damage characteristic of 1 is allocated to a model in this unit, worsen the Armour Penetration characteristic of that attack by 1."
+      },
+      "Nachmund Trait§Monstrous Momentum": {
+        "keywords": {
+          "Tags": [
+            "Monster",
+            "Vehicle"
+          ]
+        },
+        "text": "Add 2\" to the Move characteristic of models in this unit."
+      },
+      "Nachmund Trait§Behemoth": {
+        "keywords": {
+          "Tags": [
+            "Monster",
+            "Vehicle"
+          ]
+        },
+        "text": "Add 2 to the Wounds characteristic of models in this unit."
+      },
+      "Nachmund Trait§Unrelenting": {
+        "keywords": {
+          "Tags": [
+            "Monster",
+            "Vehicle"
+          ]
+        },
+        "text": "You can ignore any or all modifiers to this unit's Move characteristic. In addition, each time this unit makes a Normal move, models in this unit can move through terrain, but if any do so, after this unit has moved, roll one D6: on a 1-3 this unit is Battle-shocked."
+      },
+      "Nachmund Trait§Titan Slayer": {
+        "keywords": {
+          "Tags": [
+            "Monster",
+            "Vehicle"
+          ]
+        },
+        "text": "Each time a model in this unit makes an attack that targets a **^^Monster^^** or **^^Vehicle^^** unit, re-roll a Hit roll of 1. If that attack targets a **^^Titanic^^** unit, you can re-roll the Hit roll instead."
+      },
+      "Nachmund Trait§Talismanic": {
+        "keywords": {
+          "Tags": [
+            "Monster",
+            "Vehicle"
+          ]
+        },
+        "text": "Each time this unit is Marked for Greatness, it gains an additional 2XP."
+      },
+      "Nachmund Trait§Grim Survivors": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Once per battle, at the start of any phase, this unit can use this Battle Trait. If it does, until the end of the phase, models in this unit have the Feel No Pain 5+ ability. If this unit is Below Half-strength when this Battle Trait is used, then until the end of the phase, models in this unit have the Feel No Pain 4+ ability instead."
+      },
+      "Nachmund Trait§Drop Zone Defenders": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "While this unit is wholly within your deployment zone, improve the Leadership and Objective Control characteristics of models in this unit by 1. Each time an enemy unit performs a Surgical Deep Strike within 9\" of this unit, subtract 1 from that unit's Deep Strike test result."
+      },
+      "Nachmund Trait§Strikemasters": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "In the Declare Battle Formations step, you can spend 1 Requisition point; if you do, then until the end of the battle, this unit has the Deep Strike ability and each time this unit performs a Surgical Deep Strike, add 1 to its Deep Strike test."
+      },
+      "Nachmund Trait§Tempered In Battle": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Once per battle, in your Command phase, this unit can use this Battle Trait. If it does, until the end of the turn, this unit is eligible to shoot, declare a charge and perform an Action in a turn in which it Fell Back. In addition, this unit is eligible to perform an Action while it is Battle-shocked."
+      },
+      "Nachmund Trait§Fleet of Foot": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "You can re-roll Advance rolls for this unit and this unit is eligible to perform an Action in a turn in which they Advanced. In addition, if this unit is selected to Advance, until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at this unit."
+      },
+      "Nachmund Trait§Territorial": {
+        "keywords": {
+          "Tags": [
+            "Infantry"
+          ]
+        },
+        "text": "Each time a model in this unit makes an attack that targets a unit is within range of an objective marker, re-roll a Wound roll of 1."
+      },
+      "Nachmund Trait§Cavalry Outriders": {
+        "keywords": {
+          "Tags": [
+            "Mounted"
+          ]
+        },
+        "text": "This unit has the Scouts 6\" ability."
+      },
+      "Nachmund Trait§Evasive": {
+        "keywords": {
+          "Tags": [
+            "Mounted"
+          ]
+        },
+        "text": "Each time a ranged attack is allocated to a model in this unit, provided this unit did not Remain Stationary in your previous turn, worsen the Armour Penetration characteristic of that attack by 1."
+      },
+      "Nachmund Trait§Shock Cavalry": {
+        "keywords": {
+          "Tags": [
+            "Mounted"
+          ]
+        },
+        "text": "Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll. In addition, each time a model in this unit makes an attack that targets an enemy unit that is Below Half-strength, add 1 to the Wound roll."
+      },
+      "Nachmund Trait§Sleek Interceptors": {
+        "keywords": {
+          "Tags": [
+            "Jump Pack"
+          ]
+        },
+        "text": "Each time this unit Advances, do not make Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit."
+      },
+      "Nachmund Trait§Fiery Descent": {
+        "keywords": {
+          "Tags": [
+            "Jump Pack"
+          ]
+        },
+        "text": "Once per battle, you can target this unit with the Rapid Ingress Stratagem for 0CP. If this unit performs a Surgical Deep Strike when doing so, before any Deep Strike tests are made, roll one D6 for each enemy unit within 6\" of your unit: on a 4+, that enemy unit suffers 1 mortal wound."
+      },
+      "Nachmund Trait§Take to the Skies": {
+        "keywords": {
+          "Tags": [
+            "Jump Pack"
+          ]
+        },
+        "text": "Once per battle, at the end of your opponent's Fight phase, you can remove this unit from the battlefield and place it into Strategic Reserves."
+      },
+      "Nachmund Trait§Hunting Beasts": {
+        "keywords": {
+          "Tags": [
+            "Beast"
+          ]
+        },
+        "text": "You can re-roll Advance and Charge rolls made for this unit."
+      },
+      "Nachmund Trait§Pouncing Predators": {
+        "keywords": {
+          "Tags": [
+            "Beast"
+          ]
+        },
+        "text": "You can target this unit with the Heroic Intervention Stratagem for 0CP, and each time you do so, until the end of the turn, this unit has the Fights First ability."
+      },
+      "Nachmund Trait§Enhanced Endurance": {
+        "keywords": {
+          "Tags": [
+            "Beast"
+          ]
+        },
+        "text": "Add 1 to the Toughness characteristic of models in this unit."
+      },
+      "Nachmund Trait§Drop Zone Veterans": {
+        "keywords": {
+          "Tags": []
+        },
+        "text": "Each time this unit is set up on the battlefield using the Deep Strike ability, until the end of the turn, each time a model in this unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1. Each time this unit performs a Surgical Deep Strike, you can re-roll the Deep Strike test. **Designer's Note:** *Only units that are set up using the Deep Strike ability with benefit from this Battle Trait.*"
+      },
+      "Nachmund Trait§Stealthy Arrival": {
+        "keywords": {
+          "Tags": []
+        },
+        "text": "Each time this unit is set up on the battlefield using the Deep Strike ability, until the end of your next turn, this unit has the Stealth ability and enemy units cannot use the Fire Overwatch Stratagem to shoot at this unit. **Designer's Note:** *Only units that are set up using the Deep Strike ability with benefit from this Battle Trait.*"
+      },
+      "Nachmund Relic§Sigil of Psychic Amplification": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "**^^Psyker^^** model only. Add 6\" to the Range characteristic of the bearer's ranged **[PSYCHIC]** weapons. If the bearer has Psychic ability that instructs you to select one or more units within a specified range, you can increase the range of that ability by 6\". If the bearer has a Psychic Aura ability, increase the range of that ability by an additional 3\".",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "Psyker only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Psyker",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Nachmund Relic§Hammer of the Heavens": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "Once per battle, in your Command phase, if the bearer is on the battlefield, you can use this ability. Select one point on the battlefield and place a marker on that point. At the start of your next Command phase, roll six D6 for each unit within 6\" of the centre of that marker, adding 2 to the roll for each unit within 3\" of the centre of that marker: for each 4+, that unit suffers 1 mortal wound. The marker is then removed.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Nachmund Relic§Maelstrom Clarion": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of the bearer.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Nachmund Relic§Displacer Field": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "Once per battle, at the end of your opponent's Shooting phase, if the bearer's unit is not within Engagement Range of one or more enemy units, and if it was targeted by one or more attacks during that phase, you can remove the bearer's unit from the battlefield and place it into Strategic Reserves. If you do, when you next set up the bearer's unit from Strategic Reserves, models in that have the Deep Strike ability until the end of that phase.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Nachmund Relic§Fate-forged Weapon": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "Select one melee weapon equipped by the bearer (excluding a weapon that has been replaced by an Enhancement or Crusade Relic, or upgraded with any Battle Traits). That weapon is now a Crusade Relic and: - Each time an attack is made with it, you can re-roll the Wound roll. - Once per battle, at the start of the Fight phase, the bearer can unleash the power stored in that weapon. When they do, until the end of the turn, that weapon has the **[DEVASTATING WOUNDS]** ability and its Strength and Attacks characteristics are increased by a number equal to the current battle round number.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Nachmund Relic§Gloaming Mantle": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "The bearer has the Lone Operative and Stealth abilities. While the bearer is leading a unit, models in that unit have the Stealth ability and that unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Nachmund Relic§Lyreth's Mirror": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "At the end of your opponent's Movement phase, you can select one enemy unit that was set up one the battlefield within 12\" of the bearer's unit during this phase; the bearer's unit can then either: - Shoot, but when resolving those attacks the bearer's unit can only target that enemy unit (and only if it is an eligible target). - Declare a charge against that unit (note that even if this charge is successful, the bearer's unit does not received any Charge bonus this turn).",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Nachmund Relic§Auto-medicae": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "The bearer has the Feel No Pain 5+ ability."
+      },
+      "Nachmund Relic§Strategic Laurels": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "At the start of your first Command phase, if the bearer is on the battlefield, you gain 1CP. At the end of the battle, if the bearer is on the battlefield, you gain 1 Strategic Asset point (SAP)."
+      },
+      "Nachmund Relic§Conversion Field": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Models in the bearer's unit have a 5+ invulnerable save against ranged attacks and each time a ranged attack is allocated to a model in the bearer's unit, on an unmodified saving throw of 6, the attacking unit suffers 1 mortal wound after it has finished making its attacks."
+      },
+      "Nachmund Relic§Gene-toxin Autofont": {
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        },
+        "text": "Select one melee weapon equipped by the bearer (excluding a weapon that has been replaced by an Enhancement or Crusade Relic, or upgraded with any Battle Traits). That weapon is now a Crusade Relic and, in your Fight phase, after the bearer has fought, select one enemy unit hit by one or more of those attacks made with this weapon. Until the end of the battle, that enemy unit is poisoned. At the start of each player's Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 1, the poison wears off and the unit is no longer poisoned; on a 2-3, that enemy unit suffers 1 mortal wound; on a 4+, that enemy unit suffers D3 mortal wounds."
+      },
+      "Mighty Champion§Subtle Champions (Nachmund Gauntlet)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "If your Crusade army includes one or more **Epic Hero** models with this Crusade Ability, at the Determine Attacker and Defender step, you can re-roll your dice when determining who will be the Attacker and who will be the Defender.",
+        "rules": {
+          "Crusade: Nachmund Gauntlet only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Nachmund Gauntlet"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Mighty Champion§Front-line Champions (Nachmund Gauntlet)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "At the declare Battle-formations step, select one Battle Trait. Until the end of the battle, this **Epic Hero** model, and any unit they join, are considered to have this Battle Trait.",
+        "rules": {
+          "Crusade: Nachmund Gauntlet only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Nachmund Gauntlet"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Mighty Champion§Inspirational Champions (Nachmund Gauntlet)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "While an **Epic Hero** model with this Crusade ability is leading a unit, you can ignore any and/or all Battle Scars that Bodyguard unit has. In addition, if your Crusade army includes one or more **Epic Hero** models with this Crusade Ability, at the end of the battle you can select one additional unit from your Crusade army to be Marked for Greatness.",
+        "rules": {
+          "Crusade: Nachmund Gauntlet only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Nachmund Gauntlet"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Mighty Champion§Logistical Champions (Nachmund Gauntlet)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "If your Crusade army includes one or more **Epic Hero** models with this Crusade Ability, during the Determine Victor step, if you were the Victor of that battle, after gaining the Victor Bonus for that Crusade Mission, you gain that Victor bonus a second time.",
+        "rules": {
+          "Crusade: Nachmund Gauntlet only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Nachmund Gauntlet"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Mighty Champion§Nemesis Champions (Nachmund Gauntlet)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "During the battle, if one or more enemy **Character** models are destroyed by an attack made by an **Epic Hero** model (or a model in a unit it is attached to) with this Crusade Ability from your Crusade army, then at the Update Crusade Cards step, all units in your Crusade army gain an additional 1XP. If one of those destroyed enemy **Character** models was the enemy **Warlord**, you also gain 1 Strategic Asset Point.",
+        "rules": {
+          "Crusade: Nachmund Gauntlet only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Nachmund Gauntlet"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Mighty Champion§Restorative Champions (Nachmund Gauntlet)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "If your Crusade army includes one or more **Epic Hero** models with Crusade Ability, during the Update Crusade Cards step you can re-roll failed Out of Action tests for units in your Crusade army.",
+        "rules": {
+          "Crusade: Nachmund Gauntlet only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Nachmund Gauntlet"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Mighty Champion§Strategic Champions (Nachmund Gauntlet)": {
+        "keywords": {
+          "Tags": [
+            "Character"
+          ]
+        },
+        "text": "If your Crusade army includes one or more **Epic Hero** models with this Crusade ability, then at the Select Crusade Blessings step, roll one D6: on 4+ select one of the following: - If you are the Underdog, you can select one additional Crusade Blessing. - If you are not the Underdog, you can select one Crusade Blessing, instead.",
+        "rules": {
+          "Crusade: Nachmund Gauntlet only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Nachmund Gauntlet"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
       }
     },
     "gameModes": {},

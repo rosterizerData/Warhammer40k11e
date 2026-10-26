@@ -1,6 +1,6 @@
 {
   "name": "Chaos Daemons 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -125,6 +125,361 @@
             ],
             "evaluate": "OR",
             "failState": "pass"
+          },
+          "crusadeTagKhorne": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Khorne"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Khorne",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Khorne keyword may take the honours tagged Khorne"
+          },
+          "crusadeTagTzeentch": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Tzeentch"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Tzeentch",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Tzeentch keyword may take the honours tagged Tzeentch"
+          },
+          "crusadeTagNurgle": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Nurgle"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Nurgle",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Nurgle keyword may take the honours tagged Nurgle"
+          },
+          "crusadeTagSlaanesh": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Slaanesh"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Slaanesh",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Slaanesh keyword may take the honours tagged Slaanesh"
+          },
+          "allowLocusoftheGods": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Locus of the Gods"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Legiones Daemonica",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Loci of the Gods: GREATER DAEMON and HERALD models may take a Locus instead of another Battle Honour (aura: 6\" on a Greater Daemon, 3\" otherwise)"
+          },
+          "Each model can have only one Locus of the Gods.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Locus of the Gods"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "allowFavouredReward": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Favoured Reward"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Legiones Daemonica",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Monster",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Daemon Prince of Chaos",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Daemon Prince of Chaos with Wings",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Favoured Rewards: a GREATER DAEMON gains one at the end of a round of the Great Game by its god's position (first: Exalted/Greater/Lesser, second: Greater/Lesser, third: Lesser); each reward once per model"
           }
         }
       },
@@ -213,8 +568,698 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "crusadeTagKhorne": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Khorne"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Khorne",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Khorne keyword may take the honours tagged Khorne"
+          },
+          "crusadeTagTzeentch": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Tzeentch"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Tzeentch",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Tzeentch keyword may take the honours tagged Tzeentch"
+          },
+          "crusadeTagNurgle": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Nurgle"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Nurgle",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Nurgle keyword may take the honours tagged Nurgle"
+          },
+          "crusadeTagSlaanesh": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Slaanesh"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Slaanesh",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Slaanesh keyword may take the honours tagged Slaanesh"
+          },
+          "crusadeTagBloodletters": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Bloodletters"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Bloodletters",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Bloodletters keyword may take the honours tagged Bloodletters"
+          },
+          "crusadeTagHorrors": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Horrors"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Horrors",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Horrors keyword may take the honours tagged Horrors"
+          },
+          "crusadeTagPlaguebearers": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Plaguebearers"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Plaguebearers",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Plaguebearers keyword may take the honours tagged Plaguebearers"
+          },
+          "crusadeTagDaemonettes": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Daemonettes"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Daemonettes",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Daemonettes keyword may take the honours tagged Daemonettes"
           }
         }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Worthy Trophies": {
+                "order": 100,
+                "tracking": {
+                  "Legiones Daemonica Agenda": 1
+                }
+              },
+              "Fires of Tzeentch": {
+                "order": 101,
+                "tracking": {
+                  "Legiones Daemonica Agenda": 1
+                }
+              },
+              "Seed the Garden": {
+                "order": 102,
+                "tracking": {
+                  "Legiones Daemonica Agenda": 1
+                }
+              },
+              "Savage Excess": {
+                "order": 103,
+                "tracking": {
+                  "Legiones Daemonica Agenda": 1
+                }
+              },
+              "Corrupt Icons": {
+                "order": 104,
+                "tracking": {
+                  "Legiones Daemonica Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Worthy Trophies": {
+                "order": 100,
+                "tracking": {
+                  "Legiones Daemonica Agenda": 1
+                }
+              },
+              "Fires of Tzeentch": {
+                "order": 101,
+                "tracking": {
+                  "Legiones Daemonica Agenda": 1
+                }
+              },
+              "Seed the Garden": {
+                "order": 102,
+                "tracking": {
+                  "Legiones Daemonica Agenda": 1
+                }
+              },
+              "Savage Excess": {
+                "order": 103,
+                "tracking": {
+                  "Legiones Daemonica Agenda": 1
+                }
+              },
+              "Corrupt Icons": {
+                "order": 104,
+                "tracking": {
+                  "Legiones Daemonica Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Exalted Daemon",
+            "Requisition§Dark Gambit",
+            "Requisition§Monstrous Duel",
+            "Requisition§Ignoble Defeat",
+            "Requisition§Glorious Return"
+          ]
+        }
+      },
+      "Dark God": {
+        "aspects": {
+          "Visibility": "always"
+        },
+        "templateClass": "",
+        "stats": {
+          "Ascendancy": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 99,
+            "label": "Ascendancy points",
+            "statOrder": 1
+          },
+          "Position": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "min": 1,
+            "max": 4,
+            "label": "Position in the Great Game",
+            "statOrder": 2
+          }
+        },
+        "rules": {
+          "dominion1": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Dominion — first position"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3
+          },
+          "dominion2": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Dominion — second position"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3
+          },
+          "dominion3": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Dominion — third position"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3
+          },
+          "dominion4": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Dominion — fourth position"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 4
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3
+          }
+        }
+      },
+      "The Great Game": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Battles this round": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 8,
+            "statOrder": 1
+          }
+        }
+      },
+      "Locus of the Gods": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Favoured Reward": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
       }
     },
     "assetCatalog": {
@@ -4479,6 +5524,41 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "useCrusadeChaos_Daemons": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "The Great Game§The Great Game"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
           }
         },
         "stats": {
@@ -10914,24 +11994,1221 @@
       "Ability§Infernal Speed": {
         "text": "While this model is leading a unit, change the Move characteristic of models in that unit to 14\"."
       },
-      "Battle Trait§PLACEHOLDER_NAME": {
-        "keywords": {
-          "Tags": [
-            "Legiones Daemonica"
+      "Requisition§Exalted Daemon": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition when a GREATER DAEMON model from your Crusade force gains the Battle-hardened, Heroic or Legendary rank. That model is upgraded to be exalted (the exalted upgrade tables are in the 9th edition codex; agree the equivalent with your Campaign Master). Increase this model’s points accordingly and make a note on its Crusade card. You cannot purchase this Requisition if doing so would cause your Crusade force to exceed its Supply Limit."
+      },
+      "Requisition§Dark Gambit": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before any battle, while you are influencing the Great Game. If you win that battle, the god that shares an Allegiance keyword with your WARLORD gains D6 Ascendancy points instead of D3. If you lose the battle, the god that shares an Allegiance keyword with your WARLORD gains no Ascendancy points after that battle."
+      },
+      "Requisition§Monstrous Duel": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Cost: 1-3RP. Purchase this Requisition at any time, while you are influencing the Great Game. Select two GREATER DAEMON models from your Order of Battle that do not share an Allegiance keyword. Select one of these models to be the victor and one of them to be the defeated. The god that shares an Allegiance keyword with the victor gains 1 Ascendancy point for each RP spent on this Requisition, and the Dark God who shares an Allegiance keyword with the defeated loses 1 Ascendancy point for each RP spent on this Requisition."
+      },
+      "Requisition§Ignoble Defeat": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition when an Out of Action test is failed for a LEGIONES DAEMONICA CHARACTER model from your army. That model is now considered to be bound. Select one GREATER DAEMON model from your Order of Battle to be the binder, then select one melee weapon that model is equipped with (this cannot be a Relic or a malefic weapon) for the selected LEGIONES DAEMONICA CHARACTER model to be bound into. While that model is bound, the selected melee weapon gains the relevant ability below: if the bound model is a KHORNE model, add 1 to the Strength characteristic of that weapon; if the bound model is a TZEENTCH model, improve the Armour Penetration characteristic of that weapon by 1; if the bound model is a NURGLE model, add 1 to the Damage characteristic of that weapon; if the bound model is a SLAANESH model, each time an attack is made with that weapon, an unmodified wound roll of 6 inflicts 1 mortal wound on the target in addition to any normal damage. While a model is bound it cannot be included on your army roster; keep a Bound tally for that model and after each battle in which the binder was included on your army roster, add 1 to this tally."
+      },
+      "Requisition§Glorious Return": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition after any battle, while a LEGIONES DAEMONICA CHARACTER model from your army is bound (see Ignoble Defeat). That model is no longer bound. That model gains 1 experience point for each mark on their Bound tally. That tally is then removed."
+      },
+      "Ability§Dominion — first position": {
+        "text": "**Dominion — first position:** add 1 to the Leadership characteristic of models in LEGIONES DAEMONICA units from your army that share an Allegiance keyword with this Dark God. Once per battle, you can use an Epic Deed Stratagem for 0CP if the unit selected for that Stratagem shares an Allegiance keyword with this Dark God."
+      },
+      "Ability§Dominion — second position": {
+        "text": "**Dominion — second position:** add 1 to the Leadership characteristic of models in LEGIONES DAEMONICA ICON units from your army that share an Allegiance keyword with this Dark God. Once per battle, if your WARLORD shares an Allegiance keyword with this Dark God, you can use the Command Re-roll Stratagem for 0CP."
+      },
+      "Ability§Dominion — third position": {
+        "text": "**Dominion — third position:** no additional abilities."
+      },
+      "Ability§Dominion — fourth position": {
+        "text": "**Dominion — fourth position:** subtract 1 from the Leadership characteristic of models in LEGIONES DAEMONICA ICON units from your army that share an Allegiance keyword with this Dark God. Each time a model in a LEGIONES DAEMONICA unit from your army that shares an Allegiance keyword with this Dark God makes an attack against an enemy unit that shares an Allegiance keyword with one of the Dark Gods in first, second or third position, you can re-roll the Hit roll."
+      },
+      "Dark God§Khorne": {
+        "text": "Khorne's standing in the Great Game. Starts the first round with 4 Ascendancy points; later rounds start at 4/3/2/1 by the previous round's position.",
+        "rules": {
+          "behindTzeentch": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "equation": {
+                  "operator": "T-O",
+                  "value": 1
+                },
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Dark God§Tzeentch",
+                    "stats",
+                    "Ascendancy",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Ascendancy",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "behindNurgle": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "equation": {
+                  "operator": "T-O",
+                  "value": 1
+                },
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Dark God§Nurgle",
+                    "stats",
+                    "Ascendancy",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Ascendancy",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "behindSlaanesh": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "equation": {
+                  "operator": "T-O",
+                  "value": 1
+                },
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Dark God§Slaanesh",
+                    "stats",
+                    "Ascendancy",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Ascendancy",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          }
+        },
+        "stats": {
+          "Ascendancy": {
+            "value": 4
+          }
+        }
+      },
+      "Dark God§Tzeentch": {
+        "text": "Tzeentch's standing in the Great Game. Starts the first round with 3 Ascendancy points; later rounds start at 4/3/2/1 by the previous round's position.",
+        "rules": {
+          "behindKhorne": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "equation": {
+                  "operator": "T-O",
+                  "value": 1
+                },
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Dark God§Khorne",
+                    "stats",
+                    "Ascendancy",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Ascendancy",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "behindNurgle": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "equation": {
+                  "operator": "T-O",
+                  "value": 1
+                },
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Dark God§Nurgle",
+                    "stats",
+                    "Ascendancy",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Ascendancy",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "behindSlaanesh": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "equation": {
+                  "operator": "T-O",
+                  "value": 1
+                },
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Dark God§Slaanesh",
+                    "stats",
+                    "Ascendancy",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Ascendancy",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          }
+        },
+        "stats": {
+          "Ascendancy": {
+            "value": 3
+          }
+        }
+      },
+      "Dark God§Nurgle": {
+        "text": "Nurgle's standing in the Great Game. Starts the first round with 2 Ascendancy points; later rounds start at 4/3/2/1 by the previous round's position.",
+        "rules": {
+          "behindKhorne": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "equation": {
+                  "operator": "T-O",
+                  "value": 1
+                },
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Dark God§Khorne",
+                    "stats",
+                    "Ascendancy",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Ascendancy",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "behindTzeentch": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "equation": {
+                  "operator": "T-O",
+                  "value": 1
+                },
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Dark God§Tzeentch",
+                    "stats",
+                    "Ascendancy",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Ascendancy",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "behindSlaanesh": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "equation": {
+                  "operator": "T-O",
+                  "value": 1
+                },
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Dark God§Slaanesh",
+                    "stats",
+                    "Ascendancy",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Ascendancy",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          }
+        },
+        "stats": {
+          "Ascendancy": {
+            "value": 2
+          }
+        }
+      },
+      "Dark God§Slaanesh": {
+        "text": "Slaanesh's standing in the Great Game. Starts the first round with 1 Ascendancy points; later rounds start at 4/3/2/1 by the previous round's position.",
+        "rules": {
+          "behindKhorne": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "equation": {
+                  "operator": "T-O",
+                  "value": 1
+                },
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Dark God§Khorne",
+                    "stats",
+                    "Ascendancy",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Ascendancy",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "behindTzeentch": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "equation": {
+                  "operator": "T-O",
+                  "value": 1
+                },
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Dark God§Tzeentch",
+                    "stats",
+                    "Ascendancy",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Ascendancy",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "behindNurgle": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Position",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "equation": {
+                  "operator": "T-O",
+                  "value": 1
+                },
+                "paths": [
+                  [
+                    "{parent}",
+                    "traits",
+                    "item",
+                    "Dark God§Nurgle",
+                    "stats",
+                    "Ascendancy",
+                    "value"
+                  ]
+                ],
+                "min": [
+                  "{self}",
+                  "stats",
+                  "Ascendancy",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          }
+        },
+        "stats": {
+          "Ascendancy": {
+            "value": 1
+          }
+        }
+      },
+      "The Great Game§The Great Game": {
+        "assets": {
+          "traits": [
+            "Dark God§Khorne",
+            "Dark God§Tzeentch",
+            "Dark God§Nurgle",
+            "Dark God§Slaanesh"
           ]
         },
-        "text": "Each time a ranged attack targets this unit, unless the attacking model is within 18\", subtract 1 from the Hit roll."
+        "text": "Chaos Daemons use the 9th edition codex's Crusade rules until an 11e Crusade section is published.\n\nIf your Crusade army includes any LEGIONES DAEMONICA units, you can track what influence their actions have on the Great Game, the eternal battle between the Dark Gods for primacy. When you are creating your Order of Battle, if it includes any LEGIONES DAEMONICA units, you can also start to influence the Great Game. During your battles, if your army roster includes any LEGIONES DAEMONICA units, you will gain Ascendancy points for each of the four gods - Khorne, Tzeentch, Nurgle and Slaanesh. At the end of each battle, you will recalculate each god's total Ascendancy points and organise them into a hierarchy, from first to fourth position. Each god will gain new benefits based on their position in the Great Game, that you can use for LEGIONES DAEMONICA units on your Order of Battle with their Allegiance keyword. After 8 battles, that round of the Great Game will be complete, and your forces will gain additional rewards depending on their god’s final position in that round. At the end of each round, after gaining these rewards, each Dark God’s Ascendancy points total will be reset based on their final position in the previous round.\n\n\n\nBeginning the Great Game: Khorne 4 Ascendancy points, Tzeentch 3, Nurgle 2, Slaanesh 1. The god with the most Ascendancy points is in first position, the god with the second most in second position and so forth down to fourth position. Each god is also considered to have their own Allegiance keyword.\n\n\n\nGaining Ascendancy Points: At the end of each battle, each of the Dark Gods gains Ascendancy points in the following order: Khorne, Tzeentch, Nurgle, Slaanesh. Each god gains D3 Ascendancy points. The god that shares an Allegiance keyword with your WARLORD gains 1 Ascendancy point, or D3 if you won the battle (if BE’LAKOR was your WARLORD, all four gods gain 1 each, or D3 each if you won). If, after a god has gained Ascendancy points, they have the same total as another god, the god you have just rolled for gains 1 additional Ascendancy point.\n\n\n\nThe Positions. First position (Dominion): add 1 to the Leadership characteristic of models in LEGIONES DAEMONICA units from your army that share an Allegiance keyword with that Dark God; once per battle, you can use an Epic Deed Stratagem for 0CP if the unit selected for that Stratagem shares an Allegiance keyword with that Dark God. Second position: add 1 to the Leadership characteristic of models in LEGIONES DAEMONICA ICON units from your army that share an Allegiance keyword with that Dark God; once per battle, if your WARLORD shares an Allegiance keyword with that Dark God, you can use the Command Re-roll Core Stratagem for 0CP. Third position: no additional abilities. Fourth position: subtract 1 from the Leadership characteristic of models in LEGIONES DAEMONICA ICON units from your army that share an Allegiance keyword with that Dark God; each time a model in a LEGIONES DAEMONICA unit from your army that shares an Allegiance keyword with that Dark God makes an attack against an enemy unit that shares an Allegiance keyword with one of the Dark Gods in first, second or third position, you can re-roll the hit roll.\n\n\n\nEnd of a Round (after 8 battles): First position: every unit on your Order of Battle that shares an Allegiance keyword with this Dark God gains 3 experience points; one GREATER DAEMON of that god gains 1 Exalted, Greater or Lesser Favoured Reward. Second position: 2 experience points; one GREATER DAEMON gains 1 Greater or Lesser Reward. Third position: 1 experience point; one GREATER DAEMON gains 1 Lesser Reward. Fourth position: there are no rewards for failure! The Next Round: each Dark God starts the next round with First 4, Second 3, Third 2, Fourth 1 Ascendancy points.\n\n"
       },
-      "Crusade Relic§PLACEHOLDER_NAME": {
+      "Locus of the Gods§Locus of Unstoppable Fury (Aura)": {
+        "keywords": {
+          "Tags": [
+            "Khorne"
+          ]
+        },
+        "text": "KHORNE model only. While a friendly LEGIONES DAEMONICA KHORNE CORE unit is within range of this ability, each time a model in that unit makes a melee attack, an unmodified hit roll of 6 automatically wounds the target."
+      },
+      "Locus of the Gods§Locus of Diabolical Purpose (Aura)": {
+        "keywords": {
+          "Tags": [
+            "Khorne"
+          ]
+        },
+        "text": "KHORNE model only. While a friendly LEGIONES DAEMONICA KHORNE CORE unit is within range of this ability, each time that unit makes a consolidation move, models in that unit can move an additional 3\"."
+      },
+      "Locus of the Gods§Locus of Conjuration (Aura)": {
+        "keywords": {
+          "Tags": [
+            "Tzeentch"
+          ]
+        },
+        "text": "TZEENTCH model only. While a friendly LEGIONES DAEMONICA TZEENTCH PSYKER unit is within range of this ability, each time a Psychic test is taken for that unit, you can re-roll any or all dice rolls of 1-2."
+      },
+      "Locus of the Gods§Locus of Transmogrification (Aura)": {
+        "keywords": {
+          "Tags": [
+            "Tzeentch"
+          ]
+        },
+        "text": "TZEENTCH model only. While a friendly LEGIONES DAEMONICA TZEENTCH CORE unit is within range of this ability, each time a model in that unit would lose a wound, roll one D6: on a 6, that wound is not lost."
+      },
+      "Locus of the Gods§Locus of Poxes Uncounted (Aura)": {
+        "keywords": {
+          "Tags": [
+            "Nurgle"
+          ]
+        },
+        "text": "NURGLE model only. While a friendly PLAGUEBEARERS CORE unit is within range of this ability, you can re-roll charge rolls made for that unit."
+      },
+      "Locus of the Gods§Locus of Foetid Regeneration (Aura)": {
+        "keywords": {
+          "Tags": [
+            "Nurgle"
+          ]
+        },
+        "text": "NURGLE model only. While a friendly LEGIONES DAEMONICA NURGLE CORE unit is within range of this ability, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack (to a minimum of 1)."
+      },
+      "Locus of the Gods§Locus of Delicate Evisceration (Aura)": {
+        "keywords": {
+          "Tags": [
+            "Slaanesh"
+          ]
+        },
+        "text": "SLAANESH model only. While a friendly LEGIONES DAEMONICA SLAANESH CORE unit is within range of this ability, each time a model in that unit makes a melee attack, improve the Armour Penetration characteristic of that attack by 1."
+      },
+      "Locus of the Gods§Locus of Unnatural Swiftness (Aura)": {
+        "keywords": {
+          "Tags": [
+            "Slaanesh"
+          ]
+        },
+        "text": "SLAANESH model only. While a friendly LEGIONES DAEMONICA SLAANESH CORE unit is within range of this ability, that unit is eligible to charge, even if it Advanced in the same turn."
+      },
+      "Favoured Reward§Avatar of Unreality": {
+        "keywords": {
+          "Tags": []
+        },
+        "text": "Lesser Reward. Each time you make a Warp Storm roll, if this model is on the battlefield, roll 1 additional D6.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 1
+          }
+        }
+      },
+      "Favoured Reward§Empyric Beacon": {
+        "keywords": {
+          "Tags": []
+        },
+        "text": "Lesser Reward. This model has the WARP LOCUS keyword.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 1
+          }
+        }
+      },
+      "Favoured Reward§Favoured Followers": {
+        "keywords": {
+          "Tags": []
+        },
+        "text": "Lesser Reward. Each time you add a LEGIONES DAEMONICA CORE unit to your Order of Battle, you can remove up to 3 Ascendancy points from the Dark God that shares an Allegiance keyword with that unit. If you do so, that LEGIONES DAEMONICA CORE unit immediately gains a number of experience points equal to twice the number of Ascendancy points removed.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 1
+          }
+        }
+      },
+      "Favoured Reward§Infernal Mark": {
+        "keywords": {
+          "Tags": []
+        },
+        "text": "Greater Reward. If this model is a TZEENTCH, NURGLE or SLAANESH model, this model knows one additional psychic power from any discipline they have access to, and once per battle, after successfully manifesting a psychic power, this model can regain up to D3 lost wounds. If this model is a KHORNE model, add 1 to that model’s Strength characteristic, and once per battle, after this model destroys an enemy CHARACTER model with a melee attack, this model can regain up to D3 lost wounds.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Favoured Reward§Portal Keeper": {
+        "keywords": {
+          "Tags": []
+        },
+        "text": "Greater Reward. If this model is part of your Crusade force and you are the Attacker, then you start the battle with an additional 2 Command points. If this model is part of your Crusade force and you are using the Strategic Reserves rule, you can halve the Command point cost required to place units into Strategic Reserves (rounding down).",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Favoured Reward§Crown of Conquests": {
+        "keywords": {
+          "Tags": []
+        },
+        "text": "Greater Reward. Once per battle, if this model is on the battlefield, you can use one Battle Tactic or Strategic Ploy Stratagem twice during the same phase, instead of only once. When you select this model to be your WARLORD, you receive 1 additional Command point.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        }
+      },
+      "Favoured Reward§Slayer of Kings": {
+        "keywords": {
+          "Tags": []
+        },
+        "text": "Exalted Reward. Each time this model makes an attack against an enemy WARLORD or a unit that has a higher Crusade points total than this model, add 1 to that attack’s wound roll. Each time this model destroys an enemy WARLORD or a unit that has a higher Crusade points total than this model, it gains 1 additional experience point at the end of the battle.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Favoured Reward§Lord of the Storm": {
+        "keywords": {
+          "Tags": []
+        },
+        "text": "Exalted Reward. If this model is your WARLORD, and the Warp Storm ability is in effect, while this model is on the battlefield: each time you make a Warp Storm roll, roll 1 additional D6; once per battle round, when you use a Warp Storm effect, reduce the Warp Storm points cost of that effect by 1.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Favoured Reward§Exalted Servant": {
+        "keywords": {
+          "Tags": []
+        },
+        "text": "Exalted Reward. You can use the Exalted Daemon Requisition once for 0RP, but if you do so, you must select this model. If this model is not eligible for that Requisition it cannot be given this Reward. When you do so, that Requisition can be used to give this model an additional Exalted ability. You cannot use this ability if doing so would cause your Crusade force to exceed its Supply Limit.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        }
+      },
+      "Battle Trait§Aspiring Skull-Takers": {
+        "keywords": {
+          "Tags": [
+            "Bloodletters"
+          ]
+        },
+        "text": "BLOODLETTERS unit only. Each time an attack made by models in this unit destroys an enemy CHARACTER unit, subtract 2 from that CHARACTER unit’s Out of Action test at the end of the battle."
+      },
+      "Battle Trait§Brazen Sinews": {
+        "keywords": {
+          "Tags": [
+            "Bloodletters"
+          ]
+        },
+        "text": "BLOODLETTERS unit only. Add 1 to the Strength characteristic of models in this unit."
+      },
+      "Battle Trait§Unquenchable Bloodthirst": {
+        "keywords": {
+          "Tags": [
+            "Bloodletters"
+          ]
+        },
+        "text": "BLOODLETTERS unit only. Each time this unit is selected for the Frenetic Bloodlust Stratagem, that Stratagem costs 1 fewer CPs to use (to a minimum of 0CP)."
+      },
+      "Battle Trait§Expert Flamecasters": {
+        "keywords": {
+          "Tags": [
+            "Horrors"
+          ]
+        },
+        "text": "HORRORS unit only. Improve the Ballistic Skill characteristic of models in this unit by 1."
+      },
+      "Battle Trait§Shatterselves": {
+        "keywords": {
+          "Tags": [
+            "Horrors"
+          ]
+        },
+        "text": "HORRORS unit only. Out of Action tests taken for this unit are automatically passed."
+      },
+      "Battle Trait§Fires of Tzeentch": {
+        "keywords": {
+          "Tags": [
+            "Horrors"
+          ]
+        },
+        "text": "HORRORS unit only. Each time this unit is selected for the Minions of Magic Stratagem, that Stratagem costs 1 fewer CPs to use (to a minimum of 0CP)."
+      },
+      "Battle Trait§Noisome Odour (Aura)": {
+        "keywords": {
+          "Tags": [
+            "Plaguebearers"
+          ]
+        },
+        "text": "PLAGUEBEARERS unit only. While an enemy unit is within 3\" of this unit, subtract 1 from Combat Attrition tests taken for that enemy unit."
+      },
+      "Battle Trait§Encrusted Scabs": {
+        "keywords": {
+          "Tags": [
+            "Plaguebearers"
+          ]
+        },
+        "text": "PLAGUEBEARERS unit only. Models in this unit have a Daemonic Save characteristic of 4+/4+."
+      },
+      "Battle Trait§Disgusting Resilience": {
+        "keywords": {
+          "Tags": [
+            "Plaguebearers"
+          ]
+        },
+        "text": "PLAGUEBEARERS unit only. Each time this unit is selected for the Revolting Constitution Stratagem, that Stratagem costs 1 fewer CPs to use (to a minimum of 0CP)."
+      },
+      "Battle Trait§Perfect Killers": {
+        "keywords": {
+          "Tags": [
+            "Daemonettes"
+          ]
+        },
+        "text": "DAEMONETTES unit only. Each time you make a Warp Storm roll, if any enemy units were destroyed by an attack made by this unit in the previous battle round, roll one additional D6."
+      },
+      "Battle Trait§Whimsic Wisps": {
+        "keywords": {
+          "Tags": [
+            "Daemonettes"
+          ]
+        },
+        "text": "DAEMONETTES unit only. Each time a model in this unit makes a melee attack, the target does not receive the benefits of cover against that attack."
+      },
+      "Battle Trait§Claws of Living Diamond": {
+        "keywords": {
+          "Tags": [
+            "Daemonettes"
+          ]
+        },
+        "text": "DAEMONETTES unit only. Each time this unit is selected for the Razor-sharp Caress Stratagem, that Stratagem costs 1 fewer CPs to use (to a minimum of 0CP)."
+      },
+      "Crusade Relic§Cuirass of Rage": {
         "keywords": {
           "Tags": [
             "Antiquity Relic"
           ]
         },
-        "text": "BATTLESUIT model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+        "text": "KHORNE model only. Once per turn, the first time a saving throw is failed for the bearer, the Damage characteristic of that attack is changed to 0.",
         "stats": {
           "Crusade Pts": {
             "value": 2
+          }
+        },
+        "rules": {
+          "KHORNE only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Khorne",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Crystal Tome": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "TZEENTCH model only. In your Command phase, select one enemy unit within 12\" of the bearer. Until your next Command phase, that enemy unit is not affected by the aura abilities of other enemy units.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "TZEENTCH only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Tzeentch",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Shroud of Corruption": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "NURGLE model only. The bearer has the following ability: Shroud of Corruption (Aura): While an enemy unit is within 6\" of this model, at the end of your Movement phase, roll one D6: on a 4+, that unit suffers 1 mortal wound.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "NURGLE only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Nurgle",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Jewel of Excess": {
+        "keywords": {
+          "Tags": [
+            "Antiquity Relic"
+          ]
+        },
+        "text": "SLAANESH PSYKER model only. Each time the bearer attempts to manifest a psychic power from the Soulstain discipline, add 1 to the Psychic test. Add 1 to Deny the Witch tests taken for the bearer.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 2
+          }
+        },
+        "rules": {
+          "SLAANESH only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Slaanesh",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§G’rmakht the Destroyer": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "KHORNE model equipped with an axe of Khorne only. This Relic replaces an axe of Khorne: Mighty strike (Melee, S +4, AP -4, D D6) or Sweeping blow (Melee, S User, AP -3, D 1; make 2 hit rolls instead of 1). When the bearer is destroyed, instead of using any rules that are triggered when that model is destroyed, you can replace it with a BLOODTHIRSTER model that uses the Bloodthirster datasheet, is treated as a named character and has no Warlord Trait or Crusade card. At the end of each subsequent Fight phase, roll one D6 for this model: on a 5+, the axe’s power ensnares it again and it is removed from the battlefield.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        },
+        "rules": {
+          "KHORNE only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Khorne",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Tome of Endless Dimensions": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "TZEENTCH model only. Each time the bearer attempts to manifest a Witchfire psychic power or Smite, on an unmodified Psychic test of 9 or more, if that power is not denied, after resolving the effects of that psychic power, you can resolve the effects of that psychic power again.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        },
+        "rules": {
+          "TZEENTCH only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Tzeentch",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Contagion Blade": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "NURGLE model equipped with a bileblade only. This Relic replaces a bileblade: Melee, S +1, AP -3, D 3. Each time an attack is made with this weapon, an unmodified wound roll of 6 inflicts D3 mortal wounds on the target in addition to any normal damage. If any model is destroyed by these mortal wounds, that model’s unit suffers a further D3 mortal wounds.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        },
+        "rules": {
+          "NURGLE only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Nurgle",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Crusade Relic§Tears of Asuryan": {
+        "keywords": {
+          "Tags": [
+            "Legendary Relic"
+          ]
+        },
+        "text": "SLAANESH model only. Once per battle, in your Command phase, the bearer can shatter a Tear of Asuryan. When they do so: you gain 6 Warp Storm points; until the start of your next Command phase, the bearer knows all the psychic powers from the Soulstain discipline.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 3
+          }
+        },
+        "rules": {
+          "SLAANESH only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Slaanesh",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         }
       }
