@@ -1,6 +1,6 @@
 {
   "name": "World Eaters 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.9",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -125,6 +125,74 @@
             ],
             "evaluate": "OR",
             "failState": "pass"
+          },
+          "allowBoonofKhorne": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Boon of Khorne"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Daemon Prince",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Boons of Khorne: WORLD EATERS CHARACTER models (not DAEMON PRINCES) may take a Boon of Khorne instead of another Battle Honour; a duplicate D33 roll means Spawndom"
+          },
+          "No model can have more than three Boons of Khorne.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Boon of Khorne"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         }
       },
@@ -438,8 +506,505 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeShowSkullPoints": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Skull Points",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "World Eaters",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeShowLegendarySkullPoints": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Legendary Skull Points",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "World Eaters",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeShowJudgementBonus": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Judgement Bonus",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "World Eaters",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "judgementBonus": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Judgement Bonus",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "2",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Skull Points",
+                    "value"
+                  ]
+                ],
+                "min": 0,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 3
+                }
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Legendary Skull Points",
+                    "value"
+                  ]
+                ],
+                "min": 0
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{this}",
+                    "evals",
+                    "0",
+                    "result",
+                    "integer"
+                  ],
+                  [
+                    "{this}",
+                    "evals",
+                    "1",
+                    "result",
+                    "integer"
+                  ]
+                ],
+                "min": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2,
+            "note": "Judgement roll bonus: +1 per 3 Skull points (rounded down) +1 per Legendary Skull point"
+          },
+          "allowGreaterRewardofKhorne": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Greater Reward of Khorne"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "World Eaters",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Greater Rewards of Khorne: gained on a Mighty Offering (Judgement roll 8+); unique in the Crusade force"
+          },
+          "noCrusadeXpBloodLegions": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honour",
+                    "max"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Blood Legions",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: BLOOD LEGIONS units never gain Experience points or Battle Honours and automatically pass Out of Action tests"
+          }
+        },
+        "stats": {
+          "Skull Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 50,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "icons": [
+              "skull"
+            ],
+            "statOrder": 30
+          },
+          "Legendary Skull Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 50,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "statOrder": 31
+          },
+          "Judgement Bonus": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "min": 0,
+            "max": 99,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "label": "Judgement bonus (+D6)",
+            "statOrder": 32
           }
         }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Blood for the Blood God!": {
+                "order": 100,
+                "tracking": {
+                  "World Eaters Agenda": 1
+                }
+              },
+              "Skulls for the Skull Throne!": {
+                "order": 101,
+                "tracking": {
+                  "World Eaters Agenda": 1
+                }
+              },
+              "Anoint the Field": {
+                "order": 102,
+                "tracking": {
+                  "World Eaters Agenda": 1
+                }
+              },
+              "A Tribute to Murder": {
+                "order": 103,
+                "tracking": {
+                  "World Eaters Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Blood for the Blood God!": {
+                "order": 100,
+                "tracking": {
+                  "World Eaters Agenda": 1
+                }
+              },
+              "Skulls for the Skull Throne!": {
+                "order": 101,
+                "tracking": {
+                  "World Eaters Agenda": 1
+                }
+              },
+              "Anoint the Field": {
+                "order": 102,
+                "tracking": {
+                  "World Eaters Agenda": 1
+                }
+              },
+              "A Tribute to Murder": {
+                "order": 103,
+                "tracking": {
+                  "World Eaters Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Brutal Acquisition",
+            "Requisition§Hideous Scars",
+            "Requisition§The Blood God’s Favour",
+            "Requisition§Blood-Soaked Ascension",
+            "Requisition§Enter the Cage",
+            "Crusade Badge§Taker of Skulls",
+            "Crusade Badge§Greater Gore-maker",
+            "Crusade Badge§Exalted Slaughterer"
+          ]
+        }
+      },
+      "Boon of Khorne": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Greater Reward of Khorne": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Skull Harvest": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": ""
       }
     },
     "assetCatalog": {
@@ -5072,6 +5637,155 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "useCrusadeWorld_Eaters": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Skull Harvest§The Skull Harvest"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
+          },
+          "Only one Death to Cowards in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Death to Cowards"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Blistering Fury in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Blistering Fury"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Blood-Soaked Nightmares in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Blood-Soaked Nightmares"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Savage Guidance in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Savage Guidance"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Bloodthirst in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Bloodthirst"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Cleaving Blows in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Cleaving Blows"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
@@ -11818,7 +12532,56 @@
         },
         "text": "At the start of your Shooting phase, select one enemy **^^Psyker^^** unit within 18\" of and visible to the bearer. That unit must take a Battle-shock test, subtracting 2 from the result. If the test is failed, that enemy unit suffers 3 mortal wounds."
       },
-      "Crusade Honour§Collar of Khorne": {
+      "Requisition§Brutal Acquisition": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after any battle, before any offerings to Khorne are made (you can only purchase this Requisition once after each battle). Select one WORLD EATERS unit from your Crusade army with the Blooded rank or higher to be the Aggressor and one WORLD EATERS unit to be the Defender. Roll one D6 for each of these units, adding their respective XP totals to the results.\n\nIf the Aggressor’s roll is greater, the Defender loses all of its Skull points and Legendary Skull points, and it gains a Battle Scar. The Aggressor gains a number of Skull points and Legendary Skull points equal to the number the Defender lost of each, and must immediately make an offering to Khorne.\n\nIf the Defender’s roll is greater, the Aggressor loses all of its Skull points and Legendary Skull points, and it suffers a Devastating Blow. The Defender gains 3XP."
+      },
+      "Requisition§Hideous Scars": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "While lesser warriors may seek to conceal their battle scars, the World Eaters bear them with pride, for each wound carries a gore-drenched tale.\n\nPurchase this Requisition when a WORLD EATERS unit from your Crusade force gains a Battle Scar; this Battle Scar can never be removed by any means. Roll one D6: on a 1-2, your unit gains 5XP; on a 3-4, your unit gains one Battle Trait; on a 5-6, your unit gains one Boon of Khorne. Each unit can only be selected for this Requisition once."
+      },
+      "Requisition§The Blood God’s Favour": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after a WORLD EATERS CHARACTER unit from your Crusade force makes an offering to Khorne, after making a Judgement roll that did not result in ‘Unworthy Offering’. Roll one D6: on a 1, that unit suffers Spawndom; on a 2+, that unit gains 1 Boon of Khorne."
+      },
+      "Requisition§Blood-Soaked Ascension": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition when a WORLD EATERS CHARACTER unit from your Crusade force (excluding DAEMON units) that has three Boons of Khorne reaches the Heroic or Legendary rank. Remove that unit from your Crusade force and replace it with one WORLD EATERS DAEMON PRINCE or WORLD EATERS DAEMON PRINCE WITH WINGS.\n\nThe new unit can keep any Boons of Khorne the unit it replaced had, even though DAEMON models cannot normally have Boons of Khorne. Any Battle Scars the replaced unit had are not retained. The new unit has the same number of Battle Honours, XP, Skull points and Legendary Skull points as the unit it replaced. You cannot purchase this Requisition if doing so would cause you to exceed your Crusade force’s Supply Limit."
+      },
+      "Requisition§Enter the Cage": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a battle. Select one of the following:\n\nSelect one KHORNE BERZERKERS or WORLD EATERS TERMINATOR SQUAD unit from your Crusade force. Remove that unit from your Crusade force and add either one EIGHTBOUND unit or one EXALTED EIGHTBOUND unit to your Crusade force.\n\nSelect one WORLD EATERS CHARACTER unit (excluding DAEMON units) from your Crusade force. Remove that unit from your Crusade force and add one SLAUGHTERBOUND unit to your Crusade force.\n\nIn either case, until this new unit is removed from your Crusade force, each time this unit is Marked for Greatness, it gains 5XP instead of 3XP. The new unit has the same number of Battle Honours, XP, Skull points and Legendary Skull points as the unit it replaced. You cannot purchase this Requisition if doing so would cause you to exceed your Crusade force’s Supply Limit."
+      },
+      "Crusade Badge§Taker of Skulls": {
+        "text": "You have earned renown as a merciless and savage warlord, claiming a bounty of skulls and spilling rivers of crimson viscera in the name of the Blood God. Through your gory toil, you have earned the boons of Khorne and bear his mark with brazen pride. Mortal thralls whisper that you bear the Blood God’s favour.\nYou have won three or more battles.\nUnits in your Crusade force have a total of three or more Rewards of Khorne, of which one is a Greater Reward of Khorne.\nOne or more WORLD EATERS CHARACTER units in your Crusade force have one or more Boons of Khorne."
+      },
+      "Crusade Badge§Greater Gore-maker": {
+        "text": "You have won six or more battles.\nUnits in your Crusade force have a total of four or more Rewards of Khorne, of which two or more are Greater Rewards of Khorne.\nYou have used either the Enter the Cage Requisition to add one or more new units to your Crusade force or a WORLD EATERS CHARACTER model in your Crusade force has suffered Spawndom.\nOne or more WORLD EATERS CHARACTER units in your Crusade force have two or more Boons of Khorne."
+      },
+      "Crusade Badge§Exalted Slaughterer": {
+        "text": "You have won ten or more battles.\nUnits in your Crusade force have a total of eight or more Rewards of Khorne, of which three or more are Greater Rewards of Khorne.\nYou have used the Blood-soaked Ascension Requisition to add one new unit to your Crusade force."
+      },
+      "Boon of Khorne§Collar of Khorne": {
         "keywords": {
           "Keywords": [
             "Boons of Khorne"
@@ -11829,7 +12592,7 @@
         },
         "text": "This model has the Feel No Pain 4+ ability against Psychic Attacks. While this model is leading a unit, Bodyguard models in that unit have the Feel No Pain 5+ ability against Psychic Attacks."
       },
-      "Crusade Honour§Bestial Limbs": {
+      "Boon of Khorne§Bestial Limbs": {
         "keywords": {
           "Keywords": [
             "Boons of Khorne"
@@ -11840,7 +12603,7 @@
         },
         "text": "Add 1 to Advance and Charge rolls for this model's unit."
       },
-      "Crusade Honour§Muscular Bulk": {
+      "Boon of Khorne§Muscular Bulk": {
         "keywords": {
           "Keywords": [
             "Boons of Khorne"
@@ -11851,7 +12614,7 @@
         },
         "text": "Add 2 to this model's Wounds characteristic."
       },
-      "Crusade Honour§Jagged Horns": {
+      "Boon of Khorne§Jagged Horns": {
         "keywords": {
           "Keywords": [
             "Boons of Khorne"
@@ -11862,7 +12625,7 @@
         },
         "text": "This model's melee weapons have the **[LANCE]** ability."
       },
-      "Crusade Honour§Daemonic Visage": {
+      "Boon of Khorne§Daemonic Visage": {
         "keywords": {
           "Keywords": [
             "Boons of Khorne"
@@ -11873,7 +12636,7 @@
         },
         "text": "Improve this model's Leadership characteristic by 1 and its Objective Control characteristic by 2. If this model is within range of an objective marker you control that is wholly within your opponent's deployment zone at the end of the battle, you gain 1RP."
       },
-      "Crusade Honour§Brazen Flesh": {
+      "Boon of Khorne§Brazen Flesh": {
         "keywords": {
           "Keywords": [
             "Boons of Khorne"
@@ -11884,7 +12647,7 @@
         },
         "text": "This model has a Save characteristic of 2+."
       },
-      "Crusade Honour§Steel Sinews": {
+      "Boon of Khorne§Steel Sinews": {
         "keywords": {
           "Keywords": [
             "Boons of Khorne"
@@ -11895,7 +12658,7 @@
         },
         "text": "Add 1\" to the Move characteristic of models in this model's unit and add 1 to Advance rolls made for this model's unit."
       },
-      "Crusade Honour§Tearing Claws": {
+      "Boon of Khorne§Tearing Claws": {
         "keywords": {
           "Keywords": [
             "Boons of Khorne"
@@ -11906,7 +12669,7 @@
         },
         "text": "Add 1 to the Attacks characteristic of melee weapons equipped by this model. If this model destroys eight or more models during a battle, at the end of the battle, it gains 1 bonus Skull point."
       },
-      "Crusade Honour§Warp Strength": {
+      "Boon of Khorne§Warp Strength": {
         "keywords": {
           "Keywords": [
             "Boons of Khorne"
@@ -11916,6 +12679,75 @@
           ]
         },
         "text": "Improve the Strength characteristic of melee weapons equipped by this model by 2. If this model destroys one or more **^^Monster^^** models and/or one or more **^^Character^^** models during a battle, at the end of the battle, it gains 1 bonus Skull point."
+      },
+      "Greater Reward of Khorne§Death to Cowards": {
+        "keywords": {
+          "Tags": [
+            "World Eaters"
+          ],
+          "Keywords": [
+            "Greater Rewards of Khorne"
+          ]
+        },
+        "text": "Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of one or more units from your army with this ability is selected to Fall Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests.\n\nBlessing of Khorne unlocked: double 3+. Greater Rewards are unique: only one model in your Crusade force can have each."
+      },
+      "Greater Reward of Khorne§Blistering Fury": {
+        "keywords": {
+          "Tags": [
+            "World Eaters"
+          ],
+          "Keywords": [
+            "Greater Rewards of Khorne"
+          ]
+        },
+        "text": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).\n\nBlessing of Khorne unlocked: double 4+. Greater Rewards are unique: only one model in your Crusade force can have each."
+      },
+      "Greater Reward of Khorne§Blood-Soaked Nightmares": {
+        "keywords": {
+          "Tags": [
+            "World Eaters"
+          ],
+          "Keywords": [
+            "Greater Rewards of Khorne"
+          ]
+        },
+        "text": "At the start of each player’s Command phase, each enemy unit that is within Engagement Range of one or more units with this ability must take a Battle-shock test.\n\nBlessing of Khorne unlocked: double 4+. Greater Rewards are unique: only one model in your Crusade force can have each."
+      },
+      "Greater Reward of Khorne§Savage Guidance": {
+        "keywords": {
+          "Tags": [
+            "World Eaters"
+          ],
+          "Keywords": [
+            "Greater Rewards of Khorne"
+          ]
+        },
+        "text": "Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n\nBlessing of Khorne unlocked: double 5+. Greater Rewards are unique: only one model in your Crusade force can have each."
+      },
+      "Greater Reward of Khorne§Bloodthirst": {
+        "keywords": {
+          "Tags": [
+            "World Eaters"
+          ],
+          "Keywords": [
+            "Greater Rewards of Khorne"
+          ]
+        },
+        "text": "Add 2\" to the Move characteristic of models in this unit.\n\nBlessing of Khorne unlocked: double 5+. Greater Rewards are unique: only one model in your Crusade force can have each."
+      },
+      "Greater Reward of Khorne§Cleaving Blows": {
+        "keywords": {
+          "Tags": [
+            "World Eaters"
+          ],
+          "Keywords": [
+            "Greater Rewards of Khorne"
+          ]
+        },
+        "text": "Improve the Armour Penetration characteristic of melee weapons equipped by models in this unit by 1.\n\nBlessing of Khorne unlocked: double 6+. Greater Rewards are unique: only one model in your Crusade force can have each."
+      },
+      "Skull Harvest§The Skull Harvest": {
+        "text": "**The Skull Harvest.** Each time an enemy unit is destroyed by a melee attack made by a WORLD EATERS unit from your army, that unit gains 1 Skull point, plus 1 bonus Skull point for each that applies: the enemy unit is a CHARACTER, MONSTER or WALKER; it is a WARLORD; it is TITANIC. A unit cannot gain more than 5 Skull points in one battle. Enemy EPIC HEROES and Legendary-rank units award 1 Legendary Skull point instead (no limit). For an Attached unit you decide whether the Leader or the Bodyguard unit gains each point. EPIC HEROES do not track Skull points (track them for bragging rights only). Record the points on each unit's Skull Points and Legendary Skull Points counters.\n\n**Judgement of the Blood God.** At the start of the Update Crusade Cards step, any unit with 1 or more Skull points can make an offering: roll one D6 and add the unit's Judgement bonus (+1 per 3 Skull points, rounded down, +1 per Legendary Skull point). 1–3 **Unworthy Offering:** the unit takes a Leadership test; if failed it suffers a Devastating Blow or Battle Scar as if it had failed an Out of Action test. 4–5 **Pleasing Bounty:** the unit is Marked for Greatness in addition to any others. 6–7 **Bloody Harvest:** roll on the Lesser Rewards table. 8+ **Mighty Offering:** roll on the Greater Rewards table. After an offering (whatever the result) the unit's Skull points and Legendary Skull points reset to 0.\n\n**Lesser Rewards of Khorne (D6):** 1–2 Lessons of Slaughter — this unit gains 5XP. 3–4 Boon of Khorne — if the unit is a CHARACTER (not a DAEMON PRINCE) it gains one Boon of Khorne of your choice, otherwise 5XP. 5–6 Favoured Champions — the unit gains one Battle Honour of your choice that it could normally have.\n\n**Greater Rewards of Khorne (D6):** each is unique in your Crusade force (re-roll duplicates); if the unit is at its Battle Honour cap, replace one non-Greater-Reward honour. While a unit with a Greater Reward is on the battlefield when you make a Blessings of Khorne roll, you also have access to the associated Blessing of Khorne (the double shown).\n\n**Blood Legions:** with the Khorne Daemonkin Detachment, BLOOD LEGIONS units from your Crusade force can join your Crusade army; they never gain Experience points or Battle Honours and automatically pass Out of Action tests."
       }
     },
     "gameModes": {},

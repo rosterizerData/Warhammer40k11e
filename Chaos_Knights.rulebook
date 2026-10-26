@@ -1,6 +1,6 @@
 {
   "name": "Chaos Knights 11e",
-  "revision": "11.2.6",
+  "revision": "11.2.8",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -505,6 +505,287 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          },
+          "allowIdolatorsOffering": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Idolators’ Offering"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Titanic",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "ckIdolator"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Idolators’ Offerings: CHAOS KNIGHTS TITANIC models with Idolator Influence at Wary or better take these instead of other Battle Traits, one per suit location"
+          },
+          "One Idolators’ Offering per suit location (Legs).": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Legs"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "One Idolators’ Offering per suit location (Arms).": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Arms"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "One Idolators’ Offering per suit location (Torso).": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Torso"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "One Idolators’ Offering per suit location (Head).": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Head"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "allowHuntTactic": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Hunt Tactic"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "War Dog",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "ckWarDog"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Hunt Tactics: WAR DOG models with War Dog Domination at Wary or better take these instead of other Battle Traits"
+          },
+          "allowDarkBoon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Dark Boon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Titanic",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "ckDarkGods"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Dark Boons: the benefit of a Pact of Damnation (Path to Damnation Requisition); Minor boons from Dark Gods at Wary, Major only at Aligned Interests; the Cursed Price is a Chaos Knights Battle Scar"
+          },
+          "A model can have only one Pact of Damnation.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Dark Boon"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
@@ -551,6 +832,263 @@
             "visibility": "normal"
           }
         }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Malicious Hunt": {
+                "order": 100,
+                "tracking": {
+                  "Chaos Knights Agenda": 1
+                }
+              },
+              "Tear Down the False Gods": {
+                "order": 101,
+                "tracking": {
+                  "Chaos Knights Agenda": 1
+                }
+              },
+              "Seize Riches": {
+                "order": 102,
+                "tracking": {
+                  "Chaos Knights Agenda": 1
+                }
+              },
+              "Tyrannical Domination": {
+                "order": 103,
+                "tracking": {
+                  "Chaos Knights Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Malicious Hunt": {
+                "order": 100,
+                "tracking": {
+                  "Chaos Knights Agenda": 1
+                }
+              },
+              "Tear Down the False Gods": {
+                "order": 101,
+                "tracking": {
+                  "Chaos Knights Agenda": 1
+                }
+              },
+              "Seize Riches": {
+                "order": 102,
+                "tracking": {
+                  "Chaos Knights Agenda": 1
+                }
+              },
+              "Tyrannical Domination": {
+                "order": 103,
+                "tracking": {
+                  "Chaos Knights Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Vile Reworking",
+            "Requisition§Path to Damnation",
+            "Requisition§Dark Ambition",
+            "Requisition§A New Steed",
+            "Crusade Badge§Dread Baron",
+            "Crusade Badge§Exalted Fiend",
+            "Crusade Badge§Heretic Monarch"
+          ]
+        }
+      },
+      "Amassing Power": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Allegiance": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Iconoclast House": {
+                "order": 1
+              },
+              "Infernal House": {
+                "order": 2
+              },
+              "Dreadblades": {
+                "order": 3
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 1
+          },
+          "Dark Gods": {
+            "statType": "rank",
+            "ranks": {
+              "Hostile": {
+                "order": 0,
+                "tracking": {
+                  "ckDarkGods": 1
+                }
+              },
+              "Distrustful": {
+                "order": 1,
+                "tracking": {
+                  "ckDarkGods": 2
+                }
+              },
+              "Wary": {
+                "order": 2,
+                "tracking": {
+                  "ckDarkGods": 3
+                }
+              },
+              "Cautious Alliance": {
+                "order": 3,
+                "tracking": {
+                  "ckDarkGods": 4
+                }
+              },
+              "Aligned Interests": {
+                "order": 4,
+                "tracking": {
+                  "ckDarkGods": 5
+                }
+              }
+            },
+            "value": "Hostile",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 2
+          },
+          "Idolator Influence": {
+            "statType": "rank",
+            "ranks": {
+              "Hostile": {
+                "order": 0,
+                "tracking": {
+                  "ckIdolator": 1
+                }
+              },
+              "Distrustful": {
+                "order": 1,
+                "tracking": {
+                  "ckIdolator": 2
+                }
+              },
+              "Wary": {
+                "order": 2,
+                "tracking": {
+                  "ckIdolator": 3
+                }
+              },
+              "Cautious Alliance": {
+                "order": 3,
+                "tracking": {
+                  "ckIdolator": 4
+                }
+              },
+              "Aligned Interests": {
+                "order": 4,
+                "tracking": {
+                  "ckIdolator": 5
+                }
+              }
+            },
+            "value": "Hostile",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 3
+          },
+          "War Dog Domination": {
+            "statType": "rank",
+            "ranks": {
+              "Hostile": {
+                "order": 0,
+                "tracking": {
+                  "ckWarDog": 1
+                }
+              },
+              "Distrustful": {
+                "order": 1,
+                "tracking": {
+                  "ckWarDog": 2
+                }
+              },
+              "Wary": {
+                "order": 2,
+                "tracking": {
+                  "ckWarDog": 3
+                }
+              },
+              "Cautious Alliance": {
+                "order": 3,
+                "tracking": {
+                  "ckWarDog": 4
+                }
+              },
+              "Aligned Interests": {
+                "order": 4,
+                "tracking": {
+                  "ckWarDog": 5
+                }
+              }
+            },
+            "value": "Hostile",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 4
+          }
+        }
+      },
+      "Idolators’ Offering": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Hunt Tactic": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Dark Boon": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
       }
     },
     "assetCatalog": {
@@ -2791,6 +3329,231 @@
               }
             ],
             "evaluate": "OR",
+            "failState": "error"
+          },
+          "useCrusadeChaos_Knights": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Amassing Power§Amassing Power"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
+          },
+          "Only one Auto-Fury Cacodaemons in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Auto-Fury Cacodaemons"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Damned Construction in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Damned Construction"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Raking Talons in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Raking Talons"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Tyrantus Array in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Tyrantus Array"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Throne Insidious in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Throne Insidious"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Wrathful Aura in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Wrathful Aura"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Beguiler's Maw in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Beguiler's Maw"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Ensorcelled Shield in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Ensorcelled Shield"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Warp Walker in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Warp Walker"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Brazen Heart in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Brazen Heart"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
             "failState": "error"
           }
         },
@@ -6744,10 +7507,529 @@
         },
         "text": "The range of this model's Aura abilities is reduced to a maximum of 6\" and cannot be increased by any means."
       },
-      "Crusade Honour§Brazen Heart": {
+      "Requisition§Vile Reworking": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition at any time. You cannot use this Requisition if your Crusade force’s Idolator Influence standing level is Distrustful or Hostile. Select one CHAOS KNIGHTS TITANIC model from your Crusade force with one or more Idolators’ Offerings. Select one of those Idolators’ Offerings and remove it. You can then select a new Idolators’ Offering for that model. Afterwards, if your Idolator Influence standing level is Wary or worse, roll one D6: on a 1, your model gains a Battle Scar."
+      },
+      "Requisition§Path to Damnation": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after winning a battle. You cannot purchase this Requisition if your Crusade force’s Dark Gods standing level is Distrustful or Hostile. Select one CHAOS KNIGHTS TITANIC model from your Crusade army to attempt to make a pact with the Dark Gods. If that model already has a Pact of Damnation, it must break it. Remove that pact’s Dark Boon, then roll one D6: on a 4+ remove that pact’s Cursed Price; otherwise, that pact’s Cursed Price is then treated as a normal Battle Scar. Finally, roll one D6, and consult the table below to see if your model successfully gains a Pact of Damnation.\n\nDark Gods\n\nStanding Level\n\nSuccessful Result\n\n+\n\n+\n\n+"
+      },
+      "Requisition§Dark Ambition": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after a battle, and no more than once after each battle. Select one Power Base, and reduce your standing level with that Power Base to Hostile. For each level of standing lost when reducing it in this way, select a different Power Base and increase your standing level with that Power Base by 1.\n\nFor example, if your standing level with the Power Base you select is Aligned Interests, then you lose 4 levels of standing, and can increase your standing level with a different Power Base 4 times."
+      },
+      "Requisition§A New Steed": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition at any time. Select one CHAOS KNIGHTS TITANIC unit from your Order of Battle. Remove that unit from your Order of Battle and replace it with one CHAOS KNIGHTS TITANIC unit. You cannot purchase this Requisition if doing so would cause you to exceed your Crusade force’s Supply Limit. The new unit starts with the same XP, Battle Honours, Battle Scars, Crusade points and Pacts of Damnation (if applicable) as the unit it replaced."
+      },
+      "Crusade Badge§Dread Baron": {
+        "text": "You have the maximum standing level in at least one Power Base.\nYou have won two or more battles."
+      },
+      "Crusade Badge§Exalted Fiend": {
+        "text": "You have the maximum standing level in at least two different Power Bases at the same time.\nYou have won six or more battles.\nAt least one CHARACTER unit from your Order of Battle has reached the Heroic rank."
+      },
+      "Crusade Badge§Heretic Monarch": {
+        "text": "You have the maximum standing level in all three Power Bases at the same time.\nYou have won ten or more battles.\nAt least one CHARACTER unit from your Order of Battle has reached the Legendary rank.\nAdvance Moves\nWhen a unit Advances, make an Advance roll for that unit by rolling one D6. Add the result in inches to the Move characteristic of each model in that unit until the end of the phase. Each model in that unit can then make an Advance move by moving a distance in inches less than or equal to this total, but no model can be moved within Engagement Range of enemy models. A unit cannot shoot or declare a charge in the same turn that it Advanced.\nAdvance Move: Models move up to M+D6\".\nCannot move within Engagement Range of any enemy models.\nUnits that Advance cannot shoot or charge this turn.\nCharging with a Unit\nOnce you have selected an eligible unit to declare a charge, you must select one or more enemy units within 12\" of it as the targets of that charge. The targets of a charge do not need to be visible to the charging unit.\nYou then make a Charge roll for the charging unit by rolling 2D6. The result is the maximum number of inches each model in that unit can be moved if a Charge move is possible. For a Charge move to be possible, the Charge roll must be sufficient to enable the charging unit to end that move:\nWithin Engagement Range of every unit that you selected as a target of the charge.\nWithout moving within Engagement Range of any enemy units that were not a target of the charge.\nIn Unit Coherency.\nIf any of these conditions cannot be met, the charge fails and no models in the charging unit move this phase. Otherwise, the charge is successful and the models in the charging unit make a Charge move – move each model a distance in inches up to the result of the Charge roll. When doing so, each model in the charging unit must end its Charge move closer to one of the units selected as a target of its charge. If you can also move a charging model so that it ends its Charge move in base-to-base contact with one or more enemy models while still enabling the charging unit to end its move satisfying all of the conditions above, you must do so. The controlling player chooses the order in which to move their models.\nCharge Roll: 2D6\".\nTargets of a charge must be within 12\" but do not need to be visible.\nIf the distance rolled is insufficient to move within Engagement Range of all targets while maintaining Unit Coherency, the charge fails.\nCannot move within Engagement Range of any unit that was not a target of the charge.\nIf the charge is successful, each model makes a Charge move less than or equal to the Charge roll, and must move into base-to-base contact with an enemy model if possible.\nFall Back Moves\nWhen a unit Falls Back, each model in that unit can make a Fall Back move by moving a distance in inches less than or equal to its Move characteristic, and when doing so you can move it within Engagement Range of enemy models, provided it does not end that move within Engagement Range of any enemy models – if this is not possible, that unit cannot Fall Back.\nA unit cannot shoot or declare a charge in the same turn that it Fell Back."
+      },
+      "Amassing Power§Amassing Power": {
+        "text": "**Amassing Power.** Pick your Allegiance; it sets the starting standing of your three Power Bases (Iconoclast House: Dark Gods Hostile, Idolator Influence Wary, War Dog Domination Distrustful; Infernal House: Dark Gods Wary, Idolator Influence Hostile, War Dog Domination Wary; Dreadblades: Dark Gods Distrustful, Idolator Influence Distrustful, War Dog Domination Hostile). Standing runs Hostile → Distrustful → Wary → Cautious Alliance → Aligned Interests and never leaves that range. Each time you win a battle, raise one Power Base by 1 and roll a D6 for each other base: on a 1–2 it drops by 1. Each draw or loss: roll a D6, on a 1–3 a random base drops by 1. Agendas can raise standings too; Dark Ambition (1RP) drops one base to Hostile and spreads the lost levels over the others.\n\n**Idolators’ Offerings** (Battle Traits for CHAOS KNIGHTS TITANIC models, one per suit location: Legs, Arms, Torso, Head) need Idolator Influence at Wary or better; the fourth of each location needs Cautious Alliance, the fifth needs Aligned Interests and only one model in your Order of Battle can have it. Vile Reworking (1RP) swaps one; at Wary or worse roll a D6 afterwards, on a 1 the model gains a Battle Scar.\n\n**Hunting Packs:** War Dog models take Hunt Tactics (Battle Traits) from War Dog Domination at Wary or better. At the start of the first battle round form your WAR DOG models into Hunting Packs of 2 models (2–3 at Aligned Interests); each pack picks one Hunt Tactic that its models have while within 12\" of another pack member, and becomes Ascendant once a pack member destroys an enemy unit.\n\n**Pacts of Damnation:** the Path to Damnation Requisition (1RP, after a win, not at Hostile or Distrustful) lets a TITANIC model attempt a pact; success on a D6 of 6+ at Wary, 4+ at Cautious Alliance, 2+ at Aligned Interests. A pact is one Dark Boon (Minor from Wary, Major only at Aligned Interests; no two models share a boon) plus a Cursed Price: a randomly generated Chaos Knights Battle Scar that stays until the pact is broken. One pact per model."
+      },
+      "Idolators’ Offering§Fleshmetal Servo-Tendons": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Legs",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Legs.* Add 2\" to the Move characteristic of this model and you can re-roll Advance rolls made for it."
+      },
+      "Idolators’ Offering§Cruel Spikes": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Legs",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Legs.* Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2-4, that enemy unit suffers D3+1 mortal wounds; on a 5+, that enemy unit suffers D3+3 mortal wounds."
+      },
+      "Idolators’ Offering§Runes of Scorn": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Legs",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Legs.* At the start of the Fight phase, select one enemy unit within Engagement Range of this model. Until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll."
+      },
+      "Idolators’ Offering§Spite Capacitors": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Legs",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Legs.* While your Idolators Influence standing level is Cautious Alliance or better, this model is eligible to declare a charge in a turn in which it Fell Back.",
+        "rules": {
+          "Needs Idolator Influence at Cautious Alliance or better.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "ckIdolator"
+                  ]
+                ],
+                "min": 4
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Idolators’ Offering§Raking Talons": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Legs",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Legs.* Only one model in your Order of Battle can have this Idolators’ Offering. While your Idolators’ Influence standing level is Aligned Interests, each time an enemy unit (excluding MONSTERS and VEHICLES) that is within Engagement Range of this model Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests.",
+        "rules": {
+          "Needs Idolator Influence at Aligned Interests.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "ckIdolator"
+                  ]
+                ],
+                "min": 5
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Idolators’ Offering§Doomlock Targeter": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Arms",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Arms.* Ranged weapons equipped by this model have the [ASSAULT] ability."
+      },
+      "Idolators’ Offering§Mutant Musculature": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Arms",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Arms.* Each time this model makes a melee attack, if it made a Charge move this turn, add 2 to the Strength characteristic of that attack."
+      },
+      "Idolators’ Offering§Soulsight Occulum": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Arms",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Arms.* Each time this model makes a ranged attack, it can ignore any or all modifiers to its Ballistic Skill and the Hit roll."
+      },
+      "Idolators’ Offering§Predatory Machine Spirit": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Arms",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Arms.* While your Idolators’ Influence standing level is Cautious Alliance or better, once per battle, you can target this model with the Counter-offensive Stratagem for 0CP,\n\nand can do so even if you have already targeted a different unit with that Stratagem this phase.",
+        "rules": {
+          "Needs Idolator Influence at Cautious Alliance or better.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "ckIdolator"
+                  ]
+                ],
+                "min": 4
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Idolators’ Offering§Auto-Fury Cacodaemons": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Arms",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Arms.* Only one model in your Order of Battle can have this Idolators’ Offering. While your Idolators Influence standing level is Aligned Interests, each time this model makes a ranged attack, if it targets the closest eligible unit within 12\", that attack has the [SUSTAINED HITS 1] ability.",
+        "rules": {
+          "Needs Idolator Influence at Aligned Interests.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "ckIdolator"
+                  ]
+                ],
+                "min": 5
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Idolators’ Offering§Ion Cowl": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Torso",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Torso.* When making ranged attacks with its Blast weapons, this model can target enemy units within Engagement Range of it (provided no other friendly units are also within Engagement Range of that enemy unit)."
+      },
+      "Idolators’ Offering§Malign Wards": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Torso",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Torso.* This model has the Feel No Pain 4+ ability against mortal wounds."
+      },
+      "Idolators’ Offering§Balefury Fail Safes": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Torso",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Torso.* When this model is destroyed, this model’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 3+ instead of on a 6."
+      },
+      "Idolators’ Offering§Shrieking Armour": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Torso",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Torso.* While your Idolator Influence standing level is Cautious Alliance or better, at the start of the Fight phase, each enemy unit within Engagement Range of this model must take a Battle-shock test.",
+        "rules": {
+          "Needs Idolator Influence at Cautious Alliance or better.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "ckIdolator"
+                  ]
+                ],
+                "min": 4
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Idolators’ Offering§Damned Construction": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Torso",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Torso.* Only one model in your Order of Battle can have this Idolators’ Offering. While your Idolator Influence standing level is Aligned Interests, this model has a Save characteristic of 2+.",
+        "rules": {
+          "Needs Idolator Influence at Aligned Interests.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "ckIdolator"
+                  ]
+                ],
+                "min": 5
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Idolators’ Offering§Warp Optics": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Head",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Head.* Ranged weapons equipped by this model have the [IGNORES COVER] ability."
+      },
+      "Idolators’ Offering§Vox-Symbiote": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Head",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Head.* Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+      },
+      "Idolators’ Offering§Daemonic Possessor": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Head",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Head.* Once per battle, after this model fails a Battle-shock test, this model can use this ability. If it does, it is no longer Battle-shocked."
+      },
+      "Idolators’ Offering§Malevolus Lockout": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Head",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Head.* While your Idolators’ Influence standing level is Cautious Alliance or better, once per battle, when this model is selected to shoot, it can use this ability. If it does, select one enemy unit. Until the end of the phase, ranged weapons equipped by this model have the [devastating WOUNDS] ability while targeting that enemy unit.",
+        "rules": {
+          "Needs Idolator Influence at Cautious Alliance or better.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "ckIdolator"
+                  ]
+                ],
+                "min": 4
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Idolators’ Offering§Tyrantus Array": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Head",
+            "Idolators’ Offering"
+          ]
+        },
+        "text": "*Head.* Only one model in your Order of Battle can have this Idolators’ Offering. While your Idolator Influence standing level is Aligned Interests, when selecting Agendas, you can select one additional Agenda for this battle.",
+        "rules": {
+          "Needs Idolator Influence at Aligned Interests.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "ckIdolator"
+                  ]
+                ],
+                "min": 5
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Hunt Tactic§Aggressive Charge": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Hunt Tactic"
+          ]
+        },
+        "text": "This model is eligible to declare a charge in a turn in which it Advanced. In addition, if this model’s Hunting Pack is Ascendant, each time this model makes a melee attack, if it made a Charge move this turn, that attack has the [DEVASTATING WOUNDS] ability."
+      },
+      "Hunt Tactic§Pin and Predate": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Hunt Tactic"
+          ]
+        },
+        "text": "Each time this model makes a melee attack, you can re-roll a Wound roll of 1. If this model’s Hunting Pack is Ascendant, you can re-roll the Wound roll instead."
+      },
+      "Hunt Tactic§Roving Assassins": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Hunt Tactic"
+          ]
+        },
+        "text": "Add 3\" to the Range characteristic of ranged weapons equipped by this model. In addition, if this model’s Hunting Pack is Ascendant, ranged weapons equipped by this model have the [IGNORES COVER] ability."
+      },
+      "Hunt Tactic§Brute Tactics": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Hunt Tactic"
+          ]
+        },
+        "text": "This model has a 5+ invulnerable save against melee attacks. In addition, if this model’s Hunting Pack is Ascendant, each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds."
+      },
+      "Hunt Tactic§Hidden Stalkers": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Hunt Tactic"
+          ]
+        },
+        "text": "This model has the Benefit of Cover. In addition, if this model’s Hunting Pack is Ascendant, this model can only be targeted by a ranged attack if the attacking model is within 18\"."
+      },
+      "Hunt Tactic§Coordinated Hunters": {
+        "keywords": {
+          "Tags": [
+            "Chaos Knights"
+          ],
+          "Keywords": [
+            "Hunt Tactic"
+          ]
+        },
+        "text": "Add 2 to this model’s Objective Control characteristic. In addition, if this model’s Hunting Pack is Ascendant, each time you select this model as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+      },
+      "Dark Boon§Brazen Heart": {
         "keywords": {
           "Keywords": [
-            "Pacts of Damnation"
+            "Pacts of Damnation",
+            "Major Dark Boon"
           ],
           "Tags": [
             "Chaos Knights"
@@ -6758,12 +8040,53 @@
           "Crusade Pts": {
             "value": 2
           }
+        },
+        "rules": {
+          "Major Dark Boon: needs Dark Gods at Aligned Interests.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "ckDarkGods"
+                  ]
+                ],
+                "min": 5
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "No two models can have the same Dark Boon.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Brazen Heart"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
         }
       },
-      "Crusade Honour§Ensorcelled Shield": {
+      "Dark Boon§Ensorcelled Shield": {
         "keywords": {
           "Keywords": [
-            "Pacts of Damnation"
+            "Pacts of Damnation",
+            "Major Dark Boon"
           ],
           "Tags": [
             "Chaos Knights"
@@ -6774,12 +8097,53 @@
           "Crusade Pts": {
             "value": 2
           }
+        },
+        "rules": {
+          "Major Dark Boon: needs Dark Gods at Aligned Interests.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "ckDarkGods"
+                  ]
+                ],
+                "min": 5
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "No two models can have the same Dark Boon.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Ensorcelled Shield"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
         }
       },
-      "Crusade Honour§Warp Walker": {
+      "Dark Boon§Warp Walker": {
         "keywords": {
           "Keywords": [
-            "Pacts of Damnation"
+            "Pacts of Damnation",
+            "Major Dark Boon"
           ],
           "Tags": [
             "Chaos Knights"
@@ -6790,12 +8154,53 @@
           "Crusade Pts": {
             "value": 2
           }
+        },
+        "rules": {
+          "Major Dark Boon: needs Dark Gods at Aligned Interests.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "ckDarkGods"
+                  ]
+                ],
+                "min": 5
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "No two models can have the same Dark Boon.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Warp Walker"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
         }
       },
-      "Crusade Honour§Wrathful Aura": {
+      "Dark Boon§Wrathful Aura": {
         "keywords": {
           "Keywords": [
-            "Pacts of Damnation"
+            "Pacts of Damnation",
+            "Minor Dark Boon"
           ],
           "Tags": [
             "Chaos Knights"
@@ -6806,12 +8211,34 @@
           "Crusade Pts": {
             "value": 2
           }
+        },
+        "rules": {
+          "No two models can have the same Dark Boon.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Wrathful Aura"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
         }
       },
-      "Crusade Honour§Beguiler's Maw": {
+      "Dark Boon§Beguiler's Maw": {
         "keywords": {
           "Keywords": [
-            "Pacts of Damnation"
+            "Pacts of Damnation",
+            "Minor Dark Boon"
           ],
           "Tags": [
             "Chaos Knights"
@@ -6822,12 +8249,34 @@
           "Crusade Pts": {
             "value": 2
           }
+        },
+        "rules": {
+          "No two models can have the same Dark Boon.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Beguiler's Maw"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
         }
       },
-      "Crusade Honour§Throne Insidious": {
+      "Dark Boon§Throne Insidious": {
         "keywords": {
           "Keywords": [
-            "Pacts of Damnation"
+            "Pacts of Damnation",
+            "Minor Dark Boon"
           ],
           "Tags": [
             "Chaos Knights"
@@ -6837,6 +8286,27 @@
         "stats": {
           "Crusade Pts": {
             "value": 2
+          }
+        },
+        "rules": {
+          "No two models can have the same Dark Boon.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tally",
+                    "Throne Insidious"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         }
       }

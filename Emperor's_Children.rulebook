@@ -1,6 +1,6 @@
 {
   "name": "Emperor's Children 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -125,6 +125,190 @@
             ],
             "evaluate": "OR",
             "failState": "pass"
+          },
+          "allowBoonofSlaanesh": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Boon of Slaanesh"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Daemon Prince",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Daemon Prince with Wings",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Boons of Slaanesh: EMPEROR’S CHILDREN CHARACTER models (not DAEMON PRINCES) may take a Boon of Slaanesh instead of another Battle Honour; a duplicate D33 roll means Spawndom"
+          },
+          "No model can have more than three Boons of Slaanesh.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Boon of Slaanesh"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "crusadeShowPersonalElixir": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Personal Elixir",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Emperor’s Children",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          }
+        },
+        "stats": {
+          "Personal Elixir": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Alacrine": {
+                "order": 1,
+                "tracking": {
+                  "Personal Elixir equipped": 1
+                }
+              },
+              "Cerebresec": {
+                "order": 2,
+                "tracking": {
+                  "Personal Elixir equipped": 1
+                }
+              },
+              "Thrynicine": {
+                "order": 3,
+                "tracking": {
+                  "Personal Elixir equipped": 1
+                }
+              },
+              "Salviqine Tears": {
+                "order": 4,
+                "tracking": {
+                  "Personal Elixir equipped": 1
+                }
+              },
+              "Sanctus Vi": {
+                "order": 5,
+                "tracking": {
+                  "Personal Elixir equipped": 1
+                }
+              },
+              "Excelsor X": {
+                "order": 6,
+                "tracking": {
+                  "Personal Elixir equipped": 1
+                }
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "statOrder": 20
           }
         }
       },
@@ -227,6 +411,746 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "noCrusadeXpLegionOfExcess": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honour",
+                    "max"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Legion of Excess",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: LEGIONS OF EXCESS units never gain Experience points or Battle Honours and automatically pass Out of Action tests"
+          }
+        }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Draught of Despair": {
+                "order": 100,
+                "tracking": {
+                  "Emperor’s Children Agenda": 1
+                }
+              },
+              "Adorn the Canvas Eclectic": {
+                "order": 101,
+                "tracking": {
+                  "Emperor’s Children Agenda": 1
+                }
+              },
+              "Symphony of Pain and Hate": {
+                "order": 102,
+                "tracking": {
+                  "Emperor’s Children Agenda": 1
+                }
+              },
+              "Feeding the Addiction": {
+                "order": 103,
+                "tracking": {
+                  "Emperor’s Children Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Draught of Despair": {
+                "order": 100,
+                "tracking": {
+                  "Emperor’s Children Agenda": 1
+                }
+              },
+              "Adorn the Canvas Eclectic": {
+                "order": 101,
+                "tracking": {
+                  "Emperor’s Children Agenda": 1
+                }
+              },
+              "Symphony of Pain and Hate": {
+                "order": 102,
+                "tracking": {
+                  "Emperor’s Children Agenda": 1
+                }
+              },
+              "Feeding the Addiction": {
+                "order": 103,
+                "tracking": {
+                  "Emperor’s Children Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Soul Barter",
+            "Requisition§Perfect Ascension",
+            "Requisition§Dark Patronage",
+            "Requisition§Perfection Personified",
+            "Requisition§Excess of Boons",
+            "Crusade Badge§Seeker of Sensation",
+            "Crusade Badge§Arch-hedonist",
+            "Crusade Badge§Favoured of the Dark Prince"
+          ]
+        }
+      },
+      "Boon of Slaanesh": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Combat Elixirs Stash": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Common Ingredients": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 20,
+            "group": "Ingredients",
+            "groupOrder": 1,
+            "statOrder": 1
+          },
+          "Rare Ingredients": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 20,
+            "group": "Ingredients",
+            "groupOrder": 1,
+            "statOrder": 2
+          },
+          "Concentrate of Tormented Souls": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Exotic ingredients",
+            "groupOrder": 2,
+            "statOrder": 10
+          },
+          "Dilution of False Hope": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Exotic ingredients",
+            "groupOrder": 2,
+            "statOrder": 11
+          },
+          "Distillate of Hatred": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Exotic ingredients",
+            "groupOrder": 2,
+            "statOrder": 12
+          },
+          "Essence of Fear": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Exotic ingredients",
+            "groupOrder": 2,
+            "statOrder": 13
+          },
+          "Extract of Xeno-matter": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Exotic ingredients",
+            "groupOrder": 2,
+            "statOrder": 14
+          },
+          "Infusion of Traitor’s Blood": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Exotic ingredients",
+            "groupOrder": 2,
+            "statOrder": 15
+          },
+          "Anfrak Silk (doses)": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Army Elixirs",
+            "groupOrder": 3,
+            "label": "Anfrak Silk doses",
+            "statOrder": 20
+          },
+          "Anfrak Silk equipped": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Army Elixir equipped": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Army Elixirs",
+            "groupOrder": 3,
+            "label": "Anfrak Silk equipped",
+            "statOrder": 21
+          },
+          "Xylocil (doses)": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Army Elixirs",
+            "groupOrder": 3,
+            "label": "Xylocil doses",
+            "statOrder": 22
+          },
+          "Xylocil equipped": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Army Elixir equipped": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Army Elixirs",
+            "groupOrder": 3,
+            "label": "Xylocil equipped",
+            "statOrder": 23
+          },
+          "Shivversplit (doses)": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Army Elixirs",
+            "groupOrder": 3,
+            "label": "Shivversplit doses",
+            "statOrder": 24
+          },
+          "Shivversplit equipped": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Army Elixir equipped": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Army Elixirs",
+            "groupOrder": 3,
+            "label": "Shivversplit equipped",
+            "statOrder": 25
+          },
+          "Heliotrophos (doses)": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Army Elixirs",
+            "groupOrder": 3,
+            "label": "Heliotrophos doses",
+            "statOrder": 26
+          },
+          "Heliotrophos equipped": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Army Elixir equipped": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Army Elixirs",
+            "groupOrder": 3,
+            "label": "Heliotrophos equipped",
+            "statOrder": 27
+          },
+          "Skorflense (doses)": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Army Elixirs",
+            "groupOrder": 3,
+            "label": "Skorflense doses",
+            "statOrder": 28
+          },
+          "Skorflense equipped": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Army Elixir equipped": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Army Elixirs",
+            "groupOrder": 3,
+            "label": "Skorflense equipped",
+            "statOrder": 29
+          },
+          "Quail (doses)": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Army Elixirs",
+            "groupOrder": 3,
+            "label": "Quail doses",
+            "statOrder": 30
+          },
+          "Quail equipped": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Army Elixir equipped": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Army Elixirs",
+            "groupOrder": 3,
+            "label": "Quail equipped",
+            "statOrder": 31
+          },
+          "Alacrine (doses)": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Personal Elixirs",
+            "groupOrder": 4,
+            "label": "Alacrine doses",
+            "statOrder": 40
+          },
+          "Cerebresec (doses)": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Personal Elixirs",
+            "groupOrder": 4,
+            "label": "Cerebresec doses",
+            "statOrder": 41
+          },
+          "Thrynicine (doses)": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Personal Elixirs",
+            "groupOrder": 4,
+            "label": "Thrynicine doses",
+            "statOrder": 42
+          },
+          "Salviqine Tears (doses)": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Personal Elixirs",
+            "groupOrder": 4,
+            "label": "Salviqine Tears doses",
+            "statOrder": 43
+          },
+          "Sanctus Vi (doses)": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Personal Elixirs",
+            "groupOrder": 4,
+            "label": "Sanctus Vi doses",
+            "statOrder": 44
+          },
+          "Excelsor X (doses)": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Personal Elixirs",
+            "groupOrder": 4,
+            "label": "Excelsor X doses",
+            "statOrder": 45
+          },
+          "Crusade Pts": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Elixirs equipped": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "min": 0,
+            "max": 12,
+            "label": "Elixirs equipped this battle",
+            "statOrder": 60
+          }
+        },
+        "rules": {
+          "equippedCount": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Elixirs equipped",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Army Elixir equipped"
+                  ],
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Personal Elixir equipped"
+                  ]
+                ],
+                "min": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "elixirCrusadePts": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "2",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Army Elixir equipped"
+                  ],
+                  [
+                    "{roster}",
+                    "tracked",
+                    "Personal Elixir equipped"
+                  ]
+                ],
+                "min": 0
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{this}",
+                    "evals",
+                    "0",
+                    "result",
+                    "float"
+                  ]
+                ],
+                "min": 0,
+                "equation": {
+                  "operator": "T+O",
+                  "value": 1
+                }
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{this}",
+                    "evals",
+                    "1",
+                    "result",
+                    "float"
+                  ]
+                ],
+                "min": 0,
+                "equation": {
+                  "operator": "T/O",
+                  "value": 2
+                }
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3,
+            "note": "+1 Crusade point per two elixirs equipped (rounding up)"
           }
         }
       }
@@ -5321,6 +6245,41 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "useCrusadeEmperors_Children": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Combat Elixirs Stash§Combat Elixirs Stash"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
           }
         },
         "stats": {
@@ -7733,7 +8692,56 @@
         },
         "text": "At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test, subtracting 1 from that test. At the end of the battle, if one or more enemy units failed a Battle-shock test while within Engagement Range of the bearer, you gain 1 Essence of Fear."
       },
-      "Crusade Honour§Dark Majesty": {
+      "Requisition§Soul Barter": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after a battle. Select one of the following:\n\nAdd D3 Common ingredients to your Combat Elixirs Stash.\n\nRemove three Common ingredients from your Combat Elixirs Stash and add one Rare ingredient.\n\nRemove any two Exotic ingredients (of any type or combination) from your Combat Elixirs Stash and replace them with one Exotic ingredient of your choice."
+      },
+      "Requisition§Perfect Ascension": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition when an EMPEROR’S CHILDREN CHARACTER unit from your Crusade force (excluding DAEMON units) that has three Boons of Slaanesh reaches Heroic or Legendary rank. Remove that unit from your Order of Battle and add one EMPEROR’S CHILDREN DAEMON PRINCE or EMPEROR’S CHILDREN DAEMON PRINCE WITH WINGS to your Order of Battle.\n\nIn either case, the new unit has the same number of Battle Honours and XP as the unit it replaced. The new unit can keep any Boons of Slaanesh the unit it replaced had, even though Daemon models cannot normally have Boons of Slaanesh. Any Battle Scars the replaced unit had are not retained. You cannot purchase this Requisition if doing so would cause you to exceed your Crusade force’s Supply Limit."
+      },
+      "Requisition§Dark Patronage": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a battle. Select one TORMENTORS or INFRACTORS unit from your Order of Battle that has the Battle-hardened rank or higher. Remove that unit from your Order of Battle and add one FLAWLESS BLADES unit to your Order of Battle. The new unit has the same number of Battle Honours, Battle Scars and XP as the unit is replaced, and in addition gains one extra Battle Trait. If the Legendary Veterans Requisition is used on that new unit, that Requisition only costs you 1RP. You cannot purchase this Requisition if doing so would cause you to exceed your Crusade force’s Supply Limit."
+      },
+      "Requisition§Perfection Personified": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition at any time. Select one EMPEROR’S CHILDREN CHARACTER unit from your Crusade force with 71+ XP. The selected unit gains one additional Battle Trait; this does not count towards the maximum number of Battle Honours a unit can have. Each unit can only be selected for this Requisition once."
+      },
+      "Requisition§Excess of Boons": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition when an EMPEROR’S CHILDREN CHARACTER unit from your Order of Battle receives a Battle Scar. Roll one D6: on a 1, that unit suffers Spawndom; on a 2-6, that unit gains one Boon of Slaanesh instead of a Battle Scar."
+      },
+      "Crusade Badge§Seeker of Sensation": {
+        "text": "You have experienced the thrill of battle, supped deeply of your victims’ fear and awe. Leaving behind a trail of tortured souls and flayed bodies, you have inflicted and felt sensations and emotions of heart-stopping intensity. By indulging your senses thus, you have earned the envious ire of your rivals and surely elevated your status in the eyes of the Dark Prince.\nYou have won three or more battles.\nYou have crafted three different Combat Elixirs (at least one of which must have been a Personal Elixir).\nOne or more EMPEROR’S CHILDREN CHARACTER models from your Crusade force have one or more Boons of Slaanesh."
+      },
+      "Crusade Badge§Arch-hedonist": {
+        "text": "You have plumbed the depths of mortal sensation, and enjoyed tangible rewards from the flayed and eviscerated corpses of your victims: a terrible bounty of agony with which to perform horrific alchemies.\nYou have won six or more battles.\nYou have crafted six different Combat Elixirs (at least three of which must have been Personal Elixirs).\nYou have either used the Dark Patronage Requisition to add one or more new units to your Order of Battle, or an EMPEROR’S CHILDREN CHARACTER model from your Order of Battle has suffered Spawndom.\nOne or more EMPEROR’S CHILDREN CHARACTER models from your Crusade force have two or more Boons of Slaanesh."
+      },
+      "Crusade Badge§Favoured of the Dark Prince": {
+        "text": "You have won ten or more battles.\nYou have crafted all twelve Combat Elixirs.\nYou have used the Perfect Ascension Requisition to add one new unit to your Order of Battle."
+      },
+      "Boon of Slaanesh§Dark Majesty": {
         "keywords": {
           "Keywords": [
             "Boons of Slaanesh"
@@ -7744,7 +8752,7 @@
         },
         "text": "Improve this model's Leadership characteristic by 1 and its Objective Control characteristic by 2. At the end of the battle, if this model is within range of an objective marker you control that is wholly within your opponent's deployment zone, you gain 1 Rare ingredient."
       },
-      "Crusade Honour§Odious Grace": {
+      "Boon of Slaanesh§Odious Grace": {
         "keywords": {
           "Keywords": [
             "Boons of Slaanesh"
@@ -7755,7 +8763,7 @@
         },
         "text": "You can re-roll Advance and Charge rolls made for this model's unit."
       },
-      "Crusade Honour§Fickle Speed": {
+      "Boon of Slaanesh§Fickle Speed": {
         "keywords": {
           "Keywords": [
             "Boons of Slaanesh"
@@ -7766,7 +8774,7 @@
         },
         "text": "Add 1 to Advance and Charge rolls made for this model's unit."
       },
-      "Crusade Honour§Whipcord Sinews": {
+      "Boon of Slaanesh§Whipcord Sinews": {
         "keywords": {
           "Keywords": [
             "Boons of Slaanesh"
@@ -7777,7 +8785,7 @@
         },
         "text": "Improve the Strength characteristic of melee weapons equipped by this model by 2."
       },
-      "Crusade Honour§Razor Claws": {
+      "Boon of Slaanesh§Razor Claws": {
         "keywords": {
           "Keywords": [
             "Boons of Slaanesh"
@@ -7788,7 +8796,7 @@
         },
         "text": "Improve the Armour Penetration characteristic of melee weapons equipped by this model by 1. If this model destroys one or more units with a melee attack during a battle (excluding **^^Imperium^^** and **^^Chaos^^** units), then at the end of that battle you gain 1 Extract of Xeno-matter."
       },
-      "Crusade Honour§Psychotropic Aura": {
+      "Boon of Slaanesh§Psychotropic Aura": {
         "keywords": {
           "Keywords": [
             "Boons of Slaanesh"
@@ -7799,7 +8807,7 @@
         },
         "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, each time an attack targets this model's unit, subtract 1 from the Hit roll."
       },
-      "Crusade Honour§Betentacled Limbs": {
+      "Boon of Slaanesh§Betentacled Limbs": {
         "keywords": {
           "Keywords": [
             "Boons of Slaanesh"
@@ -7810,7 +8818,7 @@
         },
         "text": "Add 1 to the Attacks characteristic of melee weapons equipped by this model. If this model destroys one or more **^^Chaos^^** units with a melee attack during a battle, then at the end of that battle you gain 1 Infusion of Traitor's Blood."
       },
-      "Crusade Honour§Perfection of the Body": {
+      "Boon of Slaanesh§Perfection of the Body": {
         "keywords": {
           "Keywords": [
             "Boons of Slaanesh"
@@ -7821,7 +8829,7 @@
         },
         "text": "This model has the Feel No Pain 6+ ability."
       },
-      "Crusade Honour§Silver Skin": {
+      "Boon of Slaanesh§Silver Skin": {
         "keywords": {
           "Keywords": [
             "Boons of Slaanesh"
@@ -7831,6 +8839,9 @@
           ]
         },
         "text": "Add 1 to this model's Toughness characteristic."
+      },
+      "Combat Elixirs Stash§Combat Elixirs Stash": {
+        "text": "**Combat Elixirs.** If your Crusade force has an EMPEROR’S CHILDREN CHARACTER, it collects ingredients and crafts elixirs; the stash holds what is listed here (anything over the caps is lost). The first EMPEROR’S CHILDREN unit added to your Order of Battle also adds one dose of Anfrak Silk.\n\n**Ingredients:** after every battle roll a D6 (+2 if you won): on a 4+ gain 1 Common ingredient, on a 6+ gain D3 instead. Roll another D6 (+1 if you won): on a 6+ gain 1 Rare ingredient. Exotic ingredients come only from Agendas, Requisitions and some Battle Honours.\n\n**Crafting:** before or after a battle, spend the listed ingredients to add one dose of an elixir. Army Elixirs equip the whole army for one battle; Personal Elixirs equip one CHARACTER for one battle.\n\n**Equipping:** when mustering an EMPEROR’S CHILDREN Crusade army, tick the Army Elixirs you equip (one dose each) and set each CHARACTER's Personal Elixir; remove the doses from the stash. You cannot equip the same elixir in two consecutive battles. Every two elixirs equipped (rounding up) add 1 to the army's Crusade points. If you equip none, every EMPEROR’S CHILDREN unit is Battle-shocked for the first battle round. Once per battle, at the start of a battle round, all equipped elixirs take effect until the next battle round; all equipped doses are lost at the end of the battle.\n\n**Army Elixirs:**\n• **Anfrak Silk** (Common + Rare (or Extract of Xeno-matter)): Add 2\" to the Move characteristic of EMPEROR’S CHILDREN units from your Crusade army.\n• **Xylocil** (Common + Rare (or Extract of Xeno-matter)): Add 1 to the Strength characteristic of melee weapons equipped by EMPEROR’S CHILDREN models from your Crusade army.\n• **Shivversplit** (Common + Rare (or Essence of Fear)): Add 1 to the Toughness characteristic of EMPEROR’S CHILDREN units from your Crusade army.\n• **Heliotrophos** (2× Common + Rare): Add 1 to the Attacks characteristic of melee weapons equipped by EMPEROR’S CHILDREN models from your Crusade army.\n• **Skorflense** (2× Common (or Extract of Xeno-matter)): Improve the Ballistic Skill and Weapon Skill characteristics of weapons equipped by EMPEROR’S CHILDREN models from your Crusade army by 1.\n• **Quail** (Common + Rare): Improve the Leadership and Objective Control characteristics of EMPEROR’S CHILDREN units from your Crusade army by 1.\n\n**Personal Elixirs:**\n• **Alacrine** (2× Common, or Rare + Extract of Xeno-matter): The bearer’s unit has the Fights First ability.\n• **Cerebresec** (2× Common + Concentrate of Tormented Souls): Once per battle round, when you target the bearer’s unit with a Stratagem, reduce the CP cost of that usage of that Stratagem by 1.\n• **Thrynicine** (2× Rare (or Distillate of Hatred) + Rare (or Dilution of False Hope)): Each time the bearer makes an attack, a successful Wound roll inflicts 1 mortal wound on the target in addition to any normal damage, or 2 mortal wounds in addition to any normal damage instead if the bearer has lost one or more wounds.\n• **Salviqine Tears** (Common + Rare (or Essence of Fear)): At the start of the Battle-shock step of each player’s Command phase, each enemy unit that is within 12\" of the bearer and is below its Starting Strength must take a Battle-shock test, subtracting 1 from that test if that unit is Below Half-strength.\n• **Sanctus Vi** (Common + Rare (or Concentrate of Tormented Souls) + Infusion of Traitor’s Blood): The bearer has a 2+ invulnerable save.\n• **Excelsor X** (4× Common (or Dilution of False Hope) + Rare): In your Shooting phase, after the bearer’s unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".\n\n**Legions of Excess:** units from your Order of Battle that join through a Detachment such as Carnival of Excess never gain Experience points or Battle Honours and automatically pass Out of Action tests."
       }
     },
     "gameModes": {},

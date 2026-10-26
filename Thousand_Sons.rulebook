@@ -1,6 +1,6 @@
 {
   "name": "Thousand Sons 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.6",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -125,6 +125,560 @@
             ],
             "evaluate": "OR",
             "failState": "pass"
+          },
+          "allowBoonofTzeentch": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Boon of Tzeentch"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Daemon Prince",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Boons of Tzeentch: THOUSAND SONS CHARACTER models (not DAEMON PRINCES) may take a Boon of Tzeentch instead of another Battle Honour; a duplicate D33 roll means Spawndom"
+          },
+          "No model can have more than three Boons of Tzeentch.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Boon of Tzeentch"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "crusadeShowGreatCult": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Great Cult",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Thousand Sons",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeShowLorePoints": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lore Points",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Thousand Sons",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeShowArcanaPoints": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Arcana Points",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Thousand Sons",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeShowCultRank": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Cult Rank",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Thousand Sons",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "Tzaangor Shamans can never progress further than Aelementus.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Tzaangor Shaman",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error",
+            "note": "only checked in Narrative play (stored stat values survive a switch to Matched play)"
+          },
+          "allowGreatCultBattleHonour": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Great Cult Battle Honour"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Thousand Sons",
+                "contains": true
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Great Cult Battle Honours: the reward of a Diabolic Ritual rank in the Character's Great Cult (deduct the Lore and Arcana points and pay the 1RP Diabolic Ritual Requisition)"
+          },
+          "A Character can hold at most one Great Cult Battle Honour per rank (three in all).": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Great Cult Battle Honour"
+                  ]
+                ],
+                "max": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        },
+        "stats": {
+          "Great Cult": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Cult of Mutation": {
+                "order": 1
+              },
+              "Cult of Prophecy": {
+                "order": 2
+              },
+              "Cult of Time": {
+                "order": 3
+              },
+              "Cult of Scheming": {
+                "order": 4
+              },
+              "Cult of Magic": {
+                "order": 5
+              },
+              "Cult of Knowledge": {
+                "order": 6
+              },
+              "Cult of Change": {
+                "order": 7
+              },
+              "Cult of Duplicity": {
+                "order": 8
+              },
+              "Cult of Manipulation": {
+                "order": 9
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "statOrder": 20
+          },
+          "Lore Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 99,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "statOrder": 21
+          },
+          "Arcana Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "hidden",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 99,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "statOrder": 22
+          },
+          "Cult Rank": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Aelementus": {
+                "order": 1,
+                "number": 1
+              },
+              "Esoterist": {
+                "order": 2,
+                "number": 2
+              },
+              "Magister Templi": {
+                "order": 3,
+                "number": 3
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "statOrder": 23
           }
         }
       },
@@ -428,8 +982,178 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: units with this keyword cannot take the Battle Honours tagged not-this"
+          },
+          "noCrusadeXpScintillatingLegions": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Experience",
+                    "visibility"
+                  ]
+                ],
+                "value": "hidden"
+              },
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battle Honour",
+                    "max"
+                  ]
+                ],
+                "value": 0
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Scintillating Legions",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: SCINTILLATING LEGIONS units never gain Experience points or Battle Honours and automatically pass Out of Action tests"
           }
         }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Pursuit of Knowledge": {
+                "order": 100,
+                "tracking": {
+                  "Thousand Sons Agenda": 1
+                }
+              },
+              "Malefic Sigils": {
+                "order": 101,
+                "tracking": {
+                  "Thousand Sons Agenda": 1
+                }
+              },
+              "Arcana Long Buried": {
+                "order": 102,
+                "tracking": {
+                  "Thousand Sons Agenda": 1
+                }
+              },
+              "Sorcerous Prowess": {
+                "order": 103,
+                "tracking": {
+                  "Thousand Sons Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Pursuit of Knowledge": {
+                "order": 100,
+                "tracking": {
+                  "Thousand Sons Agenda": 1
+                }
+              },
+              "Malefic Sigils": {
+                "order": 101,
+                "tracking": {
+                  "Thousand Sons Agenda": 1
+                }
+              },
+              "Arcana Long Buried": {
+                "order": 102,
+                "tracking": {
+                  "Thousand Sons Agenda": 1
+                }
+              },
+              "Sorcerous Prowess": {
+                "order": 103,
+                "tracking": {
+                  "Thousand Sons Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Destined Ascension",
+            "Requisition§Flesh-Change",
+            "Requisition§Invoke the Architect of Fate",
+            "Requisition§Ruthless Politicking",
+            "Requisition§Path to Enlightenment",
+            "Crusade Badge§Aspiring Conspirator",
+            "Crusade Badge§High Acolyte",
+            "Crusade Badge§Arch Magister"
+          ]
+        }
+      },
+      "Boon of Tzeentch": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Great Cult Battle Honour": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Brotherhood of Sorcerers": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": ""
       }
     },
     "assetCatalog": {
@@ -7195,6 +7919,41 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "useCrusadeThousand_Sons": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Brotherhood of Sorcerers§Brotherhood of Sorcerers"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
           }
         },
         "stats": {
@@ -12840,7 +13599,56 @@
         },
         "text": "Each time the bearer makes an attack with a Psychic melee weapon, improve the Strength, Armour Penetration and Damage characteristics of that attack by 1. Each time the bearer makes an attack with a Psychic melee weapon that targets a **^^Psyker^^** unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 2 instead."
       },
-      "Crusade Honour§Crystalline Body": {
+      "Requisition§Destined Ascension": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition when a THOUSAND SONS CHARACTER unit from your Crusade force (excluding DAEMON units) that has three Boons of Tzeentch reaches the Heroic or Legendary rank. Remove that unit from your Order of Battle and replace it with one DAEMON PRINCE OF TZEENTCH or DAEMON PRINCE OF TZEENTCH WITH WINGS model. The new model has the same number of Battle Honours, XP, Arcana and Lore points as the unit it replaced. The new model can keep any Boons of Tzeentch the unit it replaced had, even though DAEMON models cannot normally have Boons of Tzeentch. Any Battle Scars the replaced unit had are not retained. You cannot purchase this Requisition if doing so would cause your Crusade force to exceed its current Supply Limit."
+      },
+      "Requisition§Flesh-Change": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition either before or after a battle. Select one THOUSAND SONS CHARACTER unit from your Crusade force that has one or more Boons of Tzeentch (excluding DAEMON units). That unit immediately gains one additional Boon of Tzeentch and is then removed from your Order of Battle and replaced with one THOUSAND SONS CHAOS SPAWN unit containing 1 model (this new unit has the same points value as CHAOS SPAWN unit containing 2 models). The new unit has the same number of Battle Honours and XP as the unit it replaced, it loses all Arcana and Lore points it had (and can never gain any more by any means), and it gains the Lone Operative ability. The new unit also keeps any Boons of Tzeentch the unit it replaced had, even though CHAOS SPAWN units cannot normally have Boons of Tzeentch. Any Battle Scars the replaced unit had are not retained. You cannot purchase this Requisition if doing so would cause your Crusade force to exceed its current Supply Limit."
+      },
+      "Requisition§Invoke the Architect of Fate": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after any battle (you can only purchase this Requisition once after each battle). Select one THOUSAND SONS CHARACTER model from your Crusade army that has 3 or more Lore points and/or 3 or more Arcana points. Remove 3 Lore points or 3 Arcana points from that model and roll one D6: on a 1, your model gains 1 Battle Scar and 3XP; on a 2-3, your model gains D3 Arcana points and D3XP; on a 4-5, your model gains D3 Lore points and D3XP; on a 6, your model gains one Boon of Tzeentch and 1XP."
+      },
+      "Requisition§Ruthless Politicking": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after any battle, before any Out of Action tests are taken (you can only purchase this Requisition once after each battle). Select one THOUSAND SONS CHARACTER unit from your Crusade army with the Blooded rank or higher that was on the battlefield at the end of the battle to be the Schemer, and one THOUSAND SONS CHARACTER unit from your Crusade army with the Blooded rank or higher that was destroyed during the battle to be the Puppet. The Schemer is Marked for Greatness in addition to any other unit from your Crusade army, and gains either 1 Arcana or 1 Lore point (your choice). The Puppet automatically fails its Out of Action test for this battle."
+      },
+      "Requisition§Path to Enlightenment": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a battle. Select one TZAANGORS unit from your Crusade force. Remove that unit from your Order of Battle and replace it with one TZAANGOR ENLIGHTENED unit. The new unit has the same number of Battle Honours, Battle Scars and XP as the unit it replaced, and until it is removed from your Order of Battle, each time that unit is Marked for Greatness, it gains 5XP instead of 3XP. You cannot purchase this Requisition if doing so would cause your Crusade force to exceed its current Supply Limit."
+      },
+      "Crusade Badge§Aspiring Conspirator": {
+        "text": "You have won three or more battles.\nThree or more CHARACTERS on your Order of Battle have reached the Aelementus rank or higher.\nOne or more THOUSAND SONS CHARACTER units from your Crusade force have one or more Boons of Tzeentch."
+      },
+      "Crusade Badge§High Acolyte": {
+        "text": "You have advanced into the deeper mysteries of the galaxy as a disciple of ritual truths and a curator of falsehoods. Now is the time to exploit your lore to expand your control of sorcery.\nYou have won six or more battles.\nThree or more CHARACTERS on your Order of Battle have reached the Esoterist rank or higher.\nOne or more THOUSAND SONS CHARACTER units from your Crusade force have two or more Boons of Tzeentch.\nYou have used the Flesh-Change Requisition to add one new unit to your Order of Battle or one or more THOUSAND SONS CHARACTER models on your Order of Battle have suffered Spawndom."
+      },
+      "Crusade Badge§Arch Magister": {
+        "text": "You have amassed the arcana of lost empires and unleashed your embittered spite across countless battlefields. Your eldritch wisdom has elevated you - or one of your duplicitous aliases - to the exalted rule of one of the Great Cults. The Lord of Sortiarius ushers you into one of his nine-hundred and ninety-nine Grand Schemes. The universe’s most sanity-blasting enigmas quiver in dread as your acquisitive gaze turns upon them.\nYou have won ten or more battles.\nThree or more CHARACTERS on your Order of Battle have reached the Magister Templi rank or higher.\nYou have used the Destined Ascension Requisition to add one new unit to your Order of Battle."
+      },
+      "Boon of Tzeentch§Crystalline Body": {
         "keywords": {
           "Keywords": [
             "Boons of Tzeentch"
@@ -12851,7 +13659,7 @@
         },
         "text": "Each time a ranged attack is allocated to this model, on an unmodified saving throw of 6, the attacking unit suffers 1 mortal wound after it has finished making its attacks."
       },
-      "Crusade Honour§Warp Strider": {
+      "Boon of Tzeentch§Warp Strider": {
         "keywords": {
           "Keywords": [
             "Boons of Tzeentch"
@@ -12862,7 +13670,7 @@
         },
         "text": "Add 1\" to the Move characteristic of models in this model's unit, and each time a model in this model's unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through models and terrain features. If this model is wholly within your opponent's deployment zone at the end of the battle, roll one D6: on a 4+, this model gains 1 Arcana point."
       },
-      "Crusade Honour§Forewarned by Fate": {
+      "Boon of Tzeentch§Forewarned by Fate": {
         "keywords": {
           "Keywords": [
             "Boons of Tzeentch"
@@ -12873,7 +13681,7 @@
         },
         "text": "Once per battle round, when an attack is allocated to the bearer's unit, you can change the Damage characteristic of that attack to 0. If this model is within range of an objective marker that you control at the end of the battle, and that objective marker is not within your deployment zone, roll one D6: on a 4+ this model gains 1 Lore point."
       },
-      "Crusade Honour§Flesh Sigils": {
+      "Boon of Tzeentch§Flesh Sigils": {
         "keywords": {
           "Keywords": [
             "Boons of Tzeentch"
@@ -12884,7 +13692,7 @@
         },
         "text": "This model has the Feel Not Pain 5+ ability (if this model is a **^^Chaos Spawn^^** model, it has the Feel No Pain 4+ ability instead)."
       },
-      "Crusade Honour§Flame-wreathed": {
+      "Boon of Tzeentch§Flame-wreathed": {
         "keywords": {
           "Keywords": [
             "Boons of Tzeentch"
@@ -12895,7 +13703,7 @@
         },
         "text": "Each time this model makes a melee attack, you can re-roll the Hit roll."
       },
-      "Crusade Honour§Raptorial Talons": {
+      "Boon of Tzeentch§Raptorial Talons": {
         "keywords": {
           "Keywords": [
             "Boons of Tzeentch"
@@ -12906,7 +13714,7 @@
         },
         "text": "Improve the Strength and Armour Penetration characteristics of this model's melee weapons by 1."
       },
-      "Crusade Honour§Immaterial Edge": {
+      "Boon of Tzeentch§Immaterial Edge": {
         "keywords": {
           "Keywords": [
             "Boons of Tzeentch"
@@ -12917,7 +13725,7 @@
         },
         "text": "This model's melee weapons have the **[DEVASTATING WOUNDS]** ability."
       },
-      "Crusade Honour§Temporal Distortion": {
+      "Boon of Tzeentch§Temporal Distortion": {
         "keywords": {
           "Keywords": [
             "Boons of Tzeentch"
@@ -12928,7 +13736,7 @@
         },
         "text": "Add 1 to Advance and Charge rolls made for this model's unit."
       },
-      "Crusade Honour§Aura of Illusion": {
+      "Boon of Tzeentch§Aura of Illusion": {
         "keywords": {
           "Keywords": [
             "Boons of Tzeentch"
@@ -12939,38 +13747,1128 @@
         },
         "text": "This model has the Stealth ability, and while this model is leading a unit, each time a ranged attack targets that unit, if the attacking model is not within 12\", subtract 1 from the Hit roll."
       },
-      "Crusade Honour§Aelementus": {
+      "Great Cult Battle Honour§Touch of Vicissitude": {
         "keywords": {
-          "Keywords": [
-            "Brotherhood of Sorcerers"
-          ],
           "Tags": [
             "Thousand Sons"
-          ]
-        },
-        "text": "At the end of the battle, this model gains 1XP and 1 Lore or Arcana point (your choice) for each different Agenda your opponent selected at the start of the battle that one or more of their units subsequently gained XP from."
-      },
-      "Crusade Honour§Esoterist": {
-        "keywords": {
-          "Keywords": [
-            "Brotherhood of Sorcerers"
           ],
-          "Tags": [
-            "notTzaangorShaman"
-          ]
-        },
-        "text": "In the Determine Victor step, if you are not the victor, roll one D6 for each model from your Crusade army with this reward that is on the battlefield. If one or more of those results are a 4+, you gain that battle's Victor Bonus anyway."
-      },
-      "Crusade Honour§Magister Templi": {
-        "keywords": {
           "Keywords": [
-            "Brotherhood of Sorcerers"
-          ],
-          "Tags": [
-            "notTzaangorShaman"
+            "Cult of Mutation",
+            "Esoterist"
           ]
         },
-        "text": "8"
+        "text": "*Cult of Mutation, Esoterist (2 Lore / 2 Arcana).* Each time this model’s unit is selected to fight, select one of the following abilities: [LETHAL HITS]; [SUSTAINED HITS 1]. Until the end of the phase, this model’s melee weapons have the selected ability.",
+        "rules": {
+          "Cult of Mutation only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Mutation"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Esoterist rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Warp Reality": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Mutation",
+            "Magister Templi"
+          ]
+        },
+        "text": "*Cult of Mutation, Magister Templi (3 Lore / 5 Arcana).* [Battle Honour - Psychic - Warp Charge 7] Select one AREA TERRAIN feature within 24\" of and visible to the manifesting model, then roll one D6 for every enemy model that is within that AREA TERRAIN feature: for each 6, that model’s unit suffers 1 mortal wound. If the Psychic test result for this Ritual was 11+, for each 5+, that model’s unit suffers 1 mortal wound instead (to a maximum of 6 mortal wounds in either case). |",
+        "rules": {
+          "Cult of Mutation only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Mutation"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Magister Templi rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Empyric Portents": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Prophecy",
+            "Aelementus"
+          ]
+        },
+        "text": "*Cult of Prophecy, Aelementus (2 Lore / 1 Arcana).* In the Determine Attacker and Defender step, if your Crusade army includes one or more models with this reward, do not roll off to determine the Attacker and Defender. Instead, you choose whether you will be the Attacker or Defender (if your opponent has a rule to the same effect, roll off as normal).",
+        "rules": {
+          "Cult of Prophecy only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Prophecy"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Aelementus rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Divine the Future": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Prophecy",
+            "Esoterist"
+          ]
+        },
+        "text": "*Cult of Prophecy, Esoterist (2 Lore / 2 Arcana).* [Battle Honour - Psychic - Warp Charge 8] You gain 1CP. If the Psychic test for this Ritual was 11+, the manifesting model gains 1 Lore point as well.",
+        "rules": {
+          "Cult of Prophecy only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Prophecy"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Esoterist rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Guided by the Whispers": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Prophecy",
+            "Magister Templi"
+          ]
+        },
+        "text": "*Cult of Prophecy, Magister Templi (4 Lore / 4 Arcana).* In the Select Crusade Blessings step, roll one D6 for each model from your Crusade army with this reward: if one or more of those results is a 4+, you can select one additional Crusade Blessing this battle. |",
+        "rules": {
+          "Cult of Prophecy only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Prophecy"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Magister Templi rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Psyncopation": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Time",
+            "Esoterist"
+          ]
+        },
+        "text": "*Cult of Time, Esoterist (1 Lore / 3 Arcana).* You can re-roll Advance and Charge rolls made for this model’s unit.",
+        "rules": {
+          "Cult of Time only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Time"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Esoterist rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Immaterial Echo": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Time",
+            "Magister Templi"
+          ]
+        },
+        "text": "*Cult of Time, Magister Templi (3 Lore / 5 Arcana).* [Battle Honour - Psychic] Each time this model manifests the Temporal Surge Ritual, if the Psychic test result for that Ritual was 12+, you can select two friendly THOUSAND SONS units that are not within Engagement Range of one or more enemy units and within 24\" of and visible to this model, instead of one. Each of those units can make a Normal move up to 6\". Until the end of the turn, neither of those units are eligible to declare a charge. |",
+        "rules": {
+          "Cult of Time only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Time"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Magister Templi rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Seeded Strategy": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Scheming",
+            "Esoterist"
+          ]
+        },
+        "text": "*Cult of Scheming, Esoterist (2 Lore / 2 Arcana).* Each time your opponent uses a Stratagem, roll one D6: on a 5, you gain 1CP; on a 6, you gain 1CP and this model gains 1 Lore point.",
+        "rules": {
+          "Cult of Scheming only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Scheming"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Esoterist rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Ulterior Ruse": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Scheming",
+            "Magister Templi"
+          ]
+        },
+        "text": "*Cult of Scheming, Magister Templi (4 Lore / 4 Arcana).* In the Select Agendas step, roll one D6 for each model from your Crusade army with this reward: if one or more of those results is a 2+, you can select one additional THOUSAND SONS Agenda this battle; if one or more of those results is a 5+, you can select two additional THOUSAND SONS Agendas instead, this battle. |",
+        "rules": {
+          "Cult of Scheming only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Scheming"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Magister Templi rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Occult Fixation": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Magic",
+            "Esoterist"
+          ]
+        },
+        "text": "*Cult of Magic, Esoterist (0 Lore / 4 Arcana).* [Battle Honour - Psychic] Each time this model Channels the Warp, add 1 to the result of that Psychic test.",
+        "rules": {
+          "Cult of Magic only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Magic"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Esoterist rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Kaleidoscopic Blast": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Magic",
+            "Magister Templi"
+          ]
+        },
+        "text": "*Cult of Magic, Magister Templi (0 Lore / 8 Arcana).* [Battle Honour - Psychic] Each time this model manifests the Doombolt Ritual, if the Psychic test result for that Ritual was 14+, you can select two enemy units that are within 24\" of and visible to this model, instead of one (all other restrictions apply). Both selected units suffer D3+3 mortal wounds. |",
+        "rules": {
+          "Cult of Magic only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Magic"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Magister Templi rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Ardent Scholar": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Knowledge",
+            "Aelementus"
+          ]
+        },
+        "text": "*Cult of Knowledge, Aelementus (3 Lore / 0 Arcana).* Each time this model is Marked for Greatness, roll one D6: on a 1-2, this model gains 1 Lore point; on a 3-5, this model gains D3 Lore points; on a 6, this model gains D3 Lore points and D3XP.",
+        "rules": {
+          "Cult of Knowledge only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Knowledge"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Aelementus rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Thief of Enigmas": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Knowledge",
+            "Magister Templi"
+          ]
+        },
+        "text": "*Cult of Knowledge, Magister Templi (8 Lore / 0 Arcana).* [Battle Honour - Psychic] Each time this model manifests the Destiny’s Ruin Ritual, if the Psychic test result for that Ritual was 13+, you can select two enemy units that are within 24\" of and visible to this model, instead of one. Until the end of the phase, each time a friendly THOUSAND SONS unit makes an attack that targets one of those units, you can re-roll the Hit roll. |",
+        "rules": {
+          "Cult of Knowledge only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Knowledge"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Magister Templi rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Arch Instigator": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Change",
+            "Esoterist"
+          ]
+        },
+        "text": "*Cult of Change, Esoterist (3 Lore / 1 Arcana).* Add 2 to this model’s Wounds characteristic.",
+        "rules": {
+          "Cult of Change only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Change"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Esoterist rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Fickle Revelation": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Change",
+            "Magister Templi"
+          ]
+        },
+        "text": "*Cult of Change, Magister Templi (4 Lore / 4 Arcana).* At the end of the Declare Battle Formations step, select one THOUSAND SONS Battle Trait (this can be a RUBRICAE Battle Trait, even though this model does not have that keyword, but it must otherwise be a Battle Trait this model can have and cannot be a Battle Trait this model, or the unit it is attached to, already has). Until the end of the battle, this model (and any unit it is attached to) is considered to have that Battle Trait. |",
+        "rules": {
+          "Cult of Change only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Change"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Magister Templi rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Misinformator": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Duplicity",
+            "Esoterist"
+          ]
+        },
+        "text": "*Cult of Duplicity, Esoterist (2 Lore / 2 Arcana).* After both players have deployed their armies, you can select one THOUSAND SONS unit from your Crusade army and redeploy it. When doing so, you can set that unit up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+        "rules": {
+          "Cult of Duplicity only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Duplicity"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Esoterist rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Sorcerous Facade": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Duplicity",
+            "Magister Templi"
+          ]
+        },
+        "text": "*Cult of Duplicity, Magister Templi (3 Lore / 5 Arcana).* [Battle Honour - Psychic - Warp Charge 6] Select one friendly THOUSAND SONS INFANTRY or THOUSAND SONS MOUNTED unit within 24\" of and visible to the manifesting model. That unit is removed from the battlefield and placed into Strategic Reserves. If the Psychic test for this Ritual was 10+, set that unit back up on the battlefield immediately using the Deep Strike ability. |",
+        "rules": {
+          "Cult of Duplicity only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Duplicity"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Magister Templi rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Malevolence": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Manipulation",
+            "Aelementus"
+          ]
+        },
+        "text": "*Cult of Manipulation, Aelementus (2 Lore / 1 Arcana).* At the end of the battle, this model gains 1XP and 1 Lore or Arcana point (your choice) for each different Agenda your opponent selected at the start of the battle that one or more of their units subsequently gained XP from.",
+        "rules": {
+          "Cult of Manipulation only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Manipulation"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Aelementus rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Mirrored Machinator": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Manipulation",
+            "Esoterist"
+          ]
+        },
+        "text": "*Cult of Manipulation, Esoterist (4 Lore / 0 Arcana).* In the Determine Victor step, if you are not the victor, roll one D6 for each model from your Crusade army with this reward that is on the battlefield. If one or more of those results are a 4+, you gain that battle’s Victor Bonus anyway.",
+        "rules": {
+          "Cult of Manipulation only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Manipulation"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Esoterist rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 2
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Great Cult Battle Honour§Shadow Puppeteer": {
+        "keywords": {
+          "Tags": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Cult of Manipulation",
+            "Magister Templi"
+          ]
+        },
+        "text": "*Cult of Manipulation, Magister Templi (6 Lore / 2 Arcana).* [Battle Honour - Psychic - Warp Charge 8] Select one enemy unit within 24\" of and visible to the manifesting model. Until the start of your next Shooting phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll. If the Psychic test result for this Ritual was 12+, subtract 1 from the Wound roll as well. |",
+        "rules": {
+          "Cult of Manipulation only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Great Cult",
+                    "value"
+                  ]
+                ],
+                "value": "Cult of Manipulation"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Needs the Magister Templi rank.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Cult Rank",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Brotherhood of Sorcerers§Brotherhood of Sorcerers": {
+        "text": "**Brotherhood of Sorcerers.** Each THOUSAND SONS CHARACTER (not EPIC HEROES) belongs to one of the nine Great Cults (set it on the Character's card) and gains Lore points and Arcana points from Agendas and from the Plots and Schemes test. After a battle, if a Character has the Lore and Arcana points for the next rank in its cult, it can perform a Diabolic Ritual (Requisition, 1RP; 2RP until your next battle after a failed Plots and Schemes test): deduct the points, raise its Cult Rank and take the reward — Instant rewards apply at once, Battle Honour rewards are the Great Cult Battle Honours (replace a non-cult honour if the Character is at its cap). TZAANGOR SHAMANS stop at Aelementus. EPIC HEROES hoard their points for bragging rights only.\n\n**Plots and Schemes:** at the end of the Determine Victor step your WARLORD takes a Leadership test: −1 with units from 2–3 Great Cults in the army, −2 for 4–6, −3 for 7–9; +1 with another unit of the WARLORD's cult; +1 if you won. Passed: your WARLORD gains 1 Lore and 1 Arcana point, or another CHARACTER gains one of either. Failed: Diabolic Ritual costs 2RP until the end of your next battle.\n\n**Ritual costs and rewards (Lore / Arcana):**\n• Cult of Mutation — Aelementus (1 Lore / 2 Arcana): Exalted Mutation (Instant)\n• Cult of Mutation — Esoterist (2 Lore / 2 Arcana): Touch of Vicissitude\n• Cult of Mutation — Magister Templi (3 Lore / 5 Arcana): Warp Reality\n• Cult of Prophecy — Aelementus (2 Lore / 1 Arcana): Empyric Portents\n• Cult of Prophecy — Esoterist (2 Lore / 2 Arcana): Divine the Future\n• Cult of Prophecy — Magister Templi (4 Lore / 4 Arcana): Guided by the Whispers\n• Cult of Time — Aelementus (1 Lore / 2 Arcana): Time Flux (Instant)\n• Cult of Time — Esoterist (1 Lore / 3 Arcana): Psyncopation\n• Cult of Time — Magister Templi (3 Lore / 5 Arcana): Immaterial Echo\n• Cult of Scheming — Aelementus (2 Lore / 1 Arcana): Grand Schemer (Instant)\n• Cult of Scheming — Esoterist (2 Lore / 2 Arcana): Seeded Strategy\n• Cult of Scheming — Magister Templi (4 Lore / 4 Arcana): Ulterior Ruse\n• Cult of Magic — Aelementus (0 Lore / 3 Arcana): Opus Arcana (Instant)\n• Cult of Magic — Esoterist (0 Lore / 4 Arcana): Occult Fixation\n• Cult of Magic — Magister Templi (0 Lore / 8 Arcana): Kaleidoscopic Blast\n• Cult of Knowledge — Aelementus (3 Lore / 0 Arcana): Ardent Scholar\n• Cult of Knowledge — Esoterist (4 Lore / 0 Arcana): Sacrificial Grimoire (Instant)\n• Cult of Knowledge — Magister Templi (8 Lore / 0 Arcana): Thief of Enigmas\n• Cult of Change — Aelementus (1 Lore / 2 Arcana): Destiny’s Aberration (Instant)\n• Cult of Change — Esoterist (3 Lore / 1 Arcana): Arch Instigator\n• Cult of Change — Magister Templi (4 Lore / 4 Arcana): Fickle Revelation\n• Cult of Duplicity — Aelementus (2 Lore / 1 Arcana): Artful Dualism (Instant)\n• Cult of Duplicity — Esoterist (2 Lore / 2 Arcana): Misinformator\n• Cult of Duplicity — Magister Templi (3 Lore / 5 Arcana): Sorcerous Facade\n• Cult of Manipulation — Aelementus (2 Lore / 1 Arcana): Malevolence\n• Cult of Manipulation — Esoterist (4 Lore / 0 Arcana): Mirrored Machinator\n• Cult of Manipulation — Magister Templi (6 Lore / 2 Arcana): Shadow Puppeteer\n\n**Scintillating Legions:** with the Changehost of Deceit Detachment, SCINTILLATING LEGIONS units from your Order of Battle can join your Crusade army; they never gain Experience points or Battle Honours and automatically pass Out of Action tests."
       }
     },
     "gameModes": {},
