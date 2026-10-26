@@ -1,6 +1,6 @@
 {
   "name": "Leagues of Votann 11e",
-  "revision": "11.2.3",
+  "revision": "11.2.4",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -16,7 +16,430 @@
     }
   ],
   "rulebook": {
-    "assetTaxonomy": {},
+    "assetTaxonomy": {
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Prospecting": {
+                "order": 100,
+                "tracking": {
+                  "Leagues of Votann Agenda": 1
+                }
+              },
+              "Yield Prophecy": {
+                "order": 101,
+                "tracking": {
+                  "Leagues of Votann Agenda": 1
+                }
+              },
+              "Exhaustive Pursuit": {
+                "order": 102,
+                "tracking": {
+                  "Leagues of Votann Agenda": 1
+                }
+              },
+              "Debt to Be Paid": {
+                "order": 103,
+                "tracking": {
+                  "Leagues of Votann Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Prospecting": {
+                "order": 100,
+                "tracking": {
+                  "Leagues of Votann Agenda": 1
+                }
+              },
+              "Yield Prophecy": {
+                "order": 101,
+                "tracking": {
+                  "Leagues of Votann Agenda": 1
+                }
+              },
+              "Exhaustive Pursuit": {
+                "order": 102,
+                "tracking": {
+                  "Leagues of Votann Agenda": 1
+                }
+              },
+              "Debt to Be Paid": {
+                "order": 103,
+                "tracking": {
+                  "Leagues of Votann Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Red-Handed Harvest",
+            "Requisition§Guild Patronage",
+            "Requisition§Field Testing",
+            "Requisition§Returned to the Ancestors",
+            "Crusade Badge§Exemplary Hero",
+            "Crusade Badge§Vaunted of the Hearth",
+            "Crusade Badge§Kindred Legend"
+          ]
+        }
+      },
+      "Kindred Asset": {
+        "aspects": {
+          "Visibility": "always"
+        },
+        "templateClass": "",
+        "stats": {
+          "Upgraded": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 2
+          },
+          "Inactive": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "label": "Inactive (Cost of Failure)",
+            "statOrder": 3
+          },
+          "Outposts": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 3,
+            "label": "Mining outposts owned",
+            "statOrder": 1
+          },
+          "Owned": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 1
+          }
+        }
+      },
+      "Expedition": {
+        "aspects": {
+          "Visibility": "always"
+        },
+        "templateClass": "",
+        "stats": {
+          "Backing": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Lean Operation (no cost, up to 5 battles)": {
+                "order": 1
+              },
+              "Balanced Stake (30 resources, up to 6 battles)": {
+                "order": 2
+              },
+              "High Investment (60 resources, up to 7 battles)": {
+                "order": 3
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 1
+          },
+          "Goal": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Farstryd Exploration": {
+                "order": 1
+              },
+              "Resource Reallocation": {
+                "order": 2
+              },
+              "Monopolise Site": {
+                "order": 3
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 2
+          },
+          "Guild Contract": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Mining: Extraction — Minerals": {
+                "order": 1
+              },
+              "Mining: Extraction — Energy": {
+                "order": 2
+              },
+              "Science: Research — Biology": {
+                "order": 3
+              },
+              "Science: Research — Emergent Field": {
+                "order": 4
+              },
+              "Mapping: Exploration — Intelligence": {
+                "order": 5
+              },
+              "Mapping: Exploration — New Horizons": {
+                "order": 6
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 3
+          },
+          "Battles": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 7,
+            "label": "Battles this expedition",
+            "statOrder": 4
+          },
+          "Expedition Raw Minerals": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 10
+            },
+            "min": 0,
+            "max": 999,
+            "group": "Expedition totals",
+            "groupOrder": 2,
+            "statOrder": 10
+          },
+          "Expedition Biomatter": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 10
+            },
+            "min": 0,
+            "max": 999,
+            "group": "Expedition totals",
+            "groupOrder": 2,
+            "statOrder": 11
+          },
+          "Expedition Energy Sources": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 10
+            },
+            "min": 0,
+            "max": 999,
+            "group": "Expedition totals",
+            "groupOrder": 2,
+            "statOrder": 12
+          },
+          "Expedition Galactic Intel": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 10
+            },
+            "min": 0,
+            "max": 999,
+            "group": "Expedition totals",
+            "groupOrder": 2,
+            "statOrder": 13
+          }
+        }
+      },
+      "Acquisitions": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Raw Minerals": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 10
+            },
+            "min": 0,
+            "max": 999,
+            "group": "Fundamental resources",
+            "groupOrder": 1,
+            "statOrder": 1
+          },
+          "Biomatter": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 10
+            },
+            "min": 0,
+            "max": 999,
+            "group": "Fundamental resources",
+            "groupOrder": 1,
+            "statOrder": 2
+          },
+          "Energy Sources": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 10
+            },
+            "min": 0,
+            "max": 999,
+            "group": "Fundamental resources",
+            "groupOrder": 1,
+            "statOrder": 3
+          },
+          "Galactic Intel": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 10
+            },
+            "min": 0,
+            "max": 999,
+            "group": "Fundamental resources",
+            "groupOrder": 1,
+            "statOrder": 4
+          },
+          "Rare Raw Minerals": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Rare resources",
+            "groupOrder": 2,
+            "statOrder": 10
+          },
+          "Rare Biomatter": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Rare resources",
+            "groupOrder": 2,
+            "statOrder": 11
+          },
+          "Rare Energy Sources": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Rare resources",
+            "groupOrder": 2,
+            "statOrder": 12
+          },
+          "Rare Galactic Intel": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "group": "Rare resources",
+            "groupOrder": 2,
+            "statOrder": 13
+          }
+        }
+      }
+    },
     "assetCatalog": {
       "Ability§Ancestral Fortune": {
         "keywords": {
@@ -8284,6 +8707,43 @@
             "dynamic": false,
             "visibility": "hidden"
           }
+        },
+        "rules": {
+          "useCrusadeLeagues_of_Votann": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Acquisitions§Acquisitions"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
+          }
         }
       },
       "Stratagem§Adaptable Avarice": {
@@ -11185,6 +11645,90 @@
           ]
         },
         "text": "While units from your Crusade army have Hostile Acquisition, add 2 to the Attacks characteristic of the bearer's melee weapons. While units from your Crusade army have Fortify Takeover, add 1 to the Attacks characteristic of the bearer's melee weapons."
+      },
+      "Requisition§Red-Handed Harvest": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition at the end of a battle, if your Crusade force is on an expedition. Count the number of enemy units destroyed at the end of that battle, then roll that many D6. For each 5+, gain 10 of the fundamental resource below that corresponds with the Faction keyword of your opponent’s Crusade army."
+      },
+      "Requisition§Guild Patronage": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition at the end of a battle, if your Crusade force has a trading hub kindred asset (and it is not inactive). You can do one of the following:\n\nSpend 60 of one type of fundamental resource, then select another fundamental resource and gain 50 of that resource.\n\nSpend 1 rare resource, then gain 50 of the corresponding fundamental resource.\n\nSpend 1 rare resource, then randomly generate 1 rare resource."
+      },
+      "Requisition§Field Testing": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition before any battle, if your Crusade force has an evaluation vault kindred asset (and it is not inactive). Select one LEAGUES OF VOTANN INFANTRY or LEAGUES OF VOTANN MOUNTED unit from your Crusade army (you cannot select an EPIC HERO or a unit that has the Weapon Modification Battle Honour). Until the end of the battle, increase that unit’s Crusade points by 1. Select one Weapon Modification from the Weapon Modifications Battle Honour table, or randomly select two (see the main Crusade rules). Once per battle, when that unit is selected to shoot or fight, that unit can use the modifications selected before the battle. These apply to all weapons equipped by models in that unit until the end of the phase."
+      },
+      "Requisition§Returned to the Ancestors": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "When a great hero of the Kin is slain, nothing is wasted, if possible, least of all the years of experience they have accumulated. To live a long life full of accomplishments is to enrich the Votann and become one with the ancestors.\n\nPurchase this Requisition when a LEAGUES OF VOTANN CHARACTER unit from your Crusade force that has gained at least the Blooded rank gains a Battle Scar. Remove that unit from your Crusade force. You immediately gain D6x5 biomatter and D6x5 raw minerals. In addition, for each Battle Honour that unit had, you gain D6x5 galactic intel and each other Leagues of Votann unit from your Crusade force gains 1XP."
+      },
+      "Crusade Badge§Exemplary Hero": {
+        "text": "You have completed one or more lean operation expeditions.\nYou have one or more kindred assets.\nYou have completed one or more guild contracts.\nYou have won two or more battles."
+      },
+      "Crusade Badge§Vaunted of the Hearth": {
+        "text": "You have completed one or more balanced stake expeditions.\nYou have one or more upgraded kindred assets.\nYou have completed two or more different guild contracts.\nYou have gained one or more rare resources of any type.\nYou have won four or more battles."
+      },
+      "Crusade Badge§Kindred Legend": {
+        "text": "You have completed one or more high investment expeditions.\nYou have two or more upgraded kindred assets.\nYou have won ten or more battles.\nYou have completed three or more different guild contracts.\nYou have gained at least 1 of every type of rare resource.\nYou have used the Returned to the Ancestors Requisition one or more times."
+      },
+      "Kindred Asset§Mining Outpost": {
+        "text": "**Cost:** Raw Minerals ×30, Energy Sources ×30, Galactic Intel ×50. **Crusade effect:** Each time you gain any amount of raw minerals, add 20 to the amount you gain for each mining outpost you have.\n\n**Upgrade cost:** Energy Sources ×50. **Upgraded effect:** Each time you gain any amount of raw minerals, add an additional 10 (for a total of +30 from this mining outpost). You can have up to three mining outposts.\n\nAn inactive asset's effects do not apply; reactivate it for half its original cost."
+      },
+      "Kindred Asset§Trading Hub": {
+        "text": "**Cost:** Raw Minerals ×30, Biomatter ×30, Energy Sources ×50. **Crusade effect:** After each battle, you can use the Guild Patronage Requisition once.\n\n**Upgrade cost:** Energy Sources ×100, Rare Raw Minerals ×1. **Upgraded effect:** After each battle, you can use the Guild Patronage Requisition twice.\n\nAn inactive asset's effects do not apply; reactivate it for half its original cost."
+      },
+      "Kindred Asset§Fane Augmentation": {
+        "text": "**Cost:** Raw Minerals ×50, Biomatter ×50, Energy Sources ×50, Galactic Intel ×50. **Crusade effect:** Each time a LEAGUES OF VOTANN unit from your Crusade army is Marked for Greatness, that unit gains an additional 1XP.\n\n**Upgrade cost:** Galactic Intel ×100, Rare Energy Sources ×1. **Upgraded effect:** After each battle, select one additional LEAGUES OF VOTANN unit from your Crusade army to be Marked for Greatness.\n\nAn inactive asset's effects do not apply; reactivate it for half its original cost."
+      },
+      "Kindred Asset§Scout Vessel": {
+        "text": "**Cost:** Raw Minerals ×100, Biomatter ×50, Energy Sources ×50. **Crusade effect:** Each time you roll to randomly determine a type of resource, you can re-roll the dice.\n\n**Upgrade cost:** Raw Minerals ×100, Rare Biomatter ×1. **Upgraded effect:** After each battle, if your Crusade force is on an expedition, you can remove 1 rare resource from your tracker to increase the maximum length of the expedition by 1 battle.\n\nAn inactive asset's effects do not apply; reactivate it for half its original cost."
+      },
+      "Kindred Asset§Implant Refinery": {
+        "text": "**Cost:** Biomatter ×100, Energy Sources ×100. **Crusade effect:** After each battle, you can re-roll failed Out of Action tests for LEAGUES OF VOTANN units (excluding VEHICLES) from your Crusade army.\n\n**Upgrade cost:** Biomatter ×50, Rare Energy Sources ×1. **Upgraded effect:** Each time you roll a D6 to see if your Crusade force has gained a rare resource, you can re-roll the dice.\n\nAn inactive asset's effects do not apply; reactivate it for half its original cost."
+      },
+      "Kindred Asset§Pioneer Fleet": {
+        "text": "**Cost:** Raw Minerals ×50, Biomatter ×50, Galactic Intel ×50. **Crusade effect:** After each battle, randomly determine one fundamental resource. For each Yield point you had at the end of the battle, gain 10 of that resource.\n\n**Upgrade cost:** Raw Minerals ×50, Galactic Intel ×50, Rare Biomatter ×1. **Upgraded effect:** At the start of the first battle round, you can spend 20 of any fundamental resource to gain 2 Yield points (these do not count towards your total Yield points).\n\nAn inactive asset's effects do not apply; reactivate it for half its original cost."
+      },
+      "Kindred Asset§Evaluation Vault": {
+        "text": "**Cost:** Raw Minerals ×50, Biomatter ×50, Galactic Intel ×100. **Crusade effect:** Before each battle, you can use the Field Testing Requisition once for 1RP instead of 2RP.\n\n**Upgrade cost:** Raw Minerals ×100, Rare Galactic Intel ×1. **Upgraded effect:** Before each battle, you can use the Field Testing Requisition twice for 1RP instead of 2RP.\n\nAn inactive asset's effects do not apply; reactivate it for half its original cost."
+      },
+      "Kindred Asset§Biorecyc Fabricator": {
+        "text": "**Cost:** Raw Minerals ×50, Biomatter ×100, Energy Sources ×50. **Crusade effect:** After each battle, when you determine which fundamental resource you gain, if it is not biomatter, gain 20 biomatter.\n\n**Upgrade cost:** Biomatter ×100, Rare Raw Minerals ×1. **Upgraded effect:** At the end of each battle, each LEAGUES OF VOTANN unit from your Crusade army that is on the battlefield (excluding VEHICLES) gains 1XP.\n\nAn inactive asset's effects do not apply; reactivate it for half its original cost."
+      },
+      "Expedition§Expedition": {
+        "text": "**Goals.** Farstryd Exploration: units gained 2XP or more from the Prospecting Agenda in three or more battles — one CHARACTER gains 3XP and you add a mining outpost (max 3). Resource Reallocation: you used the Red-handed Harvest Requisition three or more times — one CHARACTER gains 3XP and you double one fundamental resource. Monopolise Site: you won three or more battles — one CHARACTER gains 3XP and you upgrade one kindred asset for free.\n\n**Guild Contracts** (reward / penalty until your next completed expedition). Mining — Extraction Minerals: expedition total of 60+ raw minerals → 1 rare raw mineral; Extraction Energy: 60+ energy sources → 1 rare energy source; failing a Mining contract bars the Guild Patronage Requisition. Science — Research Biology: 60+ biomatter → 1 rare biomatter; Research Emergent Field: 1+ rare resource → 50 of one fundamental resource; failing a Science contract bars buying, upgrading or reactivating kindred assets. Mapping — Exploration Intelligence: 60+ galactic intel → 1 rare galactic intel; Exploration New Horizons: units gained 30XP+ during the expedition → 25 each of two fundamental resources; failing a Mapping contract gives −1 to your resource type and amount rolls (minimum 1).\n\nThe expedition ends when you choose after a battle or when its battles reach the backing's maximum: take the goal reward if met, then the contract's reward or penalty."
+      },
+      "Acquisitions§Acquisitions": {
+        "assets": {
+          "traits": [
+            "Kindred Asset§Mining Outpost",
+            "Kindred Asset§Trading Hub",
+            "Kindred Asset§Fane Augmentation",
+            "Kindred Asset§Scout Vessel",
+            "Kindred Asset§Implant Refinery",
+            "Kindred Asset§Pioneer Fleet",
+            "Kindred Asset§Evaluation Vault",
+            "Kindred Asset§Biorecyc Fabricator",
+            "Expedition§Expedition"
+          ]
+        },
+        "text": "**Kindred Acquisitions.** After each battle in which your WARLORD was a LEAGUES OF VOTANN CHARACTER, roll for a fundamental resource (D6: 1 Raw Minerals, 2 Biomatter, 3 Energy Sources, 4 Galactic Intel, 5–6 your choice) and its amount by battle size (Combat Patrol D6×5, Incursion D6×10, Strike Force 2D6×10, Onslaught 3D6×10). After a win, roll one D6: on a 6 you also gain one rare resource (roll its type); a rare resource can be converted into 50 regular units of its type at any time. After gaining resources you can buy one kindred asset or upgrade one you own (each asset once, at most one of each except up to three mining outposts). **Cost of Failure:** after a lost battle with four or more kindred assets, roll one D6: on a 1 a random asset becomes inactive until you pay half its original cost."
       }
     },
     "gameModes": {},

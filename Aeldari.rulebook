@@ -1,6 +1,6 @@
 {
   "name": "Aeldari 11e",
-  "revision": "11.2.11",
+  "revision": "11.2.13",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -21,6 +21,279 @@
         "removed": {
           "rules": {
             "noAllyEnhancements": {}
+          }
+        },
+        "stats": {
+          "Path": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Path of the Seer": {
+                "order": 1
+              },
+              "Path of Command": {
+                "order": 2
+              },
+              "Path of the Warrior": {
+                "order": 3
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "statOrder": 20
+          }
+        },
+        "rules": {
+          "crusadeShowPath": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Path",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Asuryani",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeTagPathoftheSeer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Path of the Seer"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Path",
+                    "value"
+                  ]
+                ],
+                "value": "Path of the Seer"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: a unit on the Path of the Seer may take that Path's Battle Traits"
+          },
+          "crusadeTagPathofCommand": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Path of Command"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Path",
+                    "value"
+                  ]
+                ],
+                "value": "Path of Command"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: a unit on the Path of Command may take that Path's Battle Traits"
+          },
+          "crusadeTagPathoftheWarrior": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Path of the Warrior"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Path",
+                    "value"
+                  ]
+                ],
+                "value": "Path of the Warrior"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: a unit on the Path of the Warrior may take that Path's Battle Traits"
+          },
+          "allowAeldariPathTrait": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Aeldari Path Trait"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Asuryani",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "The Aeldari Paths: a unit with a Path keyword (gained through Guiding Fate) may take that Path's Battle Traits instead of others"
           }
         }
       },
@@ -1902,6 +2175,252 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "crusadeShowPath": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Path",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Asuryani",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "crusadeTagPathoftheSeer": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Path of the Seer"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Path",
+                    "value"
+                  ]
+                ],
+                "value": "Path of the Seer"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: a unit on the Path of the Seer may take that Path's Battle Traits"
+          },
+          "crusadeTagPathofCommand": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Path of Command"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Path",
+                    "value"
+                  ]
+                ],
+                "value": "Path of Command"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: a unit on the Path of Command may take that Path's Battle Traits"
+          },
+          "crusadeTagPathoftheWarrior": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Path of the Warrior"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Path",
+                    "value"
+                  ]
+                ],
+                "value": "Path of the Warrior"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: a unit on the Path of the Warrior may take that Path's Battle Traits"
+          },
+          "allowAeldariPathTrait": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Aeldari Path Trait"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Faction"
+                  ]
+                ],
+                "value": "Asuryani",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "The Aeldari Paths: a unit with a Path keyword (gained through Guiding Fate) may take that Path's Battle Traits instead of others"
           }
         },
         "stats": {
@@ -2037,6 +2556,29 @@
             "statType": "rank",
             "value": "-",
             "visibility": "hidden"
+          },
+          "Path": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Path of the Seer": {
+                "order": 1
+              },
+              "Path of Command": {
+                "order": 2
+              },
+              "Path of the Warrior": {
+                "order": 3
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "statOrder": 20
           }
         }
       },
@@ -2258,6 +2800,217 @@
             "evaluate": "AND",
             "failState": "pass",
             "order": 80
+          }
+        }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Fulcrum of Fate": {
+                "order": 100,
+                "tracking": {
+                  "Asuryani Agenda": 1
+                }
+              },
+              "Eldritch Supremacy": {
+                "order": 101,
+                "tracking": {
+                  "Asuryani Agenda": 1
+                }
+              },
+              "Few in Number": {
+                "order": 102,
+                "tracking": {
+                  "Asuryani Agenda": 1
+                }
+              },
+              "Evasive Warfare": {
+                "order": 103,
+                "tracking": {
+                  "Asuryani Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Fulcrum of Fate": {
+                "order": 100,
+                "tracking": {
+                  "Asuryani Agenda": 1
+                }
+              },
+              "Eldritch Supremacy": {
+                "order": 101,
+                "tracking": {
+                  "Asuryani Agenda": 1
+                }
+              },
+              "Few in Number": {
+                "order": 102,
+                "tracking": {
+                  "Asuryani Agenda": 1
+                }
+              },
+              "Evasive Warfare": {
+                "order": 103,
+                "tracking": {
+                  "Asuryani Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Consult the Runes",
+            "Requisition§Burned Futures",
+            "Requisition§Spiritual Necromancy",
+            "Requisition§Paths of the Aeldari",
+            "Requisition§Court of the Young King",
+            "Requisition§Manifest the Yncarne",
+            "Crusade Badge§Seer of the Fates",
+            "Crusade Badge§Seeker of the Ways",
+            "Crusade Badge§Saviour of the Future"
+          ]
+        }
+      },
+      "Aeldari Path Trait": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Thread of Fate": {
+        "aspects": {
+          "Visibility": "always"
+        },
+        "templateClass": "",
+        "stats": {
+          "Thread": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Destined Device": {
+                "order": 1
+              },
+              "Rising Nemesis": {
+                "order": 2
+              },
+              "Humble Beginnings": {
+                "order": 3
+              },
+              "Enemy of My Enemy": {
+                "order": 4
+              },
+              "Cleanse the Corruption": {
+                "order": 5
+              },
+              "Isha’s Bounty": {
+                "order": 6
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 1
+          },
+          "Stage": {
+            "statType": "rank",
+            "ranks": {
+              "Dawning": {
+                "order": 0
+              },
+              "Waning": {
+                "order": 1
+              },
+              "Frayed": {
+                "order": 2
+              },
+              "Ended well": {
+                "order": 3
+              },
+              "Ended badly": {
+                "order": 4
+              }
+            },
+            "value": "Dawning",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 2
+          }
+        }
+      },
+      "Guiding Fate": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Threat": {
+            "statType": "numeric",
+            "value": 1,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 13,
+            "statOrder": 1
+          }
+        },
+        "rules": {
+          "failed": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": " — DISASTER (Threat 13+)",
+                "append": ""
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Threat",
+                    "value"
+                  ]
+                ],
+                "min": 13
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
           }
         }
       }
@@ -25793,6 +26546,41 @@
             ],
             "evaluate": "OR",
             "failState": "error"
+          },
+          "useCrusadeAeldari": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Guiding Fate§Guiding Fate"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
           }
         },
         "stats": {
@@ -40141,269 +40929,795 @@
           }
         }
       },
-      "Crusade Honour§Footfalls of Fate": {
+      "Requisition§Consult the Runes": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition when your Crusade force begins Guiding Fate, just after you generate your Crusade force’s Threads of Fate. Select one of those Threads of Fate and replace it with a randomly selected Thread of Fate that was not selected for your Crusade force. You can only purchase this Requisition once for each time your Crusade force is Guiding Fate."
+      },
+      "Requisition§Burned Futures": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Purchase this Requisition just after a battle, if your Crusade force is Guiding Fate. Your Crusade forces Threat does not increase for this battle, and if any of your Crusade forces Threads of Fate would move to their next stage or end in failure this battle, they do not move to the next stage and do not end in failure, remaining at their current stages instead. You can only purchase this Requisition once for each time your Crusade force is Guiding Fate."
+      },
+      "Requisition§Spiritual Necromancy": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition when an ASURYANI INFANTRY unit from your Crusade force (excluding WRAITH CONSTRUCT units) would gain a second or subsequent Battle Scar. Remove that unit from your Order of Battle and replace it with one WRAITH CONSTRUCT unit. You cannot purchase this Requisition if doing so would cause your total Crusade points to exceed your Crusade forces Supply Limit. The new unit starts with the same number of XP as the unit it replaced and gains the appropriate number of Battle Honours for its rank. You can re-roll Out Of Action tests taken for the new unit."
+      },
+      "Requisition§Paths of the Aeldari": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after a battle. Select one ASURYANI INFANTRY unit (excluding CHARACTER and WRAITH CONSTRUCT units) on your Order of Battle. Remove that unit from your Order of Battle and replace it with another, different ASURYANI INFANTRY unit (excluding CHARACTER and WRAITH CONSTRUCT units). You cannot purchase this Requisition if doing so would cause your total Crusade points to exceed your Crusade forces Supply Limit. The new unit starts with the same number of XP as the unit it replaced, gains the appropriate number of Battle Honours for its rank and retains the PATH OF THE WARRIOR keyword if it had it. It then gains an additional D3+1XP and, if the new unit has the ASPECT WARRIORS keyword, it gains the PATH OF THE WARRIOR keyword if it does not have it already."
+      },
+      "Requisition§Court of the Young King": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a battle, if you do not have an AVATAR OF KHAINE model on your Order of Battle and your Crusade force is Guiding Fate. Select one ASPECT WARRIORS unit on your Order of Battle; that ASPECT WARRIORS unit gains a Battle Scar and you can add one AVATAR OF KHAINE model to your Order of Battle. The points value of that Avatar of Khaine model does not count towards your Crusade force’s Supply Used. Once your Crusade force is no longer Guiding Fate, you must remove that AVATAR OF KHAINE model from your Order of Battle."
+      },
+      "Requisition§Manifest the Yncarne": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after a battle that you lost, if you have a YVRAINE model on your Order of Battle but do not have a THE YNCARNE model on it, and if your Crusade force is Guiding Fate. You can add one THE YNCARNE model to your Order of Battle. The points value of that THE YNCARNE model does not count towards your Crusade forces Supply Used. Once your Crusade force is no longer Guiding Fate, you must remove that THE YNCARNE model from your Order of Battle."
+      },
+      "Crusade Badge§Seer of the Fates": {
+        "text": "You have perceived that which threatens your craftworld in the days to come. Through bloodshed and cunning you have turned aside that peril and - though no war comes without cost - you have done much to defend your people and their home.\nYou have won at least two battles.\nYour Crusade force has completed at least one Guiding Fate with a final Threat of 12 or lower."
+      },
+      "Crusade Badge§Seeker of the Ways": {
+        "text": "Your Crusade force has completed at least two Guiding Fates.\nYou have won at least six battles.\nYour Crusade force has completed at least one Guiding Fate with a final Threat of 8 or lower."
+      },
+      "Crusade Badge§Saviour of the Future": {
+        "text": "Your Crusade force has completed at least three Guiding Fates.\nYou have won at least ten battles.\nYour Crusade force has completed at least one Guiding Fate with a final Threat of 4 or lower."
+      },
+      "Aeldari Path Trait§Footfalls of Fate": {
         "keywords": {
-          "Keywords": [
-            "The Aeldari Paths"
-          ],
           "Tags": [
-            "Asuryani"
+            "Path of the Seer"
           ]
         },
         "text": "You can re-roll Advance rolls made for this unit and, in your Movement phase, each time a model in it moves, it can move through enemy models (excluding **^^Monsters^^** and **^^Vehicles^^**). When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them and any Desperate Escape test is automatically passed."
       },
-      "Crusade Honour§Webway Spar": {
+      "Aeldari Path Trait§Webway Spar": {
         "keywords": {
-          "Keywords": [
-            "The Aeldari Paths"
-          ],
           "Tags": [
-            "Asuryani"
+            "Path of the Seer"
           ]
         },
         "text": "Once per turn, at the end of your Movement phase, one unit from your Crusade army with this ability can use it. If it does, roll one D6: on a 1, that unit suffers D3 mortal wounds; on a 2+, remove that unit from the battlefield and set it up again anywhere on the battlefield that is more than 9\" horizontally away from all enemy units. Each unit can only use this ability once per battle."
       },
-      "Crusade Honour§Spirit of Eldanesh": {
+      "Aeldari Path Trait§Spirit of Eldanesh": {
         "keywords": {
-          "Keywords": [
-            "The Aeldari Paths"
-          ],
           "Tags": [
-            "Asuryani"
+            "Path of the Seer"
           ]
         },
         "text": "Psychic weapons equipped by models in this unit unit have the **[ANTI-MONSTER 3+]** and **[ANTI-VEHICLE 3+]** abilities."
       },
-      "Crusade Honour§Dead-eye Shots": {
+      "Aeldari Path Trait§Paths of the Pathless": {
         "keywords": {
-          "Keywords": [
-            "The Aeldari Paths"
-          ],
           "Tags": [
-            "Asuryani"
-          ]
-        },
-        "text": "Ranged weapons equipped by models in this unit have the **[PRECISION]** ability."
-      },
-      "Crusade Honour§Khaine's Vengeance": {
-        "keywords": {
-          "Keywords": [
-            "The Aeldari Paths"
-          ],
-          "Tags": [
-            "Asuryani"
-          ]
-        },
-        "text": "Each time an enemy unit within Engagement Range of this unit is selected to Fall Back, roll one D6, subtracting 2 if that unit is a **^^Monster^^** or **^^Vehicle^^**: on a 2+, that unit suffers D3 mortal wounds."
-      },
-      "Crusade Honour§Tactical Teachings": {
-        "keywords": {
-          "Keywords": [
-            "The Aeldari Paths"
-          ],
-          "Tags": [
-            "Asuryani"
-          ]
-        },
-        "text": "Each time a ranged attack targets this unit, if this unit is within range or one or more objective markers, models in this unit have the Benefit of Cover against this attack."
-      },
-      "Crusade Honour§Nimble Fighters": {
-        "keywords": {
-          "Keywords": [
-            "The Aeldari Paths"
-          ],
-          "Tags": [
-            "Asuryani"
-          ]
-        },
-        "text": "Each time a melee attack targets this unit, subtract 1 from the Hit roll."
-      },
-      "Crusade Honour§Battlewraiths": {
-        "keywords": {
-          "Keywords": [
-            "The Aeldari Paths"
-          ],
-          "Tags": [
-            "Asuryani"
-          ]
-        },
-        "text": "In your Shooting phase, after this unit has shot, it can make a Normal move of up to D6\". If it does, until the end of the turn, this unit is not eligible to declare a charge."
-      },
-      "Crusade Honour§Sunshock Fire Patterns": {
-        "keywords": {
-          "Keywords": [
-            "The Aeldari Paths"
-          ],
-          "Tags": [
-            "Asuryani"
-          ]
-        },
-        "text": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle-shock test."
-      },
-      "Crusade Honour§Paths of the Pathless": {
-        "keywords": {
-          "Keywords": [
-            "The Aeldari Paths"
-          ],
-          "Tags": [
-            "Asuryani"
+            "Path of Command"
           ]
         },
         "text": "At the start of the first battle round, before any moves are made using the Scouts ability, one unit from your Crusade army with this ability can use it. If it does, you can select up to two friendly **^^Aeldari Infantry^^** units within 6\" of that unit that do not have the Scouts ability. Until the end of the battle, all models in the selected units have the Scouts 6\" ability."
       },
-      "Crusade Honour§Strategic Philosopher": {
+      "Aeldari Path Trait§Strategic Philosopher": {
         "keywords": {
-          "Keywords": [
-            "The Aeldari Paths"
-          ],
           "Tags": [
-            "Asuryani"
+            "Path of Command"
           ]
         },
         "text": "In your Command phase, if this unit is within range of one or more objective markers you control and it is not Battle-shocked, roll one D6: on a 3+, you gain 1CP."
       },
-      "Crusade Honour§Master Misdirector": {
+      "Aeldari Path Trait§Master Misdirector": {
         "keywords": {
-          "Keywords": [
-            "The Aeldari Paths"
-          ],
           "Tags": [
-            "Asuryani"
+            "Path of Command"
           ]
         },
         "text": "After both players have deployed their armies, one unit from your Crusade army with this ability can use it. If it does, select up to two **^^Aeldari^^** units from your Crusade army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
       },
-      "Crusade Honour§Raidcraft Workshop controlled": {
+      "Aeldari Path Trait§Dead-eye Shots": {
         "keywords": {
-          "Keywords": [
-            "Ascendant Lord"
-          ],
           "Tags": [
-            "Asuryani"
+            "Path of the Warrior"
           ]
         },
-        "text": "In the Declare Battle Formations step, you can select one **^^Drukhari Vehicle^^** or **^^Drukhari Mounted^^** unit from your Crusade army. Until the end of the battle, that unit has the Scouts 6\" ability."
+        "text": "Ranged weapons equipped by models in this unit have the **[PRECISION]** ability."
       },
-      "Crusade Honour§Weapon Forge controlled": {
+      "Aeldari Path Trait§Khaine's Vengeance": {
         "keywords": {
-          "Keywords": [
-            "Ascendant Lord"
-          ],
           "Tags": [
-            "Asuryani"
+            "Path of the Warrior"
           ]
         },
-        "text": "At the start of the Declare Battle Formations step, select one **^^Drukhari^^** unit from your Crusade army (you cannot select an **^^Epic Hero^^** or a unit that has the Weapon Modification Battle Honour). Until the end of the battle, one weapon equipped by one model in that unit has the Weapon Modification Battle Honour."
+        "text": "Each time an enemy unit within Engagement Range of this unit is selected to Fall Back, roll one D6, subtracting 2 if that unit is a **^^Monster^^** or **^^Vehicle^^**: on a 2+, that unit suffers D3 mortal wounds."
       },
-      "Crusade Honour§Toxin Distillery controlled": {
+      "Aeldari Path Trait§Tactical Teachings": {
         "keywords": {
-          "Keywords": [
-            "Ascendant Lord"
-          ],
           "Tags": [
-            "Asuryani"
+            "Path of the Warrior"
           ]
         },
-        "text": "While your **^^Ascendant Lord^^** is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability."
+        "text": "Each time a ranged attack targets this unit, if this unit is within range or one or more objective markers, models in this unit have the Benefit of Cover against this attack."
       },
-      "Crusade Honour§Arena controlled": {
+      "Aeldari Path Trait§Nimble Fighters": {
         "keywords": {
-          "Keywords": [
-            "Ascendant Lord"
-          ],
           "Tags": [
-            "Asuryani"
+            "Path of the Warrior"
           ]
         },
-        "text": "In the Update Crusade Cards step, if a **^^Drukhari^^** unit from your Crusade army would gain XP from Dealers of Death, it gains 1 additional XP."
+        "text": "Each time a melee attack targets this unit, subtract 1 from the Hit roll."
       },
-      "Crusade Honour§Scourge Spire controlled": {
+      "Aeldari Path Trait§Battlewraiths": {
         "keywords": {
-          "Keywords": [
-            "Ascendant Lord"
-          ],
           "Tags": [
-            "Asuryani"
+            "Path of the Warrior"
           ]
         },
-        "text": "In the Update Crusade Cards step, if a **^^Scourges^^** unit from your Crusade army would gain XP from Battle Experience, it gains 1 additional XP."
+        "text": "In your Shooting phase, after this unit has shot, it can make a Normal move of up to D6\". If it does, until the end of the turn, this unit is not eligible to declare a charge."
       },
-      "Crusade Honour§Incubi Shrine controlled": {
+      "Aeldari Path Trait§Sunshock Fire Patterns": {
         "keywords": {
-          "Keywords": [
-            "Ascendant Lord"
-          ],
           "Tags": [
-            "Asuryani"
+            "Path of the Warrior"
           ]
         },
-        "text": "In the Declare Battle Formations step, your **^^Ascendant Lord^^** can be attached to an **^^Incubi^^** unit (if your **^^Ascendant Lord^^** is an **^^Archon^^**, while it is leading an **^^Incubi^^** unit, your **^^Ascendant Lord^^** has the Feel No Pain 5+ ability). If your **^^Ascendant Lord^^** is attached to an **^^Incubi^^** unit, at the end of the battle, unless all of those Bodyguard models have been destroyed, you can re-roll all Leadership tests required as the result of Assassination Attempts during that battle's Rival Activities."
+        "text": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle-shock test."
       },
-      "Crusade Honour§Dock controlled": {
-        "keywords": {
-          "Keywords": [
-            "Ascendant Lord"
-          ],
-          "Tags": [
-            "Asuryani"
-          ]
-        },
-        "text": "After each battle, in the Update Crusade Cards step, roll one D6, adding 1 to the result if you were the victor: on a 4+, you gain 1 additional RP."
+      "Ability§Thread of Fate: Destined Device": {
+        "text": "**Buried Provenance (Dawning):** If the device is never discovered, its perilous potential will never be realised.\n\nAt the start of the Deploy Crusade Armies step, select one objective marker on the battlefield. In your opponent’s Command phase, if they control that objective marker, they can select one unit within range of it. That unit gains 3XP and that objective marker is removed from the battlefield.\n\nAt the end of the battle, if that objective marker is on the battlefield and you control it, your Crusade army finds the device and this Thread of Fate ends successfully.\n\n**Unknowing Bearer (Waning):** At the start of the first battle round, your opponent must select three units from their army that are on the battlefield or embarked within a TRANSPORT that is on the battlefield. Randomly determine one of those units to be carrying the device.\n\nAt the end of the battle, if the unit that was carrying the device is destroyed, this Thread of Fate ends successfully.\n\n**Abandoned (Frayed):** Having tricked the bearer of the device, the Aeldari have a last chance to snatch it away.\n\nAt the start of the Deploy Crusade Armies step, randomly select one objective marker on the battlefield. If the mission does not have any objective markers, set one up in the centre of the battlefield.\n\nIn your Command phase, if you control that objective marker, roll one D6: on a 5+, you have found the device and this Thread of Fate ends successfully."
       },
-      "Crusade Honour§Sprawl Slum controlled": {
-        "keywords": {
-          "Keywords": [
-            "Ascendant Lord"
-          ],
-          "Tags": [
-            "Asuryani"
-          ]
-        },
-        "text": "At the start of the Select Crusade Blessings step, roll one D6, adding 2 to the result if you are the Underdog: on a 6+, you can use one additional Crusade Blessing this battle (even if you are not the Underdog)."
+      "Ability§Thread of Fate: Rising Nemesis": {
+        "text": "**Sow Dissent (Dawning):** At the start of the first battle round, your opponent’s army has a Dissension tally of 0. Each lime an enemy unit fails a Battle-shock test, add 1 to your opponent’s army’s Dissension tally.\n\nAt the end of the battle, if your opponent’s army’s Dissension tally is at least twice the number of CHARACTER models on your opponent’s Army Roster, this Thread of Fate ends successfully.\n\n**Sever the Head (Waning):** At the start of the first battle round, select three models from your opponent’s army. These must be CHARACTER models, if possible, and one of them must be your opponent’s WARLORD.\n\nAt the end of the battle, if all three of the selected models are destroyed, this Thread of Fate ends successfully.\n\n**Seal the Webway (Frayed):** At the start of the Deploy Crusade Armies step, select two objective markers on the battlefield wholly within No Man’s Land. In your Shooting phase, for each of the selected objective markers, you can select one AELDARI PSYKER model from your Crusade army within 9\" of that objective marker and not within Engagement Range of one or more enemy units. If you do, that objective marker gains 1 Sealing point. At the end of the battle, if both selected objective markers have 2 or more Sealing points, this Thread of Fate ends successfully."
       },
-      "Crusade Honour§Flesh Market controlled": {
-        "keywords": {
-          "Keywords": [
-            "Ascendant Lord"
-          ],
-          "Tags": [
-            "Asuryani"
-          ]
-        },
-        "text": "Once at the end of each battle, you can re-roll one Out of Action test taken for one **^^Drukhari Infantry^^** or **^^Drukhari Monster^^** unit from your Crusade army."
+      "Ability§Thread of Fate: Humble Beginnings": {
+        "text": "**Destined for Greatness (Dawning):** At the start of the first battle round, select one AELDARI INFANTRY unit from your Crusade army (excluding Attached units) that is on the battlefield or embarked within a TRANSPORT that is on the battlefield. This must be a GUARDIANS unit if possible.\n\nIf a unit from your opponent’s army destroys that unit, that enemy unit gains 3XP.\n\nAt the end of the battle, if that unit is not destroyed, this Thread of Fate ends successfully.\n\n**Identity Blurs (Waning):** At the start of the first battle round, select two AELDARI INFANTRY units from your Crusade army (excluding CHARACTERS) that are on the battlefield or embarked within TRANSPORTS that are on the battlefield. These must be GUARDIANS units if possible. Each time a unit from your opponent’s army destroys one of those units, that enemy unit gains 1XP. At the end of the battle, if both of those units are not destroyed, this Thread of Fate ends successfully. If only one of those units is not destroyed, roll one D6: on a 4+, this Thread of Fate ends successfully.\n\n**Fallen Hero (Frayed):** At the start of the first battle round, select one AELDARI PSYKER model from your Crusade army.\n\nIn your Command phase, if that PSYKER model is within 6\" of the centre of the battlefield, roll one D6: on a 4+, that PSYKER model is able to find the spirit stone and this Thread of Fate ends successfully."
       },
-      "Crusade Honour§Shadow District controlled": {
-        "keywords": {
-          "Keywords": [
-            "Ascendant Lord"
-          ],
-          "Tags": [
-            "Asuryani"
-          ]
-        },
-        "text": "Each time a Rival Lord makes an Activity roll, you can subtract 1 from the result."
+      "Ability§Thread of Fate: Enemy of My Enemy": {
+        "text": "**Unknowing Ally (Dawning):** At the start of the first battle round, your opponent must select three units from their army that are on the battlefield or embarked within a TRANSPORT that is on the battlefield. Randomly determine one of those units to be the unknowing ally.\n\nAt the end of the battle, if that unit has not been destroyed, this Thread of Fate ends successfully.\n\n**Subtle Persuasions (Waning):** At the start of the first battle round, select three enemy units (excluding TRANSPORTS). In your Command phase, for each of those enemy units that have not been influenced, you can select one AELDARI PSYKER model from your Crusade army that is within 9\" of that enemy unit. That PSYKER model takes a Leadership test: if passed, that enemy unit becomes influenced. At the end of the battle, if all of those enemy units have been influenced, this Thread of Fate ends successfully.\n\n**Gift of Life (Frayed):** At the start of the Deploy Crusade Armies step, select one unit from your Crusade army and one objective marker within your deployment zone. In your Command phase, if that unit is not destroyed and is not within range of that objective marker, remove that objective marker from the battlefield.\n\nAt the end of the battle, if that objective marker is on the battlefield, this Thread of Fate ends successfully."
       },
-      "Crusade Honour§Noble Spire controlled": {
-        "keywords": {
-          "Keywords": [
-            "Ascendant Lord"
-          ],
-          "Tags": [
-            "Asuryani"
-          ]
-        },
-        "text": "At the start of the Select Agendas step, roll one D6: on a 4+, you can select one additional Drukhari Agenda to use in that battle."
+      "Ability§Thread of Fate: Cleanse the Corruption": {
+        "text": "**Whispers of Warning (Dawning):** At the start of the Deploy Crusade Armies step, select one AELDARI unit from your Crusade army (this must be an INFANTRY unit if possible) to be your Crusade army’s messenger. Set that unit up anywhere on the battlefield wholly within 6\" of the centre of the battlefield. If a unit from your opponent’s army destroys that unit, that enemy unit gains 3XP.\n\nAt the end of the battle, if that unit is wholly within your deployment zone, this Thread of Fate ends successfully.\n\n**Follow the Trail (Waning):** At the start of the Deploy Crusade Armies step, select two objective markers on the battlefield wholly within No Man’s Land. Each of the selected objective markers starts without the signs read. In your Command phase, for each of the selected objective markers without the signs read that you control, roll one D6: on a 5+, the signs are read at that objective marker.\n\nAt the end of the battle, if both selected objective markers had the signs read at them, this Thread of Fate ends successfully.\n\n**Into Peril (Frayed):** At the end of the battle, if three or more AELDARI units from your Crusade army (excluding Battle-shocked and TRANSPORT units) are wholly within your opponent’s deployment zone and at least one of those units is a CHARACTER unit, this Thread of Fate ends successfully."
       },
-      "Crusade Honour§Gang Territory controlled": {
-        "keywords": {
-          "Keywords": [
-            "Ascendant Lord"
-          ],
-          "Tags": [
-            "Asuryani"
+      "Ability§Thread of Fate: Isha’s Bounty": {
+        "text": "**Author of Destruction (Dawning):** At the start of the first battle round, your opponent must select one unit from their army that is on the battlefield or is embarked within a TRANSPORT that is on the battlefield. This must be a MONSTER or VEHICLE unit if possible (excluding Dedicated Transports).\n\nAt the end of the third battle round, if that enemy unit is destroyed, this Thread of Fate ends successfully.\n\n**World Spirit (Waning):** At the start of the Deploy Crusade Armies step, select six objective markers on the battlefield to be world spirit nodes.\n\nAt the end of the battle, if you control at least half of the world spirit nodes objective markers, this Thread of Fate ends successfully.\n\n**Precious Remnants (Frayed):** At the end of the battle, if there are one or more AELDARI CHARACTER models from your Crusade army (excluding Battle-shocked models) wholly within each of the following areas of the battlefield, this Thread of Fate ends successfully: your deployment zone; No Man’s Land; your opponent’s deployment zone.\n\n### Results Stage\n\nWhen you reach this stage, your Crusade force will gain rewards based on how successful it was in avoiding impending disaster. First, consult the table below, using your Crusade forces final Threat to determine the reward you gain. Your Crusade force is then no longer Guiding Fate, until you choose to do so again.\n\nTHREAT\n\n0-4"
+      },
+      "Thread of Fate§Thread of Fate 1": {
+        "text": "Roll a D6 for each Thread when you begin Guiding Fate (re-roll duplicates): 1 Destined Device, 2 Rising Nemesis, 3 Humble Beginnings, 4 Enemy of My Enemy, 5 Cleanse the Corruption, 6 Isha’s Bounty. Each Thread runs Dawning → Waning → Frayed; ending it in a battle (Fulcrum of Fate Agenda) reduces Threat by 3 / 2 / 1 by stage.",
+        "rules": {
+          "thread0": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Destined Device"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Destined Device"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread1": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Rising Nemesis"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Rising Nemesis"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread2": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Humble Beginnings"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Humble Beginnings"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread3": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Enemy of My Enemy"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Enemy of My Enemy"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread4": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Cleanse the Corruption"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Cleanse the Corruption"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread5": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Isha’s Bounty"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Isha’s Bounty"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Thread of Fate§Thread of Fate 2": {
+        "text": "Roll a D6 for each Thread when you begin Guiding Fate (re-roll duplicates): 1 Destined Device, 2 Rising Nemesis, 3 Humble Beginnings, 4 Enemy of My Enemy, 5 Cleanse the Corruption, 6 Isha’s Bounty. Each Thread runs Dawning → Waning → Frayed; ending it in a battle (Fulcrum of Fate Agenda) reduces Threat by 3 / 2 / 1 by stage.",
+        "rules": {
+          "thread0": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Destined Device"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Destined Device"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread1": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Rising Nemesis"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Rising Nemesis"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread2": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Humble Beginnings"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Humble Beginnings"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread3": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Enemy of My Enemy"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Enemy of My Enemy"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread4": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Cleanse the Corruption"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Cleanse the Corruption"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread5": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Isha’s Bounty"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Isha’s Bounty"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Thread of Fate§Thread of Fate 3": {
+        "text": "Roll a D6 for each Thread when you begin Guiding Fate (re-roll duplicates): 1 Destined Device, 2 Rising Nemesis, 3 Humble Beginnings, 4 Enemy of My Enemy, 5 Cleanse the Corruption, 6 Isha’s Bounty. Each Thread runs Dawning → Waning → Frayed; ending it in a battle (Fulcrum of Fate Agenda) reduces Threat by 3 / 2 / 1 by stage.",
+        "rules": {
+          "thread0": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Destined Device"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Destined Device"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread1": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Rising Nemesis"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Rising Nemesis"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread2": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Humble Beginnings"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Humble Beginnings"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread3": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Enemy of My Enemy"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Enemy of My Enemy"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread4": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Cleanse the Corruption"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Cleanse the Corruption"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "thread5": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Thread of Fate: Isha’s Bounty"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Thread",
+                    "value"
+                  ]
+                ],
+                "value": "Isha’s Bounty"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Guiding Fate§Guiding Fate": {
+        "assets": {
+          "traits": [
+            "Thread of Fate§Thread of Fate 1",
+            "Thread of Fate§Thread of Fate 2",
+            "Thread of Fate§Thread of Fate 3"
           ]
         },
-        "text": "Each time your **^^Ascendant Lord^^** attempts a Hostile Takeover, add 1 to its D6 result and, if that **^^Ascendant Lord^^** claims a territory as a result, increase your Crusade force's Supply Limit by 50 points."
+        "text": "**Guiding Fate.** If your Crusade force includes ASURYANI or HARLEQUINS models and is not Guiding Fate, it can begin: set Threat to 1 and generate three Threads of Fate. At the end of each battle add D3 to Threat (3 if you lost). With the Fulcrum of Fate Agenda you can attempt to end one Thread; success reduces Threat by 3 (Dawning), 2 (Waning) or 1 (Frayed). If Threat reaches 13 every Thread ends in failure. When all three Threads have ended, apply the results below (if all three failed, Threat becomes at least 13) and your force is no longer Guiding Fate.\n\n**Threat 0-4 — Brief Respite:** Your Crusade force gains D3+2RP. You can select one ASURYANI PSYKER unit from your Crusade force to gain the PATH OF THE SEER keyword if it does not have it already. You can select one AUTARCH or AUTARCH WAYLEAPER unit from your Crusade force to gain the PATH OF COMMAND keyword if it does not have it already. You can select up to three ASURYANI INFANTRY units from your Crusade force to gain the PATH OF THE WARRIOR keyword if they do not have it already. You can select up to six ASURYANI units from your Crusade force to each gain one of the Aeldari Paths Battle Traits.\n\n**Threat 5-8 — Watchful:** Your Crusade force gains D3RP. You can select one ASURYANI PSYKER unit from your Crusade force to gain the PATH OF THE SEER keyword if it does not have it already, or you can select one AUTARCH or AUTARCH WAYLEAPER unit from your Crusade force to gain the PATH OF COMMAND keyword if it does not have it already. You can select up to two ASURYANI INFANTRY units from your Crusade force to gain the PATH OF THE WARRIOR keyword if they do not have it already. You can select up to four ASURYANI units from your Crusade force to each gain one of the Aeldari Paths Battle Traits.\n\n**Threat 9-12 — Beset:** Your Crusade force gains 1RP. You can select one AUTARCH or AUTARCH WAYLEAPER unit from your Crusade force to gain the PATH OF COMMAND keyword if it does not have it already. You can select one ASURYANI INFANTRY unit from your Crusade force to gain the PATH OF THE WARRIOR keyword if it does not have it already. You can select up to two ASURYANI units from your Crusade force to each gain one of the Aeldari Paths Battle Traits.\n\n**Threat 13+ — Endure The Inevitable:** Select one unit from your Crusade force to gain 2 Battle Scars and two other units from your Crusade force to gain 1 Battle Scar each."
       }
     },
     "gameModes": {},

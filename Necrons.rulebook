@@ -1,6 +1,6 @@
 {
   "name": "Necrons 11e",
-  "revision": "11.2.4",
+  "revision": "11.2.5",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -315,7 +315,11 @@
           "items": [
             "Requisition§Viral Vectors",
             "Requisition§Cunning Advisors",
-            "Requisition§Power Reserves Reallocated"
+            "Requisition§Power Reserves Reallocated",
+            "Requisition§The Slow Decay of the Self",
+            "Crusade Badge§Awakened Tomb",
+            "Crusade Badge§Conquering Tomb",
+            "Crusade Badge§Subjugating Tomb"
           ]
         }
       },
@@ -4942,9 +4946,15 @@
           }
         }
       },
-      "Crusade Badge§Awakened Tomb": {},
-      "Crusade Badge§Conquering Tomb": {},
-      "Crusade Badge§Subjugating Tomb": {},
+      "Crusade Badge§Awakened Tomb": {
+        "text": "You have reached out your enduring will from the cold and sterile heart of your tomb world and reasserted your right to the stars. A t your command, awakened legions march to reclaim the tomb world’s territory where it lies scattered, ruined or invaded. With every harrowing purge and each ruthless repossession, the remnants of your realm are remade and revived to regal superiority. With every victory is this new age revealed: the opportunities for expansion and prestige; the verminous species to be crushed. The galaxy has changed much, but conquest is an eternal concept. The galaxy will learn once more to fear your dominion.\nYou have used a Master System ability once.\nYou have won at least two battles"
+      },
+      "Crusade Badge§Conquering Tomb": {
+        "text": "You have used a Master System ability three or more times.\nAt least one CHARACTER from your Order of Battle has reached the Heroic rank.\nYou have won at least six battles"
+      },
+      "Crusade Badge§Subjugating Tomb": {
+        "text": "You have used a Master System ability ten or more times.\nAt least one CHARACTER from your Order of Battle has reached the Legendary rank.\nYou have won at least ten battles."
+      },
       "Crusade Relic§Casket of Heshkefnet": {
         "keywords": {
           "Tags": [
@@ -14547,9 +14557,6 @@
         }
       },
       "Requisition§Cunning Advisors": {
-        "keywords": {
-          "Tags": []
-        },
         "stats": {
           "RP": {
             "value": 1
@@ -14558,9 +14565,6 @@
         "text": "Purchase this Requisition immediately after a battle in which a CRYPTEK unit from your Crusade army destroyed one or more enemy units and your Crusade army contained one or more NOBLE units. You can select that CRYPTEK unit to be Marked for Greatness in addition to any other unit that was Marked for Greatness as a result of that battle."
       },
       "Requisition§Power Reserves Reallocated": {
-        "keywords": {
-          "Tags": []
-        },
         "stats": {
           "RP": {
             "value": 1
@@ -14569,100 +14573,6 @@
         "text": "Purchase this Requisition before a battle. For that battle, you can choose an Awakening Agenda even if you do not have any Awakening points unallocated. If you complete that Awakening Agenda, after the battle, you can remove the Awakening point from a System bonus and reallocate it using that Agenda."
       },
       "Requisition§The Slow Decay of the Self": {
-        "keywords": {
-          "Tags": []
-        },
-        "rules": {
-          "Abilities": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits"
-                  ]
-                ],
-                "value": "Ability§Lone Operative"
-              },
-              {
-                "actionType": "remove",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits"
-                  ]
-                ],
-                "value": "Ability§Leader"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "traits"
-                  ]
-                ],
-                "value": "Ability§Destroyer Madness"
-              },
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Destroyer Cult"
-              }
-            ],
-            "evals": [],
-            "evaluate": "AND",
-            "failState": "pass"
-          },
-          "CannotAttach": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "{parent}",
-                    "disallowed",
-                    "items"
-                  ]
-                ],
-                "value": [
-                  "{parent}",
-                  "item"
-                ]
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "not": false,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "{parent}",
-                    "classIdentity"
-                  ]
-                ],
-                "value": "Unit"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
         "stats": {
           "RP": {
             "value": 1
@@ -14671,9 +14581,6 @@
         "text": "Purchase this Requisition when a NOBLE model would gain a third Battle Scar. Instead of gaining a third Battle Scar, that unit instead gains the DESTROYER CULT keyword and loses all of its Battle Scars. Additionally, it loses the Leader ability, it gains the Lone Operative ability and it also gains the following ability:\n\n***Destroyer Madness***: Each time this model makes an attack, you can re-roll the Hit roll."
       },
       "Requisition§Viral Vectors": {
-        "keywords": {
-          "Tags": []
-        },
         "stats": {
           "RP": {
             "value": 1

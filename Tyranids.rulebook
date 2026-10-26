@@ -1,6 +1,6 @@
 {
   "name": "Tyranids 11e",
-  "revision": "11.2.2",
+  "revision": "11.2.3",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -150,7 +150,10 @@
           "items": [
             "Requisition§Respawn Warrior Organisms",
             "Requisition§Synaptic Bioregenesis",
-            "Requisition§Adapted Physiology"
+            "Requisition§Adapted Physiology",
+            "Crusade Badge§Vanguard Tendril",
+            "Crusade Badge§Monstrous Tendril",
+            "Crusade Badge§All-consuming Tendril"
           ]
         },
         "constraints": {
@@ -3404,9 +3407,15 @@
           }
         }
       },
-      "Crusade Badge§All-consuming Tendril": {},
-      "Crusade Badge§Monstrous Tendril": {},
-      "Crusade Badge§Vanguard Tendril": {},
+      "Crusade Badge§All-consuming Tendril": {
+        "text": "You have successfully devoured five worlds, including at least one of each type.\nYou have won at least ten battles.\nA CHARACTER from your Crusade force has reached the Legendary rank.\nA CHARACTER from your Crusade force possesses The Norn Crown Crusade Relic."
+      },
+      "Crusade Badge§Monstrous Tendril": {
+        "text": "You have successfully devoured three different types of world.\nYou have won at least six battles."
+      },
+      "Crusade Badge§Vanguard Tendril": {
+        "text": "You have successfully devoured one world.\nYou have won at least two battles."
+      },
       "Crusade Relic§Balemind Membrane": {
         "keywords": {
           "Tags": [

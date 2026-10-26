@@ -1,6 +1,6 @@
 {
   "name": "T'au Empire 11e",
-  "revision": "11.2.6",
+  "revision": "11.2.7",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -30,33 +30,33 @@
           "Agenda 1": {
             "ranks": {
               "Secret Meeting": {
-                "order": 12,
+                "order": 100,
                 "tracking": {
-                  "T’au Agenda": 1
+                  "T’au Empire Agenda": 1
                 }
               },
               "Protect the Leadership": {
-                "order": 13,
+                "order": 101,
                 "tracking": {
-                  "T’au Agenda": 1
+                  "T’au Empire Agenda": 1
                 }
               },
               "Hit Their Supply Lines": {
-                "order": 14,
+                "order": 102,
                 "tracking": {
-                  "T’au Agenda": 1
-                }
-              },
-              "Outflank and Encricle": {
-                "order": 15,
-                "tracking": {
-                  "T’au Agenda": 1
+                  "T’au Empire Agenda": 1
                 }
               },
               "Teachings of War": {
-                "order": 16,
+                "order": 104,
                 "tracking": {
-                  "T’au Agenda": 1
+                  "T’au Empire Agenda": 1
+                }
+              },
+              "Outflank and Encircle": {
+                "order": 103,
+                "tracking": {
+                  "T’au Empire Agenda": 1
                 }
               }
             }
@@ -64,33 +64,33 @@
           "Agenda 2": {
             "ranks": {
               "Secret Meeting": {
-                "order": 12,
+                "order": 100,
                 "tracking": {
-                  "T’au Agenda": 1
+                  "T’au Empire Agenda": 1
                 }
               },
               "Protect the Leadership": {
-                "order": 13,
+                "order": 101,
                 "tracking": {
-                  "T’au Agenda": 1
+                  "T’au Empire Agenda": 1
                 }
               },
               "Hit Their Supply Lines": {
-                "order": 14,
+                "order": 102,
                 "tracking": {
-                  "T’au Agenda": 1
-                }
-              },
-              "Outflank and Encricle": {
-                "order": 15,
-                "tracking": {
-                  "T’au Agenda": 1
+                  "T’au Empire Agenda": 1
                 }
               },
               "Teachings of War": {
-                "order": 16,
+                "order": 104,
                 "tracking": {
-                  "T’au Agenda": 1
+                  "T’au Empire Agenda": 1
+                }
+              },
+              "Outflank and Encircle": {
+                "order": 103,
+                "tracking": {
+                  "T’au Empire Agenda": 1
                 }
               }
             }
@@ -103,7 +103,12 @@
             "Requisition§Show of Force",
             "Requisition§Totemic Infusions",
             "Requisition§The Hero’s Mantle",
-            "Requisition§Prototype System"
+            "Requisition§Prototype System",
+            "Requisition§The Hero's Mantle",
+            "Crusade Badge§Devotee of the T’au’va",
+            "Crusade Badge§Champion of the T’au’va",
+            "Crusade Badge§Hero of the T’au’va",
+            "Requisition§Set Up Supply Lines"
           ]
         }
       },
@@ -202,7 +207,301 @@
             "evaluate": "AND",
             "failState": "pass"
           },
-          "allowTauTraits": {
+          "crusadeTagBattlesuit": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Battlesuit"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battlesuit",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Battlesuit keyword may take the honours tagged Battlesuit"
+          },
+          "crusadeTagEthereal": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Ethereal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Ethereal",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Ethereal keyword may take the honours tagged Ethereal"
+          },
+          "crusadeTagPathfinderTeam": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Pathfinder Team"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Pathfinder Team",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Pathfinder Team keyword may take the honours tagged Pathfinder Team"
+          },
+          "crusadeTagStrikeTeam": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Strike Team"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Strike Team",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Strike Team keyword may take the honours tagged Strike Team"
+          },
+          "crusadeTagBreacherTeam": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Breacher Team"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Breacher Team",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Breacher Team keyword may take the honours tagged Breacher Team"
+          },
+          "crusadeTagKroot": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Kroot"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Kroot",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Kroot keyword may take the honours tagged Kroot"
+          },
+          "allowKrootStrain": {
             "actions": [
               {
                 "actionType": "add",
@@ -214,12 +513,918 @@
                     "classifications"
                   ]
                 ],
-                "value": "Battle Trait"
+                "value": "Kroot Strain"
               }
             ],
-            "evals": [],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Kroot",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Strains: a KROOT unit may take a Strain instead of another Battle Trait"
+          }
+        }
+      },
+      "Character": {
+        "rules": {
+          "crusadeTagBattlesuit": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Battlesuit"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Battlesuit",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Battlesuit keyword may take the honours tagged Battlesuit"
+          },
+          "crusadeTagEthereal": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Ethereal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Ethereal",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Ethereal keyword may take the honours tagged Ethereal"
+          },
+          "crusadeTagPathfinderTeam": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Pathfinder Team"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Pathfinder Team",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Pathfinder Team keyword may take the honours tagged Pathfinder Team"
+          },
+          "crusadeTagStrikeTeam": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Strike Team"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Strike Team",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Strike Team keyword may take the honours tagged Strike Team"
+          },
+          "crusadeTagBreacherTeam": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Breacher Team"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Breacher Team",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Breacher Team keyword may take the honours tagged Breacher Team"
+          },
+          "crusadeTagKroot": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Kroot"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Kroot",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Kroot keyword may take the honours tagged Kroot"
+          },
+          "allowKrootStrain": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Kroot Strain"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Kroot",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Strains: a KROOT unit may take a Strain instead of another Battle Trait"
+          }
+        }
+      },
+      "Kroot Strain": {
+        "aspects": {
+          "Lock Qty": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Planet": {
+        "aspects": {
+          "Rename": true,
+          "Visibility": "always"
+        },
+        "stats": {
+          "Type": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Shrine World": {
+                "order": 1
+              },
+              "Civilian World": {
+                "order": 2
+              },
+              "Mining World": {
+                "order": 3
+              },
+              "Military Base": {
+                "order": 4
+              },
+              "Fleet Installation": {
+                "order": 5
+              },
+              "Agri World": {
+                "order": 6
+              },
+              "Political Centre": {
+                "order": 7
+              },
+              "Traders’ Hub": {
+                "order": 8
+              },
+              "Research World": {
+                "order": 9
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 1
+          },
+          "Diplomat Power": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 12,
+            "statOrder": 2
+          },
+          "Military Power": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 12,
+            "statOrder": 3
+          },
+          "Core World": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 4
+          },
+          "Taken": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Diplomatic takeover": {
+                "order": 1
+              },
+              "Military takeover": {
+                "order": 2
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 5
+          },
+          "Razed": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "label": "Razed (no Supply Line)",
+            "statOrder": 6
+          }
+        },
+        "rules": {
+          "type0": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Planet: Shrine World"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Type",
+                    "value"
+                  ]
+                ],
+                "value": "Shrine World"
+              }
+            ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "type1": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Planet: Civilian World"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Type",
+                    "value"
+                  ]
+                ],
+                "value": "Civilian World"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "type2": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Planet: Mining World"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Type",
+                    "value"
+                  ]
+                ],
+                "value": "Mining World"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "type3": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Planet: Military Base"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Type",
+                    "value"
+                  ]
+                ],
+                "value": "Military Base"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "type4": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Planet: Fleet Installation"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Type",
+                    "value"
+                  ]
+                ],
+                "value": "Fleet Installation"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "type5": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Planet: Agri World"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Type",
+                    "value"
+                  ]
+                ],
+                "value": "Agri World"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "type6": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Planet: Political Centre"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Type",
+                    "value"
+                  ]
+                ],
+                "value": "Political Centre"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "type7": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Planet: Traders’ Hub"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Type",
+                    "value"
+                  ]
+                ],
+                "value": "Traders’ Hub"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "type8": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Planet: Research World"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Type",
+                    "value"
+                  ]
+                ],
+                "value": "Research World"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        },
+        "templateClass": ""
+      },
+      "Star System": {
+        "allowed": {
+          "classifications": [
+            "Planet"
+          ],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always",
+          "Group Includes": true
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Temperament": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Warlike": {
+                "order": 1
+              },
+              "Prideful": {
+                "order": 2
+              },
+              "Ideologues": {
+                "order": 3
+              },
+              "Trade Contacts": {
+                "order": 4
+              },
+              "Corrupt and Decadent": {
+                "order": 5
+              },
+              "Dictatorship": {
+                "order": 6
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "label": "Inhabitants’ Temperament",
+            "statOrder": 1
+          },
+          "Planets": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "4": {
+                "order": 1
+              },
+              "6": {
+                "order": 2
+              },
+              "8": {
+                "order": 3
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "label": "Planets in the system",
+            "statOrder": 2
+          },
+          "Diplomat Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 99,
+            "statOrder": 3
+          },
+          "Military Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 99,
+            "statOrder": 4
           }
         }
       }
@@ -922,31 +2127,24 @@
       },
       "Battle Trait§Electrochaff Backups": {
         "keywords": {
-          "Keywords": [],
           "Tags": [
-            "Vehicle"
+            "Battlesuit"
           ]
         },
         "text": "Each time a ranged attack targets this unit, unless the attacking model is within 18\", subtract 1 from the Hit roll."
       },
       "Battle Trait§Esteemed Leader": {
         "keywords": {
-          "Keywords": [
-            "Ethereal"
-          ],
           "Tags": [
-            "Character"
+            "Ethereal"
           ]
         },
         "text": "When rolling for this model’s Coordinated Leadership ability, add 1 to the result."
       },
       "Battle Trait§Heralds of the T'au'va": {
         "keywords": {
-          "Keywords": [
-            "Ethereal"
-          ],
           "Tags": [
-            "Character"
+            "Ethereal"
           ]
         },
         "text": "At the end of the battle, if this model was part of your Crusade army and was not destroyed during the battle, you can ignore one failed Out of Action test taken for a T’AU EMPIRE unit; that test is treated as having been passed instead."
@@ -964,72 +2162,54 @@
       },
       "Battle Trait§Leaping Flame": {
         "keywords": {
-          "Keywords": [
-            "Battlesuit"
-          ],
           "Tags": [
-            "Vehicle"
+            "Battlesuit"
           ]
         },
         "text": "Each time this unit Advances, until the start of your next Movement phase, this unit has the Stealth ability."
       },
       "Battle Trait§Merciless Marksmen": {
         "keywords": {
-          "Keywords": [
-            "Breacher Team",
-            "Pathfinder Team",
-            "Strike Team"
-          ],
           "Tags": [
-            "Infantry"
+            "Pathfinder Team",
+            "Strike Team",
+            "Breacher Team"
           ]
         },
         "text": "Ranged weapons equipped by models in this unit (excluding support turrets) have the [LETHAL HITS] ability."
       },
       "Battle Trait§Practised Aim": {
         "keywords": {
-          "Keywords": [
-            "Breacher Team",
-            "Pathfinder Team",
-            "Strike Team"
-          ],
           "Tags": [
-            "Infantry"
+            "Pathfinder Team",
+            "Strike Team",
+            "Breacher Team"
           ]
         },
         "text": "Add 1 to the Ballistic Skill characteristic of ranged weapons equipped by models in this unit."
       },
       "Battle Trait§Prey Slayers": {
         "keywords": {
-          "Keywords": [
-            "Kroot"
-          ],
           "Tags": [
-            "Infantry"
+            "Kroot"
           ]
         },
         "text": "At the start of the battle, select one unit from your opponent’s army. Until the end of the battle, each time this KROOT unit makes an attack that targets that enemy unit, you can re-roll the Hit roll."
       },
       "Battle Trait§Quick Shots": {
         "keywords": {
-          "Keywords": [
-            "Breacher Team",
-            "Pathfinder Team",
-            "Strike Team"
-          ],
           "Tags": [
-            "Infantry"
+            "Pathfinder Team",
+            "Strike Team",
+            "Breacher Team"
           ]
         },
         "text": "Once per battle round, you can target this unit with the Fire Overwatch Stratagem for 0CP."
       },
       "Battle Trait§Reactive Thrust System": {
         "keywords": {
-          "Keywords": [
-            "Battlesuit"
-          ],
           "Tags": [
-            "Vehicle"
+            "Battlesuit"
           ]
         },
         "text": "Once per battle, you can target this unit with the Heroic Intervention Stratagem for 0CP."
@@ -1047,44 +2227,32 @@
       },
       "Battle Trait§Takers of Heads": {
         "keywords": {
-          "Keywords": [
-            "Kroot"
-          ],
           "Tags": [
-            "Infantry"
+            "Kroot"
           ]
         },
         "text": "Each time this unit makes an attack that targets a CHARACTER unit, add 1 to the Hit roll."
       },
       "Battle Trait§Technological Trophies": {
         "keywords": {
-          "Keywords": [
-            "Kroot"
-          ],
           "Tags": [
-            "Infantry"
+            "Kroot"
           ]
         },
         "text": "Each time this unit declares a charge, if you select a MONSTER or VEHICLE unit as a target of that charge, until the end of the turn, melee weapons equipped by models in this unit have the [LANCE] ability."
       },
       "Battle Trait§The Healer's Hands": {
         "keywords": {
-          "Keywords": [
-            "Ethereal"
-          ],
           "Tags": [
-            "Character"
+            "Ethereal"
           ]
         },
         "text": "At the end of the battle, if this model was part of your Crusade army and was not destroyed during the battle, you can ignore one failed Out of Action test taken for a T’AU EMPIRE unit; that test is treated as having been passed instead."
       },
       "Battle Trait§Warden Drones": {
         "keywords": {
-          "Keywords": [
-            "Battlesuit"
-          ],
           "Tags": [
-            "Vehicle"
+            "Battlesuit"
           ]
         },
         "text": "Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0."
@@ -4352,43 +5520,12 @@
         "text": "You have taken over twenty or more planets.\nYou have won ten or more battles.\nAt least one CHARACTER unit from your Order of Battle has reached the Legendary rank."
       },
       "Crusade Relic§Seismic Destabiliser": {
-        "rules": {
-          "notAllowed": {
-            "actions": [
-              {
-                "actionType": "add",
-                "iterations": 1,
-                "paths": [
-                  [
-                    "{parent}",
-                    "disallowed",
-                    "items"
-                  ]
-                ],
-                "value": "Crusade Relic§Seismic Destabiliser"
-              }
-            ],
-            "evals": [
-              {
-                "actionable": true,
-                "contains": true,
-                "not": true,
-                "operator": "AND",
-                "paths": [
-                  [
-                    "{parent}",
-                    "keywords",
-                    "Keywords"
-                  ]
-                ],
-                "value": "Character"
-              }
-            ],
-            "evaluate": "AND",
-            "failState": "pass"
-          }
-        },
-        "text": "At the start of your Shooting phase, select one enemy unit within 12\" of the bearer that is not fully visible to the bearer due to intervening terrain or because it is within a terrain feature. Roll one D6, adding 2 to the result if the unit is on or within a ruins terrain feature: on a 3-5, that unit suffers D3 mortal wounds; on a 6+, that unit suffers 3 mortal wounds."
+        "text": "At the start of your Shooting phase, select one enemy unit within 12\" of the bearer that is not fully visible to the bearer due to intervening terrain or because it is within a terrain feature. Roll one D6, adding 2 to the result if the unit is on or within a ruins terrain feature: on a 3-5, that unit suffers D3 mortal wounds; on a 6+, that unit suffers 3 mortal wounds.",
+        "keywords": {
+          "Tags": [
+            "Artificer Relic"
+          ]
+        }
       },
       "Detachment§Advanced Acquisition Cadre": {
         "keywords": {
@@ -19764,6 +20901,43 @@
             "dynamic": false,
             "value": "Xenos"
           }
+        },
+        "rules": {
+          "useCrusadeTau_Empire": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Star System§Star System"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
+          }
         }
       },
       "Stratagem§A Tempting Trap": {
@@ -29709,71 +30883,94 @@
           }
         }
       },
-      "Crusade Honour§Blade-sharp Senses": {
+      "Kroot Strain§Blade-sharp Senses": {
         "keywords": {
-          "Keywords": [
-            "Strains"
-          ],
           "Tags": [
-            "T’au Empire"
+            "Kroot"
           ]
         },
         "text": "If this unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is."
       },
-      "Crusade Honour§Great Endurance": {
+      "Kroot Strain§Great Endurance": {
         "keywords": {
-          "Keywords": [
-            "Strains"
-          ],
           "Tags": [
-            "T’au Empire"
+            "Kroot"
           ]
         },
         "text": "Add 2\" to the Move characteristic of models in this unit."
       },
-      "Crusade Honour§Predatory Swiftness": {
+      "Kroot Strain§Predatory Swiftness": {
         "keywords": {
-          "Keywords": [
-            "Strains"
-          ],
           "Tags": [
-            "T’au Empire"
+            "Kroot"
           ]
         },
         "text": "You can re-roll Advance and Charge rolls made for this unit."
       },
-      "Crusade Honour§Leathery Resilience": {
+      "Kroot Strain§Leathery Resilience": {
         "keywords": {
-          "Keywords": [
-            "Strains"
-          ],
           "Tags": [
-            "T’au Empire"
+            "Kroot"
           ]
         },
         "text": "Add 1 to the Toughness characteristic of models in this unit."
       },
-      "Crusade Honour§Lethal Instincts": {
+      "Kroot Strain§Lethal Instincts": {
         "keywords": {
-          "Keywords": [
-            "Strains"
-          ],
           "Tags": [
-            "T’au Empire"
+            "Kroot"
           ]
         },
         "text": "Each time a model in this unit makes an attack that targets a unit below Starting Strength, you can re-roll the Hit roll."
       },
-      "Crusade Honour§Corded Muscle": {
+      "Kroot Strain§Corded Muscle": {
         "keywords": {
-          "Keywords": [
-            "Strains"
-          ],
           "Tags": [
-            "T’au Empire"
+            "Kroot"
           ]
         },
         "text": "Add 1 to the Attacks and Strength characteristics of melee weapons equipped by models in this unit."
+      },
+      "Ability§Planet: Shrine World": {
+        "text": "Diplomat Power 5, Military Power 2. Assimilation: Shaken Faith — select up to three planets; −1 Diplomat Power each (min 1). Stir the Flames — +1 Military Power to all planets. Supply Line: Collapse of Faith — while assimilating your next star system, each diplomatic takeover gains you 1RP."
+      },
+      "Ability§Planet: Civilian World": {
+        "text": "Diplomat Power 3, Military Power 2. Assimilation: Threat of Invasion — +1 Military Power to other Civilian Worlds. Recruitment Down — −1 Military Power to Fleet Installations and Military Bases (min 1). Supply Line: A Mingling of Cultures — up to three Battle-ready or Blooded units gain 5XP each."
+      },
+      "Ability§Planet: Mining World": {
+        "text": "Diplomat Power 3, Military Power 4. Assimilation: Harvest Resources — gain D3RP. Starve the War Machines — select up to two planets; −1 Military Power each (min 1). Supply Line: Spoils of War — gain D3+1RP."
+      },
+      "Ability§Planet: Military Base": {
+        "text": "Diplomat Power 4, Military Power 6. Assimilation: Force to the Table — −1 Diplomat Power to each other planet (min 1). Military Supplies — use Fresh Recruits once for free. Supply Line: Repurposed Infrastructure — Supply Limit +400 points."
+      },
+      "Ability§Planet: Fleet Installation": {
+        "text": "Diplomat Power 4, Military Power 6. Assimilation: Invasion Plans — halve one planet's Military Power (rounding up). Orbital Dominance — use Rearm and Resupply once for free. Supply Line: Fleet Intel — −1 Military Power to all planets of your next star system (min 1)."
+      },
+      "Ability§Planet: Agri World": {
+        "text": "Diplomat Power 2, Military Power 2. Assimilation: Empty Bellies — −1 Diplomat Power to up to one Civilian World and one Military Base or Fleet Installation (min 1). Full Stomachs — Repair and Recuperate once for up to 2RP less. Supply Line: Rest and Recuperation — remove one Battle Scar from each of up to two units."
+      },
+      "Ability§Planet: Political Centre": {
+        "text": "Diplomat Power 6, Military Power 3. Assimilation: Sell-outs — halve one planet's Diplomat Power (rounding up). Belief in the Cause — use Renowned Heroes once for free. Supply Line: Diplomatic Contacts — −1 Diplomat Power to all planets of your next star system (min 1)."
+      },
+      "Ability§Planet: Traders’ Hub": {
+        "text": "Diplomat Power 4, Military Power 4. Assimilation: Indirect Influence — swap one planet's Diplomat and Military Power. Supply Line: Trade Networks — after generating your next star system, gain 2D3 Diplomat points and D3 Military points."
+      },
+      "Ability§Planet: Research World": {
+        "text": "Diplomat Power 4, Military Power 3. Assimilation: Review Research — gain 2D3RP. Supply Line: Scientific Integration — use Renowned Heroes and Prototype System once each for free."
+      },
+      "Planet§Planet": {
+        "text": "Set the Type (D6 1–4: Common table — Mining, Civilian, Military Base, Agri, Traders’ Hub, Shrine; 5–6: High-value table — Research World, Fleet Installation, Political Centre), then copy the Type's Diplomat and Military Power and apply the system's temperament. The first planet generated is the Core World and cannot be taken until all others are. Each time you win a battle you may take over one planet: diplomatic takeover spends Diplomat points equal to its Diplomat Power, military takeover spends Military points equal to its Military Power (then roll a D6: on 1–3 the planet is razed and cannot supply a Supply Line). Apply the planet's Assimilation Abilities when it is taken."
+      },
+      "Star System§Star System": {
+        "text": "**Expanding the Empire.** Your Crusade force assimilates one star system at a time. Generate it in three steps: the inhabitants' temperament (D6: 1 Warlike +1 Military Power to all planets; 2 Prideful — no Show of Force Requisition; 3 Ideologues +1 Diplomat Power to all planets; 4 Trade Contacts — halve one planet's Diplomat Power; 5 Corrupt and Decadent +2 Diplomat Power to the Core World; 6 Dictatorship +2 Military Power to the Core World), the number of planets (4, 6 or 8) and each planet's Type (add Planets below). Diplomat and Military points reset to 0 with each new system; each battle won gives 1 Military point, Agendas give both. After the Core World falls, buy Set Up Supply Lines (1RP for the Core World, 2RP otherwise) to take one planet's Supply Line Effect, then generate a new system."
+      },
+      "Requisition§Set Up Supply Lines": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Cost: 1RP for a Core World, 2RP for any other planet. Purchase this Requisition after your Crusade force takes over the Core World in your active star system. Select one of the planets in your active star system to incorporate into your supply lines; the Supply Line Effect of that planet takes effect. After purchasing this Requisition, generate a new active star system for your Crusade force."
       }
     },
     "gameModes": {},

@@ -1,6 +1,6 @@
 {
   "name": "Genestealer Cults 11e",
-  "revision": "11.2.7",
+  "revision": "11.2.10",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -174,6 +174,41 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "allowCultHonour": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Cult Honour"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Genestealer Cults Crusade honours: Tactical Strategist (Shrewd Strategy) and Beloved of the Cult"
           }
         }
       },
@@ -409,6 +444,19 @@
               "Tyranids"
             ]
           }
+        },
+        "allowed": {
+          "items": [
+            "Requisition§Blessed Leader",
+            "Requisition§Proficient Planning",
+            "Requisition§Beloved of the Cult",
+            "Requisition§Flawless Incursion",
+            "Requisition§The Cult Grows",
+            "Requisition§Purestrain",
+            "Crusade Badge§Uprising Hero",
+            "Crusade Badge§Propagator of Liberation",
+            "Crusade Badge§Saint of Ascension"
+          ]
         }
       },
       "Unit": {
@@ -608,6 +656,811 @@
             "evaluate": "AND",
             "failState": "pass",
             "note": "Crusade: units with this keyword may take the Battle Honours tagged with it"
+          },
+          "allowCultHonour": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "allowed",
+                    "classifications"
+                  ]
+                ],
+                "value": "Cult Honour"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Genestealer Cults Crusade honours: Tactical Strategist (Shrewd Strategy) and Beloved of the Cult"
+          }
+        }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Genestealer’s Kiss": {
+                "order": 100,
+                "tracking": {
+                  "Genestealer Cults Agenda": 1
+                }
+              },
+              "Silence Detractor": {
+                "order": 101,
+                "tracking": {
+                  "Genestealer Cults Agenda": 1
+                }
+              },
+              "Telepathic Domination": {
+                "order": 102,
+                "tracking": {
+                  "Genestealer Cults Agenda": 1
+                }
+              },
+              "Prepared for the Ordeal": {
+                "order": 103,
+                "tracking": {
+                  "Genestealer Cults Agenda": 1
+                }
+              },
+              "Topple the False Temple": {
+                "order": 104,
+                "tracking": {
+                  "Genestealer Cults Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Genestealer’s Kiss": {
+                "order": 100,
+                "tracking": {
+                  "Genestealer Cults Agenda": 1
+                }
+              },
+              "Silence Detractor": {
+                "order": 101,
+                "tracking": {
+                  "Genestealer Cults Agenda": 1
+                }
+              },
+              "Telepathic Domination": {
+                "order": 102,
+                "tracking": {
+                  "Genestealer Cults Agenda": 1
+                }
+              },
+              "Prepared for the Ordeal": {
+                "order": 103,
+                "tracking": {
+                  "Genestealer Cults Agenda": 1
+                }
+              },
+              "Topple the False Temple": {
+                "order": 104,
+                "tracking": {
+                  "Genestealer Cults Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Cult Honour": {
+        "aspects": {
+          "Lock Qty": true,
+          "Unique": true
+        },
+        "keywords": {
+          "Tags": [],
+          "Keywords": []
+        },
+        "templateClass": "Battle Honour"
+      },
+      "Institution": {
+        "aspects": {
+          "Visibility": "always"
+        },
+        "templateClass": "",
+        "stats": {
+          "Institution": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Industry": {
+                "order": 1
+              },
+              "Military": {
+                "order": 2
+              },
+              "Community": {
+                "order": 3
+              },
+              "Politics": {
+                "order": 4
+              },
+              "Religion": {
+                "order": 5
+              },
+              "Resources": {
+                "order": 6
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 1
+          },
+          "State": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Infiltrated": {
+                "order": 1
+              },
+              "Target": {
+                "order": 2
+              },
+              "Controlled": {
+                "order": 3
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 2
+          }
+        }
+      },
+      "Path of Ascension": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "World": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Hive World": {
+                "order": 1
+              },
+              "Forge World": {
+                "order": 2
+              },
+              "Cardinal World": {
+                "order": 3
+              },
+              "Fortress World": {
+                "order": 4
+              },
+              "Agri/Mining World": {
+                "order": 5
+              },
+              "Frontier/Feudal World": {
+                "order": 6
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "label": "World classification",
+            "statOrder": 1
+          },
+          "Ascension Points": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 3,
+            "statOrder": 2
+          },
+          "Control": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 4,
+            "label": "Control count",
+            "statOrder": 3
+          },
+          "Propagation": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 5,
+            "label": "Propagation count",
+            "statOrder": 4
+          },
+          "Prepared for the Ordeal": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 5
+          },
+          "Silenced a Detractor": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 6
+          },
+          "Influence": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 7
+          },
+          "Great Ordeal": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "label": "Great Ordeal triggered",
+            "statOrder": 8
+          },
+          "Crusade Pts": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          },
+          "Reward: Hive World": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Ascension Rewards",
+            "groupOrder": 2,
+            "statOrder": 10
+          },
+          "Reward: Forge World": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Ascension Rewards",
+            "groupOrder": 2,
+            "statOrder": 11
+          },
+          "Reward: Cardinal World": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Ascension Rewards",
+            "groupOrder": 2,
+            "statOrder": 12
+          },
+          "Reward: Fortress World": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Ascension Rewards",
+            "groupOrder": 2,
+            "statOrder": 13
+          },
+          "Reward: Agri/Mining World": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Ascension Rewards",
+            "groupOrder": 2,
+            "statOrder": 14
+          },
+          "Reward: Frontier/Feudal World": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Ascension Rewards",
+            "groupOrder": 2,
+            "statOrder": 15
+          }
+        },
+        "rules": {
+          "world0": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§World: Hive World"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "World",
+                    "value"
+                  ]
+                ],
+                "value": "Hive World"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "world1": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§World: Forge World"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "World",
+                    "value"
+                  ]
+                ],
+                "value": "Forge World"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "world2": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§World: Cardinal World"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "World",
+                    "value"
+                  ]
+                ],
+                "value": "Cardinal World"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "world3": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§World: Fortress World"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "World",
+                    "value"
+                  ]
+                ],
+                "value": "Fortress World"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "world4": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§World: Agri/Mining World"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "World",
+                    "value"
+                  ]
+                ],
+                "value": "Agri/Mining World"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "world5": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§World: Frontier/Feudal World"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "World",
+                    "value"
+                  ]
+                ],
+                "value": "Frontier/Feudal World"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "rewardsCrusadePts": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Reward: Hive World",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Reward: Forge World",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Reward: Cardinal World",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Reward: Fortress World",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Reward: Agri/Mining World",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Reward: Frontier/Feudal World",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "each Ascension reward adds 1 Crusade point when determining Crusade Blessings"
+          },
+          "glorious": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": " — GLORIOUS ASCENSION",
+                "append": ""
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Control",
+                    "value"
+                  ]
+                ],
+                "min": 4
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "seed": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": " — SEED THE STARS",
+                "append": ""
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Propagation",
+                    "value"
+                  ]
+                ],
+                "min": 5
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
           }
         }
       }
@@ -8752,6 +9605,79 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "useCrusadeGenestealer_Cults": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Path of Ascension§Path of Ascension"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
+          },
+          "Only one Tactical Strategist in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Tactical Strategist"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          },
+          "Only one Beloved of the Cult in your Crusade force.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tally",
+                    "Beloved of the Cult"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
           }
         },
         "stats": {
@@ -12996,32 +13922,143 @@
         },
         "text": "In your Charge phase, if this model's unit is eligible to declare a charge and is within 7\" of one or more enemy units, you must declare a charge with this model's unit."
       },
-      "Crusade Honour§Tactical Strategist": {
-        "keywords": {
-          "Keywords": [
-            "Shrewd Strategy"
-          ],
-          "Tags": [
-            "Genestealer Cults"
-          ]
+      "Requisition§Blessed Leader": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
         },
-        "text": "During the Select Crusade Blessings step, you can spend your Planning points to purchase one or more Shrewd Strategy abilities. All Planning points unspent at the end of this step are lost. Each time you purchase one of these abilities, select one **^^Genestealer Cults^^** unit in your Crusade army; until the end of the battle, that unit has that ability and the first time it is set up on the battlefield, place the relevant Shrewd Strategy ability token next to it to remind you (and your opponent) that you have upgraded that unit that battle. You can purchase the same Shrewd Strategy ability multiple times, but each unit cannot have more than one Shrewd Strategy ability per battle. Note that if a unit with a Shrewd Strategy ability is destroyed during the battle and a new identical unit is added to your Crusade army as a result of the Cult Ambush ability, that unit does not have the Shrewd Strategy abilities that the original unit had.",
+        "text": "Purchase this Requisition when you add a GENESTEALER CULTS CHARACTER unit (excluding PATRIARCH units) that your Crusade force does not already include to your Order of Battle. If your Crusade force includes a PATRIARCH unit of at least Battle-hardened rank, that CHARACTER unit added to your Order of Battle gains 6XP (and therefore gains the Blooded rank); select one Battle Honour for it as normal."
+      },
+      "Requisition§Proficient Planning": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition before a Crusade battle. During that battle, you can use one of the following abilities once:\n\nLying in Wait: Use this ability when you set up an INFANTRY unit, other than during the Deploy Armies step. When you do, you can set that unit up anywhere on the battlefield that is more than 3\" horizontally away from all enemy units. Until the end of the turn, that unit is not eligible to declare a charge.\n\nA Trap Sprung: Use this ability when you set up a unit, other than during the Deploy Armies step. When you do, until the end of the turn, when you make a Charge roll for that unit, roll one additional dice, then discard one of the dice.\n\nPerfect Ambush: Use this ability when you set up a unit, other than during the Deploy Armies step. When you do, select one enemy unit within 12\" of and visible to that unit. Until the end of the turn, the unit you selected cannot have the Benefit of Cover."
+      },
+      "Requisition§Beloved of the Cult": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition either before or after a Crusade battle. Select one GENESTEALER CULTS unit from your Crusade army with the Heroic rank or higher. That unit is upgraded to be beloved of the cult (make a note of on its Crusade card); add 1 to that units Crusade points.\n\nEach time a unit that is beloved of the cult gains 1 or more XP in a Crusade battle and survives that battle, after that battle, roll one D6 for each other unit from your Crusade army that survived that battle: on a 6, the unit you rolled for gains 1XP.\n\nOnly one unit from your Crusade army can be beloved of the cult at the same time; each time you use this Requisition, first remove that upgrade from any other unit from your army that has it, and subtract 1 from that previously upgraded unit’s Crusade points."
+      },
+      "Requisition§Flawless Incursion": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after a Crusade battle, if your Crusade force is on a Path of Ascension. If all of the following apply, you gain 1 Ascension point:\n\nYou won that battle.\n\nEvery Agenda you selected for that battle was a Genestealer Cults Agenda.\n\nGENESTEALER CULTS units from your Crusade army earned XP from each of those Agendas.\n\nYou can only use this Requisition once after each Crusade battle."
+      },
+      "Requisition§The Cult Grows": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition after a Crusade battle, if your Crusade force is on a Path of Ascension. You can do one of the following (choose before making either roll):\n\nAdd 1 to your next Propagation roll.\n\nAdd 1 to your next Setback roll.\n\nYou can only use this Requisition once after each Crusade battle."
+      },
+      "Requisition§Purestrain": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition when your Control count increases to 3 for the first time, if your Crusade force is on a Path of Ascension. Add one PURESTRAIN GENESTEALERS unit to your Order of Battle. That unit gains 6XP (and therefore gains the Blooded rank); select one Battle Honour for it as normal.\n\nYou cannot purchase this Requisition if doing so would cause your total Power Level to exceed your Crusade forces Supply Limit."
+      },
+      "Crusade Badge§Uprising Hero": {
+        "text": "You have successfully completed one Path of Ascension.\nYou have won at least two battles"
+      },
+      "Crusade Badge§Propagator of Liberation": {
+        "text": "You are the architect of Ascension. The oppressors of one world after another have fallen to your masterful strategies and labyrinthine ploys. More than that, you have seeded the cult’s creed and the Patriarch’s progeny into the heavenly domains and wrested spaceports, ships and crews from the faithless to take the Star Childrens blessings still further. Now is not the moment to rest, for the divine labour cannot be laid down until the chains wielded by every tyrannical overlord lie broken with them.\nYou have successfully completed three Paths of Ascension.\nYou have won at least one Glorious Ascension victory.\nYou have won at least six battles"
+      },
+      "Crusade Badge§Saint of Ascension": {
+        "text": "You have successfully completed five Paths of Ascension, on at least three different classifications of world.\nYou have won at least one Seed the Stars victory, one Glorious Ascension victory and one Great Ordeal victory.\nYou have won at least 10 battles.\nA CHARACTER from your Crusade force has reached Legendary rank."
+      },
+      "Cult Honour§Tactical Strategist": {
+        "keywords": {
+          "Tags": []
+        },
+        "text": "Shrewd Strategy: your Crusade force gains 6 Planning points each battle to buy Shrewd Strategy abilities for GENESTEALER CULTS units (Crossfire 1, Suppressing Crossfire 2, Stealth 2, Booby Traps 2, Ambushing Crossfire 3, Vanishing Act 3; one ability per unit per battle, unspent points are lost). Shrewd Strategy: your Crusade force gains 6 Planning points each battle to buy Shrewd Strategy abilities for GENESTEALER CULTS units (Crossfire 1, Suppressing Crossfire 2, Stealth 2, Booby Traps 2, Ambushing Crossfire 3, Vanishing Act 3; one ability per unit per battle, unspent points are lost). Shrewd Strategy: your Crusade force gains 6 Planning points each battle to buy Shrewd Strategy abilities for GENESTEALER CULTS units (Crossfire 1, Suppressing Crossfire 2, Stealth 2, Booby Traps 2, Ambushing Crossfire 3, Vanishing Act 3; one ability per unit per battle, unspent points are lost). During the Select Crusade Blessings step, you can spend your Planning points to purchase one or more Shrewd Strategy abilities. All Planning points unspent at the end of this step are lost. Each time you purchase one of these abilities, select one **^^Genestealer Cults^^** unit in your Crusade army; until the end of the battle, that unit has that ability and the first time it is set up on the battlefield, place the relevant Shrewd Strategy ability token next to it to remind you (and your opponent) that you have upgraded that unit that battle. You can purchase the same Shrewd Strategy ability multiple times, but each unit cannot have more than one Shrewd Strategy ability per battle. Note that if a unit with a Shrewd Strategy ability is destroyed during the battle and a new identical unit is added to your Crusade army as a result of the Cult Ambush ability, that unit does not have the Shrewd Strategy abilities that the original unit had.",
         "stats": {
           "Crusade Pts": {
             "value": 2
           }
         }
       },
-      "Crusade Honour§Beloved of the Cult": {
+      "Cult Honour§Beloved of the Cult": {
         "keywords": {
-          "Keywords": [
-            "Beloved of the Cult"
-          ],
-          "Tags": [
-            "Genestealer Cults"
+          "Tags": []
+        },
+        "text": "Beloved of the Cult Requisition (1RP): a GENESTEALER CULTS unit with the Heroic rank or higher; only one unit at a time. Beloved of the Cult Requisition (1RP): a GENESTEALER CULTS unit with the Heroic rank or higher; only one unit at a time. Beloved of the Cult Requisition (1RP): a GENESTEALER CULTS unit with the Heroic rank or higher; only one unit at a time. Each time a unit that is beloved of the cult gains 1 or more XP in a Crusade battle and survives that battle, after that battle, roll one D6 for each other unit from your Crusade army that survived that battle: on a 6, the unit you rolled for gains 1XP.",
+        "stats": {
+          "Crusade Pts": {
+            "value": 1
+          }
+        },
+        "rules": {
+          "Heroic rank or higher.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 31
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Ability§World: Hive World": {
+        "text": "Institutions: Community, Industry, Politics. Ascension reward — Strength of the Masses: After each Crusade battle, each BATTLELINE unit that was part of your Crusade army and survived the battle gains 1XP."
+      },
+      "Ability§World: Forge World": {
+        "text": "Institutions: Industry, Military, Religion. Ascension reward — Prized Acquisition: Each time you add a VEHICLE unit to your Order of Battle, that unit gains 6XP (and therefore gains the Blooded Rank); select one Battle Honour for it as normal."
+      },
+      "Ability§World: Cardinal World": {
+        "text": "Institutions: Community, Politics, Religion. Ascension reward — Will of the Faithful: After each Crusade battle, you can ignore your first failed Out of Action test."
+      },
+      "Ability§World: Fortress World": {
+        "text": "Institutions: Military, Religion, Resources. Ascension reward — Looted Armoury: When a unit from your Crusade force gains the Weapon Modifications Battle Honour, you can roll 3D6 (instead of 2D6) to randomly determine three Weapon Modifications for the weapon to gain."
+      },
+      "Ability§World: Agri/Mining World": {
+        "text": "Institutions: Community, Industry, Resources. Ascension reward — Hard Graft: After each Crusade battle, roll one D6: on a 4+, you gain 1 additional Requisition point."
+      },
+      "Ability§World: Frontier/Feudal World": {
+        "text": "Institutions: Military, Politics, Resources. Ascension reward — Cult of Personality: Each time you select a unit to be Marked for Greatness, that unit gains 1 additional XP."
+      },
+      "Institution§Institution 1": {
+        "text": "Controlled Institution benefits: **Industry:** Use the Rearm and Resupply Requisition up to two times without spending any Requisition points. **Military:** One INFANTRY unit (excluding CHARACTER units) with fewer than 6XP gains XP until it has 6XP. **Community:** Use the Fresh Recruits Requisition up to two times without spending any Requisition points. **Politics:** You gain influence. While you have influence, subtract 1 from your next Setback roll, then you no longer have influence. **Religion:** One CHARACTER unit with fewer than 6XP gains XP until it has 6XP. **Resources:** Use the Increase Supply Limit Requisition up to two times without spending any Requisition points."
+      },
+      "Institution§Institution 2": {
+        "text": "See Institution 1 for the Controlled Institution benefits."
+      },
+      "Institution§Institution 3": {
+        "text": "See Institution 1 for the Controlled Institution benefits."
+      },
+      "Path of Ascension§Path of Ascension": {
+        "assets": {
+          "traits": [
+            "Institution§Institution 1",
+            "Institution§Institution 2",
+            "Institution§Institution 3"
           ]
         },
-        "text": "Each time a unit that is beloved of the cult gains 1 or more XP in a Crusade battle and survives that battle, after that battle, roll one D6 for each other unit from your Crusade army that survived that battle: on a 6, the unit you rolled for gains 1XP."
+        "text": "**Path of Ascension.** If your Crusade force includes a PATRIARCH, PRIMUS or MAGUS and is not on a Path, it can begin one: pick or roll the world classification (D6 1–6 in the order listed), choose which of its three institutions your uprising has infiltrated, name the world. Before each battle, if you do not already control three institutions, select a target institution you do not control.\n\n**After each battle:** Exploit Advantage (if the target is infiltrated, each surviving unit of your army gains 1XP) → Gain Ascension Points (D6, +1 won, +1 target infiltrated, +1 a unit earned XP from a Genestealer Cults Agenda: 4–7 = 1 point, 8+ = 2) → Gain Control (at 3 Ascension points spend them: Control +1, the target becomes Controlled; at Control 4 you win a Glorious Ascension; otherwise take the institution's benefit or 1RP) → Setback (2D6, +1 lost, +1 no Agenda XP, +Control: on 13+ you are set back and must fight the Great Ordeal) → Propagate (optional: D6 + Control, on 5+ Propagation +1 and Control −1; at Propagation 5 you win Seed the Stars).\n\n**Path's End.** Glorious Ascension: one PATRIARCH gains 2XP and you claim the world's Ascension reward. Seed the Stars: up to three CHARACTERS gain 2XP. The Great Ordeal: a battle with Zealous Fury (+Control to your Battle-shock tests) and Persecuted (your opponent starts with CP by battle size and your Control: Combat Patrol 1/1/0/0, Incursion 2/1/1/0, Strike Force 3/2/1/1, Onslaught 3/3/2/1 for Control 0/1/2/3; Prepared for the Ordeal gives you 2CP); win it for 2XP on a PATRIARCH and the Ascension reward, lose it and you must abandon the Path. Abandoning (The Cycle Begins Anew) costs an Ignominy: every PATRIARCH, PRIMUS and MAGUS gains a Battle Scar, or you remove one Ascension reward. Each ending resets Ascension points, Propagation and Control to 0; after a victory your next Path starts with two infiltrated institutions.\n\nEach Ascension reward claimed adds 1 to your Crusade points when determining Crusade Blessings."
       }
     },
     "gameModes": {},

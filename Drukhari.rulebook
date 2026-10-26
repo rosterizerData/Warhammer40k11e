@@ -1,6 +1,6 @@
 {
   "name": "Drukhari 11e",
-  "revision": "11.2.5",
+  "revision": "11.2.7",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -159,10 +159,1501 @@
             ],
             "evaluate": "OR",
             "failState": "error"
+          },
+          "crusadeShowAscendantLord": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Ascendant Lord",
+                    "visibility"
+                  ]
+                ],
+                "value": "normal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Epic Hero",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: shown in Narrative play"
+          },
+          "ascendantLordKeyword": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Ascendant Lord"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Ascendant Lord",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "Your Ascendant Lord must be your Warlord.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Ascendant Lord",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Warlord",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "crusadeTagKabaliteWarriors": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Kabalite Warriors"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Kabalite Warriors",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Kabalite Warriors keyword may take the honours tagged Kabalite Warriors"
+          },
+          "crusadeTagHandoftheArchon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Hand of the Archon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Hand of the Archon",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Hand of the Archon keyword may take the honours tagged Hand of the Archon"
+          },
+          "crusadeTagWyches": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Wyches"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Wyches",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Wyches keyword may take the honours tagged Wyches"
+          },
+          "crusadeTagWracks": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Wracks"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Wracks",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Wracks keyword may take the honours tagged Wracks"
+          },
+          "crusadeTagHaemonculusCovens": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Haemonculus Covens"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Haemonculus Covens",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Haemonculus Covens keyword may take the honours tagged Haemonculus Covens"
+          },
+          "crusadeTagKabal": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Kabal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Kabal",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Kabal keyword may take the honours tagged Kabal"
+          },
+          "crusadeTagWychCult": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Wych Cult"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Wych Cult",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Wych Cult keyword may take the honours tagged Wych Cult"
+          }
+        },
+        "stats": {
+          "Ascendant Lord": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "Ascendant Lord": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "hidden",
+            "dynamic": true,
+            "group": "Crusade",
+            "groupOrder": 11,
+            "statOrder": 20
           }
         }
       },
-      "Unit": {}
+      "Unit": {
+        "rules": {
+          "crusadeTagKabaliteWarriors": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Kabalite Warriors"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Kabalite Warriors",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Kabalite Warriors keyword may take the honours tagged Kabalite Warriors"
+          },
+          "crusadeTagHandoftheArchon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Hand of the Archon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Hand of the Archon",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Hand of the Archon keyword may take the honours tagged Hand of the Archon"
+          },
+          "crusadeTagWyches": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Wyches"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Wyches",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Wyches keyword may take the honours tagged Wyches"
+          },
+          "crusadeTagWracks": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Wracks"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Wracks",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Wracks keyword may take the honours tagged Wracks"
+          },
+          "crusadeTagHaemonculusCovens": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Haemonculus Covens"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Haemonculus Covens",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Haemonculus Covens keyword may take the honours tagged Haemonculus Covens"
+          },
+          "crusadeTagKabal": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Kabal"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Kabal",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Kabal keyword may take the honours tagged Kabal"
+          },
+          "crusadeTagWychCult": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "constraints",
+                    "any"
+                  ]
+                ],
+                "value": "Wych Cult"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "keywords",
+                    "Keywords"
+                  ]
+                ],
+                "value": "Wych Cult",
+                "contains": true
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "note": "Crusade: units with the Wych Cult keyword may take the honours tagged Wych Cult"
+          }
+        }
+      },
+      "Mission Record": {
+        "stats": {
+          "Agenda 1": {
+            "ranks": {
+              "Sublime Agonies": {
+                "order": 100,
+                "tracking": {
+                  "Drukhari Agenda": 1
+                }
+              },
+              "Demonstrate Superiority": {
+                "order": 101,
+                "tracking": {
+                  "Drukhari Agenda": 1
+                }
+              },
+              "To Feed the Dark City": {
+                "order": 102,
+                "tracking": {
+                  "Drukhari Agenda": 1
+                }
+              },
+              "Fear’s Cold Grip": {
+                "order": 103,
+                "tracking": {
+                  "Drukhari Agenda": 1
+                }
+              },
+              "Herd the Prey": {
+                "order": 104,
+                "tracking": {
+                  "Drukhari Agenda": 1
+                }
+              }
+            }
+          },
+          "Agenda 2": {
+            "ranks": {
+              "Sublime Agonies": {
+                "order": 100,
+                "tracking": {
+                  "Drukhari Agenda": 1
+                }
+              },
+              "Demonstrate Superiority": {
+                "order": 101,
+                "tracking": {
+                  "Drukhari Agenda": 1
+                }
+              },
+              "To Feed the Dark City": {
+                "order": 102,
+                "tracking": {
+                  "Drukhari Agenda": 1
+                }
+              },
+              "Fear’s Cold Grip": {
+                "order": 103,
+                "tracking": {
+                  "Drukhari Agenda": 1
+                }
+              },
+              "Herd the Prey": {
+                "order": 104,
+                "tracking": {
+                  "Drukhari Agenda": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "Order of Battle": {
+        "allowed": {
+          "items": [
+            "Requisition§Expansionist Plot",
+            "Requisition§Serve Me or Die",
+            "Requisition§Source of Disappointment",
+            "Requisition§Master Schemer",
+            "Requisition§Involuntary Procedures",
+            "Requisition§Patron of the Killing Arts",
+            "Crusade Badge§Dark Star Rising",
+            "Crusade Badge§Malevolent Master",
+            "Crusade Badge§Commorrite Overlord"
+          ]
+        }
+      },
+      "District": {
+        "aspects": {
+          "Visibility": "always"
+        },
+        "templateClass": "",
+        "stats": {
+          "Territories held": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 6,
+            "statOrder": 1
+          },
+          "Controlled": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "tracking": {
+                  "District": 1
+                },
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 2
+          }
+        }
+      },
+      "Rival Lord": {
+        "aspects": {
+          "Visibility": "always",
+          "Rename": true
+        },
+        "templateClass": "",
+        "stats": {
+          "Lord": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Archon": {
+                "order": 1
+              },
+              "Succubus": {
+                "order": 2
+              },
+              "Haemonculus": {
+                "order": 3
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 1
+          },
+          "Rival Trait": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Ruthless Machinator": {
+                "order": 1
+              },
+              "Trueborn Heir": {
+                "order": 2
+              },
+              "Devious Opportunist": {
+                "order": 3
+              },
+              "Master of Murder": {
+                "order": 4
+              },
+              "Ruthless Expansionist": {
+                "order": 5
+              },
+              "Lord of Thieves": {
+                "order": 6
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 2
+          },
+          "Power": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 12,
+            "statOrder": 3
+          },
+          "Territories": {
+            "statType": "numeric",
+            "value": 3,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 72,
+            "statOrder": 4
+          }
+        }
+      },
+      "Commorragh Holdings": {
+        "allowed": {
+          "classifications": [],
+          "items": []
+        },
+        "aspects": {
+          "Visibility": "always"
+        },
+        "assets": {
+          "traits": []
+        },
+        "templateClass": "",
+        "stats": {
+          "Power": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "min": 0,
+            "max": 12,
+            "label": "Power (districts controlled)",
+            "statOrder": 1
+          },
+          "Crusade Pts": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        },
+        "rules": {
+          "power": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{this}",
+                  "evals",
+                  "0",
+                  "result",
+                  "integer"
+                ]
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "SUM",
+                "paths": [
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "District§Weapon Forge",
+                    "stats",
+                    "Controlled",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "District§Toxin Distillery",
+                    "stats",
+                    "Controlled",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "District§Arena",
+                    "stats",
+                    "Controlled",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "District§Scourge Spire",
+                    "stats",
+                    "Controlled",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "District§Incubi Shrine",
+                    "stats",
+                    "Controlled",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "District§Dock",
+                    "stats",
+                    "Controlled",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "District§Sprawl Slum",
+                    "stats",
+                    "Controlled",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "District§Flesh Market",
+                    "stats",
+                    "Controlled",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "District§Shadow District",
+                    "stats",
+                    "Controlled",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "District§Noble Spire",
+                    "stats",
+                    "Controlled",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "District§Gang Territory",
+                    "stats",
+                    "Controlled",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "traits",
+                    "item",
+                    "District§Raidcraft Workshop",
+                    "stats",
+                    "Controlled",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 0
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1,
+            "note": "Power = districts controlled"
+          },
+          "crusadePts1": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2,
+            "note": "+1 Crusade point per two districts controlled (rounding up)"
+          },
+          "crusadePts2": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "value": 2
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 3
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 3,
+            "note": "+1 Crusade point per two districts controlled (rounding up)"
+          },
+          "crusadePts3": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "value": 3
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 5
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 4,
+            "note": "+1 Crusade point per two districts controlled (rounding up)"
+          },
+          "crusadePts4": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "value": 4
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 7
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 5,
+            "note": "+1 Crusade point per two districts controlled (rounding up)"
+          },
+          "crusadePts5": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "value": 5
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 9
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6,
+            "note": "+1 Crusade point per two districts controlled (rounding up)"
+          },
+          "crusadePts6": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "value": 6
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Power",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ]
+                ],
+                "min": 11
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 7,
+            "note": "+1 Crusade point per two districts controlled (rounding up)"
+          }
+        }
+      }
     },
     "assetCatalog": {
       "Ability§Acrobatic Gladiators (Pain)": {
@@ -10834,6 +12325,74 @@
             ],
             "evaluate": "AND",
             "failState": "pass"
+          },
+          "One Ascendant Lord only.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": true,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "Ascendant Lord"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error"
+          },
+          "useCrusadeDrukhari": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Commorragh Holdings§Commorragh Holdings"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Play",
+                    "value"
+                  ]
+                ],
+                "value": "Narrative"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 0,
+            "note": "Crusade: adds the faction's Crusade tracker in Narrative play (early order so the tracker's own rules still run)"
           }
         },
         "stats": {
@@ -16387,6 +17946,749 @@
           ]
         },
         "text": "Models in the bearer's unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks."
+      },
+      "Requisition§Expansionist Plot": {
+        "stats": {
+          "RP": {
+            "value": 2
+          }
+        },
+        "text": "Use this Requisition in the Update Crusade Cards step. Your ASCENDANT LORD claims 1 additional territory at the end of that battle. You can only purchase this Requisition once after each battle."
+      },
+      "Requisition§Serve Me or Die": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition when a Rival Lord is defeated or when you have just claimed a territory with a Hostile Takeover against a Rival Lord that has 0 Power. Roll one D6, adding 3 to the result if that Rival Lord was defeated: on a 4+, that Rival Lord loses all of its current territories (if any), which become unclaimed, and you can add one ARCHON, SUCCUBUS or HAEMONCULUS model to your Crusade force (this must match the lord type of the defeated Rival Lord). That model has 16XP (and therefore has the Battle-hardened rank). Select two Battle Honours for it. While that model is on your Order of Battle, for the purposes of Requisitions, your ASCENDANT LORD counts as having the same lord type as that new model (so, for example, if that new model is a SUCCUBUS, you could use the Patron of the Killing Arts Requisition, even if your ASCENDANT LORD is an ARCHON). You cannot purchase this Requisition if doing so would cause your Crusade force to exceed its current Supply Limit."
+      },
+      "Requisition§Source of Disappointment": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "Purchase this Requisition when a DRUKHARI unit from your Crusade force (excluding your ASCENDANT LORD) that has the Blooded rank or better gains a Battle Scar. Remove that unit from your Crusade force. Each other DRUKHARI unit from your Crusade force gains 1XP."
+      },
+      "Requisition§Master Schemer": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "You can only purchase this Requisition if your ASCENDANT LORD is an ARCHON, or if you control the Noble Spires district. Purchase this Requisition after making a Rival Activity roll. Ignore that result - that Rival Lord’s plots are thwarted."
+      },
+      "Requisition§Involuntary Procedures": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "You can only purchase this Requisition if your ASCENDANT LORD is a HAEMONCULUS, or if you control the Flesh Market district. Purchase this Requisition before a battle. Select one DRUKHARI INFANTRY or DRUKHARI MONSTER unit from your Order of Battle that has one or more Battle Traits. You can remove any number of that unit’s Battle Traits; for each Battle Trait removed, select one new Drukhari Battle Trait to replace it."
+      },
+      "Requisition§Patron of the Killing Arts": {
+        "stats": {
+          "RP": {
+            "value": 1
+          }
+        },
+        "text": "You can only purchase this Requisition if your ASCENDANT LORD is a SUCCUBUS, or if you control the Arenas district. Purchase this Requisition in the Update Crusade Cards step. Select one WYCH CULT or BLADES FOR HIRE unit from your Crusade army that destroyed one or more enemy units with melee attacks during the battle; that unit is Marked for Greatness in addition to any other units from your Crusade army."
+      },
+      "Crusade Badge§Dark Star Rising": {
+        "text": "You have won three or more battles.\nYou control two or more districts.\nYou have used the Source of Disappointment Requisition to remove a unit from your Order of Battle."
+      },
+      "Crusade Badge§Malevolent Master": {
+        "text": "You have won six or more battles.\nYou control four or more districts.\nYou have claimed two or more territories that were claimed by Rival Lords using the Hostile Takeover rules.\nOne or more units from your Crusade force have been given one of the following Battle Traits: Kabalite Trueborn; Hekatrix Bloodbrides; Haemoxytes."
+      },
+      "Crusade Badge§Commorrite Overlord": {
+        "text": "You have murdered, betrayed, raided and politicked your way to the pinnacles of power in the Dark City. From here, there is only the fight to preserve what is yours or, perhaps, a different fate within the deep shadow of Asdrubael Vect himself.\nYou have triggered the Price of Success rules.\nOr:\nYou have won ten or more battles.\nYou control six or more districts.\nYou have used the Serve Me or Die Requisition to add one or more new units to your Order of Battle."
+      },
+      "Ability§District: Weapon Forge": {
+        "text": "At the start of the Declare Battle Formations step, select one DRUKHARI unit from your Crusade army (you cannot select an EPIC HERO or a unit that has the Weapon Modification Battle Honour). Until the end of the battle, one weapon equipped by one model in that unit has the Weapon Modification Battle Honour."
+      },
+      "District§Weapon Forge": {
+        "text": "Territories (D66): The Splinterforge (11), The Hall of Hooks (12), The Sharpeners (13), Murder Cove (14), Talonforge (15), The Gallery of Blades (16). Tick Controlled while your Ascendant Lord holds more territories in this district than any Rival Lord.",
+        "rules": {
+          "controlled": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§District: Weapon Forge"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Controlled",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Ability§District: Toxin Distillery": {
+        "text": "While your ASCENDANT LORD is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+      },
+      "District§Toxin Distillery": {
+        "text": "Territories (D66): Sorrowseep (21), Well of Phantasms (22), The Cauldron (23), Vale of Vapours (24), Tormentia’s Boutique (25), The Fractal Alembic (26). Tick Controlled while your Ascendant Lord holds more territories in this district than any Rival Lord.",
+        "rules": {
+          "controlled": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§District: Toxin Distillery"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Controlled",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Ability§District: Arena": {
+        "text": "In the Update Crusade Cards step, if a DRUKHARI unit from your Crusade army would gain XP from Dealers of Death, it gains 1 additional XP."
+      },
+      "District§Arena": {
+        "text": "Territories (D66): Howling Gulf (31), Mesmoria (32), The Flensing Ground (33), The Coreloop Gauntlet (34), The Gallery of Glass (35), Rethvhyr’s Veinyard (36). Tick Controlled while your Ascendant Lord holds more territories in this district than any Rival Lord.",
+        "rules": {
+          "controlled": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§District: Arena"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Controlled",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Ability§District: Scourge Spire": {
+        "text": "In the Update Crusade Cards step, if a SCOURGES unit from your Crusade army would gain XP from Battle Experience, it gains 1 additional XP."
+      },
+      "District§Scourge Spire": {
+        "text": "Territories (D66): Spire of the Seven Talons (41), The Screaming Roost (42), The Gorenests (43), Pinion (44), The Stratus Sphere (45), Bladefeather Den (46). Tick Controlled while your Ascendant Lord holds more territories in this district than any Rival Lord.",
+        "rules": {
+          "controlled": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§District: Scourge Spire"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Controlled",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Ability§District: Incubi Shrine": {
+        "text": "In the Declare Battle Formations step, your ASCENDANT LORD can be attached to an INCUBI unit (if your ASCENDANT LORD is an ARCHON, while it is leading an INCUBI unit, your ASCENDANT LORD model has the Feel No Pain 5+ ability). If your ASCENDANT LORD is attached to an INCUBI unit, at the end of the battle, unless all of those Bodyguard models have been destroyed, you can re-roll all Leadership tests required as the result of Assassination Attempts during that battle’s Rival Activities."
+      },
+      "District§Incubi Shrine": {
+        "text": "Territories (D66): The Bloodrazor (51), Shrine of Naked Hatred (52), Shrine of the Cursed Night (53), The Covenant of Anguish (54), Shrine of the Crimson Hundred (55), Shrine of The Severed (56). Tick Controlled while your Ascendant Lord holds more territories in this district than any Rival Lord.",
+        "rules": {
+          "controlled": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§District: Incubi Shrine"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Controlled",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Ability§District: Dock": {
+        "text": "After each battle, in the Update Crusade Cards step, roll one D6, adding 1 to the result if you were the victor: on a 4+, you gain 1 additional RP."
+      },
+      "District§Dock": {
+        "text": "Territories (D66): Crimson Point (61), Shardbreak (62), Bleakharbour (63), Blodhavn (64), The Whisperdome (65), Dock of Thieves (66). Tick Controlled while your Ascendant Lord holds more territories in this district than any Rival Lord.",
+        "rules": {
+          "controlled": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§District: Dock"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Controlled",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Ability§District: Sprawl Slum": {
+        "text": "At the start of the Select Crusade Blessings step, roll one D6, adding 2 to the result if you are the Underdog: on a 6+, you can use one additional Crusade Blessing this battle (even if you are not the Underdog)."
+      },
+      "District§Sprawl Slum": {
+        "text": "Territories (D66): Drudge Pit (11), The Choke (12), Sufferer’s Row (13), The Fiendscape (14), The Parchway (15), Vect’s Heel (16). Tick Controlled while your Ascendant Lord holds more territories in this district than any Rival Lord.",
+        "rules": {
+          "controlled": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§District: Sprawl Slum"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Controlled",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Ability§District: Flesh Market": {
+        "text": "Once at the end of each battle, you can re-roll one Out of Action test taken for one DRUKHARI INFANTRY or DRUKHARI MONSTER unit from your Crusade army."
+      },
+      "District§Flesh Market": {
+        "text": "Territories (D66): The Whispers (21), The Emporium of Tears (22), The Skinmongers (23), The Nervery (24), The Fleshpits (25), Traitor’s Auction (26). Tick Controlled while your Ascendant Lord holds more territories in this district than any Rival Lord.",
+        "rules": {
+          "controlled": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§District: Flesh Market"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Controlled",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Ability§District: Shadow District": {
+        "text": "Each time a Rival Lord makes an Activity roll, you can subtract 1 from the result."
+      },
+      "District§Shadow District": {
+        "text": "Territories (D66): The Evergloom (31), Direside (32), The Twilight Aisle (33), Netherweir (34), The Eyelid (35), Hope’s Horizon (36). Tick Controlled while your Ascendant Lord holds more territories in this district than any Rival Lord.",
+        "rules": {
+          "controlled": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§District: Shadow District"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Controlled",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Ability§District: Noble Spire": {
+        "text": "At the start of the Select Agendas step, roll one D6: on a 4+, you can select one additional Drukhari Agenda to use in that battle."
+      },
+      "District§Noble Spire": {
+        "text": "Territories (D66): Bleak Spiral (41), Ghal-Harrow (42), The Crimson Spine (43), The Bonehalls (44), Knife of the Muses (45), Grovenspire (46). Tick Controlled while your Ascendant Lord holds more territories in this district than any Rival Lord.",
+        "rules": {
+          "controlled": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§District: Noble Spire"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Controlled",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Ability§District: Gang Territory": {
+        "text": "Each time your ASCENDANT LORD attempts a Hostile Takeover, add 1 to its D6 result and, if that ASCENDANT LORD claims a territory as a result, increase your Crusade forces Supply Limit by 50 points."
+      },
+      "District§Gang Territory": {
+        "text": "Territories (D66): The Splinters (51), Broken Noose (52), The Harrows (53), Backstab Alleys (54), Ebonspite Corner (55), Bladewrought Lanes (56). Tick Controlled while your Ascendant Lord holds more territories in this district than any Rival Lord.",
+        "rules": {
+          "controlled": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§District: Gang Territory"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Controlled",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Ability§District: Raidcraft Workshop": {
+        "text": "In the Declare Battle Formations step, you can select one DRUKHARI VEHICLE or DRUKHARI MOUNTED unit from your Crusade army. Until the end of the battle, that unit has the Scouts 6\" ability."
+      },
+      "District§Raidcraft Workshop": {
+        "text": "Territories (D66): Ironveil Tontine (61), The Shadowloom (62), Forge of the Connoisseur (63), The Fear Smeltery (64), Blackforge (65), Wingcast Spire (66). Tick Controlled while your Ascendant Lord holds more territories in this district than any Rival Lord.",
+        "rules": {
+          "controlled": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§District: Raidcraft Workshop"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Controlled",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          }
+        }
+      },
+      "Rival Lord§Rival Lord 1": {
+        "text": "**Rival Lords.** When you add an Ascendant Lord, generate three Rival Lords (D6: 1–2 Archon, 3–4 Succubus, 5–6 Haemonculus); each starts with three territories, the first in its home district (Noble Spire / Arena / Flesh Market), and a Rival Trait. A Rival Lord's Power is the number of districts it controls. **Rival Traits (D6):** 1. Ruthless Machinator: This Rival Lord’s Power is 1 greater than the number of districts they control. 2. Trueborn Heir: Generate one additional starting territory for this Rival Lord. 3. Devious Opportunist: At the end of the battle, if your Ascendant Lord fails an Out of Action test, roll one additional time on the Rival Activity table for this Rival Lord. 4. Master of Murder: Each time you roll an Ominous Plotting result for this Rival Lord on the Rival Activity table (see below), treat that result as Assassination Attempt instead. 5. Ruthless Expansionist: Each time you roll an Ominous Plotting result for this Rival Lord on the Rival Activity table, treat that result as Under New Management instead. 6. Lord of Thieves: Each time you roll an Ominous Plotting result for this Rival Lord on the Rival Activity table, treat that result as Districts Raided instead.\n\n**Rival Activity.** After each battle, if your Ascendant Lord claims 3 or more territories, make one Activity roll (D6) per Rival Lord, +1 if its Power is greater than your lord's, −1 if less: 6+ | Assassination Attempt: Your ASCENDANT LORD gains 1XP and must take a Leadership test; if that test is failed, your ASCENDANT LORD gains 1 Battle Scar. 5 | Gang War: Randomly select D3 non-CHARACTER DRUKHARI units on your Order of Battle. Each of those units gains 1XP and must take an Out of Action test. If one of those units fails that test, randomly select one territory you claim - you lose that territory (remove it from your Order of Battle; it becomes unclaimed). If two or more of those units fail those tests, randomly select one territory you claim - you lose that territory (remove it from your Order of Battle) and this Rival Lord automatically claims it. 4 | Districts Raided: You lose 1RP (to a minimum of 0). If you now have 0RP, randomly select one territory you claim - you lose that territory (remove it from your Order of Battle) and this Rival Lord automatically claims it. 3 | Under New Management: Randomly generate one additional territory for this Rival Lord. If that territory is already claimed by your ASCENDANT LORD or by another Rival Lord, it will attempt a Hostile Takeover. 2 | Power Vacuum: Randomly generate one additional territory for this Rival Lord. If that territory is already claimed by your ASCENDANT LORD or by another Rival Lord, roll again until an unclaimed territory is generated (if there are no unclaimed territories, treat this result as Ominous Plotting instead). In addition, if you have fewer than 3 Rival Lords, generate a new one as described below, with D3+3 starting territories, then immediately roll again on this table for that Rival Lord. 1 or less | Ominous Plotting: This Rival Lord does not unleash a plot against you, for now...\n\nA Rival Lord with no territories is defeated; if all are defeated, generate D3 new ones after your next battle."
+      },
+      "Rival Lord§Rival Lord 2": {
+        "text": "See Rival Lord 1 for the Rival Traits and the Rival Activity table."
+      },
+      "Rival Lord§Rival Lord 3": {
+        "text": "See Rival Lord 1 for the Rival Traits and the Rival Activity table."
+      },
+      "Commorragh Holdings§Commorragh Holdings": {
+        "assets": {
+          "traits": [
+            "District§Weapon Forge",
+            "District§Toxin Distillery",
+            "District§Arena",
+            "District§Scourge Spire",
+            "District§Incubi Shrine",
+            "District§Dock",
+            "District§Sprawl Slum",
+            "District§Flesh Market",
+            "District§Shadow District",
+            "District§Noble Spire",
+            "District§Gang Territory",
+            "District§Raidcraft Workshop",
+            "Rival Lord§Rival Lord 1",
+            "Rival Lord§Rival Lord 2",
+            "Rival Lord§Rival Lord 3"
+          ]
+        },
+        "text": "**Ascendant Lords.** Tick Ascendant Lord on one DRUKHARI CHARACTER (not an EPIC HERO); it must be your WARLORD whenever it is in your Crusade army. After each battle roll one D6 (+1 if the lord was in your army, +2 if you were the victor): on 4+ claim one territory, on 6+ claim two. To claim, roll a D6 (1–3 table A, 4–6 table B) then a D66 on each district's list; an unclaimed territory is yours, one held by a Rival Lord triggers a **Hostile Takeover** (each lord rolls a D6, +1 for the higher Power; highest wins; a tie: 1–3 it stays, 4–6 it becomes unclaimed). You control a district while you hold more of its territories than every Rival Lord; Power = districts controlled; your Crusade army's Crusade points rise by 1 per two districts (rounding up).\n\n**Price of Success.** If your Ascendant Lord ever controls all 12 districts, roll a D6: SUFFER NO RIVALS AGENT OF VECT INTO SHADOW\n\n**Death of a Lord.** If your ASCENDANT LORD is removed from your Order of Battle for any reason, you must select a new DRUKHARI CHARACTER model from your Order of Battle (excluding EPIC HEROES) to be your new ASCENDANT LORD. To represent the internecine intrigues that invariably follow such a transition of leadership, you must then immediately remove D6 randomly selected territories from your Order of Battle (to a minimum of 0). If your ASCENDANT LORD was removed from your Order of Battle as the result of the Price of Success rules (see above), you instead lose all of your territories except one, which you can choose. A Rival Lord is defeated when they have no territories remaining, at which point you must remove them from your Rival Lords tracker. If all Rival Lords are defeated, at the end of your next battle, generate D3 new Rival Lords to replace them."
+      },
+      "Battle Trait§Kabalite Trueborn": {
+        "keywords": {
+          "Tags": [
+            "Kabalite Warriors",
+            "Hand of the Archon"
+          ]
+        },
+        "text": "KABALITE WARRIORS or HAND OF THE ARCHON unit only. Improve the Leadership characteristic of models in this unit by 1 and improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.",
+        "rules": {
+          "Battle-hardened rank or better.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 16
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Battle Trait§Hekatrix Bloodbrides": {
+        "keywords": {
+          "Tags": [
+            "Wyches"
+          ]
+        },
+        "text": "WYCHES unit only. Improve the Leadership characteristic of models in this unit by 1 and improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.",
+        "rules": {
+          "Battle-hardened rank or better.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 16
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Battle Trait§Haemoxytes": {
+        "keywords": {
+          "Tags": [
+            "Wracks"
+          ]
+        },
+        "text": "WRACKS unit only. Improve the Leadership and Save characteristics of models in this unit by 1.",
+        "rules": {
+          "Battle-hardened rank or better.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{parent}",
+                    "stats",
+                    "Experience",
+                    "value"
+                  ]
+                ],
+                "min": 16
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error"
+          }
+        }
+      },
+      "Battle Trait§Living Atrocities (Aura)": {
+        "keywords": {
+          "Tags": [
+            "Haemonculus Covens"
+          ]
+        },
+        "text": "While an enemy unit is within 6\" of this unit, each time that enemy unit fails a Battle-shock test, it suffers D3 mortal wounds (a unit cannot suffer more than 3 mortal wounds per turn as a result of this Battle Trait)."
+      },
+      "Battle Trait§Baleful Armaments (Pain)": {
+        "keywords": {
+          "Tags": [
+            "Haemonculus Covens"
+          ]
+        },
+        "text": "In your Shooting phase, when you select this unit to shoot, you can spend 1 Pain token to Empower this unit. While Empowered, ranged weapons equipped by models in this unit have the [HAZARDOUS] ability and each time an attack is made with such a weapon, add 1 to the Damage characteristic of that attack."
+      },
+      "Battle Trait§Scabhide": {
+        "keywords": {
+          "Tags": [
+            "Haemonculus Covens"
+          ]
+        },
+        "text": "Each time an attack with an unmodified Damage characteristic of 1 is allocated to a model in this unit, add 1 to any armour saving throw made against that attack."
+      },
+      "Battle Trait§Spitefire": {
+        "keywords": {
+          "Tags": [
+            "Kabal"
+          ]
+        },
+        "text": "Assault weapons equipped by models in this unit have the [RAPID FIRE 1] ability. All other ranged weapons equipped by models in this unit have the [ASSAULT] ability."
+      },
+      "Battle Trait§Inescapable (Pain)": {
+        "keywords": {
+          "Tags": [
+            "Kabal"
+          ]
+        },
+        "text": "In your Shooting phase, when you select this unit to shoot, you can spend 1 Pain token to Empower this unit. While Empowered, ranged weapons equipped by models in this unit have the [IGNORES COVER] ability."
+      },
+      "Battle Trait§Claws of the Archon": {
+        "keywords": {
+          "Tags": [
+            "Kabal"
+          ]
+        },
+        "text": "Add 1 to the Objective Control characteristic of models in this unit."
+      },
+      "Battle Trait§Scent of the Kill": {
+        "keywords": {
+          "Tags": [
+            "Wych Cult"
+          ]
+        },
+        "text": "Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\"."
+      },
+      "Battle Trait§Knife Dancers (Pain)": {
+        "keywords": {
+          "Tags": [
+            "Wych Cult"
+          ]
+        },
+        "text": "In the Fight phase, when you select this unit to fight, you can spend 1 Pain token to Empower this unit. While Empowered, each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [LETHAL HITS] ability."
+      },
+      "Battle Trait§Slashing Impact": {
+        "keywords": {
+          "Tags": [
+            "Wych Cult"
+          ]
+        },
+        "text": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)."
       }
     },
     "gameModes": {},
