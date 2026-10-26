@@ -32,10 +32,13 @@ def load(book):
 
 
 def save(book, bump=True):
+    """atomic write (the headless runner reads every book in the folder; several builds may run side by side)"""
     d = load(book)
     if bump:
         d["revision"] = bump_rev(d.get("revision") or "11.2.0")
-    BOOK_FILES[book].write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    tmp = BOOK_FILES[book].with_suffix(".rulebook.tmp")
+    tmp.write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    os.replace(tmp, BOOK_FILES[book])
     return d["revision"]
 
 
@@ -388,8 +391,8 @@ def child(book, cls, item, *, stats=None, text=None, rules=None, aspects=None, a
     T = taxonomy(book)
     if cls in T:
         T[cls] = merge(T[cls], spec)
-        if stats:
-            T[cls]["stats"] = merge(T[cls].get("stats", {}), stats)
+        if stats:   # a stat definition is replaced whole (a re-run must be able to drop keys such as `tracked`)
+            T[cls].setdefault("stats", {}).update(copy.deepcopy(stats))
     else:
         T[cls] = spec
     if class_rules_:

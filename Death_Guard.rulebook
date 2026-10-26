@@ -1,6 +1,6 @@
 {
   "name": "Death Guard 11e",
-  "revision": "11.2.9",
+  "revision": "11.2.10",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -661,7 +661,6 @@
             "value": "-",
             "visibility": "normal",
             "dynamic": true,
-            "tracked": true,
             "statOrder": 1
           },
           "Eye of Nurgle": {
@@ -682,7 +681,6 @@
             "value": "-",
             "visibility": "normal",
             "dynamic": true,
-            "tracked": true,
             "statOrder": 2
           },
           "Fecund Fervour": {
@@ -703,7 +701,6 @@
             "value": "-",
             "visibility": "normal",
             "dynamic": true,
-            "tracked": true,
             "statOrder": 3
           },
           "Seeping Poisons": {
@@ -724,7 +721,6 @@
             "value": "-",
             "visibility": "normal",
             "dynamic": true,
-            "tracked": true,
             "statOrder": 4
           },
           "Endless Harvest": {
@@ -745,7 +741,6 @@
             "value": "-",
             "visibility": "normal",
             "dynamic": true,
-            "tracked": true,
             "statOrder": 5
           },
           "Vile Possession": {
@@ -766,7 +761,6 @@
             "value": "-",
             "visibility": "normal",
             "dynamic": true,
-            "tracked": true,
             "statOrder": 6
           },
           "Crusade Pts": {
