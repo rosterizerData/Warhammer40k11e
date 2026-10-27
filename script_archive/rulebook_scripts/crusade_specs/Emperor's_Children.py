@@ -29,15 +29,15 @@ def build(cz):
                    allow_note="Boons of Slaanesh: EMPEROR’S CHILDREN CHARACTER models (not DAEMON PRINCES) may take a Boon of Slaanesh instead of another Battle Honour; a duplicate D33 roll means Spawndom",
                    cap=3, cap_text="No model can have more than three Boons of Slaanesh.")
     # ── the stash tracker ──
-    stats = {"Common Ingredients": L.num(0, mn=0, mx=20, group="Ingredients", group_order=1, order=1),
-             "Rare Ingredients": L.num(0, mn=0, mx=20, group="Ingredients", group_order=1, order=2)}
+    stats = {"Common Ingredients": L.num(0, mn=0, mx=6, group="Ingredients", group_order=1, order=1),
+             "Rare Ingredients": L.num(0, mn=0, mx=4, group="Ingredients", group_order=1, order=2)}
     for i, x in enumerate(EXOTICS):
-        stats[x] = L.num(0, mn=0, mx=9, group="Exotic ingredients", group_order=2, order=10 + i)
+        stats[x] = L.num(0, mn=0, mx=2, group="Exotic ingredients", group_order=2, order=10 + i)
     for i, (n, _, _) in enumerate(ARMY):
-        stats[n + " (doses)"] = L.num(0, mn=0, mx=9, group="Army Elixirs", group_order=3, order=20 + 2 * i, label=n + " doses")
+        stats[n + " (doses)"] = L.num(0, mn=0, mx=3, group="Army Elixirs", group_order=3, order=20 + 2 * i, label=n + " doses")
         stats[n + " equipped"] = L.flag(tracking={"Army Elixir equipped": 1}, group="Army Elixirs", group_order=3, order=21 + 2 * i, label=n + " equipped")
     for i, (n, _, _) in enumerate(PERSONAL):
-        stats[n + " (doses)"] = L.num(0, mn=0, mx=9, group="Personal Elixirs", group_order=4, order=40 + i, label=n + " doses")
+        stats[n + " (doses)"] = L.num(0, mn=0, mx=3, group="Personal Elixirs", group_order=4, order=40 + i, label=n + " doses")
     stats["Crusade Pts"] = {"statType": "numeric", "tracked": True, "value": 0, "visibility": "hidden"}
     stats["Elixirs equipped"] = L.num(0, mn=0, mx=12, dynamic=False, order=60, label="Elixirs equipped this battle")
     rules = {"equippedCount": L.rule([L.set_(["{self}", "stats", "Elixirs equipped", "value"], ["{this}", "evals", "0", "result", "integer"])],
@@ -49,7 +49,7 @@ def build(cz):
                                         order=3, note="+1 Crusade point per two elixirs equipped (rounding up)")}
     recipes = "\n".join(f"• **{n}** ({r}): {e}" for n, r, e in ARMY)
     precipes = "\n".join(f"• **{n}** ({r}): {e}" for n, r, e in PERSONAL)
-    text = ("**Combat Elixirs.** If your Crusade force has an EMPEROR’S CHILDREN CHARACTER, it collects ingredients and crafts elixirs; the stash holds what is listed here (anything over the caps is lost). "
+    text = ("**Combat Elixirs.** If your Crusade force has an EMPEROR’S CHILDREN CHARACTER, it collects ingredients and crafts elixirs; the stash holds at most 6 Common, 4 Rare and 2 of each Exotic ingredient, and 3 doses of each elixir (anything over the caps is lost). "
             "The first EMPEROR’S CHILDREN unit added to your Order of Battle also adds one dose of Anfrak Silk.\n\n"
             "**Ingredients:** after every battle roll a D6 (+2 if you won): on a 4+ gain 1 Common ingredient, on a 6+ gain D3 instead. Roll another D6 (+1 if you won): on a 6+ gain 1 Rare ingredient. "
             "Exotic ingredients come only from Agendas, Requisitions and some Battle Honours.\n\n"

@@ -1,6 +1,6 @@
 {
   "name": "Grey Knights 11e",
-  "revision": "11.2.7",
+  "revision": "11.2.8",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -14674,48 +14674,48 @@
           }
         }
       },
-      "Augurium Vision§Sanctify Site": {
-        "text": "Grid position top-left."
-      },
-      "Augurium Vision§Purge and Cleanse": {
-        "text": "Grid position top-centre."
-      },
-      "Augurium Vision§Rites of Exorcism": {
-        "text": "Grid position top-right."
-      },
-      "Augurium Vision§Vision 4": {
-        "text": "Grid position middle-left."
-      },
-      "Augurium Vision§Vision 5": {
-        "text": "Grid position centre."
-      },
-      "Augurium Vision§Vision 6": {
-        "text": "Grid position middle-right."
-      },
-      "Augurium Vision§Vision 7": {
-        "text": "Grid position bottom-left."
-      },
-      "Augurium Vision§Vision 8": {
-        "text": "Grid position bottom-centre."
-      },
-      "Augurium Vision§Vision 9": {
-        "text": "Grid position bottom-right."
-      },
       "Augurium§Augurium Vision Tracker": {
         "assets": {
           "traits": [
-            "Augurium Vision§Sanctify Site",
-            "Augurium Vision§Purge and Cleanse",
-            "Augurium Vision§Rites of Exorcism",
-            "Augurium Vision§Vision 4",
-            "Augurium Vision§Vision 5",
-            "Augurium Vision§Vision 6",
-            "Augurium Vision§Vision 7",
-            "Augurium Vision§Vision 8",
-            "Augurium Vision§Vision 9"
+            "Augurium Vision§11 Prevent Possession",
+            "Augurium Vision§12 Investigate Omen",
+            "Augurium Vision§13 Rites of Exorcism",
+            "Augurium Vision§21 Hallowed Interrogation",
+            "Augurium Vision§22 Purge and Cleanse",
+            "Augurium Vision§23 No Witnesses",
+            "Augurium Vision§31 Sanctify Site",
+            "Augurium Vision§32 Recover Fell Artefact",
+            "Augurium Vision§33 Uncover True Name"
           ]
         },
-        "text": "**Visions from the Augurium.** At the start of the Select Agendas step, if there are any GREY KNIGHTS CHARACTER units in your Crusade army, consult the Prognosticars: roll a D33 on the Augurium Vision tracker (a 3×3 grid) and set that Vision to **Malefic** (two Visions if none are Malefic or four or more are Sanctic; a Sanctic Vision rolled turns Malefic; a Malefic one is re-rolled). Grey Knights Agendas can turn one Vision **Sanctic** after each battle. The nine Visions below are the grid; the codex tracker card gives the six names this book lacks — rename them.\n\n**Chaos Incursion.** At the Update Order of Battle step, if any row, column or diagonal of three Visions is Malefic, an Incursion begins: tick Incursion, roll a D3 and add the number of Malefic Visions for your Banishment total, and collect Banishment points from Agendas, Requisitions and Battle Honours (no consulting, no Vision changes meanwhile). When Banishment points reach the total, the Incursion ends: gain 1 Purgation point per Sanctic Vision plus 1 for each full Sanctic row or column, reset Banishment points and the grid to clear.\n\n**Gifts of the Prescient.** After an Incursion ends, spend Purgation points on Gifts for GREY KNIGHTS CHARACTERS (each unique, each with a minimum rank; a model may hold 1 at Battle-ready or Blooded, 2 at Battle-hardened or Heroic, 3 at Legendary). Purgation points unspent when you next consult the Prognosticars are lost."
+        "text": "**Visions from the Augurium.** At the start of the Select Agendas step, if there are any GREY KNIGHTS CHARACTER units in your Crusade army, consult the Prognosticars: roll a D33 on the Augurium Vision tracker (a 3×3 grid) and set that Vision to **Malefic** (two Visions if none are Malefic or four or more are Sanctic; a Sanctic Vision rolled turns Malefic; a Malefic one is re-rolled). Grey Knights Agendas can turn one Vision **Sanctic** after each battle. The nine Visions below are the grid in D33 order, row by row (11–13, 21–23, 31–33).\n\n**Chaos Incursion.** At the Update Order of Battle step, if any row, column or diagonal of three Visions is Malefic, an Incursion begins: tick Incursion, roll a D3 and add the number of Malefic Visions for your Banishment total, and collect Banishment points from Agendas, Requisitions and Battle Honours (no consulting, no Vision changes meanwhile). When Banishment points reach the total, the Incursion ends: gain 1 Purgation point per Sanctic Vision plus 1 for each full Sanctic row or column, reset Banishment points and the grid to clear.\n\n**Gifts of the Prescient.** After an Incursion ends, spend Purgation points on Gifts for GREY KNIGHTS CHARACTERS (each unique, each with a minimum rank; a model may hold 1 at Battle-ready or Blooded, 2 at Battle-hardened or Heroic, 3 at Legendary). Purgation points unspent when you next consult the Prognosticars are lost."
+      },
+      "Augurium Vision§11 Prevent Possession": {
+        "text": "Grid position top-left."
+      },
+      "Augurium Vision§12 Investigate Omen": {
+        "text": "Grid position top-centre."
+      },
+      "Augurium Vision§13 Rites of Exorcism": {
+        "text": "Grid position top-right."
+      },
+      "Augurium Vision§21 Hallowed Interrogation": {
+        "text": "Grid position middle-left."
+      },
+      "Augurium Vision§22 Purge and Cleanse": {
+        "text": "Grid position centre."
+      },
+      "Augurium Vision§23 No Witnesses": {
+        "text": "Grid position middle-right."
+      },
+      "Augurium Vision§31 Sanctify Site": {
+        "text": "Grid position bottom-left."
+      },
+      "Augurium Vision§32 Recover Fell Artefact": {
+        "text": "Grid position bottom-centre."
+      },
+      "Augurium Vision§33 Uncover True Name": {
+        "text": "Grid position bottom-right."
       }
     },
     "gameModes": {},

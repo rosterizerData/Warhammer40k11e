@@ -4,11 +4,12 @@ import re
 SLUG, ED, FACTION = "grey-knights", "11", "Grey Knights"
 LISTS = dict(agendas=True, requisitions=True, badges=True)
 
-VISIONS = ["Sanctify Site", "Purge and Cleanse", "Rites of Exorcism"] + [f"Vision {i}" for i in range(4, 10)]
+VISIONS = ["11 Prevent Possession", "12 Investigate Omen", "13 Rites of Exorcism", "21 Hallowed Interrogation", "22 Purge and Cleanse", "23 No Witnesses",
+           "31 Sanctify Site", "32 Recover Fell Artefact", "33 Uncover True Name"]   # D33 order = grid row by row (New Recruit / BSData)
 RANK_XP = {"Battle-ready": 0, "Blooded": 6, "Battle-hardened": 16, "Heroic": 31, "Legendary": 51}
 TEXT = ("**Visions from the Augurium.** At the start of the Select Agendas step, if there are any GREY KNIGHTS CHARACTER units in your Crusade army, consult the Prognosticars: roll a D33 on the Augurium Vision tracker (a 3×3 grid) and set that Vision to **Malefic** "
         "(two Visions if none are Malefic or four or more are Sanctic; a Sanctic Vision rolled turns Malefic; a Malefic one is re-rolled). Grey Knights Agendas can turn one Vision **Sanctic** after each battle. "
-        "The nine Visions below are the grid; the codex tracker card gives the six names this book lacks — rename them.\n\n"
+        "The nine Visions below are the grid in D33 order, row by row (11–13, 21–23, 31–33).\n\n"
         "**Chaos Incursion.** At the Update Order of Battle step, if any row, column or diagonal of three Visions is Malefic, an Incursion begins: tick Incursion, roll a D3 and add the number of Malefic Visions for your Banishment total, and collect Banishment points from Agendas, Requisitions and Battle Honours "
         "(no consulting, no Vision changes meanwhile). When Banishment points reach the total, the Incursion ends: gain 1 Purgation point per Sanctic Vision plus 1 for each full Sanctic row or column, reset Banishment points and the grid to clear.\n\n"
         "**Gifts of the Prescient.** After an Incursion ends, spend Purgation points on Gifts for GREY KNIGHTS CHARACTERS (each unique, each with a minimum rank; a model may hold 1 at Battle-ready or Blooded, 2 at Battle-hardened or Heroic, 3 at Legendary). "
@@ -72,4 +73,6 @@ def build(cz):
              "banished": L.rule([L.mod(["{self}", "designation"], " — INCURSION ENDED: claim Purgation points", append="")],
                                 [L.ev_stat("Incursion", "✓"), L.ev(["{self}", "stats", "Banishment total", "value"], mn=1), L.ev(["{self}", "stats", "Banishment points", "value"], mn=["{self}", "stats", "Banishment total", "value"])], order=5)}
     L.tracker(b, "Augurium", "Augurium Vision Tracker", stats=stats, children=vis_children, text=TEXT, class_rules_=rules)
+    for k in [k for k in L.catalog(b) if k.startswith("Augurium Vision§") and k.split("§", 1)[1] not in VISIONS]:   # stale visions
+        del L.catalog(b)[k]
     cz.note(f"Gifts reclassed with costs/ranks ({len(gifts)} parsed); Augurium tracker with 9 Vision children, Incursion flag, Banishment and Purgation ledger")

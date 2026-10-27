@@ -70,20 +70,35 @@ def build(cz):
     blessings = L.child(b, "Blessings of Nurgle", "Blessings of Nurgle", stats=bless_stats, rules=bless_rules,
                         text="Tick each Blessing of Nurgle your Crusade force has claimed. Each adds 1 to your Crusade points total when determining Crusade Blessings.")
     # Alchemical Pathogen
+    # Properties and Drawbacks (BSData "Brew Your Batch"; the codex table is an image on the rules page)
+    PROPS = [("Spreading Pox", "If one or more units were destroyed by attacks made with Lethal Hits weapons while your Pathogen is active, the first POXWALKERS unit added to your Crusade force after this battle gains 6XP (immediately gaining the Blooded rank); select one Battle Honour for it as normal (even though POXWALKERS units cannot normally gain XP or Battle Honours).", None),
+             ("Putridity", "Each time this model makes an attack with a Lethal Hits weapon, an unmodified Hit roll of 5+ scores a Critical Hit.", "Subtract 3 from the Strength characteristic of Lethal Hits weapons equipped by this model."),
+             ("Hypervector", "In your Shooting phase, after this model's unit has shot, if this model made one or more attacks with a Lethal Hits weapon, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is Afflicted. Only one model in each unit can use this ability per turn.", "Subtract 1 from the Attacks characteristic of ranged Lethal Hits weapons equipped by this model."),
+             ("Parasitic Implantation", "Lethal Hits weapons equipped by this model have the [SUSTAINED HITS 1] ability.", "Each time this model makes an attack with a Lethal Hits weapon, you cannot re-roll the Hit roll."),
+             ("Lurid Flux", "In the Fight phase, after this model's unit has fought, if this model made one or more attacks with a Lethal Hits weapon, select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle-shock test. Only one model in each unit can use this ability per turn.", None)]
     path_stats = {"Duration": L.num(1, mn=1, mx=5, order=1),
-                  "Properties": L.num(0, mn=0, mx=7, order=2, label="Properties added"),
-                  "Drawbacks suppressed": L.num(0, mn=0, mx=7, order=3),
-                  "Potency": L.num(1, mn=0, mx=12, dynamic=False, order=4, label="Pathogen Potency (max 7)")}
-    path_rules = {"potency": L.rule([L.set_(["{self}", "stats", "Potency", "value"], ["{this}", "evals", "0", "result", "integer"])],
-                                    [L.ev([["{self}", "stats", "Duration", "value"], ["{self}", "stats", "Properties", "value"], ["{self}", "stats", "Drawbacks suppressed", "value"]], op="SUM", mn=0)], order=1),
-                  "Pathogen Potency can never exceed 7 — Tailor the Toxins before you Brew Your Batch.": L.error_rule([L.ev_stat("Potency", 7, not_=False)], evaluate="AND")}
-    # the error rule above would fire whenever Potency == 7; what we want is Potency > 7:
+                  "Potency": L.num(1, mn=0, mx=12, dynamic=False, order=2, label="Pathogen Potency (max 7)")}
+    flags = []
+    path_rules = {}
+    for i, (n, eff, dra) in enumerate(PROPS):
+        path_stats[n] = L.flag(group="Properties", group_order=3, order=10 + 2 * i)
+        flags.append(n)
+        L.ability(b, f"Pathogen Property: {n}", eff)
+        path_rules[f"property{n.replace(' ', '')}"] = L.rule([L.add(["{self}", "traits"], f"Ability§Pathogen Property: {n}")], [L.ev_stat(n, "✓")], order=1)
+        if dra:
+            sup = f"{n}: Drawback suppressed"
+            path_stats[sup] = L.flag(group="Properties", group_order=3, order=11 + 2 * i)
+            flags.append(sup)
+            L.ability(b, f"Pathogen Drawback: {n}", dra)
+            path_rules[f"drawback{n.replace(' ', '')}"] = L.rule([L.add(["{self}", "traits"], f"Ability§Pathogen Drawback: {n}")], [L.ev_stat(n, "✓"), L.ev_stat(sup, "-")], order=1)
+    path_rules["potency"] = L.rule([L.set_(["{self}", "stats", "Potency", "value"], ["{this}", "evals", "0", "result", "integer"])],
+                                   [L.ev([["{self}", "stats", "Duration", "value"]] + [["{self}", "stats", f, "processed", "numeric", "current"] for f in flags], op="SUM", mn=0)], order=1)
     path_rules["Pathogen Potency can never exceed 7 — Tailor the Toxins before you Brew Your Batch."] = L.rule(None, [L.ev(["{self}", "stats", "Potency", "value"], mx=7)], fail="error", order=5)
     pathogen = L.child(b, "Alchemical Pathogen", "Alchemical Pathogen", stats=path_stats, rules=path_rules, describe=True,
                        text=("Your Pathogen starts with a Duration of 1 and no Properties. Each time a rule lets you **Brew Your Batch**: add 1 to the Duration (max 5), add a Property (with its Drawback, if any), or suppress a Drawback of a Property you have. "
-                             "Pathogen Potency = Duration + Properties + suppressed Drawbacks and can never exceed 7; at 7 you can only **Tailor the Toxins** (Duration −1, remove a Property, or un-suppress a Drawback) and then Brew Your Batch. "
+                             "Pathogen Potency = Duration + Properties ticked + Drawbacks suppressed and can never exceed 7; at 7 you can only **Tailor the Toxins** (Duration −1, remove a Property, or un-suppress a Drawback) and then Brew Your Batch. "
                              "In your Command phase you can declare your Pathogen active: it lasts a number of your Command phases equal to its Duration; while active, every DEATH GUARD model equipped with a Lethal Hits weapon has each Property's ability (and its Drawback unless suppressed). "
-                             "Note which Properties and Drawbacks you have in the description."))
+                             "Tick the Properties you have added and the Drawbacks you have suppressed."))
     L.tracker(b, "Grand Plague", "A Grand Plague", stats=world, children=[blessings, pathogen], text=text, class_rules_=rules)
     cat = L.catalog(b)
     (cat.get("Roster§Roster") or {}).get("rules", {}).pop("blessingsOfNurgleCrusadePts", None)

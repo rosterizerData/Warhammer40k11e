@@ -1,6 +1,6 @@
 {
   "name": "Adeptus Custodes 11e",
-  "revision": "11.2.12",
+  "revision": "11.2.14",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -327,60 +327,2356 @@
         }
       },
       "Endeavour": {
+        "aspects": {
+          "Rename": true,
+          "Describe": true
+        },
         "stats": {
           "Imperative 1": {
-            "dynamic": true,
+            "statType": "rank",
             "ranks": {
               "-": {
-                "number": 0,
                 "order": 0
               },
-              "✓": {
-                "number": 1,
+              "Emperor's Domain": {
                 "order": 1,
-                "tracking": {}
+                "tracking": {
+                  "imperativeEmperorsDomain": 1
+                }
+              },
+              "Wrath of the Emperor": {
+                "order": 2,
+                "tracking": {
+                  "imperativeWrathoftheEmperor": 1
+                }
+              },
+              "Make an Example": {
+                "order": 3,
+                "tracking": {
+                  "imperativeMakeanExample": 1
+                }
+              },
+              "Vital Targets": {
+                "order": 4,
+                "tracking": {
+                  "imperativeVitalTargets": 1
+                }
+              },
+              "Shadowed Directive": {
+                "order": 5,
+                "tracking": {
+                  "imperativeShadowedDirective": 1
+                }
+              },
+              "Absolute Mastery": {
+                "order": 6,
+                "tracking": {
+                  "imperativeAbsoluteMastery": 1
+                }
+              },
+              "Shadow of the Throne": {
+                "order": 7,
+                "tracking": {
+                  "imperativeShadowoftheThrone": 1
+                }
+              },
+              "Martial Supremacy": {
+                "order": 8,
+                "tracking": {
+                  "imperativeMartialSupremacy": 1
+                }
+              },
+              "Alpha Threat Confirmed": {
+                "order": 9,
+                "tracking": {
+                  "imperativeAlphaThreatConfirmed": 1
+                }
+              },
+              "Annihilation": {
+                "order": 10,
+                "tracking": {
+                  "imperativeAnnihilation": 1
+                }
+              },
+              "Emperor's Will Be Done": {
+                "order": 11,
+                "tracking": {
+                  "imperativeEmperorsWillBeDone": 1
+                }
+              },
+              "Inspirational Example": {
+                "order": 12,
+                "tracking": {
+                  "imperativeInspirationalExample": 1
+                }
               }
             },
-            "statType": "rank",
-            "tracked": true,
             "value": "-",
-            "visibility": "normal"
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Imperatives",
+            "groupOrder": 2,
+            "statOrder": 1
+          },
+          "Imperative 1 completed": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Imperatives",
+            "groupOrder": 2,
+            "statOrder": 2
           },
           "Imperative 2": {
-            "dynamic": true,
+            "statType": "rank",
             "ranks": {
               "-": {
-                "number": 0,
                 "order": 0
               },
-              "✓": {
-                "number": 1,
+              "Emperor's Domain": {
                 "order": 1,
-                "tracking": {}
+                "tracking": {
+                  "imperativeEmperorsDomain": 1
+                }
+              },
+              "Wrath of the Emperor": {
+                "order": 2,
+                "tracking": {
+                  "imperativeWrathoftheEmperor": 1
+                }
+              },
+              "Make an Example": {
+                "order": 3,
+                "tracking": {
+                  "imperativeMakeanExample": 1
+                }
+              },
+              "Vital Targets": {
+                "order": 4,
+                "tracking": {
+                  "imperativeVitalTargets": 1
+                }
+              },
+              "Shadowed Directive": {
+                "order": 5,
+                "tracking": {
+                  "imperativeShadowedDirective": 1
+                }
+              },
+              "Absolute Mastery": {
+                "order": 6,
+                "tracking": {
+                  "imperativeAbsoluteMastery": 1
+                }
+              },
+              "Shadow of the Throne": {
+                "order": 7,
+                "tracking": {
+                  "imperativeShadowoftheThrone": 1
+                }
+              },
+              "Martial Supremacy": {
+                "order": 8,
+                "tracking": {
+                  "imperativeMartialSupremacy": 1
+                }
+              },
+              "Alpha Threat Confirmed": {
+                "order": 9,
+                "tracking": {
+                  "imperativeAlphaThreatConfirmed": 1
+                }
+              },
+              "Annihilation": {
+                "order": 10,
+                "tracking": {
+                  "imperativeAnnihilation": 1
+                }
+              },
+              "Emperor's Will Be Done": {
+                "order": 11,
+                "tracking": {
+                  "imperativeEmperorsWillBeDone": 1
+                }
+              },
+              "Inspirational Example": {
+                "order": 12,
+                "tracking": {
+                  "imperativeInspirationalExample": 1
+                }
               }
             },
-            "statType": "rank",
-            "tracked": true,
             "value": "-",
-            "visibility": "normal"
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Imperatives",
+            "groupOrder": 2,
+            "statOrder": 3
+          },
+          "Imperative 2 completed": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Imperatives",
+            "groupOrder": 2,
+            "statOrder": 4
           },
           "Imperative 3": {
-            "dynamic": true,
+            "statType": "rank",
             "ranks": {
               "-": {
-                "number": 0,
                 "order": 0
               },
-              "✓": {
-                "number": 1,
+              "Emperor's Domain": {
                 "order": 1,
-                "tracking": {}
+                "tracking": {
+                  "imperativeEmperorsDomain": 1
+                }
+              },
+              "Wrath of the Emperor": {
+                "order": 2,
+                "tracking": {
+                  "imperativeWrathoftheEmperor": 1
+                }
+              },
+              "Make an Example": {
+                "order": 3,
+                "tracking": {
+                  "imperativeMakeanExample": 1
+                }
+              },
+              "Vital Targets": {
+                "order": 4,
+                "tracking": {
+                  "imperativeVitalTargets": 1
+                }
+              },
+              "Shadowed Directive": {
+                "order": 5,
+                "tracking": {
+                  "imperativeShadowedDirective": 1
+                }
+              },
+              "Absolute Mastery": {
+                "order": 6,
+                "tracking": {
+                  "imperativeAbsoluteMastery": 1
+                }
+              },
+              "Shadow of the Throne": {
+                "order": 7,
+                "tracking": {
+                  "imperativeShadowoftheThrone": 1
+                }
+              },
+              "Martial Supremacy": {
+                "order": 8,
+                "tracking": {
+                  "imperativeMartialSupremacy": 1
+                }
+              },
+              "Alpha Threat Confirmed": {
+                "order": 9,
+                "tracking": {
+                  "imperativeAlphaThreatConfirmed": 1
+                }
+              },
+              "Annihilation": {
+                "order": 10,
+                "tracking": {
+                  "imperativeAnnihilation": 1
+                }
+              },
+              "Emperor's Will Be Done": {
+                "order": 11,
+                "tracking": {
+                  "imperativeEmperorsWillBeDone": 1
+                }
+              },
+              "Inspirational Example": {
+                "order": 12,
+                "tracking": {
+                  "imperativeInspirationalExample": 1
+                }
               }
             },
-            "statType": "rank",
-            "tracked": true,
             "value": "-",
-            "visibility": "normal"
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Imperatives",
+            "groupOrder": 2,
+            "statOrder": 5
+          },
+          "Imperative 3 completed": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Imperatives",
+            "groupOrder": 2,
+            "statOrder": 6
+          },
+          "Battles": {
+            "statType": "numeric",
+            "value": 0,
+            "visibility": "normal",
+            "dynamic": true,
+            "increment": {
+              "value": 1
+            },
+            "min": 0,
+            "max": 9,
+            "label": "Battles on this Endeavour (max 9)",
+            "statOrder": 7
+          },
+          "Abandoned": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 8
+          },
+          "Dishonour": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Command in Question": {
+                "order": 1
+              },
+              "Damage Limitation": {
+                "order": 2
+              },
+              "Petition the Tower of Hegemon": {
+                "order": 3
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "statOrder": 9
+          },
+          "Reward claimed": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0
+              },
+              "Emperor's Domain": {
+                "order": 1
+              },
+              "Wrath of the Emperor": {
+                "order": 2
+              },
+              "Make an Example": {
+                "order": 3
+              },
+              "Vital Targets": {
+                "order": 4
+              },
+              "Shadowed Directive": {
+                "order": 5
+              },
+              "Absolute Mastery": {
+                "order": 6
+              },
+              "Shadow of the Throne": {
+                "order": 7
+              },
+              "Martial Supremacy": {
+                "order": 8
+              },
+              "Alpha Threat Confirmed": {
+                "order": 9
+              },
+              "Annihilation": {
+                "order": 10
+              },
+              "Emperor's Will Be Done": {
+                "order": 11
+              },
+              "Inspirational Example": {
+                "order": 12
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "label": "Endeavour Reward claimed",
+            "statOrder": 10
+          },
+          "Persistent reward active": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "label": "Persistent reward active this battle",
+            "statOrder": 11
+          },
+          "Crusade Pts": {
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "hidden"
+          }
+        },
+        "rules": {
+          "imp1EmperorsDomain": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Emperor's Domain"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 1",
+                    "value"
+                  ]
+                ],
+                "value": "Emperor's Domain"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp1WrathoftheEmperor": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Wrath of the Emperor"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 1",
+                    "value"
+                  ]
+                ],
+                "value": "Wrath of the Emperor"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp1MakeanExample": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Make an Example"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 1",
+                    "value"
+                  ]
+                ],
+                "value": "Make an Example"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp1VitalTargets": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Vital Targets"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 1",
+                    "value"
+                  ]
+                ],
+                "value": "Vital Targets"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp1ShadowedDirective": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Shadowed Directive"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 1",
+                    "value"
+                  ]
+                ],
+                "value": "Shadowed Directive"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp1AbsoluteMastery": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Absolute Mastery"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 1",
+                    "value"
+                  ]
+                ],
+                "value": "Absolute Mastery"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp1ShadowoftheThrone": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Shadow of the Throne"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 1",
+                    "value"
+                  ]
+                ],
+                "value": "Shadow of the Throne"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp1MartialSupremacy": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Martial Supremacy"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 1",
+                    "value"
+                  ]
+                ],
+                "value": "Martial Supremacy"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp1AlphaThreatConfirmed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Alpha Threat Confirmed"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 1",
+                    "value"
+                  ]
+                ],
+                "value": "Alpha Threat Confirmed"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp1Annihilation": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Annihilation"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 1",
+                    "value"
+                  ]
+                ],
+                "value": "Annihilation"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp1EmperorsWillBeDone": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Emperor's Will Be Done"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 1",
+                    "value"
+                  ]
+                ],
+                "value": "Emperor's Will Be Done"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp1InspirationalExample": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Inspirational Example"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 1",
+                    "value"
+                  ]
+                ],
+                "value": "Inspirational Example"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp2EmperorsDomain": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Emperor's Domain"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 2",
+                    "value"
+                  ]
+                ],
+                "value": "Emperor's Domain"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp2WrathoftheEmperor": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Wrath of the Emperor"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 2",
+                    "value"
+                  ]
+                ],
+                "value": "Wrath of the Emperor"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp2MakeanExample": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Make an Example"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 2",
+                    "value"
+                  ]
+                ],
+                "value": "Make an Example"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp2VitalTargets": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Vital Targets"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 2",
+                    "value"
+                  ]
+                ],
+                "value": "Vital Targets"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp2ShadowedDirective": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Shadowed Directive"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 2",
+                    "value"
+                  ]
+                ],
+                "value": "Shadowed Directive"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp2AbsoluteMastery": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Absolute Mastery"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 2",
+                    "value"
+                  ]
+                ],
+                "value": "Absolute Mastery"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp2ShadowoftheThrone": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Shadow of the Throne"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 2",
+                    "value"
+                  ]
+                ],
+                "value": "Shadow of the Throne"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp2MartialSupremacy": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Martial Supremacy"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 2",
+                    "value"
+                  ]
+                ],
+                "value": "Martial Supremacy"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp2AlphaThreatConfirmed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Alpha Threat Confirmed"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 2",
+                    "value"
+                  ]
+                ],
+                "value": "Alpha Threat Confirmed"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp2Annihilation": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Annihilation"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 2",
+                    "value"
+                  ]
+                ],
+                "value": "Annihilation"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp2EmperorsWillBeDone": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Emperor's Will Be Done"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 2",
+                    "value"
+                  ]
+                ],
+                "value": "Emperor's Will Be Done"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp2InspirationalExample": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Inspirational Example"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 2",
+                    "value"
+                  ]
+                ],
+                "value": "Inspirational Example"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp3EmperorsDomain": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Emperor's Domain"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 3",
+                    "value"
+                  ]
+                ],
+                "value": "Emperor's Domain"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp3WrathoftheEmperor": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Wrath of the Emperor"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 3",
+                    "value"
+                  ]
+                ],
+                "value": "Wrath of the Emperor"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp3MakeanExample": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Make an Example"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 3",
+                    "value"
+                  ]
+                ],
+                "value": "Make an Example"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp3VitalTargets": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Vital Targets"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 3",
+                    "value"
+                  ]
+                ],
+                "value": "Vital Targets"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp3ShadowedDirective": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Shadowed Directive"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 3",
+                    "value"
+                  ]
+                ],
+                "value": "Shadowed Directive"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp3AbsoluteMastery": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Absolute Mastery"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 3",
+                    "value"
+                  ]
+                ],
+                "value": "Absolute Mastery"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp3ShadowoftheThrone": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Shadow of the Throne"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 3",
+                    "value"
+                  ]
+                ],
+                "value": "Shadow of the Throne"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp3MartialSupremacy": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Martial Supremacy"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 3",
+                    "value"
+                  ]
+                ],
+                "value": "Martial Supremacy"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp3AlphaThreatConfirmed": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Alpha Threat Confirmed"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 3",
+                    "value"
+                  ]
+                ],
+                "value": "Alpha Threat Confirmed"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp3Annihilation": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Annihilation"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 3",
+                    "value"
+                  ]
+                ],
+                "value": "Annihilation"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp3EmperorsWillBeDone": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Emperor's Will Be Done"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 3",
+                    "value"
+                  ]
+                ],
+                "value": "Emperor's Will Be Done"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "imp3InspirationalExample": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Imperative: Inspirational Example"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 3",
+                    "value"
+                  ]
+                ],
+                "value": "Inspirational Example"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "dishonourCommandinQuestion": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Dishonour: Command in Question"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dishonour",
+                    "value"
+                  ]
+                ],
+                "value": "Command in Question"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "dishonourDamageLimitation": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Dishonour: Damage Limitation"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dishonour",
+                    "value"
+                  ]
+                ],
+                "value": "Damage Limitation"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "dishonourPetitiontheTowerofHegemon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Dishonour: Petition the Tower of Hegemon"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Dishonour",
+                    "value"
+                  ]
+                ],
+                "value": "Petition the Tower of Hegemon"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2
+          },
+          "An Endeavour cannot have Emperor's Domain twice.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "imperativeEmperorsDomain"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          },
+          "An Endeavour cannot have Wrath of the Emperor twice.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "imperativeWrathoftheEmperor"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          },
+          "An Endeavour cannot have Make an Example twice.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "imperativeMakeanExample"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          },
+          "An Endeavour cannot have Vital Targets twice.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "imperativeVitalTargets"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          },
+          "An Endeavour cannot have Shadowed Directive twice.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "imperativeShadowedDirective"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          },
+          "An Endeavour cannot have Absolute Mastery twice.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "imperativeAbsoluteMastery"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          },
+          "An Endeavour cannot have Shadow of the Throne twice.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "imperativeShadowoftheThrone"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          },
+          "An Endeavour cannot have Martial Supremacy twice.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "imperativeMartialSupremacy"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          },
+          "An Endeavour cannot have Alpha Threat Confirmed twice.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "imperativeAlphaThreatConfirmed"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          },
+          "An Endeavour cannot have Annihilation twice.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "imperativeAnnihilation"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          },
+          "An Endeavour cannot have Emperor's Will Be Done twice.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "imperativeEmperorsWillBeDone"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          },
+          "An Endeavour cannot have Inspirational Example twice.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "tracked",
+                    "imperativeInspirationalExample"
+                  ]
+                ],
+                "max": 1
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "error",
+            "order": 5
+          },
+          "Claim the reward of one of this Endeavour's Imperatives.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Reward claimed",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Reward claimed",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Imperative 1",
+                  "value"
+                ]
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Reward claimed",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Imperative 2",
+                  "value"
+                ]
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Reward claimed",
+                    "value"
+                  ]
+                ],
+                "value": [
+                  "{self}",
+                  "stats",
+                  "Imperative 3",
+                  "value"
+                ]
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error",
+            "order": 5
+          },
+          "Only a Persistent reward can be made active.": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Persistent reward active",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Reward claimed",
+                    "value"
+                  ]
+                ],
+                "value": "Shadow of the Throne"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Reward claimed",
+                    "value"
+                  ]
+                ],
+                "value": "Martial Supremacy"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Reward claimed",
+                    "value"
+                  ]
+                ],
+                "value": "Annihilation"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Reward claimed",
+                    "value"
+                  ]
+                ],
+                "value": "Emperor's Will Be Done"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "error",
+            "order": 5
+          },
+          "persistentCrusadePt": {
+            "actions": [
+              {
+                "actionType": "set",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Crusade Pts",
+                    "value"
+                  ]
+                ],
+                "value": 1
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Persistent reward active",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 2,
+            "note": "an active Persistent Endeavour Reward adds 1 to the Crusade army's Crusade points"
+          },
+          "completed": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": " — COMPLETE",
+                "append": ""
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 1 completed",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 2 completed",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 3 completed",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "abandonedMark": {
+            "actions": [
+              {
+                "actionType": "modify",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "designation"
+                  ]
+                ],
+                "value": " — ABANDONED",
+                "append": ""
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Abandoned",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 6
+          },
+          "The Endeavour has run nine battles: it is abandoned (select a Dishonour).": {
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Battles",
+                    "value"
+                  ]
+                ],
+                "max": 8
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Imperative 3 completed",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Abandoned",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "OR",
+            "failState": "warning",
+            "order": 6
           }
         },
         "templateClass": "Magisterium Lex Ultima"
@@ -3099,7 +5395,9 @@
         },
         "text": "**SILENT SISTERHOOD**\n\n- When mustering your army, you can select a friendly **ANATHEMA PSYKANA CHARACTER** model to be your **WARLORD**.\n\n- Friendly **PROSECUTOR SQUAD** units have **BATTLELINE**.\n\n- Friendly **ANATHEMA PSYKANA** units have the following ability:\n\n**Creeping Dread (Aura):** In the Battle-shock step of your opponent’s Command phase, each enemy unit within 12\" of this unit that is a **PSYKER** unit/below **starting strength** makes a **battle-shock roll**, with -1 to that **battle-shock roll**."
       },
-      "Endeavour§Endeavour": {},
+      "Endeavour§Endeavour": {
+        "text": "**Magisterium Lex Ultima.** If your Crusade force includes TRAJANN VALORIS or any other SHIELD-CAPTAIN and you are not on an Endeavour, you can claim the Magisterium Lex Ultima before a battle and commence an Endeavour (add an Endeavour to your Campaign). Determine its three Imperatives: roll a D6 for the table (1–3 / 4–6), then a D6 on that table; no Imperative twice in one Endeavour. Complete them in order; at the end of a battle in which you completed the active Imperative, tick it and the next one becomes active.\n\nWhen all three are complete, claim one Endeavour Reward from the three Imperatives. Instant rewards apply at once; Persistent rewards are noted in your Order of Battle, and before each battle you can make one of them active (+1 to your Crusade army’s Crusade points). You can abandon an Endeavour at the end of a battle (with two Imperatives complete, randomly claim one of those two rewards); an Endeavour not completed within nine battles is abandoned. Abandoning means a Dishonour (select one or roll a D6)."
+      },
       "Enhancement§Castellan’s Mark": {
         "keywords": {
           "Keywords": [
@@ -14661,6 +16959,51 @@
           ]
         },
         "text": "Each time a Psychic Attack targets this unit, subtract 1 from the Hit roll."
+      },
+      "Ability§Imperative: Emperor's Domain": {
+        "text": "**Imperative (D6 1–3).** Complete two battles where, at the end of the battle, you have more friendly units wholly within your deployment zone than enemy units (excluding AIRCRAFT).\n\n**Endeavour Reward:** Instant — Gain 3RP."
+      },
+      "Ability§Imperative: Wrath of the Emperor": {
+        "text": "**Imperative (D6 1–3).** Complete two battles in which you have destroyed four or more units by the start of the third battle round.\n\n**Endeavour Reward:** Instant — You can select two additional units to be Marked for Greatness after the battle in which you completed your final Imperative."
+      },
+      "Ability§Imperative: Make an Example": {
+        "text": "**Imperative (D6 1–3).** Win a battle by more than 10 Victory points.\n\n**Endeavour Reward:** Instant — Every unit from your Crusade force gains 1XP."
+      },
+      "Ability§Imperative: Vital Targets": {
+        "text": "**Imperative (D6 1–3).** Complete two battles in which you destroy the three units from your opponent’s army with the highest points values (if one or more units are tied in this way, then the destruction of any of them counts towards this Imperative).\n\n**Endeavour Reward:** Instant — Gain 1RP. The unit from your Crusade army that earned the most XP from an Agenda in the battle in which you completed your final Imperative gains 5XP."
+      },
+      "Ability§Imperative: Shadowed Directive": {
+        "text": "**Imperative (D6 1–3).** Complete two battles in which you earned XP from an Adeptus Custodes Agenda.\n\n**Endeavour Reward:** Instant — Every unit in your Crusade force gains 1XP. If that unit earned XP from an Agenda in the battle in which you completed your final Imperative, it gains 2XP."
+      },
+      "Ability§Imperative: Absolute Mastery": {
+        "text": "**Imperative (D6 1–3).** Complete two battles in which you earned XP from non-ADEPTUS CUSTODES Agendas (such as those found in the main Crusade rules).\n\n**Endeavour Reward:** Instant — Your WARLORD from the battle in which you completed your final Imperative gains 5XP."
+      },
+      "Ability§Imperative: Shadow of the Throne": {
+        "text": "**Imperative (D6 4–6).** At the end of the battle, both of the following are satisfied: you control three or more objective markers; you control at least double the number of objective markers that your opponent does.\n\n**Endeavour Reward:** Persistent — Once per battle, you can target a friendly unit with an Adeptus Custodes Stratagem for 0CP."
+      },
+      "Ability§Imperative: Martial Supremacy": {
+        "text": "**Imperative (D6 4–6).** At the end of a battle, at least twice as many enemy units were destroyed in that battle than units from your Crusade army.\n\n**Endeavour Reward:** Persistent — Once per battle, you can target a friendly unit with the Fire Overwatch Stratagem or the Heroic Intervention Stratagem for 0CP."
+      },
+      "Ability§Imperative: Alpha Threat Confirmed": {
+        "text": "**Imperative (D6 4–6).** At the end of the battle, the enemy WARLORD is destroyed.\n\n**Endeavour Reward:** Instant — If the enemy WARLORD was destroyed in the battle in which you completed your final Imperative, the friendly unit that destroyed it gains a Battle Honour. If no friendly unit achieved this, claim the Endeavour reward from the Wrath of the Emperor Imperative instead."
+      },
+      "Ability§Imperative: Annihilation": {
+        "text": "**Imperative (D6 4–6).** At the end of a battle, every enemy unit is destroyed, or is Below Half-strength.\n\n**Endeavour Reward:** Persistent — Once per battle, you can target a friendly unit with the Counter-offensive Stratagem or the Epic Challenge Stratagem for 0CP."
+      },
+      "Ability§Imperative: Emperor's Will Be Done": {
+        "text": "**Imperative (D6 4–6).** Complete two battles where, at the end of the battle, you have more friendly units wholly within your opponent’s deployment zone than enemy units (excluding AIRCRAFT).\n\n**Endeavour Reward:** Persistent — Once per battle, you can target a friendly unit with the Command Re-roll Stratagem or the Rapid Ingress Stratagem for 0CP."
+      },
+      "Ability§Imperative: Inspirational Example": {
+        "text": "**Imperative (D6 4–6).** At the end of the battle, two or more enemy units were destroyed by melee attacks made by an ADEPTUS CUSTODES CHARACTER model from your Crusade army.\n\n**Endeavour Reward:** Instant — The ADEPTUS CUSTODES CHARACTER that completed this Imperative gains a Battle Honour."
+      },
+      "Ability§Dishonour: Command in Question": {
+        "text": "Select one SHIELD-CAPTAIN unit from your Crusade force. That unit gains the Disgraced Battle Scar and the Mark of Shame Battle Scar from the main Crusade rules. If your Crusade force does not contain any SHIELD-CAPTAIN units, re-roll this result."
+      },
+      "Ability§Dishonour: Damage Limitation": {
+        "text": "Halve the XP (rounding down) that units in your Crusade force earn for a number of battles equivalent to the number of your Endeavour’s Imperatives that were not completed (the previous battle counts as the first of such battles)."
+      },
+      "Ability§Dishonour: Petition the Tower of Hegemon": {
+        "text": "Reduce your Requisition points to 0. You cannot gain Requisition points for a number of battles equivalent to the number of Imperatives of your Endeavour that were not completed (the previous battle counts as the first of such battles)."
       }
     },
     "gameModes": {},

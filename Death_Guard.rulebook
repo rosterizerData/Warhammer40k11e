@@ -1,6 +1,6 @@
 {
   "name": "Death Guard 11e",
-  "revision": "11.2.10",
+  "revision": "11.2.11",
   "game": "Warhammer 40k 11th Edition",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -822,7 +822,159 @@
             "min": 0,
             "max": 12,
             "label": "Pathogen Potency (max 7)",
-            "statOrder": 4
+            "statOrder": 2
+          },
+          "Spreading Pox": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Properties",
+            "groupOrder": 3,
+            "statOrder": 10
+          },
+          "Putridity": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Properties",
+            "groupOrder": 3,
+            "statOrder": 12
+          },
+          "Putridity: Drawback suppressed": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Properties",
+            "groupOrder": 3,
+            "statOrder": 13
+          },
+          "Hypervector": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Properties",
+            "groupOrder": 3,
+            "statOrder": 14
+          },
+          "Hypervector: Drawback suppressed": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Properties",
+            "groupOrder": 3,
+            "statOrder": 15
+          },
+          "Parasitic Implantation": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Properties",
+            "groupOrder": 3,
+            "statOrder": 16
+          },
+          "Parasitic Implantation: Drawback suppressed": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Properties",
+            "groupOrder": 3,
+            "statOrder": 17
+          },
+          "Lurid Flux": {
+            "statType": "rank",
+            "ranks": {
+              "-": {
+                "order": 0,
+                "number": 0
+              },
+              "✓": {
+                "order": 1,
+                "number": 1
+              }
+            },
+            "value": "-",
+            "visibility": "normal",
+            "dynamic": true,
+            "group": "Properties",
+            "groupOrder": 3,
+            "statOrder": 18
           }
         }
       },
@@ -15494,8 +15646,322 @@
         }
       },
       "Alchemical Pathogen§Alchemical Pathogen": {
-        "text": "Your Pathogen starts with a Duration of 1 and no Properties. Each time a rule lets you **Brew Your Batch**: add 1 to the Duration (max 5), add a Property (with its Drawback, if any), or suppress a Drawback of a Property you have. Pathogen Potency = Duration + Properties + suppressed Drawbacks and can never exceed 7; at 7 you can only **Tailor the Toxins** (Duration −1, remove a Property, or un-suppress a Drawback) and then Brew Your Batch. In your Command phase you can declare your Pathogen active: it lasts a number of your Command phases equal to its Duration; while active, every DEATH GUARD model equipped with a Lethal Hits weapon has each Property's ability (and its Drawback unless suppressed). Note which Properties and Drawbacks you have in the description.",
+        "text": "Your Pathogen starts with a Duration of 1 and no Properties. Each time a rule lets you **Brew Your Batch**: add 1 to the Duration (max 5), add a Property (with its Drawback, if any), or suppress a Drawback of a Property you have. Pathogen Potency = Duration + Properties ticked + Drawbacks suppressed and can never exceed 7; at 7 you can only **Tailor the Toxins** (Duration −1, remove a Property, or un-suppress a Drawback) and then Brew Your Batch. In your Command phase you can declare your Pathogen active: it lasts a number of your Command phases equal to its Duration; while active, every DEATH GUARD model equipped with a Lethal Hits weapon has each Property's ability (and its Drawback unless suppressed). Tick the Properties you have added and the Drawbacks you have suppressed.",
         "rules": {
+          "propertySpreadingPox": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Pathogen Property: Spreading Pox"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Spreading Pox",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "propertyPutridity": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Pathogen Property: Putridity"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Putridity",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "drawbackPutridity": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Pathogen Drawback: Putridity"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Putridity",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Putridity: Drawback suppressed",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "propertyHypervector": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Pathogen Property: Hypervector"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hypervector",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "drawbackHypervector": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Pathogen Drawback: Hypervector"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hypervector",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Hypervector: Drawback suppressed",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "propertyParasiticImplantation": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Pathogen Property: Parasitic Implantation"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Parasitic Implantation",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "drawbackParasiticImplantation": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Pathogen Drawback: Parasitic Implantation"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Parasitic Implantation",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              },
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Parasitic Implantation: Drawback suppressed",
+                    "value"
+                  ]
+                ],
+                "value": "-"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
+          "propertyLuridFlux": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Ability§Pathogen Property: Lurid Flux"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Lurid Flux",
+                    "value"
+                  ]
+                ],
+                "value": "✓"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass",
+            "order": 1
+          },
           "potency": {
             "actions": [
               {
@@ -15533,14 +15999,66 @@
                   [
                     "{self}",
                     "stats",
-                    "Properties",
-                    "value"
+                    "Spreading Pox",
+                    "processed",
+                    "numeric",
+                    "current"
                   ],
                   [
                     "{self}",
                     "stats",
-                    "Drawbacks suppressed",
-                    "value"
+                    "Putridity",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Putridity: Drawback suppressed",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Hypervector",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Hypervector: Drawback suppressed",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Parasitic Implantation",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Parasitic Implantation: Drawback suppressed",
+                    "processed",
+                    "numeric",
+                    "current"
+                  ],
+                  [
+                    "{self}",
+                    "stats",
+                    "Lurid Flux",
+                    "processed",
+                    "numeric",
+                    "current"
                   ]
                 ],
                 "min": 0
@@ -15581,6 +16099,30 @@
           ]
         },
         "text": "**A Grand Plague.** If your Crusade force includes a DEATH GUARD CHARACTER unit and is not attempting to Concoct a Plague, it can attempt to Concoct a Plague. Create the world (Fecundity, Population Density and Vulnerability each 1–6: roll a D6 each or pick an example world, then note the Suitability Score = their sum, which never changes during the attempt). Your plague starts with Rate of Reproduction 1, Survival Rate 1 and Adaptability 1. Your goal is a total of exactly 7 for each of the three Plague Totals.\n\n**Path of Contagion (after each battle):** Reap the Rewards (apply Agenda results) → Check for a Breakthrough → Cultivation (D6, +2 if you won: on 4+ add or subtract 1 from one plague characteristic) → Counteragents (D6: if higher than Adaptability, Vulnerability −1) → Death Toll (D6: if higher than Survival Rate, Population Density −1; at 0 the quest fails) → Final Check for a Breakthrough.\n\n**Success by Suitability Score:** 15–18 Acceptable Offering (one DEATH GUARD CHARACTER gains 2XP; re-roll 5s and 6s when rolling your next world). 11–14 Foul Bounty (2XP; one unit gains a Death Guard Battle Trait). 7–10 A Mighty Pestilence (3XP; claim a permanent Blessing of Nurgle). 3–6 Malign Masterpiece (5XP; claim a permanent Blessing of Nurgle).\n\nBlessings of Nurgle are permanent; each adds 1 to your Crusade points when determining Crusade Blessings. You cannot gain the same Blessing twice."
+      },
+      "Ability§Pathogen Property: Spreading Pox": {
+        "text": "If one or more units were destroyed by attacks made with Lethal Hits weapons while your Pathogen is active, the first POXWALKERS unit added to your Crusade force after this battle gains 6XP (immediately gaining the Blooded rank); select one Battle Honour for it as normal (even though POXWALKERS units cannot normally gain XP or Battle Honours)."
+      },
+      "Ability§Pathogen Property: Putridity": {
+        "text": "Each time this model makes an attack with a Lethal Hits weapon, an unmodified Hit roll of 5+ scores a Critical Hit."
+      },
+      "Ability§Pathogen Drawback: Putridity": {
+        "text": "Subtract 3 from the Strength characteristic of Lethal Hits weapons equipped by this model."
+      },
+      "Ability§Pathogen Property: Hypervector": {
+        "text": "In your Shooting phase, after this model's unit has shot, if this model made one or more attacks with a Lethal Hits weapon, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is Afflicted. Only one model in each unit can use this ability per turn."
+      },
+      "Ability§Pathogen Drawback: Hypervector": {
+        "text": "Subtract 1 from the Attacks characteristic of ranged Lethal Hits weapons equipped by this model."
+      },
+      "Ability§Pathogen Property: Parasitic Implantation": {
+        "text": "Lethal Hits weapons equipped by this model have the [SUSTAINED HITS 1] ability."
+      },
+      "Ability§Pathogen Drawback: Parasitic Implantation": {
+        "text": "Each time this model makes an attack with a Lethal Hits weapon, you cannot re-roll the Hit roll."
+      },
+      "Ability§Pathogen Property: Lurid Flux": {
+        "text": "In the Fight phase, after this model's unit has fought, if this model made one or more attacks with a Lethal Hits weapon, select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle-shock test. Only one model in each unit can use this ability per turn."
       }
     },
     "gameModes": {},
