@@ -85,7 +85,7 @@ def build(cz):
         qrules["quest" + q.split()[-1]] = L.rule([L.add(["{self}", "traits"], f"Ability§{q}")], [L.ev_stat("Quest", q)])
     qrules["Three battles fought: consult the Tally Rewards and allocate the Chivalric points (fewer than four tallies: Dishonoured)."] = L.rule(None, [L.ev(["{self}", "stats", "Battles fought", "value"], mx=2)], fail="info", order=5)
     text = ("**Chivalric Quests.** When mustering, if you have no active Quest and your WARLORD is an IMPERIAL KNIGHTS model, swear your Knights to one of the four Quests and keep its tally for your next three battles. "
-            "After three battles consult the Tally Rewards of the Quest (4–6 / 7–10 / 11+ tally marks; see the codex table for the Chivalric points each band awards) and allocate the Chivalric points to your pilots in the Update Crusade Cards step. "
+            "After three battles consult the Tally Rewards of the Quest (4–6 tally marks: 1 Chivalric point; 7–10: 2 Chivalric points; 11+: 3 Chivalric points; fewer than 4: Dishonoured) and allocate the Chivalric points to your pilots in the Update Crusade Cards step. "
             "Fewer than four tally marks, or abandoning a Quest, makes your Crusade force **Dishonoured**: you cannot swear a new Quest until you complete the Death Before Dishonour Agenda.\n\n"
             "**Pilots.** Every IMPERIAL KNIGHTS model (not EPIC HEROES) has a pilot with a Sworn Alignment; Questor Imperialis and Questor Mechanicus pilots never fight in the same army. "
             "The first time a pilot is allocated Chivalric points, select a Mastery no other pilot has (Clarion: TITANIC only; Joust: Questor Imperialis; Mechanisms: Questor Mechanicus; Execution: Freeblade). "

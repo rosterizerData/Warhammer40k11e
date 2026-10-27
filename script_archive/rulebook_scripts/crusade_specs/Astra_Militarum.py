@@ -17,7 +17,7 @@ LOGISTICS = {
 TEXT = ("**Tours of Duty.** Each time your Crusade force starts a Tour of Duty, roll for its length: D6+4 battles to fight and D3+2 victories required (note both here). After each battle reduce the battles remaining by 1, and the victories remaining by 1 if you won. "
         "When both reach 0 the Tour is complete: spend Commendation points on Commendations, then start a new Tour (any unspent Commendation points are lost).\n\n"
         "**Logistics points.** At the start of each Tour assign 4 Logistics points across Lexmechanicus, Materiel, Tithe Pool and Morale, no more than 2 in any one category. "
-        "This book reads 0 points as a **deficiency**, 1 as no effect and 2 as a **surplus** (the codex shows the thresholds as icons); the surplus and deficiency effects attach below as abilities while they apply.\n\n"
+        "A category with 0 Logistics points is in **deficiency**, 1 point has no effect and 2 points is a **surplus**; the surplus and deficiency effects attach below as abilities while they apply.\n\n"
         "**Commendation points.** Your Crusade force earns 1 Commendation point after each battle (D3 if you won); Agendas can earn more. At the end of a Tour spend them on Personal Commendations (Battle Honours for individual ASTRA MILITARUM units: an OFFICER may hold two, other units one, "
         "never the same one twice on a unit, never on EPIC HEROES) and Regimental Commendations (at most two on your Order of Battle, each adding 3 to the Crusade points of every army you muster). You can remove Commendations at any time to buy different ones.")
 

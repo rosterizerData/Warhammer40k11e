@@ -6,18 +6,18 @@ LISTS = dict(agendas=True, requisitions=True, badges=True)
 
 BOONS = ["Dark Majesty", "Odious Grace", "Fickle Speed", "Whipcord Sinews", "Razor Claws", "Psychotropic Aura", "Betentacled Limbs", "Perfection of the Body", "Silver Skin"]
 EXOTICS = ["Concentrate of Tormented Souls", "Dilution of False Hope", "Distillate of Hatred", "Essence of Fear", "Extract of Xeno-matter", "Infusion of Traitor’s Blood"]
-ARMY = [("Anfrak Silk", "Common + Rare (or Extract of Xeno-matter)", "Add 2\" to the Move characteristic of EMPEROR’S CHILDREN units from your Crusade army."),
-        ("Xylocil", "Common + Rare (or Extract of Xeno-matter)", "Add 1 to the Strength characteristic of melee weapons equipped by EMPEROR’S CHILDREN models from your Crusade army."),
-        ("Shivversplit", "Common + Rare (or Essence of Fear)", "Add 1 to the Toughness characteristic of EMPEROR’S CHILDREN units from your Crusade army."),
+ARMY = [("Anfrak Silk", "Common + (Rare or Extract of Xeno-matter)", "Add 2\" to the Move characteristic of EMPEROR’S CHILDREN units from your Crusade army."),
+        ("Xylocil", "Common + (Rare or Extract of Xeno-matter)", "Add 1 to the Strength characteristic of melee weapons equipped by EMPEROR’S CHILDREN models from your Crusade army."),
+        ("Shivversplit", "Common + (Rare or Essence of Fear)", "Add 1 to the Toughness characteristic of EMPEROR’S CHILDREN units from your Crusade army."),
         ("Heliotrophos", "2× Common + Rare", "Add 1 to the Attacks characteristic of melee weapons equipped by EMPEROR’S CHILDREN models from your Crusade army."),
-        ("Skorflense", "2× Common (or Extract of Xeno-matter)", "Improve the Ballistic Skill and Weapon Skill characteristics of weapons equipped by EMPEROR’S CHILDREN models from your Crusade army by 1."),
+        ("Skorflense", "(2× Common or Extract of Xeno-matter)", "Improve the Ballistic Skill and Weapon Skill characteristics of weapons equipped by EMPEROR’S CHILDREN models from your Crusade army by 1."),
         ("Quail", "Common + Rare", "Improve the Leadership and Objective Control characteristics of EMPEROR’S CHILDREN units from your Crusade army by 1.")]
-PERSONAL = [("Alacrine", "2× Common, or Rare + Extract of Xeno-matter", "The bearer’s unit has the Fights First ability."),
+PERSONAL = [("Alacrine", "(2× Common or Rare) + Extract of Xeno-matter", "The bearer’s unit has the Fights First ability."),
             ("Cerebresec", "2× Common + Concentrate of Tormented Souls", "Once per battle round, when you target the bearer’s unit with a Stratagem, reduce the CP cost of that usage of that Stratagem by 1."),
-            ("Thrynicine", "2× Rare (or Distillate of Hatred) + Rare (or Dilution of False Hope)", "Each time the bearer makes an attack, a successful Wound roll inflicts 1 mortal wound on the target in addition to any normal damage, or 2 mortal wounds in addition to any normal damage instead if the bearer has lost one or more wounds."),
-            ("Salviqine Tears", "Common + Rare (or Essence of Fear)", "At the start of the Battle-shock step of each player’s Command phase, each enemy unit that is within 12\" of the bearer and is below its Starting Strength must take a Battle-shock test, subtracting 1 from that test if that unit is Below Half-strength."),
-            ("Sanctus Vi", "Common + Rare (or Concentrate of Tormented Souls) + Infusion of Traitor’s Blood", "The bearer has a 2+ invulnerable save."),
-            ("Excelsor X", "4× Common (or Dilution of False Hope) + Rare", "In your Shooting phase, after the bearer’s unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".")]
+            ("Thrynicine", "(2× Rare or Distillate of Hatred) + (Rare or Dilution of False Hope)", "Each time the bearer makes an attack, a successful Wound roll inflicts 1 mortal wound on the target in addition to any normal damage, or 2 mortal wounds in addition to any normal damage instead if the bearer has lost one or more wounds."),
+            ("Salviqine Tears", "Common + (Rare or Essence of Fear)", "At the start of the Battle-shock step of each player’s Command phase, each enemy unit that is within 12\" of the bearer and is below its Starting Strength must take a Battle-shock test, subtracting 1 from that test if that unit is Below Half-strength."),
+            ("Sanctus Vi", "Common + (Rare or Concentrate of Tormented Souls) + Infusion of Traitor’s Blood", "The bearer has a 2+ invulnerable save."),
+            ("Excelsor X", "(4× Common or Dilution of False Hope) + Rare", "In your Shooting phase, after the bearer’s unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".")]
 
 
 def build(cz):
