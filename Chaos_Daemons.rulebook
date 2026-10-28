@@ -1699,6 +1699,11 @@
             "Undivided",
             "Shadow Legion"
           ]
+        },
+        "stats": {
+          "Points": {
+            "value": 95
+          }
         }
       },
       "Character§Daemon Prince of Chaos": {
@@ -11662,6 +11667,11 @@
             "Undivided",
             "Shadow Legion"
           ]
+        },
+        "stats": {
+          "Points": {
+            "value": 90
+          }
         }
       },
       "Character§Chaos Lord with Jump Pack (SL)": {
@@ -11671,6 +11681,11 @@
             "Undivided",
             "Shadow Legion"
           ]
+        },
+        "stats": {
+          "Points": {
+            "value": 85
+          }
         }
       },
       "Unit§Raptors (SL)": {
@@ -11685,6 +11700,26 @@
             "Shadow Legion",
             "Undivided"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 5
+          },
+          "model2ndCost": {
+            "value": 235
+          },
+          "model2ndTally": {
+            "value": 10
+          },
+          "Points": {
+            "value": 125
+          },
+          "unitDiscount": {
+            "value": 10
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          }
         }
       },
       "Character§Chaos Lord on Disc of Tzeentch": {
@@ -11709,6 +11744,26 @@
             "Undivided",
             "Shadow Legion"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 5
+          },
+          "model2ndCost": {
+            "value": 290
+          },
+          "model2ndTally": {
+            "value": 10
+          },
+          "Points": {
+            "value": 150
+          },
+          "unitDiscount": {
+            "value": 10
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          }
         }
       },
       "Unit§Legionaries (SL)": {
@@ -11725,6 +11780,20 @@
             "Undivided",
             "Shadow Legion"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 5
+          },
+          "model2ndCost": {
+            "value": 180
+          },
+          "model2ndTally": {
+            "value": 10
+          },
+          "Points": {
+            "value": 95
+          }
         }
       },
       "Character§Chaos Lord on Palanquin of Nurgle": {
@@ -11741,6 +11810,26 @@
             "Shadow Legion",
             "Undivided"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 5
+          },
+          "model2ndCost": {
+            "value": 400
+          },
+          "model2ndTally": {
+            "value": 10
+          },
+          "Points": {
+            "value": 215
+          },
+          "unitDiscount": {
+            "value": 30
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          }
         }
       },
       "Character§Cultist Firebrand (CK)": {
@@ -11749,6 +11838,17 @@
             "Undivided",
             "Shadow Legion"
           ]
+        },
+        "stats": {
+          "Points": {
+            "value": 50
+          },
+          "unitDiscount": {
+            "value": 5
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          }
         }
       },
       "Character§Dark Commune (CK)": {
@@ -11757,6 +11857,20 @@
             "Undivided",
             "Shadow Legion"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 5
+          },
+          "Points": {
+            "value": 100
+          },
+          "unitDiscount": {
+            "value": 10
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          }
         }
       },
       "Character§Traitor Enforcer (CK)": {
@@ -11765,6 +11879,14 @@
             "Undivided",
             "Shadow Legion"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 2
+          },
+          "Points": {
+            "value": 70
+          }
         }
       },
       "Unit§Cultist Mob (CK)": {
@@ -11778,6 +11900,20 @@
           "items": [
             "Character§Rogue Psyker"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 10
+          },
+          "model2ndCost": {
+            "value": 90
+          },
+          "model2ndTally": {
+            "value": 20
+          },
+          "Points": {
+            "value": 50
+          }
         }
       },
       "Unit§Accursed Cultists (CK)": {
@@ -11803,6 +11939,26 @@
           "items": [
             "Character§Rogue Psyker"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 8
+          },
+          "model2ndCost": {
+            "value": 205
+          },
+          "model2ndTally": {
+            "value": 16
+          },
+          "Points": {
+            "value": 110
+          },
+          "unitDiscount": {
+            "value": 20
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          }
         }
       },
       "Unit§Fellgor Beastmen (CK)": {
@@ -11811,6 +11967,14 @@
             "Shadow Legion",
             "Undivided"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 10
+          },
+          "Points": {
+            "value": 60
+          }
         }
       },
       "Unit§Traitor Guardsmen Squad (CK)": {
@@ -11824,6 +11988,14 @@
           "items": [
             "Character§Renegade Enforcer"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 10
+          },
+          "Points": {
+            "value": 65
+          }
         }
       },
       "Infantry/Mounted§Gellerpox Infected": {
@@ -11850,6 +12022,14 @@
             "Undivided",
             "Shadow Legion"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 3
+          },
+          "Points": {
+            "value": 70
+          }
         }
       },
       "Model§Dark Apostle": {
@@ -11886,6 +12066,20 @@
             "Shadow Legion",
             "Undivided"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 5
+          },
+          "Points": {
+            "value": 145
+          },
+          "unitDiscount": {
+            "value": 10
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          }
         }
       },
       "Character§Master of Possession (SL)": {
@@ -11894,6 +12088,11 @@
             "Undivided",
             "Shadow Legion"
           ]
+        },
+        "stats": {
+          "Points": {
+            "value": 65
+          }
         }
       },
       "Unit§Possessed (SL)": {
@@ -11907,6 +12106,26 @@
           "items": [
             "Character§Master of Possession (SL)"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 5
+          },
+          "model2ndCost": {
+            "value": 280
+          },
+          "model2ndTally": {
+            "value": 10
+          },
+          "Points": {
+            "value": 150
+          },
+          "unitDiscount": {
+            "value": 20
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          }
         }
       },
       "Model§Possessed": {
@@ -11929,6 +12148,11 @@
             "Shadow Legion",
             "Undivided"
           ]
+        },
+        "stats": {
+          "Points": {
+            "value": 65
+          }
         }
       },
       "Character§Sorcerer on Palanquin of Nurgle": {
@@ -11945,6 +12169,11 @@
             "Undivided",
             "Shadow Legion"
           ]
+        },
+        "stats": {
+          "Points": {
+            "value": 85
+          }
         }
       },
       "Unit§Warp Talons (SL)": {
@@ -11954,6 +12183,26 @@
             "Undivided",
             "Jump Packs"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 5
+          },
+          "model2ndCost": {
+            "value": 300
+          },
+          "model2ndTally": {
+            "value": 10
+          },
+          "Points": {
+            "value": 140
+          },
+          "unitDiscount": {
+            "value": 10
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          }
         }
       },
       "Character§Tormentbringer": {

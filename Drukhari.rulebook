@@ -18689,6 +18689,56 @@
           ]
         },
         "text": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)."
+      },
+      "Character§Death Jester": {
+        "stats": {
+          "Points": {
+            "value": 65
+          }
+        }
+      },
+      "Character§Shadowseer": {
+        "stats": {
+          "Points": {
+            "value": 50
+          }
+        }
+      },
+      "Character§Solitaire": {
+        "stats": {
+          "Points": {
+            "value": 105
+          }
+        }
+      },
+      "Unit§Skyweavers": {
+        "stats": {
+          "model1stTally": {
+            "value": 2
+          },
+          "model2ndCost": {
+            "value": 180
+          },
+          "model2ndTally": {
+            "value": 4
+          },
+          "Points": {
+            "value": 90
+          }
+        }
+      },
+      "Unit§Starweaver": {
+        "stats": {
+          "Points": {
+            "value": 80
+          },
+          "unitDiscount": {
+            "value": 10
+          },
+          "unitDiscountThreshold": {
+            "value": 4
+          }
+        }
       }
     },
     "gameModes": {},

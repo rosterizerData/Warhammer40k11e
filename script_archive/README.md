@@ -1,6 +1,7 @@
 This directory contains scripts that were used to make bulk changes to rulebooks, in case they're ever needed again, but there's no expectation that they will be.
 ## 11e maintenance scripts (2026-10)
 - `mfm_points.py` — hub-aware MFM points importer (units, enhancements, detachment DP/Role, wargear, Imperial Agents allied prices). `MFM_DIR=<clone of BSData/wh40k-11e-mfm> python3 mfm_points.py [--apply]`; idempotent; needs PyYAML.
+- `ally_points.py` — run after `mfm_points.py`: allied units the consumer's MFM page doesn't list (Shadow Legion and cultists for Daemons/Chaos Knights, Mechanicus for Imperial Knights, Harlequins for Drukhari, Tyranids/Guard for Genestealer Cults) take their home book's pricing stats; only units a matched roster can select (checked in the headless runner). `WAHA_DIR=<csvs> MFM_SITE_JSON=<mfm_site.py output> python3 ally_points.py [--apply]`; leaves revisions alone.
 - `detachment_tags.py` — generates detachment `unique:` tag exclusivity rules from the MFM. Re-run after adding detachments.
 - `hoist_chaos.py` — one-time shared Chaos unit homogenisation (11.1.2); kept as the pattern for hub + per-faction overrides.
 - `rzmerge.py` — Python port of Rosterizer's dependency merge + overlay generator, used to verify overrides.

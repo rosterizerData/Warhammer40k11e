@@ -9657,6 +9657,11 @@
           "traits": [
             "Ability§Doctrina Imperatives"
           ]
+        },
+        "stats": {
+          "Points": {
+            "value": 60
+          }
         }
       },
       "Character§Tech-priest Manipulus (Knights)": {
@@ -9693,6 +9698,14 @@
           "traits": [
             "Ability§Doctrina Imperatives"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 10
+          },
+          "Points": {
+            "value": 85
+          }
         }
       },
       "Model§Skitarii Vanguard": {

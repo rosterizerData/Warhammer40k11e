@@ -6816,9 +6816,45 @@
           ]
         }
       },
-      "Character§Cultist Firebrand (CK)": {},
-      "Character§Dark Commune (CK)": {},
-      "Character§Traitor Enforcer (CK)": {},
+      "Character§Cultist Firebrand (CK)": {
+        "stats": {
+          "Points": {
+            "value": 50
+          },
+          "unitDiscount": {
+            "value": 5
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          }
+        }
+      },
+      "Character§Dark Commune (CK)": {
+        "stats": {
+          "model1stTally": {
+            "value": 5
+          },
+          "Points": {
+            "value": 100
+          },
+          "unitDiscount": {
+            "value": 10
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          }
+        }
+      },
+      "Character§Traitor Enforcer (CK)": {
+        "stats": {
+          "model1stTally": {
+            "value": 2
+          },
+          "Points": {
+            "value": 70
+          }
+        }
+      },
       "Unit§Accursed Cultists (CK)": {
         "assets": {
           "traits": [
@@ -6836,6 +6872,26 @@
           "items": [
             "Character§Rogue Psyker"
           ]
+        },
+        "stats": {
+          "model1stTally": {
+            "value": 8
+          },
+          "model2ndCost": {
+            "value": 205
+          },
+          "model2ndTally": {
+            "value": 16
+          },
+          "Points": {
+            "value": 110
+          },
+          "unitDiscount": {
+            "value": 20
+          },
+          "unitDiscountThreshold": {
+            "value": 3
+          }
         }
       },
       "Infantry/Mounted§Gellerpox Infected": {
@@ -8307,6 +8363,42 @@
             ],
             "evaluate": "AND",
             "failState": "error"
+          }
+        }
+      },
+      "Unit§Cultist Mob (CK)": {
+        "stats": {
+          "model1stTally": {
+            "value": 10
+          },
+          "model2ndCost": {
+            "value": 90
+          },
+          "model2ndTally": {
+            "value": 20
+          },
+          "Points": {
+            "value": 50
+          }
+        }
+      },
+      "Unit§Fellgor Beastmen (CK)": {
+        "stats": {
+          "model1stTally": {
+            "value": 10
+          },
+          "Points": {
+            "value": 60
+          }
+        }
+      },
+      "Unit§Traitor Guardsmen Squad (CK)": {
+        "stats": {
+          "model1stTally": {
+            "value": 10
+          },
+          "Points": {
+            "value": 65
           }
         }
       }
